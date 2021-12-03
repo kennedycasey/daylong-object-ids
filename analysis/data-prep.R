@@ -30,18 +30,18 @@ data <- raw_data %>%
   pivot_longer(StudyRelated:OtherNatural, names_to = "category", 
                values_to = "category_value") %>%
   filter(category_value == 1) %>%
-  mutate(object_type = case_when(
-    category == "Food" ~ "Food", 
-    category %in% c("Toy", "Book") ~ "Toy", 
-    category %in% c("Plant", "Animal", "OtherNatural") ~ "Other Natural", 
-    category %in% c("ToolMealtime", "ToolWork") ~ "Tool", 
-    category %in% c("OtherSynthetic", "Electronic", "Clothing") ~ "Other Synthetic Object",  
-    category == "OtherLargeImmovable" ~ "Other Large Immovable Object")) %>%
   mutate(n_objects = str_count(Object, ",") + 1) %>%
   separate(Object, c("object1", "object2", "object3"), ",") %>%
   mutate(across(starts_with("object"), ~ trimws(.))) %>%
   pivot_longer(starts_with("object"), names_to = "object_num", values_to = "object") %>%
   filter(!is.na(object)) %>%
+  mutate(object_type = case_when(
+    category == "Food" ~ "Food", 
+    category %in% c("Toy", "Book") ~ "Toy", 
+    category %in% c("Plant", "Animal", "OtherNatural") ~ "Other Natural Object", 
+    category %in% c("ToolMealtime", "ToolWork") ~ "Tool", 
+    category %in% c("OtherSynthetic", "Electronic", "Clothing") ~ "Other Synthetic Object",  
+    category == "OtherLargeImmovable" ~ "Other Large Immovable Object")) %>%
   rename(image = Image) %>%
   select(site, sub_num, age, sex, image, category, object_type, object, duration) 
 

@@ -1,29 +1,33 @@
 library(tidyverse)
+library(ggpubr)
 
-data <- read_csv("../data/usable.data_20211202.csv")
+data <- read_csv("../data/usable.data_20211210.csv") %>%
+  mutate(object = ifelse(
+    object %in% c("croc shoe", "flip flop", "sneaker", "flat shoe"), "shoe", object))
 site_colors <- c("Rossel" = "#3C5388", 
                  "Tseltal" = "#02A087")
 
 # categories --------------------------------------------------------------
 category_counts <- data %>%
-  group_by(age) %>%
-  mutate(n_images = n()) %>%
-  group_by(age, object_type) %>%
-  summarize(n_category = n(), 
-            n_images = n_images, 
-            prop = n_category/n_images, 
-            site = site) %>%
+  group_by(age, object_type, site) %>%
+  summarize(n_category = n()) %>%
   distinct() %>%
-  ungroup() %>%
+  ungroup() %>% 
+  group_by(age, site) %>%
+  summarize(n_images = sum(n_category), 
+            n_category = n_category, 
+            prop = n_category/n_images, 
+            object_type = object_type) %>%
+  distinct() %>%
   mutate(object_type = factor(object_type, 
                               levels = c("Food", "Tool", "Toy", 
-                                         "Other Synthetic Object", 
-                                         "Other Natural Object", 
-                                         "Other Large Immovable Object"), 
+                                         "Large Immovable",
+                                         "Other Natural Object",
+                                        "Other Synthetic Object"),
                               labels = c("Food", "Tool", "Toy", 
-                                         "Other\nSynthetic", 
+                                         "Large\nImmovable",
                                          "Other\nNatural", 
-                                         "Large\nImmovable")))
+                                         "Other\nSynthetic")))
 
 category_means <- category_counts %>%
   group_by(object_type, site) %>%
@@ -32,24 +36,25 @@ category_means <- category_counts %>%
             n = n(), 
             se = sd/sqrt(n))
   
-ggplot() +
+plot1 <- ggplot() +
   geom_bar(data = category_means, 
-           mapping  = aes(x = object_type, y = mean, color = site, fill = site),
+           mapping  = aes(x = object_type, y = mean*100, color = site, fill = site),
            stat = "identity", 
            position = "dodge", 
            alpha = 0.7) + 
   geom_point(data = category_counts,
-             mapping = aes(x = object_type, y = prop, color = site, fill = site),
+             mapping = aes(x = object_type, y = prop*100, color = site, fill = site),
              position = position_dodge(width = 0.9), 
              size = 1.5) +
   geom_errorbar(data = category_means,
-                mapping = aes(x = object_type, ymin = mean - se, ymax = mean + se, 
+                mapping = aes(x = object_type, ymin = (mean - se)*100, ymax = (mean + se)*100, 
                               group = site),
                 position = position_dodge(width = 0.9), 
                 width = 0.25, size = 0.8, color = "black") +
   scale_color_manual(values = site_colors) +
   scale_fill_manual(values = site_colors) +
-  labs(x = "Object Categories", y = "Mean Prop. of Images", color = "Site", fill = "Site") +
+  labs(x = "Object Categories", y = "% of Images", 
+       color = "Site", fill = "Site", tag = "A") +
   theme_classic(base_size = 15)
 ggsave("../figs/category-props.jpg", height = 5, width = 7)
   
@@ -79,16 +84,33 @@ unique_objects <- data %>%
             prop = n_unique/n_total,
             age = age, 
             site = site) %>%
-  distinct()
+  distinct() %>%
+  ungroup()
 
-ggplot(unique_objects, aes(x = age, y = prop, color = site, fill = site)) +
+m <- glm(n_unique ~ age + site, data = unique_objects)
+summary(m)
+
+unique_objects %>%
+  summarize(mean = mean(n_unique), 
+            min = min(n_unique), 
+            max = max(n_unique))
+
+# check t-test assumptions -> not valid
+shapiro.test(subset(unique_objects$n_unique, unique_objects$site == "Rossel"))
+shapiro.test(subset(unique_objects$n_unique, unique_objects$site == "Tseltal"))
+var.test(subset(unique_objects$n_unique, unique_objects$site == "Rossel"), 
+       subset(unique_objects$n_unique, unique_objects$site == "Tseltal"))
+wilcox.test(subset(unique_objects$n_unique, unique_objects$site == "Rossel"), 
+       subset(unique_objects$n_unique, unique_objects$site == "Tseltal"))
+
+plot2 <- ggplot(unique_objects, aes(x = age, y = n_unique, color = site, fill = site)) +
   geom_point() +
   geom_smooth(method = "lm") +
   scale_color_manual(values = site_colors) +
   scale_fill_manual(values = site_colors) +
-  labs(x = "Age (months)", y = "Prop. of Unique Objects Per Recording", 
-       color = "Site", fill = "Site") + 
-  coord_cartesian(ylim = c(0, 1)) +
+  labs(x = "Age (months)", y = "Unique Object Types", 
+       color = "Site", fill = "Site", tag = "B") + 
+  scale_x_continuous(limits = c(0, 49), breaks = c(0, 12, 24, 36, 48)) +
   theme_classic(base_size = 15)
 ggsave("../figs/unique-objects.jpg", height = 5, width = 6)
 
@@ -119,19 +141,75 @@ tseltal_objects <- top_objects %>%
   filter(site == "Tseltal") %>%
   pull(object)
 
+shared_objects <- intersect(rossel_objects, tseltal_objects)
+
+length(shared_objects)/(length(rossel_objects) + length(tseltal_objects) - length(shared_objects))
+
+data %>%
+  filter(site == "Rossel") %>%
+  group_by(object) %>%
+  summarize(n_children = length(unique(sub_num))) 
+  
+test <- data %>%
+  filter(site == "Tseltal") %>%
+  mutate(total_kids = length(unique(sub_num))) %>%
+  group_by(object) %>%
+  summarize(n_kids = length(unique(sub_num)), 
+            total_kids = total_kids, 
+            prop = n_kids/total_kids) %>%
+  ungroup() %>%
+  distinct() %>%
+  arrange(prop) %>%
+  summarize(mean = mean(prop),
+            min = min(prop), 
+            max = max(prop))
+
+data %>%
+  filter(object %in% shared_objects & site == "Rossel") %>%
+  group_by(site, object) %>%
+  summarize(n = n()) %>%
+  arrange(desc(n))
+
+rossel_objects_top25 <- top_objects %>%
+  filter(rank <= 25 & site == "Rossel") %>% 
+  select(object) %>%
+  distinct() %>%
+  pull()
+
+tseltal_objects_top25 <- top_objects %>%
+  filter(rank <= 25 & site == "Tseltal") %>% 
+  select(object) %>%
+  distinct() %>%
+  pull()
+
+top_category_labels <- data %>%
+  filter(object %in% rossel_objects_top25 | object %in% tseltal_objects_top25) %>%
+  group_by(object, object_type) %>%
+  summarize(n = n()) %>%
+  ungroup() %>%
+  group_by(object) %>%
+  summarize(max = max(n), 
+            n = n,
+            object_type = object_type) %>%
+  filter(n == max) %>%
+  select(object, object_type)
+  
 top_objects <- top_objects %>%
-  mutate(both = ifelse(object %in% rossel_objects & object %in% tseltal_objects, 1, 0))
+  left_join(top_category_labels, by = "object") %>%
+  mutate(both = ifelse(object %in% rossel_objects_top25 & object %in% tseltal_objects_top25, 1, 0), 
+         label = paste0(object, " (", tolower(trimws(str_remove(object_type, "Object"))), ")"))
 
 ggplot(filter(top_objects, rank <= 25), 
        aes(x = rank, y = prop*100, color = site, fill = site)) +
   facet_grid(. ~ site) +
   geom_bar(aes(alpha = as.factor(both)), stat = "identity") +
-  geom_text(aes(y = prop*100/2, label = label), color = "black", srt = 90, size = 3) +
+  geom_text(aes(y = prop*100/2, label = label), color = "black", srt = 90, size = 3.8) +
   scale_alpha_manual(values = c(0.2, 0.7)) +
   scale_color_manual(values = site_colors) +
   scale_fill_manual(values = site_colors) +
   labs(x = "Top 25 Objects", y = "% of Children") +
-  theme_test(base_size = 15) +
+  scale_y_continuous(limits = c(0, 62), breaks = c(0, 25, 50)) + 
+  theme_test(base_size = 20) +
   theme(axis.text.x = element_blank(), axis.ticks.x = element_blank(), 
         legend.position = "none")
-ggsave("../figs/top-objects.jpg", height = 6, width = 10)
+ggsave("../figs/top-objects.jpg", height = 8, width = 12)

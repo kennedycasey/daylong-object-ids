@@ -1,6 +1,6 @@
 library(tidyverse)
 
-raw_data <- read_csv("../data/annotations_20211202.csv")
+raw_data <- read_csv("../data/annotations_20220106.csv")
 participants <- read_csv("../data/participants.csv")
 durations <- read_csv("../data/timestamps.csv") %>%
   arrange(sub_num, TimestampHMS) %>%
@@ -11,7 +11,7 @@ durations <- read_csv("../data/timestamps.csv") %>%
   mutate(next_timestamp = lead(TimestampHMS, 1), 
          duration = ifelse(Image == first | Image == last, NA, 
                            as.numeric(next_timestamp - TimestampHMS))) %>%
-  select(sub_num, Image, duration)
+  select(sub_num, Image, TimestampHMS, duration)
 
 # excluded counts
 raw_data %>%
@@ -24,14 +24,15 @@ raw_data %>%
 
 # data cleaning
 data <- raw_data %>%
+  select(-Object) %>%
   left_join(participants, by = "sub_num") %>%
   left_join(durations, by = c("sub_num", "Image")) %>%
   filter(Exclude != 1 & None != 1 & StudyRelated != 1 & Unsure != 1) %>%
   pivot_longer(StudyRelated:OtherNatural, names_to = "category", 
                values_to = "category_value") %>%
   filter(category_value == 1) %>%
-  mutate(n_objects = str_count(Object, ",") + 1) %>%
-  separate(Object, c("object1", "object2", "object3"), ",") %>%
+  mutate(n_objects = str_count(clean_object, ",") + 1) %>%
+  separate(clean_object, c("object1", "object2", "object3", "object4"), ",") %>%
   mutate(across(starts_with("object"), ~ trimws(.))) %>%
   pivot_longer(starts_with("object"), names_to = "object_num", values_to = "object") %>%
   filter(!is.na(object)) %>%
@@ -40,12 +41,13 @@ data <- raw_data %>%
     category %in% c("Toy", "Book") ~ "Toy", 
     category %in% c("Plant", "Animal", "OtherNatural") ~ "Other Natural Object", 
     category %in% c("ToolMealtime", "ToolWork") ~ "Tool", 
-    category %in% c("OtherSynthetic", "Electronic", "Clothing") ~ "Other Synthetic Object",  
-    category == "OtherLargeImmovable" ~ "Other Large Immovable Object")) %>%
-  rename(image = Image) %>%
-  select(site, sub_num, age, sex, image, category, object_type, object, duration) 
+    category == "OtherLargeImmovable" ~ "Large Immovable", 
+    category %in% c("OtherSynthetic", "Electronic", "Clothing") ~ "Other Synthetic Object")) %>%
+  rename(image = Image, 
+         timestamp = TimestampHMS) %>%
+  select(site, sub_num, age, sex, image, category, object_type, object, timestamp, duration) 
 
-write_csv(data, "../data/usable.data_20211202.csv")
+write_csv(data, "../data/usable.data_20220106.csv")
 
 # coded counts 
 raw_data %>%

@@ -1,6 +1,7 @@
 library(tidyverse)
 library(ggpubr)
 library(lubridate)
+library(viridis)
 
 data <- read_csv("../data/usable.data_20220106.csv") %>%
   mutate(object = ifelse(object %in% c("croc shoe", "flip flop", "sneaker", "flat shoe"), 
@@ -282,3 +283,65 @@ ggplot() +
   labs(x = "Object Categories", y = "% of Images", 
        color = "Site", fill = "Site") +
   theme_classic(base_size = 12)
+
+ordered_subs <- data %>%
+  select(site, age, sub_num) %>%
+  distinct() %>%
+  arrange(site, age) %>%
+  group_by(site) %>%
+  mutate(order = row_number()) %>%
+  ungroup() %>%
+  select(sub_num, order)
+
+data %>%
+  left_join(ordered_subs, by = c("sub_num")) %>%
+  mutate(object_type = ifelse(object_type %in% c("Food", "Other Natural Object"), 
+                              str_remove(object_type, "Other "), "Synthetic Object")) %>%
+  ggplot(aes(x = timestamp, y = as.factor(order), 
+             color = object_type)) +
+  facet_wrap(. ~ site) +
+  geom_point(shape = "|", size = 5) + 
+  labs(x = "Time of Day", y = "Participants (youngest to oldest)", 
+       color = "Object Type") +
+  theme_test() +
+  theme(axis.text.y = element_blank(), axis.ticks.y = element_blank()) 
+ggsave("figs/category-time-distribution.jpg", width = 10, height = 8)
+
+
+category_colors <- c("Food" = "#440154FF",
+                     "Toy" = "#414487FF",
+                     "Tool" = "#2A788EFF", 
+                     "Natural" = "#22A884FF", 
+                     "Synthetic" = "#7AD151FF", 
+                     "Immovable" = "#FDE725FF")
+
+for (i in 1:29) {
+  for (j in c("Rossel", "Tseltal")) {
+    data %>%
+      left_join(ordered_subs, by = c("sub_num")) %>%
+      filter(order == i & site == j) %>%
+      mutate(object_type = trimws(str_remove_all(object_type, "Object|Other|Large")), 
+             object_type = factor(object_type, 
+                                  levels = c("Food", "Toy", "Tool", 
+                                             "Natural", "Synthetic", "Immovable"))) %>%
+      ggplot(aes(x = timestamp, y = NA, color = object_type)) +
+      facet_grid(object_type ~ ., switch = "y", drop = FALSE) +
+      geom_point(shape = "|", size = 10) +
+      labs(x = "Time of Day") +
+      scale_x_time(limits = hms("08:00:00", "20:00:00"),
+                   breaks = hms("08:00:00", "12:00:00", "16:00:00", "20:00:00")) +
+      scale_color_manual(values = category_colors) +
+      theme_test() +
+      theme(axis.text.y = element_blank(), axis.ticks.y = element_blank(), 
+            axis.title.y = element_blank(), legend.position = "none", 
+            aspect.ratio = 0.1, strip.text = element_text(size = 5))
+    
+    sub_num <- data %>%
+      left_join(ordered_subs, by = c("sub_num")) %>%
+      filter(order == i & site == j) %>%
+      pull(sub_num) %>%
+      unique()
+    
+    ggsave(paste0("../figs/TOD-cat-dist/", j, "-", sub_num, ".jpg"), width = 4, height = 4)
+  }
+}

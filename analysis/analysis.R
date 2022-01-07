@@ -1,9 +1,16 @@
 library(tidyverse)
 library(ggpubr)
+library(lubridate)
 
-data <- read_csv("../data/usable.data_20211210.csv") %>%
-  mutate(object = ifelse(
-    object %in% c("croc shoe", "flip flop", "sneaker", "flat shoe"), "shoe", object))
+data <- read_csv("../data/usable.data_20220106.csv") %>%
+  mutate(object = ifelse(object %in% c("croc shoe", "flip flop", "sneaker", "flat shoe"), 
+                         "shoe", object), 
+    hour = hour(timestamp), 
+    tod = case_when(
+      hour < 11 ~ "morning", 
+      hour >= 11 & hour <= 13 ~ "midday", 
+      hour > 13 ~ "afternoon"), 
+    tod = factor(tod, levels = c("morning", "midday", "afternoon")))
 site_colors <- c("Rossel" = "#3C5388", 
                  "Tseltal" = "#02A087")
 
@@ -94,14 +101,6 @@ unique_objects %>%
   summarize(mean = mean(n_unique), 
             min = min(n_unique), 
             max = max(n_unique))
-
-# check t-test assumptions -> not valid
-shapiro.test(subset(unique_objects$n_unique, unique_objects$site == "Rossel"))
-shapiro.test(subset(unique_objects$n_unique, unique_objects$site == "Tseltal"))
-var.test(subset(unique_objects$n_unique, unique_objects$site == "Rossel"), 
-       subset(unique_objects$n_unique, unique_objects$site == "Tseltal"))
-wilcox.test(subset(unique_objects$n_unique, unique_objects$site == "Rossel"), 
-       subset(unique_objects$n_unique, unique_objects$site == "Tseltal"))
 
 plot2 <- ggplot(unique_objects, aes(x = age, y = n_unique, color = site, fill = site)) +
   geom_point() +
@@ -213,3 +212,73 @@ ggplot(filter(top_objects, rank <= 25),
   theme(axis.text.x = element_blank(), axis.ticks.x = element_blank(), 
         legend.position = "none")
 ggsave("../figs/top-objects.jpg", height = 8, width = 12)
+
+# time of day -------------------------------------------------------------
+unique_objects_by_time <- data %>%
+  group_by(sub_num, tod) %>%
+  summarize(n_total = n(),
+            n_unique = length(unique(object)), 
+            prop = n_unique/n_total,
+            age = age, 
+            site = site) %>%
+  distinct() %>%
+  ungroup()
+
+ggplot(unique_objects_by_time, aes(x = tod, y = n_unique, color = site, fill = site)) +
+  geom_boxplot(alpha = 0.5, color = "black") +
+  geom_point(position = position_dodge(width = 0.75)) +
+  scale_color_manual(values = site_colors) +
+  scale_fill_manual(values = site_colors) +
+  labs(x = "Time of Day", y = "Unique Object Types", color = "Site", fill = "Site") + 
+  theme_classic(base_size = 15)
+
+
+category_counts_by_time <- data %>%
+  group_by(age, object_type, site, tod) %>%
+  summarize(n_category = n()) %>%
+  distinct() %>%
+  ungroup() %>% 
+  group_by(age, site, tod) %>%
+  summarize(n_images = sum(n_category), 
+            n_category = n_category, 
+            prop = n_category/n_images, 
+            object_type = object_type) %>%
+  distinct() %>%
+  mutate(object_type = factor(object_type, 
+                              levels = c("Food", "Tool", "Toy", 
+                                         "Large Immovable",
+                                         "Other Natural Object",
+                                         "Other Synthetic Object"),
+                              labels = c("Food", "Tool", "Toy", 
+                                         "Large\nImmovable",
+                                         "Other\nNatural", 
+                                         "Other\nSynthetic")))
+
+category_means_by_time <- category_counts_by_time %>%
+  group_by(object_type, site, tod) %>%
+  summarize(mean = mean(prop), 
+            sd = sd(prop), 
+            n = n(), 
+            se = sd/sqrt(n))
+
+ggplot() +
+  facet_grid(. ~ tod) +
+  geom_bar(data = category_means_by_time, 
+           mapping  = aes(x = object_type, y = mean*100, color = site, fill = site),
+           stat = "identity", 
+           position = "dodge", 
+           alpha = 0.7) + 
+  geom_point(data = category_counts_by_time,
+             mapping = aes(x = object_type, y = prop*100, color = site, fill = site),
+             position = position_dodge(width = 0.9), 
+             size = 1.5) +
+  geom_errorbar(data = category_means_by_time,
+                mapping = aes(x = object_type, ymin = (mean - se)*100, ymax = (mean + se)*100, 
+                              group = site),
+                position = position_dodge(width = 0.9), 
+                width = 0.25, size = 0.8, color = "black") +
+  scale_color_manual(values = site_colors) +
+  scale_fill_manual(values = site_colors) +
+  labs(x = "Object Categories", y = "% of Images", 
+       color = "Site", fill = "Site") +
+  theme_classic(base_size = 12)

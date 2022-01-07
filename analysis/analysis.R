@@ -342,6 +342,12 @@ for (i in 1:29) {
       pull(sub_num) %>%
       unique()
     
-    ggsave(paste0("../figs/TOD-cat-dist/", j, "-", sub_num, ".jpg"), width = 4, height = 4)
+    age <- data %>%
+      left_join(ordered_subs, by = c("sub_num")) %>%
+      filter(order == i & site == j) %>%
+      pull(age) %>%
+      unique()  
+    
+    ggsave(paste0("../figs/TOD-cat-dist/", j, "-", age, "mo-", sub_num, ".jpg"), width = 4, height = 4)
   }
 }

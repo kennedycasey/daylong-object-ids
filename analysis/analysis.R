@@ -12,6 +12,7 @@ data <- read_csv("../data/usable.data_20220106.csv") %>%
       hour >= 11 & hour <= 13 ~ "midday", 
       hour > 13 ~ "afternoon"), 
     tod = factor(tod, levels = c("morning", "midday", "afternoon")))
+
 site_colors <- c("Rossel" = "#3C5388", 
                  "Tseltal" = "#02A087")
 
@@ -214,6 +215,30 @@ ggplot(filter(top_objects, rank <= 25),
         legend.position = "none")
 ggsave("../figs/top-objects.jpg", height = 8, width = 12)
 
+data %>%
+  group_by(site, sub_num, object) %>%
+  summarize(n_images = n()) %>%
+  ungroup() %>%
+  group_by(site, sub_num) %>%
+  summarize(total = sum(n_images), 
+            n_images = n_images,
+            object = object) %>%
+  distinct() %>%
+  mutate(prop_images = n_images/total) %>%
+  arrange(sub_num, desc(prop_images)) %>%
+  mutate(order = row_number()) %>%
+  ungroup() %>%
+  ggplot(aes(x = order, y = prop_images, 
+             fill = site, color = site)) +
+    geom_line(aes(group = sub_num), alpha = 0.15) +
+    geom_smooth(se = FALSE, method = "loess") +
+    scale_color_manual(values = site_colors) +
+    scale_fill_manual(values = site_colors) +
+    labs(x = "Rank-Ordered Objects", y = "Proportion of Images with Object", 
+         color = "Site", fill = "Site") +
+    theme_test(base_size = 20)
+ggsave("../figs/object-dist.jpg")
+
 # time of day -------------------------------------------------------------
 unique_objects_by_time <- data %>%
   group_by(sub_num, tod) %>%
@@ -232,7 +257,6 @@ ggplot(unique_objects_by_time, aes(x = tod, y = n_unique, color = site, fill = s
   scale_fill_manual(values = site_colors) +
   labs(x = "Time of Day", y = "Unique Object Types", color = "Site", fill = "Site") + 
   theme_classic(base_size = 15)
-
 
 category_counts_by_time <- data %>%
   group_by(age, object_type, site, tod) %>%

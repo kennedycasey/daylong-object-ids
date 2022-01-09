@@ -23,8 +23,39 @@ knitr::opts_chunk$set(fig.width = 3, fig.height = 3, fig.crop  =  FALSE,
 
 ```{r, libraries}
 library(tidyverse)
+library(lubridate)
+library(broom)
 ```
 
+```{r, data-prep}
+raw.data <- read_csv("../data/usable.data_20220106.csv") %>%
+    mutate(hour = hour(timestamp), 
+    tod = case_when(
+      hour < 11 ~ "morning", 
+      hour >= 11 & hour <= 13 ~ "midday", 
+      hour > 13 ~ "afternoon"), 
+    tod = factor(tod, levels = c("morning", "midday", "afternoon")), 
+  object_type = factor(object_type, 
+                       levels = c("Food", "Tool", "Toy", 
+                                  "Large Immovable",
+                                  "Other Natural Object",
+                                  "Other Synthetic Object"),
+                       labels = c("Food", "Tool", "Toy", 
+                                  "Large\nImmovable",
+                                  "Other\nNatural", 
+                                  "Other\nSynthetic")))
+
+# TO DO: manual checking so this isn't necessary
+object.data <- raw.data %>%
+  select(-category, -object_type) %>%
+  distinct()
+
+category.data <- raw.data %>%
+  select(-object)
+
+site_colors <- c("Rossel" = "#3C5388", 
+                 "Tseltal" = "#02A087")
+```
 # Introduction
 
 # Methods
@@ -36,6 +67,48 @@ library(tidyverse)
 
 # Results
 ## Overall characteristics of object handling
+```{r, overall-object-stats, results = "hide"}
+
+objects.per.day <- object.data %>%
+  group_by(sub_num) %>%
+  summarize(n.objects = length(unique(object))) %>%
+  ungroup() %>%
+  summarize(mean = mean(n.objects), 
+            median = median(n.objects), 
+            sd = sd(n.objects), 
+            min = min(n.objects),
+            max = max(n.objects)) %>%
+  mutate(across(mean:sd), round(., 2))
+
+objects.per.day.bysite <- object.data %>%
+  group_by(sub_num, site) %>%
+  summarize(n.objects = length(unique(object))) 
+
+# t-test assumptions not met -> use wilcox
+shapiro.test(subset(objects.per.day.bysite, objects.per.day.bysite$site == "Rossel")$n.objects)
+shapiro.test(subset(objects.per.day.bysite, objects.per.day.bysite$site == "Tseltal")$n.objects)
+var.test(n.objects ~ site, objects.per.day.bysite)
+
+comp.objects.per.day <- tidy(wilcox.test(n.objects ~ site, objects.per.day.bysite))
+
+objects.per.hr <- object.data %>%
+  group_by(sub_num, hour) %>%
+  summarize(n.objects = length(unique(object))) %>%
+  group_by(sub_num) %>%
+  summarize(n.objects.bysub = mean(n.objects)) %>%
+  ungroup() %>%
+  summarize(mean = mean(n.objects.bysub), 
+            median = median(n.objects.bysub),
+            sd = sd(n.objects.bysub),
+            min = min(n.objects.bysub), 
+            max = max(n.objects.bysub)) %>%
+  mutate(across(mean:sd), round(., 2))
+```
+On average, children handled `r objects.per.hr$mean` objects per hour (median = `r objects.per.hr$median`, _SD_ = `r objects.per.hr$sd`, range = `r objects.per.hr$min`--`r objects.per.hr$max`). Across the whole waking day, children handled an average of `r objects.per.day$mean` unique objects (median = `r objects.per.day$median`, _SD_ = `r objects.per.day$sd`, range = `r objects.per.day$min`--`r objects.per.day$max`), with no significant differences across sites (_M_~Rossel~ = `r round(mean(subset(objects.per.day.bysite, objects.per.day.bysite$site == "Rossel")$n.objects), 2)`, _M_~Tseltal~ = `r round(mean(subset(objects.per.day.bysite, objects.per.day.bysite$site == "Tseltal")$n.objects), 2)`, _W_ = `r comp.objects.per.day$statistic`, _p_ = `r round(comp.objects.per.day$p.value, 3)`).
+
+```{r, overall-category-stats}
+```
+The frequency of object categories was similarly divided across sites...
 
 ## Time of day effects
 

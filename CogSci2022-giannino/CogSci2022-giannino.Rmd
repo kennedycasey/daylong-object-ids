@@ -1,0 +1,55 @@
+---
+title: ""
+bibliography: CogSci2022-giannino.bib
+csl: apa6.csl
+document-params: "10pt, letterpaper"
+
+author-information: 
+
+abstract:
+
+keywords:
+    
+output: cogsci2016::cogsci_paper
+#final-submission: \cogscifinalcopy
+---
+
+```{r global_options, include = FALSE}
+knitr::opts_chunk$set(fig.width = 3, fig.height = 3, fig.crop  =  FALSE, 
+                      fig.pos  =  "tb", fig.path = 'figs/',
+                      echo = FALSE, warning = FALSE, cache = FALSE, 
+                      message = FALSE, sanitize = TRUE)
+```
+
+```{r, libraries}
+library(tidyverse)
+```
+
+# Introduction
+
+# Methods
+## Corpus
+
+## Manual annotation
+
+## Reliability
+
+# Results
+## Overall characteristics of object handling
+
+## Time of day effects
+
+## Age effects
+
+# Discussion
+
+# References 
+
+```{r}
+# References will be generated automatically by Pandoc and included here.
+# The following code is some latex to format the bibliography. Do not remove it.
+```
+
+\setlength{\parindent}{-0.1in} 
+\setlength{\leftskip}{0.125in}
+\noindent

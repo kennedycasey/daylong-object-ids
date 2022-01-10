@@ -68,6 +68,13 @@ site_colors <- c("Rossel" = "#3C5388",
 
 # Introduction
 
+The artifacts of everyday life reflect our routines, aspirations, relationships, and much more. In particular, objects that are regularly picked up and handled---a coffee cup, a laptop, a baby bottle---offer a window into the physical, social, and cultural contexts that shape each individual's understanding of the world. In this paper, we explore object handling as a glimpse into everyday life at its roots, from early infancy until age four.
+<!--mc: I feel very REF-less at this point. I'm going to look into the Ochs et al. CELF study for some more inspiration on background here-->
+
+
+
+
+
 # Methods
 ## Corpus
 

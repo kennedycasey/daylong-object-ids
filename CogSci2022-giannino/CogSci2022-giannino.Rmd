@@ -63,7 +63,7 @@ site_colors <- c("Rossel" = "#3C5388",
 ## Reliability
 
 # Results
-## Overall characteristics of object handling
+## Overall frequency statistics
 ```{r, overall-object-stats, results = "hide"}
 
 daily.objects <- object.data %>%
@@ -97,8 +97,44 @@ hourly.objects <- object.data %>%
             min = min(n.objects),
             max = max(n.objects)) %>%
   mutate(across(mean:sd), round(., 2))
+
+ranked.objects.list <- list()
+for (i in c("Rossel", "Tseltal")) {
+  ranked.objects <- object.data %>%
+    filter(site == i) %>%
+    mutate(total.kids = length(unique(sub_num))) %>%
+    group_by(object) %>%
+    summarize(n.kids = length(unique(sub_num)), 
+              total.kids = total.kids, 
+              prop = n.kids/total.kids) %>%
+    ungroup() %>%
+    distinct() %>%
+    arrange(desc(prop)) %>%
+    mutate(rank = row_number(), 
+           site = i) 
+  ranked.objects.list[[i]] <- ranked.objects
+}
+all.ranked.objects <- do.call(rbind, ranked.objects.list)
+
+ros.objects <- all.ranked.objects %>%
+  filter(site == "Rossel") %>%
+  pull(object)
+
+tse.objects <- all.ranked.objects %>%
+  filter(site == "Tseltal") %>%
+  pull(object)
+
+ros.top.objects <- all.ranked.objects %>%
+  filter(site == "Rossel" & rank <= 25) %>%
+  pull(object)
+
+tse.top.objects <- all.ranked.objects %>%
+  filter(site == "Tseltal" & rank <= 25) %>%
+  pull(object)
 ```
-Across the entire waking day, children handled an average of `r daily.objects$mean` unique objects (median = `r daily.objects$median`, _SD_ = `r daily.objects$sd`, range = `r daily.objects$min`--`r daily.objects$max`), with no significant differences across sites (_M_~_Rossel_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Rossel")$n.objects), 2)`, _M_~_Tseltal_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Tseltal")$n.objects), 2)`, _W_ = `r comp.daily.objects$statistic`, _p_ = `r round(comp.daily.objects$p.value, 3)`). During any given hour, children handled `r hourly.objects$mean` objects, on average (median = `r hourly.objects$median`, _SD_ = `r hourly.objects$sd`, range = `r hourly.objects$min`--`r hourly.objects$max`).
+Across the entire waking day, children handled an average of `r daily.objects$mean` unique objects (median = `r daily.objects$median`, _SD_ = `r daily.objects$sd`, range = `r daily.objects$min`--`r daily.objects$max`), with no significant differences across sites (_M_~_Rossel_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Rossel")$n.objects), 2)`, _M_~_Tseltal_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Tseltal")$n.objects), 2)`, _W_ = `r comp.daily.objects$statistic`, _p_ = `r round(comp.daily.objects$p.value, 3)`). Only `r round(length(intersect(ros.objects, tse.objects))/length(unique(raw.data$object)),4)*100`% of objects were present in both communities, but several of these shared objects were among the most frequently handled by children in both sites. In fact, among the top 25 most common objects, `r length(intersect(ros.top.objects, tse.top.objects))` were shared across sites. 
+
+During any given hour, children handled `r hourly.objects$mean` objects, on average (median = `r hourly.objects$median`, _SD_ = `r hourly.objects$sd`, range = `r hourly.objects$min`--`r hourly.objects$max`). 
 
 ```{r, overall-category-stats}
 category.props <- category.data %>%
@@ -165,7 +201,6 @@ top.immovable <- raw.data %>%
 The frequency of object categories was similarly divided across sites (Figure 1a). Children primarily handled miscellaneous synthetic objects (e.g., `r top.synthetic`, etc.; _M_~_Rossel_~ = `r round(subset(category.means$mean, category.means$site == "Rossel" & category.means$object_type == "Synthetic"), 4)*100`% of handling, _M_~_Tseltal_~ = `r round(subset(category.means$mean, category.means$site == "Tseltal" & category.means$object_type == "Synthetic"), 4)*100`%) and food (_M_~_Rossel_~ = `r round(subset(category.means$mean, category.means$site == "Rossel" & category.means$object_type == "Food"), 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means$mean, category.means$site == "Tseltal" & category.means$object_type == "Food"), 4)*100`%). For `r top.category.bychild` of `r length(unique(raw.data$sub_num))` children, their top category was either synthetic objects or food. Two-tailed Wilcoxon tests revealed that the only significant difference between sites was seen in children's handling of large or immovable objects (e.g., `r top.immovable`, etc.), where Rossel children handled these objects more frequently than Tseltal children (_M_~_Rossel_~ = `r round(subset(category.means$mean, category.means$site == "Rossel" & category.means$object_type == "Immovable"), 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means$mean, category.means$site == "Tseltal" & category.means$object_type == "Immovable"), 4)*100`%, adjusted _p_ = `r round(subset(comp.category.bysite$p.adjusted, comp.category.bysite$object_type == "Immovable"), 3)`, *p*s for all other categories > 0.05).
 
 ```{r fig1, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 3.4, fig.height = 3.4, fig.cap = ""}
-
 category.props.plot <- ggplot() +
   geom_bar(data = category.means, 
            mapping  = aes(x = object_type, y = mean*100, color = site, fill = site),
@@ -183,6 +218,7 @@ category.props.plot <- ggplot() +
   scale_fill_manual(values = site_colors) +
   labs(x = "Object Categories", y = "% Handling", color = "Site", fill = "Site") +
   theme_classic(base_size = 15)
+#print(category.props.plot)
 ```
 
 ## Time of day effects

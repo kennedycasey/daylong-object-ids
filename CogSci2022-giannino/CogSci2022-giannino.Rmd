@@ -25,6 +25,10 @@ knitr::opts_chunk$set(fig.width = 3, fig.height = 3, fig.crop  =  FALSE,
 library(tidyverse)
 library(lubridate)
 library(broom)
+library(broom.mixed)
+library(lme4)
+library(lmerTest)
+library(gghalves)
 ```
 
 ```{r, data-prep}
@@ -49,6 +53,15 @@ object.data <- raw.data %>%
 category.data <- raw.data %>%
   select(-object)
 
+# current workaround for multiple categories issue (far from perfect)
+object.bycategory <- raw.data %>%
+  group_by(object, object_type) %>%
+  summarize(n.category = n()) %>%
+  ungroup() %>%
+  group_by(object) %>%
+  filter(n.category == max(n.category)) %>%
+  select(-n.category)
+
 site_colors <- c("Rossel" = "#3C5388", 
                  "Tseltal" = "#02A087")
 ```
@@ -64,7 +77,7 @@ site_colors <- c("Rossel" = "#3C5388",
 
 # Results
 ## Overall frequency statistics
-```{r, overall-object-stats, results = "hide"}
+```{r, daily-object-stats, results = "hide"}
 
 daily.objects <- object.data %>%
   group_by(sub_num) %>%
@@ -86,17 +99,6 @@ shapiro.test(subset(daily.objects.bysite, daily.objects.bysite$site == "Rossel")
 shapiro.test(subset(daily.objects.bysite, daily.objects.bysite$site == "Tseltal")$n.objects)
 var.test(n.objects ~ site, daily.objects.bysite)
 comp.daily.objects <- tidy(wilcox.test(n.objects ~ site, daily.objects.bysite))
-
-hourly.objects <- object.data %>%
-  group_by(sub_num, hour) %>%
-  summarize(n.objects = length(unique(object))) %>%
-  ungroup() %>%
-  summarize(mean = mean(n.objects), 
-            median = median(n.objects), 
-            sd = sd(n.objects), 
-            min = min(n.objects),
-            max = max(n.objects)) %>%
-  mutate(across(mean:sd), round(., 2))
 
 ranked.objects.list <- list()
 for (i in c("Rossel", "Tseltal")) {
@@ -133,8 +135,6 @@ tse.top.objects <- all.ranked.objects %>%
   pull(object)
 ```
 Across the entire waking day, children handled an average of `r daily.objects$mean` unique objects (median = `r daily.objects$median`, _SD_ = `r daily.objects$sd`, range = `r daily.objects$min`--`r daily.objects$max`), with no significant differences across sites (_M_~_Rossel_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Rossel")$n.objects), 2)`, _M_~_Tseltal_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Tseltal")$n.objects), 2)`, _W_ = `r comp.daily.objects$statistic`, _p_ = `r round(comp.daily.objects$p.value, 3)`). Only `r round(length(intersect(ros.objects, tse.objects))/length(unique(raw.data$object)),4)*100`% of objects were present in both communities, but several of these shared objects were among the most frequently handled by children in both sites. In fact, among the top 25 most common objects, `r length(intersect(ros.top.objects, tse.top.objects))` were shared across sites. 
-
-During any given hour, children handled `r hourly.objects$mean` objects, on average (median = `r hourly.objects$median`, _SD_ = `r hourly.objects$sd`, range = `r hourly.objects$min`--`r hourly.objects$max`). 
 
 ```{r, overall-category-stats}
 category.props <- category.data %>%
@@ -197,8 +197,47 @@ top.immovable <- raw.data %>%
   transmute(top.objects = paste(object, collapse = ", ")) %>%
   distinct() %>%
   pull(top.objects)
+
+hourly.categories <- object.data %>%
+  left_join(object.bycategory, by = "object") %>%
+  group_by(sub_num, hour) %>%
+  summarize(n.categories = length(unique(object_type))) %>%
+  ungroup() %>%
+  summarize(mean = round(mean(n.categories), 2))
 ```
-The frequency of object categories was similarly divided across sites (Figure 1a). Children primarily handled miscellaneous synthetic objects (e.g., `r top.synthetic`, etc.; _M_~_Rossel_~ = `r round(subset(category.means$mean, category.means$site == "Rossel" & category.means$object_type == "Synthetic"), 4)*100`% of handling, _M_~_Tseltal_~ = `r round(subset(category.means$mean, category.means$site == "Tseltal" & category.means$object_type == "Synthetic"), 4)*100`%) and food (_M_~_Rossel_~ = `r round(subset(category.means$mean, category.means$site == "Rossel" & category.means$object_type == "Food"), 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means$mean, category.means$site == "Tseltal" & category.means$object_type == "Food"), 4)*100`%). For `r top.category.bychild` of `r length(unique(raw.data$sub_num))` children, their top category was either synthetic objects or food. Two-tailed Wilcoxon tests revealed that the only significant difference between sites was seen in children's handling of large or immovable objects (e.g., `r top.immovable`, etc.), where Rossel children handled these objects more frequently than Tseltal children (_M_~_Rossel_~ = `r round(subset(category.means$mean, category.means$site == "Rossel" & category.means$object_type == "Immovable"), 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means$mean, category.means$site == "Tseltal" & category.means$object_type == "Immovable"), 4)*100`%, adjusted _p_ = `r round(subset(comp.category.bysite$p.adjusted, comp.category.bysite$object_type == "Immovable"), 3)`, *p*s for all other categories > 0.05).
+The frequency of object categories was similarly divided across sites (Figure 1a). Children primarily handled miscellaneous synthetic objects (e.g., `r top.synthetic`, etc.; _M_~_Rossel_~ = `r round(subset(category.means$mean, category.means$site == "Rossel" & category.means$object_type == "Synthetic"), 4)*100`% of handling, _M_~_Tseltal_~ = `r round(subset(category.means$mean, category.means$site == "Tseltal" & category.means$object_type == "Synthetic"), 4)*100`%) and food (_M_~_Rossel_~ = `r round(subset(category.means$mean, category.means$site == "Rossel" & category.means$object_type == "Food"), 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means$mean, category.means$site == "Tseltal" & category.means$object_type == "Food"), 4)*100`%). For `r top.category.bychild` of `r length(unique(raw.data$sub_num))` children, the top category was either synthetic objects or food. Two-tailed Wilcoxon tests revealed only one significant category-level difference between sites: children's handling of large or immovable objects (e.g., `r top.immovable`, etc.), where Rossel children handled these objects more frequently than Tseltal children (_M_~_Rossel_~ = `r round(subset(category.means$mean, category.means$site == "Rossel" & category.means$object_type == "Immovable"), 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means$mean, category.means$site == "Tseltal" & category.means$object_type == "Immovable"), 4)*100`%, adjusted _p_ = `r round(subset(comp.category.bysite$p.adjusted, comp.category.bysite$object_type == "Immovable"), 3)`, *p*s for all other categories > 0.05).
+
+```{r, hourly-object-stats}
+hourly.objects <- object.data %>%
+  group_by(sub_num, hour) %>%
+  summarize(n.objects = length(unique(object))) %>%
+  ungroup() %>%
+  summarize(mean = mean(n.objects), 
+            median = median(n.objects), 
+            sd = sd(n.objects), 
+            min = min(n.objects),
+            max = max(n.objects)) %>%
+  mutate(across(mean:sd), round(., 2))
+
+# TO DO: deal with kids with 2 recordings
+model.data <- object.data %>%
+  left_join(object.bycategory, by = "object") %>%
+  group_by(site, sub_num, hour, object_type) %>%
+  summarize(n.objects = length(unique(object))) %>%
+  ungroup()
+
+# TO DO: pick appropriate reference level
+model.data$object_type <- relevel(model.data$object_type, ref = "Immovable")
+hourly.objects.model <- lmer(n.objects ~ site * object_type + (1|sub_num), model.data) %>%
+  tidy() %>%
+  filter(effect == "fixed" & term != "(Intercept)" & p.value < 0.05) %>%
+  mutate(term = str_remove_all(term, "Tseltal|object_type"))
+  
+hourly.objects.bycategory <- model.data %>%
+  group_by(site, sub_num, object_type) %>%
+  summarize(n.objects.bysub = mean(n.objects))
+```
+During any given hour, children handled `r hourly.objects$mean` objects from `r hourly.categories$mean` different categories, on average (median = `r hourly.objects$median` objects, _SD_ = `r hourly.objects$sd`, range = `r hourly.objects$min`--`r hourly.objects$max`). A linear mixed-effects model with fixed effects of site, object category, and their interaction showed...
 
 ```{r fig1, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 3.4, fig.height = 3.4, fig.cap = ""}
 category.props.plot <- ggplot() +
@@ -219,6 +258,16 @@ category.props.plot <- ggplot() +
   labs(x = "Object Categories", y = "% Handling", color = "Site", fill = "Site") +
   theme_classic(base_size = 15)
 #print(category.props.plot)
+
+unique.objects.bycategory.plot <- ggplot(hourly.objects.bycategory, aes(x = object_type, y = n.objects.bysub, color = site, fill = site)) + 
+  geom_half_violin(alpha = 0.5, position = position_nudge(x = 0.2), side = "r") +
+  geom_point(position = position_jitterdodge(dodge.width = 0.2, jitter.width = 0.05), size = 1) +
+  geom_boxplot(width = 0.25, outlier.shape = NA, alpha = 0.5, color = "black") +
+    scale_color_manual(values = site_colors) +
+  scale_fill_manual(values = site_colors) +
+  labs(x = "Object Categories", y = "Unique Objects/Hour", color = "Site", fill = "Site") +
+  theme_classic(base_size = 15)
+#print(unique.objects.bycategory.plot)
 ```
 
 ## Time of day effects

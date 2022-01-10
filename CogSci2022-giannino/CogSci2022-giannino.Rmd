@@ -71,6 +71,15 @@ site_colors <- c("Rossel" = "#3C5388",
 The artifacts of everyday life reflect our routines, aspirations, relationships, and much more. In particular, objects that are regularly picked up and handled---a coffee cup, a laptop, a baby bottle---offer a window into the physical, social, and cultural contexts that shape each individual's understanding of the world. In this paper, we explore object handling as a glimpse into everyday life at its roots, from early infancy until age four.
 <!--mc: I feel very REF-less at this point. I'm going to look into the Ochs et al. CELF study for some more inspiration on background here-->
 
+For young learners, objects and their associated activities form a critical source of input for social learning, including the ways in which they are exposed to language relating to those objects (yu/smithetc REFS; see also @herzberg2021infant for an overview of object play and motor learning). Critically, however, this object-centered input changes enormously across the first few years due to both maturational constraints and culture-specific caregiving practices. In early infancy, children have little ability to hold things or to control their posture, primarily experiencing objects through what others bring into contact with their bodies or through what appears in their visual field (faces may make up a much greater proportion of their social input at this point; fauseyREF). However, later gains in manual dexterity and gross motor skill (e.g., sitting, crawling, walking) increasingly widen their ability to seek, reach, and grab a diversity of objects in their environment<!-- :P ---including those meant to be out of reach, EDNA--> and give them greater control over what they handle, how, and for how long (REFS). Separately, children's access to objects is shaped by culture-specific practices for carrying them, keeping them safe and warm, and scaffolding the development of valued capacities (e.g., word learning in many US families, walking in Kenyan Kipsigis families, @super1976environmental), all of which may slightly alter the course of motor development (see @adolph2010motor for an overview).
+
+<!--
+- more broadly expect cultural differences in the types and diversity of artifacts
+- coming back to the main point here ... object-centered input as a dynamic source of input that both reflects and reinforces social systems
+-->
+
+
+
 
 
 

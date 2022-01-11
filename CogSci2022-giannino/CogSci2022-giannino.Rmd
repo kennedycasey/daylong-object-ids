@@ -486,11 +486,76 @@ fig3 <- object.data %>%
   labs(x = "Time of Day (Hour)", y = "Unique Objects/Hour", color = "Site", fill = "Site") +
   theme_test(base_size = 8) +
   theme(legend.position = "none")
-
 ```
 
 ## Age effects
+```{r, age-categories}
+category.props.byage <- category.data %>%
+  group_by(sub_num, object_type, site, age) %>%
+  summarize(n.category = n()) %>%
+  distinct() %>%
+  ungroup() %>% 
+  group_by(sub_num, site, age) %>%
+  summarize(n.images = sum(n.category), 
+            n.category = n.category, 
+            prop = n.category/n.images, 
+            object_type = object_type) %>%
+  distinct() %>%
+  ungroup() %>%
+  mutate(object_type = factor(object_type, levels = c("Synthetic", "Food", "Tool", "Toy", "Natural", "Immovable")))
+  
+age.effects.list <- list()
+age.effects.toplot.list <- list()
+for (i in unique(category.props.byage$object_type)) {
+  model <- lm(prop ~ site * age, filter(category.props.byage, object_type == i))
+  
+  effects <- tidy(model) %>%
+    mutate(object_type = i) %>%
+    filter(term != "(Intercept)" & p.value < 0.05)
+  
+  effects.toplot <- ggpredict(model, terms = c("site", "age [all]"), type = "fixed", back.transform = TRUE) %>%
+  rename(age = group, site = x) %>%
+  mutate(object_type = i)
+  
+  age.effects.list[[i]] <- effects
+  age.effects.toplot.list[[i]] <- effects.toplot
+}
 
+age.effects <- do.call(rbind, age.effects.list)
+age.effects.toplot <- do.call(rbind, age.effects.toplot.list) %>%
+  mutate(object_type = factor(object_type, levels = c("Synthetic", "Food", "Tool", "Toy", "Natural", "Immovable")))
+```
+
+```{r, age-objects}
+
+daily.objects.byage <- object.data %>%
+  group_by(site, sub_num, age) %>%
+  summarize(n.objects = length(unique(object))) %>%
+  ungroup()
+
+model <- lm(n.objects ~ site * age, daily.objects.byage)
+
+daily.objects.byage.effects <- tidy(model) %>%
+    filter(term != "(Intercept)" & p.value < 0.10)
+
+daily.objects.byage.effects.toplot <- ggpredict(model, terms = c("site", "age [all]"), type = "fixed", back.transform = TRUE) %>%
+  rename(age = group, site = x)
+
+
+hourly.objects.byage <- object.data %>%
+  group_by(site, sub_num, age, hour) %>%
+  summarize(n.objects = length(unique(object))) %>%
+  ungroup()
+
+model <- lmer(n.objects ~ site * age + (1|sub_num), hourly.objects.byage)
+
+# marginal increase in unique objects per hour with age
+hourly.objects.byage.effects <- tidy(model) %>%
+    filter(effect == "fixed" & term != "(Intercept)" & p.value < 0.10)
+
+hourly.objects.byage.effects.toplot <- ggpredict(model, terms = c("site", "age [all]"), type = "fixed", back.transform = TRUE) %>%
+  rename(age = group, site = x)
+```
 # Discussion
 
 # References 

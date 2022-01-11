@@ -56,6 +56,7 @@ library(gghalves)
 library(cowplot)
 library(ggpubr)
 library(ggeffects)
+library(xtable)
 ```
 
 ```{r, data-prep}
@@ -126,6 +127,41 @@ The array of objects available to children will also vary crossculturally, inclu
 
 ## Reliability
 
+```{r, top-objects, results = "asis"}
+
+top.objects.bycategory <- object.data %>%
+  left_join(object.bycategory, by = "object") %>%
+  select(site, object_type, object, sub_num) %>%
+  distinct() %>%
+  group_by(site) %>%
+  summarize(total = length(unique(sub_num)), 
+            object_type = object_type, 
+            object = object, 
+            sub_num = sub_num) %>%
+  distinct() %>%
+  group_by(site, object_type, object) %>%
+  summarize(n.children = length(unique(sub_num)), 
+            prop.children = n.children/total) %>% 
+  ungroup() %>%
+  distinct() %>%
+  arrange(site, object_type, desc(prop.children)) %>%
+  group_by(site, object_type) %>%
+  mutate(rank = row_number()) %>%
+  filter(rank %in% 1:3) %>%
+  select(-n.children, -prop.children) %>%
+  pivot_wider(names_from = "rank", values_from = "object") %>%
+  mutate(objects = paste0(`1`, ", ", `2`, ", ", `3`)) %>%
+  select(object_type, objects, site) %>%
+  group_by(object_type) %>%
+  pivot_wider(names_from = "site", values_from = "objects") %>%
+  rename(`Object Category` = object_type) 
+
+top.objects.tbl <- xtable(top.objects.bycategory, caption = "Objects handled by the most children across categories and sites.")
+
+print(top.objects.tbl, type = "latex", size = "small", comment = FALSE, table.placement = "ht",
+      include.rownames = FALSE)
+```
+
 # Results
 ## Overall frequency statistics
 ```{r, daily-object-stats, results = "hide"}
@@ -185,7 +221,7 @@ tse.top.objects <- all.ranked.objects %>%
   filter(site == "Tseltal" & rank <= 25) %>%
   pull(object)
 ```
-Across the entire waking day, children handled an average of `r daily.objects$mean` unique objects (median = `r daily.objects$median`, _SD_ = `r daily.objects$sd`, range = `r daily.objects$min`--`r daily.objects$max`), with no significant differences across sites (_M_~_Rossel_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Rossel")$n.objects), 2)`, _M_~_Tseltal_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Tseltal")$n.objects), 2)`, _W_ = `r comp.daily.objects$statistic`, _p_ = `r round(comp.daily.objects$p.value, 3)`). Only `r round(length(intersect(ros.objects, tse.objects))/length(unique(raw.data$object)),4)*100`% of objects were present in both communities, but several shared objects were among the most frequently handled by children in both sites. In fact, among the top 25 most common objects, `r length(intersect(ros.top.objects, tse.top.objects))` were shared across sites. 
+Children handled an average of `r daily.objects$mean` unique objects per day (median = `r daily.objects$median`, _SD_ = `r daily.objects$sd`, range = `r daily.objects$min`--`r daily.objects$max`), with no significant differences across sites (_M_~_Rossel_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Rossel")$n.objects), 2)`, _M_~_Tseltal_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Tseltal")$n.objects), 2)`, _W_ = `r comp.daily.objects$statistic`, _p_ = `r round(comp.daily.objects$p.value, 3)`). Only `r round(length(intersect(ros.objects, tse.objects))/length(unique(raw.data$object)),4)*100`% of objects were present in both communities, but several shared objects were among the most frequently handled by children in both sites. In fact, among the top 25 most common objects, `r length(intersect(ros.top.objects, tse.top.objects))` were shared across sites.
 
 ```{r, overall-category-stats}
 category.props <- category.data %>%
@@ -256,7 +292,7 @@ hourly.categories <- object.data %>%
   ungroup() %>%
   summarize(mean = round(mean(n.categories), 2))
 ```
-The frequency of object categories was similarly divided across sites (Figure 1A). Children primarily handled miscellaneous synthetic objects (e.g., `r top.synthetic`, etc.; _M_~_Rossel_~ = `r round(subset(category.means$mean, category.means$site == "Rossel" & category.means$object_type == "Synthetic"), 4)*100`% of handling, _M_~_Tseltal_~ = `r round(subset(category.means$mean, category.means$site == "Tseltal" & category.means$object_type == "Synthetic"), 4)*100`%) and food (_M_~_Rossel_~ = `r round(subset(category.means$mean, category.means$site == "Rossel" & category.means$object_type == "Food"), 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means$mean, category.means$site == "Tseltal" & category.means$object_type == "Food"), 4)*100`%). For `r top.category.bychild` of `r length(unique(raw.data$sub_num))` children, the top category was either synthetic objects or food. Two-tailed Wilcoxon tests revealed only one significant category-level difference between sites: children's handling of large or immovable objects (e.g., `r top.immovable`, etc.), where Rossel children handled these objects more frequently than Tseltal children (_M_~_Rossel_~ = `r round(subset(category.means$mean, category.means$site == "Rossel" & category.means$object_type == "Immovable"), 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means$mean, category.means$site == "Tseltal" & category.means$object_type == "Immovable"), 4)*100`%, adjusted _p_ = `r round(subset(comp.category.bysite$p.adjusted, comp.category.bysite$object_type == "Immovable"), 3)`, *p*s for all other categories > 0.05), but these objects were still the least frequently handled in both sites.
+The frequency of object categories was similarly divided across sites (Figure 1A). The top objects for each category are shown in Table 1. Children primarily handled miscellaneous synthetic objects (e.g., `r top.synthetic`, etc.; _M_~_Rossel_~ = `r round(subset(category.means$mean, category.means$site == "Rossel" & category.means$object_type == "Synthetic"), 4)*100`% of handling, _M_~_Tseltal_~ = `r round(subset(category.means$mean, category.means$site == "Tseltal" & category.means$object_type == "Synthetic"), 4)*100`%) and food (_M_~_Rossel_~ = `r round(subset(category.means$mean, category.means$site == "Rossel" & category.means$object_type == "Food"), 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means$mean, category.means$site == "Tseltal" & category.means$object_type == "Food"), 4)*100`%). For `r top.category.bychild` of `r length(unique(raw.data$sub_num))` children, the top category was either synthetic objects or food. Two-tailed Wilcoxon tests revealed only one significant category-level difference between sites: children's handling of large or immovable objects (e.g., `r top.immovable`, etc.), where Rossel children handled these objects more frequently than Tseltal children (_M_~_Rossel_~ = `r round(subset(category.means$mean, category.means$site == "Rossel" & category.means$object_type == "Immovable"), 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means$mean, category.means$site == "Tseltal" & category.means$object_type == "Immovable"), 4)*100`%, adjusted _p_ = `r round(subset(comp.category.bysite$p.adjusted, comp.category.bysite$object_type == "Immovable"), 3)`, *p*s for all other categories > 0.05), but these objects were still the least frequently handled in both sites.
 
 ```{r, hourly-object-stats}
 hourly.objects <- object.data %>%
@@ -441,7 +477,6 @@ hourly.objects.bytod.effects.toplot <- ggpredict(model, terms = c("site", "tod [
 Children's overall rate of object handling was largely consistent across the day. The number of unique handled objects per hour was not linearly related to time of day ($\beta$ = `r round(subset(hourly.objects.bytod.effects$estimate, hourly.objects.bytod.effects$term == "tod"), 2)`, _SE_ = `r round(subset(hourly.objects.bytod.effects$std.error, hourly.objects.bytod.effects$term == "tod"), 2)`, _t_ = `r round(subset(hourly.objects.bytod.effects$statistic, hourly.objects.bytod.effects$term == "tod"), 2)`, _p_ = `r round(subset(hourly.objects.bytod.effects$p.value, hourly.objects.bytod.effects$term == "tod"), 3)`), and there was no two-way interaction between time of day and site ($\beta$ = `r round(subset(hourly.objects.bytod.effects$estimate, hourly.objects.bytod.effects$term == "site:tod"), 2)`, _SE_ = `r round(subset(hourly.objects.bytod.effects$std.error, hourly.objects.bytod.effects$term == "site:tod"), 2)`, _t_ = `r round(subset(hourly.objects.bytod.effects$statistic, hourly.objects.bytod.effects$term == "site:tod"), 2)`, _p_ = `r round(subset(hourly.objects.bytod.effects$p.value, hourly.objects.bytod.effects$term == "site:tod"), 3)`).
 
 However, we did find differences in children's rates of holding for specific object categories across the day. We ran individual linear mixed-effects models, which included fixed effects of site, hour of the day, and their interaction, for all each of categories. Synthetic objects were marginally more common during the afternoon hours ($\beta$ = `r round(subset(tod.effects$estimate, tod.effects$term == "tod" & tod.effects$object_type == "Synthetic"), 2)`, _SE_ = `r round(subset(tod.effects$std.error, tod.effects$term == "tod" & tod.effects$object_type == "Synthetic"), 2)`, _t_ = `r round(subset(tod.effects$statistic, tod.effects$term == "tod" & tod.effects$object_type == "Synthetic"), 2)`, _p_ = `r round(subset(tod.effects$p.value, tod.effects$term == "tod" & tod.effects$object_type == "Synthetic"), 3)`), and food items were handled with significantly greater frequency during the morning hours ($\beta$ = `r round(subset(tod.effects$estimate, tod.effects$term == "tod" & tod.effects$object_type == "Food"), 2)`, _SE_ = `r round(subset(tod.effects$std.error, tod.effects$term == "tod" & tod.effects$object_type == "Food"), 2)`, _t_ = `r round(subset(tod.effects$statistic, tod.effects$term == "tod" & tod.effects$object_type == "Food"), 2)`, _p_ = `r round(subset(tod.effects$p.value, tod.effects$term == "tod" & tod.effects$object_type == "Food"), 3)`; Figure 2). No other main effects or two-way interactions reached statistical significance (all *p*s > 0.10).
-
 
 ```{r fig2, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 3.4, fig.height = 2.9, fig.cap = "Frequency of handling by object category across different times of day. Individual points show raw percentages for each child, and lines reflect model-predicted percentages."}
 

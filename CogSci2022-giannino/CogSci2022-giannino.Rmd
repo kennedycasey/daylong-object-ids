@@ -314,18 +314,18 @@ p1 <- ggplot() +
   geom_point(data = category.props,
              mapping = aes(x = object_type, y = prop*100, color = site, fill = site),
              position = position_jitterdodge(dodge.width = 0.75, jitter.width = 0.1), 
-             size = 1) +
+             size = 0.5, alpha = 0.25) +
   geom_errorbar(data = category.means,
                 mapping = aes(x = object_type, ymin = (mean - se)*100, 
                               ymax = (mean + se)*100, group = site),
                 position = position_dodge(width = 0.75), 
-                width = 0.25, size = 0.8, color = "black") +
+                width = 0.25, size = 0.5, color = "black") +
   annotate(geom = "text", label = "*", x = "Immovable", y = 20, size = 6) +
   scale_color_manual(values = site_colors) +
   scale_fill_manual(values = site_colors) +
   labs(x = "Object Categories", y = "% Handling", color = "Site", fill = "Site", tag = "A") +
   theme_classic(base_size = 8) +
-  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank(), axis.title.x = element_blank())
+  theme(axis.title.x = element_blank())
 
 p1a <- p1 + theme(legend.position = "none", legend.direction = "horizontal", 
                   plot.tag = element_text(face = "bold"))
@@ -334,7 +334,7 @@ legend <- get_legend(p1 + theme(legend.position = "bottom"))
 
 p2 <- ggplot(hourly.objects.bycategory, aes(x = object_type, y = n.objects.bysub, color = site, fill = site)) + 
   #geom_half_violin(alpha = 0.5, position = position_nudge(x = 0.5), side = "r") +
-  geom_point(position = position_jitterdodge(dodge.width = 0.75, jitter.width = 0.1), size = 1) +
+  geom_point(position = position_jitterdodge(dodge.width = 0.75, jitter.width = 0.1), size = 0.5, alpha = 0.5) +
   geom_boxplot(width = 0.75, outlier.shape = NA, alpha = 0.5, color = "black") +
   annotate(geom = "text", label = "*", x = "Synthetic", y = 5, size = 6) +
     scale_color_manual(values = site_colors) +
@@ -344,7 +344,7 @@ p2 <- ggplot(hourly.objects.bycategory, aes(x = object_type, y = n.objects.bysub
   theme(legend.position = "none", plot.tag = element_text(face = "bold"))
 
 fig1 <- align_plots(p1a, p2, align = "hv", axis = "l")
-panels <- plot_grid(ggdraw(fig1[[1]]), ggdraw(fig1[[2]]), nrow = 2)
+panels <- plot_grid(ggdraw(fig1[[1]]), NULL, ggdraw(fig1[[2]]), nrow = 3, rel_heights = c(1, -0.07, 1))
 plot_grid(panels, legend, ncol = 1, rel_heights = c(1, .1))
 ```
 
@@ -393,7 +393,7 @@ tod.effects.toplot <- do.call(rbind, tod.effects.toplot.list) %>%
 ```
 When we divide the day into morning, midday, and afternoon, we see largely stable rates of handling across all object categories (Figure 2). We ran individual linear mixed-effects models, which included fixed effects of site, time of day, and their interaction, for all 6 categories. The only significant result was a main effect of time of day for the tool category ($\beta$ = `r round(subset(tod.effects$estimate, tod.effects$term == "todafternoon" & tod.effects$object_type=="Tool"), 2)`, _SE_ = `r round(subset(tod.effects$std.error, tod.effects$term == "todafternoon" & tod.effects$object_type=="Tool"), 2)`, _t_ = `r round(subset(tod.effects$statistic, tod.effects$term == "todafternoon" & tod.effects$object_type=="Tool"), 2)`, _p_ = `r round(subset(tod.effects$p.value, tod.effects$term == "todafternoon" & tod.effects$object_type=="Tool"), 3)`), where these objects were most frequently handled in the afternoon in both sites. No other main effects or two-way interactions reached statistical significance (all *p*s > 0.05).
 
-```{r fig2, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 3.4, fig.height = 3.4, fig.cap = "Frequency of handling by object category across different times of day. Point ranges reflect model-predicted mean percentage of handling and 95\\% confidence intervals. Individual points show raw percentages for each child."}
+```{r fig2, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 3.4, fig.height = 2.9, fig.cap = "Frequency of handling by object category across different times of day. Point ranges reflect model-predicted mean percentage of handling and 95\\% confidence intervals. Individual points show raw percentages for each child."}
 
 ggplot(tod.effects.toplot, aes(x = tod, y = predicted*100, color = site, fill = site)) +
   facet_wrap(. ~ object_type, nrow = 2) +
@@ -402,7 +402,6 @@ ggplot(tod.effects.toplot, aes(x = tod, y = predicted*100, color = site, fill = 
   geom_point(position = position_dodge(0.9), size = 2) +
   scale_fill_manual(values = site_colors) +
   scale_color_manual(values = site_colors) +
-  scale_y_continuous(breaks = c(0, 25, 50, 75)) +
   labs(x = "Time of Day", y = "% Handling", color = "Site", fill = "Site") +
   theme_test(base_size = 8) +
   theme(legend.position = "none")

@@ -1,17 +1,41 @@
 ---
-title: 
+title: "Title TBD"
 bibliography: CogSci2022-giannino.bib
 csl: apa6.csl
 document-params: "10pt, letterpaper"
 
-author-information: 
+author-information: >
+  \author{Kennedy Casey \\
+          University of Chicago \\
+          \texttt{kbcasey@uchicago.edu}
+  \And \textbf{Elizabeth Mickiewicz} \\
+               University of Chicago \\
+               \texttt{lizmick9@uchicago.edu}
+  \And \textbf{Kimberly Shorter} \\
+               University of Chicago \\
+               \texttt{klshorter@uchicago.edu}
+  \And \textbf{Anapaula Silva Mandujano} \\
+               University of Chicago \\
+               \texttt{anapaula@uchicago.edu}            
+  \AND \textbf{Mara Duquette} \\
+               University of Chicago \\
+               \texttt{duquettemara@uchicago.edu}
+  \And \textbf{Mary Elliott} \\
+               University of Texas at Dallas \\
+               \texttt{maryle18@gmail.com}
+  \And \textbf{Elika Bergelson} \\
+               Duke University \\
+               \texttt{elika.bergelson@duke.edu}
+  \And \textbf{Marisa Casillas} \\
+               University of Chicago \\
+               \texttt{mcasillas@uchicago.edu}}
 
 abstract:
 
 keywords:
     
 output: cogsci2016::cogsci_paper
-#final-submission: \cogscifinalcopy
+final-submission: \cogscifinalcopy
 ---
 
 ```{r global_options, include = FALSE}
@@ -78,7 +102,7 @@ For young learners, objects and their associated activities form a critical sour
 
 Separately, access to objects is shaped by culture-specific practices for carrying children, keeping them safe and warm, and scaffolding the development of valued capacities (e.g., word learning in many US families, walking in Kenyan Kipsigis families, @super1976environmental), all of which may slightly alter the course of motor development (see @adolph2010motor for an overview).
 
-The array of objects available to children will also vary crossculturally, including: (a) objects spread via globalization (e.g., plastic bags), (b) objects that have a basic functional role that is similar across mamy contexts (e.g., spoon-like things for eating), and (c) objects are specific to people and places (e.g., the gourd and bombilla for drinking mate in much of South America, stemming from Guaraní and Tupí tradition). Take, for example, middle-class US family homes, which have been noted for their large quantities of possessions ("clutter"), much of which is designed specifically for children (e.g., toys and books @arnold2017life). We might infer based on this distribution of objects that much of what children do and talk about at home is tailored to what particularly interests them and thus children's worlds, in this sense, look very different from adults'. Recent work by Herzberg and colleagues [-@herzberg2021infant] underscores this point; their study of object play in 13--23-month-olds showed that infants spent nearly 70% of their time with toys or a mix of toys and non-toys, with ~100% of infants playing with children's books and stuffed animals and a total of 32 toy types appearing in ≥25% of infants's play. Non-toy play was also common, but still appeared to predominantly include infant-specific objects (e.g., sippy cups, baby spoons, high chairs, pacifiers). We would expect many of these items to be rare in other parts of the world, with much greater overlap between objects for infants and objects for adults (e.g., @karasik2018not).
+The array of objects available to children will also vary crossculturally, including: (a) objects spread via globalization (e.g., plastic bags), (b) objects that have a basic functional role that is similar across many contexts (e.g., spoon-like things for eating), and (c) objects are specific to people and places (e.g., the gourd and bombilla for drinking mate in much of South America, stemming from Guaraní and Tupí tradition). Take, for example, middle-class US family homes, which have been noted for their large quantities of possessions ("clutter"), much of which is designed specifically for children (e.g., toys and books @arnold2017life). We might infer based on this distribution of objects that much of what children do and talk about at home is tailored to what particularly interests them and thus children's worlds, in this sense, look very different from adults'. Recent work by Herzberg and colleagues [-@herzberg2021infant] underscores this point; their study of object play in 13--23-month-olds showed that infants spent nearly 70% of their time with toys or a mix of toys and non-toys, with ~100% of infants playing with children's books and stuffed animals and a total of 32 toy types appearing in $\ge$ 25% of infants' play. Non-toy play was also common, but still appeared to predominantly include infant-specific objects (e.g., sippy cups, baby spoons, high chairs, pacifiers). We would expect many of these items to be rare in other parts of the world, with much greater overlap between objects for infants and objects for adults (e.g., @karasik2018not).
 
 
 

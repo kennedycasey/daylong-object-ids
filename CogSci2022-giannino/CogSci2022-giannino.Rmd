@@ -362,9 +362,9 @@ category.props.bytod <- category.data %>%
             object_type = object_type) %>%
   distinct() %>%
   ungroup() %>%
-  mutate(morning = ifelse(tod == "morning", 1, 0), 
-         midday = ifelse(tod == "midday", 1, 0), 
-         afternoon = ifelse(tod == "afternoon", 1, 0))
+  mutate(tod = factor(tod, levels = c("morning", "midday", "afternoon"), labels = c("AM", "12", "PM")), 
+         object_type = factor(object_type, levels = c("Synthetic", "Food", "Tool", "Toy", "Natural", "Immovable")))
+  
 
 tod.effects.list <- list()
 tod.effects.toplot.list <- list()
@@ -376,7 +376,7 @@ for (i in unique(category.props.bytod$object_type)) {
     mutate(object_type = i) %>%
     filter(effect == "fixed" & term != "(Intercept)" & p.value < 0.05)
   
-  effects.toplot <- ggpredict(model, terms = c("site", "tod")) %>%
+  effects.toplot <- ggpredict(model, terms = c("site", "tod"), type = "fixed", back.transform = TRUE) %>%
   rename(tod = group, site = x) %>%
   mutate(object_type = i)
   
@@ -388,9 +388,25 @@ for (i in unique(category.props.bytod$object_type)) {
 }
 
 tod.effects <- do.call(rbind, tod.effects.list)
-tod.effects.toplot <- do.call(rbind, tod.effects.toplot.list)
+tod.effects.toplot <- do.call(rbind, tod.effects.toplot.list) %>%
+  mutate(object_type = factor(object_type, levels = c("Synthetic", "Food", "Tool", "Toy", "Natural", "Immovable")))
 ```
 When we divide the day into morning, midday, and afternoon, we see largely stable rates of handling across all object categories (Figure 2). We ran individual linear mixed-effects models, which included fixed effects of site, time of day, and their interaction, for all 6 categories. The only significant result was a main effect of time of day for the tool category ($\beta$ = `r round(subset(tod.effects$estimate, tod.effects$term == "todafternoon" & tod.effects$object_type=="Tool"), 2)`, _SE_ = `r round(subset(tod.effects$std.error, tod.effects$term == "todafternoon" & tod.effects$object_type=="Tool"), 2)`, _t_ = `r round(subset(tod.effects$statistic, tod.effects$term == "todafternoon" & tod.effects$object_type=="Tool"), 2)`, _p_ = `r round(subset(tod.effects$p.value, tod.effects$term == "todafternoon" & tod.effects$object_type=="Tool"), 3)`), where these objects were most frequently handled in the afternoon in both sites. No other main effects or two-way interactions reached statistical significance (all *p*s > 0.05).
+
+```{r fig2, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 3.4, fig.height = 3.4, fig.cap = "Frequency of handling by object category across different times of day. Point ranges reflect model-predicted mean percentage of handling and 95\\% confidence intervals. Individual points show raw percentages for each child."}
+
+ggplot(tod.effects.toplot, aes(x = tod, y = predicted*100, color = site, fill = site)) +
+  facet_wrap(. ~ object_type, nrow = 2) +
+  geom_point(category.props.bytod, mapping = aes(x = tod, y = prop*100, color = site, fill = site), size = 0.5, alpha = 0.25, position = position_jitterdodge(dodge.width = 0.9, jitter.width = 0.1)) +
+  geom_errorbar(aes(ymin = conf.low*100, ymax = conf.high*100), position = position_dodge(0.9), width = 0.25, size = 0.5, color = "black") +
+  geom_point(position = position_dodge(0.9), size = 2) +
+  scale_fill_manual(values = site_colors) +
+  scale_color_manual(values = site_colors) +
+  scale_y_continuous(breaks = c(0, 25, 50, 75)) +
+  labs(x = "Time of Day", y = "% Handling", color = "Site", fill = "Site") +
+  theme_test(base_size = 8) +
+  theme(legend.position = "none")
+```
 
 ## Age effects
 

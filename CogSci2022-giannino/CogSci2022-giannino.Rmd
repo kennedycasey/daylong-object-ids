@@ -383,18 +383,18 @@ plot_grid(panels, legend, ncol = 1, rel_heights = c(1, .1))
 ## Time of day effects
 ```{r, time-of-day-categories}
 category.props.bytod <- category.data %>%
-  group_by(sub_num, object_type, site, tod) %>%
+  group_by(sub_num, object_type, site, hour) %>%
   summarize(n.category = n()) %>%
   distinct() %>%
   ungroup() %>% 
-  group_by(sub_num, site, tod) %>%
+  group_by(sub_num, site, hour) %>%
   summarize(n.images = sum(n.category), 
             n.category = n.category, 
             prop = n.category/n.images, 
             object_type = object_type) %>%
   distinct() %>%
   ungroup() %>%
-  mutate(tod = factor(tod, levels = c("morning", "midday", "afternoon"), labels = c("AM", "12", "PM")), 
+  mutate(tod = hour, 
          object_type = factor(object_type, levels = c("Synthetic", "Food", "Tool", "Toy", "Natural", "Immovable")))
   
 tod.effects.list <- list()
@@ -405,24 +405,22 @@ for (i in unique(category.props.bytod$object_type)) {
   
   effects <- tidy(model) %>%
     mutate(object_type = i) %>%
-    filter(effect == "fixed" & term != "(Intercept)" & p.value < 0.05)
+    filter(effect == "fixed" & term != "(Intercept)" & p.value < 0.10)
   
-  effects.toplot <- ggpredict(model, terms = c("site", "tod"), type = "fixed", back.transform = TRUE) %>%
+  effects.toplot <- ggpredict(model, terms = c("site", "tod [all]"), type = "fixed", back.transform = TRUE) %>%
   rename(tod = group, site = x) %>%
   mutate(object_type = i)
   
   tod.effects.list[[i]] <- effects
   tod.effects.toplot.list[[i]] <- effects.toplot
-  
-  #assign(paste0(tolower(i), ".tod.model"), effects)
-  #assign(paste0(tolower(i), ".tod.effects"), plot.effects)
 }
 
 tod.effects <- do.call(rbind, tod.effects.list)
 tod.effects.toplot <- do.call(rbind, tod.effects.toplot.list) %>%
-  mutate(object_type = factor(object_type, levels = c("Synthetic", "Food", "Tool", "Toy", "Natural", "Immovable")))
+  mutate(object_type = factor(object_type, levels = c("Synthetic", "Food", "Tool", "Toy", "Natural", "Immovable")), 
+         tod = as.numeric(as.character(tod)))
 ```
-When we divide the day into morning, midday, and afternoon, we see largely stable rates of handling across all object categories (Figure 2). We ran individual linear mixed-effects models, which included fixed effects of site, time of day, and their interaction, for all 6 categories. The only significant result was a main effect of time of day for the tool category ($\beta$ = `r round(subset(tod.effects$estimate, tod.effects$term == "todPM" & tod.effects$object_type=="Tool"), 2)`, _SE_ = `r round(subset(tod.effects$std.error, tod.effects$term == "todPM" & tod.effects$object_type=="Tool"), 2)`, _t_ = `r round(subset(tod.effects$statistic, tod.effects$term == "todPM" & tod.effects$object_type=="Tool"), 2)`, _p_ = `r round(subset(tod.effects$p.value, tod.effects$term == "todPM" & tod.effects$object_type=="Tool"), 3)`), where these objects were most frequently handled in the afternoon in both sites. No other main effects or two-way interactions reached statistical significance. Additionally, we examined whether the number of unique objects handled per hour varied as a function of object category and time of day but found no significant main effects or two-way interactions (all *p*s > 0.05).
+Next, we explored characteristics of object handling across the day. <!--kc: possibly add overall counts of unique objects across hours of the day --> We ran individual linear mixed-effects models, which included fixed effects of site, hour of the day, and their interaction, for all 6 categories. Synthetic objects were marginally more common during the afternoon hours ($\beta$ = `r round(subset(tod.effects$estimate, tod.effects$term == "tod" & tod.effects$object_type == "Synthetic"), 2)`, _SE_ = `r round(subset(tod.effects$std.error, tod.effects$term == "tod" & tod.effects$object_type == "Synthetic"), 2)`, _t_ = `r round(subset(tod.effects$statistic, tod.effects$term == "tod" & tod.effects$object_type == "Synthetic"), 2)`, _p_ = `r round(subset(tod.effects$p.value, tod.effects$term == "tod" & tod.effects$object_type == "Synthetic"), 3)`), and food items were handled with significantly greater frequency during the morning hours ($\beta$ = `r round(subset(tod.effects$estimate, tod.effects$term == "tod" & tod.effects$object_type == "Food"), 2)`, _SE_ = `r round(subset(tod.effects$std.error, tod.effects$term == "tod" & tod.effects$object_type == "Food"), 2)`, _t_ = `r round(subset(tod.effects$statistic, tod.effects$term == "tod" & tod.effects$object_type == "Food"), 2)`, _p_ = `r round(subset(tod.effects$p.value, tod.effects$term == "tod" & tod.effects$object_type == "Food"), 3)`; Figure 2). No other main effects or two-way interactions reached statistical significance (all *p*s > 0.10).
 
 ```{r, time-of-day-objects}
 hourly.objects.bytod <- object.data %>%
@@ -455,15 +453,16 @@ hourly.objects.bytod.effects.toplot <- do.call(rbind, hourly.objects.bytod.effec
   mutate(object_type = factor(object_type, levels = c("Synthetic", "Food", "Tool", "Toy", "Natural", "Immovable")))
 ```
 
-```{r fig2, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 3.4, fig.height = 2.9, fig.cap = "Frequency of handling by object category across different times of day. Point ranges reflect model-predicted mean percentage of handling and 95\\% confidence intervals. Individual points show raw percentages for each child."}
+```{r fig2, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 3.4, fig.height = 2.9, fig.cap = "Frequency of handling by object category across different times of day. Individual points show raw percentages for each child, and lines reflect model-predicted percentages."}
 
 ggplot(tod.effects.toplot, aes(x = tod, y = predicted*100, color = site, fill = site)) +
   facet_wrap(. ~ object_type, nrow = 2) +
-  geom_point(category.props.bytod, mapping = aes(x = tod, y = prop*100, color = site, fill = site), size = 0.5, alpha = 0.25, position = position_jitterdodge(dodge.width = 0.9, jitter.width = 0.1)) +
-  geom_errorbar(aes(ymin = conf.low*100, ymax = conf.high*100), position = position_dodge(0.9), width = 0.25, size = 0.5, color = "black") +
-  geom_point(position = position_dodge(0.9), size = 2) +
+  geom_line(size = 1) +
+  #geom_ribbon(aes(ymin = predicted*100 - conf.low*100, ymax = predicted*100 + conf.low*100, fill = site), color = NA, alpha = 0.1) +
+  geom_jitter(category.props.bytod, mapping = aes(x = tod, y = prop*100, color = site, fill = site), alpha = 0.25, size = 0.5) +
   scale_fill_manual(values = site_colors) +
   scale_color_manual(values = site_colors) +
+  scale_x_continuous(breaks = c(8, 12, 16), labels = c("8AM", "12PM", "4PM")) +
   labs(x = "Time of Day", y = "% Handling", color = "Site", fill = "Site") +
   theme_test(base_size = 8) +
   theme(legend.position = "none")

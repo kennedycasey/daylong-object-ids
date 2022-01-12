@@ -164,7 +164,7 @@ adults (e.g., (\textbf{karasik2018not?})).
 \hypertarget{reliability}{%
 \subsection{Reliability}\label{reliability}}
 
-\begin{table}[ht]
+\begin{table}[!ht]
 \centering
 \begingroup\small
 \begin{tabular}{lll}
@@ -230,13 +230,13 @@ Rossel children (\emph{p}s \textgreater{} 0.05 for all other main
 effects and interaction terms; Figure 1B).
 
 \begin{CodeChunk}
-\begin{figure}[h]
+\begin{figure}[!ht]
 
-{\centering \includegraphics{figs/fig1-1} 
+{\centering \includegraphics{figs/overall-stats-fig-1} 
 
 }
 
-\caption[(A) Overall frequency of handling by object category]{(A) Overall frequency of handling by object category. Points reflect percentages for individual children. (B) Count of unique objects handled per hour by object category. Points reflect means for individual children across all hours of recording.}\label{fig:fig1}
+\caption[(A) Overall frequency of handling by object category]{(A) Overall frequency of handling by object category. Points reflect percentages for individual children. (B) Count of unique objects handled per hour by object category. Points reflect means for individual children across all hours of recording.}\label{fig:overall-stats-fig}
 \end{figure}
 \end{CodeChunk}
 
@@ -253,37 +253,46 @@ time of day and site (\(\beta\) = 0.01, \emph{SE} = 0.14, \emph{t} =
 However, we did find differences in children's rates of holding for
 specific object categories across the day. We ran individual linear
 mixed-effects models, which included fixed effects of site, hour of the
-day, and their interaction, for all each of categories. Synthetic
-objects were marginally more common during the afternoon hours
-(\(\beta\) = 0.02, \emph{SE} = 0.01, \emph{t} = 1.71, \emph{p} = 0.09),
-and food items were handled with significantly greater frequency during
-the morning hours (\(\beta\) = -0.03, \emph{SE} = 0.01, \emph{t} =
--2.76, \emph{p} = 0.006; Figure 2). No other main effects or two-way
+day, and their interaction, for each of 6 categories. Synthetic objects
+were marginally more common during the afternoon hours (\(\beta\) =
+0.02, \emph{SE} = 0.01, \emph{t} = 1.71, \emph{p} = 0.09), and food
+items were handled with significantly greater frequency during the
+morning hours (\(\beta\) = -0.03, \emph{SE} = 0.01, \emph{t} = -2.76,
+\emph{p} = 0.006; Figure 2). No other main effects or two-way
 interactions reached statistical significance (all \emph{p}s
-\textgreater{} 0.10).
+\textgreater{} 0.05).
 
 \begin{CodeChunk}
-\begin{figure}[h]
+\begin{figure}[!ht]
 
-{\centering \includegraphics{figs/fig2-1} 
+{\centering \includegraphics{figs/tod-effects-fig-1} 
 
 }
 
-\caption[Frequency of handling by object category across different times of day]{Frequency of handling by object category across different times of day. Individual points show raw percentages for each child, and lines reflect model-predicted percentages.}\label{fig:fig2}
+\caption[Frequency of handling by object category across different times of day]{Frequency of handling by object category across different times of day. Individual points show raw percentages for each child, and lines reflect model-predicted percentages.}\label{fig:tod-effects-fig}
 \end{figure}
 \end{CodeChunk}
 
 \hypertarget{age-effects}{%
 \subsection{Age effects}\label{age-effects}}
 
-\begin{CodeChunk}
-\begin{figure}[h]
+Children's overall rate of object handling increased marginally with age
+(Figure 3A). That is, older children handled more unique objects per
+hour (\(\beta\) = 0.07, \emph{SE} = 0.03, \emph{t} = 1.99, \emph{p} =
+0.05). Additionally, with increasing age, children handled more objects
+from different categories per hour (\(\beta\) = 0.03, \emph{SE} = 0.01,
+\emph{t} = 2.6, \emph{p} = 0.011). These effects were consistent across
+sites; we found no main effects of site or interactions between site and
+age (all \emph{p}s \textgreater{} 0.05).
 
-{\centering \includegraphics{figs/fig4-1} 
+\begin{CodeChunk}
+\begin{figure}[!ht]
+
+{\centering \includegraphics{figs/age-effects-fig-1} 
 
 }
 
-\caption[(A) Unique objects handled per hour as a function of age]{(A) Unique objects handled per hour as a function of age. (B) Unique object categories handled per hour as a function of age. Points reflect raw hourly counts for each child, and lines reflect model predictions with shaded standard error regions.}\label{fig:fig4}
+\caption[(A) Unique objects and (B) object categories handled per hour as a function of age]{(A) Unique objects and (B) object categories handled per hour as a function of age. Points reflect raw hourly counts for each child, and lines reflect model predictions with shaded standard error regions.}\label{fig:age-effects-fig}
 \end{figure}
 \end{CodeChunk}
 

@@ -112,7 +112,11 @@ In exploring object handling patterns we are specifically interested in implicat
 -->
 
 <!--
-- word learning and object handling (can crib content from casillas & elliott imco paper)
+- word learning and object handling (can crib content from casillas & elliott imco paper): particularly
+
+Object-centric interaction with others, particularly coordinated child-caregiver attention via object handling, has been proposed as a potentially powerful source of information for early word learning [e.g., @yu2013joint]. Egocentric recordings of interaction show decreasing views of faces and increasing views of hands over the first two years of life [@fausey2016faces; @jayaraman2017faces; but see @long2020detecting]. This focus on active hands can lead to episodes of shared attention in which communication, and thereby word learning, is facilitated [@yu2013joint]. And while both children and their caregivers can initiate these interactional episodes, children's own holding experiences throw objects into sharp perceptual relief, thereby increasing the potential for learning about that object's label, functional affordances, and more [e.g., @amatuni2021characterizing; @elmlinger2019toddlers; @herzberg2021exuberant; @slone2018gaze; @soska2010systems; see also @clerkin2017real; @lockman2017new; @long2021characterizing].
+
+- from elika's papers, the obvious stuff to cite is her work on object co-presence in general (day-by-day), it's relationship to comprehension (pnas w/ dick aslin? maybe she has a newer one she'd prefer? checking on this), and the babble-matching-attended-objects effect in Laing and Bergelson. i've asked her about if she has anything else/different she wants to include.
 -->
 
 

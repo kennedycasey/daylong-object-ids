@@ -476,7 +476,7 @@ hourly.objects.bytod.effects.toplot <- ggpredict(model, terms = c("site", "tod [
 ```
 Children's overall rate of object handling was largely consistent across the day. The number of unique handled objects per hour was not linearly related to time of day ($\beta$ = `r round(subset(hourly.objects.bytod.effects$estimate, hourly.objects.bytod.effects$term == "tod"), 2)`, _SE_ = `r round(subset(hourly.objects.bytod.effects$std.error, hourly.objects.bytod.effects$term == "tod"), 2)`, _t_ = `r round(subset(hourly.objects.bytod.effects$statistic, hourly.objects.bytod.effects$term == "tod"), 2)`, _p_ = `r round(subset(hourly.objects.bytod.effects$p.value, hourly.objects.bytod.effects$term == "tod"), 3)`), and there was no two-way interaction between time of day and site ($\beta$ = `r round(subset(hourly.objects.bytod.effects$estimate, hourly.objects.bytod.effects$term == "site:tod"), 2)`, _SE_ = `r round(subset(hourly.objects.bytod.effects$std.error, hourly.objects.bytod.effects$term == "site:tod"), 2)`, _t_ = `r round(subset(hourly.objects.bytod.effects$statistic, hourly.objects.bytod.effects$term == "site:tod"), 2)`, _p_ = `r round(subset(hourly.objects.bytod.effects$p.value, hourly.objects.bytod.effects$term == "site:tod"), 3)`).
 
-However, we did find differences in children's rates of holding for specific object categories across the day. We ran individual linear mixed-effects models, which included fixed effects of site, hour of the day, and their interaction, for all each of categories. Synthetic objects were marginally more common during the afternoon hours ($\beta$ = `r round(subset(tod.effects$estimate, tod.effects$term == "tod" & tod.effects$object_type == "Synthetic"), 2)`, _SE_ = `r round(subset(tod.effects$std.error, tod.effects$term == "tod" & tod.effects$object_type == "Synthetic"), 2)`, _t_ = `r round(subset(tod.effects$statistic, tod.effects$term == "tod" & tod.effects$object_type == "Synthetic"), 2)`, _p_ = `r round(subset(tod.effects$p.value, tod.effects$term == "tod" & tod.effects$object_type == "Synthetic"), 3)`), and food items were handled with significantly greater frequency during the morning hours ($\beta$ = `r round(subset(tod.effects$estimate, tod.effects$term == "tod" & tod.effects$object_type == "Food"), 2)`, _SE_ = `r round(subset(tod.effects$std.error, tod.effects$term == "tod" & tod.effects$object_type == "Food"), 2)`, _t_ = `r round(subset(tod.effects$statistic, tod.effects$term == "tod" & tod.effects$object_type == "Food"), 2)`, _p_ = `r round(subset(tod.effects$p.value, tod.effects$term == "tod" & tod.effects$object_type == "Food"), 3)`; Figure 2). No other main effects or two-way interactions reached statistical significance (all *p*s > 0.10).
+However, we did find differences in children's rates of holding for specific object categories across the day. We ran individual linear mixed-effects models, which included fixed effects of site, hour of the day, and their interaction, for each of 6 categories. Synthetic objects were marginally more common during the afternoon hours ($\beta$ = `r round(subset(tod.effects$estimate, tod.effects$term == "tod" & tod.effects$object_type == "Synthetic"), 2)`, _SE_ = `r round(subset(tod.effects$std.error, tod.effects$term == "tod" & tod.effects$object_type == "Synthetic"), 2)`, _t_ = `r round(subset(tod.effects$statistic, tod.effects$term == "tod" & tod.effects$object_type == "Synthetic"), 2)`, _p_ = `r round(subset(tod.effects$p.value, tod.effects$term == "tod" & tod.effects$object_type == "Synthetic"), 3)`), and food items were handled with significantly greater frequency during the morning hours ($\beta$ = `r round(subset(tod.effects$estimate, tod.effects$term == "tod" & tod.effects$object_type == "Food"), 2)`, _SE_ = `r round(subset(tod.effects$std.error, tod.effects$term == "tod" & tod.effects$object_type == "Food"), 2)`, _t_ = `r round(subset(tod.effects$statistic, tod.effects$term == "tod" & tod.effects$object_type == "Food"), 2)`, _p_ = `r round(subset(tod.effects$p.value, tod.effects$term == "tod" & tod.effects$object_type == "Food"), 3)`; Figure 2). No other main effects or two-way interactions reached statistical significance (all *p*s > 0.10).
 
 ```{r fig2, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 3.4, fig.height = 2.9, fig.cap = "Frequency of handling by object category across different times of day. Individual points show raw percentages for each child, and lines reflect model-predicted percentages."}
 
@@ -492,26 +492,6 @@ ggplot(tod.effects.toplot, aes(x = tod, y = predicted*100, color = site, fill = 
   theme_test(base_size = 8) +
   theme(legend.position = "none")
 ```
-
-```{r fig3, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 3.4, fig.height = 2.9, fig.cap = ""}
-
-fig3 <- object.data %>%
-  left_join(object.bycategory, by = "object") %>%
-  group_by(site, sub_num, object_type, hour) %>%
-  summarize(n.objects = length(unique(object))) %>%
-  ungroup() %>%
-  mutate(object_type = factor(object_type, levels = c("Synthetic", "Food", "Tool", "Toy", "Natural", "Immovable"))) %>%
-  ggplot(aes(x = hour, y = n.objects, color = site, fill = site)) +
-  facet_wrap(. ~ object_type, nrow = 2) +
-  geom_jitter(alpha = 0.25, size = 0.5) +
-  geom_smooth() +
-  scale_color_manual(values = site_colors) +
-  scale_fill_manual(values = site_colors) +
-  labs(x = "Time of Day (Hour)", y = "Unique Objects/Hour", color = "Site", fill = "Site") +
-  theme_test(base_size = 8) +
-  theme(legend.position = "none")
-```
-
 ## Age effects
 ```{r, age-categories}
 category.props.byage <- category.data %>%

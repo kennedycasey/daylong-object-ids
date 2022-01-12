@@ -129,8 +129,13 @@ mc general intro notes:
 
 # Methods
 ## Corpus
+<!--kc: need to add mini overview of populations either here or above-->
+Daylong photo streams consist of images captured every 15 (Rossel) to 30 (Tseltal) seconds over the course of 8 (Rossel) to 9 (Tseltal) hours at home. Children wore a recording vest equipped with a camera (Narrative Clip 1) and miniature fisheye lens (Photojojo Super Fisheye) that provided a 180$\text{\textdegree}$ frontal view of the child's environment (Narrative Clip 1). For younger infants who were not yet walking, the camera was instead worn by the primary caregiver. Here, we analyze the subset of photos known to contain child object handling based on prior work with the same data sets [@casillas2021crosscultural]. 
+
+These data include XX children (Rossel: XX, Tseltal: XX) ranging in age from X to XX months (_M_~_Rossel_~ = XX.X, _M_~_Tseltal_~ = XX.X). For each child, a range of X-XXX photos were annotated (_M_~_Rossel_~ = XX.X, _M_~_Tseltal_~ = XX.X).
 
 ## Manual annotation
+We annotated photos with IMCO (version 2; GitHub link removed for blind review), an open-source program adapted for efficient coding of photo streams. Annotators provided labels for the handled object(s) present in each photo and selected among 12 predefined object types to describe each object: food, clothing, toys, books, electronic devices, plants, animals, tools (for work/cleaning), tools (for mealtime), other large or immovable objects, other synthetic objects, and other natural objects. <!--kc: could simplify here and just report 6 if needed--> For analyses reported below, we collapsed across this set of object types to yield 6 categories of common objects: food, tools, toys, immovable objects, miscellaneous natural objects, and miscellaneous synthetic objects (see Table \ref{tab:top-objects} for example objects from each category),
 
 ## Reliability
 
@@ -163,7 +168,7 @@ top.objects.bycategory <- object.data %>%
   pivot_wider(names_from = "site", values_from = "objects") %>%
   rename(`Object Category` = object_type) 
 
-top.objects.tbl <- xtable(top.objects.bycategory, caption = "Objects handled by the most children across categories and sites.")
+top.objects.tbl <- xtable(top.objects.bycategory, caption = "Objects handled by the most children across categories and sites.", label = "tab:top-objects")
 
 print(top.objects.tbl, type = "latex", size = "small", comment = FALSE, table.placement = "!ht",
       include.rownames = FALSE)

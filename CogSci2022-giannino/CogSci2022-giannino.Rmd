@@ -171,8 +171,7 @@ top.objects.bycategory <- object.data %>%
 
 top.objects.tbl <- xtable(top.objects.bycategory, caption = "Objects handled by the most children across categories and sites.", label = "tab:top-objects")
 
-print(top.objects.tbl, type = "latex", size = "small", comment = FALSE, table.placement = "!ht",
-      include.rownames = FALSE)
+print(top.objects.tbl, type = "latex", comment = FALSE, table.placement = "!ht", scalebox = 0.8, include.rownames = FALSE)
 ```
 
 # Results

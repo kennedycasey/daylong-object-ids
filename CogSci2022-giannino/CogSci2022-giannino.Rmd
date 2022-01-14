@@ -60,7 +60,9 @@ library(xtable)
 ```
 
 ```{r, data-prep}
-raw.data <- read_csv("../data/usable.data_20220106.csv") %>%
+raw.data <- read_csv("../data/usable.data_20220114.csv") %>%
+  # TO DO: fix NAs in source file
+  filter(!is.na(exclusion) & !is.na(object_type)) %>%
     mutate(hour = hour(timestamp), 
     tod = case_when(
       hour < 11 ~ "morning", 
@@ -75,7 +77,7 @@ raw.data <- read_csv("../data/usable.data_20220106.csv") %>%
 
 # TO DO: manual checking so this isn't necessary
 object.data <- raw.data %>%
-  select(-category, -object_type) %>%
+  select(-object_type) %>%
   distinct()
 
 category.data <- raw.data %>%
@@ -259,6 +261,8 @@ tse.top.objects <- all.ranked.objects %>%
 
 ```{r, overall-category-stats}
 category.props <- category.data %>%
+  # TO DO: figure out where NAs are introduced
+  filter(!is.na(object_type)) %>%
   group_by(sub_num, object_type, site) %>%
   summarize(n.category = n()) %>%
   distinct() %>%
@@ -269,9 +273,11 @@ category.props <- category.data %>%
             prop = n.category/n.images, 
             object_type = object_type) %>%
   distinct()
-
+  
 wilcox.outputs <- list()
-for (i in unique(category.props$object_type)) {
+# TO DO: decide about immovable category
+categories <- c("Synthetic", "Food", "Tool", "Toy", "Natural")
+for (i in categories) {
   ros.input <- category.props %>%
     filter(object_type == i & site == "Rossel")
   
@@ -282,6 +288,7 @@ for (i in unique(category.props$object_type)) {
   
   wilcox.outputs[[i]] <- wilcox.output
 }
+
 
 comp.category.bysite <- do.call(rbind, wilcox.outputs) %>%
   rownames_to_column(var = "object_type") %>%
@@ -467,11 +474,12 @@ category.props.bytod <- category.data %>%
   distinct() %>%
   ungroup() %>%
   mutate(tod = hour, 
-         object_type = factor(object_type, levels = c("Synthetic", "Food", "Tool", "Toy", "Natural", "Immovable")))
+         object_type = factor(object_type, levels = c("Synthetic", "Food", "Tool", "Toy", "Natural", "Immovable"))) %>%
+  filter(!is.na(object_type))
   
 tod.effects.list <- list()
 tod.effects.toplot.list <- list()
-for (i in unique(category.props.bytod$object_type)) {
+for (i in categories) {
   model <- lmer(prop ~ site * tod + (1|sub_num), filter(category.props.bytod, object_type == i))
   # note: singular fit for immovable category
   
@@ -575,7 +583,7 @@ category.props.byage <- category.data %>%
   
 age.effects.list <- list()
 age.effects.toplot.list <- list()
-for (i in unique(category.props.byage$object_type)) {
+for (i in categories) {
   model <- lm(prop ~ site * age, filter(category.props.byage, object_type == i))
   
   effects <- tidy(model) %>%

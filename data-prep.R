@@ -43,32 +43,35 @@ data.w.unsure <- raw.data %>%
 
 
 # add regularized labels --------------------------------------------------
+labels <- read_csv("data/manual-checks/labels.csv")
 
+data.w.labels <- data.w.unsure %>%
+  mutate(n.objects = str_count(Object, ",") + 1) %>%
+  separate(Object, c("Object1", "Object2", "Object3"), ",") %>%
+  mutate(across(starts_with("Object"), ~ trimws(.))) %>%
+  pivot_longer(starts_with("Object"), names_to = "object.num", values_to = "Object") %>%
+  filter(!is.na(Object)) %>%
+  left_join(labels, by = "Object") %>%
+  mutate(object = ifelse(is.na(object.corrected), Object, object.corrected)) %>%
+  select(sub_num, Image, exclusion, coded.category, n.objects, object)
 
 # add regularized categories ----------------------------------------------
 
-
 # export clean data -------------------------------------------------------
-data <- data.w.unsure %>%
+data <- data.w.labels %>%
   left_join(participants, by = "sub_num") %>%
   left_join(durations, by = c("sub_num", "Image")) %>%
-  # TO DO: move above to regularized labels section
-  mutate(n_objects = str_count(Object, ",") + 1) %>%
-  separate(Object, c("object1", "object2", "object3"), ",") %>%
-  mutate(across(starts_with("object"), ~ trimws(.))) %>%
-  pivot_longer(starts_with("object"), names_to = "object_num", values_to = "object") %>%
-  filter(!is.na(object)) %>%
   # TO DO: move to categories section
   mutate(object_type = case_when(
-    category == "Food" ~ "Food", 
-    category %in% c("Toy", "Book") ~ "Toy", 
-    category %in% c("Plant", "Animal", "OtherNatural") ~ "Other Natural Object", 
-    category %in% c("ToolMealtime", "ToolWork") ~ "Tool", 
-    category == "OtherLargeImmovable" ~ "Large Immovable", 
-    category %in% c("OtherSynthetic", "Electronic", "Clothing") ~ "Other Synthetic Object")) %>%
+    coded.category == "Food" ~ "Food", 
+    coded.category %in% c("Toy", "Book") ~ "Toy", 
+    coded.category %in% c("Plant", "Animal", "OtherNatural") ~ "Other Natural Object", 
+    coded.category %in% c("ToolMealtime", "ToolWork") ~ "Tool", 
+    coded.category == "OtherLargeImmovable" ~ "Large Immovable", 
+    coded.category %in% c("OtherSynthetic", "Electronic", "Clothing") ~ "Other Synthetic Object")) %>%
   rename(image = Image, 
          timestamp = TimestampHMS) %>%
-  select(site, sub_num, age, sex, image, category, object_type, object, timestamp, duration) %>%
+  select(site, sub_num, age, sex, image, exclusion, object_type, object, timestamp, duration) %>%
   distinct()
 
-#write_csv(data, "../data/usable.data_20220106.csv")
+write_csv(data, "data/usable.data_20220114.csv")

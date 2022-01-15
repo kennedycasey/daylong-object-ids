@@ -61,8 +61,8 @@ library(xtable)
 
 ```{r, data-prep}
 raw.data <- read_csv("../data/usable.data_20220114.csv") %>%
-  # TO DO: fix NAs in source file
-  filter(!is.na(exclusion) & !is.na(object_type)) %>%
+  # TO DO: fix category NAs
+  filter(is.na(exclusion) & !is.na(object_type)) %>%
     mutate(hour = hour(timestamp), 
     tod = case_when(
       hour < 11 ~ "morning", 
@@ -94,6 +94,8 @@ object.bycategory <- raw.data %>%
 
 site_colors <- c("Rossel" = "#3C5388", 
                  "Tseltal" = "#02A087")
+
+categories <- c("Synthetic", "Food", "Tool", "Toy", "Natural", "Immovable")
 ```
 
 # Introduction
@@ -148,7 +150,7 @@ demo.bysite <- raw.data %>%
 
 demo <- raw.data %>%
   group_by(sub_num, age) %>%
-  summarize(n.images = n(), ) %>%
+  summarize(n.images = n()) %>%
   ungroup() %>%
   summarize(min.images = min(n.images), 
             max.images = max(n.images), 
@@ -276,7 +278,6 @@ category.props <- category.data %>%
   
 wilcox.outputs <- list()
 # TO DO: decide about immovable category
-categories <- c("Synthetic", "Food", "Tool", "Toy", "Natural")
 for (i in categories) {
   ros.input <- category.props %>%
     filter(object_type == i & site == "Rossel")

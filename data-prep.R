@@ -38,14 +38,23 @@ data.w.unsure <- raw.data %>%
          coded.category = ifelse(!is.na(coded.category.corrected), coded.category.corrected, coded.category)) %>%
   select(-ends_with("corrected"))
 
-
 # replace originally excluded images --------------------------------------
+none <- read_csv("data/manual-checks/no-objects.csv") %>%
+  mutate(object.corrected = Object, 
+         exclusion.corrected = ifelse(Exclude == 1, "Exclude", ifelse(None == 1, "None", NA)), 
+         from.none = 1) %>%
+  select(sub_num, Image, object.corrected, exclusion.corrected, from.none) 
 
+data.w.none <- data.w.unsure %>%
+  full_join(none, by = c("sub_num", "Image")) %>%
+  mutate(Object = ifelse(!is.na(object.corrected) &  !is.na(from.none), object.corrected, Object), 
+         exclusion = ifelse(!is.na(from.none), exclusion.corrected, exclusion)) %>%
+  select(-ends_with("corrected"), -from.none)
 
 # add regularized labels --------------------------------------------------
 labels <- read_csv("data/manual-checks/labels.csv")
 
-data.w.labels <- data.w.unsure %>%
+data.w.labels <- data.w.none %>%
   mutate(n.objects = str_count(Object, ",") + 1) %>%
   separate(Object, c("Object1", "Object2", "Object3"), ",") %>%
   mutate(across(starts_with("Object"), ~ trimws(.))) %>%

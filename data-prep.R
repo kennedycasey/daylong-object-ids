@@ -68,25 +68,30 @@ data.w.labels <- data.w.none %>%
   pivot_longer(c("object1", "object2"), names_to = "object.num2", values_to = "object2") %>%
   filter(!is.na(object2)) %>%
   rename(object = object2) %>%
+  mutate(object = trimws(object)) %>%
   select(sub_num, Image, exclusion, coded.category, object)
 
 # add regularized categories ----------------------------------------------
+categories <-  read_csv("data/manual-checks/categories.csv")
+data.w.categories <- data.w.labels %>%
+  full_join(categories, by = "object") %>%
+  select(sub_num, Image, exclusion, category, object) %>%
+  distinct() %>%
+  mutate(object_type = case_when(
+    category == "Food" ~ "Food", 
+    category %in% c("Toy", "Book") ~ "Toy", 
+    category %in% c("Plant", "Animal", "OtherNatural") ~ "Other Natural Object", 
+    category %in% c("ToolMealtime", "ToolWork") ~ "Tool", 
+    category == "OtherLargeImmovable" ~ "Large Immovable", 
+    category %in% c("OtherSynthetic", "Electronic", "Clothing") ~ "Other Synthetic Object"))
 
 # export clean data -------------------------------------------------------
-data <- data.w.labels %>%
+data <- data.w.categories %>%
   left_join(participants, by = "sub_num") %>%
   left_join(durations, by = c("sub_num", "Image")) %>%
-  # TO DO: move to categories section
-  mutate(object_type = case_when(
-    coded.category == "Food" ~ "Food", 
-    coded.category %in% c("Toy", "Book") ~ "Toy", 
-    coded.category %in% c("Plant", "Animal", "OtherNatural") ~ "Other Natural Object", 
-    coded.category %in% c("ToolMealtime", "ToolWork") ~ "Tool", 
-    coded.category == "OtherLargeImmovable" ~ "Large Immovable", 
-    coded.category %in% c("OtherSynthetic", "Electronic", "Clothing") ~ "Other Synthetic Object")) %>%
   rename(image = Image, 
          timestamp = TimestampHMS) %>%
   select(site, sub_num, age, sex, image, exclusion, object_type, object, timestamp, duration) %>%
   distinct()
 
-write_csv(data, "data/usable.data_20220114.csv")
+write_csv(data, "data/usable.data_20220115.csv")

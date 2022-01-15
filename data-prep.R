@@ -53,7 +53,13 @@ data.w.labels <- data.w.unsure %>%
   filter(!is.na(Object)) %>%
   left_join(labels, by = "Object") %>%
   mutate(object = ifelse(is.na(object.corrected), Object, object.corrected)) %>%
-  select(sub_num, Image, exclusion, coded.category, n.objects, object)
+  mutate(n.objects = str_count(object, ",") + 1) %>%
+  separate(object, c("object1", "object2"), ",") %>%
+  mutate(across(ends_with("1|2"), ~ trimws(.))) %>%
+  pivot_longer(c("object1", "object2"), names_to = "object.num2", values_to = "object2") %>%
+  filter(!is.na(object2)) %>%
+  rename(object = object2) %>%
+  select(sub_num, Image, exclusion, coded.category, object)
 
 # add regularized categories ----------------------------------------------
 

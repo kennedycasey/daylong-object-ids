@@ -209,7 +209,9 @@ print(top.objects.tbl, type = "latex", comment = FALSE, table.placement = "!ht",
 # Results
 ## Overall frequency statistics
 ```{r, daily-object-stats, results = "hide"}
+# compute descriptive stats of # unique objects held by individual kids
 
+# ... overall
 daily.objects <- object.data %>%
   group_by(sub_num) %>%
   summarize(n.objects = length(unique(object))) %>%
@@ -221,27 +223,29 @@ daily.objects <- object.data %>%
             max = max(n.objects)) %>%
   mutate(across(mean:sd), round(., 2))
 
+# ... by kid (incl. site info)
 daily.objects.bysite <- object.data %>%
   group_by(sub_num, site) %>%
   summarize(n.objects = length(unique(object))) 
 
 # t-test assumptions not met -> use wilcox
-shapiro.test(subset(daily.objects.bysite, daily.objects.bysite$site == "Rossel")$n.objects)
-shapiro.test(subset(daily.objects.bysite, daily.objects.bysite$site == "Tseltal")$n.objects)
+shapiro.test(subset(daily.objects.bysite,
+                    daily.objects.bysite$site == "Rossel")$n.objects)
+shapiro.test(subset(daily.objects.bysite,
+                    daily.objects.bysite$site == "Tseltal")$n.objects)
 var.test(n.objects ~ site, daily.objects.bysite)
 comp.daily.objects <- tidy(wilcox.test(n.objects ~ site, daily.objects.bysite))
 
+# compute most items that appear 1+ times most frequently
+# across children w/i site
 ranked.objects.list <- list()
 for (i in c("Rossel", "Tseltal")) {
   ranked.objects <- object.data %>%
     filter(site == i) %>%
     mutate(total.kids = length(unique(sub_num))) %>%
-    group_by(object) %>%
-    summarize(n.kids = length(unique(sub_num)), 
-              total.kids = total.kids, 
-              prop = n.kids/total.kids) %>%
-    ungroup() %>%
-    distinct() %>%
+    group_by(object, total.kids) %>%
+    summarize(n.kids = length(unique(sub_num))) %>%
+    mutate(prop = n.kids/total.kids) %>%
     arrange(desc(prop)) %>%
     mutate(rank = row_number(), 
            site = i) 

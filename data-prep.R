@@ -1,6 +1,6 @@
 library(tidyverse)
 
-annotations <- read_csv("data/annotations_20220106.csv")
+annotations <- read_csv("data/annotations_20220117.csv")
 participants <- read_csv("data/metadata/participants.csv")
 durations <- read_csv("data/metadata/timestamps.csv") %>%
   arrange(sub_num, TimestampHMS) %>%
@@ -71,8 +71,25 @@ data.w.labels <- data.w.none %>%
   mutate(object = trimws(object)) %>%
   select(sub_num, Image, exclusion, coded.category, object)
 
+# temporary code for pulling out new labels that need categorization
+old_categories <- read_csv("data/manual-checks/categories.csv") %>%
+  pull(object) %>%
+  unique()
+
+`%notin%` <- Negate(`%in%`)
+
+data.w.labels %>%
+  select(object) %>%
+  distinct() %>%
+  filter(object %notin% old_categories) %>%
+  write_csv("data/manual-checks/new-objects-to-categorize.csv")
+  
+  
+  
+  
+
 # add regularized categories ----------------------------------------------
-categories <-  read_csv("data/manual-checks/categories.csv")
+categories <- read_csv("data/manual-checks/categories.csv")
 data.w.categories <- data.w.labels %>%
   full_join(categories, by = "object") %>%
   select(sub_num, Image, exclusion, category, object) %>%

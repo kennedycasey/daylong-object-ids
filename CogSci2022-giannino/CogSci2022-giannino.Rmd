@@ -183,12 +183,11 @@ top.objects.bycategory <- object.data %>%
             object_type = object_type, 
             object = object, 
             sub_num = sub_num) %>%
-  distinct() %>%
-  group_by(site, object_type, object) %>%
-  summarize(n.children = length(unique(sub_num)), 
-            prop.children = n.children/total) %>% 
+  distinct() %>% # <- mc2kc: not doing anything, i think, but left just in case
+  group_by(site, object_type, object, total) %>%
+  summarize(n.children = length(unique(sub_num))) %>%
+  mutate(prop.children = n.children/total) %>%
   ungroup() %>%
-  distinct() %>%
   arrange(site, object_type, desc(prop.children)) %>%
   group_by(site, object_type) %>%
   mutate(rank = row_number()) %>%
@@ -199,7 +198,7 @@ top.objects.bycategory <- object.data %>%
   select(object_type, objects, site) %>%
   group_by(object_type) %>%
   pivot_wider(names_from = "site", values_from = "objects") %>%
-  rename(`Object Category` = object_type) 
+  rename(`Object Category` = object_type)
 
 top.objects.tbl <- xtable(top.objects.bycategory, caption = "Objects handled by the most children across categories and sites.", label = "tab:top-objects")
 

@@ -78,15 +78,11 @@ old_categories <- read_csv("data/manual-checks/categories.csv") %>%
 
 `%notin%` <- Negate(`%in%`)
 
-data.w.labels %>%
-  select(object) %>%
-  distinct() %>%
-  filter(object %notin% old_categories) %>%
-  write_csv("data/manual-checks/new-objects-to-categorize.csv")
-  
-  
-  
-  
+#data.w.labels %>%
+  #select(object) %>%
+  #distinct() %>%
+  #filter(object %notin% old_categories) %>%
+  #write_csv("data/manual-checks/new-objects-to-categorize.csv")
 
 # add regularized categories ----------------------------------------------
 categories <- read_csv("data/manual-checks/categories.csv")
@@ -111,4 +107,4 @@ data <- data.w.categories %>%
   select(site, sub_num, age, sex, image, exclusion, object_type, object, timestamp, duration) %>%
   distinct()
 
-write_csv(data, "data/usable.data_20220115.csv")
+write_csv(data, "data/usable.data_20220117.csv")

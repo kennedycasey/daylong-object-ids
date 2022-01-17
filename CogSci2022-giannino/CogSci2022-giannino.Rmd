@@ -61,9 +61,9 @@ library(xtable)
 
 ```{r, data-prep}
 # read in raw data
-raw.data <- read_csv("../data/usable.data_20220115.csv") %>%
-  # TO DO: fix category NAs
-  filter(is.na(exclusion) & !is.na(object_type)) %>%
+raw.data <- read_csv("../data/usable.data_20220117.csv") %>%
+  # TO DO: fix NAs in site and category
+  filter(!is.na(site) & !is.na(object_type) & is.na(exclusion)) %>%
     mutate(hour = hour(timestamp), 
     tod = case_when(
       hour < 11 ~ "morning", 
@@ -132,7 +132,7 @@ Annotation is ongoing (see Method), but preliminary findings reveal relative con
 
 # Method
 ## Corpus
-These daylong photo streams consist of images captured every 15 (Rossel) to 30 (Tseltal) seconds over the course of, typically, 8 (Rossel) to 9 (Tseltal) hours at home. Children wore a recording vest equipped with a camera (Narrative Clip 1) and miniature fisheye lens (Photojojo Super Fisheye) that provided a 180$\text{\textdegree}$ view of the environment. For younger infants who were not yet walking, the camera was instead worn by the primary caregiver. Previously, 83 daylong photo streams (113668 photos) had been comprehensively manually annotated for the presence of child object handling [@casillasURdaylong]; we further annotate and analyze this subset of `r nrow(rawdata)` photos in the present study.
+These daylong photo streams consist of images captured every 15 (Rossel) to 30 (Tseltal) seconds over the course of, typically, 8 (Rossel) to 9 (Tseltal) hours at home. Children wore a recording vest equipped with a camera (Narrative Clip 1) and miniature fisheye lens (Photojojo Super Fisheye) that provided a 180$\text{\textdegree}$ view of the environment. For younger infants who were not yet walking, the camera was instead worn by the primary caregiver. Previously, 83 daylong photo streams (113668 photos) had been comprehensively manually annotated for the presence of child object handling [@casillasURdaylong]; we further annotate and analyze this subset of `r nrow(raw.data)` photos in the present study.
 
 ```{r, demo}
 # create tibbles with basic descriptive stats of kid demographics and # images
@@ -264,7 +264,7 @@ tse.top.objects <- all.ranked.objects %>%
   pull(object)
 ```
 
-<!-- kc: need to add trailing zeros after rounding; mc2kc: try something like: `r printnum(YOURNUM, digits = 3)`. i tried using format() before but it didn't work and i can't remember why heh--> Children handled an average of `r daily.objects$mean` unique objects per day (median = `r daily.objects$median`, _SD_ = `r daily.objects$sd`, range = `r daily.objects$min`--`r daily.objects$max`), with no significant differences across sites (_M_~_Rossel_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Rossel")$n.objects), 2)`, _M_~_Tseltal_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Tseltal")$n.objects), 2)`, _W_ = `r comp.daily.objects$statistic`, _p_ = `r round(comp.daily.objects$p.value, 3)`). Of these, `r round(length(intersect(ros.objects, tse.objects))/length(unique(raw.data$object)),4)*100`% of objects were present in both communities, and several shared objects were among the most frequently handled by children in both sites. In fact, among the top 25 most common objects, `r length(intersect(ros.top.objects, tse.top.objects))` were shared across sites.
+<!-- kc: need to add trailing zeros after rounding; mc2kc: try something like: printnum(YOURNUM, digits = 3). i tried using format() before but it didn't work and i can't remember why heh--> Children handled an average of `r daily.objects$mean` unique objects per day (median = `r daily.objects$median`, _SD_ = `r daily.objects$sd`, range = `r daily.objects$min`--`r daily.objects$max`), with no significant differences across sites (_M_~_Rossel_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Rossel")$n.objects), 2)`, _M_~_Tseltal_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Tseltal")$n.objects), 2)`, _W_ = `r comp.daily.objects$statistic`, _p_ = `r round(comp.daily.objects$p.value, 3)`). Of these, `r round(length(intersect(ros.objects, tse.objects))/length(unique(raw.data$object)),4)*100`% of objects were present in both communities, and several shared objects were among the most frequently handled by children in both sites. In fact, among the top 25 most common objects, `r length(intersect(ros.top.objects, tse.top.objects))` were shared across sites.
 
 ```{r, overall-category-stats}
 # compute the prevalence of category-level objects within kids (i.e.,

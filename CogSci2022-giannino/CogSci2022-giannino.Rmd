@@ -608,59 +608,76 @@ ggplot(tod.effects.toplot,
 
 ## Age effects
 ```{r, age-objects}
+# calculate total # unique objects per kid
 daily.objects.byage <- object.data %>%
   group_by(site, sub_num, age) %>%
   summarize(n.objects = length(unique(object))) %>%
   ungroup()
 
+# model total # unique objects handled by site and age
 model <- lm(n.objects ~ site * age, daily.objects.byage)
 
 daily.objects.byage.effects <- tidy(model) %>%
     filter(term != "(Intercept)" & p.value < 0.10)
 
-daily.objects.byage.effects.toplot <- ggpredict(model, terms = c("site", "age [all]"), type = "fixed", back.transform = TRUE) %>%
+# get model predicted values for plotting
+daily.objects.byage.effects.toplot <- ggpredict(
+  model, terms = c("site", "age [all]"),
+  type = "fixed", back.transform = TRUE) %>%
   rename(age = group, site = x)
 
+# calculate # unique objects per hour per kid
 hourly.objects.byage <- object.data %>%
   group_by(site, sub_num, age, hour) %>%
   summarize(n.objects = length(unique(object))) %>%
   ungroup()
 
+# model total # unique objects handled per hour by site and age
 model <- lmer(n.objects ~ site * age + (1|sub_num), hourly.objects.byage)
 
 # marginal increase in unique objects per hour with age
 hourly.objects.byage.effects <- tidy(model) %>%
     filter(effect == "fixed" & term != "(Intercept)" & p.value < 0.10)
 
-hourly.objects.byage.effects.toplot <- ggpredict(model, terms = c("site", "age [all]"), type = "fixed", back.transform = TRUE) %>%
+# get model predicted values for plotting
+hourly.objects.byage.effects.toplot <- ggpredict(
+  model, terms = c("site", "age [all]"), type = "fixed",
+  back.transform = TRUE) %>%
   rename(age = group, site = x) %>%
   mutate(age = as.numeric(as.character(age)))
 ```
+
 ```{r, age-categories}
+# calculate total # objects per category and prop objects per category, per kid
 category.props.byage <- category.data %>%
   group_by(sub_num, object_type, site, age) %>%
   summarize(n.category = n()) %>%
-  distinct() %>%
+  distinct() %>% # mc2kc: i think this isn't doing anything
   ungroup() %>% 
   group_by(sub_num, site, age) %>%
   summarize(n.images = sum(n.category), 
             n.category = n.category, 
-            prop = n.category/n.images, 
             object_type = object_type) %>%
-  distinct() %>%
+  mutate(prop = n.category/n.images) %>%
   ungroup() %>%
-  mutate(object_type = factor(object_type, levels = c("Synthetic", "Food", "Tool", "Toy", "Natural", "Immovable")))
+  mutate(object_type = factor(object_type,
+                              levels = c("Synthetic", "Food", "Tool",
+                                         "Toy", "Natural", "Immovable")))
   
+# model proportion of object handling by site and age
 age.effects.list <- list()
 age.effects.toplot.list <- list()
 for (i in categories) {
-  model <- lm(prop ~ site * age, filter(category.props.byage, object_type == i))
+  model <- lm(prop ~ site * age,
+              filter(category.props.byage, object_type == i))
   
   effects <- tidy(model) %>%
     mutate(object_type = i) %>%
     filter(term != "(Intercept)" & p.value < 0.10)
   
-  effects.toplot <- ggpredict(model, terms = c("site", "age [all]"), type = "fixed", back.transform = TRUE) %>%
+  # get model predicted values for plotting
+  effects.toplot <- ggpredict(model, terms = c("site", "age [all]"),
+                              type = "fixed", back.transform = TRUE) %>%
   rename(age = group, site = x) %>%
   mutate(object_type = i)
   
@@ -670,24 +687,32 @@ for (i in categories) {
 
 age.effects <- do.call(rbind, age.effects.list)
 age.effects.toplot <- do.call(rbind, age.effects.toplot.list) %>%
-  mutate(object_type = factor(object_type, levels = c("Synthetic", "Food", "Tool", "Toy", "Natural", "Immovable")))
+  mutate(object_type = factor(object_type,
+                              levels = c("Synthetic", "Food", "Tool",
+                                         "Toy", "Natural", "Immovable")))
 
+# compute # unique categories per hour per kid
 hourly.categories.byage <- object.data %>%
   left_join(object.bycategory, by = "object") %>%
   group_by(site, sub_num, age, hour) %>%
   summarize(n.categories = length(unique(object_type))) %>%
   ungroup()
 
+# model # categories per hour by site and age
 model <- lmer(n.categories ~ site * age + (1|sub_num), hourly.categories.byage)
 
 # marginal increase in unique objects per hour with age
 hourly.categories.byage.effects <- tidy(model) %>%
     filter(effect == "fixed" & term != "(Intercept)" & p.value < 0.10)
 
-hourly.categories.byage.effects.toplot <- ggpredict(model, terms = c("site", "age [all]"), type = "fixed", back.transform = TRUE) %>%
+# get model predicted values for plotting
+hourly.categories.byage.effects.toplot <- ggpredict(
+  model, terms = c("site", "age [all]"), type = "fixed",
+  back.transform = TRUE) %>%
   rename(age = group, site = x) %>%
   mutate(age = as.numeric(as.character(age)))
 
+# compute # unique categories per hour per kid
 # TO DO: deal with multiple objects and thus categories per image
 # (for simplicity now marked as "Multiple" but will fix after manual checking)
 hourly.total.categories <- object.data %>%
@@ -695,36 +720,52 @@ hourly.total.categories <- object.data %>%
   group_by(sub_num, hour) %>%
   summarize(n.categories = length(unique(object_type)))
 
+# compute # of transitions between objects per hour per kid
+# and number of transitions per object per hour per kid ("rel.transitions")
 hourly.category.transitions <- object.data %>%
   left_join(object.bycategory, by = "object") %>%
   group_by(sub_num, image) %>%
+  # first calculate # objects per image
   mutate(n.categories = length(unique(object_type))) %>%
-  distinct() %>%
+  distinct() %>% # mc2kc: i think this isn't doing anything
   ungroup() %>%
+  # second, add cols w/ prev object and check if there's been a change
+  # in held object---if so, mark it as a transition == 1
   mutate(category = ifelse(n.categories > 1, "Multiple", object_type), 
          prev.category = lag(category, 1), 
          same.child = ifelse(sub_num == lag(sub_num, 1), 1, 0), 
-         transition = ifelse(category != prev.category & same.child == 1, 1, 0)) %>%
+         transition = ifelse(category != prev.category &
+                               same.child == 1, 1, 0)) %>%
   group_by(site, sub_num, age, hour) %>%
   summarize(n.transitions = sum(transition, na.rm = TRUE)) %>%
   left_join(hourly.total.categories, by = c("sub_num", "hour")) %>%
   mutate(rel.transitions = n.transitions/n.categories)
 
-model <- lmer(rel.transitions ~ site * age + (1|sub_num), hourly.category.transitions)
+# model rel.transitions by site and age
+model <- lmer(rel.transitions ~ site * age + (1|sub_num),
+              hourly.category.transitions)
 ```
 
-Children's overall rate of object handling increased significantly with age (Figure 3A). That is, older children handled more unique objects per hour ($\beta$ = `r round(subset(hourly.objects.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.objects.byage.effects, term == "age")$p.value, 3)`). <!--kc: possibly add category distribution across age, which is generally consistent.--> Additionally, with increasing age, children handled more objects from different categories per hour ($\beta$ = `r round(subset(hourly.categories.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.categories.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.categories.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.categories.byage.effects, term == "age")$p.value, 3)`). <!--kc: need to check correlations between objects and categories. can also switch to proportions for categories if needed--> These effects were consistent across sites; we found no main effects of site or interactions between site and age (all *p*s > 0.05).
+Children's overall rate of object handling increased significantly with age (Figure 3A). That is, older children handled more unique objects per hour ($\beta$ = `r round(subset(hourly.objects.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.objects.byage.effects, term == "age")$p.value, 3)`). <!--kc: possibly add category distribution across age, which is generally consistent.--> Additionally, with increasing age, children handled more objects from different categories per hour ($\beta$ = `r round(subset(hourly.categories.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.categories.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.categories.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.categories.byage.effects, term == "age")$p.value, 3)`). <!--kc: need to check correlations between objects and categories. can also switch to proportions for categories if needed; mc2kc: sounds like a good idea to me!--> These effects were consistent across sites; we found no main effects of site or interactions between site and age (all *p*s > 0.05).
 
 ```{r age-effects-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 3.4, fig.height = 4.4, fig.cap = "(A) Unique objects and (B) object categories handled per hour as a function of age. Points reflect raw hourly counts for each child, and lines reflect model predictions with shaded standard error regions."}
 
 p1 <- ggplot() +
-  geom_line(hourly.objects.byage.effects.toplot, mapping = aes(x = age, y = predicted, color = site), size = 1) +
-  geom_ribbon(hourly.objects.byage.effects.toplot, mapping = aes(x = age , ymin = predicted - conf.low, ymax = predicted + conf.low, fill = site), alpha = 0.1) +
-  geom_jitter(hourly.objects.byage, mapping = aes(x = age, y = n.objects, color = site, fill = site), alpha = 0.25, size = 0.5) +
+  geom_line(hourly.objects.byage.effects.toplot,
+            mapping = aes(x = age, y = predicted, color = site), size = 1) +
+  geom_ribbon(hourly.objects.byage.effects.toplot,
+              mapping = aes(x = age , ymin = predicted - conf.low,
+                            ymax = predicted + conf.low, fill = site),
+              alpha = 0.1) +
+  geom_jitter(hourly.objects.byage,
+              mapping = aes(x = age, y = n.objects,
+                            color = site, fill = site), 
+              alpha = 0.25, size = 0.5) +
   scale_color_manual(values = site_colors) +
   scale_fill_manual(values = site_colors) +
   scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) +
-  labs(x = "Age (months)", y = "Unique Objects/Hour", color = "Site", fill = "Site", tag = "A") +
+  labs(x = "Age (months)", y = "Unique Objects/Hour",
+       color = "Site", fill = "Site", tag = "A") +
   theme_test(base_size = 8)
 
 p1a <- p1 + theme(legend.position = "none", legend.direction = "horizontal", 
@@ -733,20 +774,30 @@ p1a <- p1 + theme(legend.position = "none", legend.direction = "horizontal",
 legend <- get_legend(p1 + theme(legend.position = "bottom"))
 
 p2 <- ggplot() +
-  geom_line(hourly.categories.byage.effects.toplot, mapping = aes(x = age, y = predicted, color = site), size = 1) +
-  geom_ribbon(hourly.categories.byage.effects.toplot, mapping = aes(x = age , ymin = predicted - conf.low, ymax = predicted + conf.low, fill = site), alpha = 0.1) +
-  geom_jitter(hourly.categories.byage, mapping = aes(x = age, y = n.categories, color = site, fill = site), alpha = 0.25, size = 0.5) +
+  geom_line(hourly.categories.byage.effects.toplot,
+            mapping = aes(x = age, y = predicted, color = site), size = 1) +
+  geom_ribbon(hourly.categories.byage.effects.toplot,
+              mapping = aes(x = age , ymin = predicted - conf.low,
+                            ymax = predicted + conf.low, fill = site),
+              alpha = 0.1) +
+  geom_jitter(hourly.categories.byage,
+              mapping = aes(x = age, y = n.categories,
+                            color = site, fill = site),
+              alpha = 0.25, size = 0.5) +
   scale_color_manual(values = site_colors) +
   scale_fill_manual(values = site_colors) +
   scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) +
-  labs(x = "Age (months)", y = "Unique Categories/Hour", color = "Site", fill = "Site", tag = "B") +
+  labs(x = "Age (months)", y = "Unique Categories/Hour",
+       color = "Site", fill = "Site", tag = "B") +
   theme_test(base_size = 8) +
   theme(legend.position = "none", plot.tag = element_text(face = "bold"))
 
 fig4 <- align_plots(p1a, p2, align = "hv", axis = "l")
-panels <- plot_grid(ggdraw(fig4[[1]]), NULL, ggdraw(fig4[[2]]), nrow = 3, rel_heights = c(1, -0.07, 1))
+panels <- plot_grid(ggdraw(fig4[[1]]), NULL,
+                    ggdraw(fig4[[2]]), nrow = 3, rel_heights = c(1, -0.07, 1))
 plot_grid(panels, legend, ncol = 1, rel_heights = c(1, .1))
 ```
+
 # Discussion
 
 # References 

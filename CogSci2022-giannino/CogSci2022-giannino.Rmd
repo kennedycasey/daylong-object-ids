@@ -60,8 +60,18 @@ library(xtable)
 ```
 
 ```{r, data-prep}
-# read in raw data
-raw.data <- read_csv("../data/usable.data_20220117.csv") %>%
+
+run.from.raw = FALSE
+if (run.from.raw) {
+  # this R script generates the usable data csv
+  # set run.from.raw equal to TRUE if you want to rewrite this file
+  source("../data-prep.R")
+} 
+
+# read in data
+raw.data <- read_csv("../data/usable.data_20220117.csv")
+
+data <- raw.data %>%
   # TO DO: fix NAs in site and category
   filter(!is.na(site) & !is.na(object_type) & is.na(exclusion)) %>%
     mutate(hour = hour(timestamp),
@@ -110,11 +120,11 @@ Annotation is ongoing (see Method), but preliminary findings reveal relative con
 
 # Method
 ## Corpus
-These daylong photo streams consist of images captured every 15 (Rossel) to 30 (Tseltal) seconds over the course of, typically, 8 (Rossel) to 9 (Tseltal) hours at home. Children wore a recording vest equipped with a camera (Narrative Clip 1) and miniature fisheye lens (Photojojo Super Fisheye) that provided a 180$\text{\textdegree}$ view of the environment. For younger infants who were not yet walking, the camera was instead worn by the primary caregiver. Previously, 83 daylong photo streams (113668 photos) had been comprehensively manually annotated for the presence of child object handling [@casillasURdaylong]; we further annotate and analyze this subset of `r nrow(raw.data)` photos in the present study.
+These daylong photo streams consist of images captured every 15 (Rossel) to 30 (Tseltal) seconds over the course of, typically, 8 (Rossel) to 9 (Tseltal) hours at home. Children wore a recording vest equipped with a camera (Narrative Clip 1) and miniature fisheye lens (Photojojo Super Fisheye) that provided a 180$\text{\textdegree}$ view of the environment. For younger infants who were not yet walking, the camera was instead worn by the primary caregiver. Previously, 83 daylong photo streams (113668 photos) had been comprehensively manually annotated for the presence of child object handling [@casillasURdaylong]; we further annotate and analyze this subset of `r raw.data %>% select(sub_num, image) %>% distinct %>% nrow()` photos in the present study.
 
 ```{r, demo}
 # create tibbles with basic descriptive stats of kid demographics and # images
-demo.bysite <- raw.data %>%
+demo.bysite <- data %>%
   group_by(site, sub_num, age) %>%
   summarize(n.images = length(unique(image))) %>%
   group_by(site) %>%
@@ -122,7 +132,7 @@ demo.bysite <- raw.data %>%
             m.images = mean(n.images),
             m.age = mean(age))
 
-demo <- raw.data %>%
+demo <- data %>%
   group_by(sub_num, age) %>%
   summarize(n.images = n()) %>%
   ungroup() %>%
@@ -147,8 +157,7 @@ XX% of photo streams were double coded. Reliability annotations were equally spr
 # compute the objects that most often appear 1+ times across children w/i sites
 # use this to find the top 3 items per category per site
 # create a table displaying these top items
-top.objects.bycategory <- object.data %>%
-  left_join(object.bycategory, by = "object") %>%
+top.objects.bycategory <- data %>%
   select(site, object_type, object, sub_num) %>%
   distinct() %>%
   group_by(site) %>%
@@ -184,7 +193,7 @@ print(top.objects.tbl, type = "latex", comment = FALSE, table.placement = "!ht",
 # compute descriptive stats of # unique objects held by individual kids
 
 # ... overall
-daily.objects <- object.data %>%
+daily.objects <- data %>%
   group_by(sub_num) %>%
   summarize(n.objects = length(unique(object))) %>%
   ungroup() %>%
@@ -196,7 +205,7 @@ daily.objects <- object.data %>%
   mutate(across(mean:sd), round(., 2))
 
 # ... by kid (incl. site info)
-daily.objects.bysite <- object.data %>%
+daily.objects.bysite <- data %>%
   group_by(sub_num, site) %>%
   summarize(n.objects = length(unique(object))) 
 
@@ -212,7 +221,7 @@ comp.daily.objects <- tidy(wilcox.test(n.objects ~ site, daily.objects.bysite))
 # across children w/i site
 ranked.objects.list <- list()
 for (i in c("Rossel", "Tseltal")) {
-  ranked.objects <- object.data %>%
+  ranked.objects <- data %>%
     filter(site == i) %>%
     mutate(total.kids = length(unique(sub_num))) %>%
     group_by(object, total.kids) %>%
@@ -247,7 +256,7 @@ tse.top.objects <- all.ranked.objects %>%
 ```{r, overall-category-stats}
 # compute the prevalence of category-level objects within kids (i.e.,
 # proportion of holding by category for each kid)
-category.props <- category.data %>%
+category.props <- data %>%
   # TO DO: figure out where NAs are introduced
   filter(!is.na(object_type)) %>% # mc2kc: done? i can't find NAs
   group_by(sub_num, object_type, site) %>%
@@ -295,7 +304,7 @@ top.category.bychild <- category.props %>%
   nrow()
 
 # pull out the top synthetic category objects
-top.synthetic <- raw.data %>%
+top.synthetic <- data %>%
   filter(object_type == "Synthetic") %>%
   group_by(object) %>%
   summarize(n = n()) %>%
@@ -306,7 +315,7 @@ top.synthetic <- raw.data %>%
   pull(top.objects)
 
 # pull out the top immovable category objects
-top.immovable <- raw.data %>%
+top.immovable <- data %>%
   filter(object_type == "Immovable") %>%
   group_by(object) %>%
   summarize(n = n()) %>%
@@ -318,8 +327,7 @@ top.immovable <- raw.data %>%
 
 # compute mean # of categories per hour overall
 # (first over subs, then over sample)
-hourly.categories <- object.data %>%
-  left_join(object.bycategory, by = "object") %>%
+hourly.categories <- data %>%
   group_by(sub_num, hour) %>%
   summarize(n.categories = length(unique(object_type))) %>%
   ungroup() %>%
@@ -332,7 +340,7 @@ The frequency of object categories was similarly divided across sites (Figure 1A
 ```{r, hourly-object-stats}
 # compute mean # objects per hour overall
 # (first over subs, then over sample)
-hourly.objects <- object.data %>%
+hourly.objects <- data %>%
   group_by(sub_num, hour) %>%
   summarize(n.objects = length(unique(object))) %>%
   ungroup() %>%
@@ -345,8 +353,7 @@ hourly.objects <- object.data %>%
 
 # prep tibble for model w/ dummy coded category cols
 # TO DO: deal with kids with 2 recordings
-model.data <- object.data %>%
-  left_join(object.bycategory, by = "object") %>%
+model.data <- data %>%
   group_by(site, sub_num, hour, object_type) %>%
   summarize(n.objects = length(unique(object))) %>%
   ungroup() %>%
@@ -481,7 +488,7 @@ plot_grid(panels, legend, ncol = 1, rel_heights = c(1, .1))
 ## Time of day effects
 ```{r, time-of-day-categories}
 # compute prop of images in each category for each hour for each kid
-category.props.bytod <- category.data %>%
+category.props.bytod <- data %>%
   group_by(sub_num, object_type, site, hour) %>%
   summarize(n.category = n()) %>%
   distinct() %>% # mc2kc: i think this isn't doing anything
@@ -532,8 +539,7 @@ tod.effects.toplot <- do.call(rbind, tod.effects.toplot.list) %>%
 
 ```{r, time-of-day-objects}
 # compute number of unique objects per hour per kid
-hourly.objects.bytod <- object.data %>%
-  left_join(object.bycategory, by = "object") %>%
+hourly.objects.bytod <- data %>%
   group_by(site, sub_num, hour) %>%
   summarize(n.objects = length(unique(object))) %>%
   ungroup() %>%
@@ -580,7 +586,7 @@ ggplot(tod.effects.toplot,
 ## Age effects
 ```{r, age-objects}
 # calculate total # unique objects per kid
-daily.objects.byage <- object.data %>%
+daily.objects.byage <- data %>%
   group_by(site, sub_num, age) %>%
   summarize(n.objects = length(unique(object))) %>%
   ungroup()
@@ -598,7 +604,7 @@ daily.objects.byage.effects.toplot <- ggpredict(
   rename(age = group, site = x)
 
 # calculate # unique objects per hour per kid
-hourly.objects.byage <- object.data %>%
+hourly.objects.byage <- data %>%
   group_by(site, sub_num, age, hour) %>%
   summarize(n.objects = length(unique(object))) %>%
   ungroup()
@@ -620,7 +626,7 @@ hourly.objects.byage.effects.toplot <- ggpredict(
 
 ```{r, age-categories}
 # calculate total # objects per category and prop objects per category, per kid
-category.props.byage <- category.data %>%
+category.props.byage <- data %>%
   group_by(sub_num, object_type, site, age) %>%
   summarize(n.category = n()) %>%
   distinct() %>% # mc2kc: i think this isn't doing anything
@@ -663,8 +669,7 @@ age.effects.toplot <- do.call(rbind, age.effects.toplot.list) %>%
                                          "Toy", "Natural", "Immovable")))
 
 # compute # unique categories per hour per kid
-hourly.categories.byage <- object.data %>%
-  left_join(object.bycategory, by = "object") %>%
+hourly.categories.byage <- data %>%
   group_by(site, sub_num, age, hour) %>%
   summarize(n.categories = length(unique(object_type))) %>%
   ungroup()
@@ -686,15 +691,13 @@ hourly.categories.byage.effects.toplot <- ggpredict(
 # compute # unique categories per hour per kid
 # TO DO: deal with multiple objects and thus categories per image
 # (for simplicity now marked as "Multiple" but will fix after manual checking)
-hourly.total.categories <- object.data %>%
-  left_join(object.bycategory, by = "object") %>%
+hourly.total.categories <- data %>%
   group_by(sub_num, hour) %>%
   summarize(n.categories = length(unique(object_type)))
 
 # compute # of transitions between objects per hour per kid
 # and number of transitions per object per hour per kid ("rel.transitions")
-hourly.category.transitions <- object.data %>%
-  left_join(object.bycategory, by = "object") %>%
+hourly.category.transitions <- data %>%
   group_by(sub_num, image) %>%
   # first calculate # objects per image
   mutate(n.categories = length(unique(object_type))) %>%

@@ -64,34 +64,12 @@ library(xtable)
 raw.data <- read_csv("../data/usable.data_20220117.csv") %>%
   # TO DO: fix NAs in site and category
   filter(!is.na(site) & !is.na(object_type) & is.na(exclusion)) %>%
-    mutate(hour = hour(timestamp), 
-    tod = case_when(
-      hour < 11 ~ "morning", 
-      hour >= 11 & hour <= 13 ~ "midday", 
-      hour > 13 ~ "afternoon"), 
-    tod = factor(tod, levels = c("morning", "midday", "afternoon")), 
-  object_type = factor(object_type, 
+    mutate(hour = hour(timestamp),
+           object_type = factor(object_type, 
                        levels = c("Other Synthetic Object", "Food", "Tool", 
                                   "Toy", "Other Natural Object", "Large Immovable"),
                        labels = c("Synthetic", "Food", "Tool", 
                                   "Toy", "Natural", "Immovable")))
-
-# TO DO: manual checking so this isn't necessary
-object.data <- raw.data %>%
-  select(-object_type) %>%
-  distinct()
-
-category.data <- raw.data %>%
-  select(-object)
-
-# current workaround for multiple categories issue (far from perfect)
-object.bycategory <- raw.data %>%
-  group_by(object, object_type) %>%
-  summarize(n.category = n()) %>%
-  ungroup() %>%
-  group_by(object) %>%
-  filter(n.category == max(n.category)) %>%
-  select(-n.category)
 
 # pre-set colors and category labels
 site_colors <- c("Rossel" = "#3C5388", 

@@ -157,6 +157,8 @@ demo <- raw.data %>%
   ungroup() %>%
   summarize(min.images = min(n.images), 
             max.images = max(n.images), 
+            mean.images = mean(n.images),
+            median.images = median(n.images),
             min.age = min(age), 
             max.age = max(age),
             n.kids = length(unique(sub_num)))
@@ -272,20 +274,23 @@ tse.top.objects <- all.ranked.objects %>%
 <!-- kc: need to add trailing zeros after rounding; mc2kc: try something like: `r printnum(YOURNUM, digits = 3)`. i tried using format() before but it didn't work and i can't remember why heh--> Children handled an average of `r daily.objects$mean` unique objects per day (median = `r daily.objects$median`, _SD_ = `r daily.objects$sd`, range = `r daily.objects$min`--`r daily.objects$max`), with no significant differences across sites (_M_~_Rossel_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Rossel")$n.objects), 2)`, _M_~_Tseltal_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Tseltal")$n.objects), 2)`, _W_ = `r comp.daily.objects$statistic`, _p_ = `r round(comp.daily.objects$p.value, 3)`). Of these, `r round(length(intersect(ros.objects, tse.objects))/length(unique(raw.data$object)),4)*100`% of objects were present in both communities, and several shared objects were among the most frequently handled by children in both sites. In fact, among the top 25 most common objects, `r length(intersect(ros.top.objects, tse.top.objects))` were shared across sites.
 
 ```{r, overall-category-stats}
+# compute the prevalence of category-level objects within kids (i.e.,
+# proportion of holding by category for each kid)
 category.props <- category.data %>%
   # TO DO: figure out where NAs are introduced
-  filter(!is.na(object_type)) %>%
+  filter(!is.na(object_type)) %>% # mc2kc: done? i can't find NAs
   group_by(sub_num, object_type, site) %>%
   summarize(n.category = n()) %>%
-  distinct() %>%
+  distinct() %>% # mc2kc: i think this isn't doing anything
   ungroup() %>% 
   group_by(sub_num, site) %>%
   summarize(n.images = sum(n.category), 
-            n.category = n.category, 
-            prop = n.category/n.images, 
+            n.category = n.category,
             object_type = object_type) %>%
-  distinct()
+  mutate(prop = n.category/n.images) %>%
+  distinct() # mc2kc: i think this isn't doing anything
   
+# test for differences between sites for each category
 wilcox.outputs <- list()
 # TO DO: decide about immovable category
 for (i in categories) {
@@ -300,11 +305,11 @@ for (i in categories) {
   wilcox.outputs[[i]] <- wilcox.output
 }
 
-
 comp.category.bysite <- do.call(rbind, wilcox.outputs) %>%
   rownames_to_column(var = "object_type") %>%
   mutate(p.adjusted = p.adjust(p.value, method = "holm"))
 
+# compute descriptive statistics of category prevalence by site and category
 category.means <- category.props %>%
   group_by(object_type, site) %>%
   summarize(mean = mean(prop), 
@@ -312,11 +317,14 @@ category.means <- category.props %>%
             n = n(), 
             se = sd/sqrt(n))
 
+
+# computer # kids with synthetic or food as their top type
 top.category.bychild <- category.props %>%
   group_by(sub_num) %>%
   filter(prop == max(prop) & object_type %in% c("Synthetic", "Food")) %>%
   nrow()
 
+# pull out the top synthetic category objects
 top.synthetic <- raw.data %>%
   filter(object_type == "Synthetic") %>%
   group_by(object) %>%
@@ -327,6 +335,7 @@ top.synthetic <- raw.data %>%
   distinct() %>%
   pull(top.objects)
 
+# pull out the top immovable category objects
 top.immovable <- raw.data %>%
   filter(object_type == "Immovable") %>%
   group_by(object) %>%
@@ -344,6 +353,7 @@ hourly.categories <- object.data %>%
   ungroup() %>%
   summarize(mean = round(mean(n.categories), 2))
 ```
+
 The frequency of object categories was similarly divided across sites (Figure 1A). The top objects for each category are shown in Table 1. Children primarily handled miscellaneous synthetic objects (e.g., `r top.synthetic`, etc.; _M_~_Rossel_~ = `r round(subset(category.means$mean, category.means$site == "Rossel" & category.means$object_type == "Synthetic"), 4)*100`% of handling, _M_~_Tseltal_~ = `r round(subset(category.means$mean, category.means$site == "Tseltal" & category.means$object_type == "Synthetic"), 4)*100`%) and food (_M_~_Rossel_~ = `r round(subset(category.means$mean, category.means$site == "Rossel" & category.means$object_type == "Food"), 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means$mean, category.means$site == "Tseltal" & category.means$object_type == "Food"), 4)*100`%). For `r top.category.bychild` of `r length(unique(raw.data$sub_num))` children, the top category was either synthetic objects or food. Two-tailed Wilcoxon tests revealed only one significant category-level difference between sites: children's handling of large or immovable objects (e.g., `r top.immovable`, etc.), where Rossel children handled these objects more frequently than Tseltal children (_M_~_Rossel_~ = `r round(subset(category.means$mean, category.means$site == "Rossel" & category.means$object_type == "Immovable"), 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means$mean, category.means$site == "Tseltal" & category.means$object_type == "Immovable"), 4)*100`%, adjusted _p_ = `r round(subset(comp.category.bysite$p.adjusted, comp.category.bysite$object_type == "Immovable"), 3)`, *p*s for all other categories > 0.05), but these objects were still the least frequently handled in both sites.
 
 ```{r, hourly-object-stats}

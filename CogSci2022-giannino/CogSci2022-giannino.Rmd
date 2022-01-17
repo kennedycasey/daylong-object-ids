@@ -227,6 +227,7 @@ for (i in c("Rossel", "Tseltal")) {
     group_by(object, total.kids) %>%
     summarize(n.kids = length(unique(sub_num))) %>%
     mutate(prop = n.kids/total.kids) %>%
+    ungroup() %>%
     arrange(desc(prop)) %>%
     mutate(rank = row_number(), 
            site = i) 

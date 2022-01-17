@@ -653,3 +653,94 @@ wooden stairs,1,stairs,0,KC,
 wooden structure,1,veranda,1,KC,
 workbook,1,workbook,1,KC,
 woven bag,1,purse,1,KC,
+blue rope,120,swing,1,KC,check if all blue ropes are part of swing
+green ball,47,ball,0,KC,
+long wood stick,28,stick,1,KC,
+metal bottle cap,27,bottle cap,0,KC,
+red object,26,,1,KC,should be corrected from unknown objects checks but need to be sure
+government food packet,25,government food packet,0,KC,
+noodles,21,noodles,0,KC,
+avacado,20,avocado,0,KC,
+palm tree,17,tree,1,KC,most likely sugarcane but need to check
+drink,16,plastic bottle,1,KC,most likely medicine-like bottle but need to double checkj
+blue boots,15,boot,1,KC,merge with shoes?
+green metal water bottle,15,water bottle,0,KC,
+ruler,15,ruler,0,KC,
+blue truck,11,toy truck,0,KC,
+drumstick,11,drumstick,0,KC,
+cut up plastic bottle,8,plastic bottle,0,KC,
+misc packaging,7,misc packaging,0,KC,
+wood house frame,7,frame,1,KC,
+small white container,6,misc container,0,KC,
+bottle caps,5,bottle cap,0,KC,
+lime or guava,5,lime,0,KC,manually checked
+pink fabric,5,fabric,1,KC,
+purple cup,5,cup,0,KC,
+bottle of coke,4,soda,0,KC,
+grey bowl,4,bowl,0,KC,
+pill package,4,pill package,0,KC,
+red water bottle,4,water bottle,0,KC,
+tassel,4,tassel,0,KC,
+avacado pit,3,avocado pit,0,KC,
+baby bottle,3,bottle,0,KC,
+black beans,3,bean,0,KC,
+black object,3,,1,KC,need to check
+drink in a white mug,3,mug,1,KC,need to check
+green plastic basket,3,plastic basket,0,KC,
+medicine dropper bottle,3,medicine dropper bottle,0,KC,
+palms,3,leaf,1,KC,need to check
+peanut,3,peanut,0,KC,
+plastic chairs,3,chair,0,KC,
+red folder,3,folder,0,KC,
+woven object,3,,1,KC,need to check
+wrapper,3,packaged snack,1,KC,need to check
+bag?,2,,1,KC,need to check
+black boot,2,boot,0,KC,
+cement ledge,2,ledge,1,KC,
+coke bottle,2,soda,0,KC,
+dirt pavement,2,dirt,0,KC,
+jean jacket,2,jacket,0,KC,
+knife?,2,knife,1,KC,need to check
+metal clip,2,clip,0,KC,
+metal ring,2,embroidery ring,0,KC,manually checked
+pink paper,2,paper,0,KC,
+red plastic bag,2,plastic bag,0,KC,
+striped object,2,zebra toy,1,KC,manually checked
+water bottle lid,2,water bottle lid,0,KC,
+white object,2,bucket,0,KC,manually checked
+wood scrappings,2,wood scraps,1,KC,
+wood table,2,table,0,KC,
+black fabric object,1,fabric,1,KC,
+blue bowl of white cornmeal drink,1,"bowl, mats",0,KC,
+blue container,1,misc container,0,KC,
+brown bag,1,bag,1,KC,
+clapper toy,1,clapper toy,0,KC,
+cone-shaped object,1,cone-shaped object,1,KC,need to check
+cover of large white bag,1,cover of large white bag,1,KC,need to check
+green 'leafy' toy,1,toy plant,0,KC,
+gutter,1,gutter,0,KC,
+hair clip,1,hair clip,0,KC,
+hose,1,hose,0,KC,
+kitchen appliance,1,grinder,0,KC,manually checked
+large white object,1,,1,KC,need to check
+lotion,1,lotion,0,KC,
+magazine,1,magazine,0,KC,
+metal object,1,,1,KC,need to check
+movie,1,movie,1,KC,need to check
+picture,1,picture,0,KC,
+pink cloth,1,cloth,1,KC,
+pink glasses,1,glasses,0,KC,
+pink object,1,,1,KC,need to check
+pit,1,pit,1,KC,
+plaid fabric,1,fabric,0,KC,
+shoelace,1,shoelace,0,KC,
+small grey object,1,,1,KC,
+small metal object,1,,1,KC,
+small white object,1,,1,KC,
+sweatshirt,1,sweater,0,KC,
+taro,1,tuber,0,KC,
+tassle,1,tassel,0,KC,
+white bottle,1,plastic bottle,0,KC,
+white container,1,misc container,0,KC,
+wood log,1,log,1,KC,
+yellow cup,1,cup,0,KC,

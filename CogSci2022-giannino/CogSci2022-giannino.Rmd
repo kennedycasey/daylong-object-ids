@@ -124,22 +124,15 @@ mc: open question to co-authors...
 are the two subsections above in the right order? should it be switched around? something else? i've tried it both ways and neither seems perfect
 -->
 
-
 ## The current study
-<!--
-mc need to close
-- this needs to be better tailored toward our set of analyses! and trimmed down.
--->
 
+Using daylong photo streams from child-worn cameras, we analyze object handling by children under age four in two rural, small-scale subsistence farming communities from opposite sides of the globe: Rossel Island ("Rossel"; Milne Bay Province, Papua New Guinea) and Tenejapa ("Tseltal"; Chiapas, Mexico). While these communities are comparable in many ways (e.g., rural, swidden horticulturalist, housed in multi-generation family complexes), prior work has established substantial differences in the organization of young children's daily lives, child carrying practices, and each community's level of market integration (e.g., the greater availability of synthetic materials in Tenejapa), leading us to expect differences in what children handle across the day and early lifespan [@brownIPchildrearing; @casillasURdaylong; @casillas2020early; @casillas2021early]. We first establish how often children handle objects from different categories, both by object category (e.g., food vs. tools) and by number of unique objects per hour in each category across sites. We explore the top individual objects in each site and how much overlap there is in these objects between settings. Finally, we investigate whether the prevalence of object holding in each category changes linearly across the day or with developmental age, as predicted in prior work (morning mealtimes: @casillas2020early; @casillas2021early and increased handling activity with age: @casillasURdaylong).
 
-
-
-
-
+Annotation is ongoing (see Method), but preliminary findings reveal relative consistency in the broad composition of objects children handle between sites and across the day, with a few important exceptions: a greater diversity of synthetic objects per hour for Tseltal children (e.g., relating to greater market integration), more time spent with immovable objects for Rossel children (e.g., relating to socializing time on/near household verandas), greater overall prevalence of food handling in the mornings, and a greater diversity of held objects with developmental age. We discuss open questions and potential implications of these findings for early word learning.
 
 # Method
 ## Corpus
-We analyze daylong photo streams from child-worn cameras in two rural, small-scale subsistence farming communities: Rossel Island (Papua New Guinea) and Tseltal Maya (Southern Mexico). While these communities are comparable in many ways (e.g., rural, swidden horticulturalist, housed in multi-generation family complexes), there are important differences in the organization of young children's daily lives as well as the availability of certain types of objects (e.g., synthetic materials due to greater market integration in the Tseltal context), that lead us to expect differences in what children handle and when. <!--kc: needs work, will return to this section later; mc2kc: made some edits, change as you like!--> Our daylong photo streams consist of images captured every 15 (Rossel) to 30 (Tseltal) seconds over the course of, typically, 8 (Rossel) to 9 (Tseltal) hours at home. Children wore a recording vest equipped with a camera (Narrative Clip 1) and miniature fisheye lens (Photojojo Super Fisheye) that provided a 180$\text{\textdegree}$ view of the environment. For younger infants who were not yet walking, the camera was instead worn by the primary caregiver. Previously, 83 daylong photo streams (113668 photos) had been comprehensively manually annotated for the presence of child object handling [@casillasURdaylong]; we further annotate and analyze this subset of `r nrow(rawdata)` photos in the present study.
+These daylong photo streams consist of images captured every 15 (Rossel) to 30 (Tseltal) seconds over the course of, typically, 8 (Rossel) to 9 (Tseltal) hours at home. Children wore a recording vest equipped with a camera (Narrative Clip 1) and miniature fisheye lens (Photojojo Super Fisheye) that provided a 180$\text{\textdegree}$ view of the environment. For younger infants who were not yet walking, the camera was instead worn by the primary caregiver. Previously, 83 daylong photo streams (113668 photos) had been comprehensively manually annotated for the presence of child object handling [@casillasURdaylong]; we further annotate and analyze this subset of `r nrow(rawdata)` photos in the present study.
 
 ```{r, demo}
 # create tibbles with basic descriptive stats of kid demographics and # images

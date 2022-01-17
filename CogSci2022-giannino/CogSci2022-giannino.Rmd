@@ -317,7 +317,6 @@ category.means <- category.props %>%
             n = n(), 
             se = sd/sqrt(n))
 
-
 # computer # kids with synthetic or food as their top type
 top.category.bychild <- category.props %>%
   group_by(sub_num) %>%
@@ -346,6 +345,8 @@ top.immovable <- raw.data %>%
   distinct() %>%
   pull(top.objects)
 
+# compute mean # of categories per hour overall
+# (first over subs, then over sample)
 hourly.categories <- object.data %>%
   left_join(object.bycategory, by = "object") %>%
   group_by(sub_num, hour) %>%
@@ -358,6 +359,8 @@ The frequency of object categories was similarly divided across sites (Figure 1A
 <!--mc2kc: adjusted value is >.05 for all categories unless i'm missing things!-->
 
 ```{r, hourly-object-stats}
+# compute mean # objects per hour overall
+# (first over subs, then over sample)
 hourly.objects <- object.data %>%
   group_by(sub_num, hour) %>%
   summarize(n.objects = length(unique(object))) %>%
@@ -369,6 +372,7 @@ hourly.objects <- object.data %>%
             max = max(n.objects)) %>%
   mutate(across(mean:sd), round(., 2))
 
+# prep tibble for model w/ dummy coded category cols
 # TO DO: deal with kids with 2 recordings
 model.data <- object.data %>%
   left_join(object.bycategory, by = "object") %>%
@@ -380,14 +384,16 @@ model.data <- object.data %>%
          food = ifelse(object_type == "Food", 1, 0), 
          tool = ifelse(object_type == "Tool", 1, 0), 
          toy = ifelse(object_type == "Toy", 1, 0), 
-         immovable = ifelse(object_type == "Immovable", 1, 0)) 
+         immovable = ifelse(object_type == "Immovable", 1, 0))
 
+# run lmers
 # check reference levels
 model.data$object_type <- relevel(model.data$object_type, ref = "Synthetic")
 ref.synthetic <- lmer(n.objects ~ site * object_type + (1|sub_num), model.data)
 
 model.data$object_type <- relevel(model.data$object_type, ref = "Natural")
-ref.natural <- lmer(n.objects ~ site * object_type + (1|sub_num), model.data) %>%
+ref.natural <- lmer(
+  n.objects ~ site * object_type + (1|sub_num), model.data) %>%
   tidy() %>%
   filter(effect == "fixed" & term != "(Intercept)" & p.value < 0.05) %>%
   mutate(term = str_remove_all(term, "Tseltal"))
@@ -411,7 +417,8 @@ ref.toy <- lmer(n.objects ~ site * object_type + (1|sub_num), model.data) %>%
   mutate(term = str_remove_all(term, "Tseltal"))
 
 model.data$object_type <- relevel(model.data$object_type, ref = "Immovable")
-ref.immovable <- lmer(n.objects ~ site * object_type + (1|sub_num), model.data) %>%
+ref.immovable <- lmer(
+  n.objects ~ site * object_type + (1|sub_num), model.data) %>%
   tidy() %>%
   filter(effect == "fixed" & term != "(Intercept)" & p.value < 0.05) %>%
   mutate(term = str_remove_all(term, "Tseltal"))
@@ -422,31 +429,42 @@ hourly.objects.model <- lmer(n.objects ~ site +
                                food + site:food +
                                tool + site:tool +
                                toy + site:toy +
-                               immovable + site:immovable + (1|sub_num), model.data) %>%
+                               immovable + site:immovable +
+                               (1|sub_num), model.data) %>%
   tidy() %>% 
   filter(effect == "fixed" & term != "(Intercept)") %>%
   mutate(term = str_remove_all(term, "Tseltal"), 
          p.value = ifelse(p.value < .001, "< 0.001", round(p.value, 3)))
 
+# compute mean rate of objects/hr per category per kid
 hourly.objects.bycategory <- model.data %>%
   group_by(site, sub_num, object_type) %>%
   summarize(n.objects.bysub = mean(n.objects)) %>%
   ungroup() %>%
-  mutate(object_type = factor(object_type, levels = c("Synthetic", "Food", "Tool", 
-                                                      "Toy", "Natural", "Immovable")))
+  mutate(object_type = factor(object_type,
+                              levels = c("Synthetic", "Food", "Tool", 
+                                         "Toy", "Natural", "Immovable")))
 ```
-During any given hour, children handled `r hourly.objects$mean` objects from `r hourly.categories$mean` different categories, on average (median = `r hourly.objects$median` objects, _SD_ = `r hourly.objects$sd`, range = `r hourly.objects$min`--`r hourly.objects$max`). A linear mixed-effects model with fixed effects of site, each of 6 object categories, and their interaction showed a significant main effect of the synthetic object category ($\beta$ = `r round(subset(hourly.objects.model, term == "synthetic")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "synthetic")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "synthetic")$statistic, 2)`, _p_ = `r subset(hourly.objects.model, term == "synthetic")$p.value`) as well as an interaction between site and the synthetic object category ($\beta$ = `r round(subset(hourly.objects.model, term == "site:synthetic")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "site:synthetic")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "site:synthetic")$statistic, 2)`, _p_ = `r subset(hourly.objects.model, term == "site:synthetic")$p.value`) such that children handled more unique synthetic objects per hour than any other object category, and this effect was stronger for Tseltal children than for Rossel children (*p*s > 0.05 for all other main effects and interaction terms; Figure 1B).
 
-<!--kc: might be too much but other things we could add are co-occurrences between categories (e.g., food and tools for mealtime) and another possible DV, the number transitions between different object types and/or categories per hour. this could be one way to get at some finer-grained temporal dynamics without fully coding object bouts.-->
+During any given hour, children handled `r hourly.objects$mean` objects from `r hourly.categories$mean` different categories, on average (median = `r hourly.objects$median` objects, _SD_ = `r hourly.objects$sd`, range = `r hourly.objects$min`--`r hourly.objects$max`). A linear mixed-effects model with fixed effects of site, each of the six object categories, and their interaction showed a significant main effect of the synthetic object category ($\beta$ = `r round(subset(hourly.objects.model, term == "synthetic")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "synthetic")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "synthetic")$statistic, 2)`, _p_ = `r subset(hourly.objects.model, term == "synthetic")$p.value`) as well as an interaction between site and the synthetic object category ($\beta$ = `r round(subset(hourly.objects.model, term == "site:synthetic")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "site:synthetic")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "site:synthetic")$statistic, 2)`, _p_ = `r subset(hourly.objects.model, term == "site:synthetic")$p.value`) such that children handled more unique synthetic objects per hour than any other object category, and this effect was stronger for Tseltal children than for Rossel children (*p*s > 0.05 for all other main effects and interaction terms; Figure 1B).
+
+<!--kc: might be too much but other things we could add are co-occurrences between categories (e.g., food and tools for mealtime) and another possible DV, the number transitions between different object types and/or categories per hour. this could be one way to get at some finer-grained temporal dynamics without fully coding object bouts.
+
+mc2kc: i think we could get away without these for the current paper. if time allows for one, let's try for rate of transitions between objects. but also we can just let that go for now! the paper is already packed with results :)
+-->
 
 ```{r overall-stats-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 3.4, fig.height = 4.4, fig.cap = "(A) Overall frequency of handling by object category. Points reflect percentages for individual children. (B) Count of unique objects handled per hour by object category. Points reflect means for individual children across all hours of recording."}
+
 p1 <- ggplot() +
   geom_bar(data = category.means, 
-           mapping  = aes(x = object_type, y = mean*100, color = site, fill = site),
+           mapping  = aes(
+             x = object_type, y = mean*100, color = site, fill = site),
            stat = "identity", position = "dodge", alpha = 0.7, width = 0.75) + 
   geom_point(data = category.props,
-             mapping = aes(x = object_type, y = prop*100, color = site, fill = site),
-             position = position_jitterdodge(dodge.width = 0.75, jitter.width = 0.1), 
+             mapping = aes(
+               x = object_type, y = prop*100, color = site, fill = site),
+             position = position_jitterdodge(
+               dodge.width = 0.75, jitter.width = 0.1), 
              size = 0.5, alpha = 0.25) +
   geom_errorbar(data = category.means,
                 mapping = aes(x = object_type, ymin = (mean - se)*100, 
@@ -456,7 +474,8 @@ p1 <- ggplot() +
   annotate(geom = "text", label = "*", x = "Immovable", y = 20, size = 6) +
   scale_color_manual(values = site_colors) +
   scale_fill_manual(values = site_colors) +
-  labs(x = "Object Categories", y = "% Handling", color = "Site", fill = "Site", tag = "A") +
+  labs(x = "Object Categories", y = "% Handling",
+       color = "Site", fill = "Site", tag = "A") +
   theme_classic(base_size = 8) +
   theme(axis.title.x = element_blank())
 
@@ -465,19 +484,26 @@ p1a <- p1 + theme(legend.position = "none", legend.direction = "horizontal",
 
 legend <- get_legend(p1 + theme(legend.position = "bottom"))
 
-p2 <- ggplot(hourly.objects.bycategory, aes(x = object_type, y = n.objects.bysub, color = site, fill = site)) + 
-  #geom_half_violin(alpha = 0.5, position = position_nudge(x = 0.5), side = "r") +
-  geom_point(position = position_jitterdodge(dodge.width = 0.75, jitter.width = 0.1), size = 0.5, alpha = 0.5) +
-  geom_boxplot(width = 0.75, outlier.shape = NA, alpha = 0.5, color = "black") +
+p2 <- ggplot(hourly.objects.bycategory,
+             aes(x = object_type, y = n.objects.bysub,
+                 color = site, fill = site)) +
+  # geom_half_violin(alpha = 0.5, position = position_nudge(x = 0.5),
+  #                  side = "r") +
+  geom_point(position = position_jitterdodge(
+    dodge.width = 0.75, jitter.width = 0.1), size = 0.5, alpha = 0.5) +
+  geom_boxplot(width = 0.75, outlier.shape = NA,
+               alpha = 0.5, color = "black") +
   annotate(geom = "text", label = "*", x = "Synthetic", y = 5, size = 6) +
     scale_color_manual(values = site_colors) +
   scale_fill_manual(values = site_colors) +
-  labs(x = "Object Categories", y = "Unique Objects/Hour", color = "Site", fill = "Site", tag = "B") +
+  labs(x = "Object Categories", y = "Unique Objects/Hour",
+       color = "Site", fill = "Site", tag = "B") +
   theme_classic(base_size = 8) +
   theme(legend.position = "none", plot.tag = element_text(face = "bold"))
 
 fig1 <- align_plots(p1a, p2, align = "hv", axis = "l")
-panels <- plot_grid(ggdraw(fig1[[1]]), NULL, ggdraw(fig1[[2]]), nrow = 3, rel_heights = c(1, -0.07, 1))
+panels <- plot_grid(ggdraw(fig1[[1]]), NULL,
+                    ggdraw(fig1[[2]]), nrow = 3, rel_heights = c(1, -0.07, 1))
 plot_grid(panels, legend, ncol = 1, rel_heights = c(1, .1))
 ```
 

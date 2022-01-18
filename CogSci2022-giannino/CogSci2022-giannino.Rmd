@@ -719,35 +719,36 @@ hourly.categories.byage.effects.toplot <- ggpredict(
   mutate(age = as.numeric(as.character(age)))
 
 # compute # unique categories per hour per kid
-# TO DO: deal with multiple objects and thus categories per image
-# (for simplicity now marked as "Multiple" but will fix after manual checking)
 hourly.total.categories <- data %>%
   group_by(sub_num, hour) %>%
   summarize(n.categories = length(unique(category)))
 
-# compute # of transitions between objects per hour per kid
-# and number of transitions per object per hour per kid ("rel.transitions")
+# compute # of transitions between categories per hour per kid
+# and compare that to the total number of categories in each hour
+# to get the relative number of category transitions ("rel.transitions")
 hourly.category.transitions <- data %>%
   group_by(sub_num, image) %>%
-  # first calculate # objects per image
-  mutate(n.categories = length(unique(category))) %>%
-  distinct() %>% # mc2kc: i think this isn't doing anything
+  # first, calculate # categories per image
+  mutate(n.categories = length(unique(category)), 
+         all.categories = paste(category, collapse = ", ")) %>%
   ungroup() %>%
-  # second, add cols w/ prev object and check if there's been a change
+  select(site, sub_num, image, age, hour, n.categories, all.categories) %>%
+  distinct() %>%
+  # second, add cols w/ prev category and check if there's been a change
   # in held object---if so, mark it as a transition == 1
-  mutate(category = ifelse(n.categories > 1, "Multiple", category), 
-         prev.category = lag(category, 1), 
+  mutate(prev.categories = lag(all.categories, 1), 
          same.child = ifelse(sub_num == lag(sub_num, 1), 1, 0), 
-         transition = ifelse(category != prev.category &
+         transition = ifelse(all.categories != prev.categories &
                                same.child == 1, 1, 0)) %>%
   group_by(site, sub_num, age, hour) %>%
   summarize(n.transitions = sum(transition, na.rm = TRUE)) %>%
   left_join(hourly.total.categories, by = c("sub_num", "hour")) %>%
   mutate(rel.transitions = n.transitions/n.categories)
 
-# model rel.transitions by site and age
+# number of hourly transitions between categories increases with age
 model <- lmer(rel.transitions ~ site * age + (1|sub_num),
               hourly.category.transitions)
+summary(model)
 ```
 
 Children's overall rate of object handling increased significantly with age (Figure 3A). That is, older children handled more unique objects per hour ($\beta$ = `r round(subset(hourly.objects.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.objects.byage.effects, term == "age")$p.value, 3)`). <!--kc: possibly add category distribution across age, which is generally consistent.--> Additionally, with increasing age, children handled more objects from different categories per hour ($\beta$ = `r round(subset(hourly.categories.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.categories.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.categories.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.categories.byage.effects, term == "age")$p.value, 3)`). <!--kc: need to check correlations between objects and categories. can also switch to proportions for categories if needed; mc2kc: sounds like a good idea to me!--> These effects were consistent across sites; we found no main effects of site or interactions between site and age (all *p*s > 0.05).

@@ -89,12 +89,11 @@ data <- raw.data %>%
   
 # set rm.study.related to TRUE if you want to check results w/o these
 study.related <- c("camera", "vest", "camera cover")
+# define operator that selects all but the things in a list
+`%notin%` <- Negate(`%in%`)
 
 rm.study.related = FALSE
 if (rm.study.related) {
-  # define operator that selects all but the things in a list
-  `%notin%` <- Negate(`%in%`)
-  
   data <- data %>%
       filter(object %notin% study.related)
 }
@@ -188,6 +187,8 @@ Additionally, XX% of photo streams were double coded. Reliability annotations we
 # use this to find the top 3 items per category per site
 # create a table displaying these top items
 top.objects.bycategory <- data %>%
+  mutate(object = str_remove(object, "misc ")) %>%
+  filter(object %notin% study.related) %>%
   select(site, category, object, sub_num) %>%
   distinct() %>%
   group_by(site) %>%
@@ -195,7 +196,6 @@ top.objects.bycategory <- data %>%
             category = category, 
             object = object, 
             sub_num = sub_num) %>%
-  distinct() %>% # <- mc2kc: not doing anything, i think, but left just in case
   group_by(site, category, object, total) %>%
   summarize(n.children = length(unique(sub_num))) %>%
   mutate(prop.children = n.children/total) %>%
@@ -212,7 +212,7 @@ top.objects.bycategory <- data %>%
   pivot_wider(names_from = "site", values_from = "objects") %>%
   rename(`Object Category` = category)
 
-top.objects.tbl <- xtable(top.objects.bycategory, caption = "Objects handled by the most children across categories and sites.", label = "tab:top-objects")
+top.objects.tbl <- xtable(top.objects.bycategory, caption = "Non-study-related objects handled by the most children across categories and sites.", label = "tab:top-objects")
 
 print(top.objects.tbl, type = "latex", comment = FALSE, table.placement = "!ht", scalebox = 0.8, include.rownames = FALSE)
 ```

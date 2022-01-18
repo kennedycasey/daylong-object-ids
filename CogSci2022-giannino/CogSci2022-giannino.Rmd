@@ -323,18 +323,14 @@ ggplot(skew, aes(x = order, y = prop.images,
 # compute the prevalence of category-level objects within kids 
 # (i.e., proportion of holding by category for each kid)
 category.props <- data %>%
-  # TO DO: figure out where NAs are introduced
-  filter(!is.na(category)) %>% # mc2kc: done? i can't find NAs
   group_by(sub_num, category, site) %>%
   summarize(n.category = n()) %>%
-  distinct() %>% # mc2kc: i think this isn't doing anything
   ungroup() %>% 
   group_by(sub_num, site) %>%
   summarize(n.images = sum(n.category), 
             n.category = n.category,
             category = category) %>%
-  mutate(prop = n.category/n.images) %>%
-  distinct() # mc2kc: i think this isn't doing anything
+  mutate(prop = n.category/n.images)
   
 # test for differences between sites for each category
 wilcox.outputs <- list()
@@ -400,7 +396,6 @@ hourly.categories <- data %>%
 ```
 
 The frequency of object categories was similarly divided across sites (Figure 2A). The top objects for each category are shown in Table 1. Children primarily handled miscellaneous synthetic objects (e.g., `r top.synthetic`, etc.; _M_~_Rossel_~ = `r round(subset(category.means, site == "Rossel" & category == "Synthetic")$mean, 4)*100`% of handling, _M_~_Tseltal_~ = `r round(subset(category.means, site == "Tseltal" & category == "Synthetic")$mean, 4)*100`%) and food (_M_~_Rossel_~ = `r round(subset(category.means, site == "Rossel" & category == "Food")$mean, 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means, site == "Tseltal" & category == "Food")$mean, 4)*100`%). For `r top.category.bychild` of `r length(unique(raw.data$sub_num))` children, the top category was either synthetic objects or food. Two-tailed Wilcoxon tests revealed only one significant category-level difference between sites: children's handling of large or immovable objects (e.g., `r top.immovable`, etc.), where Rossel children handled these objects more frequently than Tseltal children (_M_~_Rossel_~ = `r round(subset(category.means, site == "Rossel" & category == "Immovable")$mean, 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means, site == "Tseltal" & category == "Immovable")$mean, 4)*100`%, adjusted _p_ = `r round(subset(comp.category.bysite, category == "Immovable")$p.adjusted, 3)`, *p*s for all other categories > 0.05), but these objects were still the least frequently handled in both sites.
-<!--mc2kc: adjusted value is >.05 for all categories unless i'm missing things!-->
 
 ```{r, hourly-object-stats}
 # compute mean # objects per hour overall
@@ -488,11 +483,6 @@ hourly.objects.bycategory <- model.data %>%
 
 During any given hour, children handled `r hourly.objects$mean` objects from `r hourly.categories$mean` different categories, on average (median = `r hourly.objects$median` objects, _SD_ = `r hourly.objects$sd`, range = `r hourly.objects$min`--`r hourly.objects$max`). A linear mixed-effects model with fixed effects of site, each of the six object categories, and their interaction showed a significant main effect of the synthetic object category ($\beta$ = `r round(subset(hourly.objects.model, term == "synthetic")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "synthetic")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "synthetic")$statistic, 2)`, _p_ `r subset(hourly.objects.model, term == "synthetic")$p.value`) as well as an interaction between site and the synthetic object category ($\beta$ = `r round(subset(hourly.objects.model, term == "site:synthetic")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "site:synthetic")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "site:synthetic")$statistic, 2)`, _p_ = `r subset(hourly.objects.model, term == "site:synthetic")$p.value`) such that children handled more unique synthetic objects per hour than any other object category, and this effect was stronger for Tseltal children than for Rossel children (*p*s > 0.05 for all other main effects and interaction terms; Figure 2B).
 
-<!--kc: might be too much but other things we could add are co-occurrences between categories (e.g., food and tools for mealtime) and another possible DV, the number transitions between different object types and/or categories per hour. this could be one way to get at some finer-grained temporal dynamics without fully coding object bouts.
-
-mc2kc: i think we could get away without these for the current paper. if time allows for one, let's try for rate of transitions between objects. but also we can just let that go for now! the paper is already packed with results :)
--->
-
 ```{r overall-stats-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 3.4, fig.height = 4.4, fig.cap = "(A) Overall frequency of handling by object category. Points reflect percentages for individual children. (B) Count of unique objects handled per hour by object category. Points reflect means for individual children across all hours of recording."}
 
 # create fig showing % of images with each category across sites
@@ -560,19 +550,16 @@ plot_grid(panels, legend, ncol = 1, rel_heights = c(1, .1))
 category.props.bytod <- data %>%
   group_by(sub_num, category, site, hour) %>%
   summarize(n.category = n()) %>%
-  distinct() %>% # mc2kc: i think this isn't doing anything
   ungroup() %>% 
   group_by(sub_num, site, hour) %>%
   summarize(n.images = sum(n.category), 
             n.category = n.category, 
             category = category) %>%
   mutate(prop = n.category/n.images) %>%
-  distinct() %>% # mc2kc: i think this isn't doing anything
   ungroup() %>%
   mutate(tod = hour, 
          category = factor(category,
-                              levels = categories)) %>%
-  filter(!is.na(category)) # mc2kc: no NAs :D
+                              levels = categories))
   
 # model time of day effects w/ indiv models for each category
 tod.effects.list <- list()
@@ -730,7 +717,6 @@ hourly.object.transitions.byage.effects.toplot <- ggpredict(
 category.props.byage <- data %>%
   group_by(sub_num, category, site, age) %>%
   summarize(n.category = n()) %>%
-  distinct() %>% # mc2kc: i think this isn't doing anything
   ungroup() %>% 
   group_by(sub_num, site, age) %>%
   summarize(n.images = sum(n.category), 

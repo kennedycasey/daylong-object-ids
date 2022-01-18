@@ -289,6 +289,33 @@ camera <- all.ranked.objects %>%
 
 <!-- kc: need to add trailing zeros after rounding; mc2kc: try something like: printnum(YOURNUM, digits = 3). i tried using format() before but it didn't work and i can't remember why heh--> Children handled an average of `r daily.objects$mean` unique objects per day (median = `r daily.objects$median`, _SD_ = `r daily.objects$sd`, range = `r daily.objects$min`--`r daily.objects$max`), with no significant differences across sites (_M_~_Rossel_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Rossel")$n.objects), 2)`, _M_~_Tseltal_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Tseltal")$n.objects), 2)`, _W_ = `r comp.daily.objects$statistic`, _p_ = `r round(comp.daily.objects$p.value, 3)`). Of these, `r round(length(intersect(ros.objects, tse.objects))/length(unique(raw.data$object)),4)*100`% of objects were present in both communities, and several shared objects were among the most frequently handled by children in both sites. In fact, among the top 25 most common objects, `r length(intersect(ros.top.objects, tse.top.objects))` were shared across sites. Of note, the study camera was handled by the most children in both sides (Rossel: `r round(subset(camera, site == "Rossel")$prop, 3)*100`%, Tseltal: `r round(subset(camera, site == "Tseltal")$prop, 3)*100`% of children). The camera and other study-related objects (i.e., the vest and privacy cover for the camera), were retained in our analysis; however, inclusion of these items did not qualitatively change any of the reported results.
 
+```{r zipfian-objects-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 2.9, fig.height = 2, fig.cap = "Zipfian distribution of objects handled by each child across sites."}
+
+data %>%
+  group_by(site, sub_num, object) %>%
+  summarize(n.images = n()) %>%
+  ungroup() %>%
+  group_by(site, sub_num) %>%
+  summarize(total = sum(n.images), 
+            n.images = n.images,
+            object = object) %>%
+  distinct() %>%
+  mutate(prop.images = n.images/total*100) %>%
+  arrange(sub_num, desc(prop.images)) %>%
+  mutate(order = row_number()) %>%
+  ungroup() %>%
+  ggplot(aes(x = order, y = prop.images, 
+             fill = site, color = site)) +
+    geom_line(aes(group = sub_num), alpha = 0.15) +
+    geom_smooth(se = FALSE, method = "loess") +
+    scale_color_manual(values = site.colors) +
+    scale_fill_manual(values = site.colors) +
+    labs(x = "Rank-Ordered Objects", y = "% Images", 
+         color = "Site", fill = "Site") +
+    theme_test(base_size = 8) +
+    theme(legend.position = "bottom")
+```
+
 ```{r, overall-category-stats}
 # compute the prevalence of category-level objects within kids 
 # (i.e., proportion of holding by category for each kid)

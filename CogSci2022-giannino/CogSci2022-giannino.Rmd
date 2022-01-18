@@ -654,6 +654,43 @@ hourly.objects.byage.effects.toplot <- ggpredict(
   back.transform = TRUE) %>%
   rename(age = group, site = x) %>%
   mutate(age = as.numeric(as.character(age)))
+
+# compute # of transitions between objects per hour per kid
+# and compare that to the total number of objects in each hour
+# to get the relative number of object transitions ("rel.transitions")
+hourly.object.transitions <- data %>%
+  group_by(sub_num, image) %>%
+  # first, calculate # categories per image
+  mutate(n.objects = length(unique(object)), 
+         all.objects = paste(object, collapse = ", ")) %>%
+  ungroup() %>%
+  select(site, sub_num, image, age, hour, n.objects, all.objects) %>%
+  distinct() %>%
+  # second, add cols w/ prev category and check if there's been a change
+  # in held object---if so, mark it as a transition == 1
+  mutate(prev.objects = lag(all.objects, 1), 
+         same.child = ifelse(sub_num == lag(sub_num, 1), 1, 0), 
+         transition = ifelse(all.objects != prev.objects &
+                               same.child == 1, 1, 0)) %>%
+  group_by(site, sub_num, age, hour) %>%
+  summarize(n.transitions = sum(transition, na.rm = TRUE)) %>%
+  left_join(hourly.objects.byage, by = c("site", "sub_num", "age", "hour")) %>%
+  mutate(rel.transitions = n.transitions/n.objects)
+
+# model number of hourly transitions between by site and age
+model <- lmer(rel.transitions ~ site * age + (1|sub_num),
+              hourly.object.transitions)
+
+# marginal increase in object transitions per hour with age
+hourly.object.transitions.byage.effects <- tidy(model) %>%
+    filter(effect == "fixed" & term != "(Intercept)" & p.value < 0.10)
+
+# get model predicted values for plotting
+hourly.object.transtions.byage.effects.toplot <- ggpredict(
+  model, terms = c("site", "age [all]"), type = "fixed",
+  back.transform = TRUE) %>%
+  rename(age = group, site = x) %>%
+  mutate(age = as.numeric(as.character(age)))
 ```
 
 ```{r, age-categories}
@@ -707,7 +744,7 @@ hourly.categories.byage <- data %>%
 # model # categories per hour by site and age
 model <- lmer(n.categories ~ site * age + (1|sub_num), hourly.categories.byage)
 
-# marginal increase in unique objects per hour with age
+# increase in unique objects per hour with age
 hourly.categories.byage.effects <- tidy(model) %>%
     filter(effect == "fixed" & term != "(Intercept)" & p.value < 0.10)
 
@@ -745,10 +782,20 @@ hourly.category.transitions <- data %>%
   left_join(hourly.total.categories, by = c("sub_num", "hour")) %>%
   mutate(rel.transitions = n.transitions/n.categories)
 
-# number of hourly transitions between categories increases with age
+# model number of hourly transitions between by site and age
 model <- lmer(rel.transitions ~ site * age + (1|sub_num),
               hourly.category.transitions)
-summary(model)
+
+# increase in category transitions per hour with age
+hourly.category.transitions.byage.effects <- tidy(model) %>%
+    filter(effect == "fixed" & term != "(Intercept)" & p.value < 0.10)
+
+# get model predicted values for plotting
+hourly.category.transtions.byage.effects.toplot <- ggpredict(
+  model, terms = c("site", "age [all]"), type = "fixed",
+  back.transform = TRUE) %>%
+  rename(age = group, site = x) %>%
+  mutate(age = as.numeric(as.character(age)))
 ```
 
 Children's overall rate of object handling increased significantly with age (Figure 3A). That is, older children handled more unique objects per hour ($\beta$ = `r round(subset(hourly.objects.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.objects.byage.effects, term == "age")$p.value, 3)`). <!--kc: possibly add category distribution across age, which is generally consistent.--> Additionally, with increasing age, children handled more objects from different categories per hour ($\beta$ = `r round(subset(hourly.categories.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.categories.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.categories.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.categories.byage.effects, term == "age")$p.value, 3)`). <!--kc: need to check correlations between objects and categories. can also switch to proportions for categories if needed; mc2kc: sounds like a good idea to me!--> These effects were consistent across sites; we found no main effects of site or interactions between site and age (all *p*s > 0.05).

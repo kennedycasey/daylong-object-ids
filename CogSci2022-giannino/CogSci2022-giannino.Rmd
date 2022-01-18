@@ -84,11 +84,23 @@ categories <- c("Synthetic", "Food", "Tool",
 data <- raw.data %>%
   # TO DO: fix NAs in site and category
   filter(!is.na(site) & !is.na(object_type) & is.na(exclusion)) %>%
-    mutate(hour = hour(timestamp),
-           category = factor(object_type, 
-                       levels = c("Other Synthetic Object", "Food", "Tool", 
-                                  "Toy", "Other Natural Object", "Large Immovable"),
-                       labels = categories))
+  mutate(hour = hour(timestamp),
+         category = factor(object_type, 
+                           levels = c("Other Synthetic Object", "Food", "Tool", 
+                                      "Toy", "Other Natural Object", "Large Immovable"),
+                           labels = categories))
+  
+# set rm.study.related to TRUE if you want to check results w/o these
+study.related <- c("camera", "vest", "camera cover")
+
+rm.study.related = FALSE
+if (rm.study.related) {
+  # define operator that selects all but the things in a list
+  `%notin%` <- Negate(`%in%`)
+  
+  data <- data %>%
+      filter(object %notin% study.related)
+}
 ```
 
 # Introduction

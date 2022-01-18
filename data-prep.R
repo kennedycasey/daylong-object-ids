@@ -16,26 +16,21 @@ durations <- read_csv("data/metadata/timestamps.csv") %>%
 raw.data <- annotations %>%
   pivot_longer(c(None:Unsure), names_to = "exclusion", values_to = "exclusion.val") %>%
   mutate(exclusion = ifelse(exclusion.val == 1, exclusion, NA)) %>%
-  pivot_longer(StudyRelated:OtherNatural, names_to = "coded.category", 
-               values_to = "category.val") %>%
-  filter(category.val != 0) %>%
-  select(sub_num, Image, Object, exclusion, coded.category) %>%
+  select(sub_num, Image, Object, exclusion) %>%
   distinct()
          
 # replace unsure objects --------------------------------------------------
 unsure <- read_csv("data/manual-checks/unsure-objects.csv") %>%
   pivot_longer(c(Exclude:Unsure), names_to = "exclusion", values_to = "exclusion.val") %>%
   mutate(exclusion.corrected = ifelse(exclusion.val == 1, exclusion, NA)) %>%
-  rename(object.corrected = Object, 
-         coded.category.corrected = Category) %>%
   # TO DO: decide whether we're keeping categories when exact objects aren't identifiable
-  select(sub_num, Image, object.corrected, exclusion.corrected, coded.category.corrected) 
+  rename(object.corrected = Object) %>%
+  select(sub_num, Image, object.corrected, exclusion.corrected) 
 
 data.w.unsure <- raw.data %>%
   left_join(unsure, by = c("sub_num", "Image")) %>%
   mutate(Object = ifelse(!is.na(object.corrected), object.corrected, Object), 
-         exclusion = ifelse(!is.na(exclusion.corrected), exclusion.corrected, exclusion), 
-         coded.category = ifelse(!is.na(coded.category.corrected), coded.category.corrected, coded.category)) %>%
+         exclusion = ifelse(!is.na(exclusion.corrected), exclusion.corrected, exclusion)) %>%
   select(-ends_with("corrected"))
 
 # replace originally excluded images --------------------------------------
@@ -69,7 +64,7 @@ data.w.labels <- data.w.none %>%
   filter(!is.na(object2)) %>%
   rename(object = object2) %>%
   mutate(object = trimws(object)) %>%
-  select(sub_num, Image, exclusion, coded.category, object)
+  select(sub_num, Image, exclusion, object)
 
 # temporary code for pulling out new labels that need categorization
 old_categories <- read_csv("data/manual-checks/categories.csv") %>%
@@ -89,14 +84,7 @@ categories <- read_csv("data/manual-checks/categories.csv")
 data.w.categories <- data.w.labels %>%
   full_join(categories, by = "object") %>%
   select(sub_num, Image, exclusion, category, object) %>%
-  distinct() %>%
-  mutate(object_type = case_when(
-    category == "Food" ~ "Food", 
-    category %in% c("Toy", "Book") ~ "Toy", 
-    category %in% c("Plant", "Animal", "OtherNatural") ~ "Other Natural Object", 
-    category %in% c("ToolMealtime", "ToolWork") ~ "Tool", 
-    category == "OtherLargeImmovable" ~ "Large Immovable", 
-    category %in% c("OtherSynthetic", "Electronic", "Clothing") ~ "Other Synthetic Object"))
+  distinct() 
 
 # export clean data -------------------------------------------------------
 # randomly select rec for kids with 2 recs -> hard code until we have all annotations
@@ -109,7 +97,7 @@ data.to.export <- data.w.categories %>%
   filter(sub_num != p1.exclude & sub_num != p2.exclude) %>%
   rename(image = Image, 
          timestamp = TimestampHMS) %>%
-  select(site, sub_num, age, sex, image, exclusion, object_type, object, timestamp, duration) %>%
+  select(site, sub_num, age, sex, image, exclusion, category, object, timestamp, duration) %>%
   distinct()
 
 write_csv(data.to.export, "data/usable.data_20220117.csv")

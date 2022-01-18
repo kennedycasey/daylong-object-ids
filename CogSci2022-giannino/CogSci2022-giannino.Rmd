@@ -83,12 +83,9 @@ categories <- c("Synthetic", "Food", "Tool",
 # rm excluded photos + set other variable info
 data <- raw.data %>%
   # TO DO: fix NAs in site and category
-  filter(!is.na(site) & !is.na(object_type) & is.na(exclusion)) %>%
+  filter(!is.na(site) & !is.na(category) & is.na(exclusion)) %>%
   mutate(hour = hour(timestamp),
-         category = factor(object_type, 
-                           levels = c("Other Synthetic Object", "Food", "Tool", 
-                                      "Toy", "Other Natural Object", "Large Immovable"),
-                           labels = categories))
+         category = factor(category, levels = categories))
   
 # set rm.study.related to TRUE if you want to check results w/o these
 study.related <- c("camera", "vest", "camera cover")

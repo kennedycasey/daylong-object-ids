@@ -690,7 +690,7 @@ hourly.object.transitions.byage.effects <- tidy(model) %>%
     filter(effect == "fixed" & term != "(Intercept)" & p.value < 0.10)
 
 # get model predicted values for plotting
-hourly.object.transtions.byage.effects.toplot <- ggpredict(
+hourly.object.transitions.byage.effects.toplot <- ggpredict(
   model, terms = c("site", "age [all]"), type = "fixed",
   back.transform = TRUE) %>%
   rename(age = group, site = x) %>%
@@ -795,7 +795,7 @@ hourly.category.transitions.byage.effects <- tidy(model) %>%
     filter(effect == "fixed" & term != "(Intercept)" & p.value < 0.10)
 
 # get model predicted values for plotting
-hourly.category.transtions.byage.effects.toplot <- ggpredict(
+hourly.category.transitions.byage.effects.toplot <- ggpredict(
   model, terms = c("site", "age [all]"), type = "fixed",
   back.transform = TRUE) %>%
   rename(age = group, site = x) %>%
@@ -806,7 +806,7 @@ Children's overall rate of object handling increased significantly with age (Fig
 
 To further explore developmental changes in the characteristics of children's object handling, we measured the number of transitions between different objects and different object categories per hour. We modeled the relative number of transitions per hour (i.e., number of total transitions divided by the number of total objects or categories) as a function of age and site, plus their interaction. With increasing age, children made marginally more transitions between objects ($\beta$ = `r round(subset(hourly.object.transitions.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.object.transitions.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.object.transitions.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.object.transitions.byage.effects, term == "age")$p.value, 3)`) and signifcantly more transitions between object categories ($\beta$ = `r round(subset(hourly.category.transitions.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.category.transitions.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.category.transitions.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.category.transitions.byage.effects, term == "age")$p.value, 3)`) per hour.
 
-```{r age-effects-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 3.4, fig.height = 4.4, fig.cap = "(A) Unique objects and (B) object categories handled per hour as a function of age. Points reflect raw hourly counts for each child, and lines reflect model predictions with shaded standard error regions."}
+```{r age-effects-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 3.4, fig.height = 4.4, fig.cap = "(A) Unique objects and (B) object categories handled per hour as a function of age. (C) Relative number of transitions between objects and (D) object categories per hour as a function of age. Points reflect raw hourly counts for each child, and lines reflect model predictions with shaded standard error regions."}
 
 # create fig showing increase in unique objects per hr with age
 p1 <- ggplot() +
@@ -859,12 +859,57 @@ p2 <- ggplot() +
   theme_test(base_size = 8) +
   theme(legend.position = "none", plot.tag = element_text(face = "bold"))
 
+p3 <- ggplot() +
+  # add trend line from lmer output
+  geom_line(hourly.object.transitions.byage.effects.toplot,
+            mapping = aes(x = age, y = predicted, color = site), size = 1) +
+  # add SE from lmer output
+  geom_ribbon(hourly.object.transitions.byage.effects.toplot,
+              mapping = aes(x = age , ymin = predicted - conf.low,
+                            ymax = predicted + conf.low, fill = site),
+              alpha = 0.1) +
+  # add points for individual kids
+  geom_jitter(hourly.object.transitions,
+              mapping = aes(x = age, y = rel.transitions,
+                            color = site, fill = site), 
+              alpha = 0.25, size = 0.5) +
+  scale_color_manual(values = site.colors) +
+  scale_fill_manual(values = site.colors) +
+  scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) +
+  labs(x = "Age (months)", y = "Object Transitions/Hour",
+       color = "Site", fill = "Site", tag = "C") +
+  theme_test(base_size = 8) +
+  theme(legend.position = "none", plot.tag = element_text(face = "bold"))
+
+p4 <- ggplot() +
+  # add trend line from lmer output
+  geom_line(hourly.category.transitions.byage.effects.toplot,
+            mapping = aes(x = age, y = predicted, color = site), size = 1) +
+  # add SE from lmer output
+  geom_ribbon(hourly.category.transitions.byage.effects.toplot,
+              mapping = aes(x = age , ymin = predicted - conf.low,
+                            ymax = predicted + conf.low, fill = site),
+              alpha = 0.1) +
+  # add points for individual kids
+  geom_jitter(hourly.category.transitions,
+              mapping = aes(x = age, y = rel.transitions,
+                            color = site, fill = site), 
+              alpha = 0.25, size = 0.5) +
+  scale_color_manual(values = site.colors) +
+  scale_fill_manual(values = site.colors) +
+  scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) +
+  labs(x = "Age (months)", y = "Category Transitions/Hour",
+       color = "Site", fill = "Site", tag = "D") +
+  theme_test(base_size = 8) +
+  theme(legend.position = "none", plot.tag = element_text(face = "bold"))
+
 # combine plots and do some formatting
 # (i.e., align axes and shrink space between panels)
-fig4 <- align_plots(p1a, p2, align = "hv", axis = "l")
-panels <- plot_grid(ggdraw(fig4[[1]]), NULL,
-                    ggdraw(fig4[[2]]), nrow = 3, rel_heights = c(1, -0.07, 1))
-plot_grid(panels, legend, ncol = 1, rel_heights = c(1, .1))
+fig4 <- align_plots(p1a, p2, p3, p4, align = "hv", axis = "l")
+panels <- plot_grid(ggdraw(fig4[[1]]), ggdraw(fig4[[2]]), 
+                    ggdraw(fig4[[3]]), ggdraw(fig4[[4]]), 
+                    nrow = 2, rel_heights = c(1, 1, 1, 1))
+plot_grid(panels, legend, nrow = 2, rel_heights = c(1, .1))
 ```
 
 # Discussion

@@ -289,9 +289,8 @@ camera <- all.ranked.objects %>%
 
 <!-- kc: need to add trailing zeros after rounding; mc2kc: try something like: printnum(YOURNUM, digits = 3). i tried using format() before but it didn't work and i can't remember why heh--> Children handled an average of `r daily.objects$mean` unique objects per day (median = `r daily.objects$median`, _SD_ = `r daily.objects$sd`, range = `r daily.objects$min`--`r daily.objects$max`), with no significant differences across sites (_M_~_Rossel_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Rossel")$n.objects), 2)`, _M_~_Tseltal_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Tseltal")$n.objects), 2)`, _W_ = `r comp.daily.objects$statistic`, _p_ = `r round(comp.daily.objects$p.value, 3)`). The distribution of handled objects was highly right-skewed within and across children. For each child, we found that a small group of objects were handled in a majority of their images, and there was a long tail of other objects that were handled for only short periods of time (Figure 1). Across children, common objects followed a similar Zipfian distribution; some objects appeared frequently for many children, but most objects were only handled by 1-2 children in each site. <!--kc: needs work but this is the general idea. will add descriptives for skew-->
 
-Comparing between sites, `r round(length(intersect(ros.objects, tse.objects))/length(unique(raw.data$object)),4)*100`% of objects were present in both communities, and several shared objects were among the most frequently handled by children in both sites. In fact, among the top 25 most common objects, `r length(intersect(ros.top.objects, tse.top.objects))` were shared across sites. Of note, the study camera was handled by the most children in both sides (Rossel: `r round(subset(camera, site == "Rossel")$prop, 3)*100`%, Tseltal: `r round(subset(camera, site == "Tseltal")$prop, 3)*100`% of children). The camera and other study-related objects (i.e., the vest and privacy cover for the camera), were retained in our analysis; however, inclusion of these items did not qualitatively change any of the reported results.
 
-```{r zipfian-objects-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 2.9, fig.height = 2, fig.cap = "Zipfian distribution of objects handled by each child across sites."}
+```{r zipfian-objects-fig, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 2.9, fig.height = 2, fig.cap = "Zipfian distribution of objects handled by each child across sites."}
 
 skew <- data %>%
   group_by(site, sub_num, object) %>%
@@ -318,6 +317,8 @@ ggplot(skew, aes(x = order, y = prop.images,
     theme_test(base_size = 8) +
     theme(legend.position = "bottom")
 ```
+
+Comparing between sites, `r round(length(intersect(ros.objects, tse.objects))/length(unique(raw.data$object)),4)*100`% of objects were present in both communities, and several shared objects were among the most frequently handled by children in both sites. In fact, among the top 25 most common objects, `r length(intersect(ros.top.objects, tse.top.objects))` were shared across sites. Of note, the study camera was handled by the most children in both sides (Rossel: `r round(subset(camera, site == "Rossel")$prop, 3)*100`%, Tseltal: `r round(subset(camera, site == "Tseltal")$prop, 3)*100`% of children). The camera and other study-related objects (i.e., the vest and privacy cover for the camera), were retained in our analysis; however, inclusion of these items did not qualitatively change any of the reported results.
 
 ```{r, overall-category-stats}
 # compute the prevalence of category-level objects within kids 
@@ -481,9 +482,7 @@ hourly.objects.bycategory <- model.data %>%
   mutate(category = factor(category, levels = categories))
 ```
 
-During any given hour, children handled `r hourly.objects$mean` objects from `r hourly.categories$mean` different categories, on average (median = `r hourly.objects$median` objects, _SD_ = `r hourly.objects$sd`, range = `r hourly.objects$min`--`r hourly.objects$max`). A linear mixed-effects model with fixed effects of site, each of the six object categories, and their interaction showed a significant main effect of the synthetic object category ($\beta$ = `r round(subset(hourly.objects.model, term == "synthetic")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "synthetic")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "synthetic")$statistic, 2)`, _p_ `r subset(hourly.objects.model, term == "synthetic")$p.value`) as well as an interaction between site and the synthetic object category ($\beta$ = `r round(subset(hourly.objects.model, term == "site:synthetic")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "site:synthetic")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "site:synthetic")$statistic, 2)`, _p_ = `r subset(hourly.objects.model, term == "site:synthetic")$p.value`) such that children handled more unique synthetic objects per hour than any other object category, and this effect was stronger for Tseltal children than for Rossel children (*p*s > 0.05 for all other main effects and interaction terms; Figure 2B).
-
-```{r overall-stats-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 3.4, fig.height = 4.4, fig.cap = "(A) Overall frequency of handling by object category. Points reflect percentages for individual children. (B) Count of unique objects handled per hour by object category. Points reflect means for individual children across all hours of recording."}
+```{r overall-stats-fig, fig.env = "figure", fig.pos = "!h", fig.align = "center", fig.width = 3.4, fig.height = 4.4, fig.cap = "(A) Overall frequency of handling by object category. Points reflect percentages for individual children. (B) Count of unique objects handled per hour by object category. Points reflect means for individual children across all hours of recording."}
 
 # create fig showing % of images with each category across sites
 p1 <- ggplot() +
@@ -543,6 +542,8 @@ panels <- plot_grid(ggdraw(fig1[[1]]), NULL,
                     ggdraw(fig1[[2]]), nrow = 3, rel_heights = c(1, -0.07, 1))
 plot_grid(panels, legend, ncol = 1, rel_heights = c(1, .1))
 ```
+
+During any given hour, children handled `r hourly.objects$mean` objects from `r hourly.categories$mean` different categories, on average (median = `r hourly.objects$median` objects, _SD_ = `r hourly.objects$sd`, range = `r hourly.objects$min`--`r hourly.objects$max`). A linear mixed-effects model with fixed effects of site, each of the six object categories, and their interaction showed a significant main effect of the synthetic object category ($\beta$ = `r round(subset(hourly.objects.model, term == "synthetic")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "synthetic")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "synthetic")$statistic, 2)`, _p_ `r subset(hourly.objects.model, term == "synthetic")$p.value`) as well as an interaction between site and the synthetic object category ($\beta$ = `r round(subset(hourly.objects.model, term == "site:synthetic")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "site:synthetic")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "site:synthetic")$statistic, 2)`, _p_ = `r subset(hourly.objects.model, term == "site:synthetic")$p.value`) such that children handled more unique synthetic objects per hour than any other object category, and this effect was stronger for Tseltal children than for Rossel children (*p*s > 0.05 for all other main effects and interaction terms; Figure 2B).
 
 ## Time of day effects
 ```{r, time-of-day-categories}
@@ -631,7 +632,7 @@ ggplot(tod.effects.toplot,
   scale_x_continuous(breaks = c(8, 12, 16), labels = c("8AM", "12PM", "4PM")) +
   labs(x = "Time of Day", y = "% Handling", color = "Site", fill = "Site") +
   theme_test(base_size = 8) +
-  theme(legend.position = "none")
+  theme(legend.position = "bottom")
 ```
 
 ## Age effects

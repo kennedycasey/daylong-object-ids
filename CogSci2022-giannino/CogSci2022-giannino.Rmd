@@ -160,10 +160,26 @@ demo <- data %>%
 The present data include images from one photo stream each of `r demo$n.kids` children (Rossel: `r subset(demo.bysite, site == "Rossel")$n.kids`, Tseltal: `r subset(demo.bysite, site == "Tseltal")$n.kids`) ranging in age from `r demo$min.age` to `r demo$max.age` months (_M_~_Rossel_~ = `r round(subset(demo.bysite, site == "Rossel")$m.age, 1)`, _M_~_Tseltal_~ = `r round(subset(demo.bysite, site == "Tseltal")$m.age, 1)`). The number of photos featuring child object handling per child ranged from `r demo$min.images` to `r demo$max.images` (_M_~_Rossel_~ = `r round(subset(demo.bysite, site == "Rossel")$m.images, 1)`, _M_~_Tseltal_~ = `r round(subset(demo.bysite, site == "Tseltal")$m.images, 1)`). <!--kc: consider dropping kids with very few images or reporting median which is more representative-->
 
 ## Manual annotation
-We annotated photos with ImCo (version 2; [https://github.com/kennedycasey/ImCo2](https://github.com/kennedycasey/ImCo2)), an open-source Python application adapted for efficient coding of image streams <!--kc: will make repo public next week; rm link for blind review?; mc2kc: we already chatted and you probably just didn't have a chance to update this, but no need to keep the link removed/private bc we're identifiable enough just based on the populations under study! and you're not saying this is "our" software so it's fine-->. Annotators provided labels for the handled object(s) present in each photo (e.g., "twig") and selected among predefined categories to characterize each type of object in the image (e.g., "natural object"). Categories included food, tools, toys, immovable objects, natural objects, and miscellaneous synthetic objects (see Table \ref{tab:top-objects} for example objects from each category).
+We annotated photos with ImCo (version 2; [https://github.com/kennedycasey/ImCo2](https://github.com/kennedycasey/ImCo2)), an open-source Python application adapted for efficient coding of image streams. Annotators provided labels for the handled object(s) present in each photo (e.g., "twig") and selected among predefined categories to characterize each type of object in the image (e.g., "natural object"). Categories included food, tools, toys, immovable objects, natural objects, and miscellaneous synthetic objects (see Table \ref{tab:top-objects} for example objects from each category).
 
-## Reliability
-XX% of photo streams were double coded. Reliability annotations were equally spread across sites and ages. At the category level, annotators agreed on XX.X% of decisions (Rossel: XX.X%, Tseltal: XX.X%). At the object label level, annotators agreed on XX.X% of decisions (Rossel: XX.X%). <!--kc: will probably need some description of common discrepancies and more details about manual collapsing across similar labels; mc2kc: we can keep this very minimal if we're low on space--> To avoid unnecessary data loss, all excluded photos were checked by at least one other annotator and re-included for analysis if objects were identifiable. <!--kc: need to add manual checking procedure here or above-->
+```{r, exclusions}
+total <- raw.data %>%
+  select(sub_num, image) %>%
+  distinct() %>%
+  nrow()
+
+exclusions <- raw.data %>%
+  filter(!is.na(exclusion)) %>%
+  group_by(exclusion) %>%
+  summarize(count = n(),
+            prop = round(count/total * 100, 1)) %>%
+  pivot_wider(names_from = "exclusion", values_from = c("count", "prop"))
+```
+
+## Data preparation and reliability
+Images were excluded if they were too dark, bright, blurry, or covered for annotators to identify handled objects (`r exclusions$count_Exclude` images, or `r exclusions$prop_Exclude`% of the data set), if annotators were otherwise unsure about what objects were being handled (`r exclusions$count_Unsure`, or `r exclusions$prop_Unsure`%), or if there was no handled object (`r exclusions$count_None`, or `r exclusions$prop_None`%). To avoid unnecessary data loss, all excluded photos were checked by at least one other annotator and re-included for analysis if objects were identifiable. In total, `r data %>% select(sub_num, image) %>% distinct() %>% nrow()` images were deemed usable by annotators (`r data %>% filter(site == "Rossel") %>% select(sub_num, image) %>% distinct() %>% nrow()` for Rossel, `r data %>% filter(site == "Tseltal") %>% select(sub_num, image) %>% distinct() %>% nrow()` for Tseltal).
+
+Additionally, XX% of photo streams were double coded. Reliability annotations were equally spread across sites and ages and included a total of XXXX images. At the category level, annotators agreed on XX.X% of decisions (Rossel: XX.X%, Tseltal: XX.X%). At the object label level, annotators agreed on XX.X% of decisions (Rossel: XX.X%). <!--kc: will probably need some description of common discrepancies and more details about manual collapsing across similar labels; mc2kc: we can keep this very minimal if we're low on space-->
 
 ```{r, top-objects, results = "asis"}
 # compute the objects that most often appear 1+ times across children w/i sites

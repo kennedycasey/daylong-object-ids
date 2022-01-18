@@ -22,15 +22,16 @@ raw.data <- annotations %>%
 # replace unsure objects --------------------------------------------------
 unsure <- read_csv("data/manual-checks/unsure-objects.csv") %>%
   pivot_longer(c(Exclude:Unsure), names_to = "exclusion", values_to = "exclusion.val") %>%
-  mutate(exclusion.corrected = ifelse(exclusion.val == 1, exclusion, NA)) %>%
+  mutate(exclusion.corrected = ifelse(exclusion.val == 1, exclusion, NA), 
+         from.unsure = 1) %>%
   # TO DO: decide whether we're keeping categories when exact objects aren't identifiable
   rename(object.corrected = Object) %>%
-  select(sub_num, Image, object.corrected, exclusion.corrected) 
+  select(sub_num, Image, object.corrected, exclusion.corrected, from.unsure) 
 
 data.w.unsure <- raw.data %>%
   left_join(unsure, by = c("sub_num", "Image")) %>%
-  mutate(Object = ifelse(!is.na(object.corrected), object.corrected, Object), 
-         exclusion = ifelse(!is.na(exclusion.corrected), exclusion.corrected, exclusion)) %>%
+  mutate(Object = ifelse(!is.na(object.corrected) & !is.na(from.unsure), object.corrected, Object), 
+         exclusion = ifelse(!is.na(from.unsure), exclusion.corrected, exclusion)) %>%
   select(-ends_with("corrected"))
 
 # replace originally excluded images --------------------------------------
@@ -42,7 +43,7 @@ none <- read_csv("data/manual-checks/no-objects.csv") %>%
 
 data.w.none <- data.w.unsure %>%
   full_join(none, by = c("sub_num", "Image")) %>%
-  mutate(Object = ifelse(!is.na(object.corrected) &  !is.na(from.none), object.corrected, Object), 
+  mutate(Object = ifelse(!is.na(object.corrected) & !is.na(from.none), object.corrected, Object), 
          exclusion = ifelse(!is.na(from.none), exclusion.corrected, exclusion)) %>%
   select(-ends_with("corrected"), -from.none)
 

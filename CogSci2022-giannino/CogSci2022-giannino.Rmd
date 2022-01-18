@@ -71,6 +71,16 @@ if (run.from.raw) {
 # read in data
 raw.data <- read_csv("../data/usable.data_20220117.csv")
 
+# pre-set colors and category labels
+sites <- c("Rossel", "Tseltal")
+
+site.colors <- c("Rossel" = "#3C5388", 
+                 "Tseltal" = "#02A087")
+
+categories <- c("Synthetic", "Food", "Tool", 
+                "Toy", "Natural", "Immovable")
+
+# rm excluded photos + set other variable info
 data <- raw.data %>%
   # TO DO: fix NAs in site and category
   filter(!is.na(site) & !is.na(object_type) & is.na(exclusion)) %>%
@@ -78,14 +88,7 @@ data <- raw.data %>%
            object_type = factor(object_type, 
                        levels = c("Other Synthetic Object", "Food", "Tool", 
                                   "Toy", "Other Natural Object", "Large Immovable"),
-                       labels = c("Synthetic", "Food", "Tool", 
-                                  "Toy", "Natural", "Immovable")))
-
-# pre-set colors and category labels
-site_colors <- c("Rossel" = "#3C5388", 
-                 "Tseltal" = "#02A087")
-
-categories <- c("Synthetic", "Food", "Tool", "Toy", "Natural", "Immovable")
+                       labels = categories))
 ```
 
 # Introduction
@@ -220,7 +223,7 @@ comp.daily.objects <- tidy(wilcox.test(n.objects ~ site, daily.objects.bysite))
 # compute most items that appear 1+ times most frequently
 # across children w/i site
 ranked.objects.list <- list()
-for (i in c("Rossel", "Tseltal")) {
+for (i in sites) {
   ranked.objects <- data %>%
     filter(site == i) %>%
     mutate(total.kids = length(unique(sub_num))) %>%
@@ -421,8 +424,7 @@ hourly.objects.bycategory <- model.data %>%
   summarize(n.objects.bysub = mean(n.objects)) %>%
   ungroup() %>%
   mutate(object_type = factor(object_type,
-                              levels = c("Synthetic", "Food", "Tool", 
-                                         "Toy", "Natural", "Immovable")))
+                              levels = categories))
 ```
 
 During any given hour, children handled `r hourly.objects$mean` objects from `r hourly.categories$mean` different categories, on average (median = `r hourly.objects$median` objects, _SD_ = `r hourly.objects$sd`, range = `r hourly.objects$min`--`r hourly.objects$max`). A linear mixed-effects model with fixed effects of site, each of the six object categories, and their interaction showed a significant main effect of the synthetic object category ($\beta$ = `r round(subset(hourly.objects.model, term == "synthetic")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "synthetic")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "synthetic")$statistic, 2)`, _p_ = `r subset(hourly.objects.model, term == "synthetic")$p.value`) as well as an interaction between site and the synthetic object category ($\beta$ = `r round(subset(hourly.objects.model, term == "site:synthetic")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "site:synthetic")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "site:synthetic")$statistic, 2)`, _p_ = `r subset(hourly.objects.model, term == "site:synthetic")$p.value`) such that children handled more unique synthetic objects per hour than any other object category, and this effect was stronger for Tseltal children than for Rossel children (*p*s > 0.05 for all other main effects and interaction terms; Figure 1B).
@@ -451,8 +453,8 @@ p1 <- ggplot() +
                 position = position_dodge(width = 0.75), 
                 width = 0.25, size = 0.5, color = "black") +
   annotate(geom = "text", label = "*", x = "Immovable", y = 20, size = 6) +
-  scale_color_manual(values = site_colors) +
-  scale_fill_manual(values = site_colors) +
+  scale_color_manual(values = site.colors) +
+  scale_fill_manual(values = site.colors) +
   labs(x = "Object Categories", y = "% Handling",
        color = "Site", fill = "Site", tag = "A") +
   theme_classic(base_size = 8) +
@@ -473,8 +475,8 @@ p2 <- ggplot(hourly.objects.bycategory,
   geom_boxplot(width = 0.75, outlier.shape = NA,
                alpha = 0.5, color = "black") +
   annotate(geom = "text", label = "*", x = "Synthetic", y = 5, size = 6) +
-    scale_color_manual(values = site_colors) +
-  scale_fill_manual(values = site_colors) +
+    scale_color_manual(values = site.colors) +
+  scale_fill_manual(values = site.colors) +
   labs(x = "Object Categories", y = "Unique Objects/Hour",
        color = "Site", fill = "Site", tag = "B") +
   theme_classic(base_size = 8) +
@@ -503,8 +505,7 @@ category.props.bytod <- data %>%
   ungroup() %>%
   mutate(tod = hour, 
          object_type = factor(object_type,
-                              levels = c("Synthetic", "Food", "Tool",
-                                         "Toy", "Natural", "Immovable"))) %>%
+                              levels = categories)) %>%
   filter(!is.na(object_type)) # mc2kc: no NAs :D
   
 # model time of day effects w/ indiv models for each category
@@ -533,8 +534,7 @@ for (i in categories) {
 tod.effects <- do.call(rbind, tod.effects.list)
 tod.effects.toplot <- do.call(rbind, tod.effects.toplot.list) %>%
   mutate(object_type = factor(object_type,
-                              levels = c("Synthetic", "Food", "Tool",
-                                         "Toy", "Natural", "Immovable")), 
+                              levels = categories), 
          tod = as.numeric(as.character(tod)))
 ```
 
@@ -576,8 +576,8 @@ ggplot(tod.effects.toplot,
   geom_jitter(category.props.bytod, mapping = aes(
     x = tod, y = prop*100, color = site, fill = site),
     alpha = 0.25, size = 0.5) +
-  scale_fill_manual(values = site_colors) +
-  scale_color_manual(values = site_colors) +
+  scale_fill_manual(values = site.colors) +
+  scale_color_manual(values = site.colors) +
   scale_x_continuous(breaks = c(8, 12, 16), labels = c("8AM", "12PM", "4PM")) +
   labs(x = "Time of Day", y = "% Handling", color = "Site", fill = "Site") +
   theme_test(base_size = 8) +
@@ -639,8 +639,7 @@ category.props.byage <- data %>%
   mutate(prop = n.category/n.images) %>%
   ungroup() %>%
   mutate(object_type = factor(object_type,
-                              levels = c("Synthetic", "Food", "Tool",
-                                         "Toy", "Natural", "Immovable")))
+                              levels = categories))
   
 # model proportion of object handling by site and age
 age.effects.list <- list()
@@ -666,8 +665,7 @@ for (i in categories) {
 age.effects <- do.call(rbind, age.effects.list)
 age.effects.toplot <- do.call(rbind, age.effects.toplot.list) %>%
   mutate(object_type = factor(object_type,
-                              levels = c("Synthetic", "Food", "Tool",
-                                         "Toy", "Natural", "Immovable")))
+                              levels = categories))
 
 # compute # unique categories per hour per kid
 hourly.categories.byage <- data %>%
@@ -736,8 +734,8 @@ p1 <- ggplot() +
               mapping = aes(x = age, y = n.objects,
                             color = site, fill = site), 
               alpha = 0.25, size = 0.5) +
-  scale_color_manual(values = site_colors) +
-  scale_fill_manual(values = site_colors) +
+  scale_color_manual(values = site.colors) +
+  scale_fill_manual(values = site.colors) +
   scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) +
   labs(x = "Age (months)", y = "Unique Objects/Hour",
        color = "Site", fill = "Site", tag = "A") +
@@ -759,8 +757,8 @@ p2 <- ggplot() +
               mapping = aes(x = age, y = n.categories,
                             color = site, fill = site),
               alpha = 0.25, size = 0.5) +
-  scale_color_manual(values = site_colors) +
-  scale_fill_manual(values = site_colors) +
+  scale_color_manual(values = site.colors) +
+  scale_fill_manual(values = site.colors) +
   scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) +
   labs(x = "Age (months)", y = "Unique Categories/Hour",
        color = "Site", fill = "Site", tag = "B") +

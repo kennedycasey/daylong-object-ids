@@ -99,12 +99,17 @@ data.w.categories <- data.w.labels %>%
     category %in% c("OtherSynthetic", "Electronic", "Clothing") ~ "Other Synthetic Object"))
 
 # export clean data -------------------------------------------------------
-data <- data.w.categories %>%
+# randomly select rec for kids with 2 recs -> hard code until we have all annotations
+p1.exclude <- 7959 #output of sample(c(7959, 4856), 1)
+p2.exclude <- 5499 #output of sample(c(4590, 5499), 1)
+
+data.to.export <- data.w.categories %>%
   left_join(participants, by = "sub_num") %>%
   left_join(durations, by = c("sub_num", "Image")) %>%
+  filter(sub_num != p1.exclude & sub_num != p2.exclude) %>%
   rename(image = Image, 
          timestamp = TimestampHMS) %>%
   select(site, sub_num, age, sex, image, exclusion, object_type, object, timestamp, duration) %>%
   distinct()
 
-write_csv(data, "data/usable.data_20220117.csv")
+write_csv(data.to.export, "data/usable.data_20220117.csv")

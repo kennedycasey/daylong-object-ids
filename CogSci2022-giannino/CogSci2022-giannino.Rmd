@@ -356,7 +356,6 @@ hourly.objects <- data %>%
   mutate(across(mean:sd), round(., 2))
 
 # prep tibble for model w/ dummy coded category cols
-# TO DO: deal with kids with 2 recordings
 model.data <- data %>%
   group_by(site, sub_num, hour, object_type) %>%
   summarize(n.objects = length(unique(object))) %>%

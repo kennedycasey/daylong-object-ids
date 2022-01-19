@@ -180,7 +180,7 @@ exclusions <- raw.data %>%
 ## Data preparation and reliability
 Images were excluded if they were too dark, bright, blurry, or covered for annotators to identify handled objects (`r exclusions$count_Exclude` images, `r exclusions$prop_Exclude`% of the data set), if annotators were otherwise unsure about what objects were being handled (`r exclusions$count_Unsure`, or `r exclusions$prop_Unsure`%), or if there was no handled object (`r exclusions$count_None`, or `r exclusions$prop_None`%). To avoid unnecessary data loss, all excluded photos were checked by at least one other annotator and re-included for analysis if objects were identifiable. In total, `r data %>% select(sub_num, image) %>% distinct() %>% nrow()` images were deemed usable by annotators (`r data %>% filter(site == "Rossel") %>% select(sub_num, image) %>% distinct() %>% nrow()` for Rossel, `r data %>% filter(site == "Tseltal") %>% select(sub_num, image) %>% distinct() %>% nrow()` for Tseltal).
 
-Additionally, XX% of photo streams were double coded. Reliability annotations were equally spread across sites and ages and included a total of XXXX images. At the category level, annotators agreed on XX.X% of decisions (Rossel: XX.X%, Tseltal: XX.X%). At the object label level, annotators agreed on XX.X% of decisions (Rossel: XX.X%). <!--kc: will probably need some description of common discrepancies and more details about manual collapsing across similar labels; mc2kc: we can keep this very minimal if we're low on space-->
+Additionally, XX% of photo streams were double coded. Reliability annotations were equally spread across sites and ages and included a total of XXXX images. At the category level, annotators agreed on XX.X% of decisions (Rossel: XX.X%, Tseltal: XX.X%). At the object label level, annotators agreed on XX.X% of decisions (Rossel: XX.X%, Tseltal: XX.X%).
 
 ```{r, top-objects, results = "asis"}
 # compute the objects that most often appear 1+ times across children w/i sites
@@ -285,9 +285,19 @@ tse.top.objects <- all.ranked.objects %>%
 # compute percentage of kids that handled the camera at least once
 camera <- all.ranked.objects %>%
   filter(object == "camera")
+
+# compute percentage of objects handled by only 1-2 kids in each site
+uncommon.objects <- all.ranked.objects %>%
+  group_by(site) %>%
+  mutate(total = length(unique(object))) %>%
+  filter(n.kids %in% 1:2) %>%
+  group_by(site, total) %>%
+  summarize(n = length(unique(object)), 
+            prop = round(n/total*100, 2)) %>%
+  distinct()
 ```
 
-<!-- kc: need to add trailing zeros after rounding; mc2kc: try something like: printnum(YOURNUM, digits = 3). i tried using format() before but it didn't work and i can't remember why heh--> Children handled an average of `r daily.objects$mean` unique objects per day (median = `r daily.objects$median`, _SD_ = `r daily.objects$sd`, range = `r daily.objects$min`--`r daily.objects$max`), with no significant differences across sites (_M_~_Rossel_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Rossel")$n.objects), 2)`, _M_~_Tseltal_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Tseltal")$n.objects), 2)`, _W_ = `r comp.daily.objects$statistic`, _p_ = `r round(comp.daily.objects$p.value, 3)`). The distribution of handled objects was highly right-skewed within and across children. For each child, we found that a small group of objects were handled in a majority of their images, and there was a long tail of other objects that were handled for only short periods of time (Figure 1). Across children, common objects followed a similar Zipfian distribution; some objects appeared frequently for many children, but most objects were only handled by 1-2 children in each site. <!--kc: needs work but this is the general idea. will add descriptives for skew-->
+<!-- kc: need to add trailing zeros after rounding; mc2kc: try something like: printnum(YOURNUM, digits = 3). i tried using format() before but it didn't work and i can't remember why heh--> Children handled an average of `r daily.objects$mean` unique objects per day (median = `r daily.objects$median`, _SD_ = `r daily.objects$sd`, range = `r daily.objects$min`--`r daily.objects$max`), with no significant differences across sites (_M_~_Rossel_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Rossel")$n.objects), 2)`, _M_~_Tseltal_~ = `r round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Tseltal")$n.objects), 2)`, _W_ = `r comp.daily.objects$statistic`, _p_ = `r round(comp.daily.objects$p.value, 3)`). The distribution of handled objects was highly right-skewed within and across children. Each child's distribution was skewed such that a small group of objects were handled in a majority of their images, and there was a long tail of other objects that were handled for only short periods of time (Figure 1). Across children, common objects followed a similar Zipfian distribution; some objects appeared frequently for many children, but most objects were only handled by 1-2 children in each site (Rossel: `r subset(uncommon.objects, site == "Rossel")$prop`%, Tseltal: `r subset(uncommon.objects, site == "Tseltal")$prop`%).
 
 
 ```{r zipfian-objects-fig, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 2.9, fig.height = 1.5, fig.cap = "Zipfian distribution of objects handled by each child across sites."}

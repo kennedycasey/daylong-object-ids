@@ -880,6 +880,13 @@ plot_grid(panels, legend, nrow = 2, rel_heights = c(1, .1))
 ```
 
 # Discussion
+[Overview para]
+
+[Para on zipfian distributions and implications for word learning]: Findings of skewed input are consistent with prior work describing visual/object input [@clerkin2017real; @long2021characterizing] and language input [@montag2018quantity]. These Zipfian distributions can be helpful for learning [@carvalho2019rethinking; others]. Overlap between kids can get us to start thinking about what some of the earliest-learned object names are. BUT less overlap between kids (within sites) than we see for US context [e.g., @herzberg2021exuberant]
+
+[Para on how we can also use these data to probe for time-of-day consistencies and routinized activities]: Limitations of our current coding of categories (e.g., mealtime tools and tools for working/cleaning grouped together but perhaps mealtime tools are better paired with food). Open question: are handled objects a good index for activity context? (maybe some examples of why we think possibly yes, but other examples to show why this would still be messy)
+
+[Para on developmental change]. Broad composition of handled objects was largely stable across age [consistent with @long2021characterizing for visually present categories]
 
 <!--
 # Acknowledgements

@@ -881,6 +881,11 @@ plot_grid(panels, legend, nrow = 2, rel_heights = c(1, .1))
 
 # Discussion
 
+<!--
+# Acknowledgements
+This research is supported by a Gianinno Family Faculty Research Award to MC. We are enormously grateful to the participants and their families for sharing their daily lives with us. We also thank Will Fisher and Shawn C. Tice for essential contributions to the annotation software.
+-->
+
 # References 
 
 ```{r}

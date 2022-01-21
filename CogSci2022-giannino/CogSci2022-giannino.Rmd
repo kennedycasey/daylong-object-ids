@@ -165,7 +165,7 @@ grid::grid.raster(examples)
 ```
 
 ## Manual annotation
-We annotated photos with IMCO [version 2.0, @casillas2022imco], an open-source Python application adapted for efficient coding of photo streams. Annotators provided labels for the handled object(s) present in each photo (e.g., "twig") and selected among predefined categories to characterize each type of object (e.g., "natural object") present. Categories included food, tools, toys, immovable objects (e.g., furniture and housing structures), natural objects, and miscellaneous synthetic objects (see Figure 1 for example images and Table \ref{tab:top-objects} for example objects from each category).
+We annotated photos with IMCO [version 2.0, @casey2022imco], an open-source Python application adapted for efficient coding of photo streams. Annotators provided labels for the handled object(s) present in each photo (e.g., "twig") and selected among predefined categories to characterize each type of object (e.g., "natural object") present. Categories included food, tools, toys, immovable objects (e.g., furniture and housing structures), natural objects, and miscellaneous synthetic objects (see Figure 1 for example images and Table \ref{tab:top-objects} for example objects from each category).
 
 ```{r, exclusions}
 # get total number of objects before exclusion

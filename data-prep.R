@@ -41,6 +41,21 @@ data.w.unsure <- raw.data %>%
          exclusion = ifelse(!is.na(from.unsure), exclusion.corrected, exclusion)) %>%
   select(-ends_with("corrected"))
 
+
+# replace immovable objects -----------------------------------------------
+# read in manually checked immovable objects
+immovable <- read_csv("data/manual-checks/immovable.csv") %>%
+  mutate(from.immovable = 1) %>%
+  select(sub_num, Image, object.corrected, exclusion.corrected, from.immovable)
+
+# merge with main annotations df and replace old values for corrected items
+data.w.immovable <- data.w.unsure %>%
+  left_join(immovable, by = c("sub_num", "Image")) %>%
+  mutate(Object = ifelse(!is.na(object.corrected) & !is.na(from.immovable), 
+                         object.corrected, Object), 
+         exclusion = ifelse(!is.na(from.immovable), exclusion.corrected, exclusion)) %>%
+  select(-ends_with("corrected"))
+
 # replace originally excluded images --------------------------------------
 # read in manually checked images with no objects
 none <- read_csv("data/manual-checks/no-objects.csv") %>%
@@ -50,7 +65,7 @@ none <- read_csv("data/manual-checks/no-objects.csv") %>%
   select(sub_num, Image, object.corrected, exclusion.corrected, from.none) 
 
 # merge with main annotations df and replace if there was a held object
-data.w.none <- data.w.unsure %>%
+data.w.none <- data.w.immovable %>%
   full_join(none, by = c("sub_num", "Image")) %>%
   mutate(Object = ifelse(!is.na(object.corrected) & !is.na(from.none), object.corrected, Object), 
          exclusion = ifelse(!is.na(from.none), exclusion.corrected, exclusion)) %>%
@@ -115,4 +130,4 @@ data.to.export <- data.w.categories %>%
   select(site, sub_num, age, sex, image, exclusion, category, object, timestamp, duration) %>%
   distinct()
 
-write_csv(data.to.export, "data/usable.data_20220117.csv")
+write_csv(data.to.export, "data/usable.data_20220121.csv")

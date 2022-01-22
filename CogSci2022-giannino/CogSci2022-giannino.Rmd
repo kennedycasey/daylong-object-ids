@@ -69,7 +69,7 @@ if (run.from.raw) {
 } 
 
 # read in data
-raw.data <- read_csv("../data/usable.data_20220117.csv")
+raw.data <- read_csv("../data/usable.data_20220121.csv")
 
 # pre-set colors and category labels
 sites <- c("Rossel", "Tseltal")
@@ -440,7 +440,7 @@ hourly.categories <- data %>%
   summarize(mean = round(mean(n.categories), 2))
 ```
 
-The frequency of object categories was similarly divided across sites (Figure 4A). The top objects for each category are shown in Table 1. Children primarily handled miscellaneous synthetic objects (e.g., `r top.synthetic`, etc.; _M_~_Rossel_~ = `r round(subset(category.means, site == "Rossel" & category == "Synthetic")$mean, 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means, site == "Tseltal" & category == "Synthetic")$mean, 4)*100`% of handling) and food (_M_~_Rossel_~ = `r round(subset(category.means, site == "Rossel" & category == "Food")$mean, 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means, site == "Tseltal" & category == "Food")$mean, 4)*100`% of handling). For `r top.category.bychild` of `r length(unique(raw.data$sub_num))` children, their top category was either synthetic objects or food. Two-tailed Wilcoxon tests revealed only one marginal category-level difference between sites: children's handling of large or immovable objects (e.g., `r top.immovable`, etc.), where Rossel children handled these objects more frequently than Tseltal children (_M_~_Rossel_~ = `r round(subset(category.means, site == "Rossel" & category == "Immovable")$mean, 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means, site == "Tseltal" & category == "Immovable")$mean, 4)*100`%, adjusted _p_ = `r round(subset(comp.category.bysite, category == "Immovable")$p.adjusted, 3)`, *p*s for all other categories > 0.05), but these objects were still the least frequently handled in both sites.
+The frequency of object categories was similarly divided across sites (Figure 4A). The top objects for each category are shown in Table 1. Children primarily handled miscellaneous synthetic objects (e.g., `r top.synthetic`, etc.; _M_~_Rossel_~ = `r round(subset(category.means, site == "Rossel" & category == "Synthetic")$mean, 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means, site == "Tseltal" & category == "Synthetic")$mean, 4)*100`% of handling) and food (_M_~_Rossel_~ = `r round(subset(category.means, site == "Rossel" & category == "Food")$mean, 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means, site == "Tseltal" & category == "Food")$mean, 4)*100`% of handling). For `r top.category.bychild` of `r length(unique(raw.data$sub_num))` children, their top category was either synthetic objects or food. Two-tailed Wilcoxon tests revealed only one significant category-level difference between sites: children's handling of large or immovable objects (e.g., `r top.immovable`, etc.), where Rossel children handled these objects more frequently than Tseltal children (_M_~_Rossel_~ = `r round(subset(category.means, site == "Rossel" & category == "Immovable")$mean, 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means, site == "Tseltal" & category == "Immovable")$mean, 4)*100`%, adjusted _p_ = `r round(subset(comp.category.bysite, category == "Immovable")$p.adjusted, 3)`, *p*s for all other categories > 0.05), but these objects were still the least frequently handled in both sites.
 
 ```{r, hourly-object-stats}
 # compute mean # objects per hour overall

@@ -1,5 +1,5 @@
 ---
-title: "Title TBD"
+title: "Sticks, leaves, bowls, and buckets: Distributional patterns of children’s at-home object handling in two subsistence societies"
 bibliography: CogSci2022-giannino.bib
 csl: apa6.csl
 document-params: "10pt, letterpaper"

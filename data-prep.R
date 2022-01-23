@@ -151,4 +151,4 @@ data.to.export <- data.w.categories %>%
   select(site, sub_num, age, sex, image, exclusion, category, object, timestamp, duration) %>%
   distinct()
 
-write_csv(data.to.export, "data/usable.data.csv")
+write_csv(data.to.export, "data/all.data.csv")

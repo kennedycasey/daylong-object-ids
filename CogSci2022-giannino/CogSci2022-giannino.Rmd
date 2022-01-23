@@ -63,13 +63,13 @@ library(xtable)
 
 run.from.raw = FALSE
 if (run.from.raw) {
-  # this R script generates the usable data csv
-  # set run.from.raw equal to TRUE if you want to rewrite this file
+  # this R script creates the "all-data.csv"
+  # set run.from.raw equal to TRUE if you want to regenerate it
   source("../data-prep.R")
 } 
 
 # read in data
-raw.data <- read_csv("../data/usable.data.csv")
+raw.data <- read_csv("../data/all-data.csv")
 
 # pre-set colors and category labels
 sites <- c("Rossel", "Tseltal")

@@ -51,7 +51,7 @@ fabric,Synthetic,,
 cloth,Synthetic,,
 sugarcane,Food,,
 baked good,Food,,
-white thing,,1,
+white thing,NA,1,
 rice,Food,,
 misc container lid,Synthetic,,
 spoon,Tool,,
@@ -122,9 +122,9 @@ mango,Food,,
 sweater,Synthetic,,
 plastic object,Synthetic,,
 toy teletubby,Toy,,
-tree,Plant,,
+tree,Natural,,
 large metal object,Synthetic,1,check if immovable
-red object,,1,unsure
+red object,NA,1,unsure
 canoe,Immovable,1,
 tongs,Tool,,
 toy turtle,Toy,,
@@ -235,7 +235,7 @@ cardboard box,Synthetic,,
 cacao fruit,Food,,
 bowl of food,Tool,1,should be covered after unsure checks
 calculator,Synthetic,,
-fruit? ball?,,1,should be covered after unsure checks
+fruit? ball?,NA,1,should be covered after unsure checks
 baby powder,Synthetic,,
 cone-shaped object,Synthetic,1,check if natural or synthetic
 food on skewer,Food,1,should be covered after unsure checks

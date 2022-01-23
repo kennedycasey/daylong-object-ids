@@ -3341,7 +3341,7 @@ Rossel,6792,24,M,112541.gif,NA,Synthetic,vest,13:24:31,15
 Rossel,6792,24,M,112556.gif,None,Synthetic,vest,13:24:46,20
 Rossel,6792,24,M,112556.gif,Exclude,Synthetic,vest,13:24:46,20
 Rossel,6792,24,M,112556.gif,NA,Synthetic,vest,13:24:46,20
-Rossel,6792,24,M,114954.gif,NA,Plant,tree,13:48:44,16
+Rossel,6792,24,M,114954.gif,NA,Natural,tree,13:48:44,16
 Rossel,6792,24,M,115314.gif,NA,Natural,rock,13:52:04,28
 Rossel,6792,24,M,115415.gif,None,Synthetic,vest,13:53:05,15
 Rossel,6792,24,M,115415.gif,Exclude,Synthetic,vest,13:53:05,15
@@ -3943,17 +3943,17 @@ Rossel,5348,20,F,104627.gif,NA,Synthetic,camera,12:45:28,15
 Rossel,5348,20,F,104642.gif,NA,Synthetic,camera,12:45:43,16
 Rossel,5348,20,F,104658.gif,NA,Natural,plant,12:45:59,15
 Rossel,5348,20,F,104713.gif,NA,Natural,plant,12:46:14,15
-Rossel,5348,20,F,105006.gif,NA,Plant,tree,12:49:07,15
-Rossel,5348,20,F,105036.gif,NA,Plant,tree,12:49:37,18
-Rossel,5348,20,F,105054.gif,NA,Plant,tree,12:49:55,15
-Rossel,5348,20,F,105109.gif,NA,Plant,tree,12:50:10,25
-Rossel,5348,20,F,105134.gif,NA,Plant,tree,12:50:35,19
-Rossel,5348,20,F,105208.gif,NA,Plant,tree,12:51:09,15
-Rossel,5348,20,F,105502.gif,NA,Plant,tree,12:54:03,15
+Rossel,5348,20,F,105006.gif,NA,Natural,tree,12:49:07,15
+Rossel,5348,20,F,105036.gif,NA,Natural,tree,12:49:37,18
+Rossel,5348,20,F,105054.gif,NA,Natural,tree,12:49:55,15
+Rossel,5348,20,F,105109.gif,NA,Natural,tree,12:50:10,25
+Rossel,5348,20,F,105134.gif,NA,Natural,tree,12:50:35,19
+Rossel,5348,20,F,105208.gif,NA,Natural,tree,12:51:09,15
+Rossel,5348,20,F,105502.gif,NA,Natural,tree,12:54:03,15
 Rossel,5348,20,F,105532.gif,Exclude,Food,nut,12:54:33,16
 Rossel,5348,20,F,105532.gif,NA,Food,nut,12:54:33,16
-Rossel,5348,20,F,105548.gif,NA,Plant,tree,12:54:49,20
-Rossel,5348,20,F,105608.gif,NA,Plant,tree,12:55:09,16
+Rossel,5348,20,F,105548.gif,NA,Natural,tree,12:54:49,20
+Rossel,5348,20,F,105608.gif,NA,Natural,tree,12:55:09,16
 Rossel,5348,20,F,105624.gif,NA,Natural,dirt,12:55:25,17
 Rossel,5348,20,F,105949.gif,NA,Tool,lunchbox,12:58:50,15
 Rossel,5348,20,F,110019.gif,NA,Synthetic,flashlight,12:59:20,16
@@ -4906,7 +4906,7 @@ Rossel,2195,35,M,115757.gif,NA,Synthetic,skirt,13:56:57,15
 Rossel,2195,35,M,115812.gif,NA,Synthetic,skirt,13:57:12,16
 Rossel,2195,35,M,120343.gif,NA,Synthetic,battery,14:02:43,17
 Rossel,2195,35,M,120343.gif,Unsure,Synthetic,battery,14:02:43,17
-Rossel,2195,35,M,120549.gif,NA,Plant,tree,14:04:49,15
+Rossel,2195,35,M,120549.gif,NA,Natural,tree,14:04:49,15
 Rossel,2195,35,M,120604.gif,NA,Synthetic,battery,14:05:04,17
 Rossel,2195,35,M,120604.gif,Unsure,Synthetic,battery,14:05:04,17
 Rossel,2195,35,M,121013.gif,NA,Natural,plant,14:09:13,17
@@ -5469,8 +5469,8 @@ Rossel,8779,39,F,084220.gif,NA,Food,packaged snack,10:41:14,15
 Rossel,8779,39,F,084803.gif,NA,Natural,leaf,10:46:57,15
 Rossel,8779,39,F,084818.gif,NA,Natural,leaf,10:47:12,17
 Rossel,8779,39,F,085040.gif,NA,Natural,leaf,10:49:34,16
-Rossel,8779,39,F,085427.gif,NA,Plant,tree,10:53:21,15
-Rossel,8779,39,F,085442.gif,NA,Plant,tree,10:53:36,16
+Rossel,8779,39,F,085427.gif,NA,Natural,tree,10:53:21,15
+Rossel,8779,39,F,085442.gif,NA,Natural,tree,10:53:36,16
 Rossel,8779,39,F,085458.gif,NA,Natural,leaf,10:53:52,15
 Rossel,8779,39,F,085627.gif,NA,Natural,leaf,10:55:21,15
 Rossel,8779,39,F,085911.gif,NA,Natural,leaf,10:58:05,15
@@ -5608,19 +5608,19 @@ Rossel,8779,39,F,123618.gif,Unsure,Immovable,house pile,14:35:12,15
 Rossel,8779,39,F,125041.gif,NA,Immovable,door,14:49:35,17
 Rossel,8779,39,F,125533.gif,NA,Immovable,door,14:54:27,15
 Rossel,8779,39,F,130345.gif,NA,Natural,stick,15:02:39,15
-Rossel,8779,39,F,130417.gif,NA,Plant,tree,15:03:11,15
-Rossel,8779,39,F,130447.gif,NA,Plant,tree,15:03:41,17
-Rossel,8779,39,F,130534.gif,NA,Plant,tree,15:04:28,17
-Rossel,8779,39,F,130551.gif,NA,Plant,tree,15:04:45,15
-Rossel,8779,39,F,130652.gif,NA,Plant,tree,15:05:46,15
-Rossel,8779,39,F,130754.gif,NA,Plant,tree,15:06:48,17
+Rossel,8779,39,F,130417.gif,NA,Natural,tree,15:03:11,15
+Rossel,8779,39,F,130447.gif,NA,Natural,tree,15:03:41,17
+Rossel,8779,39,F,130534.gif,NA,Natural,tree,15:04:28,17
+Rossel,8779,39,F,130551.gif,NA,Natural,tree,15:04:45,15
+Rossel,8779,39,F,130652.gif,NA,Natural,tree,15:05:46,15
+Rossel,8779,39,F,130754.gif,NA,Natural,tree,15:06:48,17
 Rossel,8779,39,F,130913.gif,NA,Natural,stick,15:08:07,15
-Rossel,8779,39,F,131033.gif,NA,Plant,tree,15:09:27,15
-Rossel,8779,39,F,131103.gif,NA,Plant,tree,15:09:57,17
-Rossel,8779,39,F,131150.gif,NA,Plant,tree,15:10:44,17
-Rossel,8779,39,F,131222.gif,NA,Plant,tree,15:11:16,15
+Rossel,8779,39,F,131033.gif,NA,Natural,tree,15:09:27,15
+Rossel,8779,39,F,131103.gif,NA,Natural,tree,15:09:57,17
+Rossel,8779,39,F,131150.gif,NA,Natural,tree,15:10:44,17
+Rossel,8779,39,F,131222.gif,NA,Natural,tree,15:11:16,15
 Rossel,8779,39,F,131237.gif,NA,Natural,plant,15:11:31,16
-Rossel,8779,39,F,131253.gif,NA,Plant,tree,15:11:47,15
+Rossel,8779,39,F,131253.gif,NA,Natural,tree,15:11:47,15
 Rossel,8779,39,F,131444.gif,NA,Natural,plant,15:13:38,15
 Rossel,8779,39,F,131528.gif,NA,Natural,plant,15:14:22,15
 Rossel,8779,39,F,131543.gif,NA,Tool,straw,15:14:37,16
@@ -5699,16 +5699,16 @@ Rossel,2789,13,F,062407.gif,NA,Natural,flower,08:23:04,17
 Rossel,2789,13,F,062424.gif,NA,Natural,flower,08:23:21,15
 Rossel,2789,13,F,062439.gif,NA,Natural,flower,08:23:36,15
 Rossel,2789,13,F,062659.gif,NA,Synthetic,camera,08:25:56,15
-Rossel,2789,13,F,062903.gif,NA,Plant,tree,08:28:00,15
-Rossel,2789,13,F,062918.gif,NA,Plant,tree,08:28:15,15
-Rossel,2789,13,F,062933.gif,NA,Plant,tree,08:28:30,17
-Rossel,2789,13,F,063125.gif,NA,Plant,tree,08:30:22,15
+Rossel,2789,13,F,062903.gif,NA,Natural,tree,08:28:00,15
+Rossel,2789,13,F,062918.gif,NA,Natural,tree,08:28:15,15
+Rossel,2789,13,F,062933.gif,NA,Natural,tree,08:28:30,17
+Rossel,2789,13,F,063125.gif,NA,Natural,tree,08:30:22,15
 Rossel,2789,13,F,063140.gif,NA,Natural,plant,08:30:37,15
 Rossel,2789,13,F,063155.gif,NA,Natural,plant,08:30:52,17
 Rossel,2789,13,F,063212.gif,NA,Natural,plant,08:31:09,15
 Rossel,2789,13,F,063227.gif,NA,Natural,leaf,08:31:24,15
 Rossel,2789,13,F,063242.gif,NA,Natural,leaf,08:31:39,17
-Rossel,2789,13,F,063259.gif,NA,Plant,tree,08:31:56,16
+Rossel,2789,13,F,063259.gif,NA,Natural,tree,08:31:56,16
 Rossel,2789,13,F,063330.gif,NA,Natural,plant,08:32:27,16
 Rossel,2789,13,F,063346.gif,NA,Natural,leaf,08:32:43,15
 Rossel,2789,13,F,063401.gif,NA,Natural,leaf,08:32:58,15
@@ -5775,7 +5775,7 @@ Rossel,2789,13,F,095913.gif,NA,Synthetic,rubber band,11:58:10,19
 Rossel,2789,13,F,095932.gif,NA,Synthetic,rubber band,11:58:29,15
 Rossel,2789,13,F,095947.gif,NA,Synthetic,rubber band,11:58:44,15
 Rossel,2789,13,F,100034.gif,NA,Synthetic,rubber band,11:59:31,15
-Rossel,2789,13,F,100220.gif,NA,Plant,tree,12:01:17,15
+Rossel,2789,13,F,100220.gif,NA,Natural,tree,12:01:17,15
 Rossel,2789,13,F,100322.gif,NA,Synthetic,rubber band,12:02:19,16
 Rossel,2789,13,F,100338.gif,NA,Synthetic,rubber band,12:02:35,16
 Rossel,2789,13,F,100354.gif,NA,Synthetic,rubber band,12:02:51,15
@@ -5826,8 +5826,8 @@ Rossel,2789,13,F,110245.gif,NA,Food,betelnut,13:01:42,15
 Rossel,2789,13,F,110300.gif,NA,Food,betelnut,13:01:57,18
 Rossel,2789,13,F,110743.gif,NA,Natural,stick,13:06:40,17
 Rossel,2789,13,F,110800.gif,NA,Natural,stick,13:06:57,15
-Rossel,2789,13,F,110830.gif,NA,Plant,tree,13:07:27,17
-Rossel,2789,13,F,110847.gif,NA,Plant,tree,13:07:44,15
+Rossel,2789,13,F,110830.gif,NA,Natural,tree,13:07:27,17
+Rossel,2789,13,F,110847.gif,NA,Natural,tree,13:07:44,15
 Rossel,2789,13,F,110934.gif,NA,Natural,stick,13:08:31,15
 Rossel,2789,13,F,111109.gif,NA,Food,betelnut,13:10:06,135
 Rossel,2789,13,F,111324.gif,NA,Immovable,wall,13:12:21,15
@@ -6180,7 +6180,7 @@ Rossel,4859,16,M,105727.gif,NA,Food,cracker,11:43:14,15
 Rossel,4859,16,M,105742.gif,NA,Food,cracker,11:43:29,17
 Rossel,4859,16,M,105759.gif,NA,Food,cracker,11:43:46,15
 Rossel,4859,16,M,111523.gif,NA,Food,cracker,12:01:10,15
-Rossel,4859,16,M,111611.gif,NA,Plant,tree,12:01:58,15
+Rossel,4859,16,M,111611.gif,NA,Natural,tree,12:01:58,15
 Rossel,4859,16,M,111744.gif,NA,Synthetic,vest,12:03:31,15
 Rossel,4859,16,M,122348.gif,NA,Synthetic,camera,13:09:35,15
 Rossel,4859,16,M,122434.gif,NA,Food,fruit,13:10:21,15
@@ -6253,8 +6253,8 @@ Rossel,7333,12,M,20160822_063345_000.gif,NA,Food,rice ball,08:32:32,17
 Rossel,7333,12,M,20160822_063741_000.gif,NA,Food,rice ball,08:36:28,17
 Rossel,7333,12,M,20160822_063933_000.gif,NA,Natural,stick,08:38:20,15
 Rossel,7333,12,M,20160822_063948_000.gif,NA,Natural,stick,08:38:35,15
-Rossel,7333,12,M,20160822_064810_000.gif,NA,Plant,tree,08:46:57,15
-Rossel,7333,12,M,20160822_064825_000.gif,NA,Plant,tree,08:47:12,12
+Rossel,7333,12,M,20160822_064810_000.gif,NA,Natural,tree,08:46:57,15
+Rossel,7333,12,M,20160822_064825_000.gif,NA,Natural,tree,08:47:12,12
 Rossel,7333,12,M,20160822_064939_000.gif,NA,Tool,tongs,08:48:26,16
 Rossel,7333,12,M,20160822_065130_000.gif,NA,Toy,ball,08:50:17,16
 Rossel,7333,12,M,20160822_070446_000.gif,NA,Natural,leaf,09:03:33,16
@@ -6524,7 +6524,7 @@ Rossel,1144,36,F,20160822_112533_000.gif,NA,Natural,leaf,13:24:26,15
 Rossel,1144,36,F,20160822_113220_000.gif,NA,Natural,stick,13:31:13,16
 Rossel,1144,36,F,20160822_113236_000.gif,NA,Natural,stick,13:31:29,15
 Rossel,1144,36,F,20160822_113251_000.gif,NA,Natural,stick,13:31:44,15
-Rossel,1144,36,F,20160822_113653_000.gif,NA,Plant,tree,13:35:46,15
+Rossel,1144,36,F,20160822_113653_000.gif,NA,Natural,tree,13:35:46,15
 Rossel,1144,36,F,20160822_113708_000.gif,NA,Natural,leaf,13:36:01,16
 Rossel,1144,36,F,20160822_114315_000.gif,NA,Synthetic,woven basket,13:42:08,15
 Rossel,1144,36,F,20160822_114914_000.gif,NA,Synthetic,medicine,13:48:07,17
@@ -6931,7 +6931,7 @@ Rossel,5797,10,F,20160822_134711_000.gif,NA,Tool,knife,15:46:05,16
 Rossel,7849,12,F,062016.gif,NA,Tool,knife,08:19:09,15
 Rossel,7849,12,F,062031.gif,NA,Food,sugarcane,08:19:24,17
 Rossel,7849,12,F,062048.gif,NA,Food,sugarcane,08:19:41,15
-Rossel,7849,12,F,062410.gif,NA,Plant,tree,08:23:03,15
+Rossel,7849,12,F,062410.gif,NA,Natural,tree,08:23:03,15
 Rossel,7849,12,F,062425.gif,NA,Synthetic,camera,08:23:18,16
 Rossel,7849,12,F,062441.gif,NA,Synthetic,camera,08:23:34,16
 Rossel,7849,12,F,062457.gif,NA,Synthetic,camera,08:23:50,15
@@ -7568,7 +7568,7 @@ Rossel,3856,21,F,130300.gif,NA,Synthetic,woven basket,15:01:53,15
 Rossel,3856,21,F,130347.gif,NA,Synthetic,woven basket,15:02:40,15
 Rossel,3856,21,F,130450.gif,NA,Synthetic,skirt,15:03:43,16
 Rossel,3856,21,F,132259.gif,NA,Synthetic,skirt,15:21:52,15
-Rossel,3856,21,F,132810.gif,NA,Plant,tree,15:27:03,17
+Rossel,3856,21,F,132810.gif,NA,Natural,tree,15:27:03,17
 Rossel,3856,21,F,132842.gif,NA,Synthetic,skirt,15:27:35,15
 Rossel,3856,21,F,133048.gif,NA,Immovable,deck,15:29:41,12
 Rossel,3856,21,F,133116.gif,NA,Synthetic,woven basket,15:30:09,15
@@ -7741,7 +7741,7 @@ Rossel,7718,37,F,074553.gif,NA,Food,candy,09:44:40,18
 Rossel,7718,37,F,074611.gif,NA,Food,candy,09:44:58,15
 Rossel,7718,37,F,074658.gif,NA,Food,candy,09:45:45,15
 Rossel,7718,37,F,074803.gif,NA,Food,candy,09:46:50,15
-Rossel,7718,37,F,074818.gif,NA,Plant,tree,09:47:05,17
+Rossel,7718,37,F,074818.gif,NA,Natural,tree,09:47:05,17
 Rossel,7718,37,F,074835.gif,NA,Food,candy,09:47:22,15
 Rossel,7718,37,F,074850.gif,NA,Food,candy,09:47:37,16
 Rossel,7718,37,F,074952.gif,NA,Food,candy,09:48:39,16
@@ -9075,9 +9075,9 @@ Rossel,3124,30,M,132556.gif,NA,Immovable,table,15:24:41,15
 Rossel,3124,30,M,133352.gif,NA,Natural,stick,15:32:37,15
 Rossel,3124,30,M,133454.gif,NA,Natural,stick,15:33:39,15
 Rossel,3124,30,M,133651.gif,NA,Synthetic,vest,15:35:36,16
-Rossel,3124,30,M,133839.gif,NA,Plant,tree,15:37:24,17
-Rossel,3124,30,M,133911.gif,NA,Plant,tree,15:37:56,15
-Rossel,3124,30,M,134008.gif,NA,Plant,tree,15:38:53,15
+Rossel,3124,30,M,133839.gif,NA,Natural,tree,15:37:24,17
+Rossel,3124,30,M,133911.gif,NA,Natural,tree,15:37:56,15
+Rossel,3124,30,M,134008.gif,NA,Natural,tree,15:38:53,15
 Rossel,3124,30,M,134108.gif,NA,Natural,stick,15:39:53,15
 Rossel,3124,30,M,134138.gif,NA,Natural,rock,15:40:23,17
 Rossel,3124,30,M,134330.gif,NA,Natural,stick,15:42:15,15
@@ -9098,10 +9098,10 @@ Rossel,3124,30,M,135749.gif,NA,Synthetic,camera,15:56:34,16
 Rossel,3124,30,M,135805.gif,NA,Synthetic,camera,15:56:50,15
 Rossel,3124,30,M,135820.gif,NA,Synthetic,camera,15:57:05,17
 Rossel,3124,30,M,135837.gif,NA,Natural,rock,15:57:22,15
-Rossel,3124,30,M,141157.gif,NA,Plant,tree,16:10:42,15
-Rossel,3124,30,M,141212.gif,NA,Plant,tree,16:10:57,15
-Rossel,3124,30,M,141227.gif,NA,Plant,tree,16:11:12,18
-Rossel,3124,30,M,141245.gif,NA,Plant,tree,16:11:30,15
+Rossel,3124,30,M,141157.gif,NA,Natural,tree,16:10:42,15
+Rossel,3124,30,M,141212.gif,NA,Natural,tree,16:10:57,15
+Rossel,3124,30,M,141227.gif,NA,Natural,tree,16:11:12,18
+Rossel,3124,30,M,141245.gif,NA,Natural,tree,16:11:30,15
 Rossel,3124,30,M,141400.gif,NA,Synthetic,camera,16:12:45,16
 Rossel,3124,30,M,142207.gif,NA,Toy,swing,16:20:52,15
 Rossel,3124,30,M,142255.gif,NA,Toy,swing,16:21:40,15
@@ -9194,17 +9194,17 @@ Rossel,7423,9,F,122341.gif,NA,Natural,sand,14:22:32,15
 Rossel,7423,9,F,122356.gif,NA,Natural,sand,14:22:47,32
 Rossel,7423,9,F,122428.gif,NA,Natural,sand,14:23:19,39
 Rossel,7423,9,F,122507.gif,NA,Natural,sand,14:23:58,13
-Rossel,7423,9,F,122622.gif,NA,Plant,tree,14:25:13,15
-Rossel,7423,9,F,122637.gif,NA,Plant,tree,14:25:28,17
-Rossel,7423,9,F,122654.gif,NA,Plant,tree,14:25:45,15
-Rossel,7423,9,F,122709.gif,NA,Plant,tree,14:26:00,15
-Rossel,7423,9,F,122724.gif,NA,Plant,tree,14:26:15,17
-Rossel,7423,9,F,122741.gif,NA,Plant,tree,14:26:32,31
-Rossel,7423,9,F,122812.gif,NA,Plant,tree,14:27:03,15
-Rossel,7423,9,F,122827.gif,NA,Plant,tree,14:27:18,16
+Rossel,7423,9,F,122622.gif,NA,Natural,tree,14:25:13,15
+Rossel,7423,9,F,122637.gif,NA,Natural,tree,14:25:28,17
+Rossel,7423,9,F,122654.gif,NA,Natural,tree,14:25:45,15
+Rossel,7423,9,F,122709.gif,NA,Natural,tree,14:26:00,15
+Rossel,7423,9,F,122724.gif,NA,Natural,tree,14:26:15,17
+Rossel,7423,9,F,122741.gif,NA,Natural,tree,14:26:32,31
+Rossel,7423,9,F,122812.gif,NA,Natural,tree,14:27:03,15
+Rossel,7423,9,F,122827.gif,NA,Natural,tree,14:27:18,16
 Rossel,7423,9,F,123017.gif,NA,Natural,sand,14:29:08,15
-Rossel,7423,9,F,123238.gif,NA,Plant,tree,14:31:29,15
-Rossel,7423,9,F,123253.gif,NA,Plant,tree,14:31:44,15
+Rossel,7423,9,F,123238.gif,NA,Natural,tree,14:31:29,15
+Rossel,7423,9,F,123253.gif,NA,Natural,tree,14:31:44,15
 Rossel,7423,9,F,123411.gif,NA,Natural,sand,14:33:02,15
 Rossel,7423,9,F,124026.gif,NA,Natural,sand,14:39:17,16
 Rossel,7423,9,F,124057.gif,NA,Synthetic,shoe,14:39:48,15
@@ -9295,9 +9295,9 @@ Rossel,1039,21,M,20160831_091706_000.gif,NA,Natural,dirt,11:15:54,15
 Rossel,1039,21,M,20160831_094409_000.gif,NA,Synthetic,battery,11:42:57,15
 Rossel,1039,21,M,20160831_094802_000.gif,NA,Natural,rock,11:46:50,15
 Rossel,1039,21,M,20160831_094817_000.gif,NA,Natural,rock,11:47:05,15
-Rossel,1039,21,M,20160831_094817_000.gif,NA,Plant,tree,11:47:05,15
-Rossel,1039,21,M,20160831_094832_000.gif,NA,Plant,tree,11:47:20,17
-Rossel,1039,21,M,20160831_095025_000.gif,NA,Plant,tree,11:49:13,15
+Rossel,1039,21,M,20160831_094817_000.gif,NA,Natural,tree,11:47:05,15
+Rossel,1039,21,M,20160831_094832_000.gif,NA,Natural,tree,11:47:20,17
+Rossel,1039,21,M,20160831_095025_000.gif,NA,Natural,tree,11:49:13,15
 Rossel,1039,21,M,20160831_100327_000.gif,NA,Synthetic,battery,12:02:15,17
 Rossel,1039,21,M,20160831_101611_000.gif,NA,Natural,plant,12:14:59,16
 Rossel,1039,21,M,20160831_103207_000.gif,NA,Food,papaya,12:30:55,15
@@ -9341,18 +9341,18 @@ Rossel,1039,21,M,20160831_121839_000.gif,NA,Synthetic,tassel,14:17:27,15
 Rossel,1039,21,M,20160831_122730_000.gif,NA,Natural,flower,14:26:18,16
 Rossel,1039,21,M,20160831_122730_000.gif,NA,Natural,leaf,14:26:18,16
 Rossel,1039,21,M,20160831_122801_000.gif,NA,Natural,flower,14:26:49,16
-Rossel,1039,21,M,20160831_122801_000.gif,NA,Plant,tree,14:26:49,16
+Rossel,1039,21,M,20160831_122801_000.gif,NA,Natural,tree,14:26:49,16
 Rossel,1039,21,M,20160831_122817_000.gif,NA,Natural,flower,14:27:05,15
 Rossel,1039,21,M,20160831_122817_000.gif,NA,Natural,leaf,14:27:05,15
 Rossel,1039,21,M,20160831_122920_000.gif,NA,Natural,flower,14:28:08,15
 Rossel,1039,21,M,20160831_122920_000.gif,NA,Natural,leaf,14:28:08,15
 Rossel,1039,21,M,20160831_122935_000.gif,NA,Natural,flower,14:28:23,18
-Rossel,1039,21,M,20160831_122935_000.gif,NA,Plant,tree,14:28:23,18
+Rossel,1039,21,M,20160831_122935_000.gif,NA,Natural,tree,14:28:23,18
 Rossel,1039,21,M,20160831_122953_000.gif,NA,Natural,flower,14:28:41,15
-Rossel,1039,21,M,20160831_122953_000.gif,NA,Plant,tree,14:28:41,15
+Rossel,1039,21,M,20160831_122953_000.gif,NA,Natural,tree,14:28:41,15
 Rossel,1039,21,M,20160831_123008_000.gif,NA,Natural,flower,14:28:56,15
-Rossel,1039,21,M,20160831_123008_000.gif,NA,Plant,tree,14:28:56,15
-Rossel,1039,21,M,20160831_123302_000.gif,NA,Plant,tree,14:31:50,15
+Rossel,1039,21,M,20160831_123008_000.gif,NA,Natural,tree,14:28:56,15
+Rossel,1039,21,M,20160831_123302_000.gif,NA,Natural,tree,14:31:50,15
 Rossel,1039,21,M,20160831_123451_000.gif,NA,Natural,leaf,14:33:39,15
 Rossel,1039,21,M,20160831_123538_000.gif,NA,Natural,leaf,14:34:26,15
 Rossel,1039,21,M,20160831_123625_000.gif,NA,Natural,leaf,14:35:13,15
@@ -9607,7 +9607,7 @@ Rossel,6191,13,M,20160831_114527_000.gif,NA,Natural,stick,13:38:12,15
 Rossel,6191,13,M,20160831_114542_000.gif,NA,Natural,stick,13:38:27,15
 Rossel,6191,13,M,20160831_114557_000.gif,NA,Natural,stick,13:38:42,17
 Rossel,6191,13,M,20160831_114614_000.gif,NA,Natural,stick,13:38:59,15
-Rossel,6191,13,M,20160831_114614_000.gif,NA,Plant,tree,13:38:59,15
+Rossel,6191,13,M,20160831_114614_000.gif,NA,Natural,tree,13:38:59,15
 Rossel,6191,13,M,20160831_114629_000.gif,NA,Natural,stick,13:39:14,15
 Rossel,6191,13,M,20160831_114644_000.gif,NA,Natural,stick,13:39:29,17
 Rossel,6191,13,M,20160831_114701_000.gif,NA,Natural,stick,13:39:46,15
@@ -9616,9 +9616,9 @@ Rossel,6191,13,M,20160831_114819_000.gif,NA,Natural,stick,13:41:04,17
 Rossel,6191,13,M,20160831_114836_000.gif,NA,Natural,stick,13:41:21,15
 Rossel,6191,13,M,20160831_114851_000.gif,NA,Natural,stick,13:41:36,15
 Rossel,6191,13,M,20160831_114906_000.gif,NA,Natural,stick,13:41:51,17
-Rossel,6191,13,M,20160831_114906_000.gif,NA,Plant,tree,13:41:51,17
+Rossel,6191,13,M,20160831_114906_000.gif,NA,Natural,tree,13:41:51,17
 Rossel,6191,13,M,20160831_114938_000.gif,NA,Natural,stick,13:42:23,15
-Rossel,6191,13,M,20160831_114938_000.gif,NA,Plant,tree,13:42:23,15
+Rossel,6191,13,M,20160831_114938_000.gif,NA,Natural,tree,13:42:23,15
 Rossel,6191,13,M,20160831_114953_000.gif,NA,Natural,stick,13:42:38,16
 Rossel,6191,13,M,20160831_115009_000.gif,NA,Natural,stick,13:42:54,16
 Rossel,6191,13,M,20160831_115025_000.gif,NA,Natural,stick,13:43:10,15
@@ -9744,7 +9744,7 @@ Rossel,5064,28,M,20160831_093002_000.gif,NA,Natural,leaf,11:28:48,16
 Rossel,5064,28,M,20160831_093018_000.gif,NA,Tool,knife,11:29:04,15
 Rossel,5064,28,M,20160831_093018_000.gif,NA,Natural,leaf,11:29:04,15
 Rossel,5064,28,M,20160831_093048_000.gif,NA,Tool,knife,11:29:34,18
-Rossel,5064,28,M,20160831_093048_000.gif,NA,Plant,tree,11:29:34,18
+Rossel,5064,28,M,20160831_093048_000.gif,NA,Natural,tree,11:29:34,18
 Rossel,5064,28,M,20160831_093106_000.gif,NA,Synthetic,rope,11:29:52,15
 Rossel,5064,28,M,20160831_093805_000.gif,NA,Food,passionfruit,11:36:51,15
 Rossel,5064,28,M,20160831_093937_000.gif,NA,Food,passionfruit,11:38:23,16
@@ -10209,8 +10209,8 @@ Tseltal,2399,39,M,194502.gif,NA,Toy,ball,14:44:22,31
 Tseltal,2399,39,M,194734.gif,NA,Immovable,chair,14:46:54,12
 Tseltal,2399,39,M,194746.gif,NA,Immovable,chair,14:47:06,30
 Tseltal,2399,39,M,194746.gif,Unsure,Immovable,chair,14:47:06,30
-Tseltal,2399,39,M,194918.gif,NA,Plant,tree,14:48:38,30
-Tseltal,2399,39,M,194948.gif,NA,Plant,tree,14:49:08,31
+Tseltal,2399,39,M,194918.gif,NA,Natural,tree,14:48:38,30
+Tseltal,2399,39,M,194948.gif,NA,Natural,tree,14:49:08,31
 Tseltal,2399,39,M,195103.gif,NA,Toy,toy car,14:50:23,29
 Tseltal,2399,39,M,195304.gif,NA,Toy,toy car,14:52:24,30
 Tseltal,2399,39,M,195304.gif,NA,Immovable,pillar,14:52:24,30
@@ -10241,7 +10241,7 @@ Tseltal,2399,39,M,202145.gif,NA,Synthetic,cardboard box,15:21:05,32
 Tseltal,2399,39,M,202227.gif,NA,Natural,plant,15:21:47,16
 Tseltal,2399,39,M,202243.gif,NA,Food,betelnut,15:22:03,30
 Tseltal,2399,39,M,202313.gif,NA,Food,betelnut,15:22:33,30
-Tseltal,2399,39,M,202414.gif,NA,Plant,tree,15:23:34,30
+Tseltal,2399,39,M,202414.gif,NA,Natural,tree,15:23:34,30
 Tseltal,2399,39,M,202444.gif,NA,Food,betelnut,15:24:04,30
 Tseltal,2399,39,M,202546.gif,NA,Food,betelnut,15:25:06,30
 Tseltal,2399,39,M,202646.gif,NA,Food,betelnut,15:26:06,31
@@ -10594,7 +10594,7 @@ Tseltal,4856,34,M,150423.gif,NA,Tool,bottle,09:02:55,30
 Tseltal,4856,34,M,150423.gif,NA,Food,milk,09:02:55,30
 Tseltal,4856,34,M,150453.gif,NA,Tool,bottle,09:03:25,32
 Tseltal,4856,34,M,150453.gif,NA,Food,milk,09:03:25,32
-Tseltal,4856,34,M,150555.gif,NA,Plant,tree,09:04:27,30
+Tseltal,4856,34,M,150555.gif,NA,Natural,tree,09:04:27,30
 Tseltal,4856,34,M,150657.gif,NA,Synthetic,camera,09:05:29,30
 Tseltal,4856,34,M,150758.gif,NA,Synthetic,camera,09:06:30,32
 Tseltal,4856,34,M,150830.gif,NA,Natural,stick,09:07:02,30
@@ -10671,7 +10671,7 @@ Tseltal,4856,34,M,160809.gif,NA,Natural,stick,10:06:41,31
 Tseltal,4856,34,M,160840.gif,NA,Natural,stick,10:07:12,30
 Tseltal,4856,34,M,160940.gif,NA,Natural,dirt,10:08:12,34
 Tseltal,4856,34,M,160940.gif,NA,Natural,grass,10:08:12,34
-Tseltal,4856,34,M,161044.gif,NA,Plant,tree,10:09:16,30
+Tseltal,4856,34,M,161044.gif,NA,Natural,tree,10:09:16,30
 Tseltal,4856,34,M,161114.gif,NA,Synthetic,boot,10:09:46,31
 Tseltal,4856,34,M,161145.gif,NA,Natural,dirt,10:10:17,30
 Tseltal,4856,34,M,161145.gif,NA,Natural,grass,10:10:17,30
@@ -11162,10 +11162,10 @@ Tseltal,4590,27,M,172531.gif,NA,Toy,toy truck,11:24:13,30
 Tseltal,4590,27,M,172702.gif,NA,Synthetic,shoe,11:25:44,30
 Tseltal,4590,27,M,172802.gif,NA,Synthetic,shoe,11:26:44,33
 Tseltal,4590,27,M,173327.gif,NA,Toy,toy truck,11:32:09,30
-Tseltal,4590,27,M,173630.gif,NA,Plant,tree,11:35:12,30
+Tseltal,4590,27,M,173630.gif,NA,Natural,tree,11:35:12,30
 Tseltal,4590,27,M,173630.gif,NA,Natural,leaf,11:35:12,30
 Tseltal,4590,27,M,173700.gif,NA,Natural,leaf,11:35:42,30
-Tseltal,4590,27,M,173730.gif,NA,Plant,tree,11:36:12,31
+Tseltal,4590,27,M,173730.gif,NA,Natural,tree,11:36:12,31
 Tseltal,4590,27,M,173902.gif,NA,Natural,leaf,11:37:44,29
 Tseltal,4590,27,M,174001.gif,NA,Natural,leaf,11:38:43,31
 Tseltal,4590,27,M,174032.gif,NA,Natural,plant,11:39:14,30
@@ -11173,19 +11173,19 @@ Tseltal,4590,27,M,174118.gif,NA,Natural,leaf,11:40:00,31
 Tseltal,4590,27,M,174149.gif,NA,Natural,leaf,11:40:31,32
 Tseltal,4590,27,M,174221.gif,NA,Natural,leaf,11:41:03,30
 Tseltal,4590,27,M,174422.gif,NA,Toy,ball,11:43:04,30
-Tseltal,4590,27,M,174452.gif,NA,Plant,tree,11:43:34,32
-Tseltal,4590,27,M,175536.gif,NA,Plant,tree,11:54:18,33
-Tseltal,4590,27,M,175639.gif,NA,Plant,tree,11:55:21,30
-Tseltal,4590,27,M,175741.gif,NA,Plant,tree,11:56:23,30
-Tseltal,4590,27,M,175841.gif,NA,Plant,tree,11:57:23,32
-Tseltal,4590,27,M,175913.gif,NA,Plant,tree,11:57:55,30
-Tseltal,4590,27,M,175943.gif,NA,Plant,tree,11:58:25,30
-Tseltal,4590,27,M,180247.gif,NA,Plant,tree,12:01:29,30
+Tseltal,4590,27,M,174452.gif,NA,Natural,tree,11:43:34,32
+Tseltal,4590,27,M,175536.gif,NA,Natural,tree,11:54:18,33
+Tseltal,4590,27,M,175639.gif,NA,Natural,tree,11:55:21,30
+Tseltal,4590,27,M,175741.gif,NA,Natural,tree,11:56:23,30
+Tseltal,4590,27,M,175841.gif,NA,Natural,tree,11:57:23,32
+Tseltal,4590,27,M,175913.gif,NA,Natural,tree,11:57:55,30
+Tseltal,4590,27,M,175943.gif,NA,Natural,tree,11:58:25,30
+Tseltal,4590,27,M,180247.gif,NA,Natural,tree,12:01:29,30
 Tseltal,4590,27,M,180317.gif,NA,Natural,leaf,12:01:59,32
-Tseltal,4590,27,M,180349.gif,NA,Plant,tree,12:02:31,30
-Tseltal,4590,27,M,180419.gif,NA,Plant,tree,12:03:01,30
-Tseltal,4590,27,M,180449.gif,NA,Plant,tree,12:03:31,33
-Tseltal,4590,27,M,180622.gif,NA,Plant,tree,12:05:04,31
+Tseltal,4590,27,M,180349.gif,NA,Natural,tree,12:02:31,30
+Tseltal,4590,27,M,180419.gif,NA,Natural,tree,12:03:01,30
+Tseltal,4590,27,M,180449.gif,NA,Natural,tree,12:03:31,33
+Tseltal,4590,27,M,180622.gif,NA,Natural,tree,12:05:04,31
 Tseltal,4590,27,M,180724.gif,NA,Toy,teddy bear,12:06:06,30
 Tseltal,4590,27,M,180855.gif,NA,Toy,doll,12:07:37,30
 Tseltal,4590,27,M,180925.gif,NA,Toy,doll,12:08:07,31
@@ -11229,7 +11229,7 @@ Tseltal,4590,27,M,185553.gif,NA,Food,tortilla,12:54:35,30
 Tseltal,4590,27,M,185623.gif,NA,Tool,bowl,12:55:05,32
 Tseltal,4590,27,M,185623.gif,NA,Food,bean soup,12:55:05,32
 Tseltal,4590,27,M,185655.gif,NA,Food,tortilla,12:55:37,30
-Tseltal,4590,27,M,190834.gif,NA,Plant,tree,13:07:16,31
+Tseltal,4590,27,M,190834.gif,NA,Natural,tree,13:07:16,31
 Tseltal,4590,27,M,191108.gif,NA,Tool,bottle,13:09:50,30
 Tseltal,4590,27,M,191209.gif,NA,Tool,bottle,13:10:51,30
 Tseltal,4590,27,M,191239.gif,NA,Tool,bottle,13:11:21,30
@@ -12382,7 +12382,7 @@ Tseltal,6526,45,M,162606.gif,NA,Synthetic,bucket,11:01:57,30
 Tseltal,6526,45,M,162807.gif,NA,Food,banana,11:03:58,31
 Tseltal,6526,45,M,162838.gif,NA,Food,banana,11:04:29,30
 Tseltal,6526,45,M,162908.gif,NA,Food,banana,11:04:59,30
-Tseltal,6526,45,M,163212.gif,NA,Plant,tree,11:08:03,30
+Tseltal,6526,45,M,163212.gif,NA,Natural,tree,11:08:03,30
 Tseltal,6526,45,M,163447.gif,NA,Food,bean,11:10:38,30
 Tseltal,6526,45,M,163517.gif,NA,Food,banana,11:11:08,28
 Tseltal,6526,45,M,163645.gif,NA,Food,banana,11:12:36,32
@@ -12594,7 +12594,7 @@ Tseltal,1598,45,F,203401.gif,NA,Synthetic,plastic basket,14:32:15,30
 Tseltal,1598,45,F,203431.gif,NA,Synthetic,plastic basket,14:32:45,30
 Tseltal,1598,45,F,203501.gif,NA,Synthetic,plastic basket,14:33:15,31
 Tseltal,1598,45,F,204021.gif,NA,Synthetic,shoe,14:38:35,33
-Tseltal,1598,45,F,204154.gif,NA,Plant,tree,14:40:08,32
+Tseltal,1598,45,F,204154.gif,NA,Natural,tree,14:40:08,32
 Tseltal,1598,45,F,204413.gif,NA,Toy,basketball,14:42:27,30
 Tseltal,1598,45,F,204443.gif,NA,Toy,basketball,14:42:57,31
 Tseltal,1598,45,F,204618.gif,NA,Toy,basketball,14:44:32,33
@@ -12684,7 +12684,7 @@ Tseltal,1598,45,F,225516.gif,NA,Tool,mop,16:53:30,30
 Tseltal,1598,45,F,225629.gif,NA,Tool,mop,16:54:43,7
 Tseltal,1598,45,F,225706.gif,NA,Tool,mop,16:55:20,20
 Tseltal,1598,45,F,225928.gif,NA,Tool,mop,16:57:42,30
-Tseltal,1598,45,F,225958.gif,NA,Plant,tree,16:58:12,32
+Tseltal,1598,45,F,225958.gif,NA,Natural,tree,16:58:12,32
 Tseltal,1598,45,F,230130.gif,NA,Tool,cup,16:59:44,32
 Tseltal,1598,45,F,230130.gif,NA,Food,potato,16:59:44,32
 Tseltal,1598,45,F,230130.gif,NA,Synthetic,popsicle stick,16:59:44,32
@@ -13548,7 +13548,7 @@ Tseltal,7302,16,F,195522.gif,NA,Food,chips,13:53:57,32
 Tseltal,7302,16,F,195554.gif,NA,Food,chips,13:54:29,30
 Tseltal,7302,16,F,195624.gif,NA,Food,chips,13:54:59,30
 Tseltal,7302,16,F,195654.gif,NA,Food,chips,13:55:29,32
-Tseltal,7302,16,F,195858.gif,NA,Plant,tree,13:57:33,30
+Tseltal,7302,16,F,195858.gif,NA,Natural,tree,13:57:33,30
 Tseltal,7302,16,F,200606.gif,NA,Natural,stick,14:04:41,31
 Tseltal,7302,16,F,201042.gif,NA,Tool,trash bag,14:09:17,32
 Tseltal,7302,16,F,201114.gif,NA,Tool,trash bag,14:09:49,30
@@ -13840,15 +13840,15 @@ Tseltal,5978,48,F,184424.gif,NA,Synthetic,camera,12:42:48,30
 Tseltal,5978,48,F,184454.gif,Exclude,Food,guava,12:43:18,31
 Tseltal,5978,48,F,184454.gif,NA,Food,guava,12:43:18,31
 Tseltal,5978,48,F,184627.gif,NA,Food,lime,12:44:51,30
-Tseltal,5978,48,F,184657.gif,NA,Plant,tree,12:45:21,32
-Tseltal,5978,48,F,184729.gif,NA,Plant,tree,12:45:53,30
+Tseltal,5978,48,F,184657.gif,NA,Natural,tree,12:45:21,32
+Tseltal,5978,48,F,184729.gif,NA,Natural,tree,12:45:53,30
 Tseltal,5978,48,F,184901.gif,NA,Tool,water bottle carrier,12:47:25,30
 Tseltal,5978,48,F,184931.gif,NA,Tool,water bottle,12:47:55,30
 Tseltal,5978,48,F,185001.gif,NA,Synthetic,bucket,12:48:25,33
 Tseltal,5978,48,F,185034.gif,NA,Synthetic,bucket,12:48:58,30
-Tseltal,5978,48,F,185134.gif,NA,Plant,tree,12:49:58,32
-Tseltal,5978,48,F,185236.gif,NA,Plant,tree,12:51:00,30
-Tseltal,5978,48,F,185306.gif,NA,Plant,tree,12:51:30,32
+Tseltal,5978,48,F,185134.gif,NA,Natural,tree,12:49:58,32
+Tseltal,5978,48,F,185236.gif,NA,Natural,tree,12:51:00,30
+Tseltal,5978,48,F,185306.gif,NA,Natural,tree,12:51:30,32
 Tseltal,5978,48,F,185338.gif,NA,Natural,leaf,12:52:02,30
 Tseltal,5978,48,F,185408.gif,NA,Natural,leaf,12:52:32,30
 Tseltal,5978,48,F,185408.gif,NA,Food,guava,12:52:32,30
@@ -13978,7 +13978,7 @@ Tseltal,3264,9,M,185916.gif,NA,Toy,toy dinosaur,12:57:45,30
 Tseltal,3264,9,M,190016.gif,NA,Synthetic,cardboard box,12:58:45,31
 Tseltal,3264,9,M,190047.gif,NA,Synthetic,cardboard box,12:59:16,30
 Tseltal,3264,9,M,190117.gif,NA,Synthetic,cardboard box,12:59:46,30
-Tseltal,3264,9,M,190623.gif,NA,Plant,tree,13:04:52,33
+Tseltal,3264,9,M,190623.gif,NA,Natural,tree,13:04:52,33
 Tseltal,3264,9,M,191706.gif,NA,Synthetic,comb,13:15:35,30
 Tseltal,3264,9,M,191736.gif,NA,Synthetic,comb,13:16:05,30
 Tseltal,3264,9,M,191806.gif,NA,Synthetic,comb,13:16:35,31
@@ -14189,27 +14189,27 @@ Tseltal,3158,14,M,161842.gif,NA,Natural,stick,11:17:58,30
 Tseltal,3158,14,M,164813.gif,NA,Food,guava,11:47:29,33
 Tseltal,3158,14,M,165352.gif,NA,Food,guava,11:53:08,30
 Tseltal,3158,14,M,165454.gif,NA,Natural,stick,11:54:10,31
-Tseltal,3158,14,M,165626.gif,NA,Plant,tree,11:55:42,30
-Tseltal,3158,14,M,165656.gif,NA,Plant,tree,11:56:12,23
-Tseltal,3158,14,M,165719.gif,NA,Plant,tree,11:56:35,30
-Tseltal,3158,14,M,165749.gif,NA,Plant,tree,11:57:05,10
-Tseltal,3158,14,M,165759.gif,NA,Plant,tree,11:57:15,31
-Tseltal,3158,14,M,165830.gif,NA,Plant,tree,11:57:46,30
-Tseltal,3158,14,M,165900.gif,NA,Plant,tree,11:58:16,32
-Tseltal,3158,14,M,165932.gif,NA,Plant,tree,11:58:48,30
-Tseltal,3158,14,M,170002.gif,NA,Plant,tree,11:59:18,30
-Tseltal,3158,14,M,170032.gif,NA,Plant,tree,11:59:48,31
-Tseltal,3158,14,M,170103.gif,NA,Plant,tree,12:00:19,30
-Tseltal,3158,14,M,170133.gif,NA,Plant,tree,12:00:49,30
-Tseltal,3158,14,M,170203.gif,NA,Plant,tree,12:01:19,32
-Tseltal,3158,14,M,170235.gif,NA,Plant,tree,12:01:51,30
-Tseltal,3158,14,M,170604.gif,NA,Plant,tree,12:05:20,30
-Tseltal,3158,14,M,170634.gif,NA,Plant,tree,12:05:50,5
-Tseltal,3158,14,M,170639.gif,NA,Plant,tree,12:05:55,31
-Tseltal,3158,14,M,170710.gif,NA,Plant,tree,12:06:26,31
-Tseltal,3158,14,M,170741.gif,NA,Plant,tree,12:06:57,30
-Tseltal,3158,14,M,170811.gif,NA,Plant,tree,12:07:27,30
-Tseltal,3158,14,M,170912.gif,NA,Plant,tree,12:08:28,30
+Tseltal,3158,14,M,165626.gif,NA,Natural,tree,11:55:42,30
+Tseltal,3158,14,M,165656.gif,NA,Natural,tree,11:56:12,23
+Tseltal,3158,14,M,165719.gif,NA,Natural,tree,11:56:35,30
+Tseltal,3158,14,M,165749.gif,NA,Natural,tree,11:57:05,10
+Tseltal,3158,14,M,165759.gif,NA,Natural,tree,11:57:15,31
+Tseltal,3158,14,M,165830.gif,NA,Natural,tree,11:57:46,30
+Tseltal,3158,14,M,165900.gif,NA,Natural,tree,11:58:16,32
+Tseltal,3158,14,M,165932.gif,NA,Natural,tree,11:58:48,30
+Tseltal,3158,14,M,170002.gif,NA,Natural,tree,11:59:18,30
+Tseltal,3158,14,M,170032.gif,NA,Natural,tree,11:59:48,31
+Tseltal,3158,14,M,170103.gif,NA,Natural,tree,12:00:19,30
+Tseltal,3158,14,M,170133.gif,NA,Natural,tree,12:00:49,30
+Tseltal,3158,14,M,170203.gif,NA,Natural,tree,12:01:19,32
+Tseltal,3158,14,M,170235.gif,NA,Natural,tree,12:01:51,30
+Tseltal,3158,14,M,170604.gif,NA,Natural,tree,12:05:20,30
+Tseltal,3158,14,M,170634.gif,NA,Natural,tree,12:05:50,5
+Tseltal,3158,14,M,170639.gif,NA,Natural,tree,12:05:55,31
+Tseltal,3158,14,M,170710.gif,NA,Natural,tree,12:06:26,31
+Tseltal,3158,14,M,170741.gif,NA,Natural,tree,12:06:57,30
+Tseltal,3158,14,M,170811.gif,NA,Natural,tree,12:07:27,30
+Tseltal,3158,14,M,170912.gif,NA,Natural,tree,12:08:28,30
 Tseltal,3158,14,M,170942.gif,NA,Natural,dirt,12:08:58,31
 Tseltal,3158,14,M,171013.gif,NA,Natural,dirt,12:09:29,33
 Tseltal,3158,14,M,171146.gif,NA,Synthetic,dress,12:11:02,31
@@ -14517,7 +14517,7 @@ Tseltal,1129,41,F,175826.gif,NA,Food,mats,11:57:02,33
 Tseltal,1129,41,F,175826.gif,NA,Tool,bowl,11:57:02,33
 Tseltal,1129,41,F,175859.gif,NA,Food,mats,11:57:35,30
 Tseltal,1129,41,F,175859.gif,NA,Tool,bowl,11:57:35,30
-Tseltal,1129,41,F,180259.gif,NA,Plant,tree,12:01:35,30
+Tseltal,1129,41,F,180259.gif,NA,Natural,tree,12:01:35,30
 Tseltal,1129,41,F,180836.gif,NA,Natural,leaf,12:07:12,33
 Tseltal,1129,41,F,181313.gif,NA,Immovable,door,12:11:49,32
 Tseltal,1129,41,F,181649.gif,NA,Synthetic,paper,12:15:25,30
@@ -14614,7 +14614,7 @@ Tseltal,1129,41,F,205552.gif,NA,Food,mats,14:54:28,31
 Tseltal,1129,41,F,205552.gif,NA,Tool,bowl,14:54:28,31
 Tseltal,1129,41,F,205800.gif,NA,Synthetic,vest,14:56:36,30
 Tseltal,1129,41,F,205837.gif,NA,Immovable,stairs,14:57:13,30
-Tseltal,1129,41,F,210342.gif,NA,Plant,tree,15:02:18,30
+Tseltal,1129,41,F,210342.gif,NA,Natural,tree,15:02:18,30
 Tseltal,1129,41,F,210412.gif,NA,Synthetic,blanket,15:02:48,32
 Tseltal,1129,41,F,210514.gif,NA,Synthetic,blanket,15:03:50,30
 Tseltal,1129,41,F,210744.gif,NA,Synthetic,blanket,15:06:20,30
@@ -14632,11 +14632,11 @@ Tseltal,1129,41,F,211411.gif,NA,Immovable,fence,15:12:47,31
 Tseltal,1129,41,F,211442.gif,NA,Immovable,fence,15:13:18,30
 Tseltal,1129,41,F,211512.gif,NA,Immovable,fence,15:13:48,30
 Tseltal,1129,41,F,211643.gif,NA,Natural,stick,15:15:19,30
-Tseltal,1129,41,F,211815.gif,NA,Plant,tree,15:16:51,30
-Tseltal,1129,41,F,211845.gif,NA,Plant,tree,15:17:21,31
-Tseltal,1129,41,F,211916.gif,NA,Plant,tree,15:17:52,30
-Tseltal,1129,41,F,211946.gif,NA,Plant,tree,15:18:22,30
-Tseltal,1129,41,F,212016.gif,NA,Plant,tree,15:18:52,31
+Tseltal,1129,41,F,211815.gif,NA,Natural,tree,15:16:51,30
+Tseltal,1129,41,F,211845.gif,NA,Natural,tree,15:17:21,31
+Tseltal,1129,41,F,211916.gif,NA,Natural,tree,15:17:52,30
+Tseltal,1129,41,F,211946.gif,NA,Natural,tree,15:18:22,30
+Tseltal,1129,41,F,212016.gif,NA,Natural,tree,15:18:52,31
 Tseltal,1129,41,F,212047.gif,NA,Synthetic,vest,15:19:23,30
 Tseltal,1129,41,F,212148.gif,NA,Immovable,fence,15:20:24,32
 Tseltal,1129,41,F,212220.gif,NA,Immovable,fence,15:20:56,30
@@ -15010,7 +15010,7 @@ Tseltal,7910,10,M,24022140.gif,NA,Synthetic,skirt,09:23:15,8
 Tseltal,7910,10,M,24022140.gif,NA,Synthetic,ribbon,09:23:15,8
 Tseltal,7910,10,M,24022210.gif,NA,Synthetic,ribbon,09:23:45,8
 Tseltal,7910,10,M,24022514.gif,NA,Synthetic,ribbon,09:26:49,7
-Tseltal,7910,10,M,24023658.gif,NA,Plant,tree,09:38:33,1
+Tseltal,7910,10,M,24023658.gif,NA,Natural,tree,09:38:33,1
 Tseltal,7910,10,M,24024235.gif,NA,Synthetic,vest,09:44:10,3
 Tseltal,7910,10,M,24025120.gif,NA,Synthetic,skirt,09:52:55,0
 Tseltal,7910,10,M,24031339.gif,NA,Food,leafy green,09:15:14,3
@@ -15072,7 +15072,7 @@ Tseltal,4313,31,F,035703.gif,NA,Synthetic,pill package,09:20:13,30
 Tseltal,4313,31,F,035803.gif,NA,Synthetic,pill package,09:21:13,32
 Tseltal,4313,31,F,035835.gif,NA,Synthetic,pill package,09:21:45,30
 Tseltal,4313,31,F,035905.gif,NA,Synthetic,pill package,09:22:15,30
-Tseltal,4313,31,F,040915.gif,NA,Plant,tree,09:32:25,8
+Tseltal,4313,31,F,040915.gif,NA,Natural,tree,09:32:25,8
 Tseltal,4313,31,F,041155.gif,NA,Synthetic,scissors,09:35:05,30
 Tseltal,4313,31,F,041255.gif,NA,Synthetic,scissors,09:36:05,31
 Tseltal,4313,31,F,041326.gif,NA,Synthetic,scissors,09:36:36,30
@@ -15157,7 +15157,7 @@ Tseltal,4313,31,F,055350.gif,NA,Synthetic,plastic basket,11:17:00,31
 Tseltal,4313,31,F,055350.gif,NA,Synthetic,shoelace,11:17:00,31
 Tseltal,4313,31,F,055623.gif,NA,Synthetic,bottle cap,11:19:33,30
 Tseltal,4313,31,F,060023.gif,NA,Synthetic,vest,11:23:33,31
-Tseltal,4313,31,F,060154.gif,NA,Plant,tree,11:25:04,33
+Tseltal,4313,31,F,060154.gif,NA,Natural,tree,11:25:04,33
 Tseltal,4313,31,F,060257.gif,NA,Natural,plant,11:26:07,30
 Tseltal,4313,31,F,060327.gif,NA,Natural,plant,11:26:37,31
 Tseltal,4313,31,F,060358.gif,NA,Natural,plant,11:27:08,30
@@ -15322,9 +15322,9 @@ Tseltal,4313,31,F,090351.gif,NA,Natural,plant,14:27:01,31
 Tseltal,4313,31,F,090523.gif,NA,Natural,plant,14:28:33,31
 Tseltal,4313,31,F,091015.gif,NA,Natural,stick,14:33:25,31
 Tseltal,4313,31,F,091349.gif,NA,Natural,stick,14:36:59,30
-Tseltal,4313,31,F,091622.gif,NA,Plant,tree,14:39:32,31
-Tseltal,4313,31,F,091653.gif,NA,Plant,tree,14:40:03,30
-Tseltal,4313,31,F,091723.gif,NA,Plant,tree,14:40:33,30
+Tseltal,4313,31,F,091622.gif,NA,Natural,tree,14:39:32,31
+Tseltal,4313,31,F,091653.gif,NA,Natural,tree,14:40:03,30
+Tseltal,4313,31,F,091723.gif,NA,Natural,tree,14:40:33,30
 Tseltal,4313,31,F,091723.gif,NA,Food,sugarcane,14:40:33,30
 Tseltal,4313,31,F,091753.gif,NA,Food,sugarcane,14:41:03,31
 Tseltal,4313,31,F,091824.gif,NA,Food,sugarcane,14:41:34,30
@@ -15399,8 +15399,8 @@ Tseltal,4313,31,F,104809.gif,NA,Tool,spoon,16:11:19,32
 Tseltal,4313,31,F,104809.gif,NA,Food,noodles,16:11:19,32
 Tseltal,4313,31,F,104841.gif,NA,Tool,spoon,16:11:51,28
 Tseltal,4313,31,F,104939.gif,NA,Tool,bowl,16:12:49,30
-Tseltal,4313,31,F,105041.gif,NA,Plant,tree,16:13:51,30
-Tseltal,4313,31,F,105111.gif,NA,Plant,tree,16:14:21,30
+Tseltal,4313,31,F,105041.gif,NA,Natural,tree,16:13:51,30
+Tseltal,4313,31,F,105111.gif,NA,Natural,tree,16:14:21,30
 Tseltal,4313,31,F,105314.gif,NA,Toy,clapper toy,16:16:24,31
 Tseltal,4313,31,F,105345.gif,NA,Immovable,door,16:16:55,30
 Tseltal,4313,31,F,105415.gif,NA,Synthetic,blanket,16:17:25,30
@@ -15472,7 +15472,7 @@ Tseltal,1312,26,F,151315.gif,NA,Food,tortilla,09:11:28,32
 Tseltal,1312,26,F,151417.gif,NA,Synthetic,wood disc,09:12:30,31
 Tseltal,1312,26,F,151448.gif,NA,Synthetic,wood disc,09:13:01,33
 Tseltal,1312,26,F,151521.gif,NA,Synthetic,plastic bag,09:13:34,30
-Tseltal,1312,26,F,151621.gif,NA,Plant,tree,09:14:34,31
+Tseltal,1312,26,F,151621.gif,NA,Natural,tree,09:14:34,31
 Tseltal,1312,26,F,151757.gif,NA,Synthetic,wood slat,09:16:10,32
 Tseltal,1312,26,F,151929.gif,NA,Synthetic,plastic bag,09:17:42,32
 Tseltal,1312,26,F,152100.gif,NA,Synthetic,purse,09:19:13,33
@@ -15710,9 +15710,9 @@ Tseltal,5437,32,F,052404.gif,NA,Synthetic,rope,10:47:10,30
 Tseltal,5437,32,F,052434.gif,NA,Synthetic,rope,10:47:40,30
 Tseltal,5437,32,F,052837.gif,NA,Synthetic,vest,10:51:43,30
 Tseltal,5437,32,F,052938.gif,NA,Synthetic,wood slat,10:52:44,30
-Tseltal,5437,32,F,053416.gif,NA,Plant,tree,10:57:22,30
+Tseltal,5437,32,F,053416.gif,NA,Natural,tree,10:57:22,30
 Tseltal,5437,32,F,053922.gif,NA,Synthetic,camera,11:02:28,30
-Tseltal,5437,32,F,054123.gif,NA,Plant,tree,11:04:29,33
+Tseltal,5437,32,F,054123.gif,NA,Natural,tree,11:04:29,33
 Tseltal,5437,32,F,054156.gif,NA,Natural,leaf,11:05:02,30
 Tseltal,5437,32,F,055108.gif,NA,Natural,leaf,11:14:14,30
 Tseltal,5437,32,F,055337.gif,NA,Synthetic,camera,11:16:43,32
@@ -15856,7 +15856,7 @@ Tseltal,5437,32,F,104225.gif,NA,Natural,flower,16:05:31,31
 Tseltal,5437,32,F,104428.gif,NA,Natural,flower,16:07:34,30
 Tseltal,5437,32,F,104906.gif,NA,Natural,flower,16:12:12,30
 Tseltal,5437,32,F,105816.gif,NA,Natural,dirt,16:21:22,30
-Tseltal,5437,32,F,110353.gif,NA,Plant,tree,16:26:59,30
+Tseltal,5437,32,F,110353.gif,NA,Natural,tree,16:26:59,30
 Tseltal,5437,32,F,110758.gif,NA,Food,apple,16:31:04,31
 Tseltal,5437,32,F,111134.gif,NA,Synthetic,camera,16:34:40,30
 Tseltal,5437,32,F,111231.gif,NA,Food,apple,16:35:37,30
@@ -16419,15 +16419,15 @@ Tseltal,7674,26,F,220029.gif,NA,Natural,grass,15:59:23,30
 Tseltal,7674,26,F,220059.gif,NA,Food,bean,15:59:53,30
 Tseltal,7674,26,F,220129.gif,NA,Synthetic,vest,16:00:23,32
 Tseltal,7674,26,F,220231.gif,NA,Natural,leaf,16:01:25,30
-Tseltal,7674,26,F,220433.gif,NA,Plant,tree,16:03:27,32
-Tseltal,7674,26,F,220505.gif,NA,Plant,tree,16:03:59,30
-Tseltal,7674,26,F,220535.gif,NA,Plant,tree,16:04:29,30
-Tseltal,7674,26,F,220637.gif,NA,Plant,tree,16:05:31,31
-Tseltal,7674,26,F,220708.gif,NA,Plant,tree,16:06:02,30
-Tseltal,7674,26,F,220738.gif,NA,Plant,tree,16:06:32,31
-Tseltal,7674,26,F,220809.gif,NA,Plant,tree,16:07:03,30
-Tseltal,7674,26,F,220839.gif,NA,Plant,tree,16:07:33,30
-Tseltal,7674,26,F,220909.gif,NA,Plant,tree,16:08:03,32
+Tseltal,7674,26,F,220433.gif,NA,Natural,tree,16:03:27,32
+Tseltal,7674,26,F,220505.gif,NA,Natural,tree,16:03:59,30
+Tseltal,7674,26,F,220535.gif,NA,Natural,tree,16:04:29,30
+Tseltal,7674,26,F,220637.gif,NA,Natural,tree,16:05:31,31
+Tseltal,7674,26,F,220708.gif,NA,Natural,tree,16:06:02,30
+Tseltal,7674,26,F,220738.gif,NA,Natural,tree,16:06:32,31
+Tseltal,7674,26,F,220809.gif,NA,Natural,tree,16:07:03,30
+Tseltal,7674,26,F,220839.gif,NA,Natural,tree,16:07:33,30
+Tseltal,7674,26,F,220909.gif,NA,Natural,tree,16:08:03,32
 Tseltal,7674,26,F,221314.gif,NA,Natural,leaf,16:12:08,29
 Tseltal,7674,26,F,221343.gif,NA,Natural,plant,16:12:37,30
 Tseltal,7674,26,F,221446.gif,NA,Natural,plant,16:13:40,30
@@ -16837,10 +16837,10 @@ Tseltal,7328,38,M,161356.gif,NA,Immovable,door,10:12:46,30
 Tseltal,7328,38,M,161516.gif,NA,Natural,stick,10:14:06,29
 Tseltal,7328,38,M,161717.gif,NA,Toy,toy truck,10:16:07,32
 Tseltal,7328,38,M,162728.gif,NA,Synthetic,wood slat,10:26:18,30
-Tseltal,7328,38,M,162859.gif,NA,Plant,tree,10:27:49,30
-Tseltal,7328,38,M,162929.gif,NA,Plant,tree,10:28:19,31
-Tseltal,7328,38,M,163000.gif,NA,Plant,tree,10:28:50,30
-Tseltal,7328,38,M,163030.gif,NA,Plant,tree,10:29:20,30
+Tseltal,7328,38,M,162859.gif,NA,Natural,tree,10:27:49,30
+Tseltal,7328,38,M,162929.gif,NA,Natural,tree,10:28:19,31
+Tseltal,7328,38,M,163000.gif,NA,Natural,tree,10:28:50,30
+Tseltal,7328,38,M,163030.gif,NA,Natural,tree,10:29:20,30
 Tseltal,7328,38,M,163203.gif,NA,Food,guava,10:30:53,30
 Tseltal,7328,38,M,163304.gif,NA,Food,guava,10:31:54,30
 Tseltal,7328,38,M,163404.gif,NA,Food,guava,10:32:54,32

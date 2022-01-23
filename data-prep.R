@@ -1,7 +1,7 @@
 library(tidyverse)
 
 # read in data
-annotations <- read_csv("data/annotations_20220117.csv")
+annotations <- read_csv("data/all-annotations.csv")
 participants <- read_csv("data/metadata/participants.csv")
 
 # calculate duration between images
@@ -19,7 +19,8 @@ durations <- read_csv("data/metadata/timestamps.csv") %>%
 
 # create one column that tells us the reason for exclusion
 raw.data <- annotations %>%
-  pivot_longer(c(None:Unsure), names_to = "exclusion", values_to = "exclusion.val") %>%
+  mutate(Experimenter = ifelse(str_detect(tolower(Object), "exclude"), 1, 0)) %>%
+  pivot_longer(c(None, Exclude, Unsure, Experimenter), names_to = "exclusion", values_to = "exclusion.val") %>%
   mutate(exclusion = ifelse(exclusion.val == 1, exclusion, NA)) %>%
   select(sub_num, Image, Object, exclusion) %>%
   distinct()
@@ -40,7 +41,6 @@ data.w.unsure <- raw.data %>%
   mutate(Object = ifelse(!is.na(object.corrected) & !is.na(from.unsure), object.corrected, Object), 
          exclusion = ifelse(!is.na(from.unsure), exclusion.corrected, exclusion)) %>%
   select(-ends_with("corrected"))
-
 
 # replace immovable objects -----------------------------------------------
 # read in manually checked immovable objects
@@ -72,16 +72,35 @@ data.w.none <- data.w.immovable %>%
   select(-ends_with("corrected"), -from.none)
 
 # add regularized labels --------------------------------------------------
-# read in manually checked object labels
-labels <- read_csv("data/manual-checks/labels.csv")
-
-# merge with main annotations df and replace raw label with regularized version
-data.w.labels <- data.w.none %>%
+# determine if there are any objects that need regularized labels
+# if there are, write csv file with only these objects
+data.w.objects <- data.w.none %>%
   mutate(n.objects = str_count(Object, ",") + 1) %>%
   separate(Object, c("Object1", "Object2", "Object3"), ",") %>%
   mutate(across(starts_with("Object"), ~ trimws(.))) %>%
   pivot_longer(starts_with("Object"), names_to = "object.num", values_to = "Object") %>%
-  filter(!is.na(Object)) %>%
+  filter(!is.na(Object)) 
+
+regularized <- read_csv("data/manual-checks/labels.csv") %>%
+  pull(Object) %>%
+  unique()
+
+`%notin%` <- Negate(`%in%`)
+
+not.regularized <- data.w.objects %>%
+  select(Object) %>%
+  distinct() %>%
+  filter(Object %notin% regularized)
+
+if (nrow(not.regularized > 0)) {
+  write_csv(not.regularized, "data/manual-checks/new-objects-to-label.csv")
+}
+
+# read in manually checked object labels
+labels <- read_csv("data/manual-checks/labels.csv")
+
+# merge with main annotations df and replace raw label with regularized version
+data.w.labels <- data.w.objects %>%
   left_join(labels, by = "Object") %>%
   mutate(object = ifelse(is.na(object.corrected), Object, object.corrected)) %>%
   mutate(n.objects = str_count(object, ",") + 1) %>%
@@ -93,18 +112,20 @@ data.w.labels <- data.w.none %>%
   mutate(object = trimws(object)) %>%
   select(sub_num, Image, exclusion, object)
 
-# temporary code for pulling out new labels that need categorization
-old_categories <- read_csv("data/manual-checks/categories.csv") %>%
+# determine if there are any objects that need categories
+# if there are, write csv file with only these objects
+categorized <- read_csv("data/manual-checks/categories.csv") %>%
   pull(object) %>%
   unique()
 
-`%notin%` <- Negate(`%in%`)
+not.categorized <- data.w.labels %>%
+  select(object) %>%
+  distinct() %>%
+  filter(object %notin% categorized)
 
-#data.w.labels %>%
-  #select(object) %>%
-  #distinct() %>%
-  #filter(object %notin% old_categories) %>%
-  #write_csv("data/manual-checks/new-objects-to-categorize.csv")
+if (nrow(not.categorized > 0)) {
+  write_csv(not.categorized, "data/manual-checks/new-objects-to-categorize.csv")
+}
 
 # add regularized categories ----------------------------------------------
 # read in manually checked categories for each object
@@ -130,4 +151,4 @@ data.to.export <- data.w.categories %>%
   select(site, sub_num, age, sex, image, exclusion, category, object, timestamp, duration) %>%
   distinct()
 
-write_csv(data.to.export, "data/usable.data_20220121.csv")
+write_csv(data.to.export, "data/usable.data.csv")

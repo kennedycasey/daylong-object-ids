@@ -69,7 +69,7 @@ if (run.from.raw) {
 } 
 
 # read in data
-raw.data <- read_csv("../data/usable.data_20220121.csv")
+raw.data <- read_csv("../data/usable.data.csv")
 
 # pre-set colors and category labels
 sites <- c("Rossel", "Tseltal")
@@ -83,7 +83,7 @@ categories <- c("Synthetic", "Food", "Tool",
 # rm excluded photos + set other variable info
 data <- raw.data %>%
   # TO DO: fix NAs in site and category
-  filter(!is.na(site) & !is.na(category) & is.na(exclusion)) %>%
+  filter(!is.na(category) & is.na(exclusion)) %>%
   mutate(hour = hour(timestamp),
          category = factor(category, levels = categories))
   
@@ -168,8 +168,8 @@ grid::grid.raster(examples)
 We annotated photos with IMCO [version 2.0, @casey2022imco], an open-source Python application adapted for efficient coding of photo streams. Annotators provided labels for the handled object(s) present in each photo (e.g., "twig") and selected among predefined categories to characterize each type of object (e.g., "natural object") present. Categories included food, tools, toys, immovable objects (e.g., furniture and housing structures), natural objects, and miscellaneous synthetic objects (see Figure 1 for example images and Table \ref{tab:top-objects} for example objects from each category).
 
 ```{r, exclusions}
-# get total number of objects before exclusion
-total <- raw.data %>%
+# get total number of images before exclusion
+total.images <- raw.data %>%
   select(sub_num, image) %>%
   distinct() %>%
   nrow()
@@ -178,13 +178,15 @@ total <- raw.data %>%
 exclusions <- raw.data %>%
   filter(!is.na(exclusion)) %>%
   group_by(exclusion) %>%
-  summarize(count = n(),
-            prop = round(count/total * 100, 1)) %>%
-  pivot_wider(names_from = "exclusion", values_from = c("count", "prop"))
+  summarize(count = n()) %>%
+  ungroup() %>%
+  mutate(total = total.images, 
+         percent = round(count/total * 100, 2)) %>%
+  pivot_wider(names_from = "exclusion", values_from = c("count", "percent"))
 ```
 
 ## Data preparation and reliability
-Images were excluded if they were too dark, bright, blurry, or covered for annotators to identify handled objects (`r exclusions$count_Exclude` images, `r exclusions$prop_Exclude`% of the data set), if annotators were otherwise unsure about what objects were being handled (`r exclusions$count_Unsure`, or `r exclusions$prop_Unsure`%), or if there was no handled object (`r exclusions$count_None`, or `r exclusions$prop_None`%). To avoid unnecessary data loss, all excluded photos were checked by at least one other annotator and re-included for analysis if objects were identifiable. In total, `r data %>% select(sub_num, image) %>% distinct() %>% nrow()` images were deemed usable by annotators (`r data %>% filter(site == "Rossel") %>% select(sub_num, image) %>% distinct() %>% nrow()` for Rossel, `r data %>% filter(site == "Tseltal") %>% select(sub_num, image) %>% distinct() %>% nrow()` for Tseltal).
+Images were excluded if they were too dark, bright, blurry, or covered for annotators to identify handled objects (`r exclusions$count_Exclude` images, `r exclusions$percent_Exclude`% of the data set), if annotators were otherwise unsure about what objects were being handled (`r exclusions$count_Unsure`, or `r exclusions$percent_Unsure`%), if there was no handled object (`r exclusions$count_None`, or `r exclusions$percent_None`%), or if the researcher was present (`r exclusions$count_Experimenter`, or `r exclusions$percent_Experimenter`%). To avoid unnecessary data loss, all excluded photos were checked by at least one other annotator and re-included for analysis if objects were identifiable. In total, `r total.images` images were deemed usable by annotators (`r data %>% filter(site == "Rossel") %>% select(sub_num, image) %>% distinct() %>% nrow()` for Rossel, `r data %>% filter(site == "Tseltal") %>% select(sub_num, image) %>% distinct() %>% nrow()` for Tseltal).
 
 XX% of photo streams were double coded. Reliability annotations were equally spread across sites and ages and included a total of XXXX images. At the category level, annotators agreed on XX.X% of decisions (Rossel: XX.X%, Tseltal: XX.X%). At the object label level, annotators agreed on XX.X% of decisions (Rossel: XX.X%, Tseltal: XX.X%).
 

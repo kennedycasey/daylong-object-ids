@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.15)  21 JAN 2022 19:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.15)  22 JAN 2022 21:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -529,14 +529,10 @@ Overfull \hbox (2.00688pt too wide) in paragraph at lines 277--278
  []
 
 [2 <./figs/examples-fig-1.pdf>]
-Overfull \hbox (9.44002pt too wide) in paragraph at lines 333--334
- [][] 
- []
-
 <figs/zipfian-objects-fig-1.pdf, id=86, 204.765pt x 102.3825pt>
 File: figs/zipfian-objects-fig-1.pdf Graphic file (type pdf)
 <use figs/zipfian-objects-fig-1.pdf>
-Package pdftex.def Info: figs/zipfian-objects-fig-1.pdf  used on input line 361
+Package pdftex.def Info: figs/zipfian-objects-fig-1.pdf  used on input line 362
 .
 (pdftex.def)             Requested size: 204.76448pt x 102.38225pt.
 
@@ -545,23 +541,26 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <figs/top-objects-fig-1.pdf, id=87, 428.60126pt x 200.75pt>
 File: figs/top-objects-fig-1.pdf Graphic file (type pdf)
 <use figs/top-objects-fig-1.pdf>
-Package pdftex.def Info: figs/top-objects-fig-1.pdf  used on input line 382.
+Package pdftex.def Info: figs/top-objects-fig-1.pdf  used on input line 383.
 (pdftex.def)             Requested size: 428.6002pt x 200.7495pt.
 LaTeX Font Info:    Trying to load font information for OML+ptm on input line 4
-04.
+05.
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 404.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 405.
 <figs/overall-stats-fig-1.pdf, id=88, 237.88875pt x 308.15125pt>
 File: figs/overall-stats-fig-1.pdf Graphic file (type pdf)
 <use figs/overall-stats-fig-1.pdf>
-Package pdftex.def Info: figs/overall-stats-fig-1.pdf  used on input line 410.
+Package pdftex.def Info: figs/overall-stats-fig-1.pdf  used on input line 411.
 (pdftex.def)             Requested size: 237.88815pt x 308.15048pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \vbox (badness 1616) has occurred while \output is active []
 
 [3 <./figs/zipfian-objects-fig-1.pdf>]
 
@@ -570,38 +569,41 @@ LaTeX Warning: Text page 4 contains only floats.
 
 Underfull \vbox (badness 2189) has occurred while \output is active []
 
-<figs/age-effects-fig-1.pdf, id=111, 237.88875pt x 307.1475pt>
+<figs/age-effects-fig-1.pdf, id=110, 237.88875pt x 307.1475pt>
 File: figs/age-effects-fig-1.pdf Graphic file (type pdf)
 <use figs/age-effects-fig-1.pdf>
-Package pdftex.def Info: figs/age-effects-fig-1.pdf  used on input line 458.
+Package pdftex.def Info: figs/age-effects-fig-1.pdf  used on input line 472.
 (pdftex.def)             Requested size: 237.88815pt x 307.14674pt.
 
-Underfull \hbox (badness 6063) in paragraph at lines 471--481
+Underfull \vbox (badness 4024) has occurred while \output is active []
+
+[4 <./figs/top-objects-fig-1.pdf> <./figs/overall-stats-fig-1.pdf>]
+Underfull \hbox (badness 6063) in paragraph at lines 485--495
 []\OT1/ptm/m/n/10 [Para on zip-fian dis-tri-bu-tions and im-pli-ca-tions for
  []
 
 
-Underfull \hbox (badness 4582) in paragraph at lines 471--481
+Underfull \hbox (badness 4582) in paragraph at lines 485--495
 \OT1/ptm/m/n/10 word learn-ing]: Find-ings of skewed in-put are con-
  []
 
 
-Underfull \hbox (badness 4634) in paragraph at lines 471--481
+Underfull \hbox (badness 4634) in paragraph at lines 485--495
 \OT1/ptm/m/n/10 sis-tent with prior work de-scrib-ing vi-sual/object in-put
  []
 
-[4 <./figs/top-objects-fig-1.pdf> <./figs/overall-stats-fig-1.pdf>]
-Underfull \hbox (badness 4013) in paragraph at lines 570--575
+
+Underfull \hbox (badness 4013) in paragraph at lines 584--589
  [][]\OT1/ptm/m/n/10 Karasik, L. B., Schnei-der, J., Kuchirko, Y. A., &
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 570--575
+Underfull \hbox (badness 1168) in paragraph at lines 584--589
  \OT1/ptm/m/n/10 Tamis-LeMonda, C. S. (2018). Not so WEIRD ob-
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 570--575
+Underfull \hbox (badness 1675) in paragraph at lines 584--589
  \OT1/ptm/m/n/10 ject play in Tajik-istan. Pre-sen-ta-tion to the In-ter-na-
  []
 
@@ -628,7 +630,7 @@ TinyTeX/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></Users/chatterlabmanager/Li
 brary/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></Users/chatterlabman
 ager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/chatte
 rlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on CogSci2022-giannino.pdf (6 pages, 10008010 bytes).
+Output written on CogSci2022-giannino.pdf (6 pages, 10043516 bytes).
 PDF statistics:
  244 PDF objects out of 1000 (max. 8388607)
  203 compressed objects within 3 object streams

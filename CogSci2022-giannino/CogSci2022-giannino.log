@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.15)  22 JAN 2022 22:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.22)  23 JAN 2022 00:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **CogSci2022-giannino.tex
 (./CogSci2022-giannino.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-01-12>
+L3 programming layer <2022-01-21>
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/base/size10.clo
@@ -393,35 +393,35 @@ File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
 ) (./CogSci2022-giannino.aux)
 \openout1 = `CogSci2022-giannino.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 89.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMS/pzccm/m/n on input line 90.
 LaTeX Font Info:    Trying to load font information for OMS+pzccm on input line
- 89.
+ 90.
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omspzccm.
 fd
 File: omspzccm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/pzccm.
 )
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 90.
+LaTeX Font Info:    ... okay on input line 90.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 89.
+Package hyperref Info: Link coloring OFF on input line 90.
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/hyperref/nameref
 .sty
@@ -437,9 +437,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count289
 )
-LaTeX Info: Redefining \ref on input line 89.
-LaTeX Info: Redefining \pageref on input line 89.
-LaTeX Info: Redefining \nameref on input line 89.
+LaTeX Info: Redefining \ref on input line 90.
+LaTeX Info: Redefining \pageref on input line 90.
+LaTeX Info: Redefining \nameref on input line 90.
 (./CogSci2022-giannino.out) (./CogSci2022-giannino.out)
 \@outlinefile=\write4
 \openout4 = `CogSci2022-giannino.out'.
@@ -465,45 +465,45 @@ LaTeX Info: Redefining \BPBI on input line 129.
 LaTeX Info: Redefining \BHBI on input line 130.
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptmcm on input line
- 92.
+ 93.
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ot1ptmcm.
 fd
 File: ot1ptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ptmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ptmcm on input line
- 92.
+ 93.
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omlptmcm.
 fd
 File: omlptmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ptmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+psycm on input line
- 92.
+ 93.
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omxpsycm.
 fd
 File: omxpsycm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/psycm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 92.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 92.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 92.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 92.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 93.
 
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 92.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 93.
 
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \vbox (badness 10000) detected at line 92
+Overfull \vbox (1.25778pt too high) detected at line 93
  []
 
 [1{/Users/chatterlabmanager/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/p
@@ -513,43 +513,43 @@ dftex.map}
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
-58.
+59.
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<figs/examples-fig-1.pdf, id=73, 209.78375pt x 164.615pt>
+<figs/examples-fig-1.pdf, id=85, 209.78375pt x 164.615pt>
 File: figs/examples-fig-1.pdf Graphic file (type pdf)
 <use figs/examples-fig-1.pdf>
-Package pdftex.def Info: figs/examples-fig-1.pdf  used on input line 277.
+Package pdftex.def Info: figs/examples-fig-1.pdf  used on input line 278.
 (pdftex.def)             Requested size: 209.78322pt x 164.6146pt.
 [2 <./figs/examples-fig-1.pdf>]
-<figs/zipfian-objects-fig-1.pdf, id=90, 204.765pt x 102.3825pt>
+<figs/zipfian-objects-fig-1.pdf, id=102, 204.765pt x 102.3825pt>
 File: figs/zipfian-objects-fig-1.pdf Graphic file (type pdf)
 <use figs/zipfian-objects-fig-1.pdf>
-Package pdftex.def Info: figs/zipfian-objects-fig-1.pdf  used on input line 362
+Package pdftex.def Info: figs/zipfian-objects-fig-1.pdf  used on input line 363
 .
 (pdftex.def)             Requested size: 204.76448pt x 102.38225pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<figs/top-objects-fig-1.pdf, id=91, 392.46625pt x 172.645pt>
+<figs/top-objects-fig-1.pdf, id=103, 392.46625pt x 172.645pt>
 File: figs/top-objects-fig-1.pdf Graphic file (type pdf)
 <use figs/top-objects-fig-1.pdf>
-Package pdftex.def Info: figs/top-objects-fig-1.pdf  used on input line 383.
+Package pdftex.def Info: figs/top-objects-fig-1.pdf  used on input line 384.
 (pdftex.def)             Requested size: 392.46527pt x 172.64456pt.
 LaTeX Font Info:    Trying to load font information for OML+ptm on input line 4
-09.
+10.
 
 (/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 409.
-<figs/overall-stats-fig-1.pdf, id=92, 237.88875pt x 308.15125pt>
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 410.
+<figs/overall-stats-fig-1.pdf, id=104, 237.88875pt x 308.15125pt>
 File: figs/overall-stats-fig-1.pdf Graphic file (type pdf)
 <use figs/overall-stats-fig-1.pdf>
-Package pdftex.def Info: figs/overall-stats-fig-1.pdf  used on input line 415.
+Package pdftex.def Info: figs/overall-stats-fig-1.pdf  used on input line 416.
 (pdftex.def)             Requested size: 237.88815pt x 308.15048pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -557,58 +557,57 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [3 <./figs/zipfian-objects-fig-1.pdf>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<figs/age-effects-fig-1.pdf, id=115, 237.88875pt x 280.04625pt>
+<figs/age-effects-fig-1.pdf, id=127, 237.88875pt x 280.04625pt>
 File: figs/age-effects-fig-1.pdf Graphic file (type pdf)
 <use figs/age-effects-fig-1.pdf>
-Package pdftex.def Info: figs/age-effects-fig-1.pdf  used on input line 483.
+Package pdftex.def Info: figs/age-effects-fig-1.pdf  used on input line 484.
 (pdftex.def)             Requested size: 237.88815pt x 280.04555pt.
-
-Underfull \hbox (badness 6063) in paragraph at lines 496--506
-[]\OT1/ptm/m/n/10 [Para on zip-fian dis-tri-bu-tions and im-pli-ca-tions for
- []
-
-
-Underfull \hbox (badness 4582) in paragraph at lines 496--506
-\OT1/ptm/m/n/10 word learn-ing]: Find-ings of skewed in-put are con-
- []
-
-
-Underfull \hbox (badness 4634) in paragraph at lines 496--506
-\OT1/ptm/m/n/10 sis-tent with prior work de-scrib-ing vi-sual/object in-put
- []
-
 [4 <./figs/top-objects-fig-1.pdf> <./figs/overall-stats-fig-1.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 7291) has occurred while \output is active []
 
 
-Underfull \hbox (badness 4013) in paragraph at lines 595--600
+Underfull \hbox (badness 10000) in paragraph at lines 540--547
+[]\OT1/ptm/m/n/10 Age: The broad com-po-si-tion of han-dled ob-
+ []
+
+
+Underfull \hbox (badness 6268) in paragraph at lines 540--547
+\OT1/ptm/m/n/10 jects was largely sta-ble across age (con-sis-tent with
+ []
+
+
+Underfull \hbox (badness 6758) in paragraph at lines 540--547
+\OT1/ptm/b/n/10 long2021characterizing? \OT1/ptm/m/n/10 for vi-su-ally present 
+cat-e-
+ []
+
+[5 <./figs/age-effects-fig-1.pdf>]
+Underfull \hbox (badness 4013) in paragraph at lines 645--650
  [][]\OT1/ptm/m/n/10 Karasik, L. B., Schnei-der, J., Kuchirko, Y. A., &
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 595--600
+Underfull \hbox (badness 1168) in paragraph at lines 645--650
  \OT1/ptm/m/n/10 Tamis-LeMonda, C. S. (2018). Not so WEIRD ob-
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 595--600
+Underfull \hbox (badness 1675) in paragraph at lines 645--650
  \OT1/ptm/m/n/10 ject play in Tajik-istan. Pre-sen-ta-tion to the In-ter-na-
  []
 
-[5 <./figs/age-effects-fig-1.pdf>] [6
-
-] (./CogSci2022-giannino.aux)
+[6] (./CogSci2022-giannino.aux)
 Package rerunfilecheck Info: File `CogSci2022-giannino.out' has not changed.
-(rerunfilecheck)             Checksum: 3CF6E5CFABC62C7E17F75566C4834C9D;2066.
+(rerunfilecheck)             Checksum: D672AB3264D4C7F350204E3172C90055;2822.
  ) 
 Here is how much of TeX's memory you used:
- 11717 strings out of 480246
- 190442 string characters out of 5894286
- 490958 words of memory out of 5000000
- 29427 multiletter control sequences out of 15000+600000
+ 11729 strings out of 480247
+ 190742 string characters out of 5894309
+ 491157 words of memory out of 5000000
+ 29432 multiletter control sequences out of 15000+600000
  496541 words of font info for 81 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,11n,63p,499b,364s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,11n,63p,499b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.
 enc}</Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmmi10.pfb></Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/
@@ -618,10 +617,10 @@ TinyTeX/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></Users/chatterlabmanager/Li
 brary/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></Users/chatterlabman
 ager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></Users/chatte
 rlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on CogSci2022-giannino.pdf (6 pages, 10043379 bytes).
+Output written on CogSci2022-giannino.pdf (6 pages, 10045571 bytes).
 PDF statistics:
- 249 PDF objects out of 1000 (max. 8388607)
- 208 compressed objects within 3 object streams
- 64 named destinations out of 1000 (max. 500000)
- 138 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 265 PDF objects out of 1000 (max. 8388607)
+ 224 compressed objects within 3 object streams
+ 70 named destinations out of 1000 (max. 500000)
+ 162 words of extra memory for PDF output out of 10000 (max. 10000000)
 

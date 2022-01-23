@@ -885,6 +885,10 @@ Zipfian distributions can be helpful for learning [e.g., @carvalho2019rethinking
 Notes for near the end: Future plans to link to daylong audio recordings. We can speculate about children's learning now that we have some understanding of the distribution of object handling and the identities of commonly handled objects. However, without knowing how often children are also hearing _talk_ about the objects they're handling, we can't fully address the word learning piece.
 
 <!--
+# Data availability statement
+\vspace{1em}\fbox{\parbox[b][][c]{7.5cm}{\centering All anonymized data and analysis scripts are available at the following link: \href{https://github.com/kennedycasey/daylong-object-ids}{https://github.com/kennedycasey/daylong-object-ids}}\
+}}
+
 # Acknowledgements
 This research is supported by a Gianinno Family Faculty Research Award to MC. We are enormously grateful to the participants and their families for sharing their daily lives with us. We also thank Will Fisher and Shawn C. Tice for essential contributions to the annotation software.
 -->

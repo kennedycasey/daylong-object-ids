@@ -438,3 +438,18 @@ wood fragment,Natural,1,
 wooden block,Synthetic,1,check if toy and merge with above
 toy pot,Toy,,
 sink,Tool,1,
+stick? leaf?,Natural,1,reliability
+leaf cover,Tool,1,reliability
+cereal,Food,1,reliability
+metal wheel,Synthetic,1,reliability
+plastic thing,Synthetic,1,reliability
+drawer,Immovable,1,reliability
+cloth? pillow?,Synthetic,1,reliability
+object,Synthetic,1,reliability
+cement wall,Immovable,1,reliability
+car,Immovable,1,reliability
+rubber ring,Synthetic,1,reliability
+foam crate,Synthetic,1,reliability
+small object,Synthetic,1,reliability
+iron scaffolding,Immovable,1,reliability
+metal stick,Synthetic,1,reliability

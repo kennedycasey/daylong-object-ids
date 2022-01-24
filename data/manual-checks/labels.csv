@@ -893,3 +893,73 @@ pill packaging,,pill package,0,
 bed,,bed,0,
 powdered juice,,powdered juice,0,
 post,,post,1,
+red flower,,flower,0,reliability
+red bottle,,bottle,1,reliability
+black fabric,,fabric,1,reliability
+purple comb,,comb,0,reliability
+pruple comb,,comb,0,reliability
+stick? leaf?,,stick? leaf?,1,reliability
+leaf cover,,leaf cover,1,reliability
+plastic turtle,,toy turtle,0,reliability
+cereal box,,cereal,1,reliability
+tree bark,,bark,0,reliability
+plantain,,banana,0,reliability
+metal wheel,,metal wheel,1,reliability
+tree trunks,,tree,0,reliability
+bundle of palm leaves,,leaf,1,reliability
+rice bag,,plastic bag,1,reliability
+tree bark?,,bark,1,reliability
+plastic thing,,plastic thing,1,reliability
+marbles,,marble,0,reliability
+cloth? pillow?,,cloth? pillow?,1,reliability
+sticks?,,stick,1,reliability
+curtain?,,curtains,1,reliability
+window frame,,wall,1,reliability
+drawer,,drawer,0,reliability
+lid,,misc container lid,0,reliability
+bag clip,,clip,1,reliability
+machete,,knife,0,reliability
+woven grass,,woven grass,1,reliability
+reeds,,plant,1,reliability
+weaving grass,,woven grass,1,reliability
+succulent plant,,plant,0,reliability
+orange soda bottle,,soda,1,reliability
+metal sheet,,metal sheet,1,reliability
+object,,object,1,reliability
+crayons,,crayon,0,reliability
+metal fence,,fence,0,reliability
+cement wall,,cement wall,1,reliability
+white table leg,,table,0,reliability
+white door,,door,0,reliability
+white window,,window,0,reliability
+white chair,,chair,0,reliability
+glass bottle,,bottle,1,reliability
+wooden slate,,wood slat,0,reliability
+purple bubble blowing wand,,bubble wand,0,reliability
+blue toy,,toy,1,reliability
+wooden slates,,wood slat,0,reliability
+blue fabric,,fabric,1,reliability
+red stuffed bear,,teddy bear,0,reliability
+metal rod,,iron rod,1,reliability
+bottle of juice,,"juice, bottle",1,reliability
+black car,,car,1,reliability
+blue ball,,ball,0,reliability
+colored fabric,,fabric,1,reliability
+deflated yellow ball,,ball,0,reliability
+rubber ring,,rubber ring,1,reliability
+plastic water bottle,,water bottle,0,reliability
+bean pond,,bean,0,reliability
+toy,,toy,1,reliability
+yellow and orange rattle,,rattle,0,reliability
+wheelbarrow tire,,wheelbarrow,1,reliability
+foam crate,,foam crate,1,reliability
+green bucket,,bucket,1,reliability
+wooden house fram,,frame,0,reliability
+small object,,small object,1,reliability
+metal scaffolding,,iron scaffolding,1,reliability
+processed stick,,wood slat,1,reliability
+short,,shorts,1,reliability
+metal crowbar,,crowbar,0,reliability
+black basket,,plastic basket,1,reliability
+black wire,,wire,0,reliability
+metal sticks,,metal stick,1,reliability

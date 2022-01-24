@@ -4,6 +4,9 @@ library(tidyverse)
 annotations <- read_csv("data/all-annotations.csv")
 participants <- read_csv("data/metadata/participants.csv")
 
+# create not in operator
+`%notin%` <- Negate(`%in%`)
+
 # calculate duration between images
 durations <- read_csv("data/metadata/timestamps.csv") %>%
   arrange(sub_num, TimestampHMS) %>%
@@ -42,6 +45,19 @@ data.w.unsure <- raw.data %>%
          exclusion = ifelse(!is.na(from.unsure), exclusion.corrected, exclusion)) %>%
   select(-ends_with("corrected"))
 
+checked.unsure <- read_csv("data/manual-checks/unsure-objects.csv") %>%
+  mutate(exact.image = paste0(sub_num, "/", Image)) %>%
+  pull(exact.image)
+
+not.checked.unsure <- data.w.unsure %>%
+  filter(exclusion == "Unsure") %>%
+  mutate(exact.image = paste0(sub_num, "/", Image)) %>%
+  filter(exact.image %notin% checked.unsure)
+  
+if (nrow(not.checked.unsure > 0)) {
+  write_csv(not.checked.unsure, "data/manual-checks/new-unsure-objects.csv")
+}
+
 # replace immovable objects -----------------------------------------------
 # read in manually checked immovable objects
 immovable <- read_csv("data/manual-checks/immovable.csv") %>%
@@ -71,6 +87,19 @@ data.w.none <- data.w.immovable %>%
          exclusion = ifelse(!is.na(from.none), exclusion.corrected, exclusion)) %>%
   select(-ends_with("corrected"), -from.none)
 
+checked.none <- read_csv("data/manual-checks/no-objects.csv") %>%
+  mutate(exact.image = paste0(sub_num, "/", Image)) %>%
+  pull(exact.image)
+
+not.checked.none <- data.w.none %>%
+  filter(exclusion == "None") %>%
+  mutate(exact.image = paste0(sub_num, "/", Image)) %>%
+  filter(exact.image %notin% checked.none)
+
+if (nrow(not.checked.none > 0)) {
+  write_csv(not.checked.none, "data/manual-checks/new-no-objects.csv")
+}
+
 # add regularized labels --------------------------------------------------
 # determine if there are any objects that need regularized labels
 # if there are, write csv file with only these objects
@@ -84,8 +113,6 @@ data.w.objects <- data.w.none %>%
 regularized <- read_csv("data/manual-checks/labels.csv") %>%
   pull(Object) %>%
   unique()
-
-`%notin%` <- Negate(`%in%`)
 
 not.regularized <- data.w.objects %>%
   select(Object) %>%

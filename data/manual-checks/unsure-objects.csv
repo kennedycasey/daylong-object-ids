@@ -875,57 +875,57 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 035459.gif,NA,NA,MC,NA,NA,1,NA,4313
 035601.gif,NA,NA,MC,NA,NA,1,NA,4313
 083553.gif,NA,NA,MC,NA,NA,1,Synthetic,4313
-065252.gif,seafood,NA,MC,0,0,0,,5028
-065302.gif,seafood,NA,MC,0,0,0,,5028
-065313.gif,seafood,NA,MC,0,0,0,,5028
-065323.gif,seafood,NA,MC,0,0,0,,5028
-065346.gif,seafood,NA,MC,0,0,0,,5028
-065356.gif,seafood,NA,MC,0,0,0,,5028
-065401.gif,seafood,NA,MC,0,0,0,,5028
-065412.gif,seafood,NA,MC,0,0,0,,5028
-065422.gif,seafood,NA,MC,0,0,0,,5028
-065435.gif,seafood,NA,MC,0,0,0,,5028
-065445.gif,seafood,NA,MC,0,0,0,,5028
-065455.gif,seafood,NA,MC,0,0,0,,5028
-065507.gif,seafood,NA,MC,0,0,0,,5028
-065517.gif,seafood,NA,MC,0,0,0,,5028
-065528.gif,seafood,NA,MC,0,0,0,,5028
-065539.gif,seafood,NA,MC,0,0,0,,5028
-065549.gif,seafood,NA,MC,0,0,0,,5028
-065559.gif,seafood,NA,MC,0,0,0,,5028
-065612.gif,seafood,NA,MC,0,0,0,,5028
-065644.gif,seafood,NA,MC,0,0,0,,5028
-065654.gif,seafood,NA,MC,0,0,0,,5028
-065748.gif,seafood,NA,MC,0,0,0,,5028
-065935.gif,seafood,NA,MC,0,0,0,,5028
-065945.gif,seafood,NA,MC,0,0,0,,5028
-065958.gif,seafood,NA,MC,0,0,0,,5028
-070008.gif,seafood,NA,MC,0,0,0,,5028
-070018.gif,seafood,NA,MC,0,0,0,,5028
-070046.gif,seafood,NA,MC,0,0,0,,5028
-070055.gif,seafood,NA,MC,0,0,0,,5028
-070105.gif,seafood,NA,MC,0,0,0,,5028
-070116.gif,seafood,NA,MC,0,0,0,,5028
-070126.gif,seafood,NA,MC,0,0,0,,5028
-070137.gif,seafood,NA,MC,0,0,0,,5028
-070149.gif,seafood,NA,MC,0,0,0,,5028
-070159.gif,seafood,NA,MC,0,0,0,,5028
-070209.gif,seafood,NA,MC,0,0,0,,5028
-070221.gif,tuber,NA,MC,0,0,0,,5028
-070231.gif,tuber,NA,MC,0,0,0,,5028
-070241.gif,tuber,NA,MC,0,0,0,,5028
-070503.gif,tuber,NA,MC,0,0,0,,5028
-070701.gif,,NA,,,,,,5028
-070931.gif,,NA,,,,,,5028
-071308.gif,,NA,MC,0,0,1,Food,5028
-071352.gif,,NA,MC,0,0,0,Food,5028
-071402.gif,,NA,MC,0,0,0,Food,5028
+065252.gif,seafood,,MC,0,0,0,,5028
+065302.gif,seafood,,MC,0,0,0,,5028
+065313.gif,seafood,,MC,0,0,0,,5028
+065323.gif,seafood,,MC,0,0,0,,5028
+065346.gif,seafood,,MC,0,0,0,,5028
+065356.gif,seafood,,MC,0,0,0,,5028
+065401.gif,seafood,,MC,0,0,0,,5028
+065412.gif,seafood,,MC,0,0,0,,5028
+065422.gif,seafood,,MC,0,0,0,,5028
+065435.gif,seafood,,MC,0,0,0,,5028
+065445.gif,seafood,,MC,0,0,0,,5028
+065455.gif,seafood,,MC,0,0,0,,5028
+065507.gif,seafood,,MC,0,0,0,,5028
+065517.gif,seafood,,MC,0,0,0,,5028
+065528.gif,seafood,,MC,0,0,0,,5028
+065539.gif,seafood,,MC,0,0,0,,5028
+065549.gif,seafood,,MC,0,0,0,,5028
+065559.gif,seafood,,MC,0,0,0,,5028
+065612.gif,seafood,,MC,0,0,0,,5028
+065644.gif,seafood,,MC,0,0,0,,5028
+065654.gif,seafood,,MC,0,0,0,,5028
+065748.gif,seafood,,MC,0,0,0,,5028
+065935.gif,seafood,,MC,0,0,0,,5028
+065945.gif,seafood,,MC,0,0,0,,5028
+065958.gif,seafood,,MC,0,0,0,,5028
+070008.gif,seafood,,MC,0,0,0,,5028
+070018.gif,seafood,,MC,0,0,0,,5028
+070046.gif,seafood,,MC,0,0,0,,5028
+070055.gif,seafood,,MC,0,0,0,,5028
+070105.gif,seafood,,MC,0,0,0,,5028
+070116.gif,seafood,,MC,0,0,0,,5028
+070126.gif,seafood,,MC,0,0,0,,5028
+070137.gif,seafood,,MC,0,0,0,,5028
+070149.gif,seafood,,MC,0,0,0,,5028
+070159.gif,seafood,,MC,0,0,0,,5028
+070209.gif,seafood,,MC,0,0,0,,5028
+070221.gif,tuber,,MC,0,0,0,,5028
+070231.gif,tuber,,MC,0,0,0,,5028
+070241.gif,tuber,,MC,0,0,0,,5028
+070503.gif,tuber,,MC,0,0,0,,5028
+070701.gif,,,MC,0,0,1,,5028
+070931.gif,wall,,MC,0,0,0,,5028
+071308.gif,,,MC,0,0,1,Food,5028
+071352.gif,,,MC,0,0,0,Food,5028
+071402.gif,,,MC,0,0,0,Food,5028
 075051.gif,fabric,not enough info to determine clothing vs. blanket vs. misc fabric,KC,0,0,0,,5028
 075101.gif,fabric,not enough info to determine clothing vs. blanket vs. misc fabric,KC,0,0,0,,5028
 080942.gif,fabric,not enough info to determine clothing vs. blanket vs. misc fabric,KC,0,0,0,,5028
 080954.gif,fabric,not enough info to determine clothing vs. blanket vs. misc fabric,KC,0,0,0,,5028
 081222.gif,water bin,hand washing context,KC,0,0,0,,5028
-081647.gif,,,,,,,,5028
+081647.gif,floor,,MC,0,0,0,,5028
 082656.gif,betelnut,,MC,0,0,0,,5028
 082706.gif,betelnut,,MC,0,0,0,,5028
 082728.gif,betelnut,,MC,0,0,0,,5028
@@ -933,8 +933,8 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 082823.gif,betelnut,,MC,0,0,0,,5028
 083353.gif,pot,,MC,0,0,0,,5028
 083435.gif,pot,,MC,0,0,0,,5028
-085513.gif,,,,,,,,5028
-085523.gif,,,,,,,,5028
+085513.gif,wall,,MC,0,0,0,,5028
+085523.gif,wall,,MC,0,0,0,,5028
 085723.gif,broom bristle,,MC,0,0,0,,5028
 085733.gif,broom bristle,,MC,0,0,0,,5028
 085836.gif,broom bristle,,MC,0,0,0,,5028
@@ -942,8 +942,8 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 090003.gif,broom bristle,,MC,0,0,0,,5028
 090013.gif,broom bristle,,MC,0,0,0,,5028
 090213.gif,broom bristle,,MC,0,0,0,,5028
-091326.gif,,,,,,,,5028
-091338.gif,,,,,,,,5028
+091326.gif,wall,,MC,0,0,0,,5028
+091338.gif,wall,,MC,0,0,0,,5028
 091744.gif,broom bristle,,MC,0,0,0,,5028
 091805.gif,broom bristle,,MC,0,0,0,,5028
 091815.gif,broom bristle,,MC,0,0,0,,5028
@@ -982,17 +982,17 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 094234.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
 094244.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
 094254.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-094338.gif,,,,,,,,5028
-095248.gif,,,,,,,,5028
-095443.gif,,,,,,,,5028
-095453.gif,,,,,,,,5028
-095525.gif,,,,,,,,5028
+094338.gif,wall,,MC,0,0,0,,5028
+095248.gif,,,MC,0,0,1,Natural,5028
+095443.gif,veranda,,MC,0,0,0,,5028
+095453.gif,floor,,MC,0,0,0,,5028
+095525.gif,floor,,MC,0,0,0,,5028
 100025.gif,rock,,KC,0,0,0,,5028
 100248.gif,,,KC,1,0,0,,5028
 100258.gif,,,KC,1,0,0,,5028
 100331.gif,,,KC,1,0,0,,5028
-100434.gif,,,,,,,,5028
-101451.gif,,,,,,,,5028
+100434.gif,house pile,,MC,0,0,0,,5028
+101451.gif,dog,,MC,0,0,0,,5028
 103122.gif,cat,,MC,0,0,0,,5028
 103139.gif,tuber,,KC,0,0,0,,5028
 103149.gif,tuber,,KC,0,0,0,,5028
@@ -1001,10 +1001,10 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 103221.gif,tuber,,KC,0,0,0,,5028
 103556.gif,sago,,KC,0,0,0,,5028
 103612.gif,sago,,KC,0,0,0,,5028
-104532.gif,,,,,,,,5028
-104542.gif,,,,,,,,5028
-104554.gif,,,,,,,,5028
-064754.gif,,,,,,,,7159
+104532.gif,wall,,MC,0,0,0,,5028
+104542.gif,wall,,MC,0,0,0,,5028
+104554.gif,wall,,MC,0,0,0,,5028
+064754.gif,wall,,MC,0,0,0,,7159
 065159.gif,seafood,,KC,0,0,0,,7159
 065209.gif,seafood,,KC,0,0,0,,7159
 065219.gif,seafood,,KC,0,0,0,,7159
@@ -1021,14 +1021,14 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 065435.gif,seafood,,KC,0,0,0,,7159
 065517.gif,seafood,,KC,0,0,0,,7159
 065528.gif,seafood,,KC,0,0,0,,7159
-065538.gif,,,,,,,,7159
+065538.gif,seafood,,KC,0,0,0,,7159
 065610.gif,seafood,,KC,0,0,0,,7159
 065737.gif,seafood,,KC,0,0,0,,7159
 065747.gif,seafood,,KC,0,0,0,,7159
 065757.gif,seafood,,KC,0,0,0,,7159
-065821.gif,,surrounded by seafood,,,,,,7159
-065831.gif,,surrounded by seafood,,,,,,7159
-065903.gif,,surrounded by seafood,,,,,,7159
+065821.gif,,,MC,0,0,1,Food,7159
+065831.gif,,,MC,0,0,1,Food,7159
+065903.gif,,,MC,0,0,1,Food,7159
 065956.gif,seafood,,KC,0,0,0,,7159
 070006.gif,seafood,,KC,0,0,0,,7159
 070019.gif,seafood,,KC,0,0,0,,7159
@@ -1056,16 +1056,16 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 070414.gif,seafood,,KC,0,0,0,,7159
 070424.gif,seafood,,KC,0,0,0,,7159
 070435.gif,seafood,,KC,0,0,0,,7159
-070445.gif,,,,,,,,7159
-070456.gif,,,,,,,,7159
-070508.gif,,,,,,,,7159
-070518.gif,,,,,,,,7159
-070528.gif,,,,,,,,7159
-070540.gif,,,,,,,,7159
-070550.gif,,,,,,,,7159
-070555.gif,,,,,,,,7159
-070605.gif,,,,,,,,7159
-070616.gif,,,,,,,,7159
+070445.gif,,,MC,0,0,1,Food,7159
+070456.gif,seafood,,KC,0,0,0,,7159
+070508.gif,seafood,,KC,0,0,0,,7159
+070518.gif,seafood,,KC,0,0,0,,7159
+070528.gif,seafood,,KC,0,0,0,,7159
+070540.gif,seafood,,KC,0,0,0,,7159
+070550.gif,seafood,,KC,0,0,0,,7159
+070555.gif,seafood,,KC,0,0,0,,7159
+070605.gif,seafood,,KC,0,0,0,,7159
+070616.gif,seafood,,KC,0,0,0,,7159
 070628.gif,seafood,,KC,0,0,0,,7159
 070638.gif,seafood,,KC,0,0,0,,7159
 070648.gif,seafood,,KC,0,0,0,,7159
@@ -1109,41 +1109,41 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 081143.gif,sago,,MC,0,0,0,,7159
 081153.gif,sago,,MC,0,0,0,,7159
 081204.gif,sago,,MC,0,0,0,,7159
-081457.gif,,,,,,,,7159
-081544.gif,,,,,,,,7159
-081752.gif,,,,,,,,7159
-081802.gif,,,,,,,,7159
-082534.gif,,,,,,,,7159
-085341.gif,,,,,,,,7159
-085759.gif,,,,,,,,7159
-090008.gif,,,,,,,,7159
-090014.gif,,,,,,,,7159
-092251.gif,,,,,,,,7159
-092301.gif,,,,,,,,7159
-092313.gif,,,,,,,,7159
-092323.gif,,,,,,,,7159
-092333.gif,,,,,,,,7159
+081457.gif,shelf,,MC,0,0,0,,7159
+081544.gif,shelf,,MC,0,0,0,,7159
+081752.gif,floor,,MC,0,0,0,,7159
+081802.gif,floor,,MC,0,0,0,,7159
+082534.gif,mosquito net,,MC,0,0,0,,7159
+085341.gif,floor,,MC,0,0,0,,7159
+085759.gif,,,MC,0,0,1,Natural,7159
+090008.gif,,,MC,0,0,1,Synthetic,7159
+090014.gif,floor,,MC,0,0,0,,7159
+092251.gif,phone,,MC,0,0,0,,7159
+092301.gif,phone,,MC,0,0,0,,7159
+092313.gif,,,MC,0,0,1,,7159
+092323.gif,,,MC,0,0,1,,7159
+092333.gif,phone,,MC,0,0,0,,7159
 092641.gif,broom bristle,,MC,0,0,0,,7159
 092702.gif,broom bristle,,MC,0,0,0,,7159
 092712.gif,broom bristle,,MC,0,0,0,,7159
 092722.gif,broom bristle,,MC,0,0,0,,7159
-095628.gif,,,,,,,,7159
-100150.gif,,,,,,,,7159
-111846.gif,,,,,,,,7159
-112001.gif,,,,,,,,7159
-112011.gif,,,,,,,,7159
+095628.gif,veranda,,MC,0,0,0,,7159
+100150.gif,firewood,,MC,0,0,0,,7159
+111846.gif,vest,,MC,0,0,0,,7159
+112001.gif,wall,,MC,0,0,0,,7159
+112011.gif,wall,,MC,0,0,0,,7159
 060747.gif,shirt,,KC,0,0,0,,1902
-061533.gif,,,,,,,,1902
-061550.gif,,,,,,,,1902
-061708.gif,,,,,,,,1902
-065207.gif,,,,,,,,1902
-065222.gif,,,,,,,,1902
-065240.gif,,,,,,,,1902
-065255.gif,,,,,,,,1902
-065311.gif,,,,,,,,1902
-065327.gif,,,,,,,,1902
-065342.gif,,,,,,,,1902
-065357.gif,,,,,,,,1902
+061533.gif,wall,,MC,0,0,0,,1902
+061550.gif,wall,,MC,0,0,0,,1902
+061708.gif,bag,,MC,0,0,0,,1902
+065207.gif,wall,,MC,0,0,0,,1902
+065222.gif,wall,,MC,0,0,0,,1902
+065240.gif,wall,,MC,0,0,0,,1902
+065255.gif,wall,,MC,0,0,0,,1902
+065311.gif,wall,,MC,0,0,0,,1902
+065327.gif,wall,,MC,0,0,0,,1902
+065342.gif,wall,,MC,0,0,0,,1902
+065357.gif,wall,,MC,0,0,0,,1902
 065549.gif,money,,MC,0,0,0,,1902
 065604.gif,money,,MC,0,0,0,,1902
 065652.gif,money,,MC,0,0,0,,1902
@@ -1155,7 +1155,7 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 070103.gif,money,,MC,0,0,0,,1902
 070120.gif,chick,,KC,0,0,0,,1902
 070714.gif,chick,,KC,0,0,0,,1902
-070912.gif,,,,,,,,1902
+070912.gif,wall,,MC,0,0,0,,1902
 071123.gif,"money, skirt",,MC/KC,0,0,0,,1902
 071210.gif,money,,MC,0,0,0,,1902
 071225.gif,money,,MC,0,0,0,,1902
@@ -1165,12 +1165,12 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 071329.gif,money,,MC,0,0,0,,1902
 071344.gif,money,,MC,0,0,0,,1902
 071431.gif,money,,MC,0,0,0,,1902
-073630.gif,,,,,,,,1902
-073717.gif,,,,,,,,1902
-073734.gif,,,,,,,,1902
-074111.gif,,,,,,,,1902
-074144.gif,,,,,,,,1902
-074549.gif,,,,,,,,1902
+073630.gif,safety pin,,MC,0,0,0,,1902
+073717.gif,safety pin,,MC,0,0,0,,1902
+073734.gif,safety pin,,MC,0,0,0,,1902
+074111.gif,fishing debrris,,MC,0,0,0,,1902
+074144.gif,fishing debrris,,MC,0,0,0,,1902
+074549.gif,fishnet,,MC,0,0,0,,1902
 074621.gif,money,,MC,0,0,0,,1902
 074636.gif,money,,MC,0,0,0,,1902
 074652.gif,money,,MC,0,0,0,,1902
@@ -1208,12 +1208,12 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 091412.gif,sugarcane,,KC,0,0,0,,1902
 091459.gif,sugarcane,,KC,0,0,0,,1902
 091650.gif,fruit (unknown variety),,KC,0,0,0,,1902
-091911.gif,,,,,,,,1902
-091927.gif,,,,,,,,1902
-091936.gif,,,,,,,,1902
-091951.gif,,,,,,,,1902
-092007.gif,,,,,,,,1902
-092625.gif,,,,,,,,1902
+091911.gif,,,MC,0,0,1,Food,1902
+091927.gif,,,MC,0,0,1,Food,1902
+091936.gif,,,MC,0,0,1,Food,1902
+091951.gif,,,MC,0,0,1,Food,1902
+092007.gif,,,MC,0,0,1,Food,1902
+092625.gif,wall,,MC,0,0,0,,1902
 093726.gif,tuber,,KC,0,0,0,,1902
 093743.gif,tuber,,KC,0,0,0,,1902
 093758.gif,tuber,,KC,0,0,0,,1902
@@ -1230,23 +1230,23 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 094658.gif,tuber,,KC,0,0,0,,1902
 094713.gif,tuber,,KC,0,0,0,,1902
 094800.gif,tuber,,KC,0,0,0,,1902
-095155.gif,,,,,,,,1902
-095228.gif,,,,,,,,1902
-095243.gif,,,,,,,,1902
-110609.gif,,,,,,,,1902
-110624.gif,,,,,,,,1902
-111239.gif,,,,,,,,1902
-111256.gif,,,,,,,,1902
-111518.gif,,,,,,,,1902
-111636.gif,,,,,,,,1902
-111653.gif,,,,,,,,1902
-111708.gif,,,,,,,,1902
-113105.gif,,,,,,,,1902
+095155.gif,bottle cap,cap functioning as a cup,MC/KC,0,0,0,,1902
+095228.gif,"bottle cap, drinking water",,MC/KC,0,0,0,,1902
+095243.gif,"bottle cap, drinking water",,MC/KC,0,0,0,,1902
+110609.gif,hammock,,MC,0,0,0,,1902
+110624.gif,veranda,,MC,0,0,0,,1902
+111239.gif,hammock,,MC,0,0,0,,1902
+111256.gif,hammock,,MC,0,0,0,,1902
+111518.gif,hammock,,MC,0,0,0,,1902
+111636.gif,hammock,,MC,0,0,0,,1902
+111653.gif,hammock,,MC,0,0,0,,1902
+111708.gif,hammock,,MC,0,0,0,,1902
+113105.gif,hammock,,MC,0,0,0,,1902
 133334.gif,tuber,,KC,0,0,0,,1902
 134202.gif,tuber,,KC,0,0,0,,1902
 134217.gif,tuber,,KC,0,0,0,,1902
 134234.gif,tuber,,KC,0,0,0,,1902
-134249.gif,,,,,,,,1902
+134249.gif,,,MC,0,0,1,Food,1902
 134744.gif,bottle cap,,KC,0,0,0,,1902
 135315.gif,tuber,,KC,0,0,0,,1902
 064041.gif,candy,,KC,0,0,0,,6792
@@ -1331,20 +1331,20 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 105243.gif,baby bathtub,,MC,0,0,0,,7528
 105842.gif,,,KC,1,0,0,,7528
 105930.gif,,,KC,1,0,0,,7528
-115131.gif,,,,,,,,7528
-115146.gif,,,,,,,,7528
-115204.gif,,,,,,,,7528
-115219.gif,,,,,,,,7528
-115251.gif,,,,,,,,7528
-115306.gif,,,,,,,,7528
-115321.gif,,,,,,,,7528
-115338.gif,,,,,,,,7528
-115353.gif,,,,,,,,7528
-120220.gif,,,,,,,,7528
+115131.gif,floor,,MC,0,0,0,,7528
+115146.gif,floor,,MC,0,0,0,,7528
+115204.gif,floor,,MC,0,0,0,,7528
+115219.gif,floor,,MC,0,0,0,,7528
+115251.gif,floor,,MC,0,0,0,,7528
+115306.gif,floor,,MC,0,0,0,,7528
+115321.gif,floor,,MC,0,0,0,,7528
+115338.gif,floor,,MC,0,0,0,,7528
+115353.gif,floor,,MC,0,0,0,,7528
+120220.gif,floor,,MC,0,0,0,,7528
 123920.gif,fruit (unknown variety),,KC,0,0,0,,7528
 125510.gif,,,MC,0,0,1,,7528
 125525.gif,,,MC,0,0,1,,7528
-125953.gif,,,,,,,,7528
+125953.gif,clothing,unsure what type,MC,0,0,0,,7528
 132124.gif,stick,,KC,0,0,0,,7528
 132618.gif,stick,,KC,0,0,0,,7528
 132927.gif,mat,,KC,0,0,0,,7528
@@ -1362,10 +1362,10 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 070813.gif,taffy,,MC/KC,0,0,0,,2195
 070846.gif,taffy,,MC/KC,0,0,0,,2195
 071637.gif,taffy,,MC/KC,0,0,0,,2195
-071906.gif,,,,,,,,2195
+071906.gif,veranda,,MC,0,0,0,,2195
 082226.gif,,,KC,0,0,0,,2195
 082241.gif,,,KC,0,0,0,,2195
-082501.gif,,,,,,,,2195
+082501.gif,veranda,,MC,0,0,0,,2195
 082908.gif,,,KC,1,0,0,,2195
 082955.gif,mumu'd tuber paste,,MC,0,0,0,,2195
 083010.gif,mumu'd tuber paste,,MC,0,0,0,,2195
@@ -1374,125 +1374,125 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 083058.gif,mumu'd tuber paste,,MC,0,0,0,,2195
 083113.gif,mumu'd tuber paste,,MC,0,0,0,,2195
 083129.gif,mumu'd tuber paste,,MC,0,0,0,,2195
-092257.gif,,,,,,,,2195
-092532.gif,,,,,,,,2195
-092738.gif,,,,,,,,2195
-092753.gif,,,,,,,,2195
-094021.gif,,,,,,,,2195
-094036.gif,,,,,,,,2195
-094608.gif,,,,,,,,2195
-095356.gif,,,,,,,,2195
-095411.gif,,,,,,,,2195
-102623.gif,,,,,,,,2195
-102641.gif,,,,,,,,2195
-102656.gif,,,,,,,,2195
+092257.gif,veranda,,MC,0,0,0,,2195
+092532.gif,marble,,MC,0,0,0,,2195
+092738.gif,marble,,MC,0,0,0,,2195
+092753.gif,marble,,MC,0,0,0,,2195
+094021.gif,marble,,MC,0,0,0,,2195
+094036.gif,marble,,MC,0,0,0,,2195
+094608.gif,marble,,MC,0,0,0,,2195
+095356.gif,,,MC,0,0,1,Synthetic,2195
+095411.gif,,,MC,0,0,1,Synthetic,2195
+102623.gif,marble,,MC,0,0,0,,2195
+102641.gif,marble,,MC,0,0,0,,2195
+102656.gif,marble,,MC,0,0,0,,2195
 102728.gif,weaving grass,,KC,0,0,0,,2195
 102743.gif,weaving grass,,KC,0,0,0,,2195
 103705.gif,table,,KC,0,0,0,,2195
-104330.gif,,,,,,,,2195
-104503.gif,,,,,,,,2195
-104522.gif,,,,,,,,2195
-104537.gif,,,,,,,,2195
-104552.gif,,,,,,,,2195
-104609.gif,,,,,,,,2195
-104639.gif,,,,,,,,2195
-111202.gif,,,,,,,,2195
-111234.gif,,,,,,,,2195
-112652.gif,,,,,,,,2195
-113442.gif,,,,,,,,2195
-113457.gif,,,,,,,,2195
-113736.gif,,,,,,,,2195
-113751.gif,,,,,,,,2195
-113853.gif,,,,,,,,2195
-113925.gif,,,,,,,,2195
-113940.gif,,,,,,,,2195
-113957.gif,,,,,,,,2195
-114219.gif,,,,,,,,2195
-114234.gif,,,,,,,,2195
-114337.gif,,,,,,,,2195
-114423.gif,,,,,,,,2195
-114456.gif,,,,,,,,2195
-114542.gif,,,,,,,,2195
-114731.gif,,,,,,,,2195
-115709.gif,,,,,,,,2195
-120343.gif,,,,,,,,2195
-120604.gif,,,,,,,,2195
-120752.gif,,,,,,,,2195
-121951.gif,,,,,,,,2195
-122727.gif,,,,,,,,2195
-122916.gif,,,,,,,,2195
-123423.gif,,,,,,,,2195
-124957.gif,,,,,,,,2195
-125012.gif,,,,,,,,2195
-125028.gif,,,,,,,,2195
-125043.gif,,,,,,,,2195
-125131.gif,,,,,,,,2195
-125146.gif,,,,,,,,2195
-130045.gif,,,,,,,,2195
-130418.gif,,,,,,,,2195
-130844.gif,,,,,,,,2195
-130932.gif,,,,,,,,2195
-131051.gif,,,,,,,,2195
-131153.gif,,,,,,,,2195
-132757.gif,,,,,,,,2195
-132812.gif,,,,,,,,2195
+104330.gif,,,MC,0,0,1,,2195
+104503.gif,"sugarcane, knife",,MC,0,0,0,,2195
+104522.gif,"sugarcane, knife",,MC,0,0,0,,2195
+104537.gif,"sugarcane, knife",,MC,0,0,0,,2195
+104552.gif,"sugarcane, knife",,MC,0,0,0,,2195
+104609.gif,"sugarcane, knife",,MC,0,0,0,,2195
+104639.gif,,,MC,0,0,0,,2195
+111202.gif,coconut scraper,,MC,0,0,0,,2195
+111234.gif,coconut scraper,,MC,0,0,0,,2195
+112652.gif,,,MC,0,0,1,,2195
+113442.gif,"coconut, banana",,MC,0,0,0,,2195
+113457.gif,"coconut, banana",,MC,0,0,0,,2195
+113736.gif,nut,,MC,0,0,0,,2195
+113751.gif,coconut scraper,,MC,0,0,0,,2195
+113853.gif,,,MC,0,0,1,,2195
+113925.gif,"coconut, banana",,MC,0,0,0,,2195
+113940.gif,banana,,MC,0,0,0,,2195
+113957.gif,banana,,MC,0,0,0,,2195
+114219.gif,"coconut, banana",,MC,0,0,0,,2195
+114234.gif,banana,,MC,0,0,0,,2195
+114337.gif,"coconut, banana",,MC,0,0,0,,2195
+114423.gif,spoon,,MC,0,0,0,,2195
+114456.gif,"coconut, banana",,MC,0,0,0,,2195
+114542.gif,,,MC,0,0,1,,2195
+114731.gif,rope,,MC,0,0,0,,2195
+115709.gif,,,MC,0,0,1,Natural,2195
+120343.gif,,,MC,0,0,1,Natural,2195
+120604.gif,,,MC,0,0,1,Natural,2195
+120752.gif,,,MC,0,0,1,Natural,2195
+121951.gif,"wire, lightbulb",,MC,0,0,0,,2195
+122727.gif,"wash basin, clothing",,MC,0,0,0,,2195
+122916.gif,clothing,,MC,0,0,0,,2195
+123423.gif,wall,,MC,0,0,0,,2195
+124957.gif,hammock,,MC,0,0,0,,2195
+125012.gif,wall,,MC,0,0,0,,2195
+125028.gif,wall,,MC,0,0,0,,2195
+125043.gif,wall,,MC,0,0,0,,2195
+125131.gif,wall,,MC,0,0,0,,2195
+125146.gif,hammock,,MC,0,0,0,,2195
+130045.gif,leaf,,MC,0,0,0,,2195
+130418.gif,house pile,,MC,0,0,0,,2195
+130844.gif,knife,,MC,0,0,0,,2195
+130932.gif,veranda,,MC,0,0,0,,2195
+131051.gif,,,MC,0,0,1,Synthetic,2195
+131153.gif,,,MC,0,0,1,,2195
+132757.gif,floor,,MC,0,0,0,,2195
+132812.gif,"bowl, trash",,MC,0,0,0,,2195
 133019.gif,weaving grass,,KC,0,0,0,,2195
 133959.gif,broom bristle,,MC/KC,0,0,0,,2195
 140618.gif,broom bristle,,MC/KC,0,0,0,,2195
-141148.gif,,,,,,,,2195
-141251.gif,,,,,,,,2195
-141310.gif,,,,,,,,2195
-141340.gif,,,,,,,,2195
-141532.gif,,,,,,,,2195
-141618.gif,,,,,,,,2195
-141634.gif,,,,,,,,2195
-072610.gif,,,,,,,,8779
-072949.gif,,,,,,,,8779
-073004.gif,,,,,,,,8779
-074156.gif,,,,,,,,8779
-074416.gif,,,,,,,,8779
-074446.gif,,,,,,,,8779
-074503.gif,,,,,,,,8779
-074533.gif,,,,,,,,8779
-093431.gif,,,,,,,,8779
-095055.gif,,,,,,,,8779
-111043.gif,,,,,,,,8779
-111703.gif,,,,,,,,8779
-111718.gif,,,,,,,,8779
-111734.gif,,,,,,,,8779
-112057.gif,,,,,,,,8779
-112107.gif,,,,,,,,8779
-112840.gif,,,,,,,,8779
-112856.gif,,,,,,,,8779
-112911.gif,,,,,,,,8779
-112926.gif,,,,,,,,8779
-112943.gif,,,,,,,,8779
-113013.gif,,,,,,,,8779
-113031.gif,,,,,,,,8779
-113046.gif,,,,,,,,8779
-113118.gif,,,,,,,,8779
-113305.gif,,,,,,,,8779
-113438.gif,,,,,,,,8779
-123618.gif,,,,,,,,8779
-123704.gif,,,,,,,,8779
-123719.gif,,,,,,,,8779
-125905.gif,,,,,,,,8779
-130038.gif,,,,,,,,8779
-130054.gif,,,,,,,,8779
-131543.gif,,,,,,,,8779
-131559.gif,,,,,,,,8779
-133024.gif,,,,,,,,8779
-133300.gif,,,,,,,,8779
-135146.gif,,,,,,,,8779
-135301.gif,,,,,,,,8779
+141148.gif,veranda,,MC,0,0,0,,2195
+141251.gif,veranda,,MC,0,0,0,,2195
+141310.gif,veranda,,MC,0,0,0,,2195
+141340.gif,veranda,,MC,0,0,0,,2195
+141532.gif,veranda,,MC,0,0,0,,2195
+141618.gif,broom bristle,,MC/KC,0,0,0,,2195
+141634.gif,broom bristle,,MC/KC,0,0,0,,2195
+072610.gif,unknown,,MC,0,0,1,,8779
+072949.gif,unknown,,MC,0,0,1,,8779
+073004.gif,unknown,,MC,0,0,1,,8779
+074156.gif,veranda,,MC,0,0,0,,8779
+074416.gif,veranda,,MC,0,0,0,,8779
+074446.gif,veranda,,MC,0,0,0,,8779
+074503.gif,veranda,,MC,0,0,0,,8779
+074533.gif,floor,,MC,0,0,0,,8779
+093431.gif,clothing,unsure,MC,0,0,0,,8779
+095055.gif,wall,,MC,0,0,0,,8779
+111043.gif,,,MC,0,0,1,,8779
+111703.gif,veranda,,MC,0,0,0,,8779
+111718.gif,towel,,MC,0,0,0,,8779
+111734.gif,,,MC,0,0,1,Food,8779
+112057.gif,wall,,MC,0,0,0,,8779
+112107.gif,wall,,MC,0,0,0,,8779
+112840.gif,nut,,MC,0,0,0,,8779
+112856.gif,"nut, rock",,MC,0,0,0,,8779
+112911.gif,"nut, rock",,MC,0,0,0,,8779
+112926.gif,"nut, rock",,MC,0,0,0,,8779
+112943.gif,"nut, rock",,MC,0,0,0,,8779
+113013.gif,nut,,MC,0,0,0,,8779
+113031.gif,nut,,MC,0,0,0,,8779
+113046.gif,nut,,MC,0,0,0,,8779
+113118.gif,"nut, rock",,MC,0,0,0,,8779
+113305.gif,nut,,MC,0,0,0,,8779
+113438.gif,nut,,MC,0,0,0,,8779
+123618.gif,,,MC,0,0,1,Natural,8779
+123704.gif,bucket,bucket is full of water,MC,0,0,0,,8779
+123719.gif,bucket,bucket is full of water,MC,0,0,0,,8779
+125905.gif,,,MC,0,0,1,Food,8779
+130038.gif,,,MC,0,0,1,Food,8779
+130054.gif,,,MC,0,0,1,Food,8779
+131543.gif,,,MC,0,0,1,Natural,8779
+131559.gif,,,MC,0,0,1,,8779
+133024.gif,,,MC,0,0,1,,8779
+133300.gif,wood shavings,,MC,0,0,0,,8779
+135146.gif,broom,,MC,0,0,0,,8779
+135301.gif,,,MC,0,0,1,Synthetic,8779
 135316.gif,woven basket,,KC,0,0,0,,8779
-141057.gif,,,,,,,,8779
-141203.gif,,,,,,,,8779
-064304.gif,,,,,,,,2789
-064320.gif,,,,,,,,2789
-065719.gif,,,,,,,,2789
-065736.gif,,,,,,,,2789
-070418.gif,,,,,,,,2789
+141057.gif,,,MC,0,0,1,,8779
+141203.gif,wall,,MC,0,0,0,,8779
+064304.gif,,,MC,0,0,1,Synthetic,2789
+064320.gif,,,MC,0,0,1,,2789
+065719.gif,wall,,MC,0,0,0,,2789
+065736.gif,wall,,MC,0,0,0,,2789
+070418.gif,grass,,MC,0,0,0,,2789
 093344.gif,seafood,,KC,0,0,0,,2789
 093415.gif,seafood,,KC,0,0,0,,2789
 093431.gif,seafood,,KC,0,0,0,,2789
@@ -1501,17 +1501,17 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 093619.gif,seafood,,KC,0,0,0,,2789
 093634.gif,seafood,,KC,0,0,0,,2789
 093649.gif,seafood,,KC,0,0,0,,2789
-105134.gif,,,,,,,,2789
-105749.gif,,,,,,,,2789
-110419.gif,,,,,,,,2789
-114318.gif,,,,,,,,2789
-114404.gif,,,,,,,,2789
-114903.gif,,,,,,,,2789
+105134.gif,wooden board,,MC,0,0,0,,2789
+105749.gif,floor,,MC,0,0,0,,2789
+110419.gif,trash,spit,MC,0,0,0,,2789
+114318.gif,seed,,MC,0,0,0,,2789
+114404.gif,seed,,MC,0,0,0,,2789
+114903.gif,nut,,MC,0,0,0,,2789
 120025.gif,stick,,KC,0,0,0,,2789
 120042.gif,stick,,KC,0,0,0,,2789
 120057.gif,stick,,KC,0,0,0,,2789
-124701.gif,,,,,,,,2789
-124803.gif,,,,,,,,2789
+124701.gif,trash,nut husk,MC,0,0,0,,2789
+124803.gif,trash,nut husk,MC,0,0,0,,2789
 133147.gif,branch,,KC,0,0,0,,2789
 134421.gif,rope,,KC,0,0,0,,2789
 135504.gif,bowl,,KC,0,0,0,,2789
@@ -1519,11 +1519,11 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 140459.gif,tongs,,KC,0,0,0,,2789
 140514.gif,tongs,,KC,0,0,0,,2789
 140529.gif,bowl,,KC,0,0,0,,2789
-140941.gif,,,,,,,,2789
-141046.gif,,,,,,,,2789
-141116.gif,,,,,,,,2789
-141132.gif,,,,,,,,2789
-141558.gif,,,,,,,,2789
+140941.gif,,,MC,0,0,1,Food,2789
+141046.gif,floor,,MC,0,0,0,,2789
+141116.gif,floor,,MC,0,0,0,,2789
+141132.gif,,,MC,0,0,1,,2789
+141558.gif,floor,,MC,0,0,0,,2789
 142034.gif,ball,,KC,0,0,0,,2789
 142049.gif,ball,,KC,0,0,0,,2789
 142154.gif,ball,,KC,0,0,0,,2789
@@ -1550,12 +1550,12 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 075046.gif,metal fragment,,KC,0,0,0,,3856
 075102.gif,,,KC,1,0,0,,3856
 081947.gif,,,KC,1,0,0,,3856
-092446.gif,,,,,,,,3856
-092605.gif,,,,,,,,3856
-093612.gif,,,,,,,,3856
+092446.gif,,,MC,0,0,1,Synthetic,3856
+092605.gif,,,MC,0,0,1,Synthetic,3856
+093612.gif,,,MC,0,0,1,Synthetic,3856
 120629.gif,rubber bracelet,,KC,0,0,0,,3856
-123159.gif,,,,,,,,3856
-123350.gif,,,,,,,,3856
+123159.gif,water jug,,MC,0,0,0,,3856
+123350.gif,water jug,,MC,0,0,0,,3856
 124252.gif,,,KC,1,0,0,,3856
 124307.gif,,,KC,1,0,0,,3856
 125127.gif,stick,,KC,0,0,0,,3856
@@ -1565,145 +1565,145 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 140423.gif,,,KC,1,0,0,,3856
 140454.gif,,,KC,1,0,0,,3856
 140509.gif,,,KC,1,0,0,,3856
-140526.gif,,,,,,,,3856
-140541.gif,,,,,,,,3856
-140556.gif,,,,,,,,3856
-140933.gif,,,,,,,,3856
+140526.gif,toothbrush,,MC,0,0,0,,3856
+140541.gif,toothbrush,,MC,0,0,0,,3856
+140556.gif,toothbrush,,MC,0,0,0,,3856
+140933.gif,"toothbrush, coconut",,MC/KC,0,0,0,,3856
 142733.gif,coconut,,KC,0,0,0,,3856
 142748.gif,coconut,,KC,0,0,0,,3856
 143024.gif,lantern,,KC,0,0,0,,3856
-071729.gif,,,,,,,,3124
-071832.gif,,,,,,,,3124
-071847.gif,,,,,,,,3124
-072005.gif,,,,,,,,3124
-073453.gif,,,,,,,,3124
-074259.gif,,,,,,,,3124
-074331.gif,,,,,,,,3124
-074346.gif,,,,,,,,3124
-074458.gif,,,,,,,,3124
-074838.gif,,,,,,,,3124
-074853.gif,,,,,,,,3124
-075247.gif,,,,,,,,3124
-080641.gif,,,,,,,,3124
-080902.gif,,,,,,,,3124
-080917.gif,,,,,,,,3124
-081857.gif,,,,,,,,3124
-081915.gif,,,,,,,,3124
-082516.gif,,,,,,,,3124
-083250.gif,,,,,,,,3124
-083309.gif,,,,,,,,3124
-083504.gif,,,,,,,,3124
-083519.gif,,,,,,,,3124
-083536.gif,,,,,,,,3124
-083551.gif,,,,,,,,3124
-083606.gif,,,,,,,,3124
-083624.gif,,,,,,,,3124
-083639.gif,,,,,,,,3124
-083654.gif,,,,,,,,3124
-083710.gif,,,,,,,,3124
-083740.gif,,,,,,,,3124
-083812.gif,,,,,,,,3124
-083827.gif,,,,,,,,3124
-090305.gif,,,,,,,,3124
-090335.gif,,,,,,,,3124
-092410.gif,,,,,,,,3124
-092426.gif,,,,,,,,3124
-092614.gif,,,,,,,,3124
-092630.gif,,,,,,,,3124
-092645.gif,,,,,,,,3124
-093400.gif,,,,,,,,3124
-093517.gif,,,,,,,,3124
-093709.gif,,,,,,,,3124
-094409.gif,,,,,,,,3124
-094713.gif,,,,,,,,3124
-094728.gif,,,,,,,,3124
-095021.gif,,,,,,,,3124
-095223.gif,,,,,,,,3124
-095341.gif,,,,,,,,3124
-100417.gif,,,,,,,,3124
-100432.gif,,,,,,,,3124
-100448.gif,,,,,,,,3124
-100518.gif,,,,,,,,3124
-100827.gif,,,,,,,,3124
-101044.gif,,,,,,,,3124
-101201.gif,,,,,,,,3124
-102737.gif,,,,,,,,3124
-102752.gif,,,,,,,,3124
-102852.gif,,,,,,,,3124
-102907.gif,,,,,,,,3124
+071729.gif,shirt,,MC,0,0,0,,3124
+071832.gif,shirt,,MC,0,0,0,,3124
+071847.gif,shirt,,MC,0,0,0,,3124
+072005.gif,shirt,,MC,0,0,0,,3124
+073453.gif,shirt,,MC,0,0,0,,3124
+074259.gif,lighter,,MC,0,0,0,,3124
+074331.gif,lighter,,MC,0,0,0,,3124
+074346.gif,lighter,,MC,0,0,0,,3124
+074458.gif,lighter,,MC,0,0,0,,3124
+074838.gif,,,MC,0,0,1,,3124
+074853.gif,shirt,,MC,0,0,0,,3124
+075247.gif,stairs,,MC,0,0,0,,3124
+080641.gif,stairs,,MC,0,0,0,,3124
+080902.gif,stairs,,MC,0,0,0,,3124
+080917.gif,stairs,,MC,0,0,0,,3124
+081857.gif,shelf,,MC,0,0,0,,3124
+081915.gif,shelf,,MC,0,0,0,,3124
+082516.gif,,,MC,0,0,1,Synthetic,3124
+083250.gif,shelf,,MC,0,0,0,,3124
+083309.gif,veranda,,MC,0,0,0,,3124
+083504.gif,veranda,,MC,0,0,0,,3124
+083519.gif,veranda,,MC,0,0,0,,3124
+083536.gif,veranda,,MC,0,0,0,,3124
+083551.gif,veranda,,MC,0,0,0,,3124
+083606.gif,veranda,,MC,0,0,0,,3124
+083624.gif,veranda,,MC,0,0,0,,3124
+083639.gif,veranda,,MC,0,0,0,,3124
+083654.gif,veranda,,MC,0,0,0,,3124
+083710.gif,veranda,,MC,0,0,0,,3124
+083740.gif,veranda,,MC,0,0,0,,3124
+083812.gif,,,MC,0,0,1,,3124
+083827.gif,veranda,,MC,0,0,0,,3124
+090305.gif,stairs,,MC,0,0,0,,3124
+090335.gif,stairs,,MC,0,0,0,,3124
+092410.gif,stairs,,MC,0,0,0,,3124
+092426.gif,stairs,,MC,0,0,0,,3124
+092614.gif,stairs,,MC,0,0,0,,3124
+092630.gif,stairs,,MC,0,0,0,,3124
+092645.gif,floor,,MC,0,0,0,,3124
+093400.gif,floor,,MC,0,0,0,,3124
+093517.gif,wall,,MC,0,0,0,,3124
+093709.gif,wall,,MC,0,0,0,,3124
+094409.gif,veranda,,MC,0,0,0,,3124
+094713.gif,nut,,MC,0,0,0,,3124
+094728.gif,nut,,MC,0,0,0,,3124
+095021.gif,floor,,MC,0,0,0,,3124
+095223.gif,nut,,MC,0,0,0,,3124
+095341.gif,floor,,MC,0,0,0,,3124
+100417.gif,nut,,MC,0,0,0,,3124
+100432.gif,nut,,MC,0,0,0,,3124
+100448.gif,nut,,MC,0,0,0,,3124
+100518.gif,nut,,MC,0,0,0,,3124
+100827.gif,nut,,MC,0,0,0,,3124
+101044.gif,stairs,,MC,0,0,0,,3124
+101201.gif,nut,,MC,0,0,0,,3124
+102737.gif,fruit (unknown variety),,MC,0,0,0,,3124
+102752.gif,fruit (unknown variety),,MC,0,0,0,,3124
+102852.gif,fruit (unknown variety),,MC,0,0,0,,3124
+102907.gif,fruit (unknown variety),,MC,0,0,0,,3124
 105542.gif,table,,KC,0,0,0,,3124
-105730.gif,,,,,,,,3124
-105746.gif,,,,,,,,3124
-122633.gif,,,,,,,,3124
+105730.gif,veranda,,MC,0,0,0,,3124
+105746.gif,veranda,,MC,0,0,0,,3124
+122633.gif,veranda,,MC,0,0,0,,3124
 123436.gif,table,,KC,0,0,0,,3124
-123451.gif,,,,,,,,3124
+123451.gif,knife,,MC,0,0,0,,3124
 123524.gif,table,,KC,0,0,0,,3124
-132611.gif,,,,,,,,3124
-132716.gif,,,,,,,,3124
-135415.gif,,,,,,,,3124
-141756.gif,,,,,,,,3124
-141844.gif,,,,,,,,3124
-142722.gif,,,,,,,,3124
-142737.gif,,,,,,,,3124
-142752.gif,,,,,,,,3124
-142809.gif,,,,,,,,3124
-142824.gif,,,,,,,,3124
-143428.gif,,,,,,,,3124
-143449.gif,,,,,,,,3124
+132611.gif,,,MC,0,0,1,Food,3124
+132716.gif,stairs,,MC,0,0,0,,3124
+135415.gif,,,MC,0,0,1,Natural,3124
+141756.gif,house pile,,MC,0,0,0,,3124
+141844.gif,house pile,,MC,0,0,0,,3124
+142722.gif,wall,,MC,0,0,0,,3124
+142737.gif,wall,,MC,0,0,0,,3124
+142752.gif,bench,,MC,0,0,0,,3124
+142809.gif,bench,,MC,0,0,0,,3124
+142824.gif,bench,,MC,0,0,0,,3124
+143428.gif,wall,,MC,0,0,0,,3124
+143449.gif,wall,,MC,0,0,,,3124
 144852.gif,woven basket,,KC,0,0,0,,3124
-150507.gif,,,,,,,,3124
+150507.gif,house pile,,MC,0,0,0,,3124
 090245.gif,suitcase,,KC,0,0,0,,7423
 090300.gif,suitcase,,KC,0,0,0,,7423
 090318.gif,suitcase,,KC,0,0,0,,7423
 133524.gif,rock,,KC,0,0,0,,7423
 133920.gif,rock,,KC,0,0,0,,7423
 133952.gif,rock,,KC,0,0,0,,7423
-141254.gif,,,,,,,,7423
-141513.gif,,,,,,,,7423
-141530.gif,,,,,,,,7423
-141545.gif,,,,,,,,7423
+141254.gif,clothing,unsure what type,MC,0,0,0,,7423
+141513.gif,belt,,MC,0,0,0,,7423
+141530.gif,belt,,MC,0,0,0,,7423
+141545.gif,belt,,MC,0,0,0,,7423
 141600.gif,coconut,,KC,0,0,0,,7423
-20160831_085003_000.gif,,,,,,,,1039
-20160831_085050_000.gif,,,,,,,,1039
-20160831_091325_000.gif,,,,,,,,1039
+20160831_085003_000.gif,fruit (unknown variety),,MC,0,0,0,,1039
+20160831_085050_000.gif,fruit (unknown variety),,MC,0,0,0,,1039
+20160831_091325_000.gif,leaf,,KC,0,0,0,,1039
 20160831_094419_000.gif,crab shell,,KC,0,0,0,,5064
 155048.gif,tortilla,,KC,0,0,0,,2399
 155118.gif,tortilla,,KC,0,0,0,,2399
-155426.gif,,,,,,,,2399
-155458.gif,,,,,,,,2399
-155528.gif,,,,,,,,2399
-155558.gif,,,,,,,,2399
-155700.gif,,,,,,,,2399
-155730.gif,,,,,,,,2399
-155802.gif,,,,,,,,2399
-155832.gif,,,,,,,,2399
-155903.gif,,,,,,,,2399
-155934.gif,,,,,,,,2399
-160004.gif,,,,,,,,2399
-160034.gif,,,,,,,,2399
-160106.gif,,,,,,,,2399
-160207.gif,,,,,,,,2399
-160238.gif,,,,,,,,2399
-160308.gif,,,,,,,,2399
-160743.gif,,,,,,,,2399
-160813.gif,,,,,,,,2399
-161117.gif,,,,,,,,2399
-161148.gif,,,,,,,,2399
-161218.gif,,,,,,,,2399
-161248.gif,,,,,,,,2399
-161351.gif,,,,,,,,2399
-161421.gif,,,,,,,,2399
-161452.gif,,,,,,,,2399
-161522.gif,,,,,,,,2399
-161552.gif,,,,,,,,2399
+155426.gif,,,MC,1,0,0,Food,2399
+155458.gif,cookie,,MC,0,0,0,,2399
+155528.gif,pasta,,MC,0,0,0,,2399
+155558.gif,pasta,,MC,0,0,0,,2399
+155700.gif,,,MC,1,0,0,Food,2399
+155730.gif,,,MC,1,0,0,Food,2399
+155802.gif,,,MC,1,0,0,,2399
+155832.gif,,,MC,1,0,0,,2399
+155903.gif,,,MC,1,0,0,,2399
+155934.gif,,,MC,1,0,0,Food,2399
+160004.gif,,,MC,1,0,0,,2399
+160034.gif,,,MC,1,0,0,,2399
+160106.gif,,,MC,1,0,0,,2399
+160207.gif,,,MC,1,0,0,Food,2399
+160238.gif,,,MC,1,0,0,Food,2399
+160308.gif,,,MC,1,0,0,Food,2399
+160743.gif,pasta,,MC,0,0,0,,2399
+160813.gif,pasta,,MC,0,0,0,,2399
+161117.gif,,,MC,1,0,0,,2399
+161148.gif,cup,,MC,0,0,0,,2399
+161218.gif,,,MC,1,0,0,,2399
+161248.gif,,,MC,1,0,0,,2399
+161351.gif,,,MC,1,0,0,,2399
+161421.gif,,,MC,1,0,0,,2399
+161452.gif,,,MC,1,0,0,,2399
+161522.gif,,,MC,1,0,0,Food,2399
+161552.gif,,,MC,1,0,0,Food,2399
 161624.gif,cup,,KC,0,0,0,,2399
-161725.gif,,,,,,,,2399
-161927.gif,,,,,,,,2399
-161957.gif,,,,,,,,2399
-162027.gif,,,,,,,,2399
-162059.gif,,,,,,,,2399
-162129.gif,,,,,,,,2399
-162231.gif,,,,,,,,2399
+161725.gif,,,MC,1,0,0,,2399
+161927.gif,,,MC,1,0,0,,2399
+161957.gif,,,MC,1,0,0,,2399
+162027.gif,,,MC,1,0,0,,2399
+162059.gif,,,MC,1,0,0,,2399
+162129.gif,,,MC,1,0,0,,2399
+162231.gif,chair,,MC,0,0,0,,2399
 164613.gif,detergent,,KC,0,0,0,,2399
 164644.gif,wash basin,,KC,0,0,0,,2399
 165424.gif,phone,,KC,0,0,0,,2399
@@ -1715,7 +1715,7 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 165828.gif,phone,,KC,0,0,0,,2399
 165900.gif,phone,,KC,0,0,0,,2399
 165930.gif,phone,,KC,0,0,0,,2399
-170452.gif,,,,,,,,2399
+170452.gif,,,MC,0,0,1,Synthetic,2399
 170522.gif,"nail clippers, fabric",,KC,0,0,0,,2399
 171231.gif,nail clippers,,KC,0,0,0,,2399
 171433.gif,rug,,KC,0,0,0,,2399
@@ -1728,26 +1728,26 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 183914.gif,trash bag,,KC,0,0,0,,2399
 183945.gif,trash bag,,KC,0,0,0,,2399
 185454.gif,baby doll,,KC,0,0,0,,2399
-190232.gif,,,,,,,,2399
+190232.gif,pillar,,MC,0,0,0,,2399
 190403.gif,,,KC,1,0,0,,2399
 190719.gif,plastic basket,,KC,0,0,0,,2399
-191105.gif,,,,,,,,2399
-191137.gif,,,,,,,,2399
+191105.gif,bed,,MC,0,0,0,,2399
+191137.gif,blanket,,MC,0,0,0,,2399
 191237.gif,,,KC,1,0,0,,2399
-191410.gif,,,,,,,,2399
-191929.gif,,,,,,,,2399
-193725.gif,,,,,,,,2399
-194059.gif,,,,,,,,2399
+191410.gif,,,MC,0,0,1,,2399
+191929.gif,,,MC,0,0,1,,2399
+193725.gif,,,MC,0,0,1,Synthetic,2399
+194059.gif,rope,,MC,0,0,0,,2399
 194746.gif,chair,,KC,0,0,0,,2399
 195304.gif,"toy car, pillar",,KC,0,0,0,,2399
-200251.gif,,,,,,,,2399
-200321.gif,,,,,,,,2399
+200251.gif,plastic bag,,MC,0,0,0,,2399
+200321.gif,plastic bag,,MC,0,0,0,,2399
 200430.gif,hammock,,KC,0,0,0,,2399
 203212.gif,flower,,KC,0,0,0,,2399
 214441.gif,clothesline,,KC,0,0,0,,2399
 214511.gif,clothesline,,KC,0,0,0,,2399
 214643.gif,,,KC,1,0,0,,2399
-223307.gif,,,,,,,,2399
+223307.gif,,,MC,0,0,1,Synthetic,2399
 224012.gif,ball,,KC,0,0,0,,2399
 230037.gif,,,KC,0,1,0,,2399
 230410.gif,maraca,,KC,0,0,0,,2399
@@ -1768,9 +1768,9 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 183159.gif,rope,,KC,0,0,0,,7302
 191543.gif,,,KC,1,0,0,Synthetic,7302
 193555.gif,mobile,probably not actually a mobile but definitely a toy and this label differentiates it from others,MC,0,0,0,,7302
-220256.gif,,,,,,,,7302
-220326.gif,,,,,,,,7302
-220355.gif,,,,,,,,7302
+220256.gif,,,MC,0,0,1,Food,7302
+220326.gif,,,MC,0,0,1,Food,7302
+220355.gif,,,MC,0,0,1,Food,7302
 203846.gif,"bowl, masa",,MC/KC,0,0,0,,4197
 233149.gif,peanut,,KC,0,0,0,,8532
 233758.gif,peanut,,KC,0,0,0,,8532

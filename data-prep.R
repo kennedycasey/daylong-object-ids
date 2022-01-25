@@ -31,6 +31,8 @@ raw.data <- annotations %>%
 # replace unsure objects --------------------------------------------------
 # read in manually checked unsure objects
 unsure <- read_csv("data/manual-checks/unsure-objects.csv") %>%
+  # TO DO: rm after all manual checks added
+  filter(!is.na(Coder)) %>%
   pivot_longer(c(Exclude:Unsure), names_to = "exclusion", values_to = "exclusion.val") %>%
   mutate(exclusion.corrected = ifelse(exclusion.val == 1, exclusion, NA), 
          from.unsure = 1) %>%

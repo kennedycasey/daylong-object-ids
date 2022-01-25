@@ -240,9 +240,9 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 084436.gif,sago,NA,MC,0,0,0,NA,9706
 084625.gif,sago,NA,MC,0,0,0,NA,9706
 092620.gif,NA,NA,MC,1,0,0,NA,9706
-094518.gif,tongs,NA,NA,NA,NA,NA,NA,9706
+094518.gif,tongs,NA,NA,0,0,0,NA,9706
 094917.gif,NA,NA,MC,1,0,0,Natural,9706
-102519.gif,cardboard,NA,NA,NA,NA,NA,NA,9706
+102519.gif,cardboard,NA,NA,0,0,0,NA,9706
 103036.gif,broom,NA,MC,0,0,0,NA,9706
 103319.gif,plastic sheet,NA,MC,0,0,0,NA,9706
 103351.gif,plastic sheet,NA,MC,0,0,0,NA,9706
@@ -268,8 +268,8 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 080328.gif,NA,NA,KC,0,1,0,NA,4859
 082548.gif,NA,NA,KC,1,0,0,NA,4859
 082605.gif,NA,NA,KC,1,0,0,NA,4859
-101745.gif,vest,NA,NA,NA,NA,NA,NA,4859
-111744.gif,vest,NA,NA,NA,NA,NA,NA,4859
+101745.gif,vest,NA,NA,0,0,0,NA,4859
+111744.gif,vest,NA,NA,0,0,0,NA,4859
 140633.gif,stairs,NA,MC,0,0,0,NA,4859
 141513.gif,necklace,from context,KC,0,0,0,NA,4859
 142037.gif,NA,NA,MC,1,0,0,NA,4859
@@ -414,7 +414,7 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 20160831_094819_000.gif,spoon,NA,KC,0,0,0,NA,5064
 20160831_101509_000.gif,sago,NA,KC,0,0,0,NA,5064
 20160831_101525_000.gif,NA,NA,MC,1,0,0,Food,5064
-20160831_101541_000.gif,sago,NA,NA,NA,NA,NA,NA,5064
+20160831_101541_000.gif,sago,NA,NA,0,0,0,NA,5064
 20160831_101612_000.gif,NA,NA,MC,1,0,0,Food,5064
 20160831_101629_000.gif,NA,NA,MC,1,0,0,Food,5064
 20160831_143908_000.gif,NA,NA,KC,0,1,0,NA,5064
@@ -493,7 +493,7 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 163632.gif,shirt,NA,MC,0,0,0,NA,1566
 165511.gif,NA,NA,MC,1,0,0,NA,1566
 165612.gif,NA,NA,MC,1,0,0,NA,1566
-181658.gif,pants,NA,NA,NA,NA,NA,NA,1566
+181658.gif,pants,NA,NA,0,0,0,NA,1566
 182456.gif,NA,NA,MC,1,0,0,NA,1566
 184143.gif,NA,NA,KC,1,0,0,NA,1566
 184647.gif,action figure,from context,KC,0,0,0,NA,1566
@@ -522,7 +522,7 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 185558.gif,NA,NA,KC,1,0,0,NA,8232
 190147.gif,NA,NA,MC,1,0,0,NA,8232
 191232.gif,NA,NA,MC,1,0,0,NA,8232
-191302.gif,embroidery ring,NA,NA,NA,NA,NA,NA,8232
+191302.gif,embroidery ring,NA,NA,0,0,0,NA,8232
 192146.gif,NA,NA,KC,1,0,0,NA,8232
 195143.gif,NA,NA,MC,1,0,0,NA,8232
 224132.gif,NA,NA,MC,1,0,0,Food,8232
@@ -532,13 +532,13 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 152250.gif,NA,NA,MC,0,0,1,NA,7302
 152320.gif,NA,NA,MC,0,0,1,NA,7302
 152448.gif,NA,NA,MC,1,0,0,NA,7302
-152621.gif,plastic bag,NA,NA,NA,NA,NA,NA,7302
+152621.gif,plastic bag,NA,NA,0,0,0,NA,7302
 153157.gif,tsek,NA,MC,0,0,0,NA,7302
 153227.gif,pants,NA,KC,0,0,0,NA,7302
 153257.gif,pants,NA,KC,0,0,0,NA,7302
 181542.gif,NA,NA,MC,1,0,0,Synthetic,7302
-184851.gif,"plastic bag, toy tray",NA,NA,NA,NA,NA,NA,7302
-190936.gif,shoe,NA,NA,NA,NA,NA,NA,7302
+184851.gif,"plastic bag, toy tray",NA,NA,0,0,0,NA,7302
+190936.gif,shoe,NA,NA,0,0,0,NA,7302
 203704.gif,NA,NA,MC,0,0,1,NA,7302
 215615.gif,paper,NA,MC,0,0,0,NA,7302
 233308.gif,corn,NA,KC,0,0,0,NA,7302
@@ -662,1118 +662,1118 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 155102.gif,NA,NA,MC,1,0,0,Natural,7328
 155132.gif,NA,NA,MC,1,0,0,Natural,7328
 203616.gif,shovel,NA,KC,0,0,0,NA,7328
-20160811_074145_000.gif,packaged candy,NA,KC,NA,NA,NA,NA,3946
-20160811_074155_000.gif,packaged candy,NA,KC,NA,NA,NA,NA,3946
-20160811_074207_000.gif,packaged candy,NA,KC,NA,NA,NA,NA,3946
-20160811_075147_000.gif,NA,NA,KC,1,NA,NA,NA,3946
-20160811_081150_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_081324_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_081510_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_081520_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_081531_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_081541_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_081602_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_081736_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_081852_000.gif,"fruit (unknown variety), misc container",NA,KC,NA,NA,NA,NA,3946
-20160811_081913_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_081923_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_081933_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_082109_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_082201_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_082214_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_082305_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_082502_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_082534_000.gif,"fruit (unknown variety), stick",NA,KC,NA,NA,NA,NA,3946
-20160811_082606_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_082616_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_082627_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_082720_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_082948_000.gif,NA,NA,KC,1,NA,NA,NA,3946
-20160811_083113_000.gif,NA,context needed,KC,1,NA,NA,NA,3946
-20160811_083217_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_083235_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_083548_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_083558_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_083608_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_084003_000.gif,fruit (unknown variety),NA,KC,NA,NA,NA,NA,3946
-20160811_084041_000.gif,ball,made from buoy,MC,NA,NA,NA,NA,3946
-20160811_084113_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_084133_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_084145_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_084217_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_084310_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_084353_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_084425_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_084526_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_084557_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_084652_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_084724_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_084746_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_084842_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_084904_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_084927_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_085018_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_085031_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_085041_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_085051_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_085217_000.gif,ball,NA,MC,NA,NA,NA,NA,3946
-20160811_085227_000.gif,NA,context,KC,1,NA,NA,NA,3946
-20160811_085259_000.gif,"ball, leaf",NA,KC,NA,NA,NA,NA,3946
-20160811_085320_000.gif,"ball, leaf",NA,KC,NA,NA,NA,NA,3946
-20160811_085330_000.gif,ball,NA,KC,NA,NA,NA,NA,3946
-20160811_085402_000.gif,NA,NA,KC,1,NA,NA,NA,3946
-20160811_085414_000.gif,NA,NA,KC,1,NA,NA,NA,3946
-20160811_092244_000.gif,sago,NA,KC,NA,NA,NA,NA,3946
-20160811_092429_000.gif,dress,NA,KC,NA,NA,NA,NA,3946
-20160811_102035_000.gif,"misc plastic, leaf",NA,KC,NA,NA,NA,NA,3946
-20160811_102046_000.gif,"misc plastic, leaf",NA,KC,NA,NA,NA,NA,3946
-20160811_102058_000.gif,"misc plastic, leaf",NA,KC,NA,NA,NA,NA,3946
-20160811_102118_000.gif,"misc plastic, leaf",NA,KC,NA,NA,NA,NA,3946
-20160811_102130_000.gif,"misc plastic, leaf",NA,KC,NA,NA,NA,NA,3946
-20160811_102150_000.gif,"misc plastic, leaf",NA,KC,NA,NA,NA,NA,3946
-20160811_102201_000.gif,"misc plastic, leaf",NA,KC,NA,NA,NA,NA,3946
-20160811_102307_000.gif,"misc plastic, leaf",NA,KC,NA,NA,NA,NA,3946
-20160811_102317_000.gif,"misc plastic, leaf",NA,KC,NA,NA,NA,NA,3946
-20160811_102327_000.gif,"misc plastic, leaf",NA,KC,NA,NA,NA,NA,3946
-20160811_102348_000.gif,"misc plastic, leaf",NA,KC,NA,NA,NA,NA,3946
-20160811_102358_000.gif,"misc plastic, leaf",NA,KC,NA,NA,NA,NA,3946
-20160811_102517_000.gif,chapstick container,NA,KC,NA,NA,NA,NA,3946
-20160811_102809_000.gif,shirt,NA,MC,NA,NA,NA,NA,3946
-20160811_102924_000.gif,shirt,NA,MC,NA,NA,NA,NA,3946
-20160811_102935_000.gif,shirt,NA,MC,NA,NA,NA,NA,3946
-20160811_102947_000.gif,shirt,NA,MC,NA,NA,NA,NA,3946
-143145.gif,shoe,NA,KC,NA,NA,NA,NA,7959
-145054.gif,toy plant,NA,KC,NA,NA,NA,NA,7959
-145154.gif,NA,NA,KC,1,NA,NA,Synthetic,7959
-145755.gif,NA,NA,KC,1,NA,NA,Synthetic,7959
-145922.gif,embroidery ring,NA,NA,NA,NA,NA,NA,7959
-145952.gif,NA,NA,KC,1,NA,NA,Synthetic,7959
-151006.gif,shield,NA,MC,NA,NA,NA,Synthetic,7959
-152143.gif,misc packaging,NA,KC,NA,NA,NA,NA,7959
-152214.gif,NA,cannot figure out the shape,KC,1,NA,NA,NA,7959
-152244.gif,NA,NA,KC,1,NA,NA,NA,7959
-152815.gif,misc packaging,NA,KC,NA,NA,NA,NA,7959
-154513.gif,misc packaging,NA,NA,NA,NA,NA,NA,7959
-160105.gif,NA,"many object show, he is just reaching so it is hard to determine what for in specific",KC,NA,1,NA,NA,7959
-160236.gif,water bottle,NA,KC,NA,NA,NA,NA,7959
-161317.gif,zebra toy,NA,KC,NA,NA,NA,NA,7959
-164011.gif,zebra toy,NA,KC,NA,NA,NA,NA,7959
-164848.gif,NA,NA,KC,1,NA,NA,NA,7959
-165702.gif,NA,NA,KC,1,NA,NA,NA,7959
-165735.gif,NA,NA,KC,1,NA,NA,NA,7959
-165835.gif,peach,may be tape,KC,1,NA,NA,NA,7959
-165906.gif,NA,NA,KC,1,NA,NA,NA,7959
-165936.gif,NA,NA,KC,1,NA,NA,NA,7959
-170006.gif,NA,NA,KC,1,NA,NA,NA,7959
-170038.gif,NA,NA,KC,1,NA,NA,NA,7959
-170108.gif,NA,NA,KC,1,NA,NA,NA,7959
-170138.gif,NA,NA,KC,1,NA,NA,NA,7959
-170211.gif,NA,NA,KC,1,NA,NA,NA,7959
-172657.gif,shoe,NA,KC,NA,NA,NA,NA,7959
-172727.gif,sugarcane,NA,KC,NA,NA,NA,NA,7959
-173516.gif,NA,NA,KC,1,NA,NA,NA,7959
-173551.gif,sugarcane,NA,NA,NA,NA,NA,NA,7959
-173623.gif,sugarcane,NA,NA,NA,NA,NA,NA,7959
-173654.gif,sugarcane,NA,NA,NA,NA,NA,NA,7959
-174351.gif,sugarcane,NA,NA,NA,NA,NA,NA,7959
-174423.gif,sugarcane,NA,NA,NA,NA,NA,NA,7959
-174453.gif,sugarcane,NA,NA,NA,NA,NA,NA,7959
-174758.gif,sugarcane,NA,NA,NA,NA,NA,NA,7959
-174828.gif,sugarcane,NA,NA,NA,NA,NA,NA,7959
-174859.gif,sugarcane,NA,NA,NA,NA,NA,NA,7959
-175727.gif,sugarcane,NA,NA,NA,NA,NA,NA,7959
-175930.gif,stick,NA,NA,NA,NA,NA,NA,7959
-180109.gif,stick,NA,NA,NA,NA,NA,NA,7959
-180139.gif,stick,NA,NA,NA,NA,NA,NA,7959
-212331.gif,tortilla,NA,KC,NA,NA,NA,NA,7959
-213746.gif,phone,NA,KC,NA,NA,NA,NA,7959
-215659.gif,peanut,NA,KC,1,NA,NA,NA,7959
-215902.gif,"plastic bag, peanut",NA,KC,NA,NA,NA,NA,7959
-220002.gif,peanut,NA,KC,1,NA,NA,NA,7959
-220105.gif,peanut,NA,KC,NA,NA,NA,NA,7959
-220541.gif,peanut,NA,KC,NA,NA,NA,NA,7959
-220611.gif,NA,NA,KC,1,NA,NA,NA,7959
-220913.gif,peanut,NA,NA,NA,NA,NA,NA,7959
-221115.gif,bucket,NA,NA,NA,NA,NA,NA,7959
-221248.gif,peanut,NA,NA,NA,NA,NA,NA,7959
-223900.gif,peanut,NA,NA,NA,NA,NA,NA,7959
-224507.gif,NA,NA,KC,NA,NA,1,Synthetic,7959
-224538.gif,NA,NA,KC,NA,NA,1,Synthetic,7959
-230129.gif,NA,NA,KC,NA,NA,1,Synthetic,7959
-231932.gif,knife,NA,KC,NA,NA,NA,NA,7959
-232003.gif,stick,NA,KC,NA,NA,NA,NA,7959
-143113.gif,NA,NA,KC,NA,1,NA,NA,4856
-153253.gif,shoe,not sure what black object is,KC,NA,NA,NA,NA,4856
-153455.gif,"stick, shoe",not sure what black object is,KC,NA,NA,NA,NA,4856
-153525.gif,"stick, shoe",not sure what black object is,KC,NA,NA,NA,NA,4856
-153557.gif,shoe,not sure what black object is,KC,NA,NA,NA,NA,4856
-154034.gif,shoe,NA,KC,NA,NA,NA,NA,4856
-154134.gif,"shoe, hose",NA,KC,NA,NA,NA,NA,4856
-155955.gif,shoe,NA,KC,NA,NA,NA,NA,4856
-160025.gif,shoe,NA,KC,NA,NA,NA,NA,4856
-170642.gif,lime,NA,KC,NA,NA,NA,NA,4856
-170712.gif,lime,NA,KC,NA,NA,NA,NA,4856
-171250.gif,lime,NA,KC,NA,NA,NA,NA,4856
-171350.gif,lime,NA,KC,NA,NA,NA,NA,4856
-171422.gif,lime,NA,KC,NA,NA,NA,NA,4856
-171726.gif,NA,NA,KC,NA,1,NA,NA,4856
-181733.gif,NA,NA,KC,NA,1,NA,Food,4856
-181935.gif,NA,NA,KC,1,NA,NA,NA,4856
-182005.gif,NA,NA,KC,1,NA,NA,NA,4856
-182108.gif,NA,NA,KC,1,NA,NA,NA,4856
-182615.gif,lime,NA,KC,NA,NA,NA,NA,4856
-182717.gif,stick,NA,KC,NA,NA,NA,NA,4856
-204040.gif,plastic bottle,NA,MC,NA,NA,NA,NA,4856
-204112.gif,plastic bottle,NA,MC,NA,NA,NA,NA,4856
-204142.gif,plastic bottle,NA,MC,NA,NA,NA,NA,4856
-204212.gif,plastic bottle,NA,MC,NA,NA,NA,NA,4856
-204314.gif,plastic bottle,NA,MC,NA,NA,NA,NA,4856
-204403.gif,plastic bottle,NA,MC,NA,NA,NA,NA,4856
-204459.gif,plastic bottle,NA,MC,NA,NA,NA,NA,4856
-204530.gif,plastic bottle,NA,MC,NA,NA,NA,NA,4856
-204726.gif,plastic bottle,NA,MC,NA,NA,NA,NA,4856
-204756.gif,plastic bottle,NA,MC,NA,NA,NA,NA,4856
-204828.gif,plastic bottle,NA,MC,NA,NA,NA,NA,4856
-204928.gif,plastic bottle,NA,MC,NA,NA,NA,NA,4856
-205000.gif,plastic bottle,NA,MC,NA,NA,NA,NA,4856
-205100.gif,plastic bottle,NA,MC,NA,NA,NA,NA,4856
-205132.gif,plastic bottle,NA,MC,NA,NA,NA,NA,4856
-205152.gif,plastic bottle,NA,MC,NA,NA,NA,NA,4856
-212448.gif,NA,NA,KC,1,NA,NA,Synthetic,4856
-212852.gif,NA,NA,KC,1,NA,NA,Synthetic,4856
-212953.gif,NA,may be a magazine/book,KC,1,NA,NA,Synthetic,4856
-213925.gif,plastic bottle,NA,KC,NA,NA,NA,NA,4856
-215026.gif,NA,NA,KC,1,NA,NA,NA,4856
-215057.gif,NA,NA,KC,1,NA,NA,NA,4856
-232806.gif,grinder,NA,MC,NA,NA,NA,NA,4856
-234051.gif,hose,NA,KC,NA,NA,NA,NA,4856
-174219.gif,tortilla,NA,KC,NA,NA,NA,NA,1494
-174249.gif,tortilla,NA,KC,NA,NA,NA,NA,1494
-152337.gif,NA,NA,KC,1,NA,NA,NA,3158
-155043.gif,NA,NA,KC,1,NA,NA,NA,3158
-161105.gif,stick,NA,KC,NA,NA,NA,NA,3158
-161306.gif,stick,NA,KC,NA,NA,NA,NA,3158
-181822.gif,glasses,could be sunglasses,KC,NA,NA,NA,NA,3158
-182053.gif,NA,cannot see hand,NA,NA,1,NA,NA,3158
-182529.gif,bottle cap,NA,KC,NA,NA,NA,NA,3158
-183335.gif,NA,NA,KC,NA,NA,1,NA,3158
-185057.gif,NA,NA,KC,1,NA,NA,NA,3158
-191844.gif,mango,NA,KC,NA,NA,NA,NA,3158
-213631.gif,NA,NA,KC,NA,1,NA,NA,3158
-213703.gif,stick,NA,KC,NA,NA,NA,NA,3158
-213835.gif,NA,NA,KC,1,NA,NA,NA,3158
-213935.gif,NA,NA,KC,1,NA,NA,NA,3158
-214407.gif,NA,NA,KC,1,NA,NA,NA,3158
-214842.gif,shirt,NA,KC,NA,NA,NA,NA,3158
-214912.gif,shirt,NA,KC,NA,NA,NA,NA,3158
-215117.gif,plastic bottle,NA,KC,NA,NA,NA,NA,3158
-215319.gif,plastic bottle,NA,KC,NA,NA,NA,NA,3158
-223057.gif,vest,NA,KC,NA,NA,NA,NA,3158
-223329.gif,NA,NA,KC,NA,1,NA,NA,3158
-034834.gif,"hair clip, clothing",NA,MC,NA,NA,NA,NA,4313
-035358.gif,NA,NA,MC,NA,NA,1,NA,4313
-035459.gif,NA,NA,MC,NA,NA,1,NA,4313
-035601.gif,NA,NA,MC,NA,NA,1,NA,4313
-083553.gif,NA,NA,MC,NA,NA,1,Synthetic,4313
-065252.gif,seafood,,MC,0,0,0,,5028
-065302.gif,seafood,,MC,0,0,0,,5028
-065313.gif,seafood,,MC,0,0,0,,5028
-065323.gif,seafood,,MC,0,0,0,,5028
-065346.gif,seafood,,MC,0,0,0,,5028
-065356.gif,seafood,,MC,0,0,0,,5028
-065401.gif,seafood,,MC,0,0,0,,5028
-065412.gif,seafood,,MC,0,0,0,,5028
-065422.gif,seafood,,MC,0,0,0,,5028
-065435.gif,seafood,,MC,0,0,0,,5028
-065445.gif,seafood,,MC,0,0,0,,5028
-065455.gif,seafood,,MC,0,0,0,,5028
-065507.gif,seafood,,MC,0,0,0,,5028
-065517.gif,seafood,,MC,0,0,0,,5028
-065528.gif,seafood,,MC,0,0,0,,5028
-065539.gif,seafood,,MC,0,0,0,,5028
-065549.gif,seafood,,MC,0,0,0,,5028
-065559.gif,seafood,,MC,0,0,0,,5028
-065612.gif,seafood,,MC,0,0,0,,5028
-065644.gif,seafood,,MC,0,0,0,,5028
-065654.gif,seafood,,MC,0,0,0,,5028
-065748.gif,seafood,,MC,0,0,0,,5028
-065935.gif,seafood,,MC,0,0,0,,5028
-065945.gif,seafood,,MC,0,0,0,,5028
-065958.gif,seafood,,MC,0,0,0,,5028
-070008.gif,seafood,,MC,0,0,0,,5028
-070018.gif,seafood,,MC,0,0,0,,5028
-070046.gif,seafood,,MC,0,0,0,,5028
-070055.gif,seafood,,MC,0,0,0,,5028
-070105.gif,seafood,,MC,0,0,0,,5028
-070116.gif,seafood,,MC,0,0,0,,5028
-070126.gif,seafood,,MC,0,0,0,,5028
-070137.gif,seafood,,MC,0,0,0,,5028
-070149.gif,seafood,,MC,0,0,0,,5028
-070159.gif,seafood,,MC,0,0,0,,5028
-070209.gif,seafood,,MC,0,0,0,,5028
-070221.gif,tuber,,MC,0,0,0,,5028
-070231.gif,tuber,,MC,0,0,0,,5028
-070241.gif,tuber,,MC,0,0,0,,5028
-070503.gif,tuber,,MC,0,0,0,,5028
-070701.gif,,,MC,0,0,1,,5028
-070931.gif,wall,,MC,0,0,0,,5028
-071308.gif,,,MC,0,0,1,Food,5028
-071352.gif,,,MC,0,0,0,Food,5028
-071402.gif,,,MC,0,0,0,Food,5028
-075051.gif,fabric,not enough info to determine clothing vs. blanket vs. misc fabric,KC,0,0,0,,5028
-075101.gif,fabric,not enough info to determine clothing vs. blanket vs. misc fabric,KC,0,0,0,,5028
-080942.gif,fabric,not enough info to determine clothing vs. blanket vs. misc fabric,KC,0,0,0,,5028
-080954.gif,fabric,not enough info to determine clothing vs. blanket vs. misc fabric,KC,0,0,0,,5028
-081222.gif,water bin,hand washing context,KC,0,0,0,,5028
-081647.gif,floor,,MC,0,0,0,,5028
-082656.gif,betelnut,,MC,0,0,0,,5028
-082706.gif,betelnut,,MC,0,0,0,,5028
-082728.gif,betelnut,,MC,0,0,0,,5028
-082811.gif,betelnut,,MC,0,0,0,,5028
-082823.gif,betelnut,,MC,0,0,0,,5028
-083353.gif,pot,,MC,0,0,0,,5028
-083435.gif,pot,,MC,0,0,0,,5028
-085513.gif,wall,,MC,0,0,0,,5028
-085523.gif,wall,,MC,0,0,0,,5028
-085723.gif,broom bristle,,MC,0,0,0,,5028
-085733.gif,broom bristle,,MC,0,0,0,,5028
-085836.gif,broom bristle,,MC,0,0,0,,5028
-085953.gif,broom bristle,,MC,0,0,0,,5028
-090003.gif,broom bristle,,MC,0,0,0,,5028
-090013.gif,broom bristle,,MC,0,0,0,,5028
-090213.gif,broom bristle,,MC,0,0,0,,5028
-091326.gif,wall,,MC,0,0,0,,5028
-091338.gif,wall,,MC,0,0,0,,5028
-091744.gif,broom bristle,,MC,0,0,0,,5028
-091805.gif,broom bristle,,MC,0,0,0,,5028
-091815.gif,broom bristle,,MC,0,0,0,,5028
-091829.gif,broom bristle,,MC,0,0,0,,5028
-091839.gif,broom bristle,,MC,0,0,0,,5028
-091849.gif,broom bristle,,MC,0,0,0,,5028
-091900.gif,broom bristle,,MC,0,0,0,,5028
-091910.gif,broom bristle,,MC,0,0,0,,5028
-092638.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-092648.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-092658.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-093245.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-093621.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-093631.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-093653.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-093713.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-093726.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-093758.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-093808.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-093818.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-093831.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-093934.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-093954.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-094007.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-094017.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-094028.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-094040.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-094050.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-094100.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-094129.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-094139.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-094150.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-094202.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-094212.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-094222.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-094234.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-094244.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-094254.gif,"broom bristle, cotton debris",,MC,0,0,0,,5028
-094338.gif,wall,,MC,0,0,0,,5028
-095248.gif,,,MC,0,0,1,Natural,5028
-095443.gif,veranda,,MC,0,0,0,,5028
-095453.gif,floor,,MC,0,0,0,,5028
-095525.gif,floor,,MC,0,0,0,,5028
-100025.gif,rock,,KC,0,0,0,,5028
-100248.gif,,,KC,1,0,0,,5028
-100258.gif,,,KC,1,0,0,,5028
-100331.gif,,,KC,1,0,0,,5028
-100434.gif,house pile,,MC,0,0,0,,5028
-101451.gif,dog,,MC,0,0,0,,5028
-103122.gif,cat,,MC,0,0,0,,5028
-103139.gif,tuber,,KC,0,0,0,,5028
-103149.gif,tuber,,KC,0,0,0,,5028
-103200.gif,tuber,,KC,0,0,0,,5028
-103211.gif,tuber,,KC,0,0,0,,5028
-103221.gif,tuber,,KC,0,0,0,,5028
-103556.gif,sago,,KC,0,0,0,,5028
-103612.gif,sago,,KC,0,0,0,,5028
-104532.gif,wall,,MC,0,0,0,,5028
-104542.gif,wall,,MC,0,0,0,,5028
-104554.gif,wall,,MC,0,0,0,,5028
-064754.gif,wall,,MC,0,0,0,,7159
-065159.gif,seafood,,KC,0,0,0,,7159
-065209.gif,seafood,,KC,0,0,0,,7159
-065219.gif,seafood,,KC,0,0,0,,7159
-065231.gif,seafood,,KC,0,0,0,,7159
-065241.gif,seafood,,KC,0,0,0,,7159
-065251.gif,seafood,,KC,0,0,0,,7159
-065303.gif,seafood,,KC,0,0,0,,7159
-065313.gif,seafood,,KC,0,0,0,,7159
-065319.gif,seafood,,KC,0,0,0,,7159
-065352.gif,seafood,,KC,0,0,0,,7159
-065403.gif,seafood,,KC,0,0,0,,7159
-065413.gif,seafood,,KC,0,0,0,,7159
-065424.gif,seafood,,KC,0,0,0,,7159
-065435.gif,seafood,,KC,0,0,0,,7159
-065517.gif,seafood,,KC,0,0,0,,7159
-065528.gif,seafood,,KC,0,0,0,,7159
-065538.gif,seafood,,KC,0,0,0,,7159
-065610.gif,seafood,,KC,0,0,0,,7159
-065737.gif,seafood,,KC,0,0,0,,7159
-065747.gif,seafood,,KC,0,0,0,,7159
-065757.gif,seafood,,KC,0,0,0,,7159
-065821.gif,,,MC,0,0,1,Food,7159
-065831.gif,,,MC,0,0,1,Food,7159
-065903.gif,,,MC,0,0,1,Food,7159
-065956.gif,seafood,,KC,0,0,0,,7159
-070006.gif,seafood,,KC,0,0,0,,7159
-070019.gif,seafood,,KC,0,0,0,,7159
-070029.gif,seafood,,KC,0,0,0,,7159
-070039.gif,seafood,,KC,0,0,0,,7159
-070050.gif,seafood,,KC,0,0,0,,7159
-070100.gif,seafood,,KC,0,0,0,,7159
-070110.gif,seafood,,KC,0,0,0,,7159
-070122.gif,seafood,,KC,0,0,0,,7159
-070132.gif,seafood,,KC,0,0,0,,7159
-070142.gif,seafood,,KC,0,0,0,,7159
-070155.gif,seafood,,KC,0,0,0,,7159
-070205.gif,seafood,,KC,0,0,0,,7159
-070215.gif,seafood,,KC,0,0,0,,7159
-070227.gif,seafood,,KC,0,0,0,,7159
-070237.gif,seafood,,KC,0,0,0,,7159
-070248.gif,seafood,,KC,0,0,0,,7159
-070300.gif,seafood,,KC,0,0,0,,7159
-070310.gif,seafood,,KC,0,0,0,,7159
-070320.gif,seafood,,KC,0,0,0,,7159
-070331.gif,seafood,,KC,0,0,0,,7159
-070341.gif,seafood,,KC,0,0,0,,7159
-070351.gif,seafood,,KC,0,0,0,,7159
-070404.gif,seafood,,KC,0,0,0,,7159
-070414.gif,seafood,,KC,0,0,0,,7159
-070424.gif,seafood,,KC,0,0,0,,7159
-070435.gif,seafood,,KC,0,0,0,,7159
-070445.gif,,,MC,0,0,1,Food,7159
-070456.gif,seafood,,KC,0,0,0,,7159
-070508.gif,seafood,,KC,0,0,0,,7159
-070518.gif,seafood,,KC,0,0,0,,7159
-070528.gif,seafood,,KC,0,0,0,,7159
-070540.gif,seafood,,KC,0,0,0,,7159
-070550.gif,seafood,,KC,0,0,0,,7159
-070555.gif,seafood,,KC,0,0,0,,7159
-070605.gif,seafood,,KC,0,0,0,,7159
-070616.gif,seafood,,KC,0,0,0,,7159
-070628.gif,seafood,,KC,0,0,0,,7159
-070638.gif,seafood,,KC,0,0,0,,7159
-070648.gif,seafood,,KC,0,0,0,,7159
-070700.gif,seafood,,KC,0,0,0,,7159
-070710.gif,seafood,,KC,0,0,0,,7159
-070742.gif,seafood,,KC,0,0,0,,7159
-070752.gif,seafood,,KC,0,0,0,,7159
-070804.gif,seafood,,KC,0,0,0,,7159
-070814.gif,seafood,,KC,0,0,0,,7159
-070824.gif,seafood,,KC,0,0,0,,7159
-070836.gif,seafood,,KC,0,0,0,,7159
-070847.gif,seafood,,KC,0,0,0,,7159
-070918.gif,seafood,,KC,0,0,0,,7159
-070928.gif,seafood,,KC,0,0,0,,7159
-070941.gif,seafood,,KC,0,0,0,,7159
-070951.gif,seafood,,KC,0,0,0,,7159
-071002.gif,seafood,,KC,0,0,0,,7159
-071014.gif,seafood,,KC,0,0,0,,7159
-071024.gif,seafood,,KC,0,0,0,,7159
-071056.gif,seafood,,KC,0,0,0,,7159
-071128.gif,seafood,,KC,0,0,0,,7159
-071503.gif,seafood,,KC,0,0,0,,7159
-071556.gif,seafood,,KC,0,0,0,,7159
-071608.gif,seafood,,KC,0,0,0,,7159
-071618.gif,seafood,,KC,0,0,0,,7159
-071628.gif,seafood,,KC,0,0,0,,7159
-071641.gif,seafood,,KC,0,0,0,,7159
-071651.gif,seafood,,KC,0,0,0,,7159
-071701.gif,seafood,,KC,0,0,0,,7159
-071712.gif,seafood,,KC,0,0,0,,7159
-071723.gif,seafood,,KC,0,0,0,,7159
-072412.gif,large plastic bin,,KC,0,0,0,,7159
-072424.gif,large plastic bin,,KC,0,0,0,,7159
-081007.gif,sago,,KC,0,0,0,,7159
-081017.gif,sago,,KC,0,0,0,,7159
-081029.gif,sago,,KC,0,0,0,,7159
-081100.gif,sago,,MC,0,0,0,,7159
-081110.gif,sago,,MC,0,0,0,,7159
-081120.gif,sago,,MC,0,0,0,,7159
-081133.gif,sago,,MC,0,0,0,,7159
-081143.gif,sago,,MC,0,0,0,,7159
-081153.gif,sago,,MC,0,0,0,,7159
-081204.gif,sago,,MC,0,0,0,,7159
-081457.gif,shelf,,MC,0,0,0,,7159
-081544.gif,shelf,,MC,0,0,0,,7159
-081752.gif,floor,,MC,0,0,0,,7159
-081802.gif,floor,,MC,0,0,0,,7159
-082534.gif,mosquito net,,MC,0,0,0,,7159
-085341.gif,floor,,MC,0,0,0,,7159
-085759.gif,,,MC,0,0,1,Natural,7159
-090008.gif,,,MC,0,0,1,Synthetic,7159
-090014.gif,floor,,MC,0,0,0,,7159
-092251.gif,phone,,MC,0,0,0,,7159
-092301.gif,phone,,MC,0,0,0,,7159
-092313.gif,,,MC,0,0,1,,7159
-092323.gif,,,MC,0,0,1,,7159
-092333.gif,phone,,MC,0,0,0,,7159
-092641.gif,broom bristle,,MC,0,0,0,,7159
-092702.gif,broom bristle,,MC,0,0,0,,7159
-092712.gif,broom bristle,,MC,0,0,0,,7159
-092722.gif,broom bristle,,MC,0,0,0,,7159
-095628.gif,veranda,,MC,0,0,0,,7159
-100150.gif,firewood,,MC,0,0,0,,7159
-111846.gif,vest,,MC,0,0,0,,7159
-112001.gif,wall,,MC,0,0,0,,7159
-112011.gif,wall,,MC,0,0,0,,7159
-060747.gif,shirt,,KC,0,0,0,,1902
-061533.gif,wall,,MC,0,0,0,,1902
-061550.gif,wall,,MC,0,0,0,,1902
-061708.gif,bag,,MC,0,0,0,,1902
-065207.gif,wall,,MC,0,0,0,,1902
-065222.gif,wall,,MC,0,0,0,,1902
-065240.gif,wall,,MC,0,0,0,,1902
-065255.gif,wall,,MC,0,0,0,,1902
-065311.gif,wall,,MC,0,0,0,,1902
-065327.gif,wall,,MC,0,0,0,,1902
-065342.gif,wall,,MC,0,0,0,,1902
-065357.gif,wall,,MC,0,0,0,,1902
-065549.gif,money,,MC,0,0,0,,1902
-065604.gif,money,,MC,0,0,0,,1902
-065652.gif,money,,MC,0,0,0,,1902
-065707.gif,money,,MC,0,0,0,,1902
-065723.gif,money,,MC,0,0,0,,1902
-065738.gif,money,,MC,0,0,0,,1902
-065913.gif,chick,,KC,0,0,0,,1902
-070048.gif,money,,MC,0,0,0,,1902
-070103.gif,money,,MC,0,0,0,,1902
-070120.gif,chick,,KC,0,0,0,,1902
-070714.gif,chick,,KC,0,0,0,,1902
-070912.gif,wall,,MC,0,0,0,,1902
-071123.gif,"money, skirt",,MC/KC,0,0,0,,1902
-071210.gif,money,,MC,0,0,0,,1902
-071225.gif,money,,MC,0,0,0,,1902
-071241.gif,money,,MC,0,0,0,,1902
-071257.gif,money,,MC,0,0,0,,1902
-071312.gif,money,,MC,0,0,0,,1902
-071329.gif,money,,MC,0,0,0,,1902
-071344.gif,money,,MC,0,0,0,,1902
-071431.gif,money,,MC,0,0,0,,1902
-073630.gif,safety pin,,MC,0,0,0,,1902
-073717.gif,safety pin,,MC,0,0,0,,1902
-073734.gif,safety pin,,MC,0,0,0,,1902
-074111.gif,fishing debrris,,MC,0,0,0,,1902
-074144.gif,fishing debrris,,MC,0,0,0,,1902
-074549.gif,fishnet,,MC,0,0,0,,1902
-074621.gif,money,,MC,0,0,0,,1902
-074636.gif,money,,MC,0,0,0,,1902
-074652.gif,money,,MC,0,0,0,,1902
-075205.gif,money,,MC,0,0,0,,1902
-075221.gif,money,,MC,0,0,0,,1902
-085902.gif,skirt,,KC,0,0,0,,1902
-090325.gif,sugarcane,,KC,0,0,0,,1902
-090340.gif,sugarcane,,KC,0,0,0,,1902
-090355.gif,sugarcane,,KC,0,0,0,,1902
-090413.gif,sugarcane,,KC,0,0,0,,1902
-090428.gif,sugarcane,,KC,0,0,0,,1902
-090443.gif,sugarcane,,KC,0,0,0,,1902
-090500.gif,sugarcane,,KC,0,0,0,,1902
-090515.gif,sugarcane,,KC,0,0,0,,1902
-090530.gif,sugarcane,,KC,0,0,0,,1902
-090547.gif,sugarcane,,KC,0,0,0,,1902
-090602.gif,sugarcane,,KC,0,0,0,,1902
-090617.gif,sugarcane,,KC,0,0,0,,1902
-090634.gif,sugarcane,,KC,0,0,0,,1902
-090649.gif,sugarcane,,KC,0,0,0,,1902
-090704.gif,sugarcane,,KC,0,0,0,,1902
-090721.gif,sugarcane,,KC,0,0,0,,1902
-090856.gif,sugarcane,,KC,0,0,0,,1902
-090926.gif,sugarcane,,KC,0,0,0,,1902
-090945.gif,sugarcane,,KC,0,0,0,,1902
-091000.gif,sugarcane,,KC,0,0,0,,1902
-091015.gif,sugarcane,,KC,0,0,0,,1902
-091032.gif,sugarcane,,KC,0,0,0,,1902
-091047.gif,sugarcane,,KC,0,0,0,,1902
-091102.gif,sugarcane,,KC,0,0,0,,1902
-091119.gif,sugarcane,,KC,0,0,0,,1902
-091325.gif,sugarcane,,KC,0,0,0,,1902
-091342.gif,sugarcane,,KC,0,0,0,,1902
-091357.gif,sugarcane,,KC,0,0,0,,1902
-091412.gif,sugarcane,,KC,0,0,0,,1902
-091459.gif,sugarcane,,KC,0,0,0,,1902
-091650.gif,fruit (unknown variety),,KC,0,0,0,,1902
-091911.gif,,,MC,0,0,1,Food,1902
-091927.gif,,,MC,0,0,1,Food,1902
-091936.gif,,,MC,0,0,1,Food,1902
-091951.gif,,,MC,0,0,1,Food,1902
-092007.gif,,,MC,0,0,1,Food,1902
-092625.gif,wall,,MC,0,0,0,,1902
-093726.gif,tuber,,KC,0,0,0,,1902
-093743.gif,tuber,,KC,0,0,0,,1902
-093758.gif,tuber,,KC,0,0,0,,1902
-093813.gif,tuber,,KC,0,0,0,,1902
-093828.gif,tuber,,KC,0,0,0,,1902
-093844.gif,tuber,,KC,0,0,0,,1902
-093902.gif,tuber,,KC,0,0,0,,1902
-094020.gif,tuber,,KC,0,0,0,,1902
-094038.gif,tuber,,KC,0,0,0,,1902
-094053.gif,tuber,,KC,0,0,0,,1902
-094108.gif,tuber,,KC,0,0,0,,1902
-094126.gif,tuber,,KC,0,0,0,,1902
-094141.gif,tuber,,KC,0,0,0,,1902
-094658.gif,tuber,,KC,0,0,0,,1902
-094713.gif,tuber,,KC,0,0,0,,1902
-094800.gif,tuber,,KC,0,0,0,,1902
-095155.gif,bottle cap,cap functioning as a cup,MC/KC,0,0,0,,1902
-095228.gif,"bottle cap, drinking water",,MC/KC,0,0,0,,1902
-095243.gif,"bottle cap, drinking water",,MC/KC,0,0,0,,1902
-110609.gif,hammock,,MC,0,0,0,,1902
-110624.gif,veranda,,MC,0,0,0,,1902
-111239.gif,hammock,,MC,0,0,0,,1902
-111256.gif,hammock,,MC,0,0,0,,1902
-111518.gif,hammock,,MC,0,0,0,,1902
-111636.gif,hammock,,MC,0,0,0,,1902
-111653.gif,hammock,,MC,0,0,0,,1902
-111708.gif,hammock,,MC,0,0,0,,1902
-113105.gif,hammock,,MC,0,0,0,,1902
-133334.gif,tuber,,KC,0,0,0,,1902
-134202.gif,tuber,,KC,0,0,0,,1902
-134217.gif,tuber,,KC,0,0,0,,1902
-134234.gif,tuber,,KC,0,0,0,,1902
-134249.gif,,,MC,0,0,1,Food,1902
-134744.gif,bottle cap,,KC,0,0,0,,1902
-135315.gif,tuber,,KC,0,0,0,,1902
-064041.gif,candy,,KC,0,0,0,,6792
-064143.gif,candy,,KC,0,0,0,,6792
-064158.gif,candy,,KC,0,0,0,,6792
-064345.gif,candy,,KC,0,0,0,,6792
-064400.gif,candy,,KC,0,0,0,,6792
-064417.gif,candy,,KC,0,0,0,,6792
-064504.gif,candy wrapper,,KC,0,0,0,,6792
-072453.gif,,,KC,1,0,0,,6792
-073255.gif,,,KC,1,0,0,,6792
-075934.gif,papaya,,KC,0,0,0,,6792
-081457.gif,sweatshirt,,KC,0,0,0,,6792
-082357.gif,misc container,,KC,0,0,0,,6792
-104935.gif,,,KC,1,0,0,,6792
-111440.gif,,,KC,1,0,0,,6792
-130711.gif,commercial fishing misc,,KC,0,0,0,,6792
-131714.gif,fruit (unknown variety),,MC,0,0,0,,6792
-131729.gif,fruit (unknown variety),,MC,0,0,0,,6792
-131748.gif,fruit (unknown variety),,MC,0,0,0,,6792
-131803.gif,fruit (unknown variety),,MC,0,0,0,,6792
-131818.gif,fruit (unknown variety),,MC,0,0,0,,6792
-132218.gif,fruit (unknown variety),,MC,0,0,0,,6792
-132411.gif,fruit (unknown variety),,MC,0,0,0,,6792
-134741.gif,fruit (unknown variety),,MC,0,0,0,,6792
-142144.gif,flower,,KC,0,0,0,,6792
-142207.gif,flower,,KC,0,0,0,,6792
-071346.gif,paper,,MC,0,0,0,,7528
-080132.gif,,maybe dyed leaf strips for mat weaving,MC,0,0,1,Synthetic,7528
-080149.gif,,maybe dyed leaf strips for mat weaving,MC,0,0,1,Synthetic,7528
-080204.gif,,maybe dyed leaf strips for mat weaving,MC,0,0,1,Synthetic,7528
-080219.gif,,maybe dyed leaf strips for mat weaving,MC,0,0,1,Synthetic,7528
-080236.gif,,maybe dyed leaf strips for mat weaving,MC,0,0,1,Synthetic,7528
-080251.gif,,maybe dyed leaf strips for mat weaving,MC,0,0,1,Synthetic,7528
-080306.gif,,maybe dyed leaf strips for mat weaving,MC,0,0,1,Synthetic,7528
-080324.gif,,maybe dyed leaf strips for mat weaving,MC,0,0,1,Synthetic,7528
-095022.gif,baby bathtub,,MC,0,0,0,,7528
-095109.gif,"baby bathtub, pen",,MC,0,0,0,,7528
-095124.gif,"baby bathtub, pen",,MC,0,0,0,,7528
-095142.gif,baby bathtub,,MC,0,0,0,,7528
-095505.gif,"belt, baby bathtub",,MC,0,0,0,,7528
-103204.gif,"fruit (unknown variety), detergent",,MC/KC,0,0,0,,7528
-103219.gif,"fruit (unknown variety), detergent",,MC/KC,0,0,0,,7528
-103237.gif,"fruit (unknown variety), detergent",,MC/KC,0,0,0,,7528
-103252.gif,"fruit (unknown variety), detergent",,MC/KC,0,0,0,,7528
-103307.gif,"fruit (unknown variety), detergent",,MC/KC,0,0,0,,7528
-103324.gif,"fruit (unknown variety), detergent",,MC/KC,0,0,0,,7528
-103339.gif,"fruit (unknown variety), detergent",,MC/KC,0,0,0,,7528
-103354.gif,"fruit (unknown variety), detergent",,MC/KC,0,0,0,,7528
-103412.gif,"fruit (unknown variety), detergent",,MC/KC,0,0,0,,7528
-103427.gif,"fruit (unknown variety), detergent",,MC/KC,0,0,0,,7528
-103442.gif,"fruit (unknown variety), detergent",,MC/KC,0,0,0,,7528
-103458.gif,"fruit (unknown variety), detergent",,MC/KC,0,0,0,,7528
-103514.gif,"fruit (unknown variety), detergent",,MC/KC,0,0,0,,7528
-103529.gif,"fruit (unknown variety), detergent",,MC/KC,0,0,0,,7528
-103545.gif,"fruit (unknown variety), detergent",,MC/KC,0,0,0,,7528
-103600.gif,"fruit (unknown variety), detergent",,MC/KC,0,0,0,,7528
-103615.gif,detergent,,MC,0,0,0,,7528
-103633.gif,detergent,,MC,0,0,0,,7528
-103648.gif,detergent,,MC,0,0,0,,7528
-103703.gif,"misc container, detergent",,MC/KC,0,0,0,,7528
-103720.gif,"misc container, detergent",,MC/KC,0,0,0,,7528
-103735.gif,detergent,,MC,0,0,0,,7528
-103750.gif,detergent,,MC,0,0,0,,7528
-103807.gif,detergent,,MC,0,0,0,,7528
-103822.gif,detergent,,MC,0,0,0,,7528
-103837.gif,detergent,,MC,0,0,0,,7528
-103855.gif,"misc container, detergent",,MC/KC,0,0,0,,7528
-103910.gif,detergent,,MC,0,0,0,,7528
-103925.gif,detergent,,MC,0,0,0,,7528
-103942.gif,detergent,,MC,0,0,0,,7528
-103957.gif,detergent,,MC,0,0,0,,7528
-104012.gif,detergent,,MC,0,0,0,,7528
-104029.gif,"misc container, detergent",,MC/KC,0,0,0,,7528
-104044.gif,"misc container, detergent",,MC/KC,0,0,0,,7528
-104059.gif,detergent,,MC/KC,0,0,0,,7528
-104147.gif,"pen, detergent",,MC/KC,0,0,0,,7528
-104204.gif,baby bathtub,,MC,0,0,0,,7528
-104250.gif,"phone, detergent",,MC/KC,0,0,0,,7528
-104321.gif,"phone, detergent",,MC/KC,0,0,0,,7528
-104846.gif,"phone, detergent",,MC/KC,0,0,0,,7528
-105243.gif,baby bathtub,,MC,0,0,0,,7528
-105842.gif,,,KC,1,0,0,,7528
-105930.gif,,,KC,1,0,0,,7528
-115131.gif,floor,,MC,0,0,0,,7528
-115146.gif,floor,,MC,0,0,0,,7528
-115204.gif,floor,,MC,0,0,0,,7528
-115219.gif,floor,,MC,0,0,0,,7528
-115251.gif,floor,,MC,0,0,0,,7528
-115306.gif,floor,,MC,0,0,0,,7528
-115321.gif,floor,,MC,0,0,0,,7528
-115338.gif,floor,,MC,0,0,0,,7528
-115353.gif,floor,,MC,0,0,0,,7528
-120220.gif,floor,,MC,0,0,0,,7528
-123920.gif,fruit (unknown variety),,KC,0,0,0,,7528
-125510.gif,,,MC,0,0,1,,7528
-125525.gif,,,MC,0,0,1,,7528
-125953.gif,clothing,unsure what type,MC,0,0,0,,7528
-132124.gif,stick,,KC,0,0,0,,7528
-132618.gif,stick,,KC,0,0,0,,7528
-132927.gif,mat,,KC,0,0,0,,7528
-133321.gif,stick,,KC,0,0,0,,7528
-133455.gif,mat,,KC,0,0,0,,7528
-133512.gif,mat,,KC,0,0,0,,7528
-133600.gif,mat,,KC,0,0,0,,7528
-133615.gif,mat,,KC,0,0,0,,7528
-133701.gif,mat,,KC,0,0,0,,7528
-070505.gif,taffy,,MC/KC,0,0,0,,2195
-070520.gif,taffy,,MC/KC,0,0,0,,2195
-070536.gif,taffy,,MC/KC,0,0,0,,2195
-070551.gif,taffy,,MC/KC,0,0,0,,2195
-070758.gif,taffy,,MC/KC,0,0,0,,2195
-070813.gif,taffy,,MC/KC,0,0,0,,2195
-070846.gif,taffy,,MC/KC,0,0,0,,2195
-071637.gif,taffy,,MC/KC,0,0,0,,2195
-071906.gif,veranda,,MC,0,0,0,,2195
-082226.gif,,,KC,0,0,0,,2195
-082241.gif,,,KC,0,0,0,,2195
-082501.gif,veranda,,MC,0,0,0,,2195
-082908.gif,,,KC,1,0,0,,2195
-082955.gif,mumu'd tuber paste,,MC,0,0,0,,2195
-083010.gif,mumu'd tuber paste,,MC,0,0,0,,2195
-083025.gif,mumu'd tuber paste,,MC,0,0,0,,2195
-083043.gif,mumu'd tuber paste,,MC,0,0,0,,2195
-083058.gif,mumu'd tuber paste,,MC,0,0,0,,2195
-083113.gif,mumu'd tuber paste,,MC,0,0,0,,2195
-083129.gif,mumu'd tuber paste,,MC,0,0,0,,2195
-092257.gif,veranda,,MC,0,0,0,,2195
-092532.gif,marble,,MC,0,0,0,,2195
-092738.gif,marble,,MC,0,0,0,,2195
-092753.gif,marble,,MC,0,0,0,,2195
-094021.gif,marble,,MC,0,0,0,,2195
-094036.gif,marble,,MC,0,0,0,,2195
-094608.gif,marble,,MC,0,0,0,,2195
-095356.gif,,,MC,0,0,1,Synthetic,2195
-095411.gif,,,MC,0,0,1,Synthetic,2195
-102623.gif,marble,,MC,0,0,0,,2195
-102641.gif,marble,,MC,0,0,0,,2195
-102656.gif,marble,,MC,0,0,0,,2195
-102728.gif,weaving grass,,KC,0,0,0,,2195
-102743.gif,weaving grass,,KC,0,0,0,,2195
-103705.gif,table,,KC,0,0,0,,2195
-104330.gif,,,MC,0,0,1,,2195
-104503.gif,"sugarcane, knife",,MC,0,0,0,,2195
-104522.gif,"sugarcane, knife",,MC,0,0,0,,2195
-104537.gif,"sugarcane, knife",,MC,0,0,0,,2195
-104552.gif,"sugarcane, knife",,MC,0,0,0,,2195
-104609.gif,"sugarcane, knife",,MC,0,0,0,,2195
-104639.gif,,,MC,0,0,0,,2195
-111202.gif,coconut scraper,,MC,0,0,0,,2195
-111234.gif,coconut scraper,,MC,0,0,0,,2195
-112652.gif,,,MC,0,0,1,,2195
-113442.gif,"coconut, banana",,MC,0,0,0,,2195
-113457.gif,"coconut, banana",,MC,0,0,0,,2195
-113736.gif,nut,,MC,0,0,0,,2195
-113751.gif,coconut scraper,,MC,0,0,0,,2195
-113853.gif,,,MC,0,0,1,,2195
-113925.gif,"coconut, banana",,MC,0,0,0,,2195
-113940.gif,banana,,MC,0,0,0,,2195
-113957.gif,banana,,MC,0,0,0,,2195
-114219.gif,"coconut, banana",,MC,0,0,0,,2195
-114234.gif,banana,,MC,0,0,0,,2195
-114337.gif,"coconut, banana",,MC,0,0,0,,2195
-114423.gif,spoon,,MC,0,0,0,,2195
-114456.gif,"coconut, banana",,MC,0,0,0,,2195
-114542.gif,,,MC,0,0,1,,2195
-114731.gif,rope,,MC,0,0,0,,2195
-115709.gif,,,MC,0,0,1,Natural,2195
-120343.gif,,,MC,0,0,1,Natural,2195
-120604.gif,,,MC,0,0,1,Natural,2195
-120752.gif,,,MC,0,0,1,Natural,2195
-121951.gif,"wire, lightbulb",,MC,0,0,0,,2195
-122727.gif,"wash basin, clothing",,MC,0,0,0,,2195
-122916.gif,clothing,,MC,0,0,0,,2195
-123423.gif,wall,,MC,0,0,0,,2195
-124957.gif,hammock,,MC,0,0,0,,2195
-125012.gif,wall,,MC,0,0,0,,2195
-125028.gif,wall,,MC,0,0,0,,2195
-125043.gif,wall,,MC,0,0,0,,2195
-125131.gif,wall,,MC,0,0,0,,2195
-125146.gif,hammock,,MC,0,0,0,,2195
-130045.gif,leaf,,MC,0,0,0,,2195
-130418.gif,house pile,,MC,0,0,0,,2195
-130844.gif,knife,,MC,0,0,0,,2195
-130932.gif,veranda,,MC,0,0,0,,2195
-131051.gif,,,MC,0,0,1,Synthetic,2195
-131153.gif,,,MC,0,0,1,,2195
-132757.gif,floor,,MC,0,0,0,,2195
-132812.gif,"bowl, trash",,MC,0,0,0,,2195
-133019.gif,weaving grass,,KC,0,0,0,,2195
-133959.gif,broom bristle,,MC/KC,0,0,0,,2195
-140618.gif,broom bristle,,MC/KC,0,0,0,,2195
-141148.gif,veranda,,MC,0,0,0,,2195
-141251.gif,veranda,,MC,0,0,0,,2195
-141310.gif,veranda,,MC,0,0,0,,2195
-141340.gif,veranda,,MC,0,0,0,,2195
-141532.gif,veranda,,MC,0,0,0,,2195
-141618.gif,broom bristle,,MC/KC,0,0,0,,2195
-141634.gif,broom bristle,,MC/KC,0,0,0,,2195
-072610.gif,unknown,,MC,0,0,1,,8779
-072949.gif,unknown,,MC,0,0,1,,8779
-073004.gif,unknown,,MC,0,0,1,,8779
-074156.gif,veranda,,MC,0,0,0,,8779
-074416.gif,veranda,,MC,0,0,0,,8779
-074446.gif,veranda,,MC,0,0,0,,8779
-074503.gif,veranda,,MC,0,0,0,,8779
-074533.gif,floor,,MC,0,0,0,,8779
-093431.gif,clothing,unsure,MC,0,0,0,,8779
-095055.gif,wall,,MC,0,0,0,,8779
-111043.gif,,,MC,0,0,1,,8779
-111703.gif,veranda,,MC,0,0,0,,8779
-111718.gif,towel,,MC,0,0,0,,8779
-111734.gif,,,MC,0,0,1,Food,8779
-112057.gif,wall,,MC,0,0,0,,8779
-112107.gif,wall,,MC,0,0,0,,8779
-112840.gif,nut,,MC,0,0,0,,8779
-112856.gif,"nut, rock",,MC,0,0,0,,8779
-112911.gif,"nut, rock",,MC,0,0,0,,8779
-112926.gif,"nut, rock",,MC,0,0,0,,8779
-112943.gif,"nut, rock",,MC,0,0,0,,8779
-113013.gif,nut,,MC,0,0,0,,8779
-113031.gif,nut,,MC,0,0,0,,8779
-113046.gif,nut,,MC,0,0,0,,8779
-113118.gif,"nut, rock",,MC,0,0,0,,8779
-113305.gif,nut,,MC,0,0,0,,8779
-113438.gif,nut,,MC,0,0,0,,8779
-123618.gif,,,MC,0,0,1,Natural,8779
-123704.gif,bucket,bucket is full of water,MC,0,0,0,,8779
-123719.gif,bucket,bucket is full of water,MC,0,0,0,,8779
-125905.gif,,,MC,0,0,1,Food,8779
-130038.gif,,,MC,0,0,1,Food,8779
-130054.gif,,,MC,0,0,1,Food,8779
-131543.gif,,,MC,0,0,1,Natural,8779
-131559.gif,,,MC,0,0,1,,8779
-133024.gif,,,MC,0,0,1,,8779
-133300.gif,wood shavings,,MC,0,0,0,,8779
-135146.gif,broom,,MC,0,0,0,,8779
-135301.gif,,,MC,0,0,1,Synthetic,8779
-135316.gif,woven basket,,KC,0,0,0,,8779
-141057.gif,,,MC,0,0,1,,8779
-141203.gif,wall,,MC,0,0,0,,8779
-064304.gif,,,MC,0,0,1,Synthetic,2789
-064320.gif,,,MC,0,0,1,,2789
-065719.gif,wall,,MC,0,0,0,,2789
-065736.gif,wall,,MC,0,0,0,,2789
-070418.gif,grass,,MC,0,0,0,,2789
-093344.gif,seafood,,KC,0,0,0,,2789
-093415.gif,seafood,,KC,0,0,0,,2789
-093431.gif,seafood,,KC,0,0,0,,2789
-093548.gif,seafood,,KC,0,0,0,,2789
-093603.gif,seafood,,KC,0,0,0,,2789
-093619.gif,seafood,,KC,0,0,0,,2789
-093634.gif,seafood,,KC,0,0,0,,2789
-093649.gif,seafood,,KC,0,0,0,,2789
-105134.gif,wooden board,,MC,0,0,0,,2789
-105749.gif,floor,,MC,0,0,0,,2789
-110419.gif,trash,spit,MC,0,0,0,,2789
-114318.gif,seed,,MC,0,0,0,,2789
-114404.gif,seed,,MC,0,0,0,,2789
-114903.gif,nut,,MC,0,0,0,,2789
-120025.gif,stick,,KC,0,0,0,,2789
-120042.gif,stick,,KC,0,0,0,,2789
-120057.gif,stick,,KC,0,0,0,,2789
-124701.gif,trash,nut husk,MC,0,0,0,,2789
-124803.gif,trash,nut husk,MC,0,0,0,,2789
-133147.gif,branch,,KC,0,0,0,,2789
-134421.gif,rope,,KC,0,0,0,,2789
-135504.gif,bowl,,KC,0,0,0,,2789
-140442.gif,tongs,,KC,0,0,0,,2789
-140459.gif,tongs,,KC,0,0,0,,2789
-140514.gif,tongs,,KC,0,0,0,,2789
-140529.gif,bowl,,KC,0,0,0,,2789
-140941.gif,,,MC,0,0,1,Food,2789
-141046.gif,floor,,MC,0,0,0,,2789
-141116.gif,floor,,MC,0,0,0,,2789
-141132.gif,,,MC,0,0,1,,2789
-141558.gif,floor,,MC,0,0,0,,2789
-142034.gif,ball,,KC,0,0,0,,2789
-142049.gif,ball,,KC,0,0,0,,2789
-142154.gif,ball,,KC,0,0,0,,2789
-143619.gif,bench seat,,KC,0,0,0,,2789
-143753.gif,stick,,KC,0,0,0,,2789
-144509.gif,barrel,,KC,0,0,0,,2789
-144524.gif,barrel,,KC,0,0,0,,2789
-144539.gif,barrel,,KC,0,0,0,,2789
-144556.gif,barrel,,KC,0,0,0,,2789
-144611.gif,barrel,,KC,0,0,0,,2789
-144626.gif,barrel,,KC,0,0,0,,2789
-145758.gif,bench seat,,KC,0,0,0,,2789
-145813.gif,bench seat,,KC,0,0,0,,2789
-145914.gif,bench seat,,KC,0,0,0,,2789
-150019.gif,bench seat,,KC,0,0,0,,2789
-150034.gif,bench seat,,KC,0,0,0,,2789
-071204.gif,,,KC,1,0,0,,3856
-074304.gif,metal fragment,,KC,0,0,0,,3856
-074319.gif,metal fragment,,KC,0,0,0,,3856
-074334.gif,metal fragment,,KC,0,0,0,,3856
-074351.gif,metal fragment,,KC,0,0,0,,3856
-074406.gif,metal fragment,,KC,0,0,0,,3856
-075031.gif,metal fragment,,KC,0,0,0,,3856
-075046.gif,metal fragment,,KC,0,0,0,,3856
-075102.gif,,,KC,1,0,0,,3856
-081947.gif,,,KC,1,0,0,,3856
-092446.gif,,,MC,0,0,1,Synthetic,3856
-092605.gif,,,MC,0,0,1,Synthetic,3856
-093612.gif,,,MC,0,0,1,Synthetic,3856
-120629.gif,rubber bracelet,,KC,0,0,0,,3856
-123159.gif,water jug,,MC,0,0,0,,3856
-123350.gif,water jug,,MC,0,0,0,,3856
-124252.gif,,,KC,1,0,0,,3856
-124307.gif,,,KC,1,0,0,,3856
-125127.gif,stick,,KC,0,0,0,,3856
-125921.gif,rock,,KC,0,0,0,,3856
-133116.gif,misc container,could also be considered a bottle (not mealtime tool),KC,0,0,0,,3856
-133131.gif,misc container,could also be considered a bottle (not mealtime tool),KC,0,0,0,,3856
-140423.gif,,,KC,1,0,0,,3856
-140454.gif,,,KC,1,0,0,,3856
-140509.gif,,,KC,1,0,0,,3856
-140526.gif,toothbrush,,MC,0,0,0,,3856
-140541.gif,toothbrush,,MC,0,0,0,,3856
-140556.gif,toothbrush,,MC,0,0,0,,3856
-140933.gif,"toothbrush, coconut",,MC/KC,0,0,0,,3856
-142733.gif,coconut,,KC,0,0,0,,3856
-142748.gif,coconut,,KC,0,0,0,,3856
-143024.gif,lantern,,KC,0,0,0,,3856
-071729.gif,shirt,,MC,0,0,0,,3124
-071832.gif,shirt,,MC,0,0,0,,3124
-071847.gif,shirt,,MC,0,0,0,,3124
-072005.gif,shirt,,MC,0,0,0,,3124
-073453.gif,shirt,,MC,0,0,0,,3124
-074259.gif,lighter,,MC,0,0,0,,3124
-074331.gif,lighter,,MC,0,0,0,,3124
-074346.gif,lighter,,MC,0,0,0,,3124
-074458.gif,lighter,,MC,0,0,0,,3124
-074838.gif,,,MC,0,0,1,,3124
-074853.gif,shirt,,MC,0,0,0,,3124
-075247.gif,stairs,,MC,0,0,0,,3124
-080641.gif,stairs,,MC,0,0,0,,3124
-080902.gif,stairs,,MC,0,0,0,,3124
-080917.gif,stairs,,MC,0,0,0,,3124
-081857.gif,shelf,,MC,0,0,0,,3124
-081915.gif,shelf,,MC,0,0,0,,3124
-082516.gif,,,MC,0,0,1,Synthetic,3124
-083250.gif,shelf,,MC,0,0,0,,3124
-083309.gif,veranda,,MC,0,0,0,,3124
-083504.gif,veranda,,MC,0,0,0,,3124
-083519.gif,veranda,,MC,0,0,0,,3124
-083536.gif,veranda,,MC,0,0,0,,3124
-083551.gif,veranda,,MC,0,0,0,,3124
-083606.gif,veranda,,MC,0,0,0,,3124
-083624.gif,veranda,,MC,0,0,0,,3124
-083639.gif,veranda,,MC,0,0,0,,3124
-083654.gif,veranda,,MC,0,0,0,,3124
-083710.gif,veranda,,MC,0,0,0,,3124
-083740.gif,veranda,,MC,0,0,0,,3124
-083812.gif,,,MC,0,0,1,,3124
-083827.gif,veranda,,MC,0,0,0,,3124
-090305.gif,stairs,,MC,0,0,0,,3124
-090335.gif,stairs,,MC,0,0,0,,3124
-092410.gif,stairs,,MC,0,0,0,,3124
-092426.gif,stairs,,MC,0,0,0,,3124
-092614.gif,stairs,,MC,0,0,0,,3124
-092630.gif,stairs,,MC,0,0,0,,3124
-092645.gif,floor,,MC,0,0,0,,3124
-093400.gif,floor,,MC,0,0,0,,3124
-093517.gif,wall,,MC,0,0,0,,3124
-093709.gif,wall,,MC,0,0,0,,3124
-094409.gif,veranda,,MC,0,0,0,,3124
-094713.gif,nut,,MC,0,0,0,,3124
-094728.gif,nut,,MC,0,0,0,,3124
-095021.gif,floor,,MC,0,0,0,,3124
-095223.gif,nut,,MC,0,0,0,,3124
-095341.gif,floor,,MC,0,0,0,,3124
-100417.gif,nut,,MC,0,0,0,,3124
-100432.gif,nut,,MC,0,0,0,,3124
-100448.gif,nut,,MC,0,0,0,,3124
-100518.gif,nut,,MC,0,0,0,,3124
-100827.gif,nut,,MC,0,0,0,,3124
-101044.gif,stairs,,MC,0,0,0,,3124
-101201.gif,nut,,MC,0,0,0,,3124
-102737.gif,fruit (unknown variety),,MC,0,0,0,,3124
-102752.gif,fruit (unknown variety),,MC,0,0,0,,3124
-102852.gif,fruit (unknown variety),,MC,0,0,0,,3124
-102907.gif,fruit (unknown variety),,MC,0,0,0,,3124
-105542.gif,table,,KC,0,0,0,,3124
-105730.gif,veranda,,MC,0,0,0,,3124
-105746.gif,veranda,,MC,0,0,0,,3124
-122633.gif,veranda,,MC,0,0,0,,3124
-123436.gif,table,,KC,0,0,0,,3124
-123451.gif,knife,,MC,0,0,0,,3124
-123524.gif,table,,KC,0,0,0,,3124
-132611.gif,,,MC,0,0,1,Food,3124
-132716.gif,stairs,,MC,0,0,0,,3124
-135415.gif,,,MC,0,0,1,Natural,3124
-141756.gif,house pile,,MC,0,0,0,,3124
-141844.gif,house pile,,MC,0,0,0,,3124
-142722.gif,wall,,MC,0,0,0,,3124
-142737.gif,wall,,MC,0,0,0,,3124
-142752.gif,bench,,MC,0,0,0,,3124
-142809.gif,bench,,MC,0,0,0,,3124
-142824.gif,bench,,MC,0,0,0,,3124
-143428.gif,wall,,MC,0,0,0,,3124
-143449.gif,wall,,MC,0,0,,,3124
-144852.gif,woven basket,,KC,0,0,0,,3124
-150507.gif,house pile,,MC,0,0,0,,3124
-090245.gif,suitcase,,KC,0,0,0,,7423
-090300.gif,suitcase,,KC,0,0,0,,7423
-090318.gif,suitcase,,KC,0,0,0,,7423
-133524.gif,rock,,KC,0,0,0,,7423
-133920.gif,rock,,KC,0,0,0,,7423
-133952.gif,rock,,KC,0,0,0,,7423
-141254.gif,clothing,unsure what type,MC,0,0,0,,7423
-141513.gif,belt,,MC,0,0,0,,7423
-141530.gif,belt,,MC,0,0,0,,7423
-141545.gif,belt,,MC,0,0,0,,7423
-141600.gif,coconut,,KC,0,0,0,,7423
-20160831_085003_000.gif,fruit (unknown variety),,MC,0,0,0,,1039
-20160831_085050_000.gif,fruit (unknown variety),,MC,0,0,0,,1039
-20160831_091325_000.gif,leaf,,KC,0,0,0,,1039
-20160831_094419_000.gif,crab shell,,KC,0,0,0,,5064
-155048.gif,tortilla,,KC,0,0,0,,2399
-155118.gif,tortilla,,KC,0,0,0,,2399
-155426.gif,,,MC,1,0,0,Food,2399
-155458.gif,cookie,,MC,0,0,0,,2399
-155528.gif,pasta,,MC,0,0,0,,2399
-155558.gif,pasta,,MC,0,0,0,,2399
-155700.gif,,,MC,1,0,0,Food,2399
-155730.gif,,,MC,1,0,0,Food,2399
-155802.gif,,,MC,1,0,0,,2399
-155832.gif,,,MC,1,0,0,,2399
-155903.gif,,,MC,1,0,0,,2399
-155934.gif,,,MC,1,0,0,Food,2399
-160004.gif,,,MC,1,0,0,,2399
-160034.gif,,,MC,1,0,0,,2399
-160106.gif,,,MC,1,0,0,,2399
-160207.gif,,,MC,1,0,0,Food,2399
-160238.gif,,,MC,1,0,0,Food,2399
-160308.gif,,,MC,1,0,0,Food,2399
-160743.gif,pasta,,MC,0,0,0,,2399
-160813.gif,pasta,,MC,0,0,0,,2399
-161117.gif,,,MC,1,0,0,,2399
-161148.gif,cup,,MC,0,0,0,,2399
-161218.gif,,,MC,1,0,0,,2399
-161248.gif,,,MC,1,0,0,,2399
-161351.gif,,,MC,1,0,0,,2399
-161421.gif,,,MC,1,0,0,,2399
-161452.gif,,,MC,1,0,0,,2399
-161522.gif,,,MC,1,0,0,Food,2399
-161552.gif,,,MC,1,0,0,Food,2399
-161624.gif,cup,,KC,0,0,0,,2399
-161725.gif,,,MC,1,0,0,,2399
-161927.gif,,,MC,1,0,0,,2399
-161957.gif,,,MC,1,0,0,,2399
-162027.gif,,,MC,1,0,0,,2399
-162059.gif,,,MC,1,0,0,,2399
-162129.gif,,,MC,1,0,0,,2399
-162231.gif,chair,,MC,0,0,0,,2399
-164613.gif,detergent,,KC,0,0,0,,2399
-164644.gif,wash basin,,KC,0,0,0,,2399
-165424.gif,phone,,KC,0,0,0,,2399
-165454.gif,phone,,KC,0,0,0,,2399
-165557.gif,phone,,KC,0,0,0,,2399
-165627.gif,phone,,KC,0,0,0,,2399
-165658.gif,phone,,KC,0,0,0,,2399
-165758.gif,phone,,KC,0,0,0,,2399
-165828.gif,phone,,KC,0,0,0,,2399
-165900.gif,phone,,KC,0,0,0,,2399
-165930.gif,phone,,KC,0,0,0,,2399
-170452.gif,,,MC,0,0,1,Synthetic,2399
-170522.gif,"nail clippers, fabric",,KC,0,0,0,,2399
-171231.gif,nail clippers,,KC,0,0,0,,2399
-171433.gif,rug,,KC,0,0,0,,2399
-171504.gif,blanket,,KC,0,0,0,,2399
-171534.gif,blanket,,KC,0,0,0,,2399
-171907.gif,,,KC,1,0,0,,2399
-172351.gif,toy car,,KC,0,0,0,,2399
-181125.gif,,,KC,1,0,0,,2399
-183814.gif,ball,,KC,0,0,0,,2399
-183914.gif,trash bag,,KC,0,0,0,,2399
-183945.gif,trash bag,,KC,0,0,0,,2399
-185454.gif,baby doll,,KC,0,0,0,,2399
-190232.gif,pillar,,MC,0,0,0,,2399
-190403.gif,,,KC,1,0,0,,2399
-190719.gif,plastic basket,,KC,0,0,0,,2399
-191105.gif,bed,,MC,0,0,0,,2399
-191137.gif,blanket,,MC,0,0,0,,2399
-191237.gif,,,KC,1,0,0,,2399
-191410.gif,,,MC,0,0,1,,2399
-191929.gif,,,MC,0,0,1,,2399
-193725.gif,,,MC,0,0,1,Synthetic,2399
-194059.gif,rope,,MC,0,0,0,,2399
-194746.gif,chair,,KC,0,0,0,,2399
-195304.gif,"toy car, pillar",,KC,0,0,0,,2399
-200251.gif,plastic bag,,MC,0,0,0,,2399
-200321.gif,plastic bag,,MC,0,0,0,,2399
-200430.gif,hammock,,KC,0,0,0,,2399
-203212.gif,flower,,KC,0,0,0,,2399
-214441.gif,clothesline,,KC,0,0,0,,2399
-214511.gif,clothesline,,KC,0,0,0,,2399
-214643.gif,,,KC,1,0,0,,2399
-223307.gif,,,MC,0,0,1,Synthetic,2399
-224012.gif,ball,,KC,0,0,0,,2399
-230037.gif,,,KC,0,1,0,,2399
-230410.gif,maraca,,KC,0,0,0,,2399
-230440.gif,maraca,,KC,0,0,0,,2399
-230541.gif,maraca,,KC,0,0,0,,2399
-230644.gif,maraca,,KC,0,0,0,,2399
-230714.gif,maraca,,KC,0,0,0,,2399
-230744.gif,maraca,,KC,0,0,0,,2399
-170926.gif,,,MC,0,0,1,Synthetic,4590
-182309.gif,,,MC,0,0,1,Immovable,4590
-182339.gif,,,MC,0,0,1,Immovable,4590
-182441.gif,,,MC,0,0,1,Immovable,4590
-144215.gif,masa,,MC,0,0,0,,6852
-150441.gif,,,KC,1,0,0,,8232
-184614.gif,paint,,MC,0,0,0,,8232
-224538.gif,rambutan,"best guess, doesn't appear in surrounding context images",MC,0,0,0,,8232
-224609.gif,rambutan,"best guess, doesn't appear in surrounding context images",MC,0,0,0,,8232
-183159.gif,rope,,KC,0,0,0,,7302
-191543.gif,,,KC,1,0,0,Synthetic,7302
-193555.gif,mobile,probably not actually a mobile but definitely a toy and this label differentiates it from others,MC,0,0,0,,7302
-220256.gif,,,MC,0,0,1,Food,7302
-220326.gif,,,MC,0,0,1,Food,7302
-220355.gif,,,MC,0,0,1,Food,7302
-203846.gif,"bowl, masa",,MC/KC,0,0,0,,4197
-233149.gif,peanut,,KC,0,0,0,,8532
-233758.gif,peanut,,KC,0,0,0,,8532
-233830.gif,peanut,,KC,0,0,0,,8532
-234336.gif,,,KC,1,0,0,Food,8532
-234438.gif,,,KC,1,0,0,Food,8532
+20160811_074145_000.gif,packaged candy,NA,KC,0,0,0,NA,3946
+20160811_074155_000.gif,packaged candy,NA,KC,0,0,0,NA,3946
+20160811_074207_000.gif,packaged candy,NA,KC,0,0,0,NA,3946
+20160811_075147_000.gif,NA,NA,KC,1,0,0,NA,3946
+20160811_081150_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_081324_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_081510_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_081520_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_081531_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_081541_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_081602_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_081736_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_081852_000.gif,"fruit (unknown variety), misc container",NA,KC,0,0,0,NA,3946
+20160811_081913_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_081923_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_081933_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_082109_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_082201_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_082214_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_082305_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_082502_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_082534_000.gif,"fruit (unknown variety), stick",NA,KC,0,0,0,NA,3946
+20160811_082606_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_082616_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_082627_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_082720_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_082948_000.gif,NA,NA,KC,1,0,0,NA,3946
+20160811_083113_000.gif,NA,context needed,KC,1,0,0,NA,3946
+20160811_083217_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_083235_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_083548_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_083558_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_083608_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_084003_000.gif,fruit (unknown variety),NA,KC,0,0,0,NA,3946
+20160811_084041_000.gif,ball,made from buoy,MC,0,0,0,NA,3946
+20160811_084113_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_084133_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_084145_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_084217_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_084310_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_084353_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_084425_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_084526_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_084557_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_084652_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_084724_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_084746_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_084842_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_084904_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_084927_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_085018_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_085031_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_085041_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_085051_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_085217_000.gif,ball,NA,MC,0,0,0,NA,3946
+20160811_085227_000.gif,NA,context,KC,1,0,0,NA,3946
+20160811_085259_000.gif,"ball, leaf",NA,KC,0,0,0,NA,3946
+20160811_085320_000.gif,"ball, leaf",NA,KC,0,0,0,NA,3946
+20160811_085330_000.gif,ball,NA,KC,0,0,0,NA,3946
+20160811_085402_000.gif,NA,NA,KC,1,0,0,NA,3946
+20160811_085414_000.gif,NA,NA,KC,1,0,0,NA,3946
+20160811_092244_000.gif,sago,NA,KC,0,0,0,NA,3946
+20160811_092429_000.gif,dress,NA,KC,0,0,0,NA,3946
+20160811_102035_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102046_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102058_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102118_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102130_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102150_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102201_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102307_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102317_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102327_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102348_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102358_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102517_000.gif,chapstick container,NA,KC,0,0,0,NA,3946
+20160811_102809_000.gif,shirt,NA,MC,0,0,0,NA,3946
+20160811_102924_000.gif,shirt,NA,MC,0,0,0,NA,3946
+20160811_102935_000.gif,shirt,NA,MC,0,0,0,NA,3946
+20160811_102947_000.gif,shirt,NA,MC,0,0,0,NA,3946
+143145.gif,shoe,NA,KC,0,0,0,NA,7959
+145054.gif,toy plant,NA,KC,0,0,0,NA,7959
+145154.gif,NA,NA,KC,1,0,0,Synthetic,7959
+145755.gif,NA,NA,KC,1,0,0,Synthetic,7959
+145922.gif,embroidery ring,NA,NA,0,0,0,NA,7959
+145952.gif,NA,NA,KC,1,0,0,Synthetic,7959
+151006.gif,shield,NA,MC,0,0,0,Synthetic,7959
+152143.gif,misc packaging,NA,KC,0,0,0,NA,7959
+152214.gif,NA,cannot figure out the shape,KC,1,0,0,NA,7959
+152244.gif,NA,NA,KC,1,0,0,NA,7959
+152815.gif,misc packaging,NA,KC,0,0,0,NA,7959
+154513.gif,misc packaging,NA,NA,0,0,0,NA,7959
+160105.gif,NA,"many object show, he is just reaching so it is hard to determine what for in specific",KC,0,1,0,NA,7959
+160236.gif,water bottle,NA,KC,0,0,0,NA,7959
+161317.gif,zebra toy,NA,KC,0,0,0,NA,7959
+164011.gif,zebra toy,NA,KC,0,0,0,NA,7959
+164848.gif,NA,NA,KC,1,0,0,NA,7959
+165702.gif,NA,NA,KC,1,0,0,NA,7959
+165735.gif,NA,NA,KC,1,0,0,NA,7959
+165835.gif,peach,may be tape,KC,1,0,0,NA,7959
+165906.gif,NA,NA,KC,1,0,0,NA,7959
+165936.gif,NA,NA,KC,1,0,0,NA,7959
+170006.gif,NA,NA,KC,1,0,0,NA,7959
+170038.gif,NA,NA,KC,1,0,0,NA,7959
+170108.gif,NA,NA,KC,1,0,0,NA,7959
+170138.gif,NA,NA,KC,1,0,0,NA,7959
+170211.gif,NA,NA,KC,1,0,0,NA,7959
+172657.gif,shoe,NA,KC,0,0,0,NA,7959
+172727.gif,sugarcane,NA,KC,0,0,0,NA,7959
+173516.gif,NA,NA,KC,1,0,0,NA,7959
+173551.gif,sugarcane,NA,NA,0,0,0,NA,7959
+173623.gif,sugarcane,NA,NA,0,0,0,NA,7959
+173654.gif,sugarcane,NA,NA,0,0,0,NA,7959
+174351.gif,sugarcane,NA,NA,0,0,0,NA,7959
+174423.gif,sugarcane,NA,NA,0,0,0,NA,7959
+174453.gif,sugarcane,NA,NA,0,0,0,NA,7959
+174758.gif,sugarcane,NA,NA,0,0,0,NA,7959
+174828.gif,sugarcane,NA,NA,0,0,0,NA,7959
+174859.gif,sugarcane,NA,NA,0,0,0,NA,7959
+175727.gif,sugarcane,NA,NA,0,0,0,NA,7959
+175930.gif,stick,NA,NA,0,0,0,NA,7959
+180109.gif,stick,NA,NA,0,0,0,NA,7959
+180139.gif,stick,NA,NA,0,0,0,NA,7959
+212331.gif,tortilla,NA,KC,0,0,0,NA,7959
+213746.gif,phone,NA,KC,0,0,0,NA,7959
+215659.gif,peanut,NA,KC,1,0,0,NA,7959
+215902.gif,"plastic bag, peanut",NA,KC,0,0,0,NA,7959
+220002.gif,peanut,NA,KC,1,0,0,NA,7959
+220105.gif,peanut,NA,KC,0,0,0,NA,7959
+220541.gif,peanut,NA,KC,0,0,0,NA,7959
+220611.gif,NA,NA,KC,1,0,0,NA,7959
+220913.gif,peanut,NA,NA,0,0,0,NA,7959
+221115.gif,bucket,NA,NA,0,0,0,NA,7959
+221248.gif,peanut,NA,NA,0,0,0,NA,7959
+223900.gif,peanut,NA,NA,0,0,0,NA,7959
+224507.gif,NA,NA,KC,0,0,1,Synthetic,7959
+224538.gif,NA,NA,KC,0,0,1,Synthetic,7959
+230129.gif,NA,NA,KC,0,0,1,Synthetic,7959
+231932.gif,knife,NA,KC,0,0,0,NA,7959
+232003.gif,stick,NA,KC,0,0,0,NA,7959
+143113.gif,NA,NA,KC,0,1,0,NA,4856
+153253.gif,shoe,not sure what black object is,KC,0,0,0,NA,4856
+153455.gif,"stick, shoe",not sure what black object is,KC,0,0,0,NA,4856
+153525.gif,"stick, shoe",not sure what black object is,KC,0,0,0,NA,4856
+153557.gif,shoe,not sure what black object is,KC,0,0,0,NA,4856
+154034.gif,shoe,NA,KC,0,0,0,NA,4856
+154134.gif,"shoe, hose",NA,KC,0,0,0,NA,4856
+155955.gif,shoe,NA,KC,0,0,0,NA,4856
+160025.gif,shoe,NA,KC,0,0,0,NA,4856
+170642.gif,lime,NA,KC,0,0,0,NA,4856
+170712.gif,lime,NA,KC,0,0,0,NA,4856
+171250.gif,lime,NA,KC,0,0,0,NA,4856
+171350.gif,lime,NA,KC,0,0,0,NA,4856
+171422.gif,lime,NA,KC,0,0,0,NA,4856
+171726.gif,NA,NA,KC,0,1,0,NA,4856
+181733.gif,NA,NA,KC,0,1,0,Food,4856
+181935.gif,NA,NA,KC,1,0,0,NA,4856
+182005.gif,NA,NA,KC,1,0,0,NA,4856
+182108.gif,NA,NA,KC,1,0,0,NA,4856
+182615.gif,lime,NA,KC,0,0,0,NA,4856
+182717.gif,stick,NA,KC,0,0,0,NA,4856
+204040.gif,plastic bottle,NA,MC,0,0,0,NA,4856
+204112.gif,plastic bottle,NA,MC,0,0,0,NA,4856
+204142.gif,plastic bottle,NA,MC,0,0,0,NA,4856
+204212.gif,plastic bottle,NA,MC,0,0,0,NA,4856
+204314.gif,plastic bottle,NA,MC,0,0,0,NA,4856
+204403.gif,plastic bottle,NA,MC,0,0,0,NA,4856
+204459.gif,plastic bottle,NA,MC,0,0,0,NA,4856
+204530.gif,plastic bottle,NA,MC,0,0,0,NA,4856
+204726.gif,plastic bottle,NA,MC,0,0,0,NA,4856
+204756.gif,plastic bottle,NA,MC,0,0,0,NA,4856
+204828.gif,plastic bottle,NA,MC,0,0,0,NA,4856
+204928.gif,plastic bottle,NA,MC,0,0,0,NA,4856
+205000.gif,plastic bottle,NA,MC,0,0,0,NA,4856
+205100.gif,plastic bottle,NA,MC,0,0,0,NA,4856
+205132.gif,plastic bottle,NA,MC,0,0,0,NA,4856
+205152.gif,plastic bottle,NA,MC,0,0,0,NA,4856
+212448.gif,NA,NA,KC,1,0,0,Synthetic,4856
+212852.gif,NA,NA,KC,1,0,0,Synthetic,4856
+212953.gif,NA,may be a magazine/book,KC,1,0,0,Synthetic,4856
+213925.gif,plastic bottle,NA,KC,0,0,0,NA,4856
+215026.gif,NA,NA,KC,1,0,0,NA,4856
+215057.gif,NA,NA,KC,1,0,0,NA,4856
+232806.gif,grinder,NA,MC,0,0,0,NA,4856
+234051.gif,hose,NA,KC,0,0,0,NA,4856
+174219.gif,tortilla,NA,KC,0,0,0,NA,1494
+174249.gif,tortilla,NA,KC,0,0,0,NA,1494
+152337.gif,NA,NA,KC,1,0,0,NA,3158
+155043.gif,NA,NA,KC,1,0,0,NA,3158
+161105.gif,stick,NA,KC,0,0,0,NA,3158
+161306.gif,stick,NA,KC,0,0,0,NA,3158
+181822.gif,glasses,could be sunglasses,KC,0,0,0,NA,3158
+182053.gif,NA,cannot see hand,NA,0,1,0,NA,3158
+182529.gif,bottle cap,NA,KC,0,0,0,NA,3158
+183335.gif,NA,NA,KC,0,0,1,NA,3158
+185057.gif,NA,NA,KC,1,0,0,NA,3158
+191844.gif,mango,NA,KC,0,0,0,NA,3158
+213631.gif,NA,NA,KC,0,1,0,NA,3158
+213703.gif,stick,NA,KC,0,0,0,NA,3158
+213835.gif,NA,NA,KC,1,0,0,NA,3158
+213935.gif,NA,NA,KC,1,0,0,NA,3158
+214407.gif,NA,NA,KC,1,0,0,NA,3158
+214842.gif,shirt,NA,KC,0,0,0,NA,3158
+214912.gif,shirt,NA,KC,0,0,0,NA,3158
+215117.gif,plastic bottle,NA,KC,0,0,0,NA,3158
+215319.gif,plastic bottle,NA,KC,0,0,0,NA,3158
+223057.gif,vest,NA,KC,0,0,0,NA,3158
+223329.gif,NA,NA,KC,0,1,0,NA,3158
+034834.gif,"hair clip, clothing",NA,MC,0,0,0,NA,4313
+035358.gif,NA,NA,MC,0,0,1,NA,4313
+035459.gif,NA,NA,MC,0,0,1,NA,4313
+035601.gif,NA,NA,MC,0,0,1,NA,4313
+083553.gif,NA,NA,MC,0,0,1,Synthetic,4313
+065252.gif,seafood,NA,MC,0,0,0,NA,5028
+065302.gif,seafood,NA,MC,0,0,0,NA,5028
+065313.gif,seafood,NA,MC,0,0,0,NA,5028
+065323.gif,seafood,NA,MC,0,0,0,NA,5028
+065346.gif,seafood,NA,MC,0,0,0,NA,5028
+065356.gif,seafood,NA,MC,0,0,0,NA,5028
+065401.gif,seafood,NA,MC,0,0,0,NA,5028
+065412.gif,seafood,NA,MC,0,0,0,NA,5028
+065422.gif,seafood,NA,MC,0,0,0,NA,5028
+065435.gif,seafood,NA,MC,0,0,0,NA,5028
+065445.gif,seafood,NA,MC,0,0,0,NA,5028
+065455.gif,seafood,NA,MC,0,0,0,NA,5028
+065507.gif,seafood,NA,MC,0,0,0,NA,5028
+065517.gif,seafood,NA,MC,0,0,0,NA,5028
+065528.gif,seafood,NA,MC,0,0,0,NA,5028
+065539.gif,seafood,NA,MC,0,0,0,NA,5028
+065549.gif,seafood,NA,MC,0,0,0,NA,5028
+065559.gif,seafood,NA,MC,0,0,0,NA,5028
+065612.gif,seafood,NA,MC,0,0,0,NA,5028
+065644.gif,seafood,NA,MC,0,0,0,NA,5028
+065654.gif,seafood,NA,MC,0,0,0,NA,5028
+065748.gif,seafood,NA,MC,0,0,0,NA,5028
+065935.gif,seafood,NA,MC,0,0,0,NA,5028
+065945.gif,seafood,NA,MC,0,0,0,NA,5028
+065958.gif,seafood,NA,MC,0,0,0,NA,5028
+070008.gif,seafood,NA,MC,0,0,0,NA,5028
+070018.gif,seafood,NA,MC,0,0,0,NA,5028
+070046.gif,seafood,NA,MC,0,0,0,NA,5028
+070055.gif,seafood,NA,MC,0,0,0,NA,5028
+070105.gif,seafood,NA,MC,0,0,0,NA,5028
+070116.gif,seafood,NA,MC,0,0,0,NA,5028
+070126.gif,seafood,NA,MC,0,0,0,NA,5028
+070137.gif,seafood,NA,MC,0,0,0,NA,5028
+070149.gif,seafood,NA,MC,0,0,0,NA,5028
+070159.gif,seafood,NA,MC,0,0,0,NA,5028
+070209.gif,seafood,NA,MC,0,0,0,NA,5028
+070221.gif,tuber,NA,MC,0,0,0,NA,5028
+070231.gif,tuber,NA,MC,0,0,0,NA,5028
+070241.gif,tuber,NA,MC,0,0,0,NA,5028
+070503.gif,tuber,NA,MC,0,0,0,NA,5028
+070701.gif,NA,NA,MC,0,0,1,NA,5028
+070931.gif,wall,NA,MC,0,0,0,NA,5028
+071308.gif,NA,NA,MC,0,0,1,Food,5028
+071352.gif,NA,NA,MC,0,0,0,Food,5028
+071402.gif,NA,NA,MC,0,0,0,Food,5028
+075051.gif,fabric,not enough info to determine clothing vs. blanket vs. misc fabric,KC,0,0,0,NA,5028
+075101.gif,fabric,not enough info to determine clothing vs. blanket vs. misc fabric,KC,0,0,0,NA,5028
+080942.gif,fabric,not enough info to determine clothing vs. blanket vs. misc fabric,KC,0,0,0,NA,5028
+080954.gif,fabric,not enough info to determine clothing vs. blanket vs. misc fabric,KC,0,0,0,NA,5028
+081222.gif,water bin,hand washing context,KC,0,0,0,NA,5028
+081647.gif,floor,NA,MC,0,0,0,NA,5028
+082656.gif,betelnut,NA,MC,0,0,0,NA,5028
+082706.gif,betelnut,NA,MC,0,0,0,NA,5028
+082728.gif,betelnut,NA,MC,0,0,0,NA,5028
+082811.gif,betelnut,NA,MC,0,0,0,NA,5028
+082823.gif,betelnut,NA,MC,0,0,0,NA,5028
+083353.gif,pot,NA,MC,0,0,0,NA,5028
+083435.gif,pot,NA,MC,0,0,0,NA,5028
+085513.gif,wall,NA,MC,0,0,0,NA,5028
+085523.gif,wall,NA,MC,0,0,0,NA,5028
+085723.gif,broom bristle,NA,MC,0,0,0,NA,5028
+085733.gif,broom bristle,NA,MC,0,0,0,NA,5028
+085836.gif,broom bristle,NA,MC,0,0,0,NA,5028
+085953.gif,broom bristle,NA,MC,0,0,0,NA,5028
+090003.gif,broom bristle,NA,MC,0,0,0,NA,5028
+090013.gif,broom bristle,NA,MC,0,0,0,NA,5028
+090213.gif,broom bristle,NA,MC,0,0,0,NA,5028
+091326.gif,wall,NA,MC,0,0,0,NA,5028
+091338.gif,wall,NA,MC,0,0,0,NA,5028
+091744.gif,broom bristle,NA,MC,0,0,0,NA,5028
+091805.gif,broom bristle,NA,MC,0,0,0,NA,5028
+091815.gif,broom bristle,NA,MC,0,0,0,NA,5028
+091829.gif,broom bristle,NA,MC,0,0,0,NA,5028
+091839.gif,broom bristle,NA,MC,0,0,0,NA,5028
+091849.gif,broom bristle,NA,MC,0,0,0,NA,5028
+091900.gif,broom bristle,NA,MC,0,0,0,NA,5028
+091910.gif,broom bristle,NA,MC,0,0,0,NA,5028
+092638.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+092648.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+092658.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+093245.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+093621.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+093631.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+093653.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+093713.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+093726.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+093758.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+093808.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+093818.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+093831.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+093934.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+093954.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+094007.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+094017.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+094028.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+094040.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+094050.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+094100.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+094129.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+094139.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+094150.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+094202.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+094212.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+094222.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+094234.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+094244.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+094254.gif,"broom bristle, cotton debris",NA,MC,0,0,0,NA,5028
+094338.gif,wall,NA,MC,0,0,0,NA,5028
+095248.gif,NA,NA,MC,0,0,1,Natural,5028
+095443.gif,veranda,NA,MC,0,0,0,NA,5028
+095453.gif,floor,NA,MC,0,0,0,NA,5028
+095525.gif,floor,NA,MC,0,0,0,NA,5028
+100025.gif,rock,NA,KC,0,0,0,NA,5028
+100248.gif,NA,NA,KC,1,0,0,NA,5028
+100258.gif,NA,NA,KC,1,0,0,NA,5028
+100331.gif,NA,NA,KC,1,0,0,NA,5028
+100434.gif,house pile,NA,MC,0,0,0,NA,5028
+101451.gif,dog,NA,MC,0,0,0,NA,5028
+103122.gif,cat,NA,MC,0,0,0,NA,5028
+103139.gif,tuber,NA,KC,0,0,0,NA,5028
+103149.gif,tuber,NA,KC,0,0,0,NA,5028
+103200.gif,tuber,NA,KC,0,0,0,NA,5028
+103211.gif,tuber,NA,KC,0,0,0,NA,5028
+103221.gif,tuber,NA,KC,0,0,0,NA,5028
+103556.gif,sago,NA,KC,0,0,0,NA,5028
+103612.gif,sago,NA,KC,0,0,0,NA,5028
+104532.gif,wall,NA,MC,0,0,0,NA,5028
+104542.gif,wall,NA,MC,0,0,0,NA,5028
+104554.gif,wall,NA,MC,0,0,0,NA,5028
+064754.gif,wall,NA,MC,0,0,0,NA,7159
+065159.gif,seafood,NA,KC,0,0,0,NA,7159
+065209.gif,seafood,NA,KC,0,0,0,NA,7159
+065219.gif,seafood,NA,KC,0,0,0,NA,7159
+065231.gif,seafood,NA,KC,0,0,0,NA,7159
+065241.gif,seafood,NA,KC,0,0,0,NA,7159
+065251.gif,seafood,NA,KC,0,0,0,NA,7159
+065303.gif,seafood,NA,KC,0,0,0,NA,7159
+065313.gif,seafood,NA,KC,0,0,0,NA,7159
+065319.gif,seafood,NA,KC,0,0,0,NA,7159
+065352.gif,seafood,NA,KC,0,0,0,NA,7159
+065403.gif,seafood,NA,KC,0,0,0,NA,7159
+065413.gif,seafood,NA,KC,0,0,0,NA,7159
+065424.gif,seafood,NA,KC,0,0,0,NA,7159
+065435.gif,seafood,NA,KC,0,0,0,NA,7159
+065517.gif,seafood,NA,KC,0,0,0,NA,7159
+065528.gif,seafood,NA,KC,0,0,0,NA,7159
+065538.gif,seafood,NA,KC,0,0,0,NA,7159
+065610.gif,seafood,NA,KC,0,0,0,NA,7159
+065737.gif,seafood,NA,KC,0,0,0,NA,7159
+065747.gif,seafood,NA,KC,0,0,0,NA,7159
+065757.gif,seafood,NA,KC,0,0,0,NA,7159
+065821.gif,NA,NA,MC,0,0,1,Food,7159
+065831.gif,NA,NA,MC,0,0,1,Food,7159
+065903.gif,NA,NA,MC,0,0,1,Food,7159
+065956.gif,seafood,NA,KC,0,0,0,NA,7159
+070006.gif,seafood,NA,KC,0,0,0,NA,7159
+070019.gif,seafood,NA,KC,0,0,0,NA,7159
+070029.gif,seafood,NA,KC,0,0,0,NA,7159
+070039.gif,seafood,NA,KC,0,0,0,NA,7159
+070050.gif,seafood,NA,KC,0,0,0,NA,7159
+070100.gif,seafood,NA,KC,0,0,0,NA,7159
+070110.gif,seafood,NA,KC,0,0,0,NA,7159
+070122.gif,seafood,NA,KC,0,0,0,NA,7159
+070132.gif,seafood,NA,KC,0,0,0,NA,7159
+070142.gif,seafood,NA,KC,0,0,0,NA,7159
+070155.gif,seafood,NA,KC,0,0,0,NA,7159
+070205.gif,seafood,NA,KC,0,0,0,NA,7159
+070215.gif,seafood,NA,KC,0,0,0,NA,7159
+070227.gif,seafood,NA,KC,0,0,0,NA,7159
+070237.gif,seafood,NA,KC,0,0,0,NA,7159
+070248.gif,seafood,NA,KC,0,0,0,NA,7159
+070300.gif,seafood,NA,KC,0,0,0,NA,7159
+070310.gif,seafood,NA,KC,0,0,0,NA,7159
+070320.gif,seafood,NA,KC,0,0,0,NA,7159
+070331.gif,seafood,NA,KC,0,0,0,NA,7159
+070341.gif,seafood,NA,KC,0,0,0,NA,7159
+070351.gif,seafood,NA,KC,0,0,0,NA,7159
+070404.gif,seafood,NA,KC,0,0,0,NA,7159
+070414.gif,seafood,NA,KC,0,0,0,NA,7159
+070424.gif,seafood,NA,KC,0,0,0,NA,7159
+070435.gif,seafood,NA,KC,0,0,0,NA,7159
+070445.gif,NA,NA,MC,0,0,1,Food,7159
+070456.gif,seafood,NA,KC,0,0,0,NA,7159
+070508.gif,seafood,NA,KC,0,0,0,NA,7159
+070518.gif,seafood,NA,KC,0,0,0,NA,7159
+070528.gif,seafood,NA,KC,0,0,0,NA,7159
+070540.gif,seafood,NA,KC,0,0,0,NA,7159
+070550.gif,seafood,NA,KC,0,0,0,NA,7159
+070555.gif,seafood,NA,KC,0,0,0,NA,7159
+070605.gif,seafood,NA,KC,0,0,0,NA,7159
+070616.gif,seafood,NA,KC,0,0,0,NA,7159
+070628.gif,seafood,NA,KC,0,0,0,NA,7159
+070638.gif,seafood,NA,KC,0,0,0,NA,7159
+070648.gif,seafood,NA,KC,0,0,0,NA,7159
+070700.gif,seafood,NA,KC,0,0,0,NA,7159
+070710.gif,seafood,NA,KC,0,0,0,NA,7159
+070742.gif,seafood,NA,KC,0,0,0,NA,7159
+070752.gif,seafood,NA,KC,0,0,0,NA,7159
+070804.gif,seafood,NA,KC,0,0,0,NA,7159
+070814.gif,seafood,NA,KC,0,0,0,NA,7159
+070824.gif,seafood,NA,KC,0,0,0,NA,7159
+070836.gif,seafood,NA,KC,0,0,0,NA,7159
+070847.gif,seafood,NA,KC,0,0,0,NA,7159
+070918.gif,seafood,NA,KC,0,0,0,NA,7159
+070928.gif,seafood,NA,KC,0,0,0,NA,7159
+070941.gif,seafood,NA,KC,0,0,0,NA,7159
+070951.gif,seafood,NA,KC,0,0,0,NA,7159
+071002.gif,seafood,NA,KC,0,0,0,NA,7159
+071014.gif,seafood,NA,KC,0,0,0,NA,7159
+071024.gif,seafood,NA,KC,0,0,0,NA,7159
+071056.gif,seafood,NA,KC,0,0,0,NA,7159
+071128.gif,seafood,NA,KC,0,0,0,NA,7159
+071503.gif,seafood,NA,KC,0,0,0,NA,7159
+071556.gif,seafood,NA,KC,0,0,0,NA,7159
+071608.gif,seafood,NA,KC,0,0,0,NA,7159
+071618.gif,seafood,NA,KC,0,0,0,NA,7159
+071628.gif,seafood,NA,KC,0,0,0,NA,7159
+071641.gif,seafood,NA,KC,0,0,0,NA,7159
+071651.gif,seafood,NA,KC,0,0,0,NA,7159
+071701.gif,seafood,NA,KC,0,0,0,NA,7159
+071712.gif,seafood,NA,KC,0,0,0,NA,7159
+071723.gif,seafood,NA,KC,0,0,0,NA,7159
+072412.gif,large plastic bin,NA,KC,0,0,0,NA,7159
+072424.gif,large plastic bin,NA,KC,0,0,0,NA,7159
+081007.gif,sago,NA,KC,0,0,0,NA,7159
+081017.gif,sago,NA,KC,0,0,0,NA,7159
+081029.gif,sago,NA,KC,0,0,0,NA,7159
+081100.gif,sago,NA,MC,0,0,0,NA,7159
+081110.gif,sago,NA,MC,0,0,0,NA,7159
+081120.gif,sago,NA,MC,0,0,0,NA,7159
+081133.gif,sago,NA,MC,0,0,0,NA,7159
+081143.gif,sago,NA,MC,0,0,0,NA,7159
+081153.gif,sago,NA,MC,0,0,0,NA,7159
+081204.gif,sago,NA,MC,0,0,0,NA,7159
+081457.gif,shelf,NA,MC,0,0,0,NA,7159
+081544.gif,shelf,NA,MC,0,0,0,NA,7159
+081752.gif,floor,NA,MC,0,0,0,NA,7159
+081802.gif,floor,NA,MC,0,0,0,NA,7159
+082534.gif,mosquito net,NA,MC,0,0,0,NA,7159
+085341.gif,floor,NA,MC,0,0,0,NA,7159
+085759.gif,NA,NA,MC,0,0,1,Natural,7159
+090008.gif,NA,NA,MC,0,0,1,Synthetic,7159
+090014.gif,floor,NA,MC,0,0,0,NA,7159
+092251.gif,phone,NA,MC,0,0,0,NA,7159
+092301.gif,phone,NA,MC,0,0,0,NA,7159
+092313.gif,NA,NA,MC,0,0,1,NA,7159
+092323.gif,NA,NA,MC,0,0,1,NA,7159
+092333.gif,phone,NA,MC,0,0,0,NA,7159
+092641.gif,broom bristle,NA,MC,0,0,0,NA,7159
+092702.gif,broom bristle,NA,MC,0,0,0,NA,7159
+092712.gif,broom bristle,NA,MC,0,0,0,NA,7159
+092722.gif,broom bristle,NA,MC,0,0,0,NA,7159
+095628.gif,veranda,NA,MC,0,0,0,NA,7159
+100150.gif,firewood,NA,MC,0,0,0,NA,7159
+111846.gif,vest,NA,MC,0,0,0,NA,7159
+112001.gif,wall,NA,MC,0,0,0,NA,7159
+112011.gif,wall,NA,MC,0,0,0,NA,7159
+060747.gif,shirt,NA,KC,0,0,0,NA,1902
+061533.gif,wall,NA,MC,0,0,0,NA,1902
+061550.gif,wall,NA,MC,0,0,0,NA,1902
+061708.gif,bag,NA,MC,0,0,0,NA,1902
+065207.gif,wall,NA,MC,0,0,0,NA,1902
+065222.gif,wall,NA,MC,0,0,0,NA,1902
+065240.gif,wall,NA,MC,0,0,0,NA,1902
+065255.gif,wall,NA,MC,0,0,0,NA,1902
+065311.gif,wall,NA,MC,0,0,0,NA,1902
+065327.gif,wall,NA,MC,0,0,0,NA,1902
+065342.gif,wall,NA,MC,0,0,0,NA,1902
+065357.gif,wall,NA,MC,0,0,0,NA,1902
+065549.gif,money,NA,MC,0,0,0,NA,1902
+065604.gif,money,NA,MC,0,0,0,NA,1902
+065652.gif,money,NA,MC,0,0,0,NA,1902
+065707.gif,money,NA,MC,0,0,0,NA,1902
+065723.gif,money,NA,MC,0,0,0,NA,1902
+065738.gif,money,NA,MC,0,0,0,NA,1902
+065913.gif,chick,NA,KC,0,0,0,NA,1902
+070048.gif,money,NA,MC,0,0,0,NA,1902
+070103.gif,money,NA,MC,0,0,0,NA,1902
+070120.gif,chick,NA,KC,0,0,0,NA,1902
+070714.gif,chick,NA,KC,0,0,0,NA,1902
+070912.gif,wall,NA,MC,0,0,0,NA,1902
+071123.gif,"money, skirt",NA,MC/KC,0,0,0,NA,1902
+071210.gif,money,NA,MC,0,0,0,NA,1902
+071225.gif,money,NA,MC,0,0,0,NA,1902
+071241.gif,money,NA,MC,0,0,0,NA,1902
+071257.gif,money,NA,MC,0,0,0,NA,1902
+071312.gif,money,NA,MC,0,0,0,NA,1902
+071329.gif,money,NA,MC,0,0,0,NA,1902
+071344.gif,money,NA,MC,0,0,0,NA,1902
+071431.gif,money,NA,MC,0,0,0,NA,1902
+073630.gif,safety pin,NA,MC,0,0,0,NA,1902
+073717.gif,safety pin,NA,MC,0,0,0,NA,1902
+073734.gif,safety pin,NA,MC,0,0,0,NA,1902
+074111.gif,fishing debrris,NA,MC,0,0,0,NA,1902
+074144.gif,fishing debrris,NA,MC,0,0,0,NA,1902
+074549.gif,fishnet,NA,MC,0,0,0,NA,1902
+074621.gif,money,NA,MC,0,0,0,NA,1902
+074636.gif,money,NA,MC,0,0,0,NA,1902
+074652.gif,money,NA,MC,0,0,0,NA,1902
+075205.gif,money,NA,MC,0,0,0,NA,1902
+075221.gif,money,NA,MC,0,0,0,NA,1902
+085902.gif,skirt,NA,KC,0,0,0,NA,1902
+090325.gif,sugarcane,NA,KC,0,0,0,NA,1902
+090340.gif,sugarcane,NA,KC,0,0,0,NA,1902
+090355.gif,sugarcane,NA,KC,0,0,0,NA,1902
+090413.gif,sugarcane,NA,KC,0,0,0,NA,1902
+090428.gif,sugarcane,NA,KC,0,0,0,NA,1902
+090443.gif,sugarcane,NA,KC,0,0,0,NA,1902
+090500.gif,sugarcane,NA,KC,0,0,0,NA,1902
+090515.gif,sugarcane,NA,KC,0,0,0,NA,1902
+090530.gif,sugarcane,NA,KC,0,0,0,NA,1902
+090547.gif,sugarcane,NA,KC,0,0,0,NA,1902
+090602.gif,sugarcane,NA,KC,0,0,0,NA,1902
+090617.gif,sugarcane,NA,KC,0,0,0,NA,1902
+090634.gif,sugarcane,NA,KC,0,0,0,NA,1902
+090649.gif,sugarcane,NA,KC,0,0,0,NA,1902
+090704.gif,sugarcane,NA,KC,0,0,0,NA,1902
+090721.gif,sugarcane,NA,KC,0,0,0,NA,1902
+090856.gif,sugarcane,NA,KC,0,0,0,NA,1902
+090926.gif,sugarcane,NA,KC,0,0,0,NA,1902
+090945.gif,sugarcane,NA,KC,0,0,0,NA,1902
+091000.gif,sugarcane,NA,KC,0,0,0,NA,1902
+091015.gif,sugarcane,NA,KC,0,0,0,NA,1902
+091032.gif,sugarcane,NA,KC,0,0,0,NA,1902
+091047.gif,sugarcane,NA,KC,0,0,0,NA,1902
+091102.gif,sugarcane,NA,KC,0,0,0,NA,1902
+091119.gif,sugarcane,NA,KC,0,0,0,NA,1902
+091325.gif,sugarcane,NA,KC,0,0,0,NA,1902
+091342.gif,sugarcane,NA,KC,0,0,0,NA,1902
+091357.gif,sugarcane,NA,KC,0,0,0,NA,1902
+091412.gif,sugarcane,NA,KC,0,0,0,NA,1902
+091459.gif,sugarcane,NA,KC,0,0,0,NA,1902
+091650.gif,fruit (unknown variety),NA,KC,0,0,0,NA,1902
+091911.gif,NA,NA,MC,0,0,1,Food,1902
+091927.gif,NA,NA,MC,0,0,1,Food,1902
+091936.gif,NA,NA,MC,0,0,1,Food,1902
+091951.gif,NA,NA,MC,0,0,1,Food,1902
+092007.gif,NA,NA,MC,0,0,1,Food,1902
+092625.gif,wall,NA,MC,0,0,0,NA,1902
+093726.gif,tuber,NA,KC,0,0,0,NA,1902
+093743.gif,tuber,NA,KC,0,0,0,NA,1902
+093758.gif,tuber,NA,KC,0,0,0,NA,1902
+093813.gif,tuber,NA,KC,0,0,0,NA,1902
+093828.gif,tuber,NA,KC,0,0,0,NA,1902
+093844.gif,tuber,NA,KC,0,0,0,NA,1902
+093902.gif,tuber,NA,KC,0,0,0,NA,1902
+094020.gif,tuber,NA,KC,0,0,0,NA,1902
+094038.gif,tuber,NA,KC,0,0,0,NA,1902
+094053.gif,tuber,NA,KC,0,0,0,NA,1902
+094108.gif,tuber,NA,KC,0,0,0,NA,1902
+094126.gif,tuber,NA,KC,0,0,0,NA,1902
+094141.gif,tuber,NA,KC,0,0,0,NA,1902
+094658.gif,tuber,NA,KC,0,0,0,NA,1902
+094713.gif,tuber,NA,KC,0,0,0,NA,1902
+094800.gif,tuber,NA,KC,0,0,0,NA,1902
+095155.gif,bottle cap,cap functioning as a cup,MC/KC,0,0,0,NA,1902
+095228.gif,"bottle cap, drinking water",NA,MC/KC,0,0,0,NA,1902
+095243.gif,"bottle cap, drinking water",NA,MC/KC,0,0,0,NA,1902
+110609.gif,hammock,NA,MC,0,0,0,NA,1902
+110624.gif,veranda,NA,MC,0,0,0,NA,1902
+111239.gif,hammock,NA,MC,0,0,0,NA,1902
+111256.gif,hammock,NA,MC,0,0,0,NA,1902
+111518.gif,hammock,NA,MC,0,0,0,NA,1902
+111636.gif,hammock,NA,MC,0,0,0,NA,1902
+111653.gif,hammock,NA,MC,0,0,0,NA,1902
+111708.gif,hammock,NA,MC,0,0,0,NA,1902
+113105.gif,hammock,NA,MC,0,0,0,NA,1902
+133334.gif,tuber,NA,KC,0,0,0,NA,1902
+134202.gif,tuber,NA,KC,0,0,0,NA,1902
+134217.gif,tuber,NA,KC,0,0,0,NA,1902
+134234.gif,tuber,NA,KC,0,0,0,NA,1902
+134249.gif,NA,NA,MC,0,0,1,Food,1902
+134744.gif,bottle cap,NA,KC,0,0,0,NA,1902
+135315.gif,tuber,NA,KC,0,0,0,NA,1902
+064041.gif,candy,NA,KC,0,0,0,NA,6792
+064143.gif,candy,NA,KC,0,0,0,NA,6792
+064158.gif,candy,NA,KC,0,0,0,NA,6792
+064345.gif,candy,NA,KC,0,0,0,NA,6792
+064400.gif,candy,NA,KC,0,0,0,NA,6792
+064417.gif,candy,NA,KC,0,0,0,NA,6792
+064504.gif,candy wrapper,NA,KC,0,0,0,NA,6792
+072453.gif,NA,NA,KC,1,0,0,NA,6792
+073255.gif,NA,NA,KC,1,0,0,NA,6792
+075934.gif,papaya,NA,KC,0,0,0,NA,6792
+081457.gif,sweatshirt,NA,KC,0,0,0,NA,6792
+082357.gif,misc container,NA,KC,0,0,0,NA,6792
+104935.gif,NA,NA,KC,1,0,0,NA,6792
+111440.gif,NA,NA,KC,1,0,0,NA,6792
+130711.gif,commercial fishing misc,NA,KC,0,0,0,NA,6792
+131714.gif,fruit (unknown variety),NA,MC,0,0,0,NA,6792
+131729.gif,fruit (unknown variety),NA,MC,0,0,0,NA,6792
+131748.gif,fruit (unknown variety),NA,MC,0,0,0,NA,6792
+131803.gif,fruit (unknown variety),NA,MC,0,0,0,NA,6792
+131818.gif,fruit (unknown variety),NA,MC,0,0,0,NA,6792
+132218.gif,fruit (unknown variety),NA,MC,0,0,0,NA,6792
+132411.gif,fruit (unknown variety),NA,MC,0,0,0,NA,6792
+134741.gif,fruit (unknown variety),NA,MC,0,0,0,NA,6792
+142144.gif,flower,NA,KC,0,0,0,NA,6792
+142207.gif,flower,NA,KC,0,0,0,NA,6792
+071346.gif,paper,NA,MC,0,0,0,NA,7528
+080132.gif,NA,maybe dyed leaf strips for mat weaving,MC,0,0,1,Synthetic,7528
+080149.gif,NA,maybe dyed leaf strips for mat weaving,MC,0,0,1,Synthetic,7528
+080204.gif,NA,maybe dyed leaf strips for mat weaving,MC,0,0,1,Synthetic,7528
+080219.gif,NA,maybe dyed leaf strips for mat weaving,MC,0,0,1,Synthetic,7528
+080236.gif,NA,maybe dyed leaf strips for mat weaving,MC,0,0,1,Synthetic,7528
+080251.gif,NA,maybe dyed leaf strips for mat weaving,MC,0,0,1,Synthetic,7528
+080306.gif,NA,maybe dyed leaf strips for mat weaving,MC,0,0,1,Synthetic,7528
+080324.gif,NA,maybe dyed leaf strips for mat weaving,MC,0,0,1,Synthetic,7528
+095022.gif,baby bathtub,NA,MC,0,0,0,NA,7528
+095109.gif,"baby bathtub, pen",NA,MC,0,0,0,NA,7528
+095124.gif,"baby bathtub, pen",NA,MC,0,0,0,NA,7528
+095142.gif,baby bathtub,NA,MC,0,0,0,NA,7528
+095505.gif,"belt, baby bathtub",NA,MC,0,0,0,NA,7528
+103204.gif,"fruit (unknown variety), detergent",NA,MC/KC,0,0,0,NA,7528
+103219.gif,"fruit (unknown variety), detergent",NA,MC/KC,0,0,0,NA,7528
+103237.gif,"fruit (unknown variety), detergent",NA,MC/KC,0,0,0,NA,7528
+103252.gif,"fruit (unknown variety), detergent",NA,MC/KC,0,0,0,NA,7528
+103307.gif,"fruit (unknown variety), detergent",NA,MC/KC,0,0,0,NA,7528
+103324.gif,"fruit (unknown variety), detergent",NA,MC/KC,0,0,0,NA,7528
+103339.gif,"fruit (unknown variety), detergent",NA,MC/KC,0,0,0,NA,7528
+103354.gif,"fruit (unknown variety), detergent",NA,MC/KC,0,0,0,NA,7528
+103412.gif,"fruit (unknown variety), detergent",NA,MC/KC,0,0,0,NA,7528
+103427.gif,"fruit (unknown variety), detergent",NA,MC/KC,0,0,0,NA,7528
+103442.gif,"fruit (unknown variety), detergent",NA,MC/KC,0,0,0,NA,7528
+103458.gif,"fruit (unknown variety), detergent",NA,MC/KC,0,0,0,NA,7528
+103514.gif,"fruit (unknown variety), detergent",NA,MC/KC,0,0,0,NA,7528
+103529.gif,"fruit (unknown variety), detergent",NA,MC/KC,0,0,0,NA,7528
+103545.gif,"fruit (unknown variety), detergent",NA,MC/KC,0,0,0,NA,7528
+103600.gif,"fruit (unknown variety), detergent",NA,MC/KC,0,0,0,NA,7528
+103615.gif,detergent,NA,MC,0,0,0,NA,7528
+103633.gif,detergent,NA,MC,0,0,0,NA,7528
+103648.gif,detergent,NA,MC,0,0,0,NA,7528
+103703.gif,"misc container, detergent",NA,MC/KC,0,0,0,NA,7528
+103720.gif,"misc container, detergent",NA,MC/KC,0,0,0,NA,7528
+103735.gif,detergent,NA,MC,0,0,0,NA,7528
+103750.gif,detergent,NA,MC,0,0,0,NA,7528
+103807.gif,detergent,NA,MC,0,0,0,NA,7528
+103822.gif,detergent,NA,MC,0,0,0,NA,7528
+103837.gif,detergent,NA,MC,0,0,0,NA,7528
+103855.gif,"misc container, detergent",NA,MC/KC,0,0,0,NA,7528
+103910.gif,detergent,NA,MC,0,0,0,NA,7528
+103925.gif,detergent,NA,MC,0,0,0,NA,7528
+103942.gif,detergent,NA,MC,0,0,0,NA,7528
+103957.gif,detergent,NA,MC,0,0,0,NA,7528
+104012.gif,detergent,NA,MC,0,0,0,NA,7528
+104029.gif,"misc container, detergent",NA,MC/KC,0,0,0,NA,7528
+104044.gif,"misc container, detergent",NA,MC/KC,0,0,0,NA,7528
+104059.gif,detergent,NA,MC/KC,0,0,0,NA,7528
+104147.gif,"pen, detergent",NA,MC/KC,0,0,0,NA,7528
+104204.gif,baby bathtub,NA,MC,0,0,0,NA,7528
+104250.gif,"phone, detergent",NA,MC/KC,0,0,0,NA,7528
+104321.gif,"phone, detergent",NA,MC/KC,0,0,0,NA,7528
+104846.gif,"phone, detergent",NA,MC/KC,0,0,0,NA,7528
+105243.gif,baby bathtub,NA,MC,0,0,0,NA,7528
+105842.gif,NA,NA,KC,1,0,0,NA,7528
+105930.gif,NA,NA,KC,1,0,0,NA,7528
+115131.gif,floor,NA,MC,0,0,0,NA,7528
+115146.gif,floor,NA,MC,0,0,0,NA,7528
+115204.gif,floor,NA,MC,0,0,0,NA,7528
+115219.gif,floor,NA,MC,0,0,0,NA,7528
+115251.gif,floor,NA,MC,0,0,0,NA,7528
+115306.gif,floor,NA,MC,0,0,0,NA,7528
+115321.gif,floor,NA,MC,0,0,0,NA,7528
+115338.gif,floor,NA,MC,0,0,0,NA,7528
+115353.gif,floor,NA,MC,0,0,0,NA,7528
+120220.gif,floor,NA,MC,0,0,0,NA,7528
+123920.gif,fruit (unknown variety),NA,KC,0,0,0,NA,7528
+125510.gif,NA,NA,MC,0,0,1,NA,7528
+125525.gif,NA,NA,MC,0,0,1,NA,7528
+125953.gif,clothing,unsure what type,MC,0,0,0,NA,7528
+132124.gif,stick,NA,KC,0,0,0,NA,7528
+132618.gif,stick,NA,KC,0,0,0,NA,7528
+132927.gif,mat,NA,KC,0,0,0,NA,7528
+133321.gif,stick,NA,KC,0,0,0,NA,7528
+133455.gif,mat,NA,KC,0,0,0,NA,7528
+133512.gif,mat,NA,KC,0,0,0,NA,7528
+133600.gif,mat,NA,KC,0,0,0,NA,7528
+133615.gif,mat,NA,KC,0,0,0,NA,7528
+133701.gif,mat,NA,KC,0,0,0,NA,7528
+070505.gif,taffy,NA,MC/KC,0,0,0,NA,2195
+070520.gif,taffy,NA,MC/KC,0,0,0,NA,2195
+070536.gif,taffy,NA,MC/KC,0,0,0,NA,2195
+070551.gif,taffy,NA,MC/KC,0,0,0,NA,2195
+070758.gif,taffy,NA,MC/KC,0,0,0,NA,2195
+070813.gif,taffy,NA,MC/KC,0,0,0,NA,2195
+070846.gif,taffy,NA,MC/KC,0,0,0,NA,2195
+071637.gif,taffy,NA,MC/KC,0,0,0,NA,2195
+071906.gif,veranda,NA,MC,0,0,0,NA,2195
+082226.gif,NA,NA,KC,0,0,0,NA,2195
+082241.gif,NA,NA,KC,0,0,0,NA,2195
+082501.gif,veranda,NA,MC,0,0,0,NA,2195
+082908.gif,NA,NA,KC,1,0,0,NA,2195
+082955.gif,mumu'd tuber paste,NA,MC,0,0,0,NA,2195
+083010.gif,mumu'd tuber paste,NA,MC,0,0,0,NA,2195
+083025.gif,mumu'd tuber paste,NA,MC,0,0,0,NA,2195
+083043.gif,mumu'd tuber paste,NA,MC,0,0,0,NA,2195
+083058.gif,mumu'd tuber paste,NA,MC,0,0,0,NA,2195
+083113.gif,mumu'd tuber paste,NA,MC,0,0,0,NA,2195
+083129.gif,mumu'd tuber paste,NA,MC,0,0,0,NA,2195
+092257.gif,veranda,NA,MC,0,0,0,NA,2195
+092532.gif,marble,NA,MC,0,0,0,NA,2195
+092738.gif,marble,NA,MC,0,0,0,NA,2195
+092753.gif,marble,NA,MC,0,0,0,NA,2195
+094021.gif,marble,NA,MC,0,0,0,NA,2195
+094036.gif,marble,NA,MC,0,0,0,NA,2195
+094608.gif,marble,NA,MC,0,0,0,NA,2195
+095356.gif,NA,NA,MC,0,0,1,Synthetic,2195
+095411.gif,NA,NA,MC,0,0,1,Synthetic,2195
+102623.gif,marble,NA,MC,0,0,0,NA,2195
+102641.gif,marble,NA,MC,0,0,0,NA,2195
+102656.gif,marble,NA,MC,0,0,0,NA,2195
+102728.gif,weaving grass,NA,KC,0,0,0,NA,2195
+102743.gif,weaving grass,NA,KC,0,0,0,NA,2195
+103705.gif,table,NA,KC,0,0,0,NA,2195
+104330.gif,NA,NA,MC,0,0,1,NA,2195
+104503.gif,"sugarcane, knife",NA,MC,0,0,0,NA,2195
+104522.gif,"sugarcane, knife",NA,MC,0,0,0,NA,2195
+104537.gif,"sugarcane, knife",NA,MC,0,0,0,NA,2195
+104552.gif,"sugarcane, knife",NA,MC,0,0,0,NA,2195
+104609.gif,"sugarcane, knife",NA,MC,0,0,0,NA,2195
+104639.gif,NA,NA,MC,0,0,0,NA,2195
+111202.gif,coconut scraper,NA,MC,0,0,0,NA,2195
+111234.gif,coconut scraper,NA,MC,0,0,0,NA,2195
+112652.gif,NA,NA,MC,0,0,1,NA,2195
+113442.gif,"coconut, banana",NA,MC,0,0,0,NA,2195
+113457.gif,"coconut, banana",NA,MC,0,0,0,NA,2195
+113736.gif,nut,NA,MC,0,0,0,NA,2195
+113751.gif,coconut scraper,NA,MC,0,0,0,NA,2195
+113853.gif,NA,NA,MC,0,0,1,NA,2195
+113925.gif,"coconut, banana",NA,MC,0,0,0,NA,2195
+113940.gif,banana,NA,MC,0,0,0,NA,2195
+113957.gif,banana,NA,MC,0,0,0,NA,2195
+114219.gif,"coconut, banana",NA,MC,0,0,0,NA,2195
+114234.gif,banana,NA,MC,0,0,0,NA,2195
+114337.gif,"coconut, banana",NA,MC,0,0,0,NA,2195
+114423.gif,spoon,NA,MC,0,0,0,NA,2195
+114456.gif,"coconut, banana",NA,MC,0,0,0,NA,2195
+114542.gif,NA,NA,MC,0,0,1,NA,2195
+114731.gif,rope,NA,MC,0,0,0,NA,2195
+115709.gif,NA,NA,MC,0,0,1,Natural,2195
+120343.gif,NA,NA,MC,0,0,1,Natural,2195
+120604.gif,NA,NA,MC,0,0,1,Natural,2195
+120752.gif,NA,NA,MC,0,0,1,Natural,2195
+121951.gif,"wire, lightbulb",NA,MC,0,0,0,NA,2195
+122727.gif,"wash basin, clothing",NA,MC,0,0,0,NA,2195
+122916.gif,clothing,NA,MC,0,0,0,NA,2195
+123423.gif,wall,NA,MC,0,0,0,NA,2195
+124957.gif,hammock,NA,MC,0,0,0,NA,2195
+125012.gif,wall,NA,MC,0,0,0,NA,2195
+125028.gif,wall,NA,MC,0,0,0,NA,2195
+125043.gif,wall,NA,MC,0,0,0,NA,2195
+125131.gif,wall,NA,MC,0,0,0,NA,2195
+125146.gif,hammock,NA,MC,0,0,0,NA,2195
+130045.gif,leaf,NA,MC,0,0,0,NA,2195
+130418.gif,house pile,NA,MC,0,0,0,NA,2195
+130844.gif,knife,NA,MC,0,0,0,NA,2195
+130932.gif,veranda,NA,MC,0,0,0,NA,2195
+131051.gif,NA,NA,MC,0,0,1,Synthetic,2195
+131153.gif,NA,NA,MC,0,0,1,NA,2195
+132757.gif,floor,NA,MC,0,0,0,NA,2195
+132812.gif,"bowl, trash",NA,MC,0,0,0,NA,2195
+133019.gif,weaving grass,NA,KC,0,0,0,NA,2195
+133959.gif,broom bristle,NA,MC/KC,0,0,0,NA,2195
+140618.gif,broom bristle,NA,MC/KC,0,0,0,NA,2195
+141148.gif,veranda,NA,MC,0,0,0,NA,2195
+141251.gif,veranda,NA,MC,0,0,0,NA,2195
+141310.gif,veranda,NA,MC,0,0,0,NA,2195
+141340.gif,veranda,NA,MC,0,0,0,NA,2195
+141532.gif,veranda,NA,MC,0,0,0,NA,2195
+141618.gif,broom bristle,NA,MC/KC,0,0,0,NA,2195
+141634.gif,broom bristle,NA,MC/KC,0,0,0,NA,2195
+072610.gif,NA,NA,MC,0,0,1,NA,8779
+072949.gif,NA,NA,MC,0,0,1,NA,8779
+073004.gif,NA,NA,MC,0,0,1,NA,8779
+074156.gif,veranda,NA,MC,0,0,0,NA,8779
+074416.gif,veranda,NA,MC,0,0,0,NA,8779
+074446.gif,veranda,NA,MC,0,0,0,NA,8779
+074503.gif,veranda,NA,MC,0,0,0,NA,8779
+074533.gif,floor,NA,MC,0,0,0,NA,8779
+093431.gif,clothing,unsure,MC,0,0,0,NA,8779
+095055.gif,wall,NA,MC,0,0,0,NA,8779
+111043.gif,NA,NA,MC,0,0,1,NA,8779
+111703.gif,veranda,NA,MC,0,0,0,NA,8779
+111718.gif,towel,NA,MC,0,0,0,NA,8779
+111734.gif,NA,NA,MC,0,0,1,Food,8779
+112057.gif,wall,NA,MC,0,0,0,NA,8779
+112107.gif,wall,NA,MC,0,0,0,NA,8779
+112840.gif,nut,NA,MC,0,0,0,NA,8779
+112856.gif,"nut, rock",NA,MC,0,0,0,NA,8779
+112911.gif,"nut, rock",NA,MC,0,0,0,NA,8779
+112926.gif,"nut, rock",NA,MC,0,0,0,NA,8779
+112943.gif,"nut, rock",NA,MC,0,0,0,NA,8779
+113013.gif,nut,NA,MC,0,0,0,NA,8779
+113031.gif,nut,NA,MC,0,0,0,NA,8779
+113046.gif,nut,NA,MC,0,0,0,NA,8779
+113118.gif,"nut, rock",NA,MC,0,0,0,NA,8779
+113305.gif,nut,NA,MC,0,0,0,NA,8779
+113438.gif,nut,NA,MC,0,0,0,NA,8779
+123618.gif,NA,NA,MC,0,0,1,Natural,8779
+123704.gif,bucket,bucket is full of water,MC,0,0,0,NA,8779
+123719.gif,bucket,bucket is full of water,MC,0,0,0,NA,8779
+125905.gif,NA,NA,MC,0,0,1,Food,8779
+130038.gif,NA,NA,MC,0,0,1,Food,8779
+130054.gif,NA,NA,MC,0,0,1,Food,8779
+131543.gif,NA,NA,MC,0,0,1,Natural,8779
+131559.gif,NA,NA,MC,0,0,1,NA,8779
+133024.gif,NA,NA,MC,0,0,1,NA,8779
+133300.gif,wood shavings,NA,MC,0,0,0,NA,8779
+135146.gif,broom,NA,MC,0,0,0,NA,8779
+135301.gif,NA,NA,MC,0,0,1,Synthetic,8779
+135316.gif,woven basket,NA,KC,0,0,0,NA,8779
+141057.gif,NA,NA,MC,0,0,1,NA,8779
+141203.gif,wall,NA,MC,0,0,0,NA,8779
+064304.gif,NA,NA,MC,0,0,1,Synthetic,2789
+064320.gif,NA,NA,MC,0,0,1,NA,2789
+065719.gif,wall,NA,MC,0,0,0,NA,2789
+065736.gif,wall,NA,MC,0,0,0,NA,2789
+070418.gif,grass,NA,MC,0,0,0,NA,2789
+093344.gif,seafood,NA,KC,0,0,0,NA,2789
+093415.gif,seafood,NA,KC,0,0,0,NA,2789
+093431.gif,seafood,NA,KC,0,0,0,NA,2789
+093548.gif,seafood,NA,KC,0,0,0,NA,2789
+093603.gif,seafood,NA,KC,0,0,0,NA,2789
+093619.gif,seafood,NA,KC,0,0,0,NA,2789
+093634.gif,seafood,NA,KC,0,0,0,NA,2789
+093649.gif,seafood,NA,KC,0,0,0,NA,2789
+105134.gif,wooden board,NA,MC,0,0,0,NA,2789
+105749.gif,floor,NA,MC,0,0,0,NA,2789
+110419.gif,trash,spit,MC,0,0,0,NA,2789
+114318.gif,seed,NA,MC,0,0,0,NA,2789
+114404.gif,seed,NA,MC,0,0,0,NA,2789
+114903.gif,nut,NA,MC,0,0,0,NA,2789
+120025.gif,stick,NA,KC,0,0,0,NA,2789
+120042.gif,stick,NA,KC,0,0,0,NA,2789
+120057.gif,stick,NA,KC,0,0,0,NA,2789
+124701.gif,trash,nut husk,MC,0,0,0,NA,2789
+124803.gif,trash,nut husk,MC,0,0,0,NA,2789
+133147.gif,branch,NA,KC,0,0,0,NA,2789
+134421.gif,rope,NA,KC,0,0,0,NA,2789
+135504.gif,bowl,NA,KC,0,0,0,NA,2789
+140442.gif,tongs,NA,KC,0,0,0,NA,2789
+140459.gif,tongs,NA,KC,0,0,0,NA,2789
+140514.gif,tongs,NA,KC,0,0,0,NA,2789
+140529.gif,bowl,NA,KC,0,0,0,NA,2789
+140941.gif,NA,NA,MC,0,0,1,Food,2789
+141046.gif,floor,NA,MC,0,0,0,NA,2789
+141116.gif,floor,NA,MC,0,0,0,NA,2789
+141132.gif,NA,NA,MC,0,0,1,NA,2789
+141558.gif,floor,NA,MC,0,0,0,NA,2789
+142034.gif,ball,NA,KC,0,0,0,NA,2789
+142049.gif,ball,NA,KC,0,0,0,NA,2789
+142154.gif,ball,NA,KC,0,0,0,NA,2789
+143619.gif,bench seat,NA,KC,0,0,0,NA,2789
+143753.gif,stick,NA,KC,0,0,0,NA,2789
+144509.gif,barrel,NA,KC,0,0,0,NA,2789
+144524.gif,barrel,NA,KC,0,0,0,NA,2789
+144539.gif,barrel,NA,KC,0,0,0,NA,2789
+144556.gif,barrel,NA,KC,0,0,0,NA,2789
+144611.gif,barrel,NA,KC,0,0,0,NA,2789
+144626.gif,barrel,NA,KC,0,0,0,NA,2789
+145758.gif,bench seat,NA,KC,0,0,0,NA,2789
+145813.gif,bench seat,NA,KC,0,0,0,NA,2789
+145914.gif,bench seat,NA,KC,0,0,0,NA,2789
+150019.gif,bench seat,NA,KC,0,0,0,NA,2789
+150034.gif,bench seat,NA,KC,0,0,0,NA,2789
+071204.gif,NA,NA,KC,1,0,0,NA,3856
+074304.gif,metal fragment,NA,KC,0,0,0,NA,3856
+074319.gif,metal fragment,NA,KC,0,0,0,NA,3856
+074334.gif,metal fragment,NA,KC,0,0,0,NA,3856
+074351.gif,metal fragment,NA,KC,0,0,0,NA,3856
+074406.gif,metal fragment,NA,KC,0,0,0,NA,3856
+075031.gif,metal fragment,NA,KC,0,0,0,NA,3856
+075046.gif,metal fragment,NA,KC,0,0,0,NA,3856
+075102.gif,NA,NA,KC,1,0,0,NA,3856
+081947.gif,NA,NA,KC,1,0,0,NA,3856
+092446.gif,NA,NA,MC,0,0,1,Synthetic,3856
+092605.gif,NA,NA,MC,0,0,1,Synthetic,3856
+093612.gif,NA,NA,MC,0,0,1,Synthetic,3856
+120629.gif,rubber bracelet,NA,KC,0,0,0,NA,3856
+123159.gif,water jug,NA,MC,0,0,0,NA,3856
+123350.gif,water jug,NA,MC,0,0,0,NA,3856
+124252.gif,NA,NA,KC,1,0,0,NA,3856
+124307.gif,NA,NA,KC,1,0,0,NA,3856
+125127.gif,stick,NA,KC,0,0,0,NA,3856
+125921.gif,rock,NA,KC,0,0,0,NA,3856
+133116.gif,misc container,could also be considered a bottle (not mealtime tool),KC,0,0,0,NA,3856
+133131.gif,misc container,could also be considered a bottle (not mealtime tool),KC,0,0,0,NA,3856
+140423.gif,NA,NA,KC,1,0,0,NA,3856
+140454.gif,NA,NA,KC,1,0,0,NA,3856
+140509.gif,NA,NA,KC,1,0,0,NA,3856
+140526.gif,toothbrush,NA,MC,0,0,0,NA,3856
+140541.gif,toothbrush,NA,MC,0,0,0,NA,3856
+140556.gif,toothbrush,NA,MC,0,0,0,NA,3856
+140933.gif,"toothbrush, coconut",NA,MC/KC,0,0,0,NA,3856
+142733.gif,coconut,NA,KC,0,0,0,NA,3856
+142748.gif,coconut,NA,KC,0,0,0,NA,3856
+143024.gif,lantern,NA,KC,0,0,0,NA,3856
+071729.gif,shirt,NA,MC,0,0,0,NA,3124
+071832.gif,shirt,NA,MC,0,0,0,NA,3124
+071847.gif,shirt,NA,MC,0,0,0,NA,3124
+072005.gif,shirt,NA,MC,0,0,0,NA,3124
+073453.gif,shirt,NA,MC,0,0,0,NA,3124
+074259.gif,lighter,NA,MC,0,0,0,NA,3124
+074331.gif,lighter,NA,MC,0,0,0,NA,3124
+074346.gif,lighter,NA,MC,0,0,0,NA,3124
+074458.gif,lighter,NA,MC,0,0,0,NA,3124
+074838.gif,NA,NA,MC,0,0,1,NA,3124
+074853.gif,shirt,NA,MC,0,0,0,NA,3124
+075247.gif,stairs,NA,MC,0,0,0,NA,3124
+080641.gif,stairs,NA,MC,0,0,0,NA,3124
+080902.gif,stairs,NA,MC,0,0,0,NA,3124
+080917.gif,stairs,NA,MC,0,0,0,NA,3124
+081857.gif,shelf,NA,MC,0,0,0,NA,3124
+081915.gif,shelf,NA,MC,0,0,0,NA,3124
+082516.gif,NA,NA,MC,0,0,1,Synthetic,3124
+083250.gif,shelf,NA,MC,0,0,0,NA,3124
+083309.gif,veranda,NA,MC,0,0,0,NA,3124
+083504.gif,veranda,NA,MC,0,0,0,NA,3124
+083519.gif,veranda,NA,MC,0,0,0,NA,3124
+083536.gif,veranda,NA,MC,0,0,0,NA,3124
+083551.gif,veranda,NA,MC,0,0,0,NA,3124
+083606.gif,veranda,NA,MC,0,0,0,NA,3124
+083624.gif,veranda,NA,MC,0,0,0,NA,3124
+083639.gif,veranda,NA,MC,0,0,0,NA,3124
+083654.gif,veranda,NA,MC,0,0,0,NA,3124
+083710.gif,veranda,NA,MC,0,0,0,NA,3124
+083740.gif,veranda,NA,MC,0,0,0,NA,3124
+083812.gif,NA,NA,MC,0,0,1,NA,3124
+083827.gif,veranda,NA,MC,0,0,0,NA,3124
+090305.gif,stairs,NA,MC,0,0,0,NA,3124
+090335.gif,stairs,NA,MC,0,0,0,NA,3124
+092410.gif,stairs,NA,MC,0,0,0,NA,3124
+092426.gif,stairs,NA,MC,0,0,0,NA,3124
+092614.gif,stairs,NA,MC,0,0,0,NA,3124
+092630.gif,stairs,NA,MC,0,0,0,NA,3124
+092645.gif,floor,NA,MC,0,0,0,NA,3124
+093400.gif,floor,NA,MC,0,0,0,NA,3124
+093517.gif,wall,NA,MC,0,0,0,NA,3124
+093709.gif,wall,NA,MC,0,0,0,NA,3124
+094409.gif,veranda,NA,MC,0,0,0,NA,3124
+094713.gif,nut,NA,MC,0,0,0,NA,3124
+094728.gif,nut,NA,MC,0,0,0,NA,3124
+095021.gif,floor,NA,MC,0,0,0,NA,3124
+095223.gif,nut,NA,MC,0,0,0,NA,3124
+095341.gif,floor,NA,MC,0,0,0,NA,3124
+100417.gif,nut,NA,MC,0,0,0,NA,3124
+100432.gif,nut,NA,MC,0,0,0,NA,3124
+100448.gif,nut,NA,MC,0,0,0,NA,3124
+100518.gif,nut,NA,MC,0,0,0,NA,3124
+100827.gif,nut,NA,MC,0,0,0,NA,3124
+101044.gif,stairs,NA,MC,0,0,0,NA,3124
+101201.gif,nut,NA,MC,0,0,0,NA,3124
+102737.gif,fruit (unknown variety),NA,MC,0,0,0,NA,3124
+102752.gif,fruit (unknown variety),NA,MC,0,0,0,NA,3124
+102852.gif,fruit (unknown variety),NA,MC,0,0,0,NA,3124
+102907.gif,fruit (unknown variety),NA,MC,0,0,0,NA,3124
+105542.gif,table,NA,KC,0,0,0,NA,3124
+105730.gif,veranda,NA,MC,0,0,0,NA,3124
+105746.gif,veranda,NA,MC,0,0,0,NA,3124
+122633.gif,veranda,NA,MC,0,0,0,NA,3124
+123436.gif,table,NA,KC,0,0,0,NA,3124
+123451.gif,knife,NA,MC,0,0,0,NA,3124
+123524.gif,table,NA,KC,0,0,0,NA,3124
+132611.gif,NA,NA,MC,0,0,1,Food,3124
+132716.gif,stairs,NA,MC,0,0,0,NA,3124
+135415.gif,NA,NA,MC,0,0,1,Natural,3124
+141756.gif,house pile,NA,MC,0,0,0,NA,3124
+141844.gif,house pile,NA,MC,0,0,0,NA,3124
+142722.gif,wall,NA,MC,0,0,0,NA,3124
+142737.gif,wall,NA,MC,0,0,0,NA,3124
+142752.gif,bench,NA,MC,0,0,0,NA,3124
+142809.gif,bench,NA,MC,0,0,0,NA,3124
+142824.gif,bench,NA,MC,0,0,0,NA,3124
+143428.gif,wall,NA,MC,0,0,0,NA,3124
+143449.gif,wall,NA,MC,0,0,,NA,3124
+144852.gif,woven basket,NA,KC,0,0,0,NA,3124
+150507.gif,house pile,NA,MC,0,0,0,NA,3124
+090245.gif,suitcase,NA,KC,0,0,0,NA,7423
+090300.gif,suitcase,NA,KC,0,0,0,NA,7423
+090318.gif,suitcase,NA,KC,0,0,0,NA,7423
+133524.gif,rock,NA,KC,0,0,0,NA,7423
+133920.gif,rock,NA,KC,0,0,0,NA,7423
+133952.gif,rock,NA,KC,0,0,0,NA,7423
+141254.gif,clothing,unsure what type,MC,0,0,0,NA,7423
+141513.gif,belt,NA,MC,0,0,0,NA,7423
+141530.gif,belt,NA,MC,0,0,0,NA,7423
+141545.gif,belt,NA,MC,0,0,0,NA,7423
+141600.gif,coconut,NA,KC,0,0,0,NA,7423
+20160831_085003_000.gif,fruit (unknown variety),NA,MC,0,0,0,NA,1039
+20160831_085050_000.gif,fruit (unknown variety),NA,MC,0,0,0,NA,1039
+20160831_091325_000.gif,leaf,NA,KC,0,0,0,NA,1039
+20160831_094419_000.gif,crab shell,NA,KC,0,0,0,NA,5064
+155048.gif,tortilla,NA,KC,0,0,0,NA,2399
+155118.gif,tortilla,NA,KC,0,0,0,NA,2399
+155426.gif,NA,NA,MC,1,0,0,Food,2399
+155458.gif,cookie,NA,MC,0,0,0,NA,2399
+155528.gif,pasta,NA,MC,0,0,0,NA,2399
+155558.gif,pasta,NA,MC,0,0,0,NA,2399
+155700.gif,NA,NA,MC,1,0,0,Food,2399
+155730.gif,NA,NA,MC,1,0,0,Food,2399
+155802.gif,NA,NA,MC,1,0,0,NA,2399
+155832.gif,NA,NA,MC,1,0,0,NA,2399
+155903.gif,NA,NA,MC,1,0,0,NA,2399
+155934.gif,NA,NA,MC,1,0,0,Food,2399
+160004.gif,NA,NA,MC,1,0,0,NA,2399
+160034.gif,NA,NA,MC,1,0,0,NA,2399
+160106.gif,NA,NA,MC,1,0,0,NA,2399
+160207.gif,NA,NA,MC,1,0,0,Food,2399
+160238.gif,NA,NA,MC,1,0,0,Food,2399
+160308.gif,NA,NA,MC,1,0,0,Food,2399
+160743.gif,pasta,NA,MC,0,0,0,NA,2399
+160813.gif,pasta,NA,MC,0,0,0,NA,2399
+161117.gif,NA,NA,MC,1,0,0,NA,2399
+161148.gif,cup,NA,MC,0,0,0,NA,2399
+161218.gif,NA,NA,MC,1,0,0,NA,2399
+161248.gif,NA,NA,MC,1,0,0,NA,2399
+161351.gif,NA,NA,MC,1,0,0,NA,2399
+161421.gif,NA,NA,MC,1,0,0,NA,2399
+161452.gif,NA,NA,MC,1,0,0,NA,2399
+161522.gif,NA,NA,MC,1,0,0,Food,2399
+161552.gif,NA,NA,MC,1,0,0,Food,2399
+161624.gif,cup,NA,KC,0,0,0,NA,2399
+161725.gif,NA,NA,MC,1,0,0,NA,2399
+161927.gif,NA,NA,MC,1,0,0,NA,2399
+161957.gif,NA,NA,MC,1,0,0,NA,2399
+162027.gif,NA,NA,MC,1,0,0,NA,2399
+162059.gif,NA,NA,MC,1,0,0,NA,2399
+162129.gif,NA,NA,MC,1,0,0,NA,2399
+162231.gif,chair,NA,MC,0,0,0,NA,2399
+164613.gif,detergent,NA,KC,0,0,0,NA,2399
+164644.gif,wash basin,NA,KC,0,0,0,NA,2399
+165424.gif,phone,NA,KC,0,0,0,NA,2399
+165454.gif,phone,NA,KC,0,0,0,NA,2399
+165557.gif,phone,NA,KC,0,0,0,NA,2399
+165627.gif,phone,NA,KC,0,0,0,NA,2399
+165658.gif,phone,NA,KC,0,0,0,NA,2399
+165758.gif,phone,NA,KC,0,0,0,NA,2399
+165828.gif,phone,NA,KC,0,0,0,NA,2399
+165900.gif,phone,NA,KC,0,0,0,NA,2399
+165930.gif,phone,NA,KC,0,0,0,NA,2399
+170452.gif,NA,NA,MC,0,0,1,Synthetic,2399
+170522.gif,"nail clippers, fabric",NA,KC,0,0,0,NA,2399
+171231.gif,nail clippers,NA,KC,0,0,0,NA,2399
+171433.gif,rug,NA,KC,0,0,0,NA,2399
+171504.gif,blanket,NA,KC,0,0,0,NA,2399
+171534.gif,blanket,NA,KC,0,0,0,NA,2399
+171907.gif,NA,NA,KC,1,0,0,NA,2399
+172351.gif,toy car,NA,KC,0,0,0,NA,2399
+181125.gif,NA,NA,KC,1,0,0,NA,2399
+183814.gif,ball,NA,KC,0,0,0,NA,2399
+183914.gif,trash bag,NA,KC,0,0,0,NA,2399
+183945.gif,trash bag,NA,KC,0,0,0,NA,2399
+185454.gif,baby doll,NA,KC,0,0,0,NA,2399
+190232.gif,pillar,NA,MC,0,0,0,NA,2399
+190403.gif,NA,NA,KC,1,0,0,NA,2399
+190719.gif,plastic basket,NA,KC,0,0,0,NA,2399
+191105.gif,bed,NA,MC,0,0,0,NA,2399
+191137.gif,blanket,NA,MC,0,0,0,NA,2399
+191237.gif,NA,NA,KC,1,0,0,NA,2399
+191410.gif,NA,NA,MC,0,0,1,NA,2399
+191929.gif,NA,NA,MC,0,0,1,NA,2399
+193725.gif,NA,NA,MC,0,0,1,Synthetic,2399
+194059.gif,rope,NA,MC,0,0,0,NA,2399
+194746.gif,chair,NA,KC,0,0,0,NA,2399
+195304.gif,"toy car, pillar",NA,KC,0,0,0,NA,2399
+200251.gif,plastic bag,NA,MC,0,0,0,NA,2399
+200321.gif,plastic bag,NA,MC,0,0,0,NA,2399
+200430.gif,hammock,NA,KC,0,0,0,NA,2399
+203212.gif,flower,NA,KC,0,0,0,NA,2399
+214441.gif,clothesline,NA,KC,0,0,0,NA,2399
+214511.gif,clothesline,NA,KC,0,0,0,NA,2399
+214643.gif,NA,NA,KC,1,0,0,NA,2399
+223307.gif,NA,NA,MC,0,0,1,Synthetic,2399
+224012.gif,ball,NA,KC,0,0,0,NA,2399
+230037.gif,NA,NA,KC,0,1,0,NA,2399
+230410.gif,maraca,NA,KC,0,0,0,NA,2399
+230440.gif,maraca,NA,KC,0,0,0,NA,2399
+230541.gif,maraca,NA,KC,0,0,0,NA,2399
+230644.gif,maraca,NA,KC,0,0,0,NA,2399
+230714.gif,maraca,NA,KC,0,0,0,NA,2399
+230744.gif,maraca,NA,KC,0,0,0,NA,2399
+170926.gif,NA,NA,MC,0,0,1,Synthetic,4590
+182309.gif,NA,NA,MC,0,0,1,Immovable,4590
+182339.gif,NA,NA,MC,0,0,1,Immovable,4590
+182441.gif,NA,NA,MC,0,0,1,Immovable,4590
+144215.gif,masa,NA,MC,0,0,0,NA,6852
+150441.gif,NA,NA,KC,1,0,0,NA,8232
+184614.gif,paint,NA,MC,0,0,0,NA,8232
+224538.gif,rambutan,"best guess, doesn't appear in surrounding context images",MC,0,0,0,NA,8232
+224609.gif,rambutan,"best guess, doesn't appear in surrounding context images",MC,0,0,0,NA,8232
+183159.gif,rope,NA,KC,0,0,0,NA,7302
+191543.gif,NA,NA,KC,1,0,0,Synthetic,7302
+193555.gif,mobile,probably not actually a mobile but definitely a toy and this label differentiates it from others,MC,0,0,0,NA,7302
+220256.gif,NA,NA,MC,0,0,1,Food,7302
+220326.gif,NA,NA,MC,0,0,1,Food,7302
+220355.gif,NA,NA,MC,0,0,1,Food,7302
+203846.gif,"bowl, masa",NA,MC/KC,0,0,0,NA,4197
+233149.gif,peanut,NA,KC,0,0,0,NA,8532
+233758.gif,peanut,NA,KC,0,0,0,NA,8532
+233830.gif,peanut,NA,KC,0,0,0,NA,8532
+234336.gif,NA,NA,KC,1,0,0,Food,8532
+234438.gif,NA,NA,KC,1,0,0,Food,8532

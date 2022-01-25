@@ -1293,7 +1293,6 @@ Rossel,5028,33,F,070619.gif,NA,Synthetic,rope,09:05:20,10
 Rossel,5028,33,F,070701.gif,NA,Immovable,wall,09:06:02,12
 Rossel,5028,33,F,070701.gif,Unsure,Immovable,wall,09:06:02,12
 Rossel,5028,33,F,070931.gif,NA,Immovable,wall,09:08:32,13
-Rossel,5028,33,F,070931.gif,Unsure,Immovable,wall,09:08:32,13
 Rossel,5028,33,F,075051.gif,NA,Synthetic,fabric,09:49:52,10
 Rossel,5028,33,F,075101.gif,NA,Synthetic,fabric,09:50:02,12
 Rossel,5028,33,F,080159.gif,NA,Toy,book,10:01:00,11
@@ -1311,8 +1310,7 @@ Rossel,5028,33,F,081222.gif,NA,Tool,water (for washing),10:11:23,11
 Rossel,5028,33,F,081605.gif,NA,Synthetic,camera,10:15:06,10
 Rossel,5028,33,F,081615.gif,NA,Synthetic,camera,10:15:16,11
 Rossel,5028,33,F,081637.gif,NA,Synthetic,camera,10:15:38,10
-Rossel,5028,33,F,081647.gif,NA,Immovable,wall,10:15:48,12
-Rossel,5028,33,F,081647.gif,Unsure,Immovable,wall,10:15:48,12
+Rossel,5028,33,F,081647.gif,NA,Immovable,floor,10:15:48,12
 Rossel,5028,33,F,081659.gif,NA,Toy,book,10:16:00,10
 Rossel,5028,33,F,081719.gif,NA,Toy,book,10:16:20,12
 Rossel,5028,33,F,081810.gif,NA,Toy,book,10:17:11,21
@@ -1385,10 +1383,8 @@ Rossel,5028,33,F,085313.gif,NA,Toy,book,10:52:14,13
 Rossel,5028,33,F,085326.gif,NA,Toy,book,10:52:27,11
 Rossel,5028,33,F,085337.gif,NA,Toy,book,10:52:38,10
 Rossel,5028,33,F,085347.gif,NA,Toy,book,10:52:48,11
-Rossel,5028,33,F,085513.gif,NA,Immovable,veranda,10:54:14,10
-Rossel,5028,33,F,085513.gif,Unsure,Immovable,veranda,10:54:14,10
-Rossel,5028,33,F,085523.gif,NA,Immovable,veranda,10:54:24,12
-Rossel,5028,33,F,085523.gif,Unsure,Immovable,veranda,10:54:24,12
+Rossel,5028,33,F,085513.gif,NA,Immovable,wall,10:54:14,10
+Rossel,5028,33,F,085523.gif,NA,Immovable,wall,10:54:24,12
 Rossel,5028,33,F,085628.gif,NA,Synthetic,camera,10:55:29,12
 Rossel,5028,33,F,085700.gif,NA,Synthetic,camera,10:56:01,23
 Rossel,5028,33,F,085723.gif,NA,Synthetic,broom bristle,10:56:24,10
@@ -1404,9 +1400,7 @@ Rossel,5028,33,F,091014.gif,NA,Synthetic,camera,11:09:15,12
 Rossel,5028,33,F,091058.gif,NA,Synthetic,phone,11:09:59,10
 Rossel,5028,33,F,091108.gif,NA,Synthetic,phone,11:10:09,10
 Rossel,5028,33,F,091326.gif,NA,Immovable,wall,11:12:27,12
-Rossel,5028,33,F,091326.gif,Unsure,Immovable,wall,11:12:27,12
 Rossel,5028,33,F,091338.gif,NA,Immovable,wall,11:12:39,10
-Rossel,5028,33,F,091338.gif,Unsure,Immovable,wall,11:12:39,10
 Rossel,5028,33,F,091348.gif,NA,Synthetic,camera,11:12:49,10
 Rossel,5028,33,F,091454.gif,NA,Synthetic,vest,11:13:55,10
 Rossel,5028,33,F,091504.gif,NA,Synthetic,vest,11:14:05,28
@@ -1483,7 +1477,6 @@ Rossel,5028,33,F,094244.gif,NA,Synthetic,cotton debris,11:41:45,10
 Rossel,5028,33,F,094254.gif,NA,Synthetic,broom bristle,11:41:55,12
 Rossel,5028,33,F,094254.gif,NA,Synthetic,cotton debris,11:41:55,12
 Rossel,5028,33,F,094338.gif,NA,Immovable,wall,11:42:39,10
-Rossel,5028,33,F,094338.gif,Unsure,Immovable,wall,11:42:39,10
 Rossel,5028,33,F,094430.gif,NA,Synthetic,camera,11:43:31,14
 Rossel,5028,33,F,094631.gif,NA,Synthetic,camera,11:45:32,10
 Rossel,5028,33,F,094840.gif,NA,Natural,dirt,11:47:41,10
@@ -1511,10 +1504,9 @@ Rossel,5028,33,F,095320.gif,NA,Natural,dirt,11:52:21,10
 Rossel,5028,33,F,095340.gif,NA,Natural,dirt,11:52:41,12
 Rossel,5028,33,F,095352.gif,NA,Natural,dirt,11:52:53,10
 Rossel,5028,33,F,095402.gif,NA,Natural,dirt,11:53:03,8
-Rossel,5028,33,F,095453.gif,NA,Immovable,veranda,11:53:54,11
-Rossel,5028,33,F,095453.gif,Unsure,Immovable,veranda,11:53:54,11
-Rossel,5028,33,F,095525.gif,NA,Immovable,house pile,11:54:26,10
-Rossel,5028,33,F,095525.gif,Unsure,Immovable,house pile,11:54:26,10
+Rossel,5028,33,F,095443.gif,NA,Immovable,veranda,11:53:44,10
+Rossel,5028,33,F,095453.gif,NA,Immovable,floor,11:53:54,11
+Rossel,5028,33,F,095525.gif,NA,Immovable,floor,11:54:26,10
 Rossel,5028,33,F,095758.gif,NA,Synthetic,camera,11:56:59,10
 Rossel,5028,33,F,095808.gif,NA,Synthetic,camera,11:57:09,10
 Rossel,5028,33,F,095849.gif,NA,Toy,swing,11:57:50,13
@@ -1529,6 +1521,7 @@ Rossel,5028,33,F,100025.gif,NA,Natural,rock,11:59:26,13
 Rossel,5028,33,F,100038.gif,NA,Synthetic,camera,11:59:39,12
 Rossel,5028,33,F,100100.gif,NA,Synthetic,camera,12:00:01,12
 Rossel,5028,33,F,100132.gif,NA,Synthetic,camera,12:00:33,13
+Rossel,5028,33,F,100434.gif,NA,Immovable,house pile,12:03:35,10
 Rossel,5028,33,F,100505.gif,NA,Toy,ball,12:04:06,10
 Rossel,5028,33,F,100610.gif,NA,Toy,ball,12:05:11,10
 Rossel,5028,33,F,100628.gif,NA,Toy,ball,12:05:29,10
@@ -1551,6 +1544,7 @@ Rossel,5028,33,F,101221.gif,NA,Tool,knife,12:11:22,10
 Rossel,5028,33,F,101231.gif,NA,Tool,knife,12:11:32,11
 Rossel,5028,33,F,101242.gif,NA,Tool,knife,12:11:43,12
 Rossel,5028,33,F,101254.gif,NA,Tool,knife,12:11:55,10
+Rossel,5028,33,F,101451.gif,NA,Natural,dog,12:13:52,12
 Rossel,5028,33,F,101513.gif,NA,Tool,knife,12:14:14,10
 Rossel,5028,33,F,101513.gif,NA,Immovable,stairs,12:14:14,10
 Rossel,5028,33,F,101523.gif,NA,Tool,knife,12:14:24,13
@@ -1646,12 +1640,9 @@ Rossel,5028,33,F,104449.gif,NA,Toy,book,12:43:50,10
 Rossel,5028,33,F,104459.gif,NA,Toy,book,12:44:00,10
 Rossel,5028,33,F,104509.gif,NA,Toy,book,12:44:10,13
 Rossel,5028,33,F,104522.gif,NA,Toy,book,12:44:23,10
-Rossel,5028,33,F,104532.gif,NA,Immovable,veranda,12:44:33,10
-Rossel,5028,33,F,104532.gif,Unsure,Immovable,veranda,12:44:33,10
-Rossel,5028,33,F,104542.gif,NA,Immovable,veranda,12:44:43,12
-Rossel,5028,33,F,104542.gif,Unsure,Immovable,veranda,12:44:43,12
+Rossel,5028,33,F,104532.gif,NA,Immovable,wall,12:44:33,10
+Rossel,5028,33,F,104542.gif,NA,Immovable,wall,12:44:43,12
 Rossel,5028,33,F,104554.gif,NA,Immovable,wall,12:44:55,10
-Rossel,5028,33,F,104554.gif,Unsure,Immovable,wall,12:44:55,10
 Rossel,5028,33,F,104637.gif,NA,Food,sago,12:45:38,10
 Rossel,5028,33,F,104719.gif,NA,Food,sago,12:46:20,11
 Rossel,5028,33,F,104740.gif,NA,Food,sago,12:46:41,10
@@ -1741,6 +1732,7 @@ Rossel,7159,45,F,064039.gif,NA,Toy,book,08:39:44,7
 Rossel,7159,45,F,064046.gif,NA,Toy,book,08:39:51,10
 Rossel,7159,45,F,064056.gif,NA,Toy,book,08:40:01,11
 Rossel,7159,45,F,064107.gif,NA,Toy,book,08:40:12,11
+Rossel,7159,45,F,064754.gif,NA,Immovable,wall,08:46:59,10
 Rossel,7159,45,F,065159.gif,NA,Food,seafood,08:51:04,10
 Rossel,7159,45,F,065209.gif,NA,Food,seafood,08:51:14,10
 Rossel,7159,45,F,065219.gif,NA,Food,seafood,08:51:24,12
@@ -1758,7 +1750,6 @@ Rossel,7159,45,F,065435.gif,NA,Food,seafood,08:53:40,10
 Rossel,7159,45,F,065517.gif,NA,Food,seafood,08:54:22,11
 Rossel,7159,45,F,065528.gif,NA,Food,seafood,08:54:33,10
 Rossel,7159,45,F,065538.gif,NA,Food,seafood,08:54:43,10
-Rossel,7159,45,F,065538.gif,Unsure,Food,seafood,08:54:43,10
 Rossel,7159,45,F,065610.gif,NA,Food,seafood,08:55:15,10
 Rossel,7159,45,F,065737.gif,NA,Food,seafood,08:56:42,10
 Rossel,7159,45,F,065747.gif,NA,Food,seafood,08:56:52,10
@@ -1797,19 +1788,14 @@ Rossel,7159,45,F,070414.gif,NA,Food,seafood,09:03:19,10
 Rossel,7159,45,F,070424.gif,NA,Food,seafood,09:03:29,11
 Rossel,7159,45,F,070435.gif,NA,Food,seafood,09:03:40,10
 Rossel,7159,45,F,070456.gif,NA,Food,seafood,09:04:01,12
-Rossel,7159,45,F,070456.gif,Unsure,Food,seafood,09:04:01,12
 Rossel,7159,45,F,070508.gif,NA,Food,seafood,09:04:13,10
-Rossel,7159,45,F,070508.gif,Unsure,Food,seafood,09:04:13,10
 Rossel,7159,45,F,070518.gif,NA,Food,seafood,09:04:23,10
-Rossel,7159,45,F,070518.gif,Unsure,Food,seafood,09:04:23,10
 Rossel,7159,45,F,070528.gif,NA,Food,seafood,09:04:33,12
-Rossel,7159,45,F,070528.gif,Unsure,Food,seafood,09:04:33,12
 Rossel,7159,45,F,070540.gif,NA,Food,seafood,09:04:45,10
-Rossel,7159,45,F,070540.gif,Unsure,Food,seafood,09:04:45,10
 Rossel,7159,45,F,070550.gif,NA,Food,seafood,09:04:55,5
-Rossel,7159,45,F,070550.gif,Unsure,Food,seafood,09:04:55,5
 Rossel,7159,45,F,070555.gif,NA,Food,seafood,09:05:00,10
-Rossel,7159,45,F,070555.gif,Unsure,Food,seafood,09:05:00,10
+Rossel,7159,45,F,070605.gif,NA,Food,seafood,09:05:10,11
+Rossel,7159,45,F,070616.gif,NA,Food,seafood,09:05:21,12
 Rossel,7159,45,F,070628.gif,NA,Food,seafood,09:05:33,10
 Rossel,7159,45,F,070638.gif,NA,Food,seafood,09:05:43,10
 Rossel,7159,45,F,070648.gif,NA,Food,seafood,09:05:53,12
@@ -1859,12 +1845,11 @@ Rossel,7159,45,F,081133.gif,NA,Food,sago,10:10:38,10
 Rossel,7159,45,F,081143.gif,NA,Food,sago,10:10:48,10
 Rossel,7159,45,F,081153.gif,NA,Food,sago,10:10:58,11
 Rossel,7159,45,F,081204.gif,NA,Food,sago,10:11:09,10
-Rossel,7159,45,F,081752.gif,NA,Immovable,wall,10:16:57,10
-Rossel,7159,45,F,081752.gif,Unsure,Immovable,wall,10:16:57,10
-Rossel,7159,45,F,081802.gif,NA,Immovable,wall,10:17:07,12
-Rossel,7159,45,F,081802.gif,Unsure,Immovable,wall,10:17:07,12
-Rossel,7159,45,F,082534.gif,NA,Immovable,wall,10:24:39,12
-Rossel,7159,45,F,082534.gif,Unsure,Immovable,wall,10:24:39,12
+Rossel,7159,45,F,081457.gif,NA,Immovable,shelf,10:14:02,10
+Rossel,7159,45,F,081544.gif,NA,Immovable,shelf,10:14:49,10
+Rossel,7159,45,F,081752.gif,NA,Immovable,floor,10:16:57,10
+Rossel,7159,45,F,081802.gif,NA,Immovable,floor,10:17:07,12
+Rossel,7159,45,F,082534.gif,NA,Synthetic,mosquito net,10:24:39,12
 Rossel,7159,45,F,083124.gif,NA,Toy,book,10:30:29,12
 Rossel,7159,45,F,083136.gif,NA,Toy,book,10:30:41,10
 Rossel,7159,45,F,083146.gif,NA,Toy,book,10:30:51,10
@@ -1892,8 +1877,7 @@ Rossel,7159,45,F,085038.gif,NA,Immovable,wall,10:49:43,11
 Rossel,7159,45,F,085122.gif,NA,Immovable,wall,10:50:27,10
 Rossel,7159,45,F,085132.gif,NA,Immovable,wall,10:50:37,10
 Rossel,7159,45,F,085214.gif,NA,Immovable,wall,10:51:19,14
-Rossel,7159,45,F,085341.gif,NA,Immovable,wall,10:52:46,11
-Rossel,7159,45,F,085341.gif,Unsure,Immovable,wall,10:52:46,11
+Rossel,7159,45,F,085341.gif,NA,Immovable,floor,10:52:46,11
 Rossel,7159,45,F,085435.gif,NA,Toy,book,10:53:40,10
 Rossel,7159,45,F,085445.gif,NA,Toy,book,10:53:50,10
 Rossel,7159,45,F,085455.gif,NA,Toy,book,10:54:00,13
@@ -1904,8 +1888,7 @@ Rossel,7159,45,F,085539.gif,NA,Toy,book,10:54:44,10
 Rossel,7159,45,F,085549.gif,NA,Toy,book,10:54:54,10
 Rossel,7159,45,F,085559.gif,NA,Toy,book,10:55:04,15
 Rossel,7159,45,F,085614.gif,NA,Toy,book,10:55:19,10
-Rossel,7159,45,F,090014.gif,NA,Immovable,wall,10:59:19,11
-Rossel,7159,45,F,090014.gif,Unsure,Immovable,wall,10:59:19,11
+Rossel,7159,45,F,090014.gif,NA,Immovable,floor,10:59:19,11
 Rossel,7159,45,F,090035.gif,NA,Synthetic,purse,10:59:40,11
 Rossel,7159,45,F,090046.gif,NA,Synthetic,purse,10:59:51,11
 Rossel,7159,45,F,090138.gif,NA,Synthetic,purse,11:00:43,13
@@ -1915,6 +1898,9 @@ Rossel,7159,45,F,091047.gif,NA,Synthetic,camera,11:09:52,11
 Rossel,7159,45,F,091058.gif,NA,Synthetic,camera,11:10:03,10
 Rossel,7159,45,F,091545.gif,NA,Tool,pot,11:14:50,10
 Rossel,7159,45,F,092241.gif,NA,Immovable,stairs,11:21:46,10
+Rossel,7159,45,F,092251.gif,NA,Synthetic,phone,11:21:56,10
+Rossel,7159,45,F,092301.gif,NA,Synthetic,phone,11:22:06,12
+Rossel,7159,45,F,092333.gif,NA,Synthetic,phone,11:22:38,13
 Rossel,7159,45,F,092510.gif,NA,Food,betelnut,11:24:15,11
 Rossel,7159,45,F,092521.gif,NA,Food,betelnut,11:24:26,5
 Rossel,7159,45,F,092526.gif,NA,Food,betelnut,11:24:31,10
@@ -1993,16 +1979,14 @@ Rossel,7159,45,F,095245.gif,NA,Natural,dirt,11:51:50,10
 Rossel,7159,45,F,095255.gif,NA,Natural,stick,11:52:00,11
 Rossel,7159,45,F,095451.gif,NA,Immovable,stairs,11:53:56,10
 Rossel,7159,45,F,095501.gif,NA,Immovable,stairs,11:54:06,13
-Rossel,7159,45,F,095628.gif,NA,Immovable,table,11:55:33,10
-Rossel,7159,45,F,095628.gif,Unsure,Immovable,table,11:55:33,10
+Rossel,7159,45,F,095628.gif,NA,Immovable,veranda,11:55:33,10
 Rossel,7159,45,F,095932.gif,NA,Tool,knife,11:58:37,10
 Rossel,7159,45,F,095942.gif,NA,Tool,knife,11:58:47,10
 Rossel,7159,45,F,095952.gif,NA,Tool,knife,11:58:57,12
 Rossel,7159,45,F,100035.gif,NA,Tool,knife,11:59:40,11
 Rossel,7159,45,F,100046.gif,NA,Tool,knife,11:59:51,10
 Rossel,7159,45,F,100056.gif,NA,Tool,knife,12:00:01,11
-Rossel,7159,45,F,100150.gif,NA,Natural,log,12:00:55,10
-Rossel,7159,45,F,100150.gif,Unsure,Natural,log,12:00:55,10
+Rossel,7159,45,F,100150.gif,NA,Synthetic,firewood,12:00:55,10
 Rossel,7159,45,F,100444.gif,NA,Tool,knife,12:03:49,10
 Rossel,7159,45,F,100504.gif,NA,Synthetic,shoe,12:04:09,13
 Rossel,7159,45,F,100517.gif,NA,Synthetic,shoe,12:04:22,10
@@ -2101,11 +2085,10 @@ Rossel,7159,45,F,110201.gif,NA,Food,sago,13:01:06,11
 Rossel,7159,45,F,110212.gif,NA,Food,sago,13:01:17,10
 Rossel,7159,45,F,110222.gif,NA,Food,sago,13:01:27,10
 Rossel,7159,45,F,110232.gif,NA,Food,sago,13:01:37,12
+Rossel,7159,45,F,111846.gif,NA,Synthetic,vest,13:17:51,10
 Rossel,7159,45,F,111938.gif,NA,Synthetic,camera,13:18:43,12
-Rossel,7159,45,F,112001.gif,NA,Immovable,veranda,13:19:06,10
-Rossel,7159,45,F,112001.gif,Unsure,Immovable,veranda,13:19:06,10
-Rossel,7159,45,F,112011.gif,NA,Immovable,veranda,13:19:16,11
-Rossel,7159,45,F,112011.gif,Unsure,Immovable,veranda,13:19:16,11
+Rossel,7159,45,F,112001.gif,NA,Immovable,wall,13:19:06,10
+Rossel,7159,45,F,112011.gif,NA,Immovable,wall,13:19:16,11
 Rossel,7159,45,F,112022.gif,NA,Synthetic,camera,13:19:27,10
 Rossel,7159,45,F,112032.gif,NA,Synthetic,camera,13:19:37,10
 Rossel,7159,45,F,112042.gif,NA,Synthetic,camera,13:19:47,12
@@ -2591,10 +2574,9 @@ Rossel,1902,8,M,060730.gif,NA,Synthetic,skirt,08:06:31,17
 Rossel,1902,8,M,060747.gif,NA,Synthetic,shirt,08:06:48,15
 Rossel,1902,8,M,060802.gif,NA,Synthetic,camera,08:07:03,15
 Rossel,1902,8,M,061533.gif,NA,Immovable,wall,08:14:34,17
-Rossel,1902,8,M,061533.gif,Unsure,Immovable,wall,08:14:34,17
 Rossel,1902,8,M,061550.gif,NA,Immovable,wall,08:14:51,15
-Rossel,1902,8,M,061550.gif,Unsure,Immovable,wall,08:14:51,15
 Rossel,1902,8,M,061653.gif,NA,Synthetic,skirt,08:15:54,15
+Rossel,1902,8,M,061708.gif,NA,Synthetic,bag,08:16:09,17
 Rossel,1902,8,M,061812.gif,NA,Synthetic,misc container,08:17:13,15
 Rossel,1902,8,M,061827.gif,NA,Synthetic,misc container lid,08:17:28,15
 Rossel,1902,8,M,061842.gif,NA,Synthetic,misc container lid,08:17:43,17
@@ -2632,21 +2614,13 @@ Rossel,1902,8,M,063118.gif,NA,Food,betelnut,08:30:19,15
 Rossel,1902,8,M,063514.gif,NA,Synthetic,vest,08:34:15,15
 Rossel,1902,8,M,063600.gif,NA,Immovable,wall,08:35:01,15
 Rossel,1902,8,M,065207.gif,NA,Immovable,wall,08:51:08,15
-Rossel,1902,8,M,065207.gif,Unsure,Immovable,wall,08:51:08,15
 Rossel,1902,8,M,065222.gif,NA,Immovable,wall,08:51:23,18
-Rossel,1902,8,M,065222.gif,Unsure,Immovable,wall,08:51:23,18
 Rossel,1902,8,M,065240.gif,NA,Immovable,wall,08:51:41,15
-Rossel,1902,8,M,065240.gif,Unsure,Immovable,wall,08:51:41,15
 Rossel,1902,8,M,065255.gif,NA,Immovable,wall,08:51:56,16
-Rossel,1902,8,M,065255.gif,Unsure,Immovable,wall,08:51:56,16
 Rossel,1902,8,M,065311.gif,NA,Immovable,wall,08:52:12,16
-Rossel,1902,8,M,065311.gif,Unsure,Immovable,wall,08:52:12,16
 Rossel,1902,8,M,065327.gif,NA,Immovable,wall,08:52:28,15
-Rossel,1902,8,M,065327.gif,Unsure,Immovable,wall,08:52:28,15
 Rossel,1902,8,M,065342.gif,NA,Immovable,wall,08:52:43,15
-Rossel,1902,8,M,065342.gif,Unsure,Immovable,wall,08:52:43,15
 Rossel,1902,8,M,065357.gif,NA,Immovable,wall,08:52:58,18
-Rossel,1902,8,M,065357.gif,Unsure,Immovable,wall,08:52:58,18
 Rossel,1902,8,M,065549.gif,NA,Synthetic,peso,08:54:50,15
 Rossel,1902,8,M,065604.gif,NA,Synthetic,peso,08:55:05,15
 Rossel,1902,8,M,065652.gif,NA,Synthetic,peso,08:55:53,15
@@ -2658,6 +2632,7 @@ Rossel,1902,8,M,070048.gif,NA,Synthetic,peso,08:59:49,15
 Rossel,1902,8,M,070103.gif,NA,Synthetic,peso,09:00:04,17
 Rossel,1902,8,M,070120.gif,NA,Natural,chick,09:00:21,15
 Rossel,1902,8,M,070714.gif,NA,Natural,chick,09:06:15,15
+Rossel,1902,8,M,070912.gif,NA,Immovable,wall,09:08:13,16
 Rossel,1902,8,M,070943.gif,NA,Synthetic,bucket,09:08:44,16
 Rossel,1902,8,M,070959.gif,NA,Synthetic,bucket,09:09:00,17
 Rossel,1902,8,M,071016.gif,NA,Synthetic,bucket,09:09:17,15
@@ -2678,6 +2653,9 @@ Rossel,1902,8,M,071344.gif,NA,Synthetic,peso,09:12:45,15
 Rossel,1902,8,M,071359.gif,NA,Synthetic,bucket,09:13:00,17
 Rossel,1902,8,M,071416.gif,NA,Synthetic,bucket,09:13:17,15
 Rossel,1902,8,M,071431.gif,NA,Synthetic,peso,09:13:32,15
+Rossel,1902,8,M,073630.gif,NA,Tool,safety pin,09:35:31,17
+Rossel,1902,8,M,073717.gif,NA,Tool,safety pin,09:36:18,17
+Rossel,1902,8,M,073734.gif,NA,Tool,safety pin,09:36:35,15
 Rossel,1902,8,M,073804.gif,NA,Food,betelnut,09:37:05,17
 Rossel,1902,8,M,073836.gif,NA,Tool,safety pin,09:37:37,15
 Rossel,1902,8,M,073851.gif,NA,Tool,safety pin,09:37:52,17
@@ -2687,6 +2665,9 @@ Rossel,1902,8,M,073955.gif,NA,Tool,safety pin,09:38:56,15
 Rossel,1902,8,M,074010.gif,NA,Tool,safety pin,09:39:11,15
 Rossel,1902,8,M,074025.gif,NA,Tool,safety pin,09:39:26,16
 Rossel,1902,8,M,074041.gif,NA,Tool,safety pin,09:39:42,15
+Rossel,1902,8,M,074111.gif,NA,Synthetic,fishing debris,09:40:12,18
+Rossel,1902,8,M,074144.gif,NA,Synthetic,fishing debris,09:40:45,15
+Rossel,1902,8,M,074549.gif,NA,Synthetic,fishnet,09:44:50,17
 Rossel,1902,8,M,074621.gif,NA,Synthetic,peso,09:45:22,15
 Rossel,1902,8,M,074636.gif,NA,Synthetic,peso,09:45:37,16
 Rossel,1902,8,M,074652.gif,NA,Synthetic,peso,09:45:53,15
@@ -2745,8 +2726,7 @@ Rossel,1902,8,M,092158.gif,NA,Synthetic,medicine,11:20:59,15
 Rossel,1902,8,M,092245.gif,NA,Synthetic,misc container lid,11:21:46,15
 Rossel,1902,8,M,092507.gif,NA,Synthetic,shirt,11:24:08,15
 Rossel,1902,8,M,092537.gif,NA,Synthetic,shirt,11:24:38,18
-Rossel,1902,8,M,092625.gif,NA,Immovable,roofing,11:25:26,17
-Rossel,1902,8,M,092625.gif,Unsure,Immovable,roofing,11:25:26,17
+Rossel,1902,8,M,092625.gif,NA,Immovable,wall,11:25:26,17
 Rossel,1902,8,M,092846.gif,NA,Synthetic,misc container,11:27:47,18
 Rossel,1902,8,M,092904.gif,NA,Synthetic,misc container,11:28:05,15
 Rossel,1902,8,M,092919.gif,NA,Synthetic,misc container,11:28:20,16
@@ -2792,6 +2772,11 @@ Rossel,1902,8,M,094949.gif,NA,Synthetic,misc container lid,11:48:50,17
 Rossel,1902,8,M,095006.gif,NA,Synthetic,misc container lid,11:49:07,15
 Rossel,1902,8,M,095123.gif,NA,Synthetic,misc container,11:50:24,17
 Rossel,1902,8,M,095140.gif,NA,Synthetic,misc container,11:50:41,15
+Rossel,1902,8,M,095155.gif,NA,Synthetic,bottle cap,11:50:56,15
+Rossel,1902,8,M,095228.gif,NA,Synthetic,bottle cap,11:51:29,15
+Rossel,1902,8,M,095228.gif,NA,Food,drinking water,11:51:29,15
+Rossel,1902,8,M,095243.gif,NA,Synthetic,bottle cap,11:51:44,15
+Rossel,1902,8,M,095243.gif,NA,Food,drinking water,11:51:44,15
 Rossel,1902,8,M,095403.gif,NA,Synthetic,misc container,11:53:04,15
 Rossel,1902,8,M,095418.gif,NA,Synthetic,misc container,11:53:19,15
 Rossel,1902,8,M,095433.gif,NA,Synthetic,misc container,11:53:34,17
@@ -2881,15 +2866,23 @@ Rossel,1902,8,M,105417.gif,NA,Food,coconut,12:53:18,20
 Rossel,1902,8,M,105437.gif,NA,Food,coconut,12:53:38,15
 Rossel,1902,8,M,110522.gif,NA,Synthetic,shirt,13:04:23,15
 Rossel,1902,8,M,110537.gif,NA,Synthetic,shirt,13:04:38,15
+Rossel,1902,8,M,110609.gif,NA,Immovable,hammock,13:05:10,15
+Rossel,1902,8,M,110624.gif,NA,Immovable,veranda,13:05:25,15
 Rossel,1902,8,M,111036.gif,NA,Immovable,hammock,13:09:37,18
 Rossel,1902,8,M,111109.gif,NA,Immovable,hammock,13:10:10,13
+Rossel,1902,8,M,111239.gif,NA,Immovable,hammock,13:11:40,17
+Rossel,1902,8,M,111256.gif,NA,Immovable,hammock,13:11:57,15
 Rossel,1902,8,M,111344.gif,NA,Immovable,hammock,13:12:45,15
 Rossel,1902,8,M,111359.gif,NA,Immovable,hammock,13:13:00,15
 Rossel,1902,8,M,111414.gif,NA,Immovable,hammock,13:13:15,17
 Rossel,1902,8,M,111431.gif,NA,Immovable,hammock,13:13:32,15
 Rossel,1902,8,M,111446.gif,NA,Immovable,hammock,13:13:47,15
 Rossel,1902,8,M,111446.gif,NA,Synthetic,skirt,13:13:47,15
+Rossel,1902,8,M,111518.gif,NA,Immovable,hammock,13:14:19,16
 Rossel,1902,8,M,111549.gif,NA,Immovable,hammock,13:14:50,17
+Rossel,1902,8,M,111636.gif,NA,Immovable,hammock,13:15:37,17
+Rossel,1902,8,M,111653.gif,NA,Immovable,hammock,13:15:54,15
+Rossel,1902,8,M,111708.gif,NA,Immovable,hammock,13:16:09,15
 Rossel,1902,8,M,112018.gif,NA,Immovable,hammock,13:19:19,15
 Rossel,1902,8,M,112247.gif,NA,Immovable,hammock,13:21:48,15
 Rossel,1902,8,M,112302.gif,NA,Immovable,hammock,13:22:03,17
@@ -2910,6 +2903,7 @@ Rossel,1902,8,M,112905.gif,NA,Immovable,hammock,13:28:06,15
 Rossel,1902,8,M,112920.gif,NA,Immovable,hammock,13:28:21,17
 Rossel,1902,8,M,113033.gif,NA,Immovable,hammock,13:29:34,17
 Rossel,1902,8,M,113050.gif,NA,Immovable,hammock,13:29:51,15
+Rossel,1902,8,M,113105.gif,NA,Immovable,hammock,13:30:06,15
 Rossel,1902,8,M,113136.gif,NA,Immovable,hammock,13:30:37,16
 Rossel,1902,8,M,113152.gif,NA,Synthetic,misc container,13:30:53,15
 Rossel,1902,8,M,113332.gif,NA,Immovable,hammock,13:32:33,15
@@ -3761,8 +3755,11 @@ Rossel,5348,20,F,103632.gif,NA,Synthetic,blanket,12:35:33,16
 Rossel,5348,20,F,103648.gif,NA,Toy,toy turtle,12:35:49,16
 Rossel,5348,20,F,103648.gif,NA,Synthetic,blanket,12:35:49,16
 Rossel,5348,20,F,103704.gif,NA,Synthetic,jug,12:36:05,15
+Rossel,5348,20,F,103704.gif,NA,Tool,jug,12:36:05,15
 Rossel,5348,20,F,103719.gif,NA,Synthetic,jug,12:36:20,15
+Rossel,5348,20,F,103719.gif,NA,Tool,jug,12:36:20,15
 Rossel,5348,20,F,103734.gif,NA,Synthetic,jug,12:36:35,17
+Rossel,5348,20,F,103734.gif,NA,Tool,jug,12:36:35,17
 Rossel,5348,20,F,103909.gif,NA,Immovable,veranda,12:38:10,17
 Rossel,5348,20,F,103926.gif,NA,Toy,ball,12:38:27,15
 Rossel,5348,20,F,103941.gif,NA,Toy,toy turtle,12:38:42,15
@@ -4367,27 +4364,17 @@ Rossel,7528,11,F,114710.gif,NA,Synthetic,belt,13:46:03,15
 Rossel,7528,11,F,115044.gif,NA,Immovable,veranda,13:49:37,15
 Rossel,7528,11,F,115059.gif,NA,Immovable,veranda,13:49:52,17
 Rossel,7528,11,F,115116.gif,NA,Immovable,veranda,13:50:09,15
-Rossel,7528,11,F,115131.gif,NA,Immovable,veranda,13:50:24,15
-Rossel,7528,11,F,115131.gif,Unsure,Immovable,veranda,13:50:24,15
-Rossel,7528,11,F,115146.gif,NA,Immovable,veranda,13:50:39,18
-Rossel,7528,11,F,115146.gif,Unsure,Immovable,veranda,13:50:39,18
-Rossel,7528,11,F,115204.gif,NA,Immovable,veranda,13:50:57,15
-Rossel,7528,11,F,115204.gif,Unsure,Immovable,veranda,13:50:57,15
-Rossel,7528,11,F,115219.gif,NA,Immovable,veranda,13:51:12,15
-Rossel,7528,11,F,115219.gif,Unsure,Immovable,veranda,13:51:12,15
-Rossel,7528,11,F,115251.gif,NA,Immovable,veranda,13:51:44,15
-Rossel,7528,11,F,115251.gif,Unsure,Immovable,veranda,13:51:44,15
-Rossel,7528,11,F,115306.gif,NA,Immovable,veranda,13:51:59,15
-Rossel,7528,11,F,115306.gif,Unsure,Immovable,veranda,13:51:59,15
-Rossel,7528,11,F,115321.gif,NA,Immovable,veranda,13:52:14,17
-Rossel,7528,11,F,115321.gif,Unsure,Immovable,veranda,13:52:14,17
-Rossel,7528,11,F,115338.gif,NA,Immovable,veranda,13:52:31,15
-Rossel,7528,11,F,115338.gif,Unsure,Immovable,veranda,13:52:31,15
-Rossel,7528,11,F,115353.gif,NA,Immovable,veranda,13:52:46,15
-Rossel,7528,11,F,115353.gif,Unsure,Immovable,veranda,13:52:46,15
+Rossel,7528,11,F,115131.gif,NA,Immovable,floor,13:50:24,15
+Rossel,7528,11,F,115146.gif,NA,Immovable,floor,13:50:39,18
+Rossel,7528,11,F,115204.gif,NA,Immovable,floor,13:50:57,15
+Rossel,7528,11,F,115219.gif,NA,Immovable,floor,13:51:12,15
+Rossel,7528,11,F,115251.gif,NA,Immovable,floor,13:51:44,15
+Rossel,7528,11,F,115306.gif,NA,Immovable,floor,13:51:59,15
+Rossel,7528,11,F,115321.gif,NA,Immovable,floor,13:52:14,17
+Rossel,7528,11,F,115338.gif,NA,Immovable,floor,13:52:31,15
+Rossel,7528,11,F,115353.gif,NA,Immovable,floor,13:52:46,15
 Rossel,7528,11,F,115703.gif,NA,Synthetic,skirt,13:55:56,16
-Rossel,7528,11,F,120220.gif,NA,Immovable,wall,14:01:13,15
-Rossel,7528,11,F,120220.gif,Unsure,Immovable,wall,14:01:13,15
+Rossel,7528,11,F,120220.gif,NA,Immovable,floor,14:01:13,15
 Rossel,7528,11,F,120612.gif,NA,Synthetic,belt,14:05:05,19
 Rossel,7528,11,F,120631.gif,NA,Synthetic,belt,14:05:24,15
 Rossel,7528,11,F,120646.gif,NA,Synthetic,belt,14:05:39,15
@@ -4445,6 +4432,7 @@ Rossel,7528,11,F,125056.gif,NA,Synthetic,shorts,14:49:49,16
 Rossel,7528,11,F,125214.gif,NA,Synthetic,misc container,14:51:07,16
 Rossel,7528,11,F,125834.gif,NA,Synthetic,blanket,14:57:27,15
 Rossel,7528,11,F,125921.gif,NA,Synthetic,blanket,14:58:14,16
+Rossel,7528,11,F,125953.gif,NA,Synthetic,clothing,14:58:46,15
 Rossel,7528,11,F,130727.gif,NA,Natural,stick,15:06:20,15
 Rossel,7528,11,F,130742.gif,NA,Natural,grass,15:06:35,15
 Rossel,7528,11,F,130757.gif,NA,Natural,grass,15:06:50,18
@@ -4538,8 +4526,7 @@ Rossel,2195,35,M,070846.gif,NA,Food,candy,09:07:46,15
 Rossel,2195,35,M,071637.gif,NA,Food,candy,09:15:37,15
 Rossel,2195,35,M,071721.gif,NA,Synthetic,vest,09:16:21,16
 Rossel,2195,35,M,071755.gif,NA,Synthetic,vest,09:16:55,15
-Rossel,2195,35,M,071906.gif,NA,Immovable,floor,09:18:06,21
-Rossel,2195,35,M,071906.gif,Unsure,Immovable,floor,09:18:06,21
+Rossel,2195,35,M,071906.gif,NA,Immovable,veranda,09:18:06,21
 Rossel,2195,35,M,072156.gif,NA,Synthetic,camera,09:20:56,17
 Rossel,2195,35,M,072259.gif,NA,Toy,ball,09:21:59,15
 Rossel,2195,35,M,072259.gif,Exclude,Toy,ball,09:21:59,15
@@ -4617,7 +4604,6 @@ Rossel,2195,35,M,081840.gif,NA,Synthetic,bag,10:17:40,16
 Rossel,2195,35,M,081856.gif,NA,Synthetic,bag,10:17:56,16
 Rossel,2195,35,M,081927.gif,NA,Synthetic,pill package,10:18:27,15
 Rossel,2195,35,M,082501.gif,NA,Immovable,veranda,10:24:01,15
-Rossel,2195,35,M,082501.gif,Unsure,Immovable,veranda,10:24:01,15
 Rossel,2195,35,M,082706.gif,NA,Tool,knife,10:26:06,15
 Rossel,2195,35,M,082955.gif,NA,Food,mumu'd tuber paste,10:28:55,15
 Rossel,2195,35,M,083010.gif,NA,Food,mumu'd tuber paste,10:29:10,15
@@ -4655,12 +4641,17 @@ Rossel,2195,35,M,091413.gif,NA,Toy,book,11:13:13,15
 Rossel,2195,35,M,091500.gif,NA,Toy,book,11:14:00,16
 Rossel,2195,35,M,091603.gif,NA,Toy,book,11:15:03,18
 Rossel,2195,35,M,092257.gif,NA,Immovable,veranda,11:21:57,15
-Rossel,2195,35,M,092257.gif,Unsure,Immovable,veranda,11:21:57,15
+Rossel,2195,35,M,092532.gif,NA,Toy,marble,11:24:32,16
 Rossel,2195,35,M,092618.gif,NA,Tool,tongs,11:25:18,18
+Rossel,2195,35,M,092738.gif,NA,Toy,marble,11:26:38,15
+Rossel,2195,35,M,092753.gif,NA,Toy,marble,11:26:53,17
 Rossel,2195,35,M,093034.gif,NA,Immovable,stairs,11:29:34,15
 Rossel,2195,35,M,093342.gif,NA,Immovable,stairs,11:32:42,15
 Rossel,2195,35,M,093357.gif,NA,Immovable,house pile,11:32:57,15
 Rossel,2195,35,M,093706.gif,NA,Immovable,wall,11:36:06,15
+Rossel,2195,35,M,094021.gif,NA,Toy,marble,11:39:21,15
+Rossel,2195,35,M,094036.gif,NA,Toy,marble,11:39:36,15
+Rossel,2195,35,M,094608.gif,NA,Toy,marble,11:45:08,16
 Rossel,2195,35,M,095012.gif,NA,Synthetic,bottle cap,11:49:12,16
 Rossel,2195,35,M,100808.gif,NA,Food,sago,12:07:08,15
 Rossel,2195,35,M,100823.gif,NA,Food,sago,12:07:23,17
@@ -4672,6 +4663,9 @@ Rossel,2195,35,M,101033.gif,NA,Food,sago,12:09:33,15
 Rossel,2195,35,M,101152.gif,NA,Food,sago,12:10:52,15
 Rossel,2195,35,M,101207.gif,NA,Food,sago,12:11:07,15
 Rossel,2195,35,M,102418.gif,NA,Synthetic,wood slat,12:23:18,15
+Rossel,2195,35,M,102623.gif,NA,Toy,marble,12:25:23,18
+Rossel,2195,35,M,102641.gif,NA,Toy,marble,12:25:41,15
+Rossel,2195,35,M,102656.gif,NA,Toy,marble,12:25:56,15
 Rossel,2195,35,M,102728.gif,NA,Synthetic,woven grass,12:26:28,15
 Rossel,2195,35,M,102743.gif,NA,Synthetic,woven grass,12:26:43,16
 Rossel,2195,35,M,102846.gif,NA,Immovable,house pile,12:27:46,18
@@ -4685,14 +4679,16 @@ Rossel,2195,35,M,103944.gif,NA,Toy,marble,12:38:44,15
 Rossel,2195,35,M,103959.gif,NA,Toy,marble,12:38:59,15
 Rossel,2195,35,M,104300.gif,NA,Tool,knife,12:42:00,15
 Rossel,2195,35,M,104315.gif,NA,Tool,knife,12:42:15,15
+Rossel,2195,35,M,104503.gif,NA,Food,sugarcane,12:44:03,19
+Rossel,2195,35,M,104503.gif,NA,Tool,knife,12:44:03,19
+Rossel,2195,35,M,104522.gif,NA,Food,sugarcane,12:44:22,15
 Rossel,2195,35,M,104522.gif,NA,Tool,knife,12:44:22,15
-Rossel,2195,35,M,104522.gif,Unsure,Tool,knife,12:44:22,15
+Rossel,2195,35,M,104537.gif,NA,Food,sugarcane,12:44:37,15
 Rossel,2195,35,M,104537.gif,NA,Tool,knife,12:44:37,15
-Rossel,2195,35,M,104537.gif,Unsure,Tool,knife,12:44:37,15
+Rossel,2195,35,M,104552.gif,NA,Food,sugarcane,12:44:52,17
 Rossel,2195,35,M,104552.gif,NA,Tool,knife,12:44:52,17
-Rossel,2195,35,M,104552.gif,Unsure,Tool,knife,12:44:52,17
+Rossel,2195,35,M,104609.gif,NA,Food,sugarcane,12:45:09,15
 Rossel,2195,35,M,104609.gif,NA,Tool,knife,12:45:09,15
-Rossel,2195,35,M,104609.gif,Unsure,Tool,knife,12:45:09,15
 Rossel,2195,35,M,104712.gif,NA,Immovable,wall,12:46:12,15
 Rossel,2195,35,M,104744.gif,NA,Natural,stick,12:46:44,40
 Rossel,2195,35,M,104824.gif,NA,Natural,stick,12:47:24,17
@@ -4734,9 +4730,9 @@ Rossel,2195,35,M,110615.gif,NA,Natural,stick,13:05:15,15
 Rossel,2195,35,M,110838.gif,NA,Synthetic,shirt,13:07:38,15
 Rossel,2195,35,M,111044.gif,NA,Synthetic,camera,13:09:44,15
 Rossel,2195,35,M,111115.gif,NA,Synthetic,camera,13:10:15,15
+Rossel,2195,35,M,111202.gif,NA,Tool,coconut scraper,13:11:02,15
 Rossel,2195,35,M,111217.gif,NA,Food,coconut,13:11:17,17
-Rossel,2195,35,M,111234.gif,NA,Synthetic,wood slat,13:11:34,15
-Rossel,2195,35,M,111234.gif,Unsure,Synthetic,wood slat,13:11:34,15
+Rossel,2195,35,M,111234.gif,NA,Tool,coconut scraper,13:11:34,15
 Rossel,2195,35,M,111249.gif,NA,Food,coconut,13:11:49,15
 Rossel,2195,35,M,111322.gif,NA,Food,coconut,13:12:22,15
 Rossel,2195,35,M,111337.gif,NA,Food,coconut,13:12:37,15
@@ -4772,14 +4768,29 @@ Rossel,2195,35,M,113340.gif,NA,Natural,stick,13:32:40,15
 Rossel,2195,35,M,113355.gif,NA,Immovable,house pile,13:32:55,15
 Rossel,2195,35,M,113410.gif,NA,Natural,dirt,13:33:10,17
 Rossel,2195,35,M,113427.gif,NA,Tool,spoon,13:33:27,15
+Rossel,2195,35,M,113442.gif,NA,Food,coconut,13:33:42,15
+Rossel,2195,35,M,113442.gif,NA,Food,banana,13:33:42,15
+Rossel,2195,35,M,113457.gif,NA,Food,coconut,13:33:57,17
+Rossel,2195,35,M,113457.gif,NA,Food,banana,13:33:57,17
 Rossel,2195,35,M,113514.gif,NA,Tool,spoon,13:34:14,15
+Rossel,2195,35,M,113736.gif,NA,Food,nut,13:36:36,15
+Rossel,2195,35,M,113751.gif,NA,Tool,coconut scraper,13:36:51,15
+Rossel,2195,35,M,113925.gif,NA,Food,coconut,13:38:25,15
+Rossel,2195,35,M,113925.gif,NA,Food,banana,13:38:25,15
+Rossel,2195,35,M,113940.gif,NA,Food,banana,13:38:40,17
+Rossel,2195,35,M,113957.gif,NA,Food,banana,13:38:57,15
+Rossel,2195,35,M,114219.gif,NA,Food,coconut,13:41:19,15
+Rossel,2195,35,M,114219.gif,NA,Food,banana,13:41:19,15
+Rossel,2195,35,M,114234.gif,NA,Food,banana,13:41:34,15
 Rossel,2195,35,M,114249.gif,NA,Tool,spoon,13:41:49,17
+Rossel,2195,35,M,114337.gif,NA,Food,coconut,13:42:37,16
+Rossel,2195,35,M,114337.gif,NA,Food,banana,13:42:37,16
 Rossel,2195,35,M,114353.gif,NA,Tool,spoon,13:42:53,15
 Rossel,2195,35,M,114423.gif,NA,Tool,spoon,13:43:23,18
-Rossel,2195,35,M,114423.gif,Unsure,Tool,spoon,13:43:23,18
 Rossel,2195,35,M,114441.gif,NA,Tool,spoon,13:43:41,15
-Rossel,2195,35,M,114731.gif,NA,Synthetic,netting,13:46:31,18
-Rossel,2195,35,M,114731.gif,Unsure,Synthetic,netting,13:46:31,18
+Rossel,2195,35,M,114456.gif,NA,Food,coconut,13:43:56,15
+Rossel,2195,35,M,114456.gif,NA,Food,banana,13:43:56,15
+Rossel,2195,35,M,114731.gif,NA,Synthetic,rope,13:46:31,18
 Rossel,2195,35,M,115757.gif,NA,Synthetic,skirt,13:56:57,15
 Rossel,2195,35,M,115812.gif,NA,Synthetic,skirt,13:57:12,16
 Rossel,2195,35,M,120343.gif,NA,Synthetic,battery,14:02:43,17
@@ -4793,7 +4804,7 @@ Rossel,2195,35,M,121132.gif,NA,Natural,stick,14:10:32,15
 Rossel,2195,35,M,121147.gif,NA,Tool,tongs,14:10:47,16
 Rossel,2195,35,M,121218.gif,NA,Synthetic,camera,14:11:18,15
 Rossel,2195,35,M,121951.gif,NA,Synthetic,wire,14:18:51,19
-Rossel,2195,35,M,121951.gif,Unsure,Synthetic,wire,14:18:51,19
+Rossel,2195,35,M,121951.gif,NA,Synthetic,lightbulb,14:18:51,19
 Rossel,2195,35,M,122040.gif,NA,Synthetic,misc container lid,14:19:40,16
 Rossel,2195,35,M,122056.gif,NA,Synthetic,misc container lid,14:19:56,15
 Rossel,2195,35,M,122111.gif,NA,Synthetic,misc container lid,14:20:11,15
@@ -4806,42 +4817,38 @@ Rossel,2195,35,M,122246.gif,NA,Synthetic,misc container lid,14:21:46,15
 Rossel,2195,35,M,122333.gif,NA,Immovable,veranda,14:22:33,15
 Rossel,2195,35,M,122504.gif,NA,Synthetic,camera,14:24:04,15
 Rossel,2195,35,M,122519.gif,NA,Synthetic,camera,14:24:19,15
+Rossel,2195,35,M,122727.gif,NA,Tool,wash basin,14:26:27,15
+Rossel,2195,35,M,122727.gif,NA,Synthetic,clothing,14:26:27,15
 Rossel,2195,35,M,122757.gif,NA,Immovable,stairs,14:26:57,18
 Rossel,2195,35,M,122815.gif,NA,Immovable,stairs,14:27:15,15
 Rossel,2195,35,M,122901.gif,NA,Immovable,stairs,14:28:01,15
+Rossel,2195,35,M,122916.gif,NA,Synthetic,clothing,14:28:16,16
 Rossel,2195,35,M,123019.gif,NA,Synthetic,camera,14:29:19,17
-Rossel,2195,35,M,123423.gif,NA,Immovable,floor,14:33:23,16
-Rossel,2195,35,M,123423.gif,Unsure,Immovable,floor,14:33:23,16
+Rossel,2195,35,M,123423.gif,NA,Immovable,wall,14:33:23,16
 Rossel,2195,35,M,123931.gif,NA,Synthetic,shirt,14:38:31,15
 Rossel,2195,35,M,124424.gif,NA,Natural,stick,14:43:24,15
 Rossel,2195,35,M,124559.gif,NA,Natural,stick,14:44:59,15
 Rossel,2195,35,M,124750.gif,NA,Toy,ball,14:46:50,17
 Rossel,2195,35,M,124854.gif,NA,Immovable,stairs,14:47:54,15
 Rossel,2195,35,M,124941.gif,NA,Toy,ball,14:48:41,16
-Rossel,2195,35,M,124957.gif,NA,Synthetic,netting,14:48:57,15
-Rossel,2195,35,M,124957.gif,Unsure,Synthetic,netting,14:48:57,15
+Rossel,2195,35,M,124957.gif,NA,Immovable,hammock,14:48:57,15
 Rossel,2195,35,M,125012.gif,NA,Immovable,wall,14:49:12,16
-Rossel,2195,35,M,125012.gif,Unsure,Immovable,wall,14:49:12,16
 Rossel,2195,35,M,125028.gif,NA,Immovable,wall,14:49:28,15
-Rossel,2195,35,M,125028.gif,Unsure,Immovable,wall,14:49:28,15
 Rossel,2195,35,M,125043.gif,NA,Immovable,wall,14:49:43,15
-Rossel,2195,35,M,125043.gif,Unsure,Immovable,wall,14:49:43,15
 Rossel,2195,35,M,125131.gif,NA,Immovable,wall,14:50:31,15
-Rossel,2195,35,M,125131.gif,Unsure,Immovable,wall,14:50:31,15
-Rossel,2195,35,M,125146.gif,NA,Synthetic,netting,14:50:46,18
-Rossel,2195,35,M,125146.gif,Unsure,Synthetic,netting,14:50:46,18
+Rossel,2195,35,M,125146.gif,NA,Immovable,hammock,14:50:46,18
 Rossel,2195,35,M,125735.gif,NA,Toy,ball,14:56:35,15
 Rossel,2195,35,M,125957.gif,NA,Natural,plant,14:58:57,15
-Rossel,2195,35,M,130418.gif,NA,Immovable,floor,15:03:18,16
-Rossel,2195,35,M,130418.gif,Unsure,Immovable,floor,15:03:18,16
+Rossel,2195,35,M,130045.gif,NA,Natural,leaf,14:59:45,15
+Rossel,2195,35,M,130418.gif,NA,Immovable,house pile,15:03:18,16
 Rossel,2195,35,M,130607.gif,NA,Immovable,wall,15:05:07,16
 Rossel,2195,35,M,130623.gif,NA,Immovable,wall,15:05:23,16
 Rossel,2195,35,M,130639.gif,NA,Immovable,wall,15:05:39,15
 Rossel,2195,35,M,130741.gif,NA,Toy,pencil,15:06:41,15
 Rossel,2195,35,M,130756.gif,NA,Toy,pencil,15:06:56,18
+Rossel,2195,35,M,130844.gif,NA,Tool,knife,15:07:44,18
 Rossel,2195,35,M,130902.gif,NA,Immovable,wall,15:08:02,15
 Rossel,2195,35,M,130932.gif,NA,Immovable,veranda,15:08:32,16
-Rossel,2195,35,M,130932.gif,Unsure,Immovable,veranda,15:08:32,16
 Rossel,2195,35,M,131004.gif,NA,Synthetic,shoe,15:09:04,15
 Rossel,2195,35,M,131019.gif,NA,Synthetic,shoe,15:09:19,17
 Rossel,2195,35,M,131138.gif,NA,Tool,bowl,15:10:38,15
@@ -4869,9 +4876,8 @@ Rossel,2195,35,M,132325.gif,NA,Toy,pencil,15:22:25,15
 Rossel,2195,35,M,132529.gif,NA,Toy,pencil,15:24:29,17
 Rossel,2195,35,M,132724.gif,NA,Toy,pencil,15:26:24,18
 Rossel,2195,35,M,132757.gif,NA,Immovable,floor,15:26:57,15
-Rossel,2195,35,M,132757.gif,Unsure,Immovable,floor,15:26:57,15
+Rossel,2195,35,M,132812.gif,NA,Tool,bowl,15:27:12,18
 Rossel,2195,35,M,132812.gif,NA,Natural,debris,15:27:12,18
-Rossel,2195,35,M,132812.gif,Unsure,Natural,debris,15:27:12,18
 Rossel,2195,35,M,132830.gif,NA,Food,candy,15:27:30,15
 Rossel,2195,35,M,132845.gif,NA,Food,packaged snack,15:27:45,15
 Rossel,2195,35,M,132900.gif,NA,Food,packaged snack,15:28:00,17
@@ -4893,20 +4899,13 @@ Rossel,2195,35,M,141000.gif,NA,Natural,plant,16:09:00,15
 Rossel,2195,35,M,141015.gif,NA,Natural,plant,16:09:15,15
 Rossel,2195,35,M,141030.gif,NA,Natural,plant,16:09:30,16
 Rossel,2195,35,M,141148.gif,NA,Immovable,veranda,16:10:48,16
-Rossel,2195,35,M,141148.gif,Unsure,Immovable,veranda,16:10:48,16
-Rossel,2195,35,M,141251.gif,NA,Immovable,stairs,16:11:51,19
-Rossel,2195,35,M,141251.gif,Unsure,Immovable,stairs,16:11:51,19
+Rossel,2195,35,M,141251.gif,NA,Immovable,veranda,16:11:51,19
 Rossel,2195,35,M,141310.gif,NA,Immovable,veranda,16:12:10,15
-Rossel,2195,35,M,141310.gif,Unsure,Immovable,veranda,16:12:10,15
 Rossel,2195,35,M,141340.gif,NA,Immovable,veranda,16:12:40,16
-Rossel,2195,35,M,141340.gif,Unsure,Immovable,veranda,16:12:40,16
 Rossel,2195,35,M,141459.gif,NA,Natural,stick,16:13:59,15
 Rossel,2195,35,M,141532.gif,NA,Immovable,veranda,16:14:32,15
-Rossel,2195,35,M,141532.gif,Unsure,Immovable,veranda,16:14:32,15
-Rossel,2195,35,M,141618.gif,NA,Natural,stick,16:15:18,16
-Rossel,2195,35,M,141618.gif,Unsure,Natural,stick,16:15:18,16
-Rossel,2195,35,M,141634.gif,NA,Natural,stick,16:15:34,15
-Rossel,2195,35,M,141634.gif,Unsure,Natural,stick,16:15:34,15
+Rossel,2195,35,M,141618.gif,NA,Synthetic,broom bristle,16:15:18,16
+Rossel,2195,35,M,141634.gif,NA,Synthetic,broom bristle,16:15:34,15
 Rossel,2195,35,M,141649.gif,NA,Natural,stick,16:15:49,17
 Rossel,2195,35,M,143110.gif,NA,Tool,fork,16:30:10,15
 Rossel,2195,35,M,143125.gif,NA,Tool,fork,16:30:25,17
@@ -5096,8 +5095,7 @@ Rossel,9706,41,F,094018.gif,NA,Food,betelnut,11:39:13,16
 Rossel,9706,41,F,094034.gif,NA,Food,betelnut,11:39:29,15
 Rossel,9706,41,F,094049.gif,NA,Food,betelnut,11:39:44,15
 Rossel,9706,41,F,094239.gif,NA,Food,betelnut,11:41:34,17
-Rossel,9706,41,F,094518.gif,NA,Food,betelnut stick,11:44:13,23
-Rossel,9706,41,F,094518.gif,Unsure,Food,betelnut stick,11:44:13,23
+Rossel,9706,41,F,094518.gif,NA,Tool,tongs,11:44:13,23
 Rossel,9706,41,F,094556.gif,NA,Immovable,veranda,11:44:51,16
 Rossel,9706,41,F,094556.gif,NA,Natural,rock,11:44:51,16
 Rossel,9706,41,F,094612.gif,NA,Immovable,veranda,11:45:07,15
@@ -5123,7 +5121,6 @@ Rossel,9706,41,F,102022.gif,NA,Toy,book,12:19:17,17
 Rossel,9706,41,F,102215.gif,NA,Synthetic,bag,12:21:10,15
 Rossel,9706,41,F,102437.gif,NA,Food,betelnut,12:23:32,11
 Rossel,9706,41,F,102519.gif,NA,Synthetic,cardboard,12:24:14,17
-Rossel,9706,41,F,102519.gif,Unsure,Synthetic,cardboard,12:24:14,17
 Rossel,9706,41,F,102759.gif,None,NA,Body parts cannot be coded as held objects,12:26:54,15
 Rossel,9706,41,F,103036.gif,NA,Tool,broom,12:29:31,15
 Rossel,9706,41,F,103151.gif,NA,Synthetic,bag,12:30:46,16
@@ -5326,19 +5323,18 @@ Rossel,8779,39,F,073004.gif,NA,Immovable,wall,09:28:58,15
 Rossel,8779,39,F,073004.gif,Unsure,Immovable,wall,09:28:58,15
 Rossel,8779,39,F,073412.gif,NA,Immovable,house pile,09:33:06,17
 Rossel,8779,39,F,073649.gif,NA,Synthetic,jug,09:35:43,15
+Rossel,8779,39,F,073649.gif,NA,Tool,jug,09:35:43,15
 Rossel,8779,39,F,073704.gif,NA,Synthetic,jug,09:35:58,15
+Rossel,8779,39,F,073704.gif,NA,Tool,jug,09:35:58,15
 Rossel,8779,39,F,073719.gif,NA,Synthetic,jug,09:36:13,17
+Rossel,8779,39,F,073719.gif,NA,Tool,jug,09:36:13,17
 Rossel,8779,39,F,073822.gif,NA,Synthetic,jug,09:37:16,15
-Rossel,8779,39,F,074156.gif,NA,Immovable,floor,09:40:50,15
-Rossel,8779,39,F,074156.gif,Unsure,Immovable,floor,09:40:50,15
-Rossel,8779,39,F,074416.gif,NA,Immovable,floor,09:43:10,15
-Rossel,8779,39,F,074416.gif,Unsure,Immovable,floor,09:43:10,15
-Rossel,8779,39,F,074446.gif,NA,Immovable,floor,09:43:40,17
-Rossel,8779,39,F,074446.gif,Unsure,Immovable,floor,09:43:40,17
-Rossel,8779,39,F,074503.gif,NA,Immovable,floor,09:43:57,15
-Rossel,8779,39,F,074503.gif,Unsure,Immovable,floor,09:43:57,15
+Rossel,8779,39,F,073822.gif,NA,Tool,jug,09:37:16,15
+Rossel,8779,39,F,074156.gif,NA,Immovable,veranda,09:40:50,15
+Rossel,8779,39,F,074416.gif,NA,Immovable,veranda,09:43:10,15
+Rossel,8779,39,F,074446.gif,NA,Immovable,veranda,09:43:40,17
+Rossel,8779,39,F,074503.gif,NA,Immovable,veranda,09:43:57,15
 Rossel,8779,39,F,074533.gif,NA,Immovable,floor,09:44:27,17
-Rossel,8779,39,F,074533.gif,Unsure,Immovable,floor,09:44:27,17
 Rossel,8779,39,F,074958.gif,NA,Synthetic,camera cover,09:48:52,15
 Rossel,8779,39,F,075832.gif,NA,Food,betelnut,09:57:26,15
 Rossel,8779,39,F,075847.gif,NA,Food,betelnut,09:57:41,16
@@ -5363,6 +5359,7 @@ Rossel,8779,39,F,090303.gif,NA,Food,betelnut,11:01:57,15
 Rossel,8779,39,F,090452.gif,None,Food,betelnut,11:03:46,15
 Rossel,8779,39,F,090452.gif,NA,Food,betelnut,11:03:46,15
 Rossel,8779,39,F,090901.gif,NA,Synthetic,newspaper,11:07:55,16
+Rossel,8779,39,F,093431.gif,NA,Synthetic,clothing,11:33:25,15
 Rossel,8779,39,F,094404.gif,NA,Synthetic,camera,11:42:58,17
 Rossel,8779,39,F,094508.gif,NA,Synthetic,paper,11:44:02,15
 Rossel,8779,39,F,094523.gif,NA,Synthetic,paper,11:44:17,16
@@ -5379,6 +5376,7 @@ Rossel,8779,39,F,094800.gif,NA,Synthetic,paper,11:46:54,11
 Rossel,8779,39,F,094811.gif,NA,Synthetic,paper,11:47:05,15
 Rossel,8779,39,F,094826.gif,NA,Synthetic,paper,11:47:20,16
 Rossel,8779,39,F,094842.gif,NA,Synthetic,paper,11:47:36,24
+Rossel,8779,39,F,095055.gif,NA,Immovable,wall,11:49:49,15
 Rossel,8779,39,F,095141.gif,NA,Synthetic,paper,11:50:35,15
 Rossel,8779,39,F,095156.gif,NA,Synthetic,paper,11:50:50,18
 Rossel,8779,39,F,095214.gif,NA,Synthetic,paper,11:51:08,15
@@ -5464,23 +5462,33 @@ Rossel,8779,39,F,111439.gif,NA,Food,betelnut,13:13:33,15
 Rossel,8779,39,F,111454.gif,NA,Food,betelnut,13:13:48,18
 Rossel,8779,39,F,111543.gif,NA,Food,betelnut,13:14:37,17
 Rossel,8779,39,F,111600.gif,NA,Food,betelnut,13:14:54,15
+Rossel,8779,39,F,111703.gif,NA,Immovable,veranda,13:15:57,15
+Rossel,8779,39,F,111718.gif,NA,Synthetic,towel,13:16:12,16
 Rossel,8779,39,F,111804.gif,NA,Immovable,wall,13:16:58,17
 Rossel,8779,39,F,112024.gif,NA,Immovable,veranda,13:19:18,18
+Rossel,8779,39,F,112057.gif,NA,Immovable,wall,13:19:51,10
+Rossel,8779,39,F,112107.gif,NA,Immovable,wall,13:20:01,15
 Rossel,8779,39,F,112138.gif,NA,Synthetic,woven basket,13:20:32,16
 Rossel,8779,39,F,112752.gif,NA,Synthetic,woven basket,13:26:46,18
 Rossel,8779,39,F,112825.gif,NA,Natural,rock,13:27:19,15
+Rossel,8779,39,F,112840.gif,NA,Food,nut,13:27:34,16
+Rossel,8779,39,F,112856.gif,NA,Food,nut,13:27:50,15
 Rossel,8779,39,F,112856.gif,NA,Natural,rock,13:27:50,15
-Rossel,8779,39,F,112856.gif,Unsure,Natural,rock,13:27:50,15
+Rossel,8779,39,F,112911.gif,NA,Food,nut,13:28:05,15
 Rossel,8779,39,F,112911.gif,NA,Natural,rock,13:28:05,15
-Rossel,8779,39,F,112911.gif,Unsure,Natural,rock,13:28:05,15
+Rossel,8779,39,F,112926.gif,NA,Food,nut,13:28:20,17
 Rossel,8779,39,F,112926.gif,NA,Natural,rock,13:28:20,17
-Rossel,8779,39,F,112926.gif,Unsure,Natural,rock,13:28:20,17
+Rossel,8779,39,F,112943.gif,NA,Food,nut,13:28:37,15
 Rossel,8779,39,F,112943.gif,NA,Natural,rock,13:28:37,15
-Rossel,8779,39,F,112943.gif,Unsure,Natural,rock,13:28:37,15
+Rossel,8779,39,F,113013.gif,NA,Food,nut,13:29:07,18
+Rossel,8779,39,F,113031.gif,NA,Food,nut,13:29:25,15
+Rossel,8779,39,F,113046.gif,NA,Food,nut,13:29:40,15
 Rossel,8779,39,F,113101.gif,NA,Natural,rock,13:29:55,17
+Rossel,8779,39,F,113118.gif,NA,Food,nut,13:30:12,15
 Rossel,8779,39,F,113118.gif,NA,Natural,rock,13:30:12,15
-Rossel,8779,39,F,113118.gif,Unsure,Natural,rock,13:30:12,15
 Rossel,8779,39,F,113250.gif,NA,Synthetic,woven basket,13:31:44,15
+Rossel,8779,39,F,113305.gif,NA,Food,nut,13:31:59,15
+Rossel,8779,39,F,113438.gif,NA,Food,nut,13:33:32,15
 Rossel,8779,39,F,113613.gif,NA,Tool,knife,13:35:07,15
 Rossel,8779,39,F,113613.gif,NA,Food,tuber,13:35:07,15
 Rossel,8779,39,F,115443.gif,NA,Food,tuber,13:53:37,15
@@ -5488,6 +5496,8 @@ Rossel,8779,39,F,122620.gif,NA,Natural,stick,14:25:14,16
 Rossel,8779,39,F,122707.gif,NA,Natural,stick,14:26:01,16
 Rossel,8779,39,F,123618.gif,NA,Immovable,house pile,14:35:12,15
 Rossel,8779,39,F,123618.gif,Unsure,Immovable,house pile,14:35:12,15
+Rossel,8779,39,F,123704.gif,NA,Synthetic,bucket,14:35:58,15
+Rossel,8779,39,F,123719.gif,NA,Synthetic,bucket,14:36:13,16
 Rossel,8779,39,F,125041.gif,NA,Immovable,door,14:49:35,17
 Rossel,8779,39,F,125533.gif,NA,Immovable,door,14:54:27,15
 Rossel,8779,39,F,130345.gif,NA,Natural,stick,15:02:39,15
@@ -5530,6 +5540,7 @@ Rossel,8779,39,F,133024.gif,Unsure,Immovable,roofing,15:29:18,15
 Rossel,8779,39,F,133039.gif,NA,Natural,rock,15:29:33,15
 Rossel,8779,39,F,133111.gif,NA,Natural,rock,15:30:05,15
 Rossel,8779,39,F,133141.gif,NA,Synthetic,plastic bag,15:30:35,17
+Rossel,8779,39,F,133300.gif,NA,Natural,wood shavings,15:31:54,15
 Rossel,8779,39,F,133359.gif,NA,Natural,leaf,15:32:53,15
 Rossel,8779,39,F,133836.gif,NA,Synthetic,vest,15:37:30,18
 Rossel,8779,39,F,134509.gif,NA,Natural,stick,15:44:03,15
@@ -5540,8 +5551,7 @@ Rossel,8779,39,F,134657.gif,NA,Natural,stick,15:45:51,16
 Rossel,8779,39,F,134713.gif,NA,Natural,stick,15:46:07,16
 Rossel,8779,39,F,134729.gif,NA,Natural,stick,15:46:23,15
 Rossel,8779,39,F,134744.gif,NA,Natural,stick,15:46:38,15
-Rossel,8779,39,F,135146.gif,NA,Immovable,veranda,15:50:40,28
-Rossel,8779,39,F,135146.gif,Unsure,Immovable,veranda,15:50:40,28
+Rossel,8779,39,F,135146.gif,NA,Tool,broom,15:50:40,28
 Rossel,8779,39,F,135214.gif,NA,Natural,stick,15:51:08,15
 Rossel,8779,39,F,135301.gif,NA,Synthetic,woven basket,15:51:55,15
 Rossel,8779,39,F,135301.gif,Unsure,Synthetic,woven basket,15:51:55,15
@@ -5563,6 +5573,7 @@ Rossel,8779,39,F,140908.gif,NA,Toy,book,16:08:02,15
 Rossel,8779,39,F,140923.gif,NA,Toy,book,16:08:17,18
 Rossel,8779,39,F,140941.gif,NA,Toy,book,16:08:35,15
 Rossel,8779,39,F,140956.gif,NA,Toy,book,16:08:50,15
+Rossel,8779,39,F,141203.gif,NA,Immovable,wall,16:10:57,15
 Rossel,8779,39,F,141938.gif,NA,Immovable,door,16:18:32,17
 Rossel,8779,39,F,142145.gif,NA,Food,betelnut,16:20:39,29
 Rossel,8779,39,F,142709.gif,NA,Food,betelnut,16:26:03,17
@@ -5625,6 +5636,8 @@ Rossel,2789,13,F,065603.gif,NA,Synthetic,bucket,08:55:00,16
 Rossel,2789,13,F,065619.gif,NA,Synthetic,bucket,08:55:16,15
 Rossel,2789,13,F,065634.gif,NA,Synthetic,bucket,08:55:31,14
 Rossel,2789,13,F,065703.gif,NA,Synthetic,bucket,08:56:00,16
+Rossel,2789,13,F,065719.gif,NA,Immovable,wall,08:56:16,17
+Rossel,2789,13,F,065736.gif,NA,Immovable,wall,08:56:33,15
 Rossel,2789,13,F,065822.gif,NA,Synthetic,gas canister,08:57:19,15
 Rossel,2789,13,F,065837.gif,NA,Synthetic,bucket,08:57:34,27
 Rossel,2789,13,F,065904.gif,NA,Synthetic,bucket,08:58:01,18
@@ -5635,6 +5648,7 @@ Rossel,2789,13,F,070111.gif,NA,Synthetic,bucket,09:00:08,15
 Rossel,2789,13,F,070126.gif,NA,Synthetic,bucket,09:00:23,17
 Rossel,2789,13,F,070229.gif,NA,Immovable,wall,09:01:26,15
 Rossel,2789,13,F,070244.gif,NA,Immovable,wall,09:01:41,15
+Rossel,2789,13,F,070418.gif,NA,Natural,grass,09:03:15,15
 Rossel,2789,13,F,093344.gif,NA,Food,seafood,11:32:41,16
 Rossel,2789,13,F,093415.gif,NA,Food,seafood,11:33:12,16
 Rossel,2789,13,F,093431.gif,NA,Food,seafood,11:33:28,16
@@ -5691,13 +5705,14 @@ Rossel,2789,13,F,104624.gif,NA,Synthetic,planting pot,12:45:21,15
 Rossel,2789,13,F,104639.gif,NA,Synthetic,planting pot,12:45:36,15
 Rossel,2789,13,F,105033.gif,NA,Food,betelnut,12:49:30,15
 Rossel,2789,13,F,105048.gif,NA,Food,betelnut,12:49:45,16
+Rossel,2789,13,F,105134.gif,NA,Synthetic,wood slat,12:50:31,18
+Rossel,2789,13,F,105134.gif,NA,Synthetic,wooden board,12:50:31,18
 Rossel,2789,13,F,105515.gif,NA,Natural,shell,12:54:12,15
 Rossel,2789,13,F,105530.gif,NA,Food,betelnut,12:54:27,17
 Rossel,2789,13,F,105547.gif,NA,Food,betelnut,12:54:44,15
 Rossel,2789,13,F,105602.gif,NA,Food,betelnut,12:54:59,15
 Rossel,2789,13,F,105617.gif,NA,Food,betelnut,12:55:14,18
-Rossel,2789,13,F,105749.gif,NA,Immovable,veranda,12:56:46,15
-Rossel,2789,13,F,105749.gif,Unsure,Immovable,veranda,12:56:46,15
+Rossel,2789,13,F,105749.gif,NA,Immovable,floor,12:56:46,15
 Rossel,2789,13,F,105804.gif,NA,Immovable,wall,12:57:01,16
 Rossel,2789,13,F,105820.gif,NA,Immovable,wall,12:57:17,16
 Rossel,2789,13,F,105923.gif,NA,Food,betelnut,12:58:20,15
@@ -5710,6 +5725,7 @@ Rossel,2789,13,F,110213.gif,NA,Natural,stick,13:01:10,17
 Rossel,2789,13,F,110230.gif,NA,Food,betelnut,13:01:27,15
 Rossel,2789,13,F,110245.gif,NA,Food,betelnut,13:01:42,15
 Rossel,2789,13,F,110300.gif,NA,Food,betelnut,13:01:57,18
+Rossel,2789,13,F,110419.gif,NA,Natural,debris,13:03:16,15
 Rossel,2789,13,F,110743.gif,NA,Natural,stick,13:06:40,17
 Rossel,2789,13,F,110800.gif,NA,Natural,stick,13:06:57,15
 Rossel,2789,13,F,110830.gif,NA,Natural,tree,13:07:27,17
@@ -5735,10 +5751,13 @@ Rossel,2789,13,F,112919.gif,NA,Synthetic,shirt,13:28:16,15
 Rossel,2789,13,F,112934.gif,NA,Synthetic,shirt,13:28:31,16
 Rossel,2789,13,F,113037.gif,NA,Synthetic,shirt,13:29:34,15
 Rossel,2789,13,F,114216.gif,NA,Natural,rock,13:41:13,15
+Rossel,2789,13,F,114318.gif,NA,Natural,seed,13:42:15,15
+Rossel,2789,13,F,114404.gif,NA,Natural,seed,13:43:01,15
 Rossel,2789,13,F,114523.gif,NA,Natural,stick,13:44:20,16
 Rossel,2789,13,F,114539.gif,NA,Natural,stick,13:44:36,15
 Rossel,2789,13,F,114713.gif,NA,Natural,rock,13:46:10,15
 Rossel,2789,13,F,114713.gif,NA,Natural,leaf,13:46:10,15
+Rossel,2789,13,F,114903.gif,NA,Food,nut,13:48:00,18
 Rossel,2789,13,F,115023.gif,NA,Natural,stick,13:49:20,15
 Rossel,2789,13,F,115055.gif,NA,Natural,plant,13:49:52,15
 Rossel,2789,13,F,115110.gif,NA,Natural,plant,13:50:07,15
@@ -5762,6 +5781,8 @@ Rossel,2789,13,F,123924.gif,NA,Natural,rock,14:38:21,17
 Rossel,2789,13,F,124058.gif,NA,Toy,marble,14:39:55,17
 Rossel,2789,13,F,124453.gif,NA,Natural,rock,14:43:50,17
 Rossel,2789,13,F,124629.gif,NA,Natural,rock,14:45:26,17
+Rossel,2789,13,F,124701.gif,NA,Natural,debris,14:45:58,15
+Rossel,2789,13,F,124803.gif,NA,Natural,debris,14:47:00,17
 Rossel,2789,13,F,124921.gif,NA,Toy,marble,14:48:18,15
 Rossel,2789,13,F,125110.gif,NA,Toy,football,14:50:07,18
 Rossel,2789,13,F,125158.gif,NA,Toy,football,14:50:55,15
@@ -5847,11 +5868,9 @@ Rossel,2789,13,F,140806.gif,NA,Immovable,deck,16:07:03,18
 Rossel,2789,13,F,140839.gif,NA,Immovable,wall,16:07:36,15
 Rossel,2789,13,F,140911.gif,NA,Immovable,wall,16:08:08,15
 Rossel,2789,13,F,140958.gif,NA,Immovable,deck,16:08:55,15
-Rossel,2789,13,F,141046.gif,NA,Immovable,wall,16:09:43,15
-Rossel,2789,13,F,141046.gif,Unsure,Immovable,wall,16:09:43,15
+Rossel,2789,13,F,141046.gif,NA,Immovable,floor,16:09:43,15
 Rossel,2789,13,F,141101.gif,NA,Synthetic,skirt,16:09:58,15
-Rossel,2789,13,F,141116.gif,NA,Immovable,wall,16:10:13,16
-Rossel,2789,13,F,141116.gif,Unsure,Immovable,wall,16:10:13,16
+Rossel,2789,13,F,141116.gif,NA,Immovable,floor,16:10:13,16
 Rossel,2789,13,F,141132.gif,NA,Immovable,wall,16:10:29,15
 Rossel,2789,13,F,141132.gif,Unsure,Immovable,wall,16:10:29,15
 Rossel,2789,13,F,141336.gif,NA,Synthetic,vest,16:12:33,18
@@ -5860,7 +5879,6 @@ Rossel,2789,13,F,141455.gif,NA,Immovable,wall,16:13:52,16
 Rossel,2789,13,F,141511.gif,NA,Immovable,wall,16:14:08,17
 Rossel,2789,13,F,141543.gif,NA,Immovable,wall,16:14:40,15
 Rossel,2789,13,F,141558.gif,NA,Immovable,floor,16:14:55,17
-Rossel,2789,13,F,141558.gif,Unsure,Immovable,floor,16:14:55,17
 Rossel,2789,13,F,141630.gif,NA,Immovable,wall,16:15:27,15
 Rossel,2789,13,F,142034.gif,NA,Toy,ball,16:19:31,15
 Rossel,2789,13,F,142049.gif,NA,Toy,ball,16:19:46,17
@@ -6014,7 +6032,6 @@ Rossel,4859,16,M,082548.gif,NA,Food,fruit,09:11:35,17
 Rossel,4859,16,M,082605.gif,Exclude,Food,fruit,09:11:52,15
 Rossel,4859,16,M,082605.gif,NA,Food,fruit,09:11:52,15
 Rossel,4859,16,M,101745.gif,NA,Synthetic,vest,11:03:32,17
-Rossel,4859,16,M,101745.gif,Unsure,Synthetic,vest,11:03:32,17
 Rossel,4859,16,M,103007.gif,NA,Natural,leaf,11:15:54,15
 Rossel,4859,16,M,103022.gif,NA,Natural,leaf,11:16:09,16
 Rossel,4859,16,M,103038.gif,NA,Natural,leaf,11:16:25,15
@@ -6050,6 +6067,7 @@ Rossel,4859,16,M,105742.gif,NA,Food,cracker,11:43:29,17
 Rossel,4859,16,M,105759.gif,NA,Food,cracker,11:43:46,15
 Rossel,4859,16,M,111523.gif,NA,Food,cracker,12:01:10,15
 Rossel,4859,16,M,111611.gif,NA,Natural,tree,12:01:58,15
+Rossel,4859,16,M,111744.gif,NA,Synthetic,vest,12:03:31,15
 Rossel,4859,16,M,122348.gif,NA,Synthetic,camera,13:09:35,15
 Rossel,4859,16,M,122434.gif,NA,Food,fruit,13:10:21,15
 Rossel,4859,16,M,122449.gif,NA,Food,fruit,13:10:36,15
@@ -7399,10 +7417,10 @@ Rossel,3856,21,F,120542.gif,NA,Immovable,ladder,14:04:35,17
 Rossel,3856,21,F,120629.gif,NA,Synthetic,bracelet,14:05:22,18
 Rossel,3856,21,F,123129.gif,NA,Immovable,chair,14:30:22,15
 Rossel,3856,21,F,123144.gif,NA,Immovable,chair,14:30:37,15
-Rossel,3856,21,F,123159.gif,NA,Immovable,chair,14:30:52,17
-Rossel,3856,21,F,123159.gif,Unsure,Immovable,chair,14:30:52,17
-Rossel,3856,21,F,123350.gif,NA,Immovable,chair,14:32:43,15
-Rossel,3856,21,F,123350.gif,Unsure,Immovable,chair,14:32:43,15
+Rossel,3856,21,F,123159.gif,NA,Synthetic,jug,14:30:52,17
+Rossel,3856,21,F,123159.gif,NA,Tool,jug,14:30:52,17
+Rossel,3856,21,F,123350.gif,NA,Synthetic,jug,14:32:43,15
+Rossel,3856,21,F,123350.gif,NA,Tool,jug,14:32:43,15
 Rossel,3856,21,F,123524.gif,NA,Natural,dirt,14:34:17,15
 Rossel,3856,21,F,123844.gif,NA,Natural,plant,14:37:37,16
 Rossel,3856,21,F,124252.gif,Exclude,Natural,plant,14:41:45,15
@@ -7454,12 +7472,15 @@ Rossel,3856,21,F,140202.gif,NA,Immovable,deck,16:00:55,17
 Rossel,3856,21,F,140321.gif,NA,Immovable,deck,16:02:14,15
 Rossel,3856,21,F,140353.gif,NA,Synthetic,camera,16:02:46,15
 Rossel,3856,21,F,140408.gif,NA,Synthetic,skirt,16:03:01,15
+Rossel,3856,21,F,140526.gif,NA,Tool,toothbrush,16:04:19,15
+Rossel,3856,21,F,140541.gif,NA,Tool,toothbrush,16:04:34,15
+Rossel,3856,21,F,140556.gif,NA,Tool,toothbrush,16:04:49,18
 Rossel,3856,21,F,140831.gif,NA,Food,coconut,16:07:24,15
 Rossel,3856,21,F,140846.gif,NA,Food,coconut,16:07:39,17
 Rossel,3856,21,F,140903.gif,NA,Food,coconut,16:07:56,15
 Rossel,3856,21,F,140918.gif,NA,Food,coconut,16:08:11,15
+Rossel,3856,21,F,140933.gif,NA,Tool,toothbrush,16:08:26,17
 Rossel,3856,21,F,140933.gif,NA,Food,coconut,16:08:26,17
-Rossel,3856,21,F,140933.gif,Unsure,Food,coconut,16:08:26,17
 Rossel,3856,21,F,141036.gif,NA,Food,coconut,16:09:29,15
 Rossel,3856,21,F,141051.gif,NA,Food,coconut,16:09:44,15
 Rossel,3856,21,F,141106.gif,NA,Food,coconut,16:09:59,18
@@ -8650,29 +8671,30 @@ Rossel,2819,3,M,135925.gif,NA,Synthetic,dress,15:58:16,15
 Rossel,2819,3,M,135940.gif,NA,Synthetic,dress,15:58:31,15
 Rossel,2819,3,M,150911.gif,NA,Synthetic,camera,17:08:02,17
 Rossel,2819,3,M,150928.gif,NA,Synthetic,camera,17:08:19,15
+Rossel,3124,30,M,071729.gif,NA,Synthetic,shirt,09:16:14,17
+Rossel,3124,30,M,071832.gif,NA,Synthetic,shirt,09:17:17,15
+Rossel,3124,30,M,071847.gif,NA,Synthetic,shirt,09:17:32,15
+Rossel,3124,30,M,072005.gif,NA,Synthetic,shirt,09:18:50,15
 Rossel,3124,30,M,072545.gif,NA,Synthetic,camera,09:24:30,16
 Rossel,3124,30,M,072702.gif,NA,Synthetic,misc container,09:25:47,15
 Rossel,3124,30,M,072717.gif,NA,Synthetic,misc container,09:26:02,17
 Rossel,3124,30,M,072734.gif,NA,Synthetic,misc container,09:26:19,15
+Rossel,3124,30,M,073453.gif,NA,Synthetic,shirt,09:33:38,15
 Rossel,3124,30,M,073802.gif,NA,Tool,bottle,09:36:47,15
 Rossel,3124,30,M,073849.gif,NA,Tool,bottle,09:37:34,16
 Rossel,3124,30,M,074212.gif,NA,Synthetic,camera,09:40:57,15
 Rossel,3124,30,M,074259.gif,NA,Synthetic,lighter,09:41:44,15
-Rossel,3124,30,M,074259.gif,Unsure,Synthetic,lighter,09:41:44,15
 Rossel,3124,30,M,074331.gif,NA,Synthetic,lighter,09:42:16,15
-Rossel,3124,30,M,074331.gif,Unsure,Synthetic,lighter,09:42:16,15
 Rossel,3124,30,M,074346.gif,NA,Synthetic,lighter,09:42:31,10
-Rossel,3124,30,M,074346.gif,Unsure,Synthetic,lighter,09:42:31,10
 Rossel,3124,30,M,074356.gif,NA,Synthetic,shorts,09:42:41,15
 Rossel,3124,30,M,074458.gif,NA,Synthetic,lighter,09:43:43,15
-Rossel,3124,30,M,074458.gif,Unsure,Synthetic,lighter,09:43:43,15
+Rossel,3124,30,M,074853.gif,NA,Synthetic,shirt,09:47:38,15
 Rossel,3124,30,M,075114.gif,NA,Tool,bowl,09:49:59,15
 Rossel,3124,30,M,075129.gif,NA,Tool,bottle,09:50:14,16
 Rossel,3124,30,M,075145.gif,NA,Tool,bottle,09:50:30,15
 Rossel,3124,30,M,075200.gif,NA,Tool,bottle,09:50:45,15
 Rossel,3124,30,M,075215.gif,NA,Tool,bottle,09:51:00,17
 Rossel,3124,30,M,075247.gif,NA,Immovable,stairs,09:51:32,15
-Rossel,3124,30,M,075247.gif,Unsure,Immovable,stairs,09:51:32,15
 Rossel,3124,30,M,075302.gif,NA,Immovable,door,09:51:47,19
 Rossel,3124,30,M,075802.gif,NA,Synthetic,camera,09:56:47,15
 Rossel,3124,30,M,080009.gif,NA,Synthetic,camera,09:58:54,17
@@ -8683,13 +8705,10 @@ Rossel,3124,30,M,080420.gif,NA,Immovable,wall,10:03:05,15
 Rossel,3124,30,M,080506.gif,NA,Tool,knife,10:03:51,16
 Rossel,3124,30,M,080522.gif,NA,Tool,knife,10:04:07,17
 Rossel,3124,30,M,080641.gif,NA,Immovable,stairs,10:05:26,15
-Rossel,3124,30,M,080641.gif,Unsure,Immovable,stairs,10:05:26,15
 Rossel,3124,30,M,080728.gif,NA,Immovable,stairs,10:06:13,15
 Rossel,3124,30,M,080743.gif,NA,Immovable,veranda,10:06:28,16
 Rossel,3124,30,M,080902.gif,NA,Immovable,stairs,10:07:47,15
-Rossel,3124,30,M,080902.gif,Unsure,Immovable,stairs,10:07:47,15
 Rossel,3124,30,M,080917.gif,NA,Immovable,stairs,10:08:02,15
-Rossel,3124,30,M,080917.gif,Unsure,Immovable,stairs,10:08:02,15
 Rossel,3124,30,M,081052.gif,NA,Toy,toy car,10:09:37,15
 Rossel,3124,30,M,081107.gif,NA,Immovable,stairs,10:09:52,17
 Rossel,3124,30,M,081653.gif,NA,Tool,bottle,10:15:38,15
@@ -8698,10 +8717,8 @@ Rossel,3124,30,M,081723.gif,NA,Tool,bottle,10:16:08,17
 Rossel,3124,30,M,081740.gif,NA,Toy,ball,10:16:25,15
 Rossel,3124,30,M,081755.gif,NA,Tool,bottle,10:16:40,15
 Rossel,3124,30,M,081810.gif,NA,Tool,bottle,10:16:55,17
-Rossel,3124,30,M,081857.gif,NA,Immovable,veranda,10:17:42,18
-Rossel,3124,30,M,081857.gif,Unsure,Immovable,veranda,10:17:42,18
-Rossel,3124,30,M,081915.gif,NA,Immovable,veranda,10:18:00,15
-Rossel,3124,30,M,081915.gif,Unsure,Immovable,veranda,10:18:00,15
+Rossel,3124,30,M,081857.gif,NA,Immovable,shelf,10:17:42,18
+Rossel,3124,30,M,081915.gif,NA,Immovable,shelf,10:18:00,15
 Rossel,3124,30,M,081945.gif,NA,Toy,toy car,10:18:30,16
 Rossel,3124,30,M,082001.gif,NA,Toy,toy car,10:18:46,15
 Rossel,3124,30,M,082016.gif,NA,Toy,toy car,10:19:01,17
@@ -8721,34 +8738,21 @@ Rossel,3124,30,M,082854.gif,NA,Synthetic,shirt,10:27:39,16
 Rossel,3124,30,M,083148.gif,NA,Synthetic,camera,10:30:33,15
 Rossel,3124,30,M,083220.gif,NA,Synthetic,camera,10:31:05,15
 Rossel,3124,30,M,083250.gif,NA,Immovable,shelf,10:31:35,19
-Rossel,3124,30,M,083250.gif,Unsure,Immovable,shelf,10:31:35,19
-Rossel,3124,30,M,083309.gif,NA,Immovable,shelf,10:31:54,15
-Rossel,3124,30,M,083309.gif,Unsure,Immovable,shelf,10:31:54,15
+Rossel,3124,30,M,083309.gif,NA,Immovable,veranda,10:31:54,15
 Rossel,3124,30,M,083411.gif,NA,Synthetic,camera,10:32:56,15
-Rossel,3124,30,M,083504.gif,NA,Immovable,floor,10:33:49,15
-Rossel,3124,30,M,083504.gif,Unsure,Immovable,floor,10:33:49,15
-Rossel,3124,30,M,083519.gif,NA,Immovable,floor,10:34:04,17
-Rossel,3124,30,M,083519.gif,Unsure,Immovable,floor,10:34:04,17
-Rossel,3124,30,M,083536.gif,NA,Immovable,floor,10:34:21,15
-Rossel,3124,30,M,083536.gif,Unsure,Immovable,floor,10:34:21,15
-Rossel,3124,30,M,083551.gif,NA,Immovable,floor,10:34:36,15
-Rossel,3124,30,M,083551.gif,Unsure,Immovable,floor,10:34:36,15
-Rossel,3124,30,M,083606.gif,NA,Immovable,floor,10:34:51,18
-Rossel,3124,30,M,083606.gif,Unsure,Immovable,floor,10:34:51,18
-Rossel,3124,30,M,083624.gif,NA,Immovable,floor,10:35:09,15
-Rossel,3124,30,M,083624.gif,Unsure,Immovable,floor,10:35:09,15
-Rossel,3124,30,M,083639.gif,NA,Immovable,floor,10:35:24,15
-Rossel,3124,30,M,083639.gif,Unsure,Immovable,floor,10:35:24,15
-Rossel,3124,30,M,083654.gif,NA,Immovable,floor,10:35:39,16
-Rossel,3124,30,M,083654.gif,Unsure,Immovable,floor,10:35:39,16
-Rossel,3124,30,M,083710.gif,NA,Immovable,floor,10:35:55,15
-Rossel,3124,30,M,083710.gif,Unsure,Immovable,floor,10:35:55,15
-Rossel,3124,30,M,083740.gif,NA,Immovable,floor,10:36:25,17
-Rossel,3124,30,M,083740.gif,Unsure,Immovable,floor,10:36:25,17
+Rossel,3124,30,M,083504.gif,NA,Immovable,veranda,10:33:49,15
+Rossel,3124,30,M,083519.gif,NA,Immovable,veranda,10:34:04,17
+Rossel,3124,30,M,083536.gif,NA,Immovable,veranda,10:34:21,15
+Rossel,3124,30,M,083551.gif,NA,Immovable,veranda,10:34:36,15
+Rossel,3124,30,M,083606.gif,NA,Immovable,veranda,10:34:51,18
+Rossel,3124,30,M,083624.gif,NA,Immovable,veranda,10:35:09,15
+Rossel,3124,30,M,083639.gif,NA,Immovable,veranda,10:35:24,15
+Rossel,3124,30,M,083654.gif,NA,Immovable,veranda,10:35:39,16
+Rossel,3124,30,M,083710.gif,NA,Immovable,veranda,10:35:55,15
+Rossel,3124,30,M,083740.gif,NA,Immovable,veranda,10:36:25,17
 Rossel,3124,30,M,083812.gif,NA,Immovable,floor,10:36:57,15
 Rossel,3124,30,M,083812.gif,Unsure,Immovable,floor,10:36:57,15
 Rossel,3124,30,M,083827.gif,NA,Immovable,veranda,10:37:12,16
-Rossel,3124,30,M,083827.gif,Unsure,Immovable,veranda,10:37:12,16
 Rossel,3124,30,M,083909.gif,NA,Immovable,hammock,10:37:54,15
 Rossel,3124,30,M,083924.gif,NA,Immovable,hammock,10:38:09,15
 Rossel,3124,30,M,083939.gif,NA,Immovable,hammock,10:38:24,17
@@ -8800,10 +8804,8 @@ Rossel,3124,30,M,085933.gif,NA,Immovable,hammock,10:58:18,18
 Rossel,3124,30,M,085951.gif,NA,Immovable,hammock,10:58:36,15
 Rossel,3124,30,M,090125.gif,NA,Synthetic,camera,11:00:10,16
 Rossel,3124,30,M,090305.gif,NA,Immovable,stairs,11:01:50,15
-Rossel,3124,30,M,090305.gif,Unsure,Immovable,stairs,11:01:50,15
 Rossel,3124,30,M,090320.gif,NA,Immovable,stairs,11:02:05,15
 Rossel,3124,30,M,090335.gif,NA,Immovable,stairs,11:02:20,16
-Rossel,3124,30,M,090335.gif,Unsure,Immovable,stairs,11:02:20,16
 Rossel,3124,30,M,090421.gif,NA,Synthetic,rug,11:03:06,19
 Rossel,3124,30,M,090440.gif,NA,Synthetic,rug,11:03:25,15
 Rossel,3124,30,M,090747.gif,NA,Toy,toy car,11:06:32,15
@@ -8818,31 +8820,25 @@ Rossel,3124,30,M,092251.gif,NA,Immovable,wall,11:21:36,15
 Rossel,3124,30,M,092306.gif,NA,Immovable,wall,11:21:51,17
 Rossel,3124,30,M,092323.gif,NA,Immovable,wall,11:22:08,15
 Rossel,3124,30,M,092410.gif,NA,Immovable,stairs,11:22:55,16
-Rossel,3124,30,M,092410.gif,Unsure,Immovable,stairs,11:22:55,16
 Rossel,3124,30,M,092426.gif,NA,Immovable,stairs,11:23:11,15
-Rossel,3124,30,M,092426.gif,Unsure,Immovable,stairs,11:23:11,15
 Rossel,3124,30,M,092614.gif,NA,Immovable,stairs,11:24:59,16
-Rossel,3124,30,M,092614.gif,Unsure,Immovable,stairs,11:24:59,16
 Rossel,3124,30,M,092630.gif,NA,Immovable,stairs,11:25:15,15
-Rossel,3124,30,M,092630.gif,Unsure,Immovable,stairs,11:25:15,15
+Rossel,3124,30,M,092645.gif,NA,Immovable,floor,11:25:30,16
 Rossel,3124,30,M,092954.gif,NA,Immovable,wall,11:28:39,15
 Rossel,3124,30,M,093400.gif,NA,Immovable,floor,11:32:45,15
-Rossel,3124,30,M,093400.gif,Unsure,Immovable,floor,11:32:45,15
 Rossel,3124,30,M,093517.gif,NA,Immovable,wall,11:34:02,17
-Rossel,3124,30,M,093517.gif,Unsure,Immovable,wall,11:34:02,17
 Rossel,3124,30,M,093534.gif,NA,Immovable,wall,11:34:19,15
 Rossel,3124,30,M,093651.gif,NA,Synthetic,camera,11:35:36,18
 Rossel,3124,30,M,093709.gif,NA,Immovable,wall,11:35:54,15
-Rossel,3124,30,M,093709.gif,Unsure,Immovable,wall,11:35:54,15
 Rossel,3124,30,M,094353.gif,NA,Synthetic,camera,11:42:38,16
 Rossel,3124,30,M,094409.gif,NA,Immovable,veranda,11:42:54,41
-Rossel,3124,30,M,094409.gif,Unsure,Immovable,veranda,11:42:54,41
 Rossel,3124,30,M,094608.gif,NA,Synthetic,camera,11:44:53,17
+Rossel,3124,30,M,094713.gif,NA,Food,nut,11:45:58,15
+Rossel,3124,30,M,094728.gif,NA,Food,nut,11:46:13,15
 Rossel,3124,30,M,094815.gif,NA,Natural,rock,11:47:00,15
 Rossel,3124,30,M,095021.gif,NA,Immovable,floor,11:49:06,15
-Rossel,3124,30,M,095021.gif,Unsure,Immovable,floor,11:49:06,15
+Rossel,3124,30,M,095223.gif,NA,Food,nut,11:51:08,16
 Rossel,3124,30,M,095341.gif,NA,Immovable,floor,11:52:26,15
-Rossel,3124,30,M,095341.gif,Unsure,Immovable,floor,11:52:26,15
 Rossel,3124,30,M,095356.gif,NA,Immovable,house pile,11:52:41,17
 Rossel,3124,30,M,095413.gif,NA,Immovable,house pile,11:52:58,15
 Rossel,3124,30,M,095650.gif,NA,Immovable,wall,11:55:35,15
@@ -8853,12 +8849,19 @@ Rossel,3124,30,M,100022.gif,NA,Natural,rock,11:59:07,15
 Rossel,3124,30,M,100109.gif,NA,Natural,rock,11:59:54,15
 Rossel,3124,30,M,100124.gif,NA,Natural,rock,12:00:09,16
 Rossel,3124,30,M,100140.gif,NA,Natural,rock,12:00:25,15
+Rossel,3124,30,M,100417.gif,NA,Food,nut,12:03:02,15
+Rossel,3124,30,M,100432.gif,NA,Food,nut,12:03:17,16
+Rossel,3124,30,M,100448.gif,NA,Food,nut,12:03:33,15
+Rossel,3124,30,M,100518.gif,NA,Food,nut,12:04:03,17
 Rossel,3124,30,M,100551.gif,NA,Natural,rock,12:04:36,15
 Rossel,3124,30,M,100606.gif,NA,Natural,rock,12:04:51,16
 Rossel,3124,30,M,100622.gif,NA,Natural,rock,12:05:07,15
 Rossel,3124,30,M,100637.gif,NA,Natural,rock,12:05:22,15
 Rossel,3124,30,M,100757.gif,NA,Natural,rock,12:06:42,15
 Rossel,3124,30,M,100812.gif,NA,Natural,rock,12:06:57,15
+Rossel,3124,30,M,100827.gif,NA,Food,nut,12:07:12,17
+Rossel,3124,30,M,101044.gif,NA,Immovable,stairs,12:09:29,15
+Rossel,3124,30,M,101201.gif,NA,Food,nut,12:10:46,16
 Rossel,3124,30,M,101804.gif,NA,Natural,stick,12:16:49,15
 Rossel,3124,30,M,101953.gif,NA,Natural,plant,12:18:38,17
 Rossel,3124,30,M,102348.gif,NA,Food,betelnut,12:22:33,17
@@ -8866,6 +8869,10 @@ Rossel,3124,30,M,102507.gif,NA,Food,betelnut,12:23:52,15
 Rossel,3124,30,M,102522.gif,NA,Food,betelnut,12:24:07,16
 Rossel,3124,30,M,102538.gif,NA,Food,betelnut,12:24:23,15
 Rossel,3124,30,M,102722.gif,NA,Synthetic,woven basket,12:26:07,15
+Rossel,3124,30,M,102737.gif,NA,Food,fruit (unknown variety),12:26:22,15
+Rossel,3124,30,M,102752.gif,NA,Food,fruit (unknown variety),12:26:37,16
+Rossel,3124,30,M,102852.gif,NA,Food,fruit (unknown variety),12:27:37,15
+Rossel,3124,30,M,102907.gif,NA,Food,fruit (unknown variety),12:27:52,16
 Rossel,3124,30,M,103112.gif,NA,Natural,flower,12:29:57,20
 Rossel,3124,30,M,103132.gif,NA,Natural,flower,12:30:17,15
 Rossel,3124,30,M,103234.gif,NA,Natural,flower,12:31:19,32
@@ -8901,14 +8908,13 @@ Rossel,3124,30,M,105352.gif,NA,Food,coconut,12:52:37,17
 Rossel,3124,30,M,105439.gif,NA,Food,coconut,12:53:24,16
 Rossel,3124,30,M,105542.gif,NA,Immovable,table,12:54:27,15
 Rossel,3124,30,M,105730.gif,NA,Immovable,veranda,12:56:15,16
-Rossel,3124,30,M,105730.gif,Unsure,Immovable,veranda,12:56:15,16
 Rossel,3124,30,M,105746.gif,NA,Immovable,veranda,12:56:31,17
-Rossel,3124,30,M,105746.gif,Unsure,Immovable,veranda,12:56:31,17
 Rossel,3124,30,M,105905.gif,NA,Synthetic,shirt,12:57:50,15
 Rossel,3124,30,M,110054.gif,NA,Synthetic,shirt,12:59:39,17
 Rossel,3124,30,M,110126.gif,NA,Synthetic,shirt,13:00:11,15
 Rossel,3124,30,M,110229.gif,NA,Synthetic,shirt,13:01:14,17
 Rossel,3124,30,M,111045.gif,NA,Synthetic,shirt,13:09:30,16
+Rossel,3124,30,M,122633.gif,NA,Immovable,veranda,14:25:18,18
 Rossel,3124,30,M,123026.gif,NA,Synthetic,camera,14:29:11,15
 Rossel,3124,30,M,123128.gif,NA,Synthetic,vest,14:30:13,15
 Rossel,3124,30,M,123143.gif,NA,Synthetic,vest,14:30:28,17
@@ -8916,12 +8922,14 @@ Rossel,3124,30,M,123200.gif,NA,Synthetic,vest,14:30:45,15
 Rossel,3124,30,M,123215.gif,NA,Synthetic,vest,14:31:00,15
 Rossel,3124,30,M,123230.gif,NA,Synthetic,vest,14:31:15,17
 Rossel,3124,30,M,123436.gif,NA,Immovable,table,14:33:21,15
+Rossel,3124,30,M,123451.gif,NA,Tool,knife,14:33:36,18
 Rossel,3124,30,M,123524.gif,NA,Immovable,table,14:34:09,15
 Rossel,3124,30,M,125248.gif,NA,Synthetic,camera,14:51:33,17
 Rossel,3124,30,M,125640.gif,NA,Synthetic,vest,14:55:25,17
 Rossel,3124,30,M,131338.gif,NA,Synthetic,camera,15:12:23,15
 Rossel,3124,30,M,132349.gif,NA,Food,banana,15:22:34,17
 Rossel,3124,30,M,132556.gif,NA,Immovable,table,15:24:41,15
+Rossel,3124,30,M,132716.gif,NA,Immovable,stairs,15:26:01,31
 Rossel,3124,30,M,133352.gif,NA,Natural,stick,15:32:37,15
 Rossel,3124,30,M,133454.gif,NA,Natural,stick,15:33:39,15
 Rossel,3124,30,M,133651.gif,NA,Synthetic,vest,15:35:36,16
@@ -8953,10 +8961,19 @@ Rossel,3124,30,M,141212.gif,NA,Natural,tree,16:10:57,15
 Rossel,3124,30,M,141227.gif,NA,Natural,tree,16:11:12,18
 Rossel,3124,30,M,141245.gif,NA,Natural,tree,16:11:30,15
 Rossel,3124,30,M,141400.gif,NA,Synthetic,camera,16:12:45,16
+Rossel,3124,30,M,141756.gif,NA,Immovable,house pile,16:16:41,15
+Rossel,3124,30,M,141844.gif,NA,Immovable,house pile,16:17:29,15
 Rossel,3124,30,M,142207.gif,NA,Toy,swing,16:20:52,15
 Rossel,3124,30,M,142255.gif,NA,Toy,swing,16:21:40,15
 Rossel,3124,30,M,142310.gif,NA,Synthetic,camera,16:21:55,17
 Rossel,3124,30,M,142635.gif,NA,Natural,flower,16:25:20,15
+Rossel,3124,30,M,142722.gif,NA,Immovable,wall,16:26:07,15
+Rossel,3124,30,M,142737.gif,NA,Immovable,wall,16:26:22,15
+Rossel,3124,30,M,142752.gif,NA,Immovable,bench,16:26:37,17
+Rossel,3124,30,M,142809.gif,NA,Immovable,bench,16:26:54,15
+Rossel,3124,30,M,142824.gif,NA,Immovable,bench,16:27:09,15
+Rossel,3124,30,M,143428.gif,NA,Immovable,wall,16:33:13,21
+Rossel,3124,30,M,143449.gif,NA,Immovable,wall,16:33:34,15
 Rossel,3124,30,M,143553.gif,NA,Tool,bottle,16:34:38,15
 Rossel,3124,30,M,143640.gif,NA,Tool,bottle,16:35:25,15
 Rossel,3124,30,M,143655.gif,NA,Tool,bottle,16:35:40,16
@@ -8975,7 +8992,6 @@ Rossel,3124,30,M,145445.gif,NA,Natural,stick,16:53:30,18
 Rossel,3124,30,M,145533.gif,NA,Natural,stick,16:54:18,16
 Rossel,3124,30,M,145737.gif,NA,Natural,stick,16:56:22,15
 Rossel,3124,30,M,150507.gif,NA,Immovable,house pile,17:03:52,15
-Rossel,3124,30,M,150507.gif,Unsure,Immovable,house pile,17:03:52,15
 Rossel,4570,4,F,083433.gif,NA,Synthetic,blanket,10:33:17,15
 Rossel,4570,4,F,084858.gif,NA,Synthetic,blanket,10:47:42,16
 Rossel,4570,4,F,084914.gif,NA,Synthetic,blanket,10:47:58,8
@@ -9073,6 +9089,10 @@ Rossel,7423,9,F,134618.gif,NA,Tool,cup,15:45:09,16
 Rossel,7423,9,F,134752.gif,NA,Tool,cup,15:46:43,17
 Rossel,7423,9,F,134925.gif,NA,Tool,cup,15:48:16,17
 Rossel,7423,9,F,134942.gif,NA,Tool,cup,15:48:33,15
+Rossel,7423,9,F,141254.gif,NA,Synthetic,clothing,16:11:45,16
+Rossel,7423,9,F,141513.gif,NA,Synthetic,belt,16:14:04,17
+Rossel,7423,9,F,141530.gif,NA,Synthetic,belt,16:14:21,15
+Rossel,7423,9,F,141545.gif,NA,Synthetic,belt,16:14:36,15
 Rossel,7423,9,F,141600.gif,NA,Food,coconut,16:14:51,18
 Rossel,1039,21,M,20160831_072105_000.gif,NA,Synthetic,camera,09:19:53,15
 Rossel,1039,21,M,20160831_072120_000.gif,NA,Synthetic,camera,09:20:08,15
@@ -9120,10 +9140,8 @@ Rossel,1039,21,M,20160831_084705_000.gif,NA,Synthetic,rope,10:45:53,16
 Rossel,1039,21,M,20160831_084754_000.gif,NA,Synthetic,rope,10:46:42,15
 Rossel,1039,21,M,20160831_084809_000.gif,NA,Synthetic,rope,10:46:57,15
 Rossel,1039,21,M,20160831_084824_000.gif,NA,Synthetic,rope,10:47:12,16
-Rossel,1039,21,M,20160831_085003_000.gif,NA,Food,fruit,10:48:51,17
-Rossel,1039,21,M,20160831_085003_000.gif,Unsure,Food,fruit,10:48:51,17
-Rossel,1039,21,M,20160831_085050_000.gif,NA,Food,fruit,10:49:38,17
-Rossel,1039,21,M,20160831_085050_000.gif,Unsure,Food,fruit,10:49:38,17
+Rossel,1039,21,M,20160831_085003_000.gif,NA,Food,fruit (unknown variety),10:48:51,17
+Rossel,1039,21,M,20160831_085050_000.gif,NA,Food,fruit (unknown variety),10:49:38,17
 Rossel,1039,21,M,20160831_085107_000.gif,NA,Food,rice,10:49:55,15
 Rossel,1039,21,M,20160831_085444_000.gif,NA,Synthetic,plastic rice bag on string,10:53:32,16
 Rossel,1039,21,M,20160831_085515_000.gif,NA,Synthetic,plastic rice bag on string,10:54:03,16
@@ -9131,7 +9149,6 @@ Rossel,1039,21,M,20160831_090820_000.gif,NA,Natural,flower,11:07:08,26
 Rossel,1039,21,M,20160831_090917_000.gif,NA,Natural,flower,11:08:05,15
 Rossel,1039,21,M,20160831_091106_000.gif,NA,Natural,stick,11:09:54,17
 Rossel,1039,21,M,20160831_091325_000.gif,NA,Natural,leaf,11:12:13,15
-Rossel,1039,21,M,20160831_091325_000.gif,Unsure,Natural,leaf,11:12:13,15
 Rossel,1039,21,M,20160831_091340_000.gif,NA,Natural,leaf,11:12:28,17
 Rossel,1039,21,M,20160831_091357_000.gif,NA,Natural,dirt,11:12:45,15
 Rossel,1039,21,M,20160831_091412_000.gif,NA,Natural,dirt,11:13:00,15
@@ -9615,6 +9632,7 @@ Rossel,5064,28,M,20160831_101210_000.gif,NA,Food,food on skewer,12:10:56,18
 Rossel,5064,28,M,20160831_101228_000.gif,NA,Food,food on skewer,12:11:14,15
 Rossel,5064,28,M,20160831_101454_000.gif,NA,Tool,bowl,12:13:40,15
 Rossel,5064,28,M,20160831_101509_000.gif,NA,Food,sago,12:13:55,16
+Rossel,5064,28,M,20160831_101541_000.gif,NA,Food,sago,12:14:27,15
 Rossel,5064,28,M,20160831_101644_000.gif,NA,Tool,spoon,12:15:30,15
 Rossel,5064,28,M,20160831_102836_000.gif,NA,Food,tuber,12:27:22,16
 Rossel,5064,28,M,20160831_103315_000.gif,NA,Natural,log,12:32:01,15
@@ -9696,115 +9714,74 @@ Tseltal,2399,39,M,155018.gif,NA,Food,cookie,10:49:38,30
 Tseltal,2399,39,M,155048.gif,NA,Food,tortilla,10:50:08,30
 Tseltal,2399,39,M,155118.gif,NA,Food,tortilla,10:50:38,31
 Tseltal,2399,39,M,155149.gif,NA,Tool,cup,10:51:09,30
-Tseltal,2399,39,M,155426.gif,NA,Food,food,10:53:46,32
 Tseltal,2399,39,M,155426.gif,Exclude,Food,food,10:53:46,32
-Tseltal,2399,39,M,155426.gif,Unsure,Food,food,10:53:46,32
-Tseltal,2399,39,M,155458.gif,NA,Food,food,10:54:18,30
-Tseltal,2399,39,M,155458.gif,Exclude,Food,food,10:54:18,30
-Tseltal,2399,39,M,155458.gif,Unsure,Food,food,10:54:18,30
-Tseltal,2399,39,M,155528.gif,NA,Food,food,10:54:48,30
-Tseltal,2399,39,M,155528.gif,Exclude,Food,food,10:54:48,30
-Tseltal,2399,39,M,155528.gif,Unsure,Food,food,10:54:48,30
-Tseltal,2399,39,M,155558.gif,NA,Food,food,10:55:18,32
-Tseltal,2399,39,M,155558.gif,Exclude,Food,food,10:55:18,32
-Tseltal,2399,39,M,155558.gif,Unsure,Food,food,10:55:18,32
-Tseltal,2399,39,M,155700.gif,NA,Food,food,10:56:20,30
+Tseltal,2399,39,M,155426.gif,NA,Food,food,10:53:46,32
+Tseltal,2399,39,M,155458.gif,NA,Food,cookie,10:54:18,30
+Tseltal,2399,39,M,155528.gif,NA,Food,noodles,10:54:48,30
+Tseltal,2399,39,M,155558.gif,NA,Food,noodles,10:55:18,32
 Tseltal,2399,39,M,155700.gif,Exclude,Food,food,10:56:20,30
-Tseltal,2399,39,M,155700.gif,Unsure,Food,food,10:56:20,30
-Tseltal,2399,39,M,155730.gif,NA,Food,food,10:56:50,32
+Tseltal,2399,39,M,155700.gif,NA,Food,food,10:56:20,30
 Tseltal,2399,39,M,155730.gif,Exclude,Food,food,10:56:50,32
-Tseltal,2399,39,M,155730.gif,Unsure,Food,food,10:56:50,32
-Tseltal,2399,39,M,155802.gif,NA,Food,food,10:57:22,30
+Tseltal,2399,39,M,155730.gif,NA,Food,food,10:56:50,32
 Tseltal,2399,39,M,155802.gif,Exclude,Food,food,10:57:22,30
-Tseltal,2399,39,M,155802.gif,Unsure,Food,food,10:57:22,30
-Tseltal,2399,39,M,155832.gif,NA,Food,food,10:57:52,31
+Tseltal,2399,39,M,155802.gif,NA,Food,food,10:57:22,30
 Tseltal,2399,39,M,155832.gif,Exclude,Food,food,10:57:52,31
-Tseltal,2399,39,M,155832.gif,Unsure,Food,food,10:57:52,31
-Tseltal,2399,39,M,155903.gif,NA,Food,food,10:58:23,31
+Tseltal,2399,39,M,155832.gif,NA,Food,food,10:57:52,31
 Tseltal,2399,39,M,155903.gif,Exclude,Food,food,10:58:23,31
-Tseltal,2399,39,M,155903.gif,Unsure,Food,food,10:58:23,31
-Tseltal,2399,39,M,155934.gif,NA,Food,food,10:58:54,30
+Tseltal,2399,39,M,155903.gif,NA,Food,food,10:58:23,31
 Tseltal,2399,39,M,155934.gif,Exclude,Food,food,10:58:54,30
-Tseltal,2399,39,M,155934.gif,Unsure,Food,food,10:58:54,30
-Tseltal,2399,39,M,160004.gif,NA,Food,food,10:59:24,30
+Tseltal,2399,39,M,155934.gif,NA,Food,food,10:58:54,30
 Tseltal,2399,39,M,160004.gif,Exclude,Food,food,10:59:24,30
-Tseltal,2399,39,M,160004.gif,Unsure,Food,food,10:59:24,30
-Tseltal,2399,39,M,160034.gif,NA,Food,food,10:59:54,32
+Tseltal,2399,39,M,160004.gif,NA,Food,food,10:59:24,30
 Tseltal,2399,39,M,160034.gif,Exclude,Food,food,10:59:54,32
-Tseltal,2399,39,M,160034.gif,Unsure,Food,food,10:59:54,32
-Tseltal,2399,39,M,160106.gif,NA,Food,food,11:00:26,30
+Tseltal,2399,39,M,160034.gif,NA,Food,food,10:59:54,32
 Tseltal,2399,39,M,160106.gif,Exclude,Food,food,11:00:26,30
-Tseltal,2399,39,M,160106.gif,Unsure,Food,food,11:00:26,30
+Tseltal,2399,39,M,160106.gif,NA,Food,food,11:00:26,30
 Tseltal,2399,39,M,160136.gif,NA,Tool,cup,11:00:56,31
-Tseltal,2399,39,M,160207.gif,NA,Food,food,11:01:27,31
 Tseltal,2399,39,M,160207.gif,Exclude,Food,food,11:01:27,31
-Tseltal,2399,39,M,160207.gif,Unsure,Food,food,11:01:27,31
-Tseltal,2399,39,M,160238.gif,NA,Food,food,11:01:58,30
+Tseltal,2399,39,M,160207.gif,NA,Food,food,11:01:27,31
 Tseltal,2399,39,M,160238.gif,Exclude,Food,food,11:01:58,30
-Tseltal,2399,39,M,160238.gif,Unsure,Food,food,11:01:58,30
-Tseltal,2399,39,M,160308.gif,NA,Food,food,11:02:28,30
+Tseltal,2399,39,M,160238.gif,NA,Food,food,11:01:58,30
 Tseltal,2399,39,M,160308.gif,Exclude,Food,food,11:02:28,30
-Tseltal,2399,39,M,160308.gif,Unsure,Food,food,11:02:28,30
+Tseltal,2399,39,M,160308.gif,NA,Food,food,11:02:28,30
 Tseltal,2399,39,M,160338.gif,NA,Tool,cup,11:02:58,32
 Tseltal,2399,39,M,160440.gif,NA,Tool,cup,11:04:00,30
 Tseltal,2399,39,M,160713.gif,NA,Tool,cup,11:06:33,30
-Tseltal,2399,39,M,160743.gif,NA,Immovable,table,11:07:03,30
-Tseltal,2399,39,M,160743.gif,Exclude,Immovable,table,11:07:03,30
-Tseltal,2399,39,M,160743.gif,Unsure,Immovable,table,11:07:03,30
-Tseltal,2399,39,M,160813.gif,NA,Immovable,table,11:07:33,32
-Tseltal,2399,39,M,160813.gif,Exclude,Immovable,table,11:07:33,32
-Tseltal,2399,39,M,160813.gif,Unsure,Immovable,table,11:07:33,32
+Tseltal,2399,39,M,160743.gif,NA,Food,noodles,11:07:03,30
+Tseltal,2399,39,M,160813.gif,NA,Food,noodles,11:07:33,32
 Tseltal,2399,39,M,160845.gif,NA,Tool,cup,11:08:05,31
 Tseltal,2399,39,M,160916.gif,NA,Food,food,11:08:36,30
-Tseltal,2399,39,M,161117.gif,NA,Immovable,table,11:10:37,31
 Tseltal,2399,39,M,161117.gif,Exclude,Immovable,table,11:10:37,31
-Tseltal,2399,39,M,161117.gif,Unsure,Immovable,table,11:10:37,31
-Tseltal,2399,39,M,161148.gif,NA,Immovable,table,11:11:08,30
-Tseltal,2399,39,M,161148.gif,Exclude,Immovable,table,11:11:08,30
-Tseltal,2399,39,M,161148.gif,Unsure,Immovable,table,11:11:08,30
-Tseltal,2399,39,M,161218.gif,NA,Immovable,table,11:11:38,30
+Tseltal,2399,39,M,161117.gif,NA,Immovable,table,11:10:37,31
+Tseltal,2399,39,M,161148.gif,NA,Tool,cup,11:11:08,30
 Tseltal,2399,39,M,161218.gif,Exclude,Immovable,table,11:11:38,30
-Tseltal,2399,39,M,161218.gif,Unsure,Immovable,table,11:11:38,30
-Tseltal,2399,39,M,161248.gif,NA,Immovable,table,11:12:08,33
+Tseltal,2399,39,M,161218.gif,NA,Immovable,table,11:11:38,30
 Tseltal,2399,39,M,161248.gif,Exclude,Immovable,table,11:12:08,33
-Tseltal,2399,39,M,161248.gif,Unsure,Immovable,table,11:12:08,33
-Tseltal,2399,39,M,161351.gif,NA,Food,food,11:13:11,30
+Tseltal,2399,39,M,161248.gif,NA,Immovable,table,11:12:08,33
 Tseltal,2399,39,M,161351.gif,Exclude,Food,food,11:13:11,30
-Tseltal,2399,39,M,161351.gif,Unsure,Food,food,11:13:11,30
-Tseltal,2399,39,M,161421.gif,NA,Tool,cup,11:13:41,31
+Tseltal,2399,39,M,161351.gif,NA,Food,food,11:13:11,30
 Tseltal,2399,39,M,161421.gif,Exclude,Tool,cup,11:13:41,31
-Tseltal,2399,39,M,161421.gif,Unsure,Tool,cup,11:13:41,31
-Tseltal,2399,39,M,161452.gif,NA,Tool,cup,11:14:12,30
+Tseltal,2399,39,M,161421.gif,NA,Tool,cup,11:13:41,31
 Tseltal,2399,39,M,161452.gif,Exclude,Tool,cup,11:14:12,30
-Tseltal,2399,39,M,161452.gif,Unsure,Tool,cup,11:14:12,30
-Tseltal,2399,39,M,161522.gif,NA,Food,food,11:14:42,30
+Tseltal,2399,39,M,161452.gif,NA,Tool,cup,11:14:12,30
 Tseltal,2399,39,M,161522.gif,Exclude,Food,food,11:14:42,30
-Tseltal,2399,39,M,161522.gif,Unsure,Food,food,11:14:42,30
-Tseltal,2399,39,M,161552.gif,NA,Food,food,11:15:12,32
+Tseltal,2399,39,M,161522.gif,NA,Food,food,11:14:42,30
 Tseltal,2399,39,M,161552.gif,Exclude,Food,food,11:15:12,32
-Tseltal,2399,39,M,161552.gif,Unsure,Food,food,11:15:12,32
+Tseltal,2399,39,M,161552.gif,NA,Food,food,11:15:12,32
 Tseltal,2399,39,M,161624.gif,NA,Tool,cup,11:15:44,30
-Tseltal,2399,39,M,161725.gif,NA,Immovable,table,11:16:45,31
 Tseltal,2399,39,M,161725.gif,Exclude,Immovable,table,11:16:45,31
-Tseltal,2399,39,M,161725.gif,Unsure,Immovable,table,11:16:45,31
-Tseltal,2399,39,M,161927.gif,NA,Food,food,11:18:47,30
+Tseltal,2399,39,M,161725.gif,NA,Immovable,table,11:16:45,31
 Tseltal,2399,39,M,161927.gif,Exclude,Food,food,11:18:47,30
-Tseltal,2399,39,M,161927.gif,Unsure,Food,food,11:18:47,30
-Tseltal,2399,39,M,161957.gif,NA,Immovable,chair,11:19:17,30
+Tseltal,2399,39,M,161927.gif,NA,Food,food,11:18:47,30
 Tseltal,2399,39,M,161957.gif,Exclude,Immovable,chair,11:19:17,30
-Tseltal,2399,39,M,161957.gif,Unsure,Immovable,chair,11:19:17,30
-Tseltal,2399,39,M,162027.gif,NA,Immovable,chair,11:19:47,32
+Tseltal,2399,39,M,161957.gif,NA,Immovable,chair,11:19:17,30
 Tseltal,2399,39,M,162027.gif,Exclude,Immovable,chair,11:19:47,32
-Tseltal,2399,39,M,162027.gif,Unsure,Immovable,chair,11:19:47,32
-Tseltal,2399,39,M,162059.gif,NA,Immovable,chair,11:20:19,30
+Tseltal,2399,39,M,162027.gif,NA,Immovable,chair,11:19:47,32
 Tseltal,2399,39,M,162059.gif,Exclude,Immovable,chair,11:20:19,30
-Tseltal,2399,39,M,162059.gif,Unsure,Immovable,chair,11:20:19,30
-Tseltal,2399,39,M,162129.gif,NA,Immovable,chair,11:20:49,30
+Tseltal,2399,39,M,162059.gif,NA,Immovable,chair,11:20:19,30
 Tseltal,2399,39,M,162129.gif,Exclude,Immovable,chair,11:20:49,30
-Tseltal,2399,39,M,162129.gif,Unsure,Immovable,chair,11:20:49,30
+Tseltal,2399,39,M,162129.gif,NA,Immovable,chair,11:20:49,30
 Tseltal,2399,39,M,162231.gif,NA,Immovable,chair,11:21:51,30
-Tseltal,2399,39,M,162231.gif,Exclude,Immovable,chair,11:21:51,30
-Tseltal,2399,39,M,162231.gif,Unsure,Immovable,chair,11:21:51,30
 Tseltal,2399,39,M,162633.gif,NA,Food,cookie,11:25:53,30
 Tseltal,2399,39,M,162703.gif,NA,Food,cookie,11:26:23,31
 Tseltal,2399,39,M,162734.gif,NA,Food,cookie,11:26:54,32
@@ -9984,7 +9961,6 @@ Tseltal,2399,39,M,185727.gif,NA,Synthetic,cardboard box,13:56:47,30
 Tseltal,2399,39,M,185928.gif,NA,Synthetic,cardboard box,13:58:48,33
 Tseltal,2399,39,M,190001.gif,NA,Synthetic,cardboard box,13:59:21,30
 Tseltal,2399,39,M,190232.gif,NA,Immovable,pillar,14:01:52,31
-Tseltal,2399,39,M,190232.gif,Unsure,Immovable,pillar,14:01:52,31
 Tseltal,2399,39,M,190607.gif,NA,Food,cookie,14:05:27,10
 Tseltal,2399,39,M,190647.gif,NA,Tool,laundry basket,14:06:07,32
 Tseltal,2399,39,M,190719.gif,NA,Synthetic,plastic basket,14:06:39,30
@@ -9993,10 +9969,8 @@ Tseltal,2399,39,M,190920.gif,NA,Tool,mug,14:08:40,30
 Tseltal,2399,39,M,190950.gif,NA,Immovable,chair,14:09:10,31
 Tseltal,2399,39,M,191021.gif,NA,Food,cookie,14:09:41,14
 Tseltal,2399,39,M,191021.gif,NA,Immovable,chair,14:09:41,14
-Tseltal,2399,39,M,191105.gif,NA,Immovable,table,14:10:25,32
-Tseltal,2399,39,M,191105.gif,Unsure,Immovable,table,14:10:25,32
-Tseltal,2399,39,M,191137.gif,NA,Synthetic,fabric,14:10:57,30
-Tseltal,2399,39,M,191137.gif,Unsure,Synthetic,fabric,14:10:57,30
+Tseltal,2399,39,M,191105.gif,NA,Immovable,bed,14:10:25,32
+Tseltal,2399,39,M,191137.gif,NA,Synthetic,blanket,14:10:57,30
 Tseltal,2399,39,M,191207.gif,NA,Synthetic,rope,14:11:27,30
 Tseltal,2399,39,M,191340.gif,NA,Synthetic,camera,14:13:00,30
 Tseltal,2399,39,M,191516.gif,NA,Immovable,hammock,14:14:36,31
@@ -10024,8 +9998,7 @@ Tseltal,2399,39,M,193629.gif,NA,Synthetic,camera,14:35:49,26
 Tseltal,2399,39,M,193826.gif,NA,Synthetic,cardboard box,14:37:46,30
 Tseltal,2399,39,M,193856.gif,NA,Toy,toy car,14:38:16,31
 Tseltal,2399,39,M,193957.gif,NA,Synthetic,cardboard box,14:39:17,31
-Tseltal,2399,39,M,194059.gif,NA,Synthetic,scarf,14:40:19,30
-Tseltal,2399,39,M,194059.gif,Unsure,Synthetic,scarf,14:40:19,30
+Tseltal,2399,39,M,194059.gif,NA,Synthetic,rope,14:40:19,30
 Tseltal,2399,39,M,194300.gif,NA,Synthetic,paper,14:42:20,30
 Tseltal,2399,39,M,194330.gif,NA,Synthetic,paper,14:42:50,32
 Tseltal,2399,39,M,194402.gif,NA,Immovable,hammock,14:43:22,30
@@ -10038,10 +10011,8 @@ Tseltal,2399,39,M,195103.gif,NA,Toy,toy car,14:50:23,29
 Tseltal,2399,39,M,195304.gif,NA,Toy,toy car,14:52:24,30
 Tseltal,2399,39,M,195304.gif,NA,Immovable,pillar,14:52:24,30
 Tseltal,2399,39,M,200111.gif,NA,Immovable,door,15:00:31,30
-Tseltal,2399,39,M,200251.gif,NA,Toy,ball,15:02:11,30
-Tseltal,2399,39,M,200251.gif,Unsure,Toy,ball,15:02:11,30
-Tseltal,2399,39,M,200321.gif,NA,Toy,ball,15:02:41,2
-Tseltal,2399,39,M,200321.gif,Unsure,Toy,ball,15:02:41,2
+Tseltal,2399,39,M,200251.gif,NA,Synthetic,plastic bag,15:02:11,30
+Tseltal,2399,39,M,200321.gif,NA,Synthetic,plastic bag,15:02:41,2
 Tseltal,2399,39,M,200430.gif,NA,Immovable,hammock,15:03:50,31
 Tseltal,2399,39,M,201312.gif,NA,Natural,stick,15:12:32,30
 Tseltal,2399,39,M,201342.gif,NA,Natural,stick,15:13:02,30
@@ -11754,7 +11725,6 @@ Tseltal,1566,45,M,181425.gif,NA,Food,chicharrones,12:13:11,32
 Tseltal,1566,45,M,181457.gif,NA,Synthetic,plastic bag,12:13:43,30
 Tseltal,1566,45,M,181527.gif,NA,Synthetic,plastic bag,12:14:13,30
 Tseltal,1566,45,M,181658.gif,NA,Synthetic,pants,12:15:44,26
-Tseltal,1566,45,M,181658.gif,Unsure,Synthetic,pants,12:15:44,26
 Tseltal,1566,45,M,181927.gif,NA,Toy,action figure,12:18:13,30
 Tseltal,1566,45,M,182018.gif,NA,Toy,action figure,12:19:04,2
 Tseltal,1566,45,M,182020.gif,NA,Toy,action figure,12:19:06,29
@@ -13226,7 +13196,7 @@ Tseltal,8232,46,F,190931.gif,NA,Tool,mop,13:08:06,30
 Tseltal,8232,46,F,191001.gif,NA,Synthetic,curtains,13:08:36,33
 Tseltal,8232,46,F,191232.gif,Exclude,Synthetic,bag,13:11:07,30
 Tseltal,8232,46,F,191232.gif,NA,Synthetic,bag,13:11:07,30
-Tseltal,8232,46,F,191302.gif,NA,Synthetic,bag,13:11:37,32
+Tseltal,8232,46,F,191302.gif,NA,Synthetic,embroidery ring,13:11:37,32
 Tseltal,8232,46,F,192146.gif,Exclude,Toy,small green/blue animal head,13:20:21,30
 Tseltal,8232,46,F,192146.gif,NA,Toy,small green/blue animal head,13:20:21,30
 Tseltal,8232,46,F,193457.gif,NA,Food,cookie,13:33:32,30
@@ -13275,6 +13245,7 @@ Tseltal,7302,16,F,152250.gif,NA,Synthetic,bag,09:21:25,30
 Tseltal,7302,16,F,152250.gif,Unsure,Synthetic,bag,09:21:25,30
 Tseltal,7302,16,F,152320.gif,NA,Synthetic,bag,09:21:55,30
 Tseltal,7302,16,F,152320.gif,Unsure,Synthetic,bag,09:21:55,30
+Tseltal,7302,16,F,152621.gif,NA,Synthetic,plastic bag,09:24:56,30
 Tseltal,7302,16,F,153157.gif,NA,Synthetic,tsek,09:30:32,30
 Tseltal,7302,16,F,153227.gif,NA,Synthetic,pants,09:31:02,30
 Tseltal,7302,16,F,153257.gif,NA,Synthetic,pants,09:31:32,33
@@ -13316,10 +13287,8 @@ Tseltal,7302,16,F,184547.gif,NA,Toy,toy,12:44:22,30
 Tseltal,7302,16,F,184719.gif,NA,Toy,toy,12:45:54,30
 Tseltal,7302,16,F,184749.gif,NA,Tool,trash bag,12:46:24,32
 Tseltal,7302,16,F,184821.gif,NA,Tool,trash bag,12:46:56,30
-Tseltal,7302,16,F,184851.gif,NA,Tool,trash bag,12:47:26,30
-Tseltal,7302,16,F,184851.gif,NA,Toy,toy,12:47:26,30
-Tseltal,7302,16,F,184851.gif,Unsure,Tool,trash bag,12:47:26,30
-Tseltal,7302,16,F,184851.gif,Unsure,Toy,toy,12:47:26,30
+Tseltal,7302,16,F,184851.gif,NA,Synthetic,plastic bag,12:47:26,30
+Tseltal,7302,16,F,184851.gif,NA,Toy,toy tray,12:47:26,30
 Tseltal,7302,16,F,184921.gif,NA,Tool,trash bag,12:47:56,32
 Tseltal,7302,16,F,185023.gif,NA,Toy,toy car,12:48:58,30
 Tseltal,7302,16,F,185227.gif,NA,Food,bean,12:51:02,32
@@ -13331,7 +13300,6 @@ Tseltal,7302,16,F,190733.gif,NA,Tool,bowl,13:06:08,30
 Tseltal,7302,16,F,190833.gif,NA,Tool,bowl,13:07:08,33
 Tseltal,7302,16,F,190906.gif,NA,Tool,bowl,13:07:41,30
 Tseltal,7302,16,F,190936.gif,NA,Synthetic,shoe,13:08:11,30
-Tseltal,7302,16,F,190936.gif,Unsure,Synthetic,shoe,13:08:11,30
 Tseltal,7302,16,F,191006.gif,NA,Tool,bowl,13:08:41,31
 Tseltal,7302,16,F,191107.gif,NA,Toy,toy,13:09:42,30
 Tseltal,7302,16,F,191137.gif,NA,Toy,toy,13:10:12,32

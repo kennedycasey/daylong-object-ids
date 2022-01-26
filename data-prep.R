@@ -145,16 +145,27 @@ corrections <- read_csv("data/manual-checks/corrections.csv") %>%
   mutate(from.corrections = 1) %>%
   select(sub_num, Image, object.corrected, exclusion.corrected, from.corrections)
 
-data.w.corrections <- data.w.labels %>%
+corrected.images <- corrections %>%
+  mutate(corrected.image = paste0(sub_num, "/", Image)) %>%
+  pull() %>%
+  unique()
+
+data.pre.correction <- data.w.labels %>%
+  mutate(exact.image = paste0(sub_num, "/", Image), 
+         exclusion = ifelse(exact.image %in% corrected.images, NA, exclusion), 
+         object = ifelse(exact.image %in% corrected.images, NA, object)) %>%
+  distinct() %>%
+  select(-exact.image)
+         
+data.w.corrections <- data.pre.correction %>%
   left_join(corrections, by = c("sub_num", "Image")) %>%
-  mutate(object = ifelse(!is.na(object.corrected) & !is.na(from.corrections), 
-                         object.corrected, object), 
+  mutate(object = ifelse(!is.na(from.corrections), object.corrected, object), 
          exclusion = ifelse(!is.na(from.corrections), exclusion.corrected, exclusion)) %>%
   select(-ends_with("corrected")) %>%
-  # TO DO: check for 3+ objects
-  separate(object, c("object1", "object2"), ",") %>%
-  mutate(across(ends_with("1|2"), ~ trimws(.))) %>%
-  pivot_longer(c("object1", "object2"), names_to = "object.num2", values_to = "object2") %>%
+  mutate(n.objects = str_count(object, ",") + 1)  %>%
+  separate(object, c("object1", "object2", "object3"), ",") %>%
+  mutate(across(ends_with("1|2|3"), ~ trimws(.))) %>%
+  pivot_longer(c("object1", "object2", "object3"), names_to = "object.num2", values_to = "object2") %>%
   filter(!is.na(object2)) %>%
   rename(object = object2) %>%
   mutate(object = trimws(object)) %>%
@@ -181,8 +192,8 @@ if (nrow(not.categorized > 0)) {
 categories <- read_csv("data/manual-checks/categories.csv")
 
 # merge with main annotations df and store new category
-data.w.categories <- data.w.labels %>%
-  full_join(categories, by = "object") %>%
+data.w.categories <- data.w.corrections %>%
+  left_join(categories, by = "object") %>%
   select(sub_num, Image, exclusion, category, object) %>%
   distinct() 
 

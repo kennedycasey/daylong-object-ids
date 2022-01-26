@@ -100,6 +100,17 @@ if (nrow(not.checked.none > 0)) {
   write_csv(not.checked.none, "data/manual-checks/new-no-objects.csv")
 }
 
+Dirs <- read_csv("../ImCo-secure-data-prep/secure-metadata.csv") %>%
+  rename(sub_num = public_id, 
+         Dir = chatterlab_id)
+
+data.w.none %>%
+  left_join(Dirs, by = "sub_num") %>%
+  filter(Object == "OBJECT HERE") %>%
+  mutate(check = paste0("open ", Dir, "/", Image)) %>%
+  pull(check) %>%
+  unique()
+
 # add regularized labels --------------------------------------------------
 # determine if there are any objects that need regularized labels
 # if there are, write csv file with only these objects

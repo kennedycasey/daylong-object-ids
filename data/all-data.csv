@@ -2476,7 +2476,7 @@ Rossel,5942,47,F,093437.gif,NA,Synthetic,woven basket,11:33:24,11
 Rossel,5942,47,F,093448.gif,NA,Synthetic,woven basket,11:33:35,10
 Rossel,5942,47,F,093458.gif,NA,Synthetic,woven basket,11:33:45,10
 Rossel,5942,47,F,093508.gif,NA,Synthetic,woven basket,11:33:55,13
-Rossel,5942,47,F,093508.gif,NA,Toy,cup,11:33:55,13
+Rossel,5942,47,F,093508.gif,NA,Tool,cup,11:33:55,13
 Rossel,5942,47,F,093521.gif,NA,Food,betelnut,11:34:08,10
 Rossel,5942,47,F,093521.gif,NA,Tool,knife,11:34:08,10
 Rossel,5942,47,F,093531.gif,NA,Food,betelnut,11:34:18,10
@@ -3113,8 +3113,8 @@ Rossel,6792,24,M,100757.gif,NA,Synthetic,camera,12:06:47,18
 Rossel,6792,24,M,100815.gif,NA,Synthetic,camera,12:07:05,15
 Rossel,6792,24,M,100830.gif,NA,Synthetic,camera,12:07:20,15
 Rossel,6792,24,M,101140.gif,NA,Food,betelnut,12:10:30,15
-Rossel,6792,24,M,101504.gif,NA,Toy,cup,12:13:54,18
-Rossel,6792,24,M,101522.gif,NA,Toy,cup,12:14:12,15
+Rossel,6792,24,M,101504.gif,NA,Tool,cup,12:13:54,18
+Rossel,6792,24,M,101522.gif,NA,Tool,cup,12:14:12,15
 Rossel,6792,24,M,101824.gif,NA,Food,rice,12:17:14,16
 Rossel,6792,24,M,102141.gif,NA,Food,rice,12:20:31,18
 Rossel,6792,24,M,102214.gif,NA,Food,rice,12:21:04,15
@@ -4976,7 +4976,7 @@ Rossel,9706,41,F,084316.gif,NA,Tool,bowl,10:42:11,18
 Rossel,9706,41,F,084436.gif,NA,Food,sago,10:43:31,15
 Rossel,9706,41,F,084451.gif,NA,Tool,bowl,10:43:46,17
 Rossel,9706,41,F,084625.gif,NA,Food,sago,10:45:20,17
-Rossel,9706,41,F,084831.gif,NA,Toy,cup,10:47:26,15
+Rossel,9706,41,F,084831.gif,NA,Tool,cup,10:47:26,15
 Rossel,9706,41,F,084950.gif,NA,Natural,stick,10:48:45,15
 Rossel,9706,41,F,085124.gif,NA,Synthetic,camera,10:50:19,15
 Rossel,9706,41,F,085432.gif,NA,Natural,stick,10:53:27,15
@@ -5102,7 +5102,7 @@ Rossel,9706,41,F,103802.gif,NA,Immovable,wall,12:36:57,15
 Rossel,9706,41,F,103817.gif,NA,Immovable,window,12:37:12,28
 Rossel,9706,41,F,103923.gif,NA,Immovable,window,12:38:18,19
 Rossel,9706,41,F,104705.gif,NA,Immovable,drawer,12:46:00,15
-Rossel,9706,41,F,104808.gif,NA,Toy,cup,12:47:03,17
+Rossel,9706,41,F,104808.gif,NA,Tool,cup,12:47:03,17
 Rossel,9706,41,F,105609.gif,NA,Natural,stick,12:55:04,15
 Rossel,9706,41,F,105624.gif,NA,Natural,stick,12:55:19,17
 Rossel,9706,41,F,105641.gif,NA,Natural,stick,12:55:36,15
@@ -9074,11 +9074,11 @@ Rossel,7423,9,F,124744.gif,NA,Synthetic,skirt,14:46:35,15
 Rossel,7423,9,F,133524.gif,NA,Natural,rock,15:34:15,15
 Rossel,7423,9,F,133920.gif,NA,Natural,rock,15:38:11,15
 Rossel,7423,9,F,133952.gif,NA,Natural,rock,15:38:43,15
-Rossel,7423,9,F,134603.gif,NA,Toy,cup,15:44:54,15
-Rossel,7423,9,F,134618.gif,NA,Toy,cup,15:45:09,16
-Rossel,7423,9,F,134752.gif,NA,Toy,cup,15:46:43,17
-Rossel,7423,9,F,134925.gif,NA,Toy,cup,15:48:16,17
-Rossel,7423,9,F,134942.gif,NA,Toy,cup,15:48:33,15
+Rossel,7423,9,F,134603.gif,NA,Tool,cup,15:44:54,15
+Rossel,7423,9,F,134618.gif,NA,Tool,cup,15:45:09,16
+Rossel,7423,9,F,134752.gif,NA,Tool,cup,15:46:43,17
+Rossel,7423,9,F,134925.gif,NA,Tool,cup,15:48:16,17
+Rossel,7423,9,F,134942.gif,NA,Tool,cup,15:48:33,15
 Rossel,7423,9,F,141254.gif,NA,Synthetic,clothing,16:11:45,16
 Rossel,7423,9,F,141513.gif,NA,Synthetic,belt,16:14:04,17
 Rossel,7423,9,F,141530.gif,NA,Synthetic,belt,16:14:21,15
@@ -9708,7 +9708,7 @@ Tseltal,2399,39,M,154946.gif,NA,Food,cookie,10:49:06,32
 Tseltal,2399,39,M,155018.gif,NA,Food,cookie,10:49:38,30
 Tseltal,2399,39,M,155048.gif,NA,Food,tortilla,10:50:08,30
 Tseltal,2399,39,M,155118.gif,NA,Food,tortilla,10:50:38,31
-Tseltal,2399,39,M,155149.gif,NA,Toy,cup,10:51:09,30
+Tseltal,2399,39,M,155149.gif,NA,Tool,cup,10:51:09,30
 Tseltal,2399,39,M,155426.gif,Exclude,Food,food,10:53:46,32
 Tseltal,2399,39,M,155426.gif,NA,Food,food,10:53:46,32
 Tseltal,2399,39,M,155458.gif,NA,Food,cookie,10:54:18,30
@@ -9732,38 +9732,38 @@ Tseltal,2399,39,M,160034.gif,Exclude,Food,food,10:59:54,32
 Tseltal,2399,39,M,160034.gif,NA,Food,food,10:59:54,32
 Tseltal,2399,39,M,160106.gif,Exclude,Food,food,11:00:26,30
 Tseltal,2399,39,M,160106.gif,NA,Food,food,11:00:26,30
-Tseltal,2399,39,M,160136.gif,NA,Toy,cup,11:00:56,31
+Tseltal,2399,39,M,160136.gif,NA,Tool,cup,11:00:56,31
 Tseltal,2399,39,M,160207.gif,Exclude,Food,food,11:01:27,31
 Tseltal,2399,39,M,160207.gif,NA,Food,food,11:01:27,31
 Tseltal,2399,39,M,160238.gif,Exclude,Food,food,11:01:58,30
 Tseltal,2399,39,M,160238.gif,NA,Food,food,11:01:58,30
 Tseltal,2399,39,M,160308.gif,Exclude,Food,food,11:02:28,30
 Tseltal,2399,39,M,160308.gif,NA,Food,food,11:02:28,30
-Tseltal,2399,39,M,160338.gif,NA,Toy,cup,11:02:58,32
-Tseltal,2399,39,M,160440.gif,NA,Toy,cup,11:04:00,30
-Tseltal,2399,39,M,160713.gif,NA,Toy,cup,11:06:33,30
+Tseltal,2399,39,M,160338.gif,NA,Tool,cup,11:02:58,32
+Tseltal,2399,39,M,160440.gif,NA,Tool,cup,11:04:00,30
+Tseltal,2399,39,M,160713.gif,NA,Tool,cup,11:06:33,30
 Tseltal,2399,39,M,160743.gif,NA,Food,noodles,11:07:03,30
 Tseltal,2399,39,M,160813.gif,NA,Food,noodles,11:07:33,32
-Tseltal,2399,39,M,160845.gif,NA,Toy,cup,11:08:05,31
+Tseltal,2399,39,M,160845.gif,NA,Tool,cup,11:08:05,31
 Tseltal,2399,39,M,160916.gif,NA,Food,food,11:08:36,30
 Tseltal,2399,39,M,161117.gif,Exclude,Immovable,table,11:10:37,31
 Tseltal,2399,39,M,161117.gif,NA,Immovable,table,11:10:37,31
-Tseltal,2399,39,M,161148.gif,NA,Toy,cup,11:11:08,30
+Tseltal,2399,39,M,161148.gif,NA,Tool,cup,11:11:08,30
 Tseltal,2399,39,M,161218.gif,Exclude,Immovable,table,11:11:38,30
 Tseltal,2399,39,M,161218.gif,NA,Immovable,table,11:11:38,30
 Tseltal,2399,39,M,161248.gif,Exclude,Immovable,table,11:12:08,33
 Tseltal,2399,39,M,161248.gif,NA,Immovable,table,11:12:08,33
 Tseltal,2399,39,M,161351.gif,Exclude,Food,food,11:13:11,30
 Tseltal,2399,39,M,161351.gif,NA,Food,food,11:13:11,30
-Tseltal,2399,39,M,161421.gif,Exclude,Toy,cup,11:13:41,31
-Tseltal,2399,39,M,161421.gif,NA,Toy,cup,11:13:41,31
-Tseltal,2399,39,M,161452.gif,Exclude,Toy,cup,11:14:12,30
-Tseltal,2399,39,M,161452.gif,NA,Toy,cup,11:14:12,30
+Tseltal,2399,39,M,161421.gif,Exclude,Tool,cup,11:13:41,31
+Tseltal,2399,39,M,161421.gif,NA,Tool,cup,11:13:41,31
+Tseltal,2399,39,M,161452.gif,Exclude,Tool,cup,11:14:12,30
+Tseltal,2399,39,M,161452.gif,NA,Tool,cup,11:14:12,30
 Tseltal,2399,39,M,161522.gif,Exclude,Food,food,11:14:42,30
 Tseltal,2399,39,M,161522.gif,NA,Food,food,11:14:42,30
 Tseltal,2399,39,M,161552.gif,Exclude,Food,food,11:15:12,32
 Tseltal,2399,39,M,161552.gif,NA,Food,food,11:15:12,32
-Tseltal,2399,39,M,161624.gif,NA,Toy,cup,11:15:44,30
+Tseltal,2399,39,M,161624.gif,NA,Tool,cup,11:15:44,30
 Tseltal,2399,39,M,161725.gif,Exclude,Immovable,table,11:16:45,31
 Tseltal,2399,39,M,161725.gif,NA,Immovable,table,11:16:45,31
 Tseltal,2399,39,M,161927.gif,Exclude,Food,food,11:18:47,30
@@ -11145,7 +11145,7 @@ Tseltal,6852,22,M,142554.gif,NA,Immovable,chair,09:49:44,32
 Tseltal,6852,22,M,142848.gif,NA,Synthetic,camera,09:52:38,30
 Tseltal,6852,22,M,143121.gif,NA,Synthetic,camera,09:55:11,30
 Tseltal,6852,22,M,143151.gif,NA,Synthetic,camera,09:55:41,23
-Tseltal,6852,22,M,143543.gif,NA,Toy,cup,09:59:33,30
+Tseltal,6852,22,M,143543.gif,NA,Tool,cup,09:59:33,30
 Tseltal,6852,22,M,143714.gif,NA,Tool,bowl,10:01:04,24
 Tseltal,6852,22,M,143738.gif,NA,Immovable,table,10:01:28,30
 Tseltal,6852,22,M,143838.gif,NA,Immovable,table,10:02:28,32
@@ -11437,7 +11437,7 @@ Tseltal,6852,22,M,212028.gif,NA,Tool,ball,16:44:18,30
 Tseltal,6852,22,M,213010.gif,NA,Synthetic,skirt,16:54:00,30
 Tseltal,6852,22,M,213625.gif,NA,Synthetic,plastic packaging,17:00:15,32
 Tseltal,6852,22,M,213625.gif,NA,Synthetic,trash bin,17:00:15,32
-Tseltal,6852,22,M,213757.gif,NA,Toy,cup,17:01:47,30
+Tseltal,6852,22,M,213757.gif,NA,Tool,cup,17:01:47,30
 Tseltal,6852,22,M,213827.gif,NA,Food,bean,17:02:17,30
 Tseltal,6852,22,M,213857.gif,NA,Food,bean,17:02:47,30
 Tseltal,6852,22,M,214324.gif,NA,Immovable,door,17:07:14,30
@@ -11503,10 +11503,10 @@ Tseltal,6852,22,M,231727.gif,NA,Food,chips,18:41:17,30
 Tseltal,6852,22,M,231828.gif,NA,Food,chips,18:42:18,30
 Tseltal,6852,22,M,231858.gif,NA,Food,chips,18:42:48,30
 Tseltal,6852,22,M,232000.gif,NA,Food,chips,18:43:50,27
-Tseltal,6852,22,M,232057.gif,Exclude,Toy,cup,18:44:47,30
-Tseltal,6852,22,M,232057.gif,NA,Toy,cup,18:44:47,30
-Tseltal,6852,22,M,232127.gif,Exclude,Toy,cup,18:45:17,33
-Tseltal,6852,22,M,232127.gif,NA,Toy,cup,18:45:17,33
+Tseltal,6852,22,M,232057.gif,Exclude,Tool,cup,18:44:47,30
+Tseltal,6852,22,M,232057.gif,NA,Tool,cup,18:44:47,30
+Tseltal,6852,22,M,232127.gif,Exclude,Tool,cup,18:45:17,33
+Tseltal,6852,22,M,232127.gif,NA,Tool,cup,18:45:17,33
 Tseltal,6852,22,M,232401.gif,NA,Synthetic,shirt,18:47:51,30
 Tseltal,6852,22,M,232635.gif,NA,Synthetic,shirt,18:50:25,30
 Tseltal,6852,22,M,232705.gif,NA,Synthetic,shirt,18:50:55,30
@@ -11551,7 +11551,7 @@ Tseltal,1566,45,M,145429.gif,NA,Synthetic,camera,08:53:15,30
 Tseltal,1566,45,M,145459.gif,NA,Food,bean soup,08:53:45,30
 Tseltal,1566,45,M,145632.gif,NA,Food,bean soup,08:55:18,30
 Tseltal,1566,45,M,145804.gif,NA,Food,bean soup,08:56:50,30
-Tseltal,1566,45,M,145834.gif,NA,Toy,cup,08:57:20,32
+Tseltal,1566,45,M,145834.gif,NA,Tool,cup,08:57:20,32
 Tseltal,1566,45,M,150018.gif,NA,Toy,action figure,08:59:04,30
 Tseltal,1566,45,M,150048.gif,NA,Toy,action figure,08:59:34,30
 Tseltal,1566,45,M,151030.gif,NA,Toy,action figure,09:09:16,32
@@ -12177,8 +12177,8 @@ Tseltal,6526,45,M,165355.gif,NA,Food,banana,11:29:46,30
 Tseltal,6526,45,M,165455.gif,NA,Food,banana,11:30:46,31
 Tseltal,6526,45,M,171032.gif,NA,Synthetic,shoe,11:46:23,30
 Tseltal,6526,45,M,171621.gif,NA,Synthetic,phone,11:52:12,31
-Tseltal,6526,45,M,171824.gif,NA,Toy,cup,11:54:15,29
-Tseltal,6526,45,M,172025.gif,NA,Toy,cup,11:56:16,30
+Tseltal,6526,45,M,171824.gif,NA,Tool,cup,11:54:15,29
+Tseltal,6526,45,M,172025.gif,NA,Tool,cup,11:56:16,30
 Tseltal,6526,45,M,172428.gif,NA,Toy,book,12:00:19,31
 Tseltal,6526,45,M,172904.gif,NA,Food,lime,12:04:55,31
 Tseltal,6526,45,M,173440.gif,NA,Natural,stick,12:10:31,25
@@ -12275,9 +12275,9 @@ Tseltal,1598,45,F,165849.gif,NA,Food,juice,10:57:03,30
 Tseltal,1598,45,F,165919.gif,NA,Food,juice,10:57:33,32
 Tseltal,1598,45,F,165951.gif,NA,Food,juice,10:58:05,30
 Tseltal,1598,45,F,170021.gif,NA,Food,juice,10:58:35,30
-Tseltal,1598,45,F,170051.gif,NA,Toy,cup,10:59:05,31
+Tseltal,1598,45,F,170051.gif,NA,Tool,cup,10:59:05,31
 Tseltal,1598,45,F,170051.gif,NA,Food,soda,10:59:05,31
-Tseltal,1598,45,F,170122.gif,NA,Toy,cup,10:59:36,30
+Tseltal,1598,45,F,170122.gif,NA,Tool,cup,10:59:36,30
 Tseltal,1598,45,F,170122.gif,NA,Food,soda,10:59:36,30
 Tseltal,1598,45,F,170223.gif,NA,Food,juice,11:00:37,32
 Tseltal,1598,45,F,170255.gif,NA,Food,juice,11:01:09,30
@@ -12390,7 +12390,7 @@ Tseltal,1598,45,F,210651.gif,NA,Tool,reusable water bottle,15:05:05,30
 Tseltal,1598,45,F,210721.gif,NA,Tool,reusable water bottle,15:05:35,32
 Tseltal,1598,45,F,210753.gif,NA,Tool,reusable water bottle,15:06:07,30
 Tseltal,1598,45,F,210823.gif,NA,Tool,reusable water bottle,15:06:37,30
-Tseltal,1598,45,F,211057.gif,NA,Toy,cup,15:09:11,30
+Tseltal,1598,45,F,211057.gif,NA,Tool,cup,15:09:11,30
 Tseltal,1598,45,F,211057.gif,NA,Food,soda,15:09:11,30
 Tseltal,1598,45,F,211127.gif,NA,Tool,reusable water bottle,15:09:41,30
 Tseltal,1598,45,F,211229.gif,NA,Tool,reusable water bottle,15:10:43,30
@@ -12460,73 +12460,73 @@ Tseltal,1598,45,F,225629.gif,NA,Tool,mop,16:54:43,7
 Tseltal,1598,45,F,225706.gif,NA,Tool,mop,16:55:20,20
 Tseltal,1598,45,F,225928.gif,NA,Tool,mop,16:57:42,30
 Tseltal,1598,45,F,225958.gif,NA,Natural,tree,16:58:12,32
-Tseltal,1598,45,F,230130.gif,NA,Toy,cup,16:59:44,32
+Tseltal,1598,45,F,230130.gif,NA,Tool,cup,16:59:44,32
 Tseltal,1598,45,F,230130.gif,NA,Food,tuber,16:59:44,32
 Tseltal,1598,45,F,230130.gif,NA,Synthetic,popsicle stick,16:59:44,32
-Tseltal,1598,45,F,230202.gif,NA,Toy,cup,17:00:16,30
+Tseltal,1598,45,F,230202.gif,NA,Tool,cup,17:00:16,30
 Tseltal,1598,45,F,230202.gif,NA,Food,tuber,17:00:16,30
 Tseltal,1598,45,F,230202.gif,NA,Synthetic,popsicle stick,17:00:16,30
-Tseltal,1598,45,F,230232.gif,NA,Toy,cup,17:00:46,30
+Tseltal,1598,45,F,230232.gif,NA,Tool,cup,17:00:46,30
 Tseltal,1598,45,F,230232.gif,NA,Food,tuber,17:00:46,30
 Tseltal,1598,45,F,230232.gif,NA,Synthetic,popsicle stick,17:00:46,30
-Tseltal,1598,45,F,230302.gif,NA,Toy,cup,17:01:16,32
+Tseltal,1598,45,F,230302.gif,NA,Tool,cup,17:01:16,32
 Tseltal,1598,45,F,230302.gif,NA,Food,tuber,17:01:16,32
 Tseltal,1598,45,F,230302.gif,NA,Synthetic,popsicle stick,17:01:16,32
 Tseltal,1598,45,F,230334.gif,NA,Tool,bowl,17:01:48,30
-Tseltal,1598,45,F,230404.gif,NA,Toy,cup,17:02:18,30
+Tseltal,1598,45,F,230404.gif,NA,Tool,cup,17:02:18,30
 Tseltal,1598,45,F,230404.gif,NA,Food,tuber,17:02:18,30
 Tseltal,1598,45,F,230404.gif,NA,Synthetic,popsicle stick,17:02:18,30
-Tseltal,1598,45,F,230434.gif,NA,Toy,cup,17:02:48,32
+Tseltal,1598,45,F,230434.gif,NA,Tool,cup,17:02:48,32
 Tseltal,1598,45,F,230434.gif,NA,Food,tuber,17:02:48,32
 Tseltal,1598,45,F,230434.gif,NA,Synthetic,popsicle stick,17:02:48,32
-Tseltal,1598,45,F,230506.gif,NA,Toy,cup,17:03:20,30
+Tseltal,1598,45,F,230506.gif,NA,Tool,cup,17:03:20,30
 Tseltal,1598,45,F,230506.gif,NA,Food,tuber,17:03:20,30
 Tseltal,1598,45,F,230506.gif,NA,Synthetic,popsicle stick,17:03:20,30
-Tseltal,1598,45,F,230536.gif,NA,Toy,cup,17:03:50,30
+Tseltal,1598,45,F,230536.gif,NA,Tool,cup,17:03:50,30
 Tseltal,1598,45,F,230536.gif,NA,Food,tuber,17:03:50,30
 Tseltal,1598,45,F,230536.gif,NA,Synthetic,popsicle stick,17:03:50,30
-Tseltal,1598,45,F,230606.gif,NA,Toy,cup,17:04:20,32
+Tseltal,1598,45,F,230606.gif,NA,Tool,cup,17:04:20,32
 Tseltal,1598,45,F,230606.gif,NA,Food,tuber,17:04:20,32
 Tseltal,1598,45,F,230606.gif,NA,Synthetic,popsicle stick,17:04:20,32
-Tseltal,1598,45,F,230708.gif,NA,Toy,cup,17:05:22,30
+Tseltal,1598,45,F,230708.gif,NA,Tool,cup,17:05:22,30
 Tseltal,1598,45,F,230708.gif,NA,Food,tuber,17:05:22,30
 Tseltal,1598,45,F,230708.gif,NA,Synthetic,popsicle stick,17:05:22,30
-Tseltal,1598,45,F,230738.gif,NA,Toy,cup,17:05:52,31
+Tseltal,1598,45,F,230738.gif,NA,Tool,cup,17:05:52,31
 Tseltal,1598,45,F,230738.gif,NA,Food,tuber,17:05:52,31
 Tseltal,1598,45,F,230738.gif,NA,Synthetic,popsicle stick,17:05:52,31
-Tseltal,1598,45,F,230839.gif,NA,Toy,cup,17:06:53,30
+Tseltal,1598,45,F,230839.gif,NA,Tool,cup,17:06:53,30
 Tseltal,1598,45,F,230839.gif,NA,Food,tuber,17:06:53,30
 Tseltal,1598,45,F,230839.gif,NA,Synthetic,popsicle stick,17:06:53,30
-Tseltal,1598,45,F,231040.gif,NA,Toy,cup,17:08:54,32
+Tseltal,1598,45,F,231040.gif,NA,Tool,cup,17:08:54,32
 Tseltal,1598,45,F,231040.gif,NA,Food,tuber,17:08:54,32
 Tseltal,1598,45,F,231040.gif,NA,Synthetic,popsicle stick,17:08:54,32
-Tseltal,1598,45,F,231142.gif,NA,Toy,cup,17:09:56,30
+Tseltal,1598,45,F,231142.gif,NA,Tool,cup,17:09:56,30
 Tseltal,1598,45,F,231142.gif,NA,Food,tuber,17:09:56,30
 Tseltal,1598,45,F,231142.gif,NA,Synthetic,popsicle stick,17:09:56,30
-Tseltal,1598,45,F,231212.gif,NA,Toy,cup,17:10:26,32
+Tseltal,1598,45,F,231212.gif,NA,Tool,cup,17:10:26,32
 Tseltal,1598,45,F,231212.gif,NA,Food,tuber,17:10:26,32
 Tseltal,1598,45,F,231212.gif,NA,Synthetic,popsicle stick,17:10:26,32
-Tseltal,1598,45,F,231244.gif,NA,Toy,cup,17:10:58,31
+Tseltal,1598,45,F,231244.gif,NA,Tool,cup,17:10:58,31
 Tseltal,1598,45,F,231244.gif,NA,Food,tuber,17:10:58,31
 Tseltal,1598,45,F,231244.gif,NA,Synthetic,popsicle stick,17:10:58,31
-Tseltal,1598,45,F,231315.gif,NA,Toy,cup,17:11:29,30
+Tseltal,1598,45,F,231315.gif,NA,Tool,cup,17:11:29,30
 Tseltal,1598,45,F,231315.gif,NA,Food,tuber,17:11:29,30
 Tseltal,1598,45,F,231315.gif,NA,Synthetic,popsicle stick,17:11:29,30
-Tseltal,1598,45,F,231345.gif,NA,Toy,cup,17:11:59,30
+Tseltal,1598,45,F,231345.gif,NA,Tool,cup,17:11:59,30
 Tseltal,1598,45,F,231345.gif,NA,Food,tuber,17:11:59,30
 Tseltal,1598,45,F,231345.gif,NA,Synthetic,popsicle stick,17:11:59,30
 Tseltal,1598,45,F,231820.gif,NA,Synthetic,metal pipe,17:16:34,30
 Tseltal,1598,45,F,231921.gif,NA,Immovable,table,17:17:35,30
 Tseltal,1598,45,F,231921.gif,NA,Food,tortilla,17:17:35,30
-Tseltal,1598,45,F,232153.gif,NA,Toy,cup,17:20:07,31
-Tseltal,1598,45,F,232324.gif,NA,Toy,cup,17:21:38,33
+Tseltal,1598,45,F,232153.gif,NA,Tool,cup,17:20:07,31
+Tseltal,1598,45,F,232324.gif,NA,Tool,cup,17:21:38,33
 Tseltal,1598,45,F,232357.gif,NA,Immovable,table,17:22:11,30
 Tseltal,1598,45,F,232357.gif,NA,Food,tortilla,17:22:11,30
 Tseltal,1598,45,F,232528.gif,NA,Immovable,table,17:23:42,30
-Tseltal,1598,45,F,232558.gif,NA,Toy,cup,17:24:12,30
+Tseltal,1598,45,F,232558.gif,NA,Tool,cup,17:24:12,30
 Tseltal,1598,45,F,232558.gif,NA,Food,tuber,17:24:12,30
 Tseltal,1598,45,F,232558.gif,NA,Synthetic,popsicle stick,17:24:12,30
-Tseltal,1598,45,F,232628.gif,NA,Toy,cup,17:24:42,31
+Tseltal,1598,45,F,232628.gif,NA,Tool,cup,17:24:42,31
 Tseltal,1598,45,F,232659.gif,NA,Food,tortilla,17:25:13,30
 Tseltal,1598,45,F,232729.gif,NA,Food,tortilla,17:25:43,30
 Tseltal,1598,45,F,233914.gif,NA,Synthetic,shirt,17:37:28,30
@@ -12554,8 +12554,8 @@ Tseltal,9021,10,F,145055.gif,NA,Synthetic,camera,09:40:51,30
 Tseltal,9021,10,F,145256.gif,NA,Immovable,chair,09:42:52,32
 Tseltal,9021,10,F,170034.gif,NA,Synthetic,camera,11:50:30,30
 Tseltal,9021,10,F,170104.gif,NA,Synthetic,camera,11:51:00,30
-Tseltal,9021,10,F,174905.gif,NA,Toy,cup,12:39:01,30
-Tseltal,9021,10,F,174935.gif,NA,Toy,cup,12:39:31,30
+Tseltal,9021,10,F,174905.gif,NA,Tool,cup,12:39:01,30
+Tseltal,9021,10,F,174935.gif,NA,Tool,cup,12:39:31,30
 Tseltal,9021,10,F,180049.gif,NA,Synthetic,camera,12:50:45,31
 Tseltal,9021,10,F,180150.gif,NA,Synthetic,camera,12:51:46,30
 Tseltal,9021,10,F,182427.gif,NA,Tool,baby bottle,13:14:23,31
@@ -12760,16 +12760,16 @@ Tseltal,8535,25,F,183839.gif,NA,Food,bread,12:37:24,30
 Tseltal,8535,25,F,183909.gif,NA,Food,bread,12:37:54,31
 Tseltal,8535,25,F,183940.gif,NA,Food,bread,12:38:25,30
 Tseltal,8535,25,F,184041.gif,NA,Food,bread,12:39:26,32
-Tseltal,8535,25,F,184113.gif,NA,Toy,cup,12:39:58,25
-Tseltal,8535,25,F,184138.gif,NA,Toy,cup,12:40:23,30
-Tseltal,8535,25,F,184208.gif,NA,Toy,cup,12:40:53,30
-Tseltal,8535,25,F,184238.gif,NA,Toy,cup,12:41:23,32
-Tseltal,8535,25,F,184310.gif,NA,Toy,cup,12:41:55,30
-Tseltal,8535,25,F,184340.gif,NA,Toy,cup,12:42:25,30
-Tseltal,8535,25,F,184442.gif,NA,Toy,cup,12:43:27,30
-Tseltal,8535,25,F,184714.gif,NA,Toy,cup,12:45:59,31
-Tseltal,8535,25,F,184845.gif,NA,Toy,cup,12:47:30,33
-Tseltal,8535,25,F,184918.gif,NA,Toy,cup,12:48:03,30
+Tseltal,8535,25,F,184113.gif,NA,Tool,cup,12:39:58,25
+Tseltal,8535,25,F,184138.gif,NA,Tool,cup,12:40:23,30
+Tseltal,8535,25,F,184208.gif,NA,Tool,cup,12:40:53,30
+Tseltal,8535,25,F,184238.gif,NA,Tool,cup,12:41:23,32
+Tseltal,8535,25,F,184310.gif,NA,Tool,cup,12:41:55,30
+Tseltal,8535,25,F,184340.gif,NA,Tool,cup,12:42:25,30
+Tseltal,8535,25,F,184442.gif,NA,Tool,cup,12:43:27,30
+Tseltal,8535,25,F,184714.gif,NA,Tool,cup,12:45:59,31
+Tseltal,8535,25,F,184845.gif,NA,Tool,cup,12:47:30,33
+Tseltal,8535,25,F,184918.gif,NA,Tool,cup,12:48:03,30
 Tseltal,8535,25,F,185252.gif,NA,Synthetic,camera,12:51:37,30
 Tseltal,8535,25,F,185453.gif,NA,Food,chips,12:53:38,31
 Tseltal,8535,25,F,185524.gif,NA,Food,chips,12:54:09,30
@@ -13390,8 +13390,8 @@ Tseltal,5978,48,F,152112.gif,Exclude,Food,food,09:19:36,30
 Tseltal,5978,48,F,152112.gif,NA,Food,food,09:19:36,30
 Tseltal,5978,48,F,152142.gif,NA,Tool,mug,09:20:06,30
 Tseltal,5978,48,F,152212.gif,NA,Tool,mug,09:20:36,32
-Tseltal,5978,48,F,152514.gif,NA,Toy,cup,09:23:38,30
-Tseltal,5978,48,F,153050.gif,NA,Toy,cup,09:29:14,32
+Tseltal,5978,48,F,152514.gif,NA,Tool,cup,09:23:38,30
+Tseltal,5978,48,F,153050.gif,NA,Tool,cup,09:29:14,32
 Tseltal,5978,48,F,153354.gif,NA,Immovable,chair,09:32:18,34
 Tseltal,5978,48,F,153734.gif,NA,Tool,bowl,09:35:58,30
 Tseltal,5978,48,F,154005.gif,Exclude,Food,packaged snack,09:38:29,32
@@ -15437,11 +15437,11 @@ Tseltal,1312,26,F,233142.gif,NA,Food,rambutan,17:29:55,32
 Tseltal,1312,26,F,233617.gif,NA,Food,corn,17:34:30,31
 Tseltal,1312,26,F,233648.gif,NA,Food,corn,17:35:01,30
 Tseltal,5437,32,F,032033.gif,NA,Synthetic,camera,08:43:39,31
-Tseltal,5437,32,F,033137.gif,NA,Toy,cup,08:54:43,31
+Tseltal,5437,32,F,033137.gif,NA,Tool,cup,08:54:43,31
 Tseltal,5437,32,F,033137.gif,NA,Food,mats,08:54:43,31
-Tseltal,5437,32,F,033208.gif,NA,Toy,cup,08:55:14,30
+Tseltal,5437,32,F,033208.gif,NA,Tool,cup,08:55:14,30
 Tseltal,5437,32,F,033208.gif,NA,Food,mats,08:55:14,30
-Tseltal,5437,32,F,033238.gif,NA,Toy,cup,08:55:44,3501
+Tseltal,5437,32,F,033238.gif,NA,Tool,cup,08:55:44,3501
 Tseltal,5437,32,F,033238.gif,NA,Food,mats,08:55:44,3501
 Tseltal,5437,32,F,043504.gif,NA,Synthetic,pole,09:58:10,31
 Tseltal,5437,32,F,043535.gif,NA,Synthetic,pole,09:58:41,30
@@ -15488,19 +15488,19 @@ Tseltal,5437,32,F,055108.gif,NA,Natural,leaf,11:14:14,30
 Tseltal,5437,32,F,055337.gif,NA,Synthetic,camera,11:16:43,32
 Tseltal,5437,32,F,055509.gif,NA,Natural,leaf,11:18:15,33
 Tseltal,5437,32,F,060204.gif,NA,Natural,leaf,11:25:10,27
-Tseltal,5437,32,F,061039.gif,NA,Toy,cup,11:33:45,30
+Tseltal,5437,32,F,061039.gif,NA,Tool,cup,11:33:45,30
 Tseltal,5437,32,F,061039.gif,NA,Food,mats,11:33:45,30
-Tseltal,5437,32,F,061109.gif,NA,Toy,cup,11:34:15,33
+Tseltal,5437,32,F,061109.gif,NA,Tool,cup,11:34:15,33
 Tseltal,5437,32,F,061109.gif,NA,Food,mats,11:34:15,33
-Tseltal,5437,32,F,061142.gif,NA,Toy,cup,11:34:48,30
+Tseltal,5437,32,F,061142.gif,NA,Tool,cup,11:34:48,30
 Tseltal,5437,32,F,061142.gif,NA,Food,mats,11:34:48,30
-Tseltal,5437,32,F,061212.gif,NA,Toy,cup,11:35:18,30
+Tseltal,5437,32,F,061212.gif,NA,Tool,cup,11:35:18,30
 Tseltal,5437,32,F,061212.gif,NA,Food,mats,11:35:18,30
-Tseltal,5437,32,F,061242.gif,NA,Toy,cup,11:35:48,32
+Tseltal,5437,32,F,061242.gif,NA,Tool,cup,11:35:48,32
 Tseltal,5437,32,F,061242.gif,NA,Food,mats,11:35:48,32
-Tseltal,5437,32,F,061314.gif,NA,Toy,cup,11:36:20,30
+Tseltal,5437,32,F,061314.gif,NA,Tool,cup,11:36:20,30
 Tseltal,5437,32,F,061314.gif,NA,Food,mats,11:36:20,30
-Tseltal,5437,32,F,061344.gif,NA,Toy,cup,11:36:50,30
+Tseltal,5437,32,F,061344.gif,NA,Tool,cup,11:36:50,30
 Tseltal,5437,32,F,061344.gif,NA,Food,mats,11:36:50,30
 Tseltal,5437,32,F,061721.gif,NA,Natural,leaf,11:40:27,30
 Tseltal,5437,32,F,061751.gif,NA,Natural,leaf,11:40:57,30
@@ -15544,7 +15544,7 @@ Tseltal,5437,32,F,071959.gif,NA,Food,masa,12:43:05,30
 Tseltal,5437,32,F,072029.gif,NA,Natural,leaf,12:43:35,31
 Tseltal,5437,32,F,072029.gif,NA,Food,masa,12:43:35,31
 Tseltal,5437,32,F,072100.gif,NA,Food,masa,12:44:06,30
-Tseltal,5437,32,F,073441.gif,NA,Toy,cup,12:57:47,30
+Tseltal,5437,32,F,073441.gif,NA,Tool,cup,12:57:47,30
 Tseltal,5437,32,F,073701.gif,NA,Synthetic,sock,13:00:07,31
 Tseltal,5437,32,F,073732.gif,NA,Synthetic,sock,13:00:38,30
 Tseltal,5437,32,F,073802.gif,NA,Synthetic,sock,13:01:08,30
@@ -16274,7 +16274,7 @@ Tseltal,7674,26,F,233524.gif,NA,Food,bean,17:34:18,30
 Tseltal,7674,26,F,233725.gif,NA,Food,bean,17:36:19,30
 Tseltal,7674,26,F,233755.gif,NA,Food,bean,17:36:49,32
 Tseltal,7674,26,F,233857.gif,NA,Food,bean,17:37:51,30
-Tseltal,7674,26,F,234059.gif,NA,Toy,cup,17:39:53,33
+Tseltal,7674,26,F,234059.gif,NA,Tool,cup,17:39:53,33
 Tseltal,7674,26,F,234132.gif,NA,Food,bean,17:40:26,30
 Tseltal,7674,26,F,234202.gif,NA,Food,guava,17:40:56,30
 Tseltal,7674,26,F,234232.gif,NA,Food,guava,17:41:26,32

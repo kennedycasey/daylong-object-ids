@@ -77,8 +77,14 @@ sites <- c("Rossel", "Tseltal")
 site.colors <- c("Rossel" = "#3C5388", 
                  "Tseltal" = "#02A087")
 
-categories <- c("Synthetic", "Food", "Tool", 
-                "Toy", "Natural", "Immovable")
+categories <- c("Food", "Synthetic", "Toy", "Natural",
+                "Clothing", "Mealtime Tool", "Immovable", 
+                "Work Tool")
+
+category.labels <- c("Food", "Synthetic", "Toy", "Natural",
+                "Clothing", "Tool-Meal", "Immovable", 
+                "Tool-Work")
+
 
 # rm excluded photos + set other variable info
 data <- raw.data %>%
@@ -222,7 +228,7 @@ top.objects.bycategory <- data %>%
 
 top.objects.tbl <- xtable(top.objects.bycategory, caption = "Non-study-related objects handled by the most children across categories and sites.", label = "tab:top-objects")
 
-print(top.objects.tbl, type = "latex", comment = FALSE, table.placement = "!ht", scalebox = 0.8, include.rownames = FALSE)
+print(top.objects.tbl, type = "latex", comment = FALSE, table.placement = "!ht", scalebox = 0.65, include.rownames = FALSE)
 ```
 
 # Results
@@ -378,6 +384,16 @@ category.props <- data %>%
             n.category = n.category,
             category = category) %>%
   mutate(prop = n.category/n.images)
+
+# get category order
+categories <- category.props %>%
+  group_by(category, site) %>%
+  summarize(m.site = mean(prop)) %>%
+  ungroup() %>%
+  group_by(category) %>%
+  summarize(m.overall = mean(m.site)) %>%
+  arrange(desc(m.overall)) %>%
+  pull(category)
   
 # test for differences between sites for each category
 wilcox.outputs <- list()
@@ -456,7 +472,9 @@ model.data <- data %>%
   mutate(synthetic = ifelse(category == "Synthetic", 1, 0), 
          natural = ifelse(category == "Natural", 1, 0), 
          food = ifelse(category == "Food", 1, 0), 
-         tool = ifelse(category == "Tool", 1, 0), 
+         mealtime = ifelse(category == "Mealtime Tool", 1, 0),
+         work = ifelse(category == "Work Tool", 1, 0), 
+         clothing = ifelse(category == "Clothing", 1, 0),
          toy = ifelse(category == "Toy", 1, 0), 
          immovable = ifelse(category == "Immovable", 1, 0))
 
@@ -464,7 +482,7 @@ model.data <- data %>%
 lmer.outputs <- list()
 for (i in c(categories)) {
   
-  lmer.output <- lmer(n.objects ~ site * eval(as.symbol(tolower(i))) +
+  lmer.output <- lmer(n.objects ~ site * eval(as.symbol(tolower(trimws(str_remove(i, "Tool"))))) +
                                (1|sub_num), model.data) %>%
   tidy() %>% 
   filter(effect == "fixed" & term != "(Intercept)")
@@ -516,9 +534,10 @@ p1 <- ggplot() +
                               ymax = (mean + se)*100, group = site),
                 position = position_dodge(width = 0.75), 
                 width = 0.25, size = 0.5, color = "black") +
-  annotate(geom = "text", label = "*", x = "Immovable", y = 35, size = 6) +
+  annotate(geom = "text", label = "*", x = "Immovable", y = 35, size = 5) +
   scale_color_manual(values = site.colors) +
   scale_fill_manual(values = site.colors) +
+  scale_x_discrete(labels = category.labels) + 
   labs(x = "Object Categories", y = "% Handling",
        color = "Site", fill = "Site", tag = "A") +
   theme_classic(base_size = 8) +
@@ -538,9 +557,10 @@ p2 <- ggplot(hourly.objects.bycategory,
     dodge.width = 0.75, jitter.width = 0.1), size = 0.5, alpha = 0.5) +
   geom_boxplot(width = 0.75, outlier.shape = NA,
                alpha = 0.5, color = "black") +
-  annotate(geom = "text", label = "*", x = "Immovable", y = 5, size = 6) +
-    scale_color_manual(values = site.colors) +
+  annotate(geom = "text", label = "*", x = "Immovable", y = 5, size = 5) +
+  scale_color_manual(values = site.colors) + 
   scale_fill_manual(values = site.colors) +
+  scale_x_discrete(labels = category.labels) + 
   labs(x = "Object Categories", y = "Unique Objects/Hour",
        color = "Site", fill = "Site", tag = "B") +
   theme_classic(base_size = 8) +

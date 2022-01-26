@@ -189,7 +189,7 @@ if (nrow(not.categorized > 0)) {
 
 # add regularized categories ----------------------------------------------
 # read in manually checked categories for each object
-categories <- read_csv("data/manual-checks/categories.csv")
+categories <- read_csv("data/manual-checks/categories2.csv")
 
 # merge with main annotations df and store new category
 data.w.categories <- data.w.corrections %>%

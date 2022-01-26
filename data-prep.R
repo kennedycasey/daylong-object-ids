@@ -100,17 +100,6 @@ if (nrow(not.checked.none > 0)) {
   write_csv(not.checked.none, "data/manual-checks/new-no-objects.csv")
 }
 
-Dirs <- read_csv("../ImCo-secure-data-prep/secure-metadata.csv") %>%
-  rename(sub_num = public_id, 
-         Dir = chatterlab_id)
-
-data.w.none %>%
-  left_join(Dirs, by = "sub_num") %>%
-  filter(Object == "OBJECT HERE") %>%
-  mutate(check = paste0("open ", Dir, "/", Image)) %>%
-  pull(check) %>%
-  unique()
-
 # add regularized labels --------------------------------------------------
 # determine if there are any objects that need regularized labels
 # if there are, write csv file with only these objects
@@ -150,13 +139,35 @@ data.w.labels <- data.w.objects %>%
   mutate(object = trimws(object)) %>%
   select(sub_num, Image, exclusion, object)
 
+
+# add corrections ---------------------------------------------------------
+corrections <- read_csv("data/manual-checks/corrections.csv") %>%
+  mutate(from.corrections = 1) %>%
+  select(sub_num, Image, object.corrected, exclusion.corrected, from.corrections)
+
+data.w.corrections <- data.w.labels %>%
+  left_join(corrections, by = c("sub_num", "Image")) %>%
+  mutate(object = ifelse(!is.na(object.corrected) & !is.na(from.corrections), 
+                         object.corrected, object), 
+         exclusion = ifelse(!is.na(from.corrections), exclusion.corrected, exclusion)) %>%
+  select(-ends_with("corrected")) %>%
+  # TO DO: check for 3+ objects
+  separate(object, c("object1", "object2"), ",") %>%
+  mutate(across(ends_with("1|2"), ~ trimws(.))) %>%
+  pivot_longer(c("object1", "object2"), names_to = "object.num2", values_to = "object2") %>%
+  filter(!is.na(object2)) %>%
+  rename(object = object2) %>%
+  mutate(object = trimws(object)) %>%
+  select(sub_num, Image, exclusion, object)
+
 # determine if there are any objects that need categories
 # if there are, write csv file with only these objects
 categorized <- read_csv("data/manual-checks/categories.csv") %>%
   pull(object) %>%
   unique()
 
-not.categorized <- data.w.labels %>%
+not.categorized <- data.w.corrections %>%
+  filter(is.na(exclusion)) %>%
   select(object) %>%
   distinct() %>%
   filter(object %notin% categorized)

@@ -55,6 +55,20 @@
 \title{Sticks, leaves, bowls, and buckets: Distributional patterns of
 children's at-home object handling in two subsistence societies}
 
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{colortbl}
+\usepackage{pdflscape}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[normalem]{ulem}
+\usepackage{makecell}
+\usepackage{xcolor}
 
 \author{Kennedy Casey \\
         University of Chicago \\
@@ -252,24 +266,24 @@ word learning.
 \subsection{Corpus}\label{corpus}}
 
 Daylong photo streams consisted of images captured approximately every
-15 (Rossel) to 30 (Tseltal) seconds over the course of, typically, 8
-(Rossel) to 9 (Tseltal) waking hours at home. Children wore a recording
-vest equipped with a camera (Narrative Clip 1) and miniature fisheye
-lens (Photojojo Super Fisheye) that provided a 180\(\text{\textdegree}\)
-view of the environment. For younger infants who were not yet walking,
-the camera was instead worn by the primary caregiver. Previously, 83
-daylong photo streams (113668 photos) had been comprehensively manually
-annotated for the presence or absence of child object handling (Casillas
-\& Elliott, 2021); we further annotate and analyze the subset of 15443
-with object handling in the present study.
+15 (Rossel) to 30 (Tseltal) seconds over the course of 8 (Rossel) to 9
+(Tseltal) waking hours at home. Children wore a recording vest equipped
+with a camera (Narrative Clip 1) and miniature fisheye lens (Photojojo
+Super Fisheye) that provided a 180\(\text{\textdegree}\) view of the
+environment. For younger infants who were not yet walking, the camera
+was instead worn by the primary caregiver. Previously, 83 daylong photo
+streams (113668 photos) had been comprehensively manually annotated for
+the presence or absence of child object handling (Casillas \& Elliott,
+2021). Here, we further annotate and analyze the subset of 16368 with
+object handling in the present study.
 
 We included one daylong photo stream from each of 74 children (Rossel:
 39, Tseltal: 35), ranging in age from 0 to 48 months
 (\emph{M}\textsubscript{\emph{Rossel}} = 22.2,
 \emph{M}\textsubscript{\emph{Tseltal}} = 23.3). The amount of object
 handling and thus the number of photos annotated varied across children,
-ranging from 1 to 633 (\emph{M}\textsubscript{\emph{Rossel}} = 225.4,
-\emph{M}\textsubscript{\emph{Tseltal}} = 189.9).
+ranging from 1 to 626 (\emph{M}\textsubscript{\emph{Rossel}} = 223.5,
+\emph{M}\textsubscript{\emph{Tseltal}} = 188.2).
 
 \begin{CodeChunk}
 \begin{figure}[h]
@@ -285,29 +299,30 @@ ranging from 1 to 633 (\emph{M}\textsubscript{\emph{Rossel}} = 225.4,
 \hypertarget{manual-annotation}{%
 \subsection{Manual annotation}\label{manual-annotation}}
 
-Photos were annotated with IMCO (version 2.0, Casey, Fisher, Tice, \&
-Casillas, 2022), an open-source Python program adapted for efficient
-coding of photo streams. Annotators provided labels for the handled
-object(s) present in each photo (e.g., ``twig'') and selected among
-predefined categories to characterize each type of object (e.g.,
-``natural object''). Categories included food, tools, toys, immovable
-objects (e.g., furniture and housing structures), natural objects, and
-miscellaneous synthetic objects (see Figure 1 for example images and
-Table \ref{tab:top-objects} for example objects from each category).
+Photos were annotated with IMCO, an open-source Python program adapted
+for efficient coding of photo streams (Casey, Fisher, Tice, \& Casillas,
+2022). Annotators provided labels for the handled object(s) in each
+photo (e.g., ``twig'') and selected among predefined categories to
+characterize each type of object (e.g., ``Natural''). Categories
+included food, mealtime tools (``Tool-M''), toys, clothing, tools for
+working or cleaning (``Tool-W''), immovable objects (e.g., furniture and
+housing structures), natural objects, and miscellaneous synthetic
+objects (see Figure 1 for example images and Table \ref{tab:top-objects}
+for example objects from each category).
 
 \hypertarget{data-preparation-and-reliability}{%
 \subsection{Data preparation and
 reliability}\label{data-preparation-and-reliability}}
 
 Images were excluded if they were too dark, bright, blurry, or covered
-for annotators to identify handled objects (105 images, 0.68\% of the
+for annotators to identify handled objects (738 images, 4.51\% of the
 data set), if annotators were otherwise unsure about what objects were
-being handled (37, or 0.24\%), if there was no handled object (18, or
-0.12\%). To avoid unnecessary data loss, all excluded photos were
-checked by at least one other annotator and re-included for analysis if
-objects were identifiable. In total, 15443 images were deemed usable by
-annotators (8791 for Rossel, 6646 for Tseltal) {[}numbers don't add up,
-need to figure out where the extra 6 images are coming from{]}.
+being handled (133, or 0.81\%), if there was no handled object (210, or
+1.28\%), or if the researcher was still present when the image was
+captured (3, or 0.02\%). To avoid unnecessary data loss, all excluded
+photos were checked by at least one other annotator and re-included for
+analysis if objects were identifiable. In total, 15305 images were
+deemed usable by annotators (8717 for Rossel, 6588 for Tseltal).
 
 XX\% of photo streams were double coded. Reliability annotations were
 equally spread across sites and ages and included a total of XXXX
@@ -315,26 +330,27 @@ images. At the category level, annotators agreed on XX.X\% of decisions
 (Rossel: XX.X\%, Tseltal: XX.X\%). At the object label level, annotators
 agreed on XX.X\% of decisions (Rossel: XX.X\%, Tseltal: XX.X\%).
 
-\begin{table}[!ht]
+\begin{table}[ht]
 \centering
-\scalebox{0.65}{
-\begin{tabular}{lll}
-  \hline
-Object Category & Rossel & Tseltal \\ 
-  \hline
-Food & betelnut, coconut, tuber & bean, tortilla, chips \\ 
-  Synthetic & blanket, plastic bottle, woven basket & plastic bag, blanket, bucket \\ 
-  Toy & ball, book, swing & toy car, ball, book \\ 
-  Natural & stick, leaf, rock & stick, plant, tree \\ 
-  Clothing & shirt, purse, skirt & shirt, pants, shoe \\ 
-  Mealtime Tool & bowl, spoon, pot & bowl, cup, mug \\ 
-  Immovable & stairs, wall, floor & chair, door, fence \\ 
-  Work Tool & knife, battery, broom & knife, embroidery ring, broom \\ 
-   \hline
-\end{tabular}
-}
-\caption{Non-study-related objects handled by the most children across categories and sites.} 
-\label{tab:top-objects}
+\resizebox{\linewidth}{!}{
+\begin{tabular}{rlrlrl}
+  \toprule
+\multicolumn{2}{c}{\textbf{ }} & \multicolumn{2}{c}{\textbf{Rossel}} & \multicolumn{2}{c}{\textbf{Tseltal}} \\
+\cmidrule(l{3pt}r{3pt}){3-4} \cmidrule(l{3pt}r{3pt}){5-6}
+\textbf{} & \textbf{Object Category} & \textbf{N} & \textbf{Top objects} & \textbf{N} & \textbf{Top objects }\\ 
+  \midrule
+1 & Food &  37 & betelnut, coconut, tuber &  54 & bean, tortilla, chips \\ 
+  2 & Synthetic &  75 & blanket, plastic bottle, woven basket &  77 & plastic bag, blanket, bucket \\ 
+  3 & Toy &  20 & ball, book, swing &  44 & toy car, ball, book \\ 
+  4 & Natural &  21 & stick, leaf, rock &  13 & stick, plant, tree \\ 
+  5 & Clothing &  16 & shirt, purse, skirt &  22 & shirt, pants, shoe \\ 
+  6 & Mealtime Tool &  20 & bowl, spoon, knife &  12 & bowl, cup, mug \\ 
+  7 & Immovable &  19 & stairs, wall, floor &  19 & chair, door, fence \\ 
+  8 & Work Tool &  14 & knife, broom, scrub brush &  27 & embroidery ring, knife, broom \\ 
+   \bottomrule
+\end{tabular}}
+\caption{Unique object counts and top non-study-related objects for each category across sites.} 
+\label{tab:tab1}
 \end{table}
 
 \hypertarget{results}{%
@@ -344,17 +360,18 @@ Food & betelnut, coconut, tuber & bean, tortilla, chips \\
 \subsection{Overall frequency
 statistics}\label{overall-frequency-statistics}}
 
-Children handled an average of 27.09 unique objects per day (median =
-27.5, \emph{SD} = 15.79, range = 1--60), with no significant differences
-across sites (\emph{M}\textsubscript{\emph{Rossel}} = 26.72,
-\emph{M}\textsubscript{\emph{Tseltal}} = 27.51, \emph{W} = 663, \emph{p}
-= 0.837). The distribution of handled objects was highly right-skewed
+Children handled an average of 26.84 unique objects per day (median =
+27.5, \emph{SD} = 15.73, range = 1--59), with no significant differences
+across sites (\emph{M}\textsubscript{\emph{Rossel}} = 26.38,
+\emph{M}\textsubscript{\emph{Tseltal}} = 27.34, \emph{W} = 666, \emph{p}
+= 0.862). The distribution of handled objects was highly right-skewed
 within and across children. Each child's distribution was skewed such
 that a small group of objects was handled in a majority of their images
 but most objects were handled for only short periods of time (Figure 2).
 Across children, common objects followed a similar Zipfian distribution:
 some objects were handled by many children, but most objects were only
-handled by 1-2 children in each site (Rossel: 57.96\%, Tseltal: 62.5\%).
+handled by 1-2 children in each site (Rossel: 57.21\%, Tseltal:
+61.57\%).
 
 \begin{CodeChunk}
 \begin{figure}[h]
@@ -367,10 +384,10 @@ handled by 1-2 children in each site (Rossel: 57.96\%, Tseltal: 62.5\%).
 \end{figure}
 \end{CodeChunk}
 
-Comparing across sites, 32.19\% of objects were present in both
+Comparing across sites, 32.7\% of objects were present in both
 communities, and several shared objects were among the most frequently
 handled by children in both sites. In fact, among the top 25 most common
-objects, 11 were shared across sites (Figure 3). Of note, the study
+objects, 10 were shared across sites (Figure 3). Of note, the study
 camera was the object that was handled by the most children in both
 sites (Rossel: 69.2\%, Tseltal: 91.4\% of children). The camera and
 other study-related objects (i.e., vest and privacy cover for the
@@ -393,21 +410,23 @@ items did not qualitatively change any of the reported results.
 category}\label{effects-of-object-category}}
 
 The frequency of object categories was similarly divided across sites
-(Figure 4A). Children primarily handled miscellaneous synthetic objects
-(e.g., rope, woven basket, bottle, etc.,
-\emph{M}\textsubscript{\emph{Rossel}} = 23.89\%,
-\emph{M}\textsubscript{\emph{Tseltal}} = 31.12\% of handling) and food
-(\emph{M}\textsubscript{\emph{Rossel}} = 27.66\%,
-\emph{M}\textsubscript{\emph{Tseltal}} = 31.62\% of handling). For 52 of
-74 children, their top category was either synthetic objects or food.
+(Figure 4A). Children primarily handled food items
+(\emph{M}\textsubscript{\emph{Rossel}} = 27.31\%,
+\emph{M}\textsubscript{\emph{Tseltal}} = 31.52\% of handling) and
+miscellaneous synthetic objects (e.g., rope, woven basket, bottle, etc.,
+\emph{M}\textsubscript{\emph{Rossel}} = 24.3\%,
+\emph{M}\textsubscript{\emph{Tseltal}} = 31.37\% of handling). For 51 of
+75 children, their top category was either food or synthetic objects.
 Two-tailed Wilcoxon tests revealed only one significant category-level
 difference between sites: children's handling of large or immovable
-objects (see Table 1 for example objects belonging to this category),
-where Rossel children handled these objects more frequently than Tseltal
-children (\emph{M}\textsubscript{\emph{Rossel}} = 10.7\%,
-\emph{M}\textsubscript{\emph{Tseltal}} = 3.57\%, adjusted \emph{p} =
-0.001, \emph{p}s for all other categories \textgreater{} 0.05), but
-these objects were still the least frequently handled in both sites.
+objects, where Rossel children handled these objects more frequently
+than Tseltal children (\emph{M}\textsubscript{\emph{Rossel}} = 10.79\%,
+\emph{M}\textsubscript{\emph{Tseltal}} = 3.55\%, adjusted \emph{p} =
+0.001, but these objects were still among the least frequently handled
+in both sites. The initial predicted difference in synthetic object
+handling between sites was significant; however, after correcting for
+multiple comparisons, this effect did not persist (adjusted \emph{p} =
+0.104).
 
 \begin{CodeChunk}
 \begin{figure}[!h]
@@ -416,32 +435,37 @@ these objects were still the least frequently handled in both sites.
 
 }
 
-\caption[(A) Overall frequency of handling by object category]{(A) Overall frequency of handling by object category. Points reflect percentages for individual children. (B) Count of unique objects handled per hour by object category. Points reflect means for individual children across all hours of recording.}\label{fig:overall-stats-fig}
+\caption[(A) Overall frequency of handling by object category]{(A) Overall frequency of handling by object category. Points reflect percentages for individual children. (B) Count of unique objects handled per hour by object category. Points reflect means for individual children across all hours of recording. Asterisks indicate significant differences between sites after correcting for multiple comparisons.}\label{fig:overall-stats-fig}
 \end{figure}
 \end{CodeChunk}
 
-During any given hour, children handled 6.58 objects from 3.71 different
-categories, on average (median = 6 objects, \emph{SD} = 4.67, range =
-1--29). To test for differences across sites and categories, we ran
+During any given hour, children handled 6.5 objects from 3.66 different
+categories, on average (median = 6 objects, \emph{SD} = 4.62, range =
+1--27). To test for differences across sites and categories, we ran
 individual linear mixed-effects models for each of the six object
 categories, with category membership dummy coded (i.e., objects
 belonging to the target category for a given model = 1, objects
 belonging to other categories = 0). Models included fixed effects of
-site, category, and site-by-category interaction as well as random
-intercepts for individual children. After correcting for multiple
-comparisons, we found a significant main effect of the synthetic object
-category (\(\beta\) = 0.36, \emph{SE} = 0.09, \emph{t} = 4.01, \emph{p}
-= 0.001) such that children handled more unique synthetic objects per
-hour than objects from other categories. Additionally, we found negative
-main effects for the food (\(\beta\) = , \emph{SE} = , \emph{t} = ,
-\emph{p} ), tool (\(\beta\) = , \emph{SE} = , \emph{t} = , \emph{p} ),
-and toy (\(\beta\) = -0.44, \emph{SE} = 0.14, \emph{t} = -3.26, \emph{p}
-= 0.023) categories, meaning that children handled fewer unique objects
-from these categories per hour. Finally, a significant interaction
-between site and the immovable object category revealed that Tseltal
-children handled fewer unique immovable objects per hour than Rossel
-children. (\(\beta\) = -0.91, \emph{SE} = 0.18, \emph{t} = -5.15,
-\emph{p} \textless{} 0.001; Figure 4B).
+site, category, number of images, and site-by-category interaction as
+well as random intercepts for individual children. After correcting for
+multiple comparisons, we found a significant main effect of the
+synthetic object category (\(\beta\) = 0.39, \emph{SE} = 0.09, \emph{t}
+= 4.42, \emph{p} \textless{} 0.001) and a significant site-by-synthetic
+interaction (\(\beta\) = 0.37, \emph{SE} = 0.12, \emph{t} = 2.98,
+\emph{p} = 0.056) such that children handled more unique synthetic
+objects per hour than objects from other categories, and this effect was
+stronger for Tseltal children than for Rossel children. Additionally, we
+found negative main effects for the toy (\(\beta\) = -0.45, \emph{SE} =
+0.14, \emph{t} = -3.34, \emph{p} = 0.017) and work tool (\(\beta\) =
+-0.73, \emph{SE} = 0.19, \emph{t} = -3.92, \emph{p} = 0.002) categories,
+indicating that children handled fewer unique objects from these
+categories per hour. Finally, a significant main effect of the immovable
+object category (\(\beta\) = 0.46, \emph{SE} = 0.11, \emph{t} = 4.01,
+\emph{p} = 0.001) and site-by-immovable interaction (\(\beta\) = -0.88,
+\emph{SE} = 0.18, \emph{t} = -4.96, \emph{p} \textless{} 0.001) revealed
+that children handled more unique immovable objects per hour than
+objects from other categories, and this effect was stronger for Rossel
+children than for Tseltal children (Figure 4B).
 
 \hypertarget{effects-of-age}{%
 \subsection{Effects of age}\label{effects-of-age}}
@@ -449,8 +473,8 @@ children. (\(\beta\) = -0.91, \emph{SE} = 0.18, \emph{t} = -5.15,
 The frequency of object categories was largely stable over age (Figure
 5). The only exception was a decreasing proportion of synthetic object
 handling across developmental time for children in both sites (\(\beta\)
-= -0.01, 0, \emph{SE} = 0, 0, \emph{t} = -3.13, -3.17, \emph{p} = 0.003,
-0.002). {[}explain that this is driven by the fact that synthetic
+= -0.01, 0, \emph{SE} = 0, 0, \emph{t} = -2.28, -2.52, \emph{p} = 0.026,
+0.014). {[}explain that this is driven by the fact that synthetic
 objects are the most common and younger kids handle fewer objects{]}.
 Thus, the broad composition of handled objects did not change
 significantly as a function of age.
@@ -469,9 +493,9 @@ significantly as a function of age.
 However, children's overall \emph{rate} of object handling increased
 significantly with age (Figure 6A). That is, older children handled more
 unique objects per hour (\(\beta\) = 0.11, \emph{SE} = 0.03, \emph{t} =
-3.29, \emph{p} = 0.002). Additionally, with increasing age, children
+3.18, \emph{p} = 0.002). Additionally, with increasing age, children
 handled more objects from different categories per hour (Figure 6B;
-\(\beta\) = 0.05, \emph{SE} = 0.01, \emph{t} = 4.21, \emph{p} = 0).
+\(\beta\) = 0.05, \emph{SE} = 0.01, \emph{t} = 4.14, \emph{p} = 0).
 These effects were consistent across sites; we found no main effects of
 site or interactions between site and age (all \emph{p}s \textgreater{}
 0.05).
@@ -483,15 +507,15 @@ of transitions per hour (i.e., number of transitions divided by the
 number of possible objects or categories for the hour) as a function of
 age and site, plus their interaction. We found no overall age-related
 increase in object transitions (\(\beta\) = 0.01, \emph{SE} = 0,
-\emph{t} = 1.52, \emph{p} = 0.134). However, there was a significant
-main effect of site (\(\beta\) = -0.46, \emph{SE} = 0.14, \emph{t} =
--3.29, \emph{p} = 0.002) as well as a site-by-age interaction (\(\beta\)
-= 0.01, \emph{SE} = 0.01, \emph{t} = 2.53, \emph{p} = 0.014) such that
+\emph{t} = 1.43, \emph{p} = 0.157). However, there was a significant
+main effect of site (\(\beta\) = -0.44, \emph{SE} = 0.14, \emph{t} =
+-3.26, \emph{p} = 0.002) as well as a site-by-age interaction (\(\beta\)
+= 0.01, \emph{SE} = 0, \emph{t} = 2.56, \emph{p} = 0.013) such that
 Tseltal children made fewer transitions between objects per hour than
 Rossel children but showed a steeper increase across age (Figure 6C). At
 the category level, we found that, with increasing age, children made
 significantly more transitions between object categories per hour
-(\(\beta\) = 0.02, \emph{SE} = 0.01, \emph{t} = 1.87, \emph{p} = 0.065),
+(\(\beta\) = 0.01, \emph{SE} = 0.01, \emph{t} = 1.77, \emph{p} = 0.08),
 with no detectable differences across sites (Figure 6D).
 
 \begin{CodeChunk}

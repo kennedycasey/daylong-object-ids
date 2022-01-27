@@ -57,6 +57,7 @@ library(cowplot)
 library(ggpubr)
 library(ggeffects)
 library(xtable)
+library(kableExtra)
 ```
 
 ```{r, data-prep}
@@ -204,9 +205,7 @@ XX% of photo streams were double coded. Reliability annotations were equally spr
 ```{r, top-objects, results = "asis"}
 # compute the objects that most often appear 1+ times across children w/i sites
 # use this to find the top 3 items per category per site
-# create a table displaying these top items
 top.objects.bycategory <- data %>%
-  mutate(object = str_remove(object, "misc ")) %>%
   filter(object %notin% study.related) %>%
   select(site, category, object, sub_num) %>%
   distinct() %>%
@@ -225,15 +224,32 @@ top.objects.bycategory <- data %>%
   filter(rank %in% 1:3) %>%
   select(-n.children, -prop.children) %>%
   pivot_wider(names_from = "rank", values_from = "object") %>%
-  mutate(objects = paste0(`1`, ", ", `2`, ", ", `3`)) %>%
+  mutate(objects = paste0(`1`, ", ", `2`, ", ", `3`), 
+         objects = str_remove(objects, "-M|-W")) %>%
   select(category, objects, site) %>%
   group_by(category) %>%
-  pivot_wider(names_from = "site", values_from = "objects") %>%
-  rename(`Object Category` = category)
+  pivot_wider(names_from = "site", values_from = "objects")
+  
+# compute number of objects in each category across sites
+category.counts <- data %>%
+  group_by(category, site) %>%
+  summarize(n.objects = length(unique(object))) %>%
+  pivot_wider(names_from = "site", values_from = "n.objects")
 
-top.objects.tbl <- xtable(top.objects.bycategory, caption = "Non-study-related objects handled by the most children across categories and sites.", label = "tab:top-objects")
+# combine and do some formatting to create table
+tbl <- bind_cols(category.counts, top.objects.bycategory) %>%
+  select(category...1, Rossel...2, Rossel...5, Tseltal...3, Tseltal...6)
 
-print(top.objects.tbl, type = "latex", comment = FALSE, table.placement = "!ht", scalebox = 0.65, include.rownames = FALSE)
+colnames(tbl) <- c("Object Category", "N", "Top objects", "N", "Top objects")
+
+xtable::xtable(tbl,
+               row.names = FALSE,
+               label = "tab:tab1",
+               caption = "Unique object counts and top non-study-related objects for each category across sites.") %>%
+    xtable2kable(booktabs = TRUE, escape = FALSE, row.names = NA) %>%
+    kable_styling(latex_options = "scale_down") %>%
+    add_header_above(c(" " = 2, "Rossel" = 2, "Tseltal" = 2), align = "c", bold = TRUE) %>%
+  row_spec(0, bold = TRUE)
 ```
 
 # Results

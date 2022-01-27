@@ -174,7 +174,7 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 082457.gif,leafy green,NA,KC,0,0,0,NA,5348
 082512.gif,leafy green,NA,KC,0,0,0,NA,5348
 083238.gif,NA,NA,MC,0,0,0,Synthetic,5348
-083326.gif,knife,NA,KC,0,0,0,NA,5348
+083326.gif,knife-W,NA,KC,0,0,0,NA,5348
 083343.gif,NA,NA,KC,1,0,0,Synthetic,5348
 083619.gif,NA,NA,KC,0,1,0,NA,5348
 083634.gif,camera,NA,KC,0,0,0,NA,5348
@@ -298,7 +298,7 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 20160822_144219_000.gif,"container lid, crate",NA,KC,0,0,0,NA,7333
 20160822_091255_000.gif,taro,NA,MC,0,0,0,NA,4830
 20160822_130240_000.gif,manioc,NA,MC,0,0,0,NA,5797
-062016.gif,knife,NA,KC,0,0,0,NA,7849
+062016.gif,knife-M,NA,KC,0,0,0,NA,7849
 062031.gif,sugarcane,NA,MC,0,0,0,NA,7849
 062048.gif,sugarcane,NA,MC,0,0,0,NA,7849
 063957.gif,NA,NA,MC,0,0,1,NA,7849
@@ -800,7 +800,7 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 224507.gif,NA,NA,KC,0,0,1,Synthetic,7959
 224538.gif,NA,NA,KC,0,0,1,Synthetic,7959
 230129.gif,NA,NA,KC,0,0,1,Synthetic,7959
-231932.gif,knife,NA,KC,0,0,0,NA,7959
+231932.gif,knife-W,NA,KC,0,0,0,NA,7959
 232003.gif,stick,NA,KC,0,0,0,NA,7959
 143113.gif,NA,NA,KC,0,1,0,NA,4856
 153253.gif,shoe,not sure what black object is,KC,0,0,0,NA,4856
@@ -1390,11 +1390,11 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 102743.gif,weaving grass,NA,KC,0,0,0,NA,2195
 103705.gif,table,NA,KC,0,0,0,NA,2195
 104330.gif,NA,NA,MC,0,0,1,NA,2195
-104503.gif,"sugarcane, knife",NA,MC,0,0,0,NA,2195
-104522.gif,"sugarcane, knife",NA,MC,0,0,0,NA,2195
-104537.gif,"sugarcane, knife",NA,MC,0,0,0,NA,2195
-104552.gif,"sugarcane, knife",NA,MC,0,0,0,NA,2195
-104609.gif,"sugarcane, knife",NA,MC,0,0,0,NA,2195
+104503.gif,"sugarcane, knife-M",NA,MC/KC,0,0,0,NA,2195
+104522.gif,"sugarcane, knife-M",NA,MC/KC,0,0,0,NA,2195
+104537.gif,"sugarcane, knife-M",NA,MC/KC,0,0,0,NA,2195
+104552.gif,"sugarcane, knife-M",NA,MC/KC,0,0,0,NA,2195
+104609.gif,"sugarcane, knife-M",NA,MC/KC,0,0,0,NA,2195
 104639.gif,NA,NA,MC,0,0,0,NA,2195
 111202.gif,coconut scraper,NA,MC,0,0,0,NA,2195
 111234.gif,coconut scraper,NA,MC,0,0,0,NA,2195
@@ -1430,7 +1430,7 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 125146.gif,hammock,NA,MC,0,0,0,NA,2195
 130045.gif,leaf,NA,MC,0,0,0,NA,2195
 130418.gif,house pile,NA,MC,0,0,0,NA,2195
-130844.gif,knife,NA,MC,0,0,0,NA,2195
+130844.gif,knife-M,NA,MC/KC,0,0,0,NA,2195
 130932.gif,veranda,NA,MC,0,0,0,NA,2195
 131051.gif,NA,NA,MC,0,0,1,Synthetic,2195
 131153.gif,NA,NA,MC,0,0,1,NA,2195
@@ -1636,7 +1636,7 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 105746.gif,veranda,NA,MC,0,0,0,NA,3124
 122633.gif,veranda,NA,MC,0,0,0,NA,3124
 123436.gif,table,NA,KC,0,0,0,NA,3124
-123451.gif,knife,NA,MC,0,0,0,NA,3124
+123451.gif,knife-W,NA,MC/KC,0,0,0,NA,3124
 123524.gif,table,NA,KC,0,0,0,NA,3124
 132611.gif,NA,NA,MC,0,0,1,Food,3124
 132716.gif,stairs,NA,MC,0,0,0,NA,3124

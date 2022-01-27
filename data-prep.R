@@ -27,7 +27,24 @@ raw.data <- annotations %>%
   mutate(exclusion = ifelse(exclusion.val == 1, exclusion, NA)) %>%
   select(sub_num, Image, Object, exclusion) %>%
   distinct()
-         
+
+
+# get knife categories ----------------------------------------------------
+knife.categories <- annotations %>%
+  filter(str_detect(Object, "knife"))
+  # check to make sure there's no image with both categories
+  # filter(ToolMealtime == 1 & ToolWork == 1)
+
+m.knife.images <- knife.categories %>%
+  filter(ToolMealtime == 1) %>%
+  mutate(exact.image = paste0(sub_num, "/", Image)) %>%
+  pull(exact.image)
+
+w.knife.images <- knife.categories %>%
+  filter(ToolWork == 1) %>%
+  mutate(exact.image = paste0(sub_num, "/", Image)) %>%
+  pull(exact.image)
+
 # replace unsure objects --------------------------------------------------
 # read in manually checked unsure objects
 unsure <- read_csv("data/manual-checks/unsure-objects.csv") %>%
@@ -139,7 +156,6 @@ data.w.labels <- data.w.objects %>%
   mutate(object = trimws(object)) %>%
   select(sub_num, Image, exclusion, object)
 
-
 # add corrections ---------------------------------------------------------
 corrections <- read_csv("data/manual-checks/corrections.csv") %>%
   mutate(from.corrections = 1) %>%
@@ -171,6 +187,13 @@ data.w.corrections <- data.pre.correction %>%
   mutate(object = trimws(object)) %>%
   select(sub_num, Image, exclusion, object)
 
+# add labels to distinguish mealtime knifes vs. working tools
+data.w.corrections <- data.w.corrections %>%
+  mutate(exact.image = paste0(sub_num, "/", Image), 
+         object = ifelse(exact.image %in% m.knife.images, "knife-M", 
+                             ifelse(exact.image %in% w.knife.images, "knife-W", 
+                             object)))
+  
 # determine if there are any objects that need categories
 # if there are, write csv file with only these objects
 categorized <- read_csv("data/manual-checks/categories.csv") %>%
@@ -210,5 +233,4 @@ data.to.export <- data.w.categories %>%
          timestamp = TimestampHMS) %>%
   select(site, sub_num, age, sex, image, exclusion, category, object, timestamp, duration) %>%
   distinct()
-
 write_csv(data.to.export, "data/all-data.csv")

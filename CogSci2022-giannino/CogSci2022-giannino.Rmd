@@ -82,8 +82,8 @@ categories <- c("Food", "Synthetic", "Toy", "Natural",
                 "Work Tool")
 
 category.labels <- c("Food", "Synthetic", "Toy", "Natural",
-                "Clothing", "Tool-Meal", "Immovable", 
-                "Tool-Work")
+                "Clothing", "Tool-M", "Immovable", 
+                "Tool-W")
 
 
 # rm excluded photos + set other variable info
@@ -135,8 +135,37 @@ Using daylong photo streams from child-worn cameras, we analyze object handling 
 Our findings reveal relative consistency in the broad composition of objects handled by children, both between sites and across age, with a few important exceptions: a greater diversity of synthetic objects per hour for Tseltal children (e.g., relating to greater market integration), more time spent with immovable objects for Rossel children (e.g., relating to socializing time on/near household verandas), and a greater diversity of held objects with developmental age. We discuss open questions and potential implications of these findings for early word learning.
 
 # Method
+```{r, exclusions}
+# get total number of images before exclusion
+total.coded <- raw.data %>%
+  select(sub_num, image) %>%
+  distinct() %>%
+  nrow()
+
+# get total number of images after exclusion
+total.included <- data %>%
+  select(sub_num, image) %>%
+  distinct() %>%
+  nrow()
+
+# get exclusion counts and percentages
+exclusions <- raw.data %>%
+  filter(!is.na(exclusion)) %>%
+  select(sub_num, image, exclusion) %>%
+  distinct() %>%
+  group_by(sub_num, image) %>%
+  mutate(exclusion = paste0(exclusion, collapse = ","), 
+         exclusion = ifelse(exclusion == "None,Exclude", "None", exclusion)) %>%
+  distinct() %>%
+  group_by(exclusion) %>%
+  summarize(count = n()) %>%
+  ungroup() %>%
+  mutate(percent = round(count/total.coded * 100, 2)) %>%
+  pivot_wider(names_from = "exclusion", values_from = c("count", "percent"))
+```
+
 ## Corpus
-Daylong photo streams consisted of images captured approximately every 15 (Rossel) to 30 (Tseltal) seconds over the course of, typically, 8 (Rossel) to 9 (Tseltal) waking hours at home. Children wore a recording vest equipped with a camera (Narrative Clip 1) and miniature fisheye lens (Photojojo Super Fisheye) that provided a 180$\text{\textdegree}$ view of the environment. For younger infants who were not yet walking, the camera was instead worn by the primary caregiver. Previously, 83 daylong photo streams (113668 photos) had been comprehensively manually annotated for the presence or absence of child object handling [@casillasURdaylong]; we further annotate and analyze the subset of `r raw.data %>% select(sub_num, image) %>% distinct %>% nrow()` with object handling in the present study.
+Daylong photo streams consisted of images captured approximately every 15 (Rossel) to 30 (Tseltal) seconds over the course of 8 (Rossel) to 9 (Tseltal) waking hours at home. Children wore a recording vest equipped with a camera (Narrative Clip 1) and miniature fisheye lens (Photojojo Super Fisheye) that provided a 180$\text{\textdegree}$ view of the environment. For younger infants who were not yet walking, the camera was instead worn by the primary caregiver. Previously, 83 daylong photo streams (113668 photos) had been comprehensively manually annotated for the presence or absence of child object handling [@casillasURdaylong]. Here, we further annotate and analyze the subset of `r total.coded` with object handling in the present study.
 
 ```{r, demo}
 # create tibbles with basic descriptive stats of kid demographics and # images
@@ -172,27 +201,8 @@ grid::grid.raster(examples)
 ## Manual annotation
 Photos were annotated with IMCO [version 2.0, @casey2022imco], an open-source Python program adapted for efficient coding of photo streams. Annotators provided labels for the handled object(s) present in each photo (e.g., "twig") and selected among predefined categories to characterize each type of object (e.g., "natural object"). Categories included food, tools, toys, immovable objects (e.g., furniture and housing structures), natural objects, and miscellaneous synthetic objects (see Figure 1 for example images and Table \ref{tab:top-objects} for example objects from each category).
 
-```{r, exclusions}
-# get total number of images before exclusion
-total.images <- raw.data %>%
-  select(sub_num, image) %>%
-  distinct() %>%
-  nrow()
-
-# get exclusion counts and percentages
-exclusions <- raw.data %>%
-  select(sub_num, image, exclusion) %>%
-  distinct() %>%
-  group_by(exclusion) %>%
-  summarize(count = n()) %>%
-  ungroup() %>%
-  mutate(total = total.images, 
-         percent = round(count/total * 100, 2)) %>%
-  pivot_wider(names_from = "exclusion", values_from = c("count", "percent"))
-```
-
 ## Data preparation and reliability
-Images were excluded if they were too dark, bright, blurry, or covered for annotators to identify handled objects (`r exclusions$count_Exclude` images, `r exclusions$percent_Exclude`% of the data set), if annotators were otherwise unsure about what objects were being handled (`r exclusions$count_Unsure`, or `r exclusions$percent_Unsure`%), if there was no handled object (`r exclusions$count_None`, or `r exclusions$percent_None`%). To avoid unnecessary data loss, all excluded photos were checked by at least one other annotator and re-included for analysis if objects were identifiable. In total, `r total.images` images were deemed usable by annotators (`r data %>% filter(site == "Rossel") %>% select(sub_num, image) %>% distinct() %>% nrow()` for Rossel, `r data %>% filter(site == "Tseltal") %>% select(sub_num, image) %>% distinct() %>% nrow()` for Tseltal) [numbers don't add up, need to figure out where the extra 6 images are coming from].
+Images were excluded if they were too dark, bright, blurry, or covered for annotators to identify handled objects (`r exclusions$count_Exclude` images, `r exclusions$percent_Exclude`% of the data set), if annotators were otherwise unsure about what objects were being handled (`r exclusions$count_Unsure`, or `r exclusions$percent_Unsure`%), if there was no handled object (`r exclusions$count_None`, or `r exclusions$percent_None`%), or if the researcher was still present (`r exclusions$count_Experimenter`, or `r exclusions$percent_Experimenter`%). To avoid unnecessary data loss, all excluded photos were checked by at least one other annotator and re-included for analysis if objects were identifiable. In total, `r total.included` images were deemed usable by annotators (`r data %>% filter(site == "Rossel") %>% select(sub_num, image) %>% distinct() %>% nrow()` for Rossel, `r data %>% filter(site == "Tseltal") %>% select(sub_num, image) %>% distinct() %>% nrow()` for Tseltal).
 
 XX% of photo streams were double coded. Reliability annotations were equally spread across sites and ages and included a total of XXXX images. At the category level, annotators agreed on XX.X% of decisions (Rossel: XX.X%, Tseltal: XX.X%). At the object label level, annotators agreed on XX.X% of decisions (Rossel: XX.X%, Tseltal: XX.X%).
 
@@ -534,13 +544,13 @@ p1 <- ggplot() +
                               ymax = (mean + se)*100, group = site),
                 position = position_dodge(width = 0.75), 
                 width = 0.25, size = 0.5, color = "black") +
-  annotate(geom = "text", label = "*", x = "Immovable", y = 35, size = 5) +
+  annotate(geom = "text", label = "*", x = "Immovable", y = 35, size = 6) +
   scale_color_manual(values = site.colors) +
   scale_fill_manual(values = site.colors) +
   scale_x_discrete(labels = category.labels) + 
   labs(x = "Object Categories", y = "% Handling",
        color = "Site", fill = "Site", tag = "A") +
-  theme_classic(base_size = 8) +
+  theme_classic(base_size = 6) +
   theme(axis.title.x = element_blank())
 
 # format so that only 1 legend appears at the bottom of the combined plot
@@ -557,13 +567,13 @@ p2 <- ggplot(hourly.objects.bycategory,
     dodge.width = 0.75, jitter.width = 0.1), size = 0.5, alpha = 0.5) +
   geom_boxplot(width = 0.75, outlier.shape = NA,
                alpha = 0.5, color = "black") +
-  annotate(geom = "text", label = "*", x = "Immovable", y = 5, size = 5) +
+  annotate(geom = "text", label = "*", x = "Immovable", y = 5, size = 6) +
   scale_color_manual(values = site.colors) + 
   scale_fill_manual(values = site.colors) +
   scale_x_discrete(labels = category.labels) + 
   labs(x = "Object Categories", y = "Unique Objects/Hour",
        color = "Site", fill = "Site", tag = "B") +
-  theme_classic(base_size = 8) +
+  theme_classic(base_size = 6) +
   theme(legend.position = "none", plot.tag = element_text(face = "bold"))
 
 # combine plots and do some formatting

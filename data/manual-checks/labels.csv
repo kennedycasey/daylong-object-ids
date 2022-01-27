@@ -21,7 +21,7 @@ canoe,1,canoe,0,0,KC,
 canola oil,1,canola oil,0,1,KC,
 cardboard medicene packaging,1,NA,0,1,KC,added to corrections.csv
 cardboard packaging,1,cardboard packaging,0,1,KC,"food-related, box"
-cardborad packaging,1,NA,NA,NA,NA,
+cardborad packaging,1,cardboard packaging,NA,NA,NA,
 cardbord packaging,1,NA,0,0,KC,added to corrections.csv
 cellphone,1,phone,0,0,KC,
 cement floor,1,NA,NA,NA,NA,
@@ -95,7 +95,7 @@ plastic crate,1,crate,0,0,KC,
 plastic food packaging,1,packaged snack,0,1,KC,
 plastic plate,1,plate,0,1,KC,
 plastic work tool,1,plastic tubing,0,1,KC,
-plat pot,1,toy plot,0,0,KC,
+plat pot,1,plant pot,0,0,KC,
 play mat,1,child play mat,0,1,KC,
 princess bag,1,princess bag,0,1,KC,unsure what the function is but definitely toy
 processed wooden slats,1,wood slat,0,1,KC,

@@ -266,4 +266,33 @@ data.to.export <- data.w.exclusions %>%
          category = ifelse(!is.na(exclusion), NA, category)) %>%
   distinct()
 
-write_csv(data.to.export, "data/all-data.csv")
+Dirs <- read_csv("../ImCo-secure-data-prep/secure-metadata.csv") %>%
+  rename(sub_num = public_id, 
+         Dir = chatterlab_id)
+
+data.to.export %>%
+  left_join(Dirs, by = "sub_num") %>%
+  filter(object == "paper towel") %>%
+  mutate(check = paste0("open ", Dir, "/", image)) %>%
+  pull(check) %>%
+  unique() 
+
+data.to.export %>%
+  left_join(Dirs, by = "sub_num") %>%
+  filter(object == "clothing") %>%
+  mutate(check = paste0("images/", Dir, "/", image)) %>%
+  distinct() %>%
+  select(check) %>%
+  write.table("../manual-checks/specific-objects/objects-to-check.txt", sep = "\t", 
+              row.names = FALSE, col.names = FALSE, 
+              quote = FALSE)
+
+data.to.export %>%
+  left_join(Dirs, by = "sub_num") %>%
+  filter(object == "clothing") %>%
+  mutate(check = paste0("images/", Dir, "/", image)) %>%
+  distinct() %>%
+  select(sub_num, image) %>%
+  write_csv("../manual-checks/specific-objects/objects-to-check.csv")
+
+write_csv(data.to.export, "../manual-checks/data/all-data.csv")

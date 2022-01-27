@@ -28,7 +28,6 @@ raw.data <- annotations %>%
   select(sub_num, Image, Object, exclusion) %>%
   distinct()
 
-
 # get knife categories ----------------------------------------------------
 knife.categories <- annotations %>%
   filter(str_detect(Object, "knife"))
@@ -61,6 +60,7 @@ data.w.unsure <- raw.data %>%
   mutate(Object = ifelse(!is.na(from.unsure), object.corrected, Object), 
          exclusion = ifelse(!is.na(from.unsure), exclusion.corrected, exclusion)) %>%
   select(-ends_with("corrected"), -from.unsure) %>%
+  mutate(Object = ifelse(!is.na(exclusion), NA, Object)) %>%
   distinct()
 
 checked.unsure <- read_csv("data/manual-checks/unsure-objects.csv") %>%
@@ -89,6 +89,7 @@ data.w.immovable <- data.w.unsure %>%
                          object.corrected, Object), 
          exclusion = ifelse(!is.na(from.immovable), exclusion.corrected, exclusion)) %>%
   select(-ends_with("corrected"), -from.immovable) %>%
+  mutate(Object = ifelse(!is.na(exclusion), NA, Object)) %>%
   distinct()
 
 # replace originally excluded images --------------------------------------
@@ -105,6 +106,7 @@ data.w.none <- data.w.immovable %>%
   mutate(Object = ifelse(!is.na(from.none), object.corrected, Object), 
          exclusion = ifelse(!is.na(from.none), exclusion.corrected, exclusion)) %>%
   select(-ends_with("corrected"), -from.none) %>%
+  mutate(Object = ifelse(!is.na(exclusion), NA, Object)) %>%
   distinct()
 
 checked.none <- read_csv("data/manual-checks/no-objects.csv") %>%
@@ -128,7 +130,9 @@ data.w.objects <- data.w.none %>%
   separate(Object, c("Object1", "Object2", "Object3"), ",") %>%
   mutate(across(starts_with("Object"), ~ trimws(.))) %>%
   pivot_longer(starts_with("Object"), names_to = "object.num", values_to = "Object") %>%
-  filter(!is.na(Object) | !is.na(exclusion))
+  filter(!is.na(Object) | !is.na(exclusion)) %>%
+  mutate(Object = ifelse(!is.na(exclusion), NA, Object)) %>%
+  distinct()
 
 regularized <- read_csv("data/manual-checks/labels.csv") %>%
   pull(Object) %>%
@@ -157,7 +161,9 @@ data.w.labels <- data.w.objects %>%
   filter(!is.na(object2) | !is.na(exclusion)) %>%
   rename(object = object2) %>%
   mutate(object = trimws(object)) %>%
-  select(sub_num, Image, exclusion, object)
+  select(sub_num, Image, exclusion, object) %>%
+  mutate(object = ifelse(!is.na(exclusion), NA, object)) %>%
+  distinct()
 
 # add corrections ---------------------------------------------------------
 corrections <- read_csv("data/manual-checks/corrections.csv") %>%
@@ -189,6 +195,7 @@ data.w.corrections <- data.pre.correction %>%
   rename(object = object2) %>%
   mutate(object = trimws(object)) %>%
   select(sub_num, Image, exclusion, object) %>%
+  mutate(object = ifelse(!is.na(exclusion), NA, object)) %>%
   distinct()
 
 # add labels to distinguish mealtime knifes vs. working tools
@@ -222,21 +229,40 @@ categories <- read_csv("data/manual-checks/categories2.csv")
 data.w.categories <- data.w.corrections %>%
   left_join(categories, by = "object") %>%
   select(sub_num, Image, exclusion, category, object) %>%
+  mutate(object = ifelse(!is.na(exclusion), NA, object), 
+         category = ifelse(!is.na(exclusion), NA, category)) %>%
   distinct() 
+
+# correct for multiple exclusion reasons ----------------------------------
+multiple.exclusion.images <- data.w.categories %>%
+  filter(!is.na(exclusion)) %>%
+  select(sub_num, Image, exclusion) %>%
+  distinct() %>%
+  group_by(sub_num, Image) %>%
+  filter(length(unique(exclusion)) > 1) %>%
+  mutate(exact.image = paste0(sub_num, "/", Image)) %>%
+  pull(exact.image) %>%
+  unique()
+
+data.w.exclusions <- data.w.categories %>%
+  mutate(exact.image = paste0(sub_num, "/", Image), 
+         exclusion = ifelse(exact.image %in% multiple.exclusion.images, 
+                            "None", exclusion)) %>%
+  distinct()
 
 # export clean data -------------------------------------------------------
 # randomly select rec for kids with 2 recs -> hard code until we have all annotations
 p1.exclude <- 7959 #output of sample(c(7959, 4856), 1)
 p2.exclude <- 5499 #output of sample(c(4590, 5499), 1)
 
-data.to.export <- data.w.categories %>%
+data.to.export <- data.w.exclusions %>%
   left_join(participants, by = "sub_num") %>%
   left_join(durations, by = c("sub_num", "Image")) %>%
   filter(sub_num != p1.exclude & sub_num != p2.exclude) %>%
   rename(image = Image, 
          timestamp = TimestampHMS) %>%
   select(site, sub_num, age, sex, image, exclusion, category, object, timestamp, duration) %>%
-  mutate(category = ifelse(!is.na(exclusion), NA, category), 
-         object = ifelse(!is.na(exclusion), NA, object)) %>%
+  mutate(object = ifelse(!is.na(exclusion), NA, object), 
+         category = ifelse(!is.na(exclusion), NA, category)) %>%
   distinct()
 write_csv(data.to.export, "data/all-data.csv")

@@ -211,7 +211,7 @@ toy lamb,2,toy lamb,0,0,KC,
 trash basket,2,NA,0,1,KC,added to corrections.csv
 trash bin,2,trash bin,0,1,KC,
 vick's vaporub,2,vick's vapor rub,0,1,KC,
-water bottle lid,2,reusable water bottle lid,0,1,KC,
+water bottle lid,2,reusable water bottle,0,1,KC,
 weight,2,NA,0,1,KC,
 white bucket,2,bucket,0,0,KC,
 white cup,2,cup,0,1,KC,
@@ -236,7 +236,7 @@ blue shirt,3,shirt,0,0,KC,
 branches,3,NA,0,1,KC,"switched to firewood/plant, added to corrections.csv"
 bubbles,3,bubbles,0,0,KC,
 coin bag,3,coin bag,0,1,KC,
-drink in a white mug,3,mug,0,1,KC,
+drink in a white mug,3,cup,0,1,KC,
 dvd disk,3,CD,0,1,KC,
 egg,3,egg,0,0,KC,
 feather duster,3,feather duster,0,0,KC,
@@ -256,7 +256,7 @@ medicine dropper bottle,3,medicine bottle,0,0,KC,
 metal door,3,door,0,1,KC,
 metal pole,3,NA,0,1,KC,added to corrections.csv
 metal stool,3,table,0,1,KC,
-mug with beverage,3,mug,0,1,KC,
+mug with beverage,3,cup,0,1,KC,
 neon green mop,3,mop,0,0,KC,
 orange plastic spring,3,plastic tubing,0,1,KC,
 pacifier,3,pacifier,1,1,KC,could be another synthetic object/toy
@@ -308,7 +308,7 @@ stuffed holiday animal,4,stuffed holiday animal,0,0,KC,
 tootpaste tube,4,toothpaste,0,0,KC,
 waterbottle strap,4,water bottle carrier,0,0,KC,
 wheelbarrow,4,wheelbarrow,0,0,KC,
-white mug,4,mug,0,0,KC,
+white mug,4,cup,0,0,KC,
 wood fragment,4,NA,NA,NA,NA,
 wooden block,4,wood slat,0,1,KC,
 wooden stake,4,NA,0,1,KC,added to corrections.csv
@@ -438,7 +438,7 @@ cut up plastic bottle,8,cut up plastic bottle,1,1,KC,seems to be shaped into a f
 food on skewer,8,"skewer, seafood",0,1,KC,
 net/hammock,8,hammock,0,1,KC,
 orange bucket,8,bucket,0,0,KC,
-paper towel,8,paper towel,0,0,KC,
+paper towel,8,roll of paper towels,0,1,KC,confirmed that this is different from napkin
 passion fruit,8,passionfruit,0,0,KC,
 roofing,8,roofing,0,0,KC,
 sling,8,baby sling,0,0,KC,
@@ -497,7 +497,7 @@ large plastic bin,12,large plastic bin,1,1,KC,possibly a better label
 lunchbox,12,lunchbox,0,0,KC,
 mirror,12,mirror,0,0,KC,
 notebook,12,notebook,0,0,KC,
-package,12,NA,NA,NA,NA,
+package,12,NA,TO DO,TO DO,TO DO,
 pink toy,12,NA,0,1,KC,added to corrections.csv
 plastic chair,12,chair,0,0,KC,
 plastic sheet,12,plastic sheet,1,0,KC,maybe a better label but different from everything else
@@ -564,7 +564,7 @@ toy sink,17,toy sink,0,0,KC,
 bag?,18,NA,0,1,KC,added to corrections.csv
 chick,18,chick,0,0,KC,
 coconut scraper,18,coconut scraper,0,0,KC,
-commercial fishing misc,18,commercial fishing fragment,0,1,KC,
+commercial fishing misc,18,fishing debris,0,1,KC,
 green food,18,NA,0,1,KC,added to corrections.csv
 misc tool,18,weaving tool,1,1,KC,MC check
 pill packaging,18,pill package,0,0,KC,
@@ -572,7 +572,7 @@ purple flower,18,flower,0,0,KC,
 rattle,18,rattle,0,1,KC,better label?
 seed,18,seed,0,1,KC,switched one to nut
 shovel,18,shovel,0,0,KC,
-sieve,18,sieve,0,1,KC,
+sieve,18,strainer,0,1,KC,
 spoon with food,18,spoon,0,1,KC,probably bean soup but too dark to identify
 sticks,18,stick,0,0,KC,
 super noodles package,18,noodles,0,0,KC,
@@ -653,10 +653,10 @@ swing,33,swing,0,0,KC,
 betel nut,34,betelnut,0,0,KC,
 leaves,34,leaf,0,0,KC,
 pen,34,pen,0,0,KC,
-rolled up leaf,34,rolled leaf,1,1,KC,better label?
+rolled up leaf,34,leaf,1,1,KC,better label?
 tassel,34,tassel,0,0,KC,
 burlap,35,burlap,0,0,KC,
-mug,35,mug,0,0,KC,
+mug,35,cup,0,0,KC,
 plate,35,plate,0,0,KC,
 barrel,36,barrel,0,0,KC,
 bench seat,36,bench,1,0,KC,MC check
@@ -668,28 +668,28 @@ slingshot,36,slingshot,0,0,KC,
 container lid,37,container lid,0,0,KC,
 plastic basket,37,plastic basket,0,0,KC,
 plastic packaging,37,plastic packaging,1,1,KC,differentiate food vs. other types of packaging?
-box,38,box,TO DO,TO DO,TO DO,
+box,38,NA,0,1,KC,added to corrections.csv
 dress,38,dress,0,0,KC,
 mats,38,mats,0,0,KC,
 rice puff,38,chips,0,0,KC,
-clothing,39,clothing,TO DO,TO DO,TO DO,
+clothing,39,fabric,0,1,KC,currently just calling unidentified clothing fabric to be more conservative in estimating unique objects
 packaged snack,39,packaged snack,TO DO,TO DO,TO DO,
 pot,40,pot,0,0,KC,
 stuffed bunny,40,stuffed animal bunny,0,0,KC,
-fabric,41,fabric,TO DO,TO DO,TO DO,
+fabric,41,fabric,0,1,KC,"switched a few to purse, possibly some finer-grained distinctions here but remaining left as fabric for now"
 mango,41,mango,0,0,KC,
 mat,41,mat ,0,0,KC,
 processed wooden stick,41,stick,TO DO,TO DO,TO DO,
 rice ball,41,rice ball,0,0,KC,
 metal fragment,42,metal fragment,TO DO,TO DO,TO DO,
-misc toy,42,toy,TO DO,TO DO,TO DO,
+misc toy,42,NA,0,1,KC,added to corrections.csv
 mumu'd tuber paste,42,mumu'd tuber paste,0,0,KC,
 pencil,42,pencil,0,0,KC,
 soap bar,42,soap,0,0,KC,
-wood slat,42,wood slat,TO DO,TO DO,TO DO,
-tree branch,43,tree,TO DO,TO DO,TO DO,
+wood slat,42,wood slat,0,1,KC,
+tree branch,43,NA,0,1,KC,added to corrections.csv
 masa,45,masa,0,0,KC,
-plate of food,45,"plate, food",TO DO,TO DO,TO DO,
+plate of food,45,NA,0,1,KC,added to corrections.csv
 bready sheet,46,bready sheet,0,0,KC,
 rambutan,46,rambutan,0,0,KC,
 rocks,46,rock,0,0,KC,
@@ -700,14 +700,14 @@ palm leaf,47,leaf,0,0,KC,
 apple,48,apple,0,0,KC,
 door,49,door,0,0,KC,
 hay,49,hay,0,0,KC,
-plastic rice bag,50,rice,TO DO,TO DO,TO DO,
-soda,50,soda,TO DO,TO DO,TO DO,
+plastic rice bag,50,NA,0,1,KC,added to corrections.csv
+soda,50,soda,0,1,KC,
 broom,51,broom,0,0,KC,
 taffy,51,candy,0,0,KC,
-wooden blocks,52,wood slat,TO DO,TO DO,TO DO,
+wooden blocks,52,wood slat,0,1,KC,"corrected one, note that this looks like construction debris too"
 cracker,53,cracker,0,0,KC,
 gas canister,55,gas canister,0,0,KC,
-net,55,hammock,TO DO,TO DO,TO DO,
+net,55,hammock,0,1,KC,switched some to fishnet and yarn
 comb,56,comb,0,0,KC,
 pear,56,pear,0,0,KC,
 breastmilk,57,milk,0,0,KC,
@@ -719,13 +719,13 @@ lime,59,lime,0,0,KC,
 baby bathtub,60,baby bathtub,0,0,KC,
 baked good,60,bread,TO DO,TO DO,TO DO,
 bean,63,bean,0,0,KC,
-bread,63,bread,TO DO,TO DO,TO DO,
+bread,63,bread,0,1,KC,
 marble,63,marble,0,0,KC,
 camera,64,camera,0,0,KC,
 house pile,65,house pile,0,0,KC,
 stuffed animal,66,stuffed animal,TO DO,TO DO,TO DO,
 wind up toy,66,wind up toy,0,0,KC,
-wooden stick,67,stick,TO DO,TO DO,TO DO,
+wooden stick,67,stick,0,1,KC,"switched a bunch to sugar cane, tongs, or tool in corrections.csv"
 water bottle,68,reusable water bottle,0,1,KC,"made distinctions between reusable water bottle (M), bottled water that's full/child is actively drinking (F), empty drink bottle (S), added to corrections.csv"
 bottle of milk,69,"baby bottle, milk",0,1,KC,
 beans,71,bean,0,0,KC,

@@ -277,9 +277,11 @@ data.to.export %>%
   pull(check) %>%
   unique() 
 
-data.to.export %>%
+write_csv(data.to.export, "../manual-checks/data/all-data.csv")
+
+data.w.none %>%
   left_join(Dirs, by = "sub_num") %>%
-  filter(object == "clothing") %>%
+  filter(object == "processed wooden stick") %>%
   mutate(check = paste0("images/", Dir, "/", image)) %>%
   distinct() %>%
   select(check) %>%
@@ -287,12 +289,10 @@ data.to.export %>%
               row.names = FALSE, col.names = FALSE, 
               quote = FALSE)
 
-data.to.export %>%
+data.w.none %>%
   left_join(Dirs, by = "sub_num") %>%
-  filter(object == "clothing") %>%
+  filter(object == "processed wooden stick") %>%
   mutate(check = paste0("images/", Dir, "/", image)) %>%
   distinct() %>%
   select(sub_num, image) %>%
   write_csv("../manual-checks/specific-objects/objects-to-check.csv")
-
-write_csv(data.to.export, "../manual-checks/data/all-data.csv")

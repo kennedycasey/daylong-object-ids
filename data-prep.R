@@ -58,9 +58,10 @@ unsure <- read_csv("data/manual-checks/unsure-objects.csv") %>%
 # merge with main annotations df and replace old values for corrected items
 data.w.unsure <- raw.data %>%
   left_join(unsure, by = c("sub_num", "Image")) %>%
-  mutate(Object = ifelse(!is.na(object.corrected) & !is.na(from.unsure), object.corrected, Object), 
+  mutate(Object = ifelse(!is.na(from.unsure), object.corrected, Object), 
          exclusion = ifelse(!is.na(from.unsure), exclusion.corrected, exclusion)) %>%
-  select(-ends_with("corrected"))
+  select(-ends_with("corrected"), -from.unsure) %>%
+  distinct()
 
 checked.unsure <- read_csv("data/manual-checks/unsure-objects.csv") %>%
   mutate(exact.image = paste0(sub_num, "/", Image)) %>%
@@ -84,10 +85,11 @@ immovable <- read_csv("data/manual-checks/immovable.csv") %>%
 # merge with main annotations df and replace old values for corrected items
 data.w.immovable <- data.w.unsure %>%
   left_join(immovable, by = c("sub_num", "Image")) %>%
-  mutate(Object = ifelse(!is.na(object.corrected) & !is.na(from.immovable), 
+  mutate(Object = ifelse(!is.na(from.immovable), 
                          object.corrected, Object), 
          exclusion = ifelse(!is.na(from.immovable), exclusion.corrected, exclusion)) %>%
-  select(-ends_with("corrected"))
+  select(-ends_with("corrected"), -from.immovable) %>%
+  distinct()
 
 # replace originally excluded images --------------------------------------
 # read in manually checked images with no objects
@@ -100,9 +102,10 @@ none <- read_csv("data/manual-checks/no-objects.csv") %>%
 # merge with main annotations df and replace if there was a held object
 data.w.none <- data.w.immovable %>%
   full_join(none, by = c("sub_num", "Image")) %>%
-  mutate(Object = ifelse(!is.na(object.corrected) & !is.na(from.none), object.corrected, Object), 
+  mutate(Object = ifelse(!is.na(from.none), object.corrected, Object), 
          exclusion = ifelse(!is.na(from.none), exclusion.corrected, exclusion)) %>%
-  select(-ends_with("corrected"), -from.none)
+  select(-ends_with("corrected"), -from.none) %>%
+  distinct()
 
 checked.none <- read_csv("data/manual-checks/no-objects.csv") %>%
   mutate(exact.image = paste0(sub_num, "/", Image)) %>%
@@ -125,7 +128,7 @@ data.w.objects <- data.w.none %>%
   separate(Object, c("Object1", "Object2", "Object3"), ",") %>%
   mutate(across(starts_with("Object"), ~ trimws(.))) %>%
   pivot_longer(starts_with("Object"), names_to = "object.num", values_to = "Object") %>%
-  filter(!is.na(Object)) 
+  filter(!is.na(Object) | !is.na(exclusion))
 
 regularized <- read_csv("data/manual-checks/labels.csv") %>%
   pull(Object) %>%
@@ -151,7 +154,7 @@ data.w.labels <- data.w.objects %>%
   separate(object, c("object1", "object2"), ",") %>%
   mutate(across(ends_with("1|2"), ~ trimws(.))) %>%
   pivot_longer(c("object1", "object2"), names_to = "object.num2", values_to = "object2") %>%
-  filter(!is.na(object2)) %>%
+  filter(!is.na(object2) | !is.na(exclusion)) %>%
   rename(object = object2) %>%
   mutate(object = trimws(object)) %>%
   select(sub_num, Image, exclusion, object)
@@ -182,10 +185,11 @@ data.w.corrections <- data.pre.correction %>%
   separate(object, c("object1", "object2", "object3"), ",") %>%
   mutate(across(ends_with("1|2|3"), ~ trimws(.))) %>%
   pivot_longer(c("object1", "object2", "object3"), names_to = "object.num2", values_to = "object2") %>%
-  filter(!is.na(object2)) %>%
+  filter(!is.na(object2) | !is.na(exclusion)) %>%
   rename(object = object2) %>%
   mutate(object = trimws(object)) %>%
-  select(sub_num, Image, exclusion, object)
+  select(sub_num, Image, exclusion, object) %>%
+  distinct()
 
 # add labels to distinguish mealtime knifes vs. working tools
 data.w.corrections <- data.w.corrections %>%
@@ -232,5 +236,7 @@ data.to.export <- data.w.categories %>%
   rename(image = Image, 
          timestamp = TimestampHMS) %>%
   select(site, sub_num, age, sex, image, exclusion, category, object, timestamp, duration) %>%
+  mutate(category = ifelse(!is.na(exclusion), NA, category), 
+         object = ifelse(!is.na(exclusion), NA, object)) %>%
   distinct()
 write_csv(data.to.export, "data/all-data.csv")

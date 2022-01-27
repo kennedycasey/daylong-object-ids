@@ -520,7 +520,7 @@ hourly.objects.bycategory <- model.data %>%
   mutate(category = factor(category, levels = categories))
 ```
 
-```{r overall-stats-fig, fig.env = "figure", fig.pos = "!h", fig.align = "center", fig.width = 3.4, fig.height = 4.4, fig.cap = "(A) Overall frequency of handling by object category. Points reflect percentages for individual children. (B) Count of unique objects handled per hour by object category. Points reflect means for individual children across all hours of recording. Asterisks indicate significant site-by-category interactions after correcting for multiple comparisons."}
+```{r overall-stats-fig, fig.env = "figure", fig.pos = "!h", fig.align = "center", fig.width = 3.4, fig.height = 4.4, fig.cap = "(A) Overall frequency of handling by object category. Points reflect percentages for individual children. (B) Count of unique objects handled per hour by object category. Points reflect means for individual children across all hours of recording. Asterisks indicate significant differences between sites after correcting for multiple comparisons."}
 
 # create fig showing % of images with each category across sites
 p1 <- ggplot() +

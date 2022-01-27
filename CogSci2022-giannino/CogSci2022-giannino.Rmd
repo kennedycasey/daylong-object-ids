@@ -85,7 +85,6 @@ category.labels <- c("Food", "Synthetic", "Toy", "Natural",
                 "Clothing", "Tool-M", "Immovable", 
                 "Tool-W")
 
-
 # rm excluded photos + set other variable info
 data <- raw.data %>%
   filter(is.na(exclusion)) %>%
@@ -152,10 +151,6 @@ total.included <- data %>%
 exclusions <- raw.data %>%
   filter(!is.na(exclusion)) %>%
   select(sub_num, image, exclusion) %>%
-  distinct() %>%
-  group_by(sub_num, image) %>%
-  mutate(exclusion = paste0(exclusion, collapse = ","), 
-         exclusion = ifelse(exclusion == "None,Exclude", "None", exclusion)) %>%
   distinct() %>%
   group_by(exclusion) %>%
   summarize(count = n()) %>%
@@ -458,7 +453,7 @@ hourly.categories <- data %>%
 ```
 
 ## Effects of object category
-The frequency of object categories was similarly divided across sites (Figure 4A). Children primarily handled miscellaneous synthetic objects (e.g., `r str_remove(top.synthetic, "misc ")`, etc., _M_~_Rossel_~ = `r round(subset(category.means, site == "Rossel" & category == "Synthetic")$mean, 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means, site == "Tseltal" & category == "Synthetic")$mean, 4)*100`% of handling) and food (_M_~_Rossel_~ = `r round(subset(category.means, site == "Rossel" & category == "Food")$mean, 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means, site == "Tseltal" & category == "Food")$mean, 4)*100`% of handling). For `r top.category.bychild` of `r length(unique(raw.data$sub_num))` children, their top category was either synthetic objects or food. Two-tailed Wilcoxon tests revealed only one significant category-level difference between sites: children's handling of large or immovable objects (see Table 1 for example objects belonging to this category), where Rossel children handled these objects more frequently than Tseltal children (_M_~_Rossel_~ = `r round(subset(category.means, site == "Rossel" & category == "Immovable")$mean, 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means, site == "Tseltal" & category == "Immovable")$mean, 4)*100`%, adjusted _p_ = `r round(subset(comp.category.bysite, category == "Immovable")$p.adjusted, 3)`, *p*s for all other categories > 0.05), but these objects were still the least frequently handled in both sites.
+The frequency of object categories was similarly divided across sites (Figure 4A). Children primarily handled food items (_M_~_Rossel_~ = `r round(subset(category.means, site == "Rossel" & category == "Food")$mean, 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means, site == "Tseltal" & category == "Food")$mean, 4)*100`% of handling) and miscellaneous synthetic objects (e.g., `r str_remove(top.synthetic, "misc ")`, etc., _M_~_Rossel_~ = `r round(subset(category.means, site == "Rossel" & category == "Synthetic")$mean, 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means, site == "Tseltal" & category == "Synthetic")$mean, 4)*100`% of handling). For `r top.category.bychild` of `r length(unique(raw.data$sub_num))` children, their top category was either food or synthetic objects. Two-tailed Wilcoxon tests revealed only one significant category-level difference between sites: children's handling of large or immovable objects (see Table 1 for example objects belonging to this category), where Rossel children handled these objects more frequently than Tseltal children (_M_~_Rossel_~ = `r round(subset(category.means, site == "Rossel" & category == "Immovable")$mean, 4)*100`%, _M_~_Tseltal_~ = `r round(subset(category.means, site == "Tseltal" & category == "Immovable")$mean, 4)*100`%, adjusted _p_ = `r round(subset(comp.category.bysite, category == "Immovable")$p.adjusted, 3)`, but these objects were still among the least frequently handled in both sites. The initial predicted difference in synthetic object handling between sites was significant; however, after correcting for multiple comparisons, this effect did not persist (adjusted _p_ = `r round(subset(comp.category.bysite, category == "Synthetic")$p.adjusted, 3)`).
 
 ```{r, hourly-object-stats}
 # compute mean # objects per hour overall

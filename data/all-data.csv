@@ -857,7 +857,7 @@ Rossel,3946,25,F,20160811_102829_000.gif,NA,Mealtime Tool,bowl,12:27:29,12
 Rossel,3946,25,F,20160811_102851_000.gif,NA,Work Tool,water,12:27:51,10
 Rossel,3946,25,F,20160811_102901_000.gif,NA,Work Tool,water,12:28:01,13
 Rossel,3946,25,F,20160811_102914_000.gif,NA,Work Tool,water,12:28:14,10
-Rossel,3946,25,F,20160811_102914_000.gif,NA,Synthetic,pink fabric,12:28:14,10
+Rossel,3946,25,F,20160811_102914_000.gif,NA,Synthetic,fabric,12:28:14,10
 Rossel,3946,25,F,20160811_102924_000.gif,NA,Clothing,shirt,12:28:24,11
 Rossel,3946,25,F,20160811_102935_000.gif,NA,Clothing,shirt,12:28:35,12
 Rossel,3946,25,F,20160811_102947_000.gif,NA,Clothing,shirt,12:28:47,10
@@ -2720,18 +2720,18 @@ Rossel,1902,8,M,071344.gif,NA,Synthetic,money,09:12:45,15
 Rossel,1902,8,M,071359.gif,NA,Synthetic,bucket,09:13:00,17
 Rossel,1902,8,M,071416.gif,NA,Synthetic,bucket,09:13:17,15
 Rossel,1902,8,M,071431.gif,NA,Synthetic,money,09:13:32,15
-Rossel,1902,8,M,073630.gif,NA,Work Tool,safety pin,09:35:31,17
-Rossel,1902,8,M,073717.gif,NA,Work Tool,safety pin,09:36:18,17
-Rossel,1902,8,M,073734.gif,NA,Work Tool,safety pin,09:36:35,15
+Rossel,1902,8,M,073630.gif,NA,Synthetic,safety pin,09:35:31,17
+Rossel,1902,8,M,073717.gif,NA,Synthetic,safety pin,09:36:18,17
+Rossel,1902,8,M,073734.gif,NA,Synthetic,safety pin,09:36:35,15
 Rossel,1902,8,M,073804.gif,NA,Food,betelnut,09:37:05,17
-Rossel,1902,8,M,073836.gif,NA,Work Tool,safety pin,09:37:37,15
-Rossel,1902,8,M,073851.gif,NA,Work Tool,safety pin,09:37:52,17
-Rossel,1902,8,M,073908.gif,NA,Work Tool,safety pin,09:38:09,15
-Rossel,1902,8,M,073923.gif,NA,Work Tool,safety pin,09:38:24,15
-Rossel,1902,8,M,073955.gif,NA,Work Tool,safety pin,09:38:56,15
-Rossel,1902,8,M,074010.gif,NA,Work Tool,safety pin,09:39:11,15
-Rossel,1902,8,M,074025.gif,NA,Work Tool,safety pin,09:39:26,16
-Rossel,1902,8,M,074041.gif,NA,Work Tool,safety pin,09:39:42,15
+Rossel,1902,8,M,073836.gif,NA,Synthetic,safety pin,09:37:37,15
+Rossel,1902,8,M,073851.gif,NA,Synthetic,safety pin,09:37:52,17
+Rossel,1902,8,M,073908.gif,NA,Synthetic,safety pin,09:38:09,15
+Rossel,1902,8,M,073923.gif,NA,Synthetic,safety pin,09:38:24,15
+Rossel,1902,8,M,073955.gif,NA,Synthetic,safety pin,09:38:56,15
+Rossel,1902,8,M,074010.gif,NA,Synthetic,safety pin,09:39:11,15
+Rossel,1902,8,M,074025.gif,NA,Synthetic,safety pin,09:39:26,16
+Rossel,1902,8,M,074041.gif,NA,Synthetic,safety pin,09:39:42,15
 Rossel,1902,8,M,074111.gif,NA,Synthetic,fishing debris,09:40:12,18
 Rossel,1902,8,M,074144.gif,NA,Synthetic,fishing debris,09:40:45,15
 Rossel,1902,8,M,074549.gif,NA,Synthetic,fishnet,09:44:50,17
@@ -3850,7 +3850,7 @@ Rossel,5348,20,F,105548.gif,NA,Natural,tree,12:54:49,20
 Rossel,5348,20,F,105608.gif,NA,Natural,tree,12:55:09,16
 Rossel,5348,20,F,105624.gif,NA,Natural,dirt,12:55:25,17
 Rossel,5348,20,F,105949.gif,NA,Mealtime Tool,lunchbox,12:58:50,15
-Rossel,5348,20,F,110019.gif,NA,Work Tool,flashlight,12:59:20,16
+Rossel,5348,20,F,110019.gif,NA,Synthetic,flashlight,12:59:20,16
 Rossel,5348,20,F,110050.gif,NA,Immovable,stairs,12:59:51,16
 Rossel,5348,20,F,110106.gif,NA,Synthetic,plastic bottle,13:00:07,16
 Rossel,5348,20,F,110122.gif,NA,Synthetic,plastic bottle,13:00:23,15
@@ -5841,8 +5841,8 @@ Rossel,2789,13,F,102727.gif,NA,Natural,stick,12:26:24,15
 Rossel,2789,13,F,103647.gif,NA,Natural,stick,12:35:44,15
 Rossel,2789,13,F,103702.gif,NA,Natural,stick,12:35:59,17
 Rossel,2789,13,F,103908.gif,NA,Clothing,shirt,12:38:05,14
-Rossel,2789,13,F,104039.gif,NA,Work Tool,safety pin,12:39:36,18
-Rossel,2789,13,F,104057.gif,NA,Work Tool,safety pin,12:39:54,15
+Rossel,2789,13,F,104039.gif,NA,Synthetic,safety pin,12:39:36,18
+Rossel,2789,13,F,104057.gif,NA,Synthetic,safety pin,12:39:54,15
 Rossel,2789,13,F,104332.gif,NA,Natural,stick,12:42:29,15
 Rossel,2789,13,F,104347.gif,NA,Natural,stick,12:42:44,18
 Rossel,2789,13,F,104420.gif,NA,Natural,stick,12:43:17,15
@@ -7973,7 +7973,7 @@ Rossel,7718,37,F,090927.gif,NA,Natural,stick,11:08:14,15
 Rossel,7718,37,F,090942.gif,NA,Natural,stick,11:08:29,16
 Rossel,7718,37,F,090958.gif,NA,Natural,stick,11:08:45,17
 Rossel,7718,37,F,091015.gif,NA,Natural,stick,11:09:02,12
-Rossel,7718,37,F,091114.gif,NA,Work Tool,scissors,11:10:01,15
+Rossel,7718,37,F,091114.gif,NA,Synthetic,scissors,11:10:01,15
 Rossel,7718,37,F,091146.gif,Exclude,NA,NA,11:10:33,17
 Rossel,7718,37,F,091313.gif,NA,Food,sugar cane,11:12:00,15
 Rossel,7718,37,F,091328.gif,NA,Food,sugar cane,11:12:15,16
@@ -12863,8 +12863,8 @@ Tseltal,1598,45,F,235613.gif,NA,Toy,stuffed animal unicorn,17:54:27,31
 Tseltal,1598,45,F,235644.gif,NA,Synthetic,toothbrush,17:54:58,30
 Tseltal,1598,45,F,235714.gif,NA,Synthetic,toothbrush,17:55:28,30
 Tseltal,1598,45,F,235744.gif,Exclude,NA,NA,17:55:58,32
-Tseltal,1598,45,F,235846.gif,NA,Work Tool,scissors,17:57:00,31
-Tseltal,1598,45,F,24000026.gif,NA,Work Tool,scissors,17:58:40,22
+Tseltal,1598,45,F,235846.gif,NA,Synthetic,scissors,17:57:00,31
+Tseltal,1598,45,F,24000026.gif,NA,Synthetic,scissors,17:58:40,22
 Tseltal,1598,45,F,24000314.gif,NA,Synthetic,bucket,18:01:28,33
 Tseltal,1598,45,F,24000417.gif,Exclude,NA,NA,18:02:31,30
 Tseltal,1598,45,F,24000618.gif,NA,Clothing,shoe,18:04:32,32
@@ -15386,14 +15386,14 @@ Tseltal,4313,31,F,040513.gif,Exclude,NA,NA,09:28:23,30
 Tseltal,4313,31,F,040646.gif,None,NA,NA,09:29:56,30
 Tseltal,4313,31,F,040915.gif,NA,Natural,tree,09:32:25,8
 Tseltal,4313,31,F,040953.gif,Exclude,NA,NA,09:33:03,31
-Tseltal,4313,31,F,041155.gif,NA,Work Tool,scissors,09:35:05,30
-Tseltal,4313,31,F,041255.gif,NA,Work Tool,scissors,09:36:05,31
-Tseltal,4313,31,F,041326.gif,NA,Work Tool,scissors,09:36:36,30
-Tseltal,4313,31,F,041426.gif,NA,Work Tool,scissors,09:37:36,33
-Tseltal,4313,31,F,041630.gif,NA,Work Tool,scissors,09:39:40,31
-Tseltal,4313,31,F,041832.gif,NA,Work Tool,scissors,09:41:42,30
-Tseltal,4313,31,F,042106.gif,NA,Work Tool,scissors,09:44:16,30
-Tseltal,4313,31,F,042136.gif,NA,Work Tool,scissors,09:44:46,26
+Tseltal,4313,31,F,041155.gif,NA,Synthetic,scissors,09:35:05,30
+Tseltal,4313,31,F,041255.gif,NA,Synthetic,scissors,09:36:05,31
+Tseltal,4313,31,F,041326.gif,NA,Synthetic,scissors,09:36:36,30
+Tseltal,4313,31,F,041426.gif,NA,Synthetic,scissors,09:37:36,33
+Tseltal,4313,31,F,041630.gif,NA,Synthetic,scissors,09:39:40,31
+Tseltal,4313,31,F,041832.gif,NA,Synthetic,scissors,09:41:42,30
+Tseltal,4313,31,F,042106.gif,NA,Synthetic,scissors,09:44:16,30
+Tseltal,4313,31,F,042136.gif,NA,Synthetic,scissors,09:44:46,26
 Tseltal,4313,31,F,042434.gif,NA,Food,banana,09:47:44,32
 Tseltal,4313,31,F,042506.gif,NA,Food,banana,09:48:16,30
 Tseltal,4313,31,F,042536.gif,NA,Food,banana,09:48:46,30
@@ -16315,9 +16315,9 @@ Tseltal,5377,11,F,030919.gif,NA,Synthetic,walkie talkie,12:00:58,31
 Tseltal,5377,11,F,030950.gif,NA,Synthetic,walkie talkie,12:01:29,30
 Tseltal,5377,11,F,031020.gif,NA,Synthetic,phone,12:01:59,30
 Tseltal,5377,11,F,031050.gif,NA,Synthetic,phone,12:02:29,63
-Tseltal,5377,11,F,031223.gif,NA,Work Tool,paper towel,12:04:02,30
-Tseltal,5377,11,F,031253.gif,NA,Work Tool,paper towel,12:04:32,31
-Tseltal,5377,11,F,031324.gif,NA,Work Tool,paper towel,12:05:03,30
+Tseltal,5377,11,F,031223.gif,NA,Synthetic,paper towel,12:04:02,30
+Tseltal,5377,11,F,031253.gif,NA,Synthetic,paper towel,12:04:32,31
+Tseltal,5377,11,F,031324.gif,NA,Synthetic,paper towel,12:05:03,30
 Tseltal,5377,11,F,031424.gif,NA,Synthetic,walkie talkie,12:06:03,32
 Tseltal,5377,11,F,031456.gif,NA,Synthetic,walkie talkie,12:06:35,30
 Tseltal,5377,11,F,031526.gif,NA,Synthetic,walkie talkie,12:07:05,30
@@ -17505,7 +17505,7 @@ Tseltal,7328,38,M,191814.gif,NA,Synthetic,wood slat,13:17:04,31
 Tseltal,7328,38,M,191845.gif,NA,Synthetic,wood slat,13:17:35,30
 Tseltal,7328,38,M,191915.gif,None,NA,NA,13:18:05,30
 Tseltal,7328,38,M,193231.gif,NA,Mealtime Tool,bowl,13:31:21,32
-Tseltal,7328,38,M,193231.gif,NA,Food,fanta,13:31:21,32
+Tseltal,7328,38,M,193231.gif,NA,Food,soda,13:31:21,32
 Tseltal,7328,38,M,193333.gif,NA,Synthetic,wood slat,13:32:23,30
 Tseltal,7328,38,M,193403.gif,NA,Synthetic,wood slat,13:32:53,31
 Tseltal,7328,38,M,193434.gif,NA,Synthetic,wood slat,13:33:24,30

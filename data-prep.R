@@ -223,7 +223,7 @@ if (nrow(not.categorized > 0)) {
 
 # add regularized categories ----------------------------------------------
 # read in manually checked categories for each object
-categories <- read_csv("data/manual-checks/categories2.csv")
+categories <- read_csv("data/manual-checks/categories.csv")
 
 # merge with main annotations df and store new category
 data.w.categories <- data.w.corrections %>%
@@ -265,4 +265,5 @@ data.to.export <- data.w.exclusions %>%
   mutate(object = ifelse(!is.na(exclusion), NA, object), 
          category = ifelse(!is.na(exclusion), NA, category)) %>%
   distinct()
+
 write_csv(data.to.export, "data/all-data.csv")

@@ -41,7 +41,7 @@ croc shoe,1,shoe,0,0,KC,
 curb,1,NA,0,1,KC,
 dried leaf or bamboo,1,leaf,0,1,KC,
 dried mud,1,dirt,0,1,KC,
-fanta,1,NA,NA,NA,NA,
+fanta,1,soda,0,0,KC,
 fire pit,1,NA,0,1,KC,added to corrections.csv
 flower bush,1,flower toy,0,1,KC,
 flower toy,1,flower toy,0,1,KC,
@@ -86,7 +86,7 @@ paper tissue,1,NA,0,1,KC,
 picture,1,photo,0,1,KC,
 pile of leaves/twigs/dirt,1,dirt,0,1,KC,
 pink cloth,1,NA,0,1,KC,added to corrections.csv
-pink fabric,1,NA,NA,NA,NA,
+pink fabric,1,fabric,0,0,KC,
 plaid fabric,1,NA,0,1,KC,added to corrections.csv
 plastic bag of eggs,1,"plastic bag, egg",0,0,KC,
 plastic bin,1,container,0,1,KC,

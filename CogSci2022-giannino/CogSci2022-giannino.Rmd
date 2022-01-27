@@ -471,7 +471,9 @@ hourly.objects <- data %>%
 
 # prep tibble for models w/ dummy coded category cols
 model.data <- data %>%
-  group_by(site, sub_num, hour, category) %>%
+  group_by(site, sub_num) %>%
+  mutate(n.images = length(unique(image))) %>%
+  group_by(site, sub_num, n.images, hour, category) %>%
   summarize(n.objects = length(unique(object))) %>%
   ungroup() %>%
   mutate(synthetic = ifelse(category == "Synthetic", 1, 0), 
@@ -487,7 +489,7 @@ model.data <- data %>%
 lmer.outputs <- list()
 for (i in c(categories)) {
   
-  lmer.output <- lmer(n.objects ~ site * eval(as.symbol(tolower(trimws(str_remove(i, "Tool"))))) +
+  lmer.output <- lmer(n.objects ~ site * eval(as.symbol(tolower(trimws(str_remove(i, "Tool"))))) + n.images +
                                (1|sub_num), model.data) %>%
   tidy() %>% 
   filter(effect == "fixed" & term != "(Intercept)")
@@ -498,13 +500,14 @@ for (i in c(categories)) {
 hourly.objects.model <- do.call(rbind, lmer.outputs) %>%
   rownames_to_column(var = "category") %>%
   mutate(p.adjusted = p.adjust(p.value, method = "holm"), 
-         category = str_remove(category, ".1|.2|.3")) %>%
+         category = str_remove(category, ".1|.2|.3|.4")) %>%
   group_by(category) %>%
   mutate(row = row_number(), 
          term = case_when(
            row == 1 ~ "site", 
            row == 2 ~ tolower(category), 
-           row == 3 ~ paste0("site:", tolower(category)))) %>%
+           row == 3 ~ "n.images",
+           row == 4 ~ paste0("site:", tolower(category)))) %>%
   filter(p.adjusted < 0.10) %>%
   mutate(p = ifelse(p.adjusted < 0.001, 
                     paste0("< 0.001"), paste0("= ", round(p.adjusted, 3))))
@@ -517,7 +520,7 @@ hourly.objects.bycategory <- model.data %>%
   mutate(category = factor(category, levels = categories))
 ```
 
-```{r overall-stats-fig, fig.env = "figure", fig.pos = "!h", fig.align = "center", fig.width = 3.4, fig.height = 4.4, fig.cap = "(A) Overall frequency of handling by object category. Points reflect percentages for individual children. (B) Count of unique objects handled per hour by object category. Points reflect means for individual children across all hours of recording."}
+```{r overall-stats-fig, fig.env = "figure", fig.pos = "!h", fig.align = "center", fig.width = 3.4, fig.height = 4.4, fig.cap = "(A) Overall frequency of handling by object category. Points reflect percentages for individual children. (B) Count of unique objects handled per hour by object category. Points reflect means for individual children across all hours of recording. Asterisks indicate significant site-by-category interactions after correcting for multiple comparisons."}
 
 # create fig showing % of images with each category across sites
 p1 <- ggplot() +
@@ -562,6 +565,7 @@ p2 <- ggplot(hourly.objects.bycategory,
     dodge.width = 0.75, jitter.width = 0.1), size = 0.5, alpha = 0.5) +
   geom_boxplot(width = 0.75, outlier.shape = NA,
                alpha = 0.5, color = "black") +
+  annotate(geom = "text", label = "*", x = "Synthetic", y = 5, size = 6) +
   annotate(geom = "text", label = "*", x = "Immovable", y = 5, size = 6) +
   scale_color_manual(values = site.colors) + 
   scale_fill_manual(values = site.colors) +
@@ -579,19 +583,20 @@ panels <- plot_grid(ggdraw(fig1[[1]]), NULL,
 plot_grid(panels, legend, ncol = 1, rel_heights = c(1, .1))
 ```
 
-During any given hour, children handled `r hourly.objects$mean` objects from `r hourly.categories$mean` different categories, on average (median = `r hourly.objects$median` objects, _SD_ = `r hourly.objects$sd`, range = `r hourly.objects$min`--`r hourly.objects$max`). To test for differences across sites and categories, we ran individual linear mixed-effects models for each of the six object categories, with category membership dummy coded (i.e., objects belonging to the target category for a given model = 1, objects belonging to other categories = 0). Models included fixed effects of site, category, and site-by-category interaction as well as random intercepts for individual children. After correcting for multiple comparisons, we found a significant main effect of the synthetic object category ($\beta$ = `r round(subset(hourly.objects.model, term == "synthetic")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "synthetic")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "synthetic")$statistic, 2)`, _p_ `r subset(hourly.objects.model, term == "synthetic")$p`) such that children handled more unique synthetic objects per hour than objects from other categories. Additionally, we found negative main effects for the food ($\beta$ = `r round(subset(hourly.objects.model, term == "food")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "food")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "food")$statistic, 2)`, _p_ `r subset(hourly.objects.model, term == "food")$p`), tool ($\beta$ = `r round(subset(hourly.objects.model, term == "tool")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "tool")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "tool")$statistic, 2)`, _p_ `r subset(hourly.objects.model, term == "tool")$p`), and toy ($\beta$ = `r round(subset(hourly.objects.model, term == "toy")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "toy")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "toy")$statistic, 2)`, _p_ `r subset(hourly.objects.model, term == "toy")$p`) categories, meaning that children handled fewer unique objects from these categories per hour. Finally, a significant interaction between site and the immovable object category revealed that Tseltal children handled fewer unique immovable objects per hour than Rossel children. ($\beta$ = `r round(subset(hourly.objects.model, term == "site:immovable")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "site:immovable")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "site:immovable")$statistic, 2)`, _p_ `r subset(hourly.objects.model, term == "site:immovable")$p`; Figure 4B).
+During any given hour, children handled `r hourly.objects$mean` objects from `r hourly.categories$mean` different categories, on average (median = `r hourly.objects$median` objects, _SD_ = `r hourly.objects$sd`, range = `r hourly.objects$min`--`r hourly.objects$max`). To test for differences across sites and categories, we ran individual linear mixed-effects models for each of the six object categories, with category membership dummy coded (i.e., objects belonging to the target category for a given model = 1, objects belonging to other categories = 0). Models included fixed effects of site, category, number of images, and site-by-category interaction as well as random intercepts for individual children. After correcting for multiple comparisons, we found a significant main effect of the synthetic object category ($\beta$ = `r round(subset(hourly.objects.model, term == "synthetic")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "synthetic")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "synthetic")$statistic, 2)`, _p_ `r subset(hourly.objects.model, term == "synthetic")$p`) and a significant site-by-synthetic interaction ($\beta$ = `r round(subset(hourly.objects.model, term == "site:synthetic")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "site:synthetic")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "site:synthetic")$statistic, 2)`, _p_ `r subset(hourly.objects.model, term == "site:synthetic")$p`) such that children handled more unique synthetic objects per hour than objects from other categories, and this effect was stronger for Tseltal children than for Rossel children. Additionally, we found negative main effects for the toy ($\beta$ = `r round(subset(hourly.objects.model, term == "toy")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "toy")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "toy")$statistic, 2)`, _p_ `r subset(hourly.objects.model, term == "toy")$p`) and work tool ($\beta$ = `r round(subset(hourly.objects.model, term == "work tool")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "work tool")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "work tool")$statistic, 2)`, _p_ `r subset(hourly.objects.model, term == "work tool")$p`) categories, indicating that children handled fewer unique objects from these categories per hour. Finally, a significant main effect of the immovable object category ($\beta$ = `r round(subset(hourly.objects.model, term == "immovable")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "immovable")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "immovable")$statistic, 2)`, _p_ `r subset(hourly.objects.model, term == "immovable")$p`) and site-by-immovable interaction ($\beta$ = `r round(subset(hourly.objects.model, term == "site:immovable")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.model, term == "site:immovable")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.model, term == "site:immovable")$statistic, 2)`, _p_ `r subset(hourly.objects.model, term == "site:immovable")$p`) revealed that children handled more unique immovable objects per hour than objects from other categories, and this effect was stronger for Rossel children than for Tseltal children (Figure 4B). <!--kc: need to be careful here about interpreting differences between categories-->
 
 ## Effects of age
 ```{r age-effects-bycategory}
 
 # compute prop of images in each category for each age
 category.props.byage <- data %>%
-  group_by(sub_num, category, site, age) %>%
+  group_by(site, sub_num) %>%
+  mutate(n.images = length(unique(image))) %>%
+  group_by(sub_num, n.images, category, site, age) %>%
   summarize(n.category = n()) %>%
   ungroup() %>% 
-  group_by(sub_num, site, age) %>%
-  summarize(n.images = sum(n.category), 
-            n.category = n.category, 
+  group_by(sub_num, n.images, site, age) %>%
+  summarize(n.category = n.category, 
             category = category) %>%
   mutate(prop = n.category/n.images) %>%
   ungroup() %>%
@@ -602,11 +607,17 @@ category.props.byage <- data %>%
 age.bycategory.effects.list <- list()
 age.bycategory.effects.toplot.list <- list()
 for (i in categories) {
-  model <- lm(prop ~ site * age,
+  model <- lm(prop ~ site * age + n.images,
                 filter(category.props.byage, category == i))
   
+  # check collinearity -> low
+  # (making sure age and n.images aren't too strongly correlated)
+  performance::check_collinearity(model)
+  car::vif(model)
+  
   effects <- tidy(model) %>%
-    mutate(category = i) %>%
+    mutate(category = i, 
+           p.adjusted = p.adjust(p.value, method = "holm")) %>%
     filter(term != "(Intercept)" & p.value < 0.10)
   
   # get predicted values from the model for plotting

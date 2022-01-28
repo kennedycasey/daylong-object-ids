@@ -1,5 +1,7 @@
 library(tidyverse)
 
+
+# DUPLICATE DATA PREP FOR MAIN ANNOTATIONS --------------------------------
 # read in data
 annotations <- read_csv("data/reliability-annotations.csv")
 participants <- read_csv("data/metadata/participants.csv")
@@ -67,10 +69,15 @@ checked.unsure <- read_csv("data/manual-checks/unsure-objects.csv") %>%
   mutate(exact.image = paste0(sub_num, "/", Image)) %>%
   pull(exact.image)
 
+corrected.images <- corrections %>%
+  mutate(corrected.image = paste0(sub_num, "/", Image)) %>%
+  pull() %>%
+  unique()
+
 not.checked.unsure <- data.w.unsure %>%
   filter(exclusion == "Unsure") %>%
   mutate(exact.image = paste0(sub_num, "/", Image)) %>%
-  filter(exact.image %notin% checked.unsure)
+  filter(exact.image %notin% checked.unsure & exact.image %notin% corrected.images)
   
 if (nrow(not.checked.unsure > 0)) {
   write_csv(not.checked.unsure, "data/manual-checks/new-reliability-unsure-objects.csv")
@@ -267,3 +274,31 @@ data.to.export <- data.w.exclusions %>%
   distinct()
 
 write_csv(data.to.export, "data/reliability-data.csv")
+
+# CALCULATE RELIABILITY STATS ---------------------------------------------
+reliability <- read_csv("data/reliability-data.csv") %>%
+  group_by(sub_num, image) %>%
+  rename(exclusion2 = exclusion, 
+         object2 = object, 
+         category2 = category) %>%
+  mutate(n.objects2 = n()) %>%
+  select(sub_num, image, exclusion2, n.objects2, object2, category2) %>%
+  arrange(sub_num, image, category2, object2)
+
+reliability.dirs <- reliability %>%
+  pull(sub_num) %>%
+  unique()
+
+main <- read_csv("data/all-data.csv") %>%
+  filter(sub_num %in% reliability.dirs) %>%
+  group_by(sub_num, image) %>%
+  mutate(n.objects = n()) %>%
+  select(sub_num, image, exclusion, n.objects, object, category) %>%
+  arrange(sub_num, image, category, object)
+
+compare <- main %>%
+  full_join(reliability, by = c("sub_num", "image")) %>%
+  mutate(exclusion.diff = ifelse(exclusion != exclusion2, 1, 0), 
+         n.objects.diff = ifelse(n.objects != n.objects2, 1, 0), 
+         object.diff = ifelse(object != object2, 1, 0), 
+         category.diff = ifelse(category != category2, 1, 0))

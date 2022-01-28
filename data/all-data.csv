@@ -1427,14 +1427,14 @@ Rossel,5028,33,F,085513.gif,NA,Immovable,wall,10:54:14,10
 Rossel,5028,33,F,085523.gif,NA,Immovable,wall,10:54:24,12
 Rossel,5028,33,F,085628.gif,NA,Synthetic,camera,10:55:29,12
 Rossel,5028,33,F,085700.gif,NA,Synthetic,camera,10:56:01,23
-Rossel,5028,33,F,085723.gif,NA,Work Tool,broom bristle,10:56:24,10
-Rossel,5028,33,F,085733.gif,NA,Work Tool,broom bristle,10:56:34,11
-Rossel,5028,33,F,085836.gif,NA,Work Tool,broom bristle,10:57:37,12
-Rossel,5028,33,F,085953.gif,NA,Work Tool,broom bristle,10:58:54,10
-Rossel,5028,33,F,090003.gif,NA,Work Tool,broom bristle,10:59:04,10
-Rossel,5028,33,F,090013.gif,NA,Work Tool,broom bristle,10:59:14,12
+Rossel,5028,33,F,085723.gif,NA,Work Tool,broom,10:56:24,10
+Rossel,5028,33,F,085733.gif,NA,Work Tool,broom,10:56:34,11
+Rossel,5028,33,F,085836.gif,NA,Work Tool,broom,10:57:37,12
+Rossel,5028,33,F,085953.gif,NA,Work Tool,broom,10:58:54,10
+Rossel,5028,33,F,090003.gif,NA,Work Tool,broom,10:59:04,10
+Rossel,5028,33,F,090013.gif,NA,Work Tool,broom,10:59:14,12
 Rossel,5028,33,F,090109.gif,NA,Synthetic,camera,11:00:10,10
-Rossel,5028,33,F,090213.gif,NA,Work Tool,broom bristle,11:01:14,10
+Rossel,5028,33,F,090213.gif,NA,Work Tool,broom,11:01:14,10
 Rossel,5028,33,F,090554.gif,NA,Synthetic,camera,11:04:55,12
 Rossel,5028,33,F,091014.gif,NA,Synthetic,camera,11:09:15,12
 Rossel,5028,33,F,091058.gif,NA,Synthetic,phone,11:09:59,10
@@ -1447,77 +1447,77 @@ Rossel,5028,33,F,091504.gif,NA,Clothing,vest,11:14:05,28
 Rossel,5028,33,F,091532.gif,NA,Clothing,vest,11:14:33,10
 Rossel,5028,33,F,091542.gif,NA,Clothing,vest,11:14:43,10
 Rossel,5028,33,F,091552.gif,NA,Clothing,vest,11:14:53,12
-Rossel,5028,33,F,091744.gif,NA,Work Tool,broom bristle,11:16:45,11
-Rossel,5028,33,F,091805.gif,NA,Work Tool,broom bristle,11:17:06,10
-Rossel,5028,33,F,091815.gif,NA,Work Tool,broom bristle,11:17:16,14
-Rossel,5028,33,F,091829.gif,NA,Work Tool,broom bristle,11:17:30,10
-Rossel,5028,33,F,091839.gif,NA,Work Tool,broom bristle,11:17:40,10
-Rossel,5028,33,F,091849.gif,NA,Work Tool,broom bristle,11:17:50,11
-Rossel,5028,33,F,091900.gif,NA,Work Tool,broom bristle,11:18:01,10
-Rossel,5028,33,F,091910.gif,NA,Work Tool,broom bristle,11:18:11,11
+Rossel,5028,33,F,091744.gif,NA,Work Tool,broom,11:16:45,11
+Rossel,5028,33,F,091805.gif,NA,Work Tool,broom,11:17:06,10
+Rossel,5028,33,F,091815.gif,NA,Work Tool,broom,11:17:16,14
+Rossel,5028,33,F,091829.gif,NA,Work Tool,broom,11:17:30,10
+Rossel,5028,33,F,091839.gif,NA,Work Tool,broom,11:17:40,10
+Rossel,5028,33,F,091849.gif,NA,Work Tool,broom,11:17:50,11
+Rossel,5028,33,F,091900.gif,NA,Work Tool,broom,11:18:01,10
+Rossel,5028,33,F,091910.gif,NA,Work Tool,broom,11:18:11,11
 Rossel,5028,33,F,092006.gif,NA,Clothing,vest,11:19:07,10
 Rossel,5028,33,F,092016.gif,Exclude,NA,NA,11:19:17,10
 Rossel,5028,33,F,092038.gif,Exclude,NA,NA,11:19:39,10
-Rossel,5028,33,F,092638.gif,NA,Work Tool,broom bristle,11:25:39,10
+Rossel,5028,33,F,092638.gif,NA,Work Tool,broom,11:25:39,10
 Rossel,5028,33,F,092638.gif,NA,Synthetic,cotton debris,11:25:39,10
-Rossel,5028,33,F,092648.gif,NA,Work Tool,broom bristle,11:25:49,10
+Rossel,5028,33,F,092648.gif,NA,Work Tool,broom,11:25:49,10
 Rossel,5028,33,F,092648.gif,NA,Synthetic,cotton debris,11:25:49,10
-Rossel,5028,33,F,092658.gif,NA,Work Tool,broom bristle,11:25:59,13
+Rossel,5028,33,F,092658.gif,NA,Work Tool,broom,11:25:59,13
 Rossel,5028,33,F,092658.gif,NA,Synthetic,cotton debris,11:25:59,13
-Rossel,5028,33,F,093245.gif,NA,Work Tool,broom bristle,11:31:46,10
+Rossel,5028,33,F,093245.gif,NA,Work Tool,broom,11:31:46,10
 Rossel,5028,33,F,093245.gif,NA,Synthetic,cotton debris,11:31:46,10
 Rossel,5028,33,F,093559.gif,Exclude,NA,NA,11:35:00,10
-Rossel,5028,33,F,093621.gif,NA,Work Tool,broom bristle,11:35:22,10
+Rossel,5028,33,F,093621.gif,NA,Work Tool,broom,11:35:22,10
 Rossel,5028,33,F,093621.gif,NA,Synthetic,cotton debris,11:35:22,10
-Rossel,5028,33,F,093631.gif,NA,Work Tool,broom bristle,11:35:32,10
+Rossel,5028,33,F,093631.gif,NA,Work Tool,broom,11:35:32,10
 Rossel,5028,33,F,093631.gif,NA,Synthetic,cotton debris,11:35:32,10
-Rossel,5028,33,F,093653.gif,NA,Work Tool,broom bristle,11:35:54,10
+Rossel,5028,33,F,093653.gif,NA,Work Tool,broom,11:35:54,10
 Rossel,5028,33,F,093653.gif,NA,Synthetic,cotton debris,11:35:54,10
-Rossel,5028,33,F,093713.gif,NA,Work Tool,broom bristle,11:36:14,13
+Rossel,5028,33,F,093713.gif,NA,Work Tool,broom,11:36:14,13
 Rossel,5028,33,F,093713.gif,NA,Synthetic,cotton debris,11:36:14,13
-Rossel,5028,33,F,093726.gif,NA,Work Tool,broom bristle,11:36:27,10
+Rossel,5028,33,F,093726.gif,NA,Work Tool,broom,11:36:27,10
 Rossel,5028,33,F,093726.gif,NA,Synthetic,cotton debris,11:36:27,10
-Rossel,5028,33,F,093758.gif,NA,Work Tool,broom bristle,11:36:59,10
+Rossel,5028,33,F,093758.gif,NA,Work Tool,broom,11:36:59,10
 Rossel,5028,33,F,093758.gif,NA,Synthetic,cotton debris,11:36:59,10
-Rossel,5028,33,F,093808.gif,NA,Work Tool,broom bristle,11:37:09,10
+Rossel,5028,33,F,093808.gif,NA,Work Tool,broom,11:37:09,10
 Rossel,5028,33,F,093808.gif,NA,Synthetic,cotton debris,11:37:09,10
-Rossel,5028,33,F,093818.gif,NA,Work Tool,broom bristle,11:37:19,13
+Rossel,5028,33,F,093818.gif,NA,Work Tool,broom,11:37:19,13
 Rossel,5028,33,F,093818.gif,NA,Synthetic,cotton debris,11:37:19,13
-Rossel,5028,33,F,093831.gif,NA,Work Tool,broom bristle,11:37:32,10
+Rossel,5028,33,F,093831.gif,NA,Work Tool,broom,11:37:32,10
 Rossel,5028,33,F,093831.gif,NA,Synthetic,cotton debris,11:37:32,10
-Rossel,5028,33,F,093934.gif,NA,Work Tool,broom bristle,11:38:35,10
+Rossel,5028,33,F,093934.gif,NA,Work Tool,broom,11:38:35,10
 Rossel,5028,33,F,093934.gif,NA,Synthetic,cotton debris,11:38:35,10
-Rossel,5028,33,F,093954.gif,NA,Work Tool,broom bristle,11:38:55,13
+Rossel,5028,33,F,093954.gif,NA,Work Tool,broom,11:38:55,13
 Rossel,5028,33,F,093954.gif,NA,Synthetic,cotton debris,11:38:55,13
-Rossel,5028,33,F,094007.gif,NA,Work Tool,broom bristle,11:39:08,10
+Rossel,5028,33,F,094007.gif,NA,Work Tool,broom,11:39:08,10
 Rossel,5028,33,F,094007.gif,NA,Synthetic,cotton debris,11:39:08,10
-Rossel,5028,33,F,094017.gif,NA,Work Tool,broom bristle,11:39:18,11
+Rossel,5028,33,F,094017.gif,NA,Work Tool,broom,11:39:18,11
 Rossel,5028,33,F,094017.gif,NA,Synthetic,cotton debris,11:39:18,11
-Rossel,5028,33,F,094028.gif,NA,Work Tool,broom bristle,11:39:29,12
+Rossel,5028,33,F,094028.gif,NA,Work Tool,broom,11:39:29,12
 Rossel,5028,33,F,094028.gif,NA,Synthetic,cotton debris,11:39:29,12
-Rossel,5028,33,F,094040.gif,NA,Work Tool,broom bristle,11:39:41,10
+Rossel,5028,33,F,094040.gif,NA,Work Tool,broom,11:39:41,10
 Rossel,5028,33,F,094040.gif,NA,Synthetic,cotton debris,11:39:41,10
-Rossel,5028,33,F,094050.gif,NA,Work Tool,broom bristle,11:39:51,10
+Rossel,5028,33,F,094050.gif,NA,Work Tool,broom,11:39:51,10
 Rossel,5028,33,F,094050.gif,NA,Synthetic,cotton debris,11:39:51,10
-Rossel,5028,33,F,094100.gif,NA,Work Tool,broom bristle,11:40:01,12
+Rossel,5028,33,F,094100.gif,NA,Work Tool,broom,11:40:01,12
 Rossel,5028,33,F,094100.gif,NA,Synthetic,cotton debris,11:40:01,12
-Rossel,5028,33,F,094129.gif,NA,Work Tool,broom bristle,11:40:30,10
+Rossel,5028,33,F,094129.gif,NA,Work Tool,broom,11:40:30,10
 Rossel,5028,33,F,094129.gif,NA,Synthetic,cotton debris,11:40:30,10
-Rossel,5028,33,F,094139.gif,NA,Work Tool,broom bristle,11:40:40,11
+Rossel,5028,33,F,094139.gif,NA,Work Tool,broom,11:40:40,11
 Rossel,5028,33,F,094139.gif,NA,Synthetic,cotton debris,11:40:40,11
-Rossel,5028,33,F,094150.gif,NA,Work Tool,broom bristle,11:40:51,12
+Rossel,5028,33,F,094150.gif,NA,Work Tool,broom,11:40:51,12
 Rossel,5028,33,F,094150.gif,NA,Synthetic,cotton debris,11:40:51,12
-Rossel,5028,33,F,094202.gif,NA,Work Tool,broom bristle,11:41:03,10
+Rossel,5028,33,F,094202.gif,NA,Work Tool,broom,11:41:03,10
 Rossel,5028,33,F,094202.gif,NA,Synthetic,cotton debris,11:41:03,10
-Rossel,5028,33,F,094212.gif,NA,Work Tool,broom bristle,11:41:13,10
+Rossel,5028,33,F,094212.gif,NA,Work Tool,broom,11:41:13,10
 Rossel,5028,33,F,094212.gif,NA,Synthetic,cotton debris,11:41:13,10
-Rossel,5028,33,F,094222.gif,NA,Work Tool,broom bristle,11:41:23,12
+Rossel,5028,33,F,094222.gif,NA,Work Tool,broom,11:41:23,12
 Rossel,5028,33,F,094222.gif,NA,Synthetic,cotton debris,11:41:23,12
-Rossel,5028,33,F,094234.gif,NA,Work Tool,broom bristle,11:41:35,10
+Rossel,5028,33,F,094234.gif,NA,Work Tool,broom,11:41:35,10
 Rossel,5028,33,F,094234.gif,NA,Synthetic,cotton debris,11:41:35,10
-Rossel,5028,33,F,094244.gif,NA,Work Tool,broom bristle,11:41:45,10
+Rossel,5028,33,F,094244.gif,NA,Work Tool,broom,11:41:45,10
 Rossel,5028,33,F,094244.gif,NA,Synthetic,cotton debris,11:41:45,10
-Rossel,5028,33,F,094254.gif,NA,Work Tool,broom bristle,11:41:55,12
+Rossel,5028,33,F,094254.gif,NA,Work Tool,broom,11:41:55,12
 Rossel,5028,33,F,094254.gif,NA,Synthetic,cotton debris,11:41:55,12
 Rossel,5028,33,F,094338.gif,NA,Immovable,wall,11:42:39,10
 Rossel,5028,33,F,094430.gif,NA,Synthetic,camera,11:43:31,14
@@ -1968,10 +1968,10 @@ Rossel,7159,45,F,092510.gif,NA,Food,betelnut,11:24:15,11
 Rossel,7159,45,F,092521.gif,NA,Food,betelnut,11:24:26,5
 Rossel,7159,45,F,092526.gif,NA,Food,betelnut,11:24:31,10
 Rossel,7159,45,F,092608.gif,NA,Food,betelnut,11:25:13,10
-Rossel,7159,45,F,092641.gif,NA,Work Tool,broom bristle,11:25:46,10
-Rossel,7159,45,F,092702.gif,NA,Work Tool,broom bristle,11:26:07,10
-Rossel,7159,45,F,092712.gif,NA,Work Tool,broom bristle,11:26:17,10
-Rossel,7159,45,F,092722.gif,NA,Work Tool,broom bristle,11:26:27,12
+Rossel,7159,45,F,092641.gif,NA,Work Tool,broom,11:25:46,10
+Rossel,7159,45,F,092702.gif,NA,Work Tool,broom,11:26:07,10
+Rossel,7159,45,F,092712.gif,NA,Work Tool,broom,11:26:17,10
+Rossel,7159,45,F,092722.gif,NA,Work Tool,broom,11:26:27,12
 Rossel,7159,45,F,092850.gif,NA,Food,betelnut,11:27:55,10
 Rossel,7159,45,F,092900.gif,NA,Food,betelnut,11:28:05,11
 Rossel,7159,45,F,092911.gif,NA,Food,betelnut,11:28:16,10
@@ -5004,7 +5004,7 @@ Rossel,2195,35,M,132900.gif,NA,Food,candy,15:28:00,17
 Rossel,2195,35,M,133019.gif,NA,Natural,leaf,15:29:19,15
 Rossel,2195,35,M,133256.gif,NA,Clothing,shirt,15:31:56,17
 Rossel,2195,35,M,133550.gif,NA,Immovable,stairs,15:34:50,16
-Rossel,2195,35,M,133959.gif,NA,Work Tool,broom bristle,15:38:59,20
+Rossel,2195,35,M,133959.gif,NA,Work Tool,broom,15:38:59,20
 Rossel,2195,35,M,135242.gif,NA,Natural,flower,15:51:42,16
 Rossel,2195,35,M,135258.gif,NA,Natural,flower,15:51:58,32
 Rossel,2195,35,M,135330.gif,NA,Natural,flower,15:52:30,37
@@ -5014,7 +5014,7 @@ Rossel,2195,35,M,140002.gif,NA,Synthetic,fabric,15:59:02,17
 Rossel,2195,35,M,140019.gif,NA,Synthetic,fabric,15:59:19,15
 Rossel,2195,35,M,140427.gif,NA,Natural,flower,16:03:27,15
 Rossel,2195,35,M,140442.gif,NA,Natural,flower,16:03:42,17
-Rossel,2195,35,M,140618.gif,NA,Work Tool,broom bristle,16:05:18,15
+Rossel,2195,35,M,140618.gif,NA,Work Tool,broom,16:05:18,15
 Rossel,2195,35,M,141000.gif,NA,Natural,plant,16:09:00,15
 Rossel,2195,35,M,141015.gif,NA,Natural,plant,16:09:15,15
 Rossel,2195,35,M,141030.gif,NA,Natural,plant,16:09:30,16
@@ -5025,8 +5025,8 @@ Rossel,2195,35,M,141310.gif,NA,Immovable,veranda,16:12:10,15
 Rossel,2195,35,M,141340.gif,NA,Immovable,veranda,16:12:40,16
 Rossel,2195,35,M,141459.gif,NA,Natural,stick,16:13:59,15
 Rossel,2195,35,M,141532.gif,NA,Immovable,veranda,16:14:32,15
-Rossel,2195,35,M,141618.gif,NA,Work Tool,broom bristle,16:15:18,16
-Rossel,2195,35,M,141634.gif,NA,Work Tool,broom bristle,16:15:34,15
+Rossel,2195,35,M,141618.gif,NA,Work Tool,broom,16:15:18,16
+Rossel,2195,35,M,141634.gif,NA,Work Tool,broom,16:15:34,15
 Rossel,2195,35,M,141649.gif,NA,Natural,stick,16:15:49,17
 Rossel,2195,35,M,142419.gif,Exclude,NA,NA,16:23:19,18
 Rossel,2195,35,M,142524.gif,Exclude,NA,NA,16:24:24,15

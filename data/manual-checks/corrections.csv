@@ -32,6 +32,7 @@ pen 08-18-16_Sanity_Tonye/102759.gif,NA,None,NA,NA,9706
 082458.gif,bowl,NA,NA,likely containing food/drink but not visible,7718
 112210.gif,pot,NA,NA,NA,5217
 190142.gif,soda,NA,NA,NA,4856
+160916.gif,NA,Exclude,Food,NA,2399
 182848.gif,soda,NA,NA,NA,4856
 155659.gif,NA,Unsure,Synthetic,NA,7512
 20160831_085107_000.gif,ball,NA,NA,plastic rice bag + rocks/heavy material made into ball,1039
@@ -156,34 +157,34 @@ pen 08-18-16_Sanity_Tonye/102759.gif,NA,None,NA,NA,9706
 20160822_070630_000.gif,empty drink bottle,NA,NA,NA,1144
 20160822_070615_000.gif,empty drink bottle,NA,NA,NA,1144
 20160822_070600_000.gif,empty drink bottle,NA,NA,NA,1144
-172629.gif,"toy car, teddy bear",NA,NA,NA,1566
-172659.gif,"toy car, teddy bear",NA,NA,NA,1566
-172800.gif,"toy car, teddy bear, stuffed animal unicorn",NA,NA,NA,1566
-172831.gif,"toy car, teddy bear, stuffed animal unicorn",NA,NA,NA,1566
+172629.gif,"toy car, stuffed animal",NA,NA,NA,1566
+172659.gif,"toy car, stuffed animal",NA,NA,NA,1566
+172800.gif,"toy car, stuffed animal",NA,NA,NA,1566
+172831.gif,"toy car, stuffed animal",NA,NA,NA,1566
 172902.gif,NA,Exclude,Toy,NA,1566
 172932.gif,NA,Exclude,Toy,NA,1566
 173002.gif,NA,Exclude,Toy,NA,1566
-173034.gif,"action figure, teddy bear",NA,NA,NA,1566
+173034.gif,"action figure, stuffed animal",NA,NA,NA,1566
 173104.gif,action figure,NA,NA,NA,1566
 173134.gif,action figure,NA,NA,NA,1566
 173205.gif,action figure,NA,NA,NA,1566
 173235.gif,action figure,NA,NA,NA,1566
-173337.gif,"action figure, teddy bear",NA,NA,NA,1566
-173407.gif,"action figure, teddy bear, toy car",NA,NA,NA,1566
+173337.gif,"action figure, stuffed animal",NA,NA,NA,1566
+173407.gif,"action figure, stuffed animal, toy car",NA,NA,NA,1566
 173438.gif,"action figure, toy car",NA,NA,NA,1566
 173509.gif,action figure,NA,NA,NA,1566
-173539.gif,"action figure, stuffed animal monkey",NA,NA,NA,1566
-173620.gif,stuffed animal monkey,NA,NA,NA,1566
-173649.gif,teddy bear,NA,NA,NA,1566
-173719.gif,teddy bear,NA,NA,NA,1566
-173820.gif,teddy bear,NA,NA,NA,1566
-173921.gif,teddy bear,NA,NA,NA,1566
+173539.gif,"action figure, stuffed animal",NA,NA,NA,1566
+173620.gif,stuffed animal,NA,NA,NA,1566
+173649.gif,stuffed animal,NA,NA,NA,1566
+173719.gif,stuffed animal,NA,NA,NA,1566
+173820.gif,stuffed animal,NA,NA,NA,1566
+173921.gif,stuffed animal,NA,NA,NA,1566
 174022.gif,action figure,NA,NA,NA,1566
-174054.gif,teddy bear,NA,NA,NA,1566
-174124.gif,teddy bear,NA,NA,NA,1566
+174054.gif,stuffed animal,NA,NA,NA,1566
+174124.gif,stuffed animal,NA,NA,NA,1566
 174154.gif,toy car,NA,NA,NA,1566
 174457.gif,action figure,NA,NA,NA,1566
-174731.gif,"action figure, teddy bear",NA,NA,NA,1566
+174731.gif,"action figure, stuffed animal",NA,NA,NA,1566
 164848.gif,NA,Exclude,NA,NA,7959
 155532.gif,NA,Unsure,NA,NA,5978
 192146.gif,NA,Exclude,Synthetic,NA,8232
@@ -201,9 +202,9 @@ pen 08-18-16_Sanity_Tonye/102759.gif,NA,None,NA,NA,9706
 190849.gif,NA,Exclude,Synthetic,likely a pole to a tool but not enough information,4313
 111718.gif,clothing,NA,NA,NA,8779
 201214.gif,flower toy,NA,NA,NA,7302
-181714.gif,reusable water bottle lid,NA,NA,NA,7302
-151606.gif,reusable water bottle lid,NA,NA,NA,7302
-151434.gif,reusable water bottle lid,NA,NA,NA,7302
+181714.gif,reusable water bottle,NA,NA,NA,7302
+151606.gif,reusable water bottle,NA,NA,NA,7302
+151434.gif,reusable water bottle,NA,NA,NA,7302
 103928.gif,stairs,NA,NA,NA,2195
 134650.gif,stairs,NA,NA,NA,9706
 134705.gif,stairs,NA,NA,NA,9706
@@ -396,3 +397,313 @@ pen 08-18-16_Sanity_Tonye/102759.gif,NA,None,NA,NA,9706
 142932.gif,tongs,NA,NA,NA,9706
 142948.gif,tongs,NA,NA,NA,9706
 182456.gif,broom,NA,NA,could possibly be a mop,5978
+095920.gif,baby bottle,NA,NA,NA,5149
+095932.gif,baby bottle,NA,NA,NA,5149
+100317.gif,baby bottle,NA,NA,NA,5149
+100327.gif,baby bottle,NA,NA,NA,5149
+081232.gif,bottle cap,NA,NA,NA,5942
+095155.gif,"container, bottle cap",NA,NA,NA,1902
+095228.gif,"bottle cap, drinking water",NA,NA,NA,1902
+095243.gif,"bottle cap, drinking water",NA,NA,NA,1902
+134744.gif,bottle cap,NA,NA,NA,1902
+095012.gif,bottle cap,NA,NA,NA,2195
+20160822_092042_000.gif,"string, bottle cap",NA,NA,NA,7333
+20160822_075507_000.gif,bottle cap,NA,NA,NA,1144
+20160822_082518_000.gif,bottle cap,NA,NA,NA,4830
+20160822_082548_000.gif,"bottle cap, leaf",NA,NA,NA,4830
+20160822_082606_000.gif,"bottle cap, leaf",NA,NA,NA,4830
+20160822_084958_000.gif,"bottle cap, rock",NA,NA,NA,4830
+20160822_085016_000.gif,bottle cap,NA,NA,NA,4830
+20160822_090331_000.gif,"bottle cap, betelnut",NA,NA,NA,4830
+20160822_090346_000.gif,"bottle cap, betelnut",NA,NA,NA,4830
+20160822_092633_000.gif,plastic bottle,NA,NA,NA,4830
+20160822_092719_000.gif,plastic bottle,NA,NA,NA,4830
+125435.gif,bottle cap,NA,NA,NA,7849
+152513.gif,"baby bottle, milk",NA,NA,NA,5994
+152543.gif,"baby bottle, milk",NA,NA,NA,5994
+152615.gif,"baby bottle, milk",NA,NA,NA,5994
+152645.gif,"baby bottle, milk",NA,NA,NA,5994
+152716.gif,"baby bottle, milk",NA,NA,NA,5994
+152748.gif,"baby bottle, milk",NA,NA,NA,5994
+152818.gif,"baby bottle, milk",NA,NA,NA,5994
+152848.gif,"baby bottle, milk",NA,NA,NA,5994
+152919.gif,"baby bottle, milk",NA,NA,NA,5994
+152949.gif,"baby bottle, milk",NA,NA,NA,5994
+180142.gif,"baby bottle, milk",NA,NA,NA,5994
+180212.gif,"baby bottle, milk",NA,NA,NA,5994
+180242.gif,"baby bottle, milk",NA,NA,NA,5994
+180313.gif,"baby bottle, milk",NA,NA,NA,5994
+180343.gif,"baby bottle, milk",NA,NA,NA,5994
+180413.gif,"baby bottle, milk",NA,NA,NA,5994
+180446.gif,"baby bottle, milk",NA,NA,NA,5994
+180516.gif,"baby bottle, milk",NA,NA,NA,5994
+180546.gif,"baby bottle, milk",NA,NA,NA,5994
+180617.gif,"baby bottle, milk",NA,NA,NA,5994
+193928.gif,"baby bottle, milk",NA,NA,NA,5994
+193958.gif,"baby bottle, milk",NA,NA,NA,5994
+194028.gif,"baby bottle, milk",NA,NA,NA,5994
+194059.gif,"baby bottle, milk",NA,NA,NA,5994
+194129.gif,"baby bottle, milk",NA,NA,NA,5994
+194159.gif,"baby bottle, milk",NA,NA,NA,5994
+194232.gif,"baby bottle, milk",NA,NA,NA,5994
+194302.gif,"baby bottle, milk",NA,NA,NA,5994
+204843.gif,"baby bottle, milk",NA,NA,NA,5994
+204913.gif,"baby bottle, milk",NA,NA,NA,5994
+204943.gif,"baby bottle, milk",NA,NA,NA,5994
+205015.gif,"baby bottle, milk",NA,NA,NA,5994
+205045.gif,"baby bottle, milk",NA,NA,NA,5994
+205115.gif,"baby bottle, milk",NA,NA,NA,5994
+205146.gif,"baby bottle, milk",NA,NA,NA,5994
+205216.gif,"baby bottle, milk",NA,NA,NA,5994
+205246.gif,"baby bottle, milk",NA,NA,NA,5994
+205317.gif,"baby bottle, milk",NA,NA,NA,5994
+205347.gif,"baby bottle, milk",NA,NA,NA,5994
+205417.gif,"baby bottle, milk",NA,NA,NA,5994
+205450.gif,"baby bottle, milk",NA,NA,NA,5994
+205520.gif,"baby bottle, milk",NA,NA,NA,5994
+205550.gif,"baby bottle, milk",NA,NA,NA,5994
+205622.gif,"baby bottle, milk",NA,NA,NA,5994
+205652.gif,"baby bottle, milk",NA,NA,NA,5994
+205722.gif,"baby bottle, milk",NA,NA,NA,5994
+205753.gif,"baby bottle, milk",NA,NA,NA,5994
+191108.gif,plastic bottle,NA,NA,NA,4590
+191209.gif,plastic bottle,NA,NA,NA,4590
+191239.gif,plastic bottle,NA,NA,NA,4590
+191309.gif,plastic bottle,NA,NA,NA,4590
+191440.gif,plastic bottle,NA,NA,NA,4590
+191513.gif,plastic bottle,NA,NA,NA,4590
+191543.gif,plastic bottle,NA,NA,NA,4590
+191613.gif,plastic bottle,NA,NA,NA,4590
+191644.gif,plastic bottle,NA,NA,NA,4590
+191714.gif,plastic bottle,NA,NA,NA,4590
+192321.gif,plastic bottle,NA,NA,NA,4590
+192351.gif,plastic bottle,NA,NA,NA,4590
+200905.gif,reusable water bottle,NA,NA,NA,6852
+201036.gif,reusable water bottle,NA,NA,NA,6852
+201128.gif,reusable water bottle,NA,NA,NA,6852
+183051.gif,bottle cap,NA,NA,NA,1598
+145710.gif,"baby bottle, milk",NA,NA,NA,8535
+150045.gif,"baby bottle, milk",NA,NA,NA,8535
+150115.gif,"baby bottle, milk",NA,NA,NA,8535
+150145.gif,"baby bottle, milk",NA,NA,NA,8535
+154157.gif,"baby bottle, milk",NA,NA,NA,8535
+154227.gif,"baby bottle, milk",NA,NA,NA,8535
+154257.gif,"baby bottle, milk",NA,NA,NA,8535
+154329.gif,"baby bottle, milk",NA,NA,NA,8535
+154359.gif,"baby bottle, milk",NA,NA,NA,8535
+154429.gif,"baby bottle, milk",NA,NA,NA,8535
+154501.gif,"baby bottle, milk",NA,NA,NA,8535
+154601.gif,"baby bottle, milk",NA,NA,NA,8535
+154632.gif,"baby bottle, milk",NA,NA,NA,8535
+154702.gif,"baby bottle, milk",NA,NA,NA,8535
+154731.gif,"baby bottle, milk",NA,NA,NA,8535
+154801.gif,"baby bottle, milk",NA,NA,NA,8535
+174407.gif,"baby bottle, milk",NA,NA,NA,8535
+175857.gif,"baby bottle, milk",NA,NA,NA,8535
+180058.gif,"baby bottle, milk",NA,NA,NA,8535
+224935.gif,"baby bottle, milk",NA,NA,NA,8535
+225005.gif,"baby bottle, milk",NA,NA,NA,8535
+225037.gif,"baby bottle, milk",NA,NA,NA,8535
+225107.gif,"baby bottle, milk",NA,NA,NA,8535
+225137.gif,"baby bottle, milk",NA,NA,NA,8535
+225208.gif,"baby bottle, milk",NA,NA,NA,8535
+225238.gif,"baby bottle, milk",NA,NA,NA,8535
+225409.gif,"baby bottle, milk",NA,NA,NA,8535
+225439.gif,"baby bottle, milk",NA,NA,NA,8535
+225510.gif,"baby bottle, milk",NA,NA,NA,8535
+225540.gif,"baby bottle, milk",NA,NA,NA,8535
+225610.gif,"baby bottle, milk",NA,NA,NA,8535
+225641.gif,"baby bottle, milk",NA,NA,NA,8535
+225741.gif,"baby bottle, milk",NA,NA,NA,8535
+183433.gif,bottle cap,NA,NA,NA,7302
+183504.gif,bottle cap,NA,NA,NA,7302
+183534.gif,bottle cap,NA,NA,NA,7302
+182529.gif,bottle cap,NA,NA,NA,3158
+182701.gif,bottle cap,NA,NA,NA,3158
+182732.gif,bottle cap,NA,NA,NA,3158
+182934.gif,bottle cap,NA,NA,NA,3158
+183004.gif,bottle cap,NA,NA,NA,3158
+183405.gif,bottle cap,NA,NA,NA,3158
+183818.gif,bottle cap,NA,NA,NA,3158
+055623.gif,bottle cap,NA,NA,NA,4313
+064027.gif,bottle cap,NA,NA,NA,4313
+064127.gif,bottle cap,NA,NA,NA,4313
+064257.gif,bottle cap,NA,NA,NA,4313
+064327.gif,bottle cap,NA,NA,NA,4313
+064357.gif,bottle cap,NA,NA,NA,4313
+064433.gif,bottle cap,NA,NA,NA,4313
+064605.gif,"bottle cap, cup",NA,NA,NA,4313
+064635.gif,"bottle cap, cup",NA,NA,NA,4313
+064737.gif,"bottle cap, cup",NA,NA,NA,4313
+064745.gif,bottle cap,NA,NA,NA,4313
+070026.gif,purse,NA,NA,NA,8779
+180607.gif,bulk food bag,NA,NA,NA,7674
+230746.gif,bulk food bag,NA,NA,NA,7674
+190614.gif,bulk food bag,NA,NA,NA,8532
+234451.gif,bulk food bag,NA,NA,NA,7328
+110106.gif,empty drink bottle,NA,NA,NA,5348
+110122.gif,empty drink bottle,NA,NA,NA,5348
+110137.gif,empty drink bottle,NA,NA,NA,5348
+144609.gif,empty drink bottle,NA,NA,NA,9706
+144625.gif,empty drink bottle,NA,NA,NA,9706
+135227.gif,empty drink bottle,NA,NA,NA,2789
+135314.gif,empty drink bottle,NA,NA,NA,2789
+135329.gif,empty drink bottle,NA,NA,NA,2789
+140417.gif,empty drink bottle,NA,NA,NA,2789
+20160822_054642_000.gif,canteen,NA,NA,NA,4830
+20160822_054658_000.gif,empty drink bottle,NA,NA,NA,4830
+20160822_054713_000.gif,canteen,NA,NA,NA,4830
+125506.gif,empty drink bottle,NA,NA,NA,7849
+125521.gif,empty drink bottle,NA,NA,NA,7849
+125536.gif,empty drink bottle,NA,NA,NA,7849
+125553.gif,empty drink bottle,NA,NA,NA,7849
+125608.gif,empty drink bottle,NA,NA,NA,7849
+125623.gif,empty drink bottle,NA,NA,NA,7849
+125711.gif,empty drink bottle,NA,NA,NA,7849
+130311.gif,empty drink bottle,NA,NA,NA,7849
+082426.gif,candy,NA,NA,NA,5217
+082443.gif,candy,NA,NA,NA,5217
+082458.gif,candy,NA,NA,NA,5217
+082513.gif,candy,NA,NA,NA,5217
+075129.gif,empty drink bottle,NA,NA,NA,3124
+075145.gif,empty drink bottle,NA,NA,NA,3124
+075200.gif,empty drink bottle,NA,NA,NA,3124
+075215.gif,empty drink bottle,NA,NA,NA,3124
+081653.gif,empty drink bottle,NA,NA,NA,3124
+081708.gif,empty drink bottle,NA,NA,NA,3124
+081723.gif,empty drink bottle,NA,NA,NA,3124
+081755.gif,empty drink bottle,NA,NA,NA,3124
+081810.gif,empty drink bottle,NA,NA,NA,3124
+143553.gif,empty drink bottle,NA,NA,NA,3124
+143640.gif,empty drink bottle,NA,NA,NA,3124
+143655.gif,empty drink bottle,NA,NA,NA,3124
+143812.gif,empty drink bottle,NA,NA,NA,3124
+143858.gif,empty drink bottle,NA,NA,NA,3124
+144125.gif,empty drink bottle,NA,NA,NA,3124
+073411.gif,bottled water,NA,NA,NA,7423
+075840.gif,bottled water,NA,NA,NA,7423
+075855.gif,bottled water,NA,NA,NA,7423
+075943.gif,bottled water,NA,NA,NA,7423
+120613.gif,"jug, drinking water",NA,NA,NA,7423
+20160831_142055_000.gif,empty drink bottle,NA,NA,NA,6191
+151118.gif,empty drink bottle,NA,NA,NA,4856
+230026.gif,empty drink bottle,NA,NA,NA,8535
+112721.gif,spoon,NA,NA,NA,5217
+112736.gif,"spoon, sago",NA,NA,NA,5217
+112822.gif,"spoon, rice",NA,NA,NA,5217
+112839.gif,"spoon, rice",NA,NA,NA,5217
+112854.gif,"spoon, rice",NA,NA,NA,5217
+112909.gif,"spoon, rice",NA,NA,NA,5217
+112927.gif,"spoon, rice",NA,NA,NA,5217
+112942.gif,"spoon, rice",NA,NA,NA,5217
+112957.gif,spoon,NA,NA,NA,5217
+113013.gif,"spoon, tuber",NA,NA,NA,5217
+113028.gif,spoon,NA,NA,NA,5217
+113043.gif,"spoon, rice",NA,NA,NA,5217
+113101.gif,"spoon, rice",NA,NA,NA,5217
+113132.gif,"spoon, rice",NA,NA,NA,5217
+113148.gif,spoon,NA,NA,NA,5217
+113203.gif,spoon,NA,NA,NA,5217
+113219.gif,spoon,NA,NA,NA,5217
+113235.gif,"spoon, plate",NA,NA,NA,5217
+113250.gif,spoon,NA,NA,NA,5217
+113305.gif,spoon,NA,NA,NA,5217
+113323.gif,"spoon, rice",NA,NA,NA,5217
+113338.gif,"spoon, rice",NA,NA,NA,5217
+113354.gif,spoon,NA,NA,NA,5217
+113410.gif,spoon,NA,NA,NA,5217
+113457.gif,tuber,NA,NA,NA,5217
+113512.gif,spoon,NA,NA,NA,5217
+113527.gif,spoon,NA,NA,NA,5217
+113544.gif,"spoon, rice",NA,NA,NA,5217
+113559.gif,"spoon, rice",NA,NA,NA,5217
+113614.gif,"spoon, plate",NA,NA,NA,5217
+113631.gif,spoon,NA,NA,NA,5217
+113646.gif,spoon,NA,NA,NA,5217
+113703.gif,spoon,NA,NA,NA,5217
+112226.gif,"spoon, stick",NA,NA,NA,5217
+082047.gif,packaged snack,NA,NA,NA,5217
+082102.gif,packaged snack,NA,NA,NA,5217
+082149.gif,packaged snack,NA,NA,NA,5217
+082204.gif,packaged snack,NA,NA,NA,5217
+082222.gif,packaged snack,NA,NA,NA,5217
+082323.gif,"packaged snack, hammock",NA,NA,NA,5217
+082339.gif,packaged snack,NA,NA,NA,5217
+082529.gif,packaged snack,NA,NA,NA,5217
+082544.gif,packaged snack,NA,NA,NA,5217
+082559.gif,packaged snack,NA,NA,NA,5217
+082617.gif,packaged snack,NA,NA,NA,5217
+082632.gif,packaged snack,NA,NA,NA,5217
+20160822_093107_000.gif,"fork, seafood",NA,NA,NA,7333
+20160822_093122_000.gif,"fork, seafood",NA,NA,NA,7333
+080306.gif,stairs,NA,NA,NA,6792
+093417.gif,woven basket,NA,NA,check function,5942
+195602.gif,rope,NA,NA,check function,1312
+195633.gif,rope,NA,NA,check function,1312
+195703.gif,rope,NA,NA,check function,1312
+195735.gif,rope,NA,NA,check function,1312
+195805.gif,rope,NA,NA,check function,1312
+195835.gif,rope,NA,NA,check function,1312
+195907.gif,rope,NA,NA,check function,1312
+200007.gif,rope,NA,NA,check function,1312
+200040.gif,rope,NA,NA,check function,1312
+200110.gif,rope,NA,NA,check function,1312
+20160811_075300_000.gif,sago,NA,NA,NA,2802
+20160811_075310_000.gif,sago,NA,NA,NA,2802
+20160811_075321_000.gif,sago,NA,NA,NA,2802
+20160811_075344_000.gif,sago,NA,NA,NA,2802
+20160811_090807_000.gif,sago,NA,NA,NA,2802
+20160811_090817_000.gif,sago,NA,NA,NA,2802
+20160811_090909_000.gif,sago,NA,NA,NA,2802
+20160811_090929_000.gif,sago,NA,NA,NA,2802
+090059.gif,tuber,NA,NA,NA,7849
+090114.gif,tuber,NA,NA,NA,7849
+090129.gif,tuber,NA,NA,NA,7849
+090146.gif,tuber,NA,NA,NA,7849
+090303.gif,tuber,NA,NA,NA,7849
+124953.gif,tuber,NA,NA,NA,7849
+125055.gif,tuber,NA,NA,NA,7849
+125113.gif,tuber,NA,NA,NA,7849
+1300003.gif,tuber,NA,NA,NA,7849
+130018.gif,tuber,NA,NA,NA,7849
+130036.gif,tuber,NA,NA,NA,7849
+130051.gif,tuber,NA,NA,NA,7849
+130123.gif,tuber,NA,NA,NA,7849
+130138.gif,tuber,NA,NA,NA,7849
+130153.gif,tuber,NA,NA,NA,7849
+130209.gif,tuber,NA,NA,NA,7849
+130224.gif,tuber,NA,NA,NA,7849
+130256.gif,tuber,NA,NA,NA,7849
+20160831_120640_000.gif,coral,NA,NA,NA,1039
+20160831_120656_000.gif,coral,NA,NA,NA,1039
+20160831_120711_000.gif,coral,NA,NA,NA,1039
+20160831_120726_000.gif,coral,NA,NA,NA,1039
+20160831_120743_000.gif,coral,NA,NA,NA,1039
+20160831_120813_000.gif,coral,NA,NA,NA,1039
+20160831_120830_000.gif,coral,NA,NA,NA,1039
+20160831_120842_000.gif,coral,NA,NA,NA,1039
+20160831_121149_000.gif,coral,NA,NA,NA,1039
+20160831_121221_000.gif,coral,NA,NA,NA,1039
+20160831_121236_000.gif,coral,NA,NA,NA,1039
+145448.gif,wood slat,NA,NA,NA,9706
+145433.gif,wood slat,NA,NA,NA,9706
+145418.gif,wood slat,NA,NA,NA,9706
+141004.gif,leaf,NA,NA,NA,9706
+135208.gif,wood slat,NA,NA,NA,9706
+135153.gid,wood slat,NA,NA,NA,9706
+105641.gif,wood slat,NA,NA,NA,9706
+105624.gif,wood slat,NA,NA,NA,9706
+105609.gif,wood slat,NA,NA,NA,9706
+154518.gif,broom,NA,NA,NA,8532
+171940.gif,broom,NA,NA,could possibly be a mop,8532
+172010.gif,broom,NA,NA,could possibly be a mop,8532
+172030.gif,broom,NA,NA,could possibly be a mop,8532
+172100.gif,broom,NA,NA,could possibly be a mop,8532
+165132.gif,NA,Exclude,NA,NA,7328
+165202.gif,NA,Exclude,NA,NA,7328
+211355.gif,rubber fragment,NA,NA,NA,7328
+211457.gif,rubber fragment,NA,NA,NA,7329
+211527.gif,rubber fragment,NA,NA,NA,7330
+211600.gif,rubber fragment,NA,NA,NA,7331
+211630.gif,rubber fragment,NA,NA,NA,7332
+211801.gif,rubber fragment,NA,NA,NA,7333

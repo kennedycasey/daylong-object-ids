@@ -1,5 +1,5 @@
 Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
-20160811_130226_000.gif,soap bar,NA,MC,0,0,0,NA,7101
+20160811_130226_000.gif,soap,NA,MC,0,0,0,NA,7101
 20160811_130709_000.gif,banana,NA,MC,0,0,0,NA,7101
 20160811_130719_000.gif,banana,NA,MC,0,0,0,NA,7101
 20160811_065031_000.gif,wind up toy,NA,KC,0,0,0,NA,4964
@@ -180,7 +180,7 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 083634.gif,camera,NA,KC,0,0,0,NA,5348
 083954.gif,leaf,NA,MC,0,0,0,NA,5348
 084009.gif,leaf,NA,MC,0,0,0,NA,5348
-084111.gif,commercial fishing misc,NA,MC,0,0,0,NA,5348
+084111.gif,fishing debris,NA,MC,0,0,0,NA,5348
 084143.gif,lotion,NA,KC,0,0,0,NA,5348
 084158.gif,lotion,NA,KC,0,0,0,NA,5348
 084245.gif,lotion,NA,KC,0,0,0,NA,5348
@@ -225,7 +225,7 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 145605.gif,skirt,NA,MC,0,0,0,NA,5348
 145740.gif,wood slat,NA,MC,0,0,0,NA,5348
 150117.gif,pole,NA,MC,0,0,0,NA,5348
-150452.gif,commercial fishing misc,NA,MC,0,0,0,NA,5348
+150452.gif,fishing debris,NA,MC,0,0,0,NA,5348
 072045.gif,hammock,NA,KC,0,0,0,NA,9706
 081002.gif,sago,NA,MC,0,0,0,NA,9706
 081736.gif,NA,NA,KC,1,0,0,NA,9706
@@ -299,8 +299,8 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 20160822_091255_000.gif,taro,NA,MC,0,0,0,NA,4830
 20160822_130240_000.gif,manioc,NA,MC,0,0,0,NA,5797
 062016.gif,knife-M,NA,KC,0,0,0,NA,7849
-062031.gif,sugarcane,NA,MC,0,0,0,NA,7849
-062048.gif,sugarcane,NA,MC,0,0,0,NA,7849
+062031.gif,sugar cane,NA,MC,0,0,0,NA,7849
+062048.gif,sugar cane,NA,MC,0,0,0,NA,7849
 063957.gif,NA,NA,MC,0,0,1,NA,7849
 094611.gif,plastic container,NA,MC,0,0,0,NA,7849
 094659.gif,plastic container,NA,MC,0,0,0,NA,7849
@@ -516,8 +516,8 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 193102.gif,jacket,NA,MC,0,0,0,NA,1076
 193132.gif,jacket,NA,MC,0,0,0,NA,1076
 202329.gif,jacket,NA,MC,0,0,0,NA,1076
-193124.gif,misc toy,NA,MC,0,0,0,NA,5449
-193225.gif,misc toy,NA,MC,0,0,0,NA,5449
+193124.gif,plastic toy,NA,MC,0,0,0,NA,5449
+193225.gif,plastic toy,NA,MC,0,0,0,NA,5449
 182533.gif,NA,NA,MC,1,0,0,NA,8232
 185558.gif,NA,NA,KC,1,0,0,NA,8232
 190147.gif,NA,NA,MC,1,0,0,NA,8232
@@ -526,9 +526,9 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 192146.gif,NA,NA,KC,1,0,0,NA,8232
 195143.gif,NA,NA,MC,1,0,0,NA,8232
 224132.gif,NA,NA,MC,1,0,0,Food,8232
-151131.gif,misc cardboard box,need to double check,KC,0,0,0,NA,7302
-151233.gif,misc cardboard box,need to double check,KC,0,0,0,NA,7302
-151334.gif,misc cardboard box,need to double check,KC,0,0,0,NA,7302
+151131.gif,cardboard packaging,NA,KC,0,0,0,NA,7302
+151233.gif,cardboard packaging,NA,KC,0,0,0,NA,7302
+151334.gif,cardboard packaging,NA,KC,0,0,0,NA,7302
 152250.gif,NA,NA,MC,0,0,1,NA,7302
 152320.gif,NA,NA,MC,0,0,1,NA,7302
 152448.gif,NA,NA,MC,1,0,0,NA,7302
@@ -542,12 +542,12 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 203704.gif,NA,NA,MC,0,0,1,NA,7302
 215615.gif,paper,NA,MC,0,0,0,NA,7302
 233308.gif,corn,NA,KC,0,0,0,NA,7302
-151503.gif,food,NA,MC,1,0,0,Food,5978
-151533.gif,food,NA,MC,1,0,0,Food,5978
-151603.gif,food,NA,MC,1,0,0,Food,5978
-151735.gif,food,NA,MC,1,0,0,Food,5978
-152039.gif,food,NA,MC,1,0,0,Food,5978
-152112.gif,food,NA,MC,1,0,0,Food,5978
+151503.gif,NA,NA,MC,1,0,0,Food,5978
+151533.gif,NA,NA,MC,1,0,0,Food,5978
+151603.gif,NA,NA,MC,1,0,0,Food,5978
+151735.gif,NA,NA,MC,1,0,0,Food,5978
+152039.gif,NA,NA,MC,1,0,0,Food,5978
+152112.gif,NA,NA,MC,1,0,0,Food,5978
 153834.gif,NA,NA,MC,1,0,0,NA,5978
 154005.gif,NA,NA,MC,1,0,0,NA,5978
 154340.gif,packaged snack,NA,MC,0,0,0,NA,5978
@@ -579,10 +579,10 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 190455.gif,NA,NA,MC,1,0,0,Food,1129
 190525.gif,NA,NA,MC,0,0,1,Food,1129
 190557.gif,leaf,NA,MC,0,0,0,NA,1129
-190900.gif,misc plastic,NA,MC,0,0,0,NA,1129
-190930.gif,misc plastic,NA,MC,0,0,0,NA,1129
+190900.gif,plastic packaging,NA,MC,0,0,0,NA,1129
+190930.gif,plastic packaging,NA,MC,0,0,0,NA,1129
 191740.gif,black beans,NA,KC,0,0,0,NA,1129
-192211.gif,"black beans, misc plastic",NA,KC,0,0,0,NA,1129
+192211.gif,"black beans, plastic packaging",NA,KC,0,0,0,NA,1129
 203637.gif,ball,NA,KC,0,0,0,NA,1129
 203707.gif,NA,NA,MC,1,0,0,Synthetic,1129
 203839.gif,NA,NA,KC,1,0,0,NA,1129
@@ -611,8 +611,8 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 171241.gif,gas canister,NA,MC,0,0,0,NA,9615
 171615.gif,detergent,NA,MC,0,0,0,NA,9615
 171717.gif,detergent,NA,MC,0,0,0,NA,9615
-183718.gif,pill packaging,NA,MC,0,0,0,NA,9615
-183748.gif,pill packaging,NA,MC,0,0,0,NA,9615
+183718.gif,pill package,NA,MC,0,0,0,NA,9615
+183748.gif,pill package,NA,MC,0,0,0,NA,9615
 184827.gif,NA,NA,MC,1,0,0,NA,9615
 203345.gif,rice,NA,MC,0,0,0,NA,9615
 232206.gif,rock,NA,KC,0,0,0,NA,9615
@@ -725,19 +725,19 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 20160811_085414_000.gif,NA,NA,KC,1,0,0,NA,3946
 20160811_092244_000.gif,sago,NA,KC,0,0,0,NA,3946
 20160811_092429_000.gif,dress,NA,KC,0,0,0,NA,3946
-20160811_102035_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
-20160811_102046_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
-20160811_102058_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
-20160811_102118_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
-20160811_102130_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
-20160811_102150_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
-20160811_102201_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
-20160811_102307_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
-20160811_102317_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
-20160811_102327_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
-20160811_102348_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
-20160811_102358_000.gif,"misc plastic, leaf",NA,KC,0,0,0,NA,3946
-20160811_102517_000.gif,chapstick container,NA,KC,0,0,0,NA,3946
+20160811_102035_000.gif,"plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102046_000.gif,"plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102058_000.gif,"plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102118_000.gif,"plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102130_000.gif,"plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102150_000.gif,"plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102201_000.gif,"plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102307_000.gif,"plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102317_000.gif,"plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102327_000.gif,"plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102348_000.gif,"plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102358_000.gif,"plastic, leaf",NA,KC,0,0,0,NA,3946
+20160811_102517_000.gif,container,NA,KC,0,0,0,NA,3946
 20160811_102809_000.gif,shirt,NA,MC,0,0,0,NA,3946
 20160811_102924_000.gif,shirt,NA,MC,0,0,0,NA,3946
 20160811_102935_000.gif,shirt,NA,MC,0,0,0,NA,3946
@@ -749,11 +749,11 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 145922.gif,embroidery ring,NA,NA,0,0,0,NA,7959
 145952.gif,NA,NA,KC,1,0,0,Synthetic,7959
 151006.gif,shield,NA,MC,0,0,0,Synthetic,7959
-152143.gif,misc packaging,NA,KC,0,0,0,NA,7959
+152143.gif,cardboard packaging,NA,KC,0,0,0,NA,7959
 152214.gif,NA,cannot figure out the shape,KC,1,0,0,NA,7959
 152244.gif,NA,NA,KC,1,0,0,NA,7959
-152815.gif,misc packaging,NA,KC,0,0,0,NA,7959
-154513.gif,misc packaging,NA,NA,0,0,0,NA,7959
+152815.gif,cardboard packaging,NA,KC,0,0,0,NA,7959
+154513.gif,cardboard packaging,NA,KC,0,0,0,NA,7959
 160105.gif,NA,"many object show, he is just reaching so it is hard to determine what for in specific",KC,0,1,0,NA,7959
 160236.gif,water bottle,NA,KC,0,0,0,NA,7959
 161317.gif,zebra toy,NA,KC,0,0,0,NA,7959
@@ -770,18 +770,18 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 170138.gif,NA,NA,KC,1,0,0,NA,7959
 170211.gif,NA,NA,KC,1,0,0,NA,7959
 172657.gif,shoe,NA,KC,0,0,0,NA,7959
-172727.gif,sugarcane,NA,KC,0,0,0,NA,7959
+172727.gif,sugar cane,NA,KC,0,0,0,NA,7959
 173516.gif,NA,NA,KC,1,0,0,NA,7959
-173551.gif,sugarcane,NA,NA,0,0,0,NA,7959
-173623.gif,sugarcane,NA,NA,0,0,0,NA,7959
-173654.gif,sugarcane,NA,NA,0,0,0,NA,7959
-174351.gif,sugarcane,NA,NA,0,0,0,NA,7959
-174423.gif,sugarcane,NA,NA,0,0,0,NA,7959
-174453.gif,sugarcane,NA,NA,0,0,0,NA,7959
-174758.gif,sugarcane,NA,NA,0,0,0,NA,7959
-174828.gif,sugarcane,NA,NA,0,0,0,NA,7959
-174859.gif,sugarcane,NA,NA,0,0,0,NA,7959
-175727.gif,sugarcane,NA,NA,0,0,0,NA,7959
+173551.gif,sugar cane,NA,NA,0,0,0,NA,7959
+173623.gif,sugar cane,NA,NA,0,0,0,NA,7959
+173654.gif,sugar cane,NA,NA,0,0,0,NA,7959
+174351.gif,sugar cane,NA,NA,0,0,0,NA,7959
+174423.gif,sugar cane,NA,NA,0,0,0,NA,7959
+174453.gif,sugar cane,NA,NA,0,0,0,NA,7959
+174758.gif,sugar cane,NA,NA,0,0,0,NA,7959
+174828.gif,sugar cane,NA,NA,0,0,0,NA,7959
+174859.gif,sugar cane,NA,NA,0,0,0,NA,7959
+175727.gif,sugar cane,NA,NA,0,0,0,NA,7959
 175930.gif,stick,NA,NA,0,0,0,NA,7959
 180109.gif,stick,NA,NA,0,0,0,NA,7959
 180139.gif,stick,NA,NA,0,0,0,NA,7959
@@ -1168,8 +1168,8 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 073630.gif,safety pin,NA,MC,0,0,0,NA,1902
 073717.gif,safety pin,NA,MC,0,0,0,NA,1902
 073734.gif,safety pin,NA,MC,0,0,0,NA,1902
-074111.gif,fishing debrris,NA,MC,0,0,0,NA,1902
-074144.gif,fishing debrris,NA,MC,0,0,0,NA,1902
+074111.gif,fishing debris,NA,MC,0,0,0,NA,1902
+074144.gif,fishing debris,NA,MC,0,0,0,NA,1902
 074549.gif,fishnet,NA,MC,0,0,0,NA,1902
 074621.gif,money,NA,MC,0,0,0,NA,1902
 074636.gif,money,NA,MC,0,0,0,NA,1902
@@ -1177,36 +1177,36 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 075205.gif,money,NA,MC,0,0,0,NA,1902
 075221.gif,money,NA,MC,0,0,0,NA,1902
 085902.gif,skirt,NA,KC,0,0,0,NA,1902
-090325.gif,sugarcane,NA,KC,0,0,0,NA,1902
-090340.gif,sugarcane,NA,KC,0,0,0,NA,1902
-090355.gif,sugarcane,NA,KC,0,0,0,NA,1902
-090413.gif,sugarcane,NA,KC,0,0,0,NA,1902
-090428.gif,sugarcane,NA,KC,0,0,0,NA,1902
-090443.gif,sugarcane,NA,KC,0,0,0,NA,1902
-090500.gif,sugarcane,NA,KC,0,0,0,NA,1902
-090515.gif,sugarcane,NA,KC,0,0,0,NA,1902
-090530.gif,sugarcane,NA,KC,0,0,0,NA,1902
-090547.gif,sugarcane,NA,KC,0,0,0,NA,1902
-090602.gif,sugarcane,NA,KC,0,0,0,NA,1902
-090617.gif,sugarcane,NA,KC,0,0,0,NA,1902
-090634.gif,sugarcane,NA,KC,0,0,0,NA,1902
-090649.gif,sugarcane,NA,KC,0,0,0,NA,1902
-090704.gif,sugarcane,NA,KC,0,0,0,NA,1902
-090721.gif,sugarcane,NA,KC,0,0,0,NA,1902
-090856.gif,sugarcane,NA,KC,0,0,0,NA,1902
-090926.gif,sugarcane,NA,KC,0,0,0,NA,1902
-090945.gif,sugarcane,NA,KC,0,0,0,NA,1902
-091000.gif,sugarcane,NA,KC,0,0,0,NA,1902
-091015.gif,sugarcane,NA,KC,0,0,0,NA,1902
-091032.gif,sugarcane,NA,KC,0,0,0,NA,1902
-091047.gif,sugarcane,NA,KC,0,0,0,NA,1902
-091102.gif,sugarcane,NA,KC,0,0,0,NA,1902
-091119.gif,sugarcane,NA,KC,0,0,0,NA,1902
-091325.gif,sugarcane,NA,KC,0,0,0,NA,1902
-091342.gif,sugarcane,NA,KC,0,0,0,NA,1902
-091357.gif,sugarcane,NA,KC,0,0,0,NA,1902
-091412.gif,sugarcane,NA,KC,0,0,0,NA,1902
-091459.gif,sugarcane,NA,KC,0,0,0,NA,1902
+090325.gif,sugar cane,NA,KC,0,0,0,NA,1902
+090340.gif,sugar cane,NA,KC,0,0,0,NA,1902
+090355.gif,sugar cane,NA,KC,0,0,0,NA,1902
+090413.gif,sugar cane,NA,KC,0,0,0,NA,1902
+090428.gif,sugar cane,NA,KC,0,0,0,NA,1902
+090443.gif,sugar cane,NA,KC,0,0,0,NA,1902
+090500.gif,sugar cane,NA,KC,0,0,0,NA,1902
+090515.gif,sugar cane,NA,KC,0,0,0,NA,1902
+090530.gif,sugar cane,NA,KC,0,0,0,NA,1902
+090547.gif,sugar cane,NA,KC,0,0,0,NA,1902
+090602.gif,sugar cane,NA,KC,0,0,0,NA,1902
+090617.gif,sugar cane,NA,KC,0,0,0,NA,1902
+090634.gif,sugar cane,NA,KC,0,0,0,NA,1902
+090649.gif,sugar cane,NA,KC,0,0,0,NA,1902
+090704.gif,sugar cane,NA,KC,0,0,0,NA,1902
+090721.gif,sugar cane,NA,KC,0,0,0,NA,1902
+090856.gif,sugar cane,NA,KC,0,0,0,NA,1902
+090926.gif,sugar cane,NA,KC,0,0,0,NA,1902
+090945.gif,sugar cane,NA,KC,0,0,0,NA,1902
+091000.gif,sugar cane,NA,KC,0,0,0,NA,1902
+091015.gif,sugar cane,NA,KC,0,0,0,NA,1902
+091032.gif,sugar cane,NA,KC,0,0,0,NA,1902
+091047.gif,sugar cane,NA,KC,0,0,0,NA,1902
+091102.gif,sugar cane,NA,KC,0,0,0,NA,1902
+091119.gif,sugar cane,NA,KC,0,0,0,NA,1902
+091325.gif,sugar cane,NA,KC,0,0,0,NA,1902
+091342.gif,sugar cane,NA,KC,0,0,0,NA,1902
+091357.gif,sugar cane,NA,KC,0,0,0,NA,1902
+091412.gif,sugar cane,NA,KC,0,0,0,NA,1902
+091459.gif,sugar cane,NA,KC,0,0,0,NA,1902
 091650.gif,fruit (unknown variety),NA,KC,0,0,0,NA,1902
 091911.gif,NA,NA,MC,0,0,1,Food,1902
 091927.gif,NA,NA,MC,0,0,1,Food,1902
@@ -1263,15 +1263,15 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 082357.gif,misc container,NA,KC,0,0,0,NA,6792
 104935.gif,NA,NA,KC,1,0,0,NA,6792
 111440.gif,NA,NA,KC,1,0,0,NA,6792
-130711.gif,commercial fishing misc,NA,KC,0,0,0,NA,6792
-131714.gif,fruit (unknown variety),NA,MC,0,0,0,NA,6792
-131729.gif,fruit (unknown variety),NA,MC,0,0,0,NA,6792
-131748.gif,fruit (unknown variety),NA,MC,0,0,0,NA,6792
-131803.gif,fruit (unknown variety),NA,MC,0,0,0,NA,6792
-131818.gif,fruit (unknown variety),NA,MC,0,0,0,NA,6792
-132218.gif,fruit (unknown variety),NA,MC,0,0,0,NA,6792
-132411.gif,fruit (unknown variety),NA,MC,0,0,0,NA,6792
-134741.gif,fruit (unknown variety),NA,MC,0,0,0,NA,6792
+130711.gif,fishing debris,NA,KC,0,0,0,NA,6792
+131714.gif,orange,NA,MC,0,0,0,NA,6792
+131729.gif,orange,NA,MC,0,0,0,NA,6792
+131748.gif,orange,NA,MC,0,0,0,NA,6792
+131803.gif,orange,NA,MC,0,0,0,NA,6792
+131818.gif,orange,NA,MC,0,0,0,NA,6792
+132218.gif,orange,NA,MC,0,0,0,NA,6792
+132411.gif,orange,NA,MC,0,0,0,NA,6792
+134741.gif,orange,NA,MC,0,0,0,NA,6792
 142144.gif,flower,NA,KC,0,0,0,NA,6792
 142207.gif,flower,NA,KC,0,0,0,NA,6792
 071346.gif,paper,NA,MC,0,0,0,NA,7528
@@ -1390,11 +1390,11 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 102743.gif,weaving grass,NA,KC,0,0,0,NA,2195
 103705.gif,table,NA,KC,0,0,0,NA,2195
 104330.gif,NA,NA,MC,0,0,1,NA,2195
-104503.gif,"sugarcane, knife-M",NA,MC/KC,0,0,0,NA,2195
-104522.gif,"sugarcane, knife-M",NA,MC/KC,0,0,0,NA,2195
-104537.gif,"sugarcane, knife-M",NA,MC/KC,0,0,0,NA,2195
-104552.gif,"sugarcane, knife-M",NA,MC/KC,0,0,0,NA,2195
-104609.gif,"sugarcane, knife-M",NA,MC/KC,0,0,0,NA,2195
+104503.gif,"sugar cane, knife-M",NA,MC/KC,0,0,0,NA,2195
+104522.gif,"sugar cane, knife-M",NA,MC/KC,0,0,0,NA,2195
+104537.gif,"sugar cane, knife-M",NA,MC/KC,0,0,0,NA,2195
+104552.gif,"sugar cane, knife-M",NA,MC/KC,0,0,0,NA,2195
+104609.gif,"sugar cane, knife-M",NA,MC/KC,0,0,0,NA,2195
 104639.gif,NA,NA,MC,0,0,0,NA,2195
 111202.gif,coconut scraper,NA,MC,0,0,0,NA,2195
 111234.gif,coconut scraper,NA,MC,0,0,0,NA,2195
@@ -1740,8 +1740,8 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 194059.gif,rope,NA,MC,0,0,0,NA,2399
 194746.gif,chair,NA,KC,0,0,0,NA,2399
 195304.gif,"toy car, pillar",NA,KC,0,0,0,NA,2399
-200251.gif,plastic bag,NA,MC,0,0,0,NA,2399
-200321.gif,plastic bag,NA,MC,0,0,0,NA,2399
+200251.gif,plastic packaging,NA,MC,0,0,0,NA,2399
+200321.gif,plastic packaging,NA,MC,0,0,0,NA,2399
 200430.gif,hammock,NA,KC,0,0,0,NA,2399
 203212.gif,flower,NA,KC,0,0,0,NA,2399
 214441.gif,clothesline,NA,KC,0,0,0,NA,2399

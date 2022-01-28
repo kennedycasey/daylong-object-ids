@@ -308,7 +308,7 @@ kable(tbl.input, format = "latex",
       row.names = FALSE, 
       booktabs = TRUE,
       position = "!ht",
-      caption = "Unique object counts and top objects for each category across sites.") %>%
+      caption = "Unique object counts (N) and top objects for each category across sites.") %>%
   kable_styling(latex_options = "scale_down") %>%
   add_header_above(c(" " = 1, "Rossel" = 3, "Tseltal" = 3), align = "c", bold = TRUE) %>%
   row_spec(0, bold = TRUE)

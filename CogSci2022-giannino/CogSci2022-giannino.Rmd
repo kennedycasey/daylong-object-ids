@@ -61,7 +61,6 @@ library(kableExtra)
 ```
 
 ```{r, data-prep}
-
 run.from.raw = FALSE
 if (run.from.raw) {
   # this R script creates the "all-data.csv"
@@ -198,7 +197,7 @@ Images were excluded if they were too dark, bright, blurry, or covered for annot
 
 XX% of photo streams were double coded. Reliability annotations were equally spread across sites and ages and included a total of XXXX images. At the category level, annotators agreed on XX.X% of decisions (Rossel: XX.X%, Tseltal: XX.X%). At the object label level, annotators agreed on XX.X% of decisions (Rossel: XX.X%, Tseltal: XX.X%).
 
-```{r, top-objects, results = "asis"}
+```{r top-objects, results = "asis", fig.env = "table*"}
 # compute the objects that most often appear 1+ times across children w/i sites
 # use this to find the top 3 items per category per site
 top.objects.bycategory <- data %>%
@@ -233,16 +232,16 @@ category.counts <- data %>%
   pivot_wider(names_from = "site", values_from = "n.objects")
 
 # combine and do some formatting to create table
-tbl <- bind_cols(category.counts, top.objects.bycategory) %>%
+tbl.input <- bind_cols(category.counts, top.objects.bycategory) %>%
   select(category...1, Rossel...2, Rossel...5, Tseltal...3, Tseltal...6)
 
-colnames(tbl) <- c("Object Category", "N", "Top objects", "N", "Top objects")
+colnames(tbl.input) <- c("Object Category", "N", "Top objects", "N", "Top objects")
 
-xtable::xtable(tbl,
+xtable::xtable(tbl.input,
                row.names = FALSE,
                caption = "Unique object counts and top non-study-related objects for each category across sites.") %>%
-    xtable2kable(booktabs = TRUE, escape = FALSE, row.names = NA) %>%
-    kable_styling(latex_options = "scale_down") %>%
+    xtable2kable("latex", booktabs = TRUE, escape = FALSE) %>%
+  kable_styling(latex_options = "scale_down", table.envir = "table*") %>%
     add_header_above(c(" " = 2, "Rossel" = 2, "Tseltal" = 2), align = "c", bold = TRUE) %>%
   row_spec(0, bold = TRUE)
 ```
@@ -376,7 +375,6 @@ ggplot(skew, aes(x = order, y = prop.images,
     theme_test(base_size = 8) +
     theme(legend.position = "none")
 ```
-
 Comparing across sites, `r round(length(intersect(ros.objects, tse.objects))/length(unique(raw.data$object)),4)*100`% of objects were present in both communities, and several shared objects were among the most frequently handled by children in both sites. In fact, among the top 25 most common objects, `r length(intersect(ros.top.objects, tse.top.objects))` were shared across sites (Figure 3). Of note, the study camera was the object that was handled by the most children in both sites (Rossel: `r round(subset(camera, site == "Rossel")$prop, 3)*100`%, Tseltal: `r round(subset(camera, site == "Tseltal")$prop, 3)*100`% of children) but accounted for a relatively small percentage of each child's object handling time, on average (_M_~_Rossel_~ = `r round(subset(camera.images, site == "Rossel")$mean, 3)*100`%, _M_~_Tseltal_~ = `r round(subset(camera.images, site == "Tseltal")$mean, 3)*100`% of images). The camera and other study-related objects (i.e., vest and privacy cover for the camera), were retained in our analyses; however, inclusion of these items did not qualitatively change any of the reported results.
 
 ```{r, top-objects-fig, fig.env = "figure*", fig.pos = "!ht", fig.align = "center", fig.width = 5.5, fig.height = 2.5, set.cap.width = TRUE, num.cols.cap = 2, fig.cap = "Non-study-related objects handled at least once by the most children in each site. Filled bars represent objects that were among the top 25 for both sites."}
@@ -416,16 +414,6 @@ category.props <- data %>%
             n.category = n.category,
             category = category) %>%
   mutate(prop = n.category/n.images)
-
-# get category order
-categories <- category.props %>%
-  group_by(category, site) %>%
-  summarize(m.site = mean(prop)) %>%
-  ungroup() %>%
-  group_by(category) %>%
-  summarize(m.overall = mean(m.site)) %>%
-  arrange(desc(m.overall)) %>%
-  pull(category)
   
 # test for differences between sites for each category
 wilcox.outputs <- list()
@@ -516,7 +504,7 @@ model.data <- data %>%
 lmer.outputs <- list()
 for (i in c(categories)) {
   
-  lmer.output <- lmer(n.objects ~ site * eval(as.symbol(tolower(trimws(str_remove(i, "Tool"))))) + n.images +
+  lmer.output <- lmer(n.objects ~ site * eval(as.symbol(tolower(trimws(str_remove(i, "Tool"))))) +
                                (1|sub_num), model.data) %>%
   tidy() %>% 
   filter(effect == "fixed" & term != "(Intercept)")
@@ -527,14 +515,13 @@ for (i in c(categories)) {
 hourly.objects.model <- do.call(rbind, lmer.outputs) %>%
   rownames_to_column(var = "category") %>%
   mutate(p.adjusted = p.adjust(p.value, method = "holm"), 
-         category = str_remove(category, ".1|.2|.3|.4")) %>%
+         category = str_remove(category, ".1|.2|.3")) %>%
   group_by(category) %>%
   mutate(row = row_number(), 
          term = case_when(
            row == 1 ~ "site", 
-           row == 2 ~ tolower(category), 
-           row == 3 ~ "n.images",
-           row == 4 ~ paste0("site:", tolower(category)))) %>%
+           row == 2 ~ tolower(category),
+           row == 3 ~ paste0("site:", tolower(category)))) %>%
   filter(p.adjusted < 0.10) %>%
   mutate(p = ifelse(p.adjusted < 0.001, 
                     paste0("< 0.001"), paste0("= ", round(p.adjusted, 3))))
@@ -614,7 +601,6 @@ During any given hour, children handled `r hourly.objects$mean` objects from `r 
 
 ## Effects of age
 ```{r age-effects-bycategory}
-
 # compute prop of images in each category for each age
 category.props.byage <- data %>%
   group_by(site, sub_num) %>%
@@ -634,7 +620,7 @@ category.props.byage <- data %>%
 age.bycategory.effects.list <- list()
 age.bycategory.effects.toplot.list <- list()
 for (i in categories) {
-  model <- lm(prop ~ site * age + n.images,
+  model <- lm(prop ~ site * age,
                 filter(category.props.byage, category == i))
   
   # check collinearity -> low
@@ -662,7 +648,12 @@ age.bycategory.effects.toplot <- do.call(rbind, age.bycategory.effects.toplot.li
   mutate(category = factor(category, levels = categories), 
          age = as.numeric(as.character(age)))
 ```
-The  frequency  of  object  categories  was largely stable over age (Figure 5). The only exception was a decreasing proportion of synthetic object handling across developmental time for children in both sites ($\beta$ = `r round(subset(age.bycategory.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(age.bycategory.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(age.bycategory.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(age.bycategory.effects, term == "age")$p.value, 3)`). [explain that this is driven by the fact that synthetic objects are the most common and younger kids handle fewer objects]. Thus, the broad composition of handled objects did not change significantly as a function of age.
+
+We tested for developmental changes in both the targets and rate of object handling across the first four years. 
+
+First, we asked whether the distribution of object categories changes as a function of age. We fit individual linear regression models predicting the proportion of handling time for each of eight object categories as a function of age (in months), site, and their interaction. We included number of images as an additional fixed effect to account for the large variation in total available images for each child (range = `r demo$min.images`--`r demo$max.images`) and thus the potential for finding many more proportion estimates close to 0 or 1 for children with fewer images, relative to children with hundreds of images. This analysis revealed no significant age-related changes in the frequency of handling of different object categories and no significant site-by-age effects (all adjusted *p*s > 0.05). Thus, the the broad composition of handled objects remained largely stable over age (Figure 5).
+
+It is important to note that age correlates closely with the number of available images (STATS), as expected based on prior work with the same data set showing that object handling increases significantly across age [@casillasURdaylong]. While adding both age and number of images as fixed effects did not introduce technical issues of collinearity (STATS), the inclusion of these interrelated predictors necessarily limits the total variance explained by our models of age-related change [@wurm2014residualizing]. Conceptually, we attribute the increase in object handling across the sampled time frame to changes in motor development and permitted object access over the first four years. For the remaining analyses, which do not include proportional dependent variables, we chose to include only fixed effects of age, rather than also including what we assume to be its artifactual correlate: number of images.
 
 ```{r age-effects-bycategory-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 3.4, fig.height = 2.9, fig.cap = "Frequency of handling by object category across age. Individual points show raw percentages per hour for each child, and lines reflect model-predicted percentages."}
 
@@ -864,11 +855,13 @@ hourly.category.transitions.byage.effects.toplot <- ggpredict(
   mutate(age = as.numeric(as.character(age)))
 ```
 
-However, children's overall _rate_ of object handling increased significantly with age (Figure 6A). That is, older children handled more unique objects per hour ($\beta$ = `r round(subset(hourly.objects.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.objects.byage.effects, term == "age")$p.value, 3)`). Additionally, with increasing age, children handled more objects from different categories per hour (Figure 6B; $\beta$ = `r round(subset(hourly.categories.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.categories.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.categories.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.categories.byage.effects, term == "age")$p.value, 3)`). <!--kc: need to check correlations between objects and categories. can also switch to proportions for categories if needed; mc2kc: sounds like a good idea to me!--> These effects were consistent across sites; we found no main effects of site or interactions between site and age (all *p*s > 0.05).
+While prior work with this data set has established that overall object handling time increases with age [@casillasURdaylong], added knowledge about the identities of handled objects in the current work allows us to examine more fine-grained developmental changes in object handling. Here, we modeled changes in the number of unique objects and categories handled per hour as well as transitions between objects and categories per hour. Models included fixed effects of age (in months) and site, plus their interaction, along with random intercepts for individual children.
 
-To further explore developmental changes in the characteristics of children's object handling, we measured transitions between different objects and different object categories. We modeled the relative number of transitions per hour (i.e., number of transitions divided by the number of possible objects or categories for the hour) as a function of age and site, plus their interaction. We found no overall age-related increase in object transitions ($\beta$ = `r round(subset(hourly.object.transitions.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.object.transitions.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.object.transitions.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.object.transitions.byage.effects, term == "age")$p.value, 3)`). However, there was a significant main effect of site ($\beta$ = `r round(subset(hourly.object.transitions.byage.effects, term == "site")$estimate, 2)`, _SE_ = `r round(subset(hourly.object.transitions.byage.effects, term == "site")$std.error, 2)`, _t_ = `r round(subset(hourly.object.transitions.byage.effects, term == "site")$statistic, 2)`, _p_ = `r round(subset(hourly.object.transitions.byage.effects, term == "site")$p.value, 3)`) as well as a site-by-age interaction ($\beta$ = `r round(subset(hourly.object.transitions.byage.effects, term == "site:age")$estimate, 2)`, _SE_ = `r round(subset(hourly.object.transitions.byage.effects, term == "site:age")$std.error, 2)`, _t_ = `r round(subset(hourly.object.transitions.byage.effects, term == "site:age")$statistic, 2)`, _p_ = `r round(subset(hourly.object.transitions.byage.effects, term == "site:age")$p.value, 3)`) such that Tseltal children made fewer transitions between objects per hour than Rossel children but showed a steeper increase across age (Figure 6C). At the category level, we found that, with increasing age, children made significantly more transitions between object categories per hour ($\beta$ = `r round(subset(hourly.category.transitions.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.category.transitions.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.category.transitions.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.category.transitions.byage.effects, term == "age")$p.value, 3)`), with no detectable differences across sites (Figure 6D).
+With increasing age, children handled more unique objects per hour ($\beta$ = `r round(subset(hourly.objects.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.objects.byage.effects, term == "age")$p.value, 3)`; Figure 6A) and more objects from different categories per hour ($\beta$ = `r round(subset(hourly.categories.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.categories.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.categories.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.categories.byage.effects, term == "age")$p.value, 3)`). These effects were consistent across sites; we found no main effects of site or interactions between site and age (all *p*s > 0.05).
 
-```{r age-effects-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 3.4, fig.height = 4, fig.cap = "(A) Unique objects and (B) object categories handled per hour as a function of age. (C) Relative number of transitions between objects and (D) object categories per hour as a function of age. Points reflect raw hourly counts for each child, and lines reflect model predictions with shaded standard error regions."}
+Analysis of children's relative rate of transition between objects per hour (i.e., the number of object transitions divided by the number of available objects for that hour) did not reveal an overall age-related increase ($\beta$ = `r round(subset(hourly.object.transitions.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.object.transitions.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.object.transitions.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.object.transitions.byage.effects, term == "age")$p.value, 3)`). However, there was a significant main effect of site ($\beta$ = `r round(subset(hourly.object.transitions.byage.effects, term == "site")$estimate, 2)`, _SE_ = `r round(subset(hourly.object.transitions.byage.effects, term == "site")$std.error, 2)`, _t_ = `r round(subset(hourly.object.transitions.byage.effects, term == "site")$statistic, 2)`, _p_ = `r round(subset(hourly.object.transitions.byage.effects, term == "site")$p.value, 3)`) as well as a site-by-age interaction ($\beta$ = `r round(subset(hourly.object.transitions.byage.effects, term == "site:age")$estimate, 2)`, _SE_ = `r round(subset(hourly.object.transitions.byage.effects, term == "site:age")$std.error, 2)`, _t_ = `r round(subset(hourly.object.transitions.byage.effects, term == "site:age")$statistic, 2)`, _p_ = `r round(subset(hourly.object.transitions.byage.effects, term == "site:age")$p.value, 3)`), indicating that Tseltal children made fewer transitions between objects per hour than Rossel children but showed a steeper increase across age (Figure 6B). At the category level, we found that, with increasing age, children made significantly more transitions between object categories per hour ($\beta$ = `r round(subset(hourly.category.transitions.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.category.transitions.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.category.transitions.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.category.transitions.byage.effects, term == "age")$p.value, 3)`), with no detectable differences across sites.
+
+```{r age-effects-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 3.4, fig.height = 2.4, fig.cap = "(A) Unique objects handled per hour as a function of age. (B) Relative number of transitions between objects per hour as a function of age. Points reflect raw hourly counts for each child, and lines reflect model predictions with shaded standard error regions."}
 
 # create fig showing increase in unique objects per hr with age
 p1 <- ggplot() +
@@ -898,30 +891,7 @@ p1a <- p1 + theme(legend.position = "none", legend.direction = "horizontal",
 
 legend <- get_legend(p1 + theme(legend.position = "bottom"))
 
-# create fig showing increase in number of categories per hr with age
 p2 <- ggplot() +
-  # add trend line from lmer output
-  geom_line(hourly.categories.byage.effects.toplot,
-            mapping = aes(x = age, y = predicted, color = site), size = 1) +
-  # add SE from lmer output
-  geom_ribbon(hourly.categories.byage.effects.toplot,
-              mapping = aes(x = age , ymin = predicted - conf.low,
-                            ymax = predicted + conf.low, fill = site),
-              alpha = 0.1) +
-  # add points for individual kids
-  geom_jitter(hourly.categories.byage,
-              mapping = aes(x = age, y = n.categories,
-                            color = site, fill = site),
-              alpha = 0.25, size = 0.5) +
-  scale_color_manual(values = site.colors) +
-  scale_fill_manual(values = site.colors) +
-  scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) +
-  labs(x = "Age (months)", y = "Unique Categories/Hour",
-       color = "Site", fill = "Site", tag = "B") +
-  theme_test(base_size = 8) +
-  theme(legend.position = "none", plot.tag = element_text(face = "bold"))
-
-p3 <- ggplot() +
   # add trend line from lmer output
   geom_line(hourly.object.transitions.byage.effects.toplot,
             mapping = aes(x = age, y = predicted, color = site), size = 1) +
@@ -939,38 +909,15 @@ p3 <- ggplot() +
   scale_fill_manual(values = site.colors) +
   scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) +
   labs(x = "Age (months)", y = "Object Transitions/Hour",
-       color = "Site", fill = "Site", tag = "C") +
-  theme_test(base_size = 8) +
-  theme(legend.position = "none", plot.tag = element_text(face = "bold"))
-
-p4 <- ggplot() +
-  # add trend line from lmer output
-  geom_line(hourly.category.transitions.byage.effects.toplot,
-            mapping = aes(x = age, y = predicted, color = site), size = 1) +
-  # add SE from lmer output
-  geom_ribbon(hourly.category.transitions.byage.effects.toplot,
-              mapping = aes(x = age , ymin = predicted - conf.low,
-                            ymax = predicted + conf.low, fill = site),
-              alpha = 0.1) +
-  # add points for individual kids
-  geom_jitter(hourly.category.transitions,
-              mapping = aes(x = age, y = rel.transitions,
-                            color = site, fill = site), 
-              alpha = 0.25, size = 0.5) +
-  scale_color_manual(values = site.colors) +
-  scale_fill_manual(values = site.colors) +
-  scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) +
-  labs(x = "Age (months)", y = "Category Transitions/Hour",
-       color = "Site", fill = "Site", tag = "D") +
+       color = "Site", fill = "Site", tag = "B") +
   theme_test(base_size = 8) +
   theme(legend.position = "none", plot.tag = element_text(face = "bold"))
 
 # combine plots and do some formatting
 # (i.e., align axes and shrink space between panels)
-fig4 <- align_plots(p1a, p2, p3, p4, align = "hv", axis = "l")
-panels <- plot_grid(ggdraw(fig4[[1]]), ggdraw(fig4[[2]]), 
-                    ggdraw(fig4[[3]]), ggdraw(fig4[[4]]), 
-                    nrow = 2, rel_heights = c(1, 1, 1, 1))
+fig6 <- align_plots(p1a, p2, align = "hv", axis = "l")
+panels <- plot_grid(ggdraw(fig6[[1]]), ggdraw(fig6[[2]]), 
+                    nrow = 1, rel_heights = c(1, 1))
 plot_grid(panels, legend, nrow = 2, rel_heights = c(1, .1))
 ```
 

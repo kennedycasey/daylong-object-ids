@@ -387,7 +387,8 @@ all.ranked.objects %>%
   mutate(rank = row_number(), 
          # add var to indicate whether object appears in both sites
          both = ifelse(object %in% ros.top.objects & object %in% tse.top.objects, 1, 0), 
-         label = paste0(str_to_sentence(str_remove_all(object, "misc ")), " (", category, ")")) %>%
+         category.label = factor(category, levels = categories, labels = category.labels),
+         label = paste0(str_to_sentence(str_remove(object, "-M|-W|empty drink ")), " (", category.label, ")")) %>%
   filter(rank <= 25) %>%
   ggplot(aes(x = rank, y = prop*100, color = site, fill = site)) +
   facet_grid(. ~ site) +

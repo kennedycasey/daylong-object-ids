@@ -58,6 +58,8 @@ library(ggpubr)
 library(ggeffects)
 library(xtable)
 library(kableExtra)
+library(magick)
+library(webshot)
 ```
 
 ```{r, data-prep}
@@ -197,7 +199,7 @@ Images were excluded if they were too dark, bright, blurry, or covered for annot
 
 XX% of photo streams were double coded. Reliability annotations were equally spread across sites and ages and included a total of XXXX images. At the category level, annotators agreed on XX.X% of decisions (Rossel: XX.X%, Tseltal: XX.X%). At the object label level, annotators agreed on XX.X% of decisions (Rossel: XX.X%, Tseltal: XX.X%).
 
-```{r top-objects, results = "asis", fig.env = "table*"}
+```{r top-objects, results = "asis"}
 # compute the objects that most often appear 1+ times across children w/i sites
 # use this to find the top 3 items per category per site
 top.objects.bykids <- data %>%
@@ -225,6 +227,7 @@ top.objects.bykids <- data %>%
   group_by(category) %>%
   pivot_wider(names_from = "site", values_from = "objects")
 
+# get list of all objects found in each site
 ros.objects <- data %>% 
   filter(site == "Rossel" & object %notin% study.related) %>%
   pull(object) %>%
@@ -235,6 +238,8 @@ tse.objects <- data %>%
   pull(object) %>%
   unique()
 
+# compute the objects that appear in the most images across children w/i sites
+# use this to find the top 3 items per category per site
 tse.top.objects.bytime <- data %>%
   filter(site == "Tseltal" & object %notin% study.related) %>%
   group_by(site, sub_num) %>%
@@ -296,12 +301,14 @@ tbl.input <- bind_cols(category.counts, top.objects.bykids, top.objects.bytime) 
 
 colnames(tbl.input) <- c("Object Category", "N", "Objects handled by the most children", "Objects handled for the most time", "N", "Objects handled by the most children", "Objects handled for the most time")
 
-xtable::xtable(tbl.input,
-               row.names = FALSE,
-               caption = "Unique object counts and top non-study-related objects for each category across sites.") %>%
-    xtable2kable("latex", booktabs = TRUE, escape = FALSE) %>%
-  kable_styling(latex_options = "scale_down", table.envir = "table*") %>%
-    add_header_above(c(" " = 2, "Rossel" = 3, "Tseltal" = 3), align = "c", bold = TRUE) %>%
+kable(tbl.input, format = "latex", 
+      table.envir = "table*", 
+      row.names = FALSE, 
+      booktabs = TRUE,
+      position = "!ht",
+      caption = "Unique object counts and top objects for each category across sites.") %>%
+  kable_styling(latex_options = "scale_down") %>%
+  add_header_above(c(" " = 1, "Rossel" = 3, "Tseltal" = 3), align = "c", bold = TRUE) %>%
   row_spec(0, bold = TRUE)
 ```
 

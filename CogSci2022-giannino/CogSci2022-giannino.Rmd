@@ -1023,36 +1023,32 @@ plot_grid(panels, legend, nrow = 2, rel_heights = c(1, .1))
 ```
 
 # Discussion
-Just some miscellaneous notes for now
+
+We discuss this rich set of findings with respect to (a) object handling as a viewpoint into children’s worlds in general and (b) the implications of our findings for word learning specifically.
+
+## Objects as insight into children’s worlds
+The total time children spend handling objects of different types (e.g., natural, immovable, synthetic, etc.) is stable across age and sites [consistent with @long2021characterizing for visually present categories]. Specifically, food and synthetic objects dominate over others across age. We suggest that this measure, total time spent within categories, may reflect stable properties of the environment and routines children engage in across age and across diverse contexts. If we continued to sample in other communities we would expect to find more differences (e.g., the time spent with toys in US middle-class samples), but these two rural subsistence communities show overall similar profiles despite differences in market integration, the organization of daily life, infant carrying, and other aspects of these cultural milieux [@brownIPchildrearing; @casillasURdaylong; @casillas2020early; @casillas2021early].
+
+The individual objects children handle reveals strong age-related change as well as some site-related differences. Children’s object handling diversifies within and across categories as they get older, which means more unique objects held, objects from more categories, and, concomitantly, more frequent transitions between objects. Note that this effect may be stronger for the Tseltal children who are more restricted in their movements in early infancy because they are carried in a sling [@casillasURdaylong]. Compared to other categories, we see children handling a greater diversity of synthetic objects (stronger for Tseltal) and immovable objects (stronger for Rossel) per hour compared to other categories, reflecting the greater market integration (and hence availability of diverse synthetic objects) of the Tseltal community and the long daily periods of socializing around family verandas in the Rossel community.
+
+We suggest that the individual objects children handle gives us insight into maturity via children’s increased engagement and access to the wider range of objects associated with everyday activities (e.g., not just holding finger food at meals, but also using a spoon, passing a bowl, etc.) and to the greater diversity of objects associated with economically or culturally variable facets of everyday life (e.g., a variety of toys available for purchase nearby, climbable surfaces where daily socializing takes place)
+
+## Implications for word learning
+These data indicate that children are exposed to a stable and wide variety of object categories in the first four years of life, with increasing access to a diversity of objects within categories as they get older. Similarity in the distribution of object categories across sites suggests some basis for expecting similarity in early object label knowledge by children in these two sites. Individual objects also show a Zipfian distribution in how they are handled, with some handled frequently and most handled infrequently; may be good for word learning [see also @carvalho2019rethinking; @clerkin2017real; @long2021characterizing; @montag2018quantity] and, in tandem with these other effects across age and cultural context, may indicate which words for objects children are likely to learn first and how their semantic networks grow within and across categories.
+
+The overarching story is one where children’s early object-centric interactions are anchored on a few unique items across the different categories relevant to daily life, similar to other accounts of how kids get into segmentation, etc. What we need to know, however, is how often these objects are labeled for or by children as they interact with them, and how the labeling behavior itself fluctuates across age, activity, and cultural context.
 
 <!--
-useful comments:
-- maybe I’m missing it but might need to take a stance on how your data has implications for caregiver speech?
-- how much is stability expected? lay it out better
+## Future directions (can cut altogether if out of space)
 
-perhaps for later?: Figure 3 stick finding across both sites is cool – consider speculating more about that from both embodied and cultural perspective – readers would be interested in your thoughts here. Stick fits immature hands well, can manipulate other stuff with it, its natural but also tool-like
+* Categorization of objects as reflecting activities rather than overall ‘type’; relation to these factors + time of day
+* Bout durations [relating to @herzberg2021exuberant]
+* Tallying of unique instances of objects
+* Comparison to other communities, both rural and urban
+    + But important to note that there's less overlap between kids (within sites) than we see for US context [e.g., @herzberg2021exuberant], possibly owing to cultural differences and sampling strategies (e.g., two-hour videos vs. daylong photos). Another point is that while there may be less overlap between kids, there's likely more overlap between kids and adults (fewer child-specific items)
+    + Item 2b
+* Link to audio to get at actual labeling behavior from adult and child interlocutors
 -->
-
-## Cross-cultural similarities and differences
-Summary sentence of the broad overlap between communities on many of the measures reported above, likely owing to the many characteristics that are shared across these two cultural contexts (e.g., rural, swidden horticulturalist, housed in multi-generation family complexes). However, the differences that emerge between sites reveal the influence of market integration, the organization of daily life, and infant carrying practices [@brownIPchildrearing; @casillasURdaylong; @casillas2020early; @casillas2021early].
-
-Marginally more unique synthetic objects for Tseltal children. Discussion of the effects of market integration on the availability of objects in Tenejapa vs. Rossel Island.
-
-More handling of large or immovable objects for Rossel kids. Discussion of differences in the organization of young children's daily lives. More time spent socializing on/near household verandas
-
-Greater age-related increases in transitions between objects for Tseltal children. Discussion of infant carrying practices. More time in sling for Tseltal babies so fewer opportunities to seek out different objects at the youngest ages.
-
-## Other sources of consitency and variability
-Possible changes with time of day and activity context as predicted in prior work [e.g., morning mealtimes, @casillas2020early; @casillas2021early]. Open question: are handled objects a good index for activity context?
-
-Changes from day to day: We don't know how much overlap there is from day to day. While the exact objects may change, it's likely that they'd follow a similar right-skewed distribution since we see this for most kids in our sample and across mamy measures of children's input, including visual [@clerkin2017real; @long2021characterizing] and linguistic [@montag2018quantity].
-
-Age: The broad composition of handled objects was largely stable across age [consistent with @long2021characterizing for visually present categories] but few categories here and also the possibility that individual types may change. More here about manual dexterity and possibly attention affecting object handling bout durations, which we don't quantify here, but the transitions per hour analysis is a first-pass way of (hopefully) getting at something similar
-
-## Consequences for learning
-Zipfian distributions can be helpful for learning [e.g., @carvalho2019rethinking]. Overlap between kids can get us to start thinking about which object names and object-relevant words and learned earlier. But important to note that there's less overlap between kids (within sites) than we see for US context [e.g., @herzberg2021exuberant], possibly owing to cultural differences and sampling strategies (e.g., two-hour videos vs. daylong photos). Another point is that while there may be less overlap between kids, there's likely more overlap between kids and adults (fewer child-specific items)
-
-Notes for near the end: Future plans to link to daylong audio recordings. We can speculate about children's learning now that we have some understanding of the distribution of object handling and the identities of commonly handled objects. However, without knowing how often children are also hearing _talk_ about the objects they're handling, we can't fully address the word learning piece.
 
 <!--
 # Data availability statement

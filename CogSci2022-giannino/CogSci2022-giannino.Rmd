@@ -30,7 +30,8 @@ author-information: >
                University of Chicago \\
                \texttt{\small{mcasillas@uchicago.edu}}}
 
-abstract:
+abstract: >
+  Object-centric interactions provide rich learning moments for young children, including opportunities to discover word meanings. Children’s own object handling, in particular, forms a key source of input – one that varies across cultures and across development. Using daylong photo streams from child-worn cameras (>16k images), we analyze the frequency and targets of child object handling across the first four years in two small-scale subsistence farming communities on opposite sides of the globe (Papuan and Mayan). Overall, we see a general consistency in the broad composition of handled objects across cultures and age. However, a few notable cross-cultural differences and age-related changes indicate the likely influence of many factors on the rate and distribution of child object handling, including object availability, child carrying practices, daily activities, and maturational constraints.
 
 keywords:
     

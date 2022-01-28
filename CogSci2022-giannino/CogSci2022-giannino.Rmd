@@ -298,19 +298,19 @@ category.counts <- data %>%
   pivot_wider(names_from = "site", values_from = "n.objects")
 
 # combine and do some formatting to create table
-tbl.input <- bind_cols(category.counts, top.objects.bykids, top.objects.bytime) %>%
-  select(category...1, Rossel...2, Rossel...5, Rossel...8, Tseltal...3, Tseltal...6, Tseltal...9)
+tbl.input <- bind_cols(category.counts, top.objects.bykids) %>%
+  select(category...1, Rossel...2, Rossel...5, Tseltal...3, Tseltal...6)
 
-colnames(tbl.input) <- c("Object Category", "N", "Objects handled by the most children", "Objects handled for the most time", "N", "Objects handled by the most children", "Objects handled for the most time")
+colnames(tbl.input) <- c("Object Category", "N", "Top Objects", "N", "Top Objects")
 
 kable(tbl.input, format = "latex", 
-      table.envir = "table*", 
+      table.envir = "table", 
       row.names = FALSE, 
       booktabs = TRUE,
       position = "!ht",
-      caption = "Unique object counts (N) and top objects for each category across sites.") %>%
+      caption = "Unique object counts (N) and objects handled by the most children for each category across sites.") %>%
   kable_styling(latex_options = "scale_down") %>%
-  add_header_above(c(" " = 1, "Rossel" = 3, "Tseltal" = 3), align = "c", bold = TRUE) %>%
+  add_header_above(c(" " = 1, "Rossel" = 2, "Tseltal" = 2), align = "c", bold = TRUE) %>%
   row_spec(0, bold = TRUE)
 ```
 

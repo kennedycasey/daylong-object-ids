@@ -657,22 +657,17 @@ During any given hour of the day that featured object handling<!--kc: decide if 
 category.props.byage <- data %>%
   group_by(site, sub_num) %>%
   mutate(n.images = length(unique(image))) %>%
-  group_by(sub_num, n.images, category, site, age) %>%
-  summarize(n.category = n()) %>%
-  ungroup() %>% 
   group_by(sub_num, n.images, site, age) %>%
-  summarize(n.category = n.category, 
+  count(category, .drop = FALSE) %>%
+  summarize(prop = n/n.images, 
             category = category) %>%
-  mutate(prop = n.category/n.images) %>%
-  ungroup() %>%
-  mutate(category = factor(category,
-                              levels = categories))
+  distinct()
 
 # model age effects w/ indiv models for each category
 age.bycategory.effects.list <- list()
 age.bycategory.effects.toplot.list <- list()
 for (i in categories) {
-  model <- lm(prop ~ site * age,
+  model <- lm(prop ~ site * age + n.images,
                 filter(category.props.byage, category == i))
   
   # check collinearity -> low
@@ -699,13 +694,19 @@ age.bycategory.effects <- do.call(rbind, age.bycategory.effects.list)
 age.bycategory.effects.toplot <- do.call(rbind, age.bycategory.effects.toplot.list) %>%
   mutate(category = factor(category, levels = categories), 
          age = as.numeric(as.character(age)))
+
+# check correlation between age and number of images 
+cor.data <- data %>%
+  group_by(sub_num, age) %>%
+  summarize(n.images = length(unique(image))) %>%
+  mutate(age = as.numeric(as.character(age)))
+
+cor <- cor.test(cor.data$age, cor.data$n.images) %>%
+  tidy()
 ```
+Prior work with the same data set indicated a significant increase in object handling across the first four years [@casillasURdaylong]. Now, with added information about the identities of handled objects, we we can introduce new measures to probe for developmental changes in not only the overall rate but also finer-grained characteristics of object handling. We investigate age-related changes in (a) the distribution of object categories, (b) the number of unique objects and categories handled per hour, and (c) transitions between objects and categories per hour.
 
-We tested for developmental changes in both the targets and rate of object handling across the first four years. 
-
-First, we asked whether the distribution of object categories changes as a function of age. We fit individual linear regression models predicting the proportion of handling time for each of eight object categories as a function of age (in months), site, and their interaction. We included number of images as an additional fixed effect to account for the large variation in total available images for each child (range = `r demo$min.images`--`r demo$max.images`) and thus the potential for finding many more proportion estimates close to 0 or 1 for children with fewer images, relative to children with hundreds of images. This analysis revealed no significant age-related changes in the frequency of handling of different object categories and no significant site-by-age effects (all adjusted *p*s > 0.05). Thus, the the broad composition of handled objects remained largely stable over age (Figure 5).
-
-It is important to note that age correlates closely with the number of available images (STATS), as expected based on prior work with the same data set showing that object handling increases significantly across age [@casillasURdaylong]. While adding both age and number of images as fixed effects did not introduce technical issues of collinearity (STATS), the inclusion of these interrelated predictors necessarily limits the total variance explained by our models of age-related change [@wurm2014residualizing]. Conceptually, we attribute the increase in object handling across the sampled time frame to changes in motor development and permitted object access over the first four years. For the remaining analyses, which do not include proportional dependent variables, we chose to include only fixed effects of age, rather than also including what we assume to be its artifactual correlate: number of images.
+To test for age-related changes in the frequency of handling of different object categories, we fit individual linear regression models predicting the proportion of handling time for each category as a function of age (in months), site, and their interaction. We included number of images as an additional fixed effect to account for the large variation in total available images for each child (range = `r demo$min.images`--`r demo$max.images`) and thus the potential for finding many more proportion estimates close to 0 or 1 for children with fewer images, relative to children with hundreds of images^[Age was moderately correlated with number of available images (_r_ = `r format(round(cor$estimate, 2), nsmall = 2)` [`r format(round(cor$conf.low, 2), nsmall = 2)`, `r format(round(cor$conf.high, 2), nsmall = 2)`], _p_ < 0.001). While adding both age and number of images as fixed effects does not introduce technical issues of collinearity, the inclusion of these interrelated predictors necessarily limits the total variance explained by our models of age-related change [@wurm2014residualizing]. Conceptually, we attribute the increase in object handling across the sampled time frame to changes in motor development and permitted object access over the first four years. Thus, for all models that did not include proportional dependent variables, we chose to include only fixed effects of age, rather than also including what we assume to be its artifactual correlate: number of images.]. This analysis revealed no significant age-related changes in the frequency of handling of different object categories and no significant site-by-age interaction effects (all adjusted *p*s > 0.05). Thus, the the broad composition of handled objects remained largely stable over age (Figure 5).
 
 ```{r age-effects-bycategory-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 3.4, fig.height = 2.9, fig.cap = "Frequency of handling by object category across age. Individual points show raw percentages per hour for each child, and lines reflect model-predicted percentages."}
 
@@ -907,9 +908,7 @@ hourly.category.transitions.byage.effects.toplot <- ggpredict(
   mutate(age = as.numeric(as.character(age)))
 ```
 
-While prior work with this data set has established that overall object handling time increases with age [@casillasURdaylong], added knowledge about the identities of handled objects in the current work allows us to examine more fine-grained developmental changes in object handling. Here, we modeled changes in the number of unique objects and categories handled per hour as well as transitions between objects and categories per hour. Models included fixed effects of age (in months) and site, plus their interaction, along with random intercepts for individual children.
-
-With increasing age, children handled more unique objects per hour ($\beta$ = `r round(subset(hourly.objects.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.objects.byage.effects, term == "age")$p.value, 3)`; Figure 6A) and more objects from different categories per hour ($\beta$ = `r round(subset(hourly.categories.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.categories.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.categories.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.categories.byage.effects, term == "age")$p.value, 3)`). These effects were consistent across sites; we found no main effects of site or interactions between site and age (all *p*s > 0.05).
+However, the _rate_ of object handling significantly increased with age. In addition to the overall age-related increase in handling found by Casillas and Elliott [-@casillasURdaylong], we see that, with increasing age, children handled more unique objects per hour ($\beta$ = `r round(subset(hourly.objects.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.objects.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.objects.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.objects.byage.effects, term == "age")$p.value, 3)`; Figure 6A) and more objects from different categories per hour ($\beta$ = `r round(subset(hourly.categories.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.categories.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.categories.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.categories.byage.effects, term == "age")$p.value, 3)`). These effects were consistent across sites; we found no main effects of site or interactions between site and age (all *p*s > 0.05).
 
 Analysis of children's relative rate of transition between objects per hour (i.e., the number of object transitions divided by the number of available objects for that hour) did not reveal an overall age-related increase ($\beta$ = `r round(subset(hourly.object.transitions.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.object.transitions.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.object.transitions.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.object.transitions.byage.effects, term == "age")$p.value, 3)`). However, there was a significant main effect of site ($\beta$ = `r round(subset(hourly.object.transitions.byage.effects, term == "site")$estimate, 2)`, _SE_ = `r round(subset(hourly.object.transitions.byage.effects, term == "site")$std.error, 2)`, _t_ = `r round(subset(hourly.object.transitions.byage.effects, term == "site")$statistic, 2)`, _p_ = `r round(subset(hourly.object.transitions.byage.effects, term == "site")$p.value, 3)`) as well as a site-by-age interaction ($\beta$ = `r round(subset(hourly.object.transitions.byage.effects, term == "site:age")$estimate, 2)`, _SE_ = `r round(subset(hourly.object.transitions.byage.effects, term == "site:age")$std.error, 2)`, _t_ = `r round(subset(hourly.object.transitions.byage.effects, term == "site:age")$statistic, 2)`, _p_ = `r round(subset(hourly.object.transitions.byage.effects, term == "site:age")$p.value, 3)`), indicating that Tseltal children made fewer transitions between objects per hour than Rossel children but showed a steeper increase across age (Figure 6B). At the category level, we found that, with increasing age, children made marginally more transitions between object categories per hour ($\beta$ = `r round(subset(hourly.category.transitions.byage.effects, term == "age")$estimate, 2)`, _SE_ = `r round(subset(hourly.category.transitions.byage.effects, term == "age")$std.error, 2)`, _t_ = `r round(subset(hourly.category.transitions.byage.effects, term == "age")$statistic, 2)`, _p_ = `r round(subset(hourly.category.transitions.byage.effects, term == "age")$p.value, 3)`), with no detectable differences across sites.
 

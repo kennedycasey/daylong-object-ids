@@ -110,7 +110,7 @@ The artifacts that we regularly pick up and handle at home---a coffee cup, a lap
 
 ## Object handling and word learning
 
-For young learners, objects---along with their associated activities and surrounding language---form a critical source of input for word learning. Hands (and what they are handling) can be reliable indicators of what someone is doing and talking about during object play <!--mc: NB: we look at a lot more than play and i'm not sure how well this idea generalizes, especially across cultures! but that's an issue for another day. or rather another fieldtrip. someday :*-) --> and can thus help learners map word forms onto their meanings in and across real-time interaction [e.g., @yu2013joint; @yurovsky2013statistical]. The labels of present, attended-to objects are reflected in the babble of children who have acquired stable consonants [@laing2020babble]. Further, caregivers' tendency to use nouns referring to objects in the here-and-now positively predicts their children's early word comprehension [@bergelson2017nature].
+For young learners, objects---along with their associated activities and surrounding language---form a critical source of input for word learning. Hands (and what they are handling) can be reliable indicators of what someone is doing and talking about during object play <!--mc: NB: we look at a lot more than play and i'm not sure how well this idea generalizes, especially across cultures! but that's an issue for another day. or rather another fieldtrip. someday :*-) --> and can thus help learners map word forms onto their meanings in and across real-time interaction [e.g., @yu2013joint; @yurovsky2013statistical]. The labels of present, attended-to objects are reflected in the babble of children who have acquired stable consonants [@laing2020babble]. Further, caregivers' tendency to use nouns referring to objects in the here-and-now positively predicts their children's early word comprehension [@bergelson2017nature; see also @slone2019self].
 
 How frequently do children engage in object-centric interactions? First, hands---others' and their own---are in good supply in young children's view of the world, especially after early infancy [@fausey2016faces; @jayaraman2017faces; @long2020detecting]. Infants' own object handling is also relatively frequent: Herzberg and colleagues [-@herzberg2021exuberant] find that US infants handle objects ${\sim}60\%$ of the time during at-home play, Yu and colleagues [-@yu2013joint] find ${\sim}70\%$ when including joint handling with adults in US in-lab object play, and Casillas and Elliott [-@casillasURdaylong] find ${\sim}15$ and 17% object handling in daylong photo streams in a Papuan and a Mayan community, respectively. Concurrent with these events, children will sometimes encounter linguistic information relating to the focused-on object (e.g., its label and associated concepts). However, this critical additional ingredient for word learning may only occur during a small subset of total object handling time. We do not yet know how often objects in the here and now are typically talked about over the course of children's whole waking days at home, but we do know that such talk fluctuates across high and low activity periods [@bergelson2019day]. We also know that children's object handling input changes enormously across the first few years due to both maturational constraints and culture-specific caregiving practices.
 
@@ -923,6 +923,14 @@ plot_grid(panels, legend, nrow = 2, rel_heights = c(1, .1))
 
 # Discussion
 Just some miscellaneous notes for now
+
+<!--
+useful comments:
+- maybe I’m missing it but might need to take a stance on how your data has implications for caregiver speech?
+- how much is stability expected? lay it out better
+
+perhaps for later?: Figure 3 stick finding across both sites is cool – consider speculating more about that from both embodied and cultural perspective – readers would be interested in your thoughts here. Stick fits immature hands well, can manipulate other stuff with it, its natural but also tool-like
+-->
 
 ## Cross-cultural similarities and differences
 Summary sentence of the broad overlap between communities on many of the measures reported above, likely owing to the many characteristics that are shared across these two cultural contexts (e.g., rural, swidden horticulturalist, housed in multi-generation family complexes). However, the differences that emerge between sites reveal the influence of market integration, the organization of daily life, and infant carrying practices [@brownIPchildrearing; @casillasURdaylong; @casillas2020early; @casillas2021early].

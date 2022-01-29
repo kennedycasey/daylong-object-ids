@@ -420,7 +420,7 @@ uncommon.objects <- all.ranked.objects %>%
 
 Children handled an average of `r format(round(daily.objects$mean, 1), nsmall = 1)` unique objects per day (median = `r format(round(daily.objects$median, 1), nsmall = 1)`, _SD_ = `r format(round(daily.objects$sd, 1), nsmall = 1)`, range = `r daily.objects$min`--`r daily.objects$max`), with no significant differences across sites (_M_~_Rossel_~ = `r format(round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Rossel")$n.objects), 1), nsmall = 1)`, _M_~_Tseltal_~ = `r format(round(mean(subset(daily.objects.bysite, daily.objects.bysite$site == "Tseltal")$n.objects), 1), nsmall = 1)`, _W_ = `r format(round(comp.daily.objects$statistic, 2), nsmall = 2)`, _p_ = `r format(round(comp.daily.objects$p.value, 3), nsmall = 3)`). The distribution of handled objects was highly right-skewed within and across children. Each child's distribution was skewed such that a small group of objects was handled in a majority of their images but most objects were handled for only short periods of time (Figure 2). Across children, common objects followed a similar Zipfian distribution: some objects were handled by many children, but most objects were only handled by 1-2 children in each site (Rossel: `r format(round(subset(uncommon.objects, site == "Rossel")$prop, 1), nsmall = 1)`%, Tseltal: `r format(round(subset(uncommon.objects, site == "Tseltal")$prop, 1), nsmall = 1)`%).
 
-```{r zipfian-objects-fig, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 2.9, fig.height = 1.5, fig.cap = "Zipfian distribution of objects handled by each child across sites. For each child, the top object was defined as the object appearing in the greatest number of images; thus, the identity of the top object does not match across all children."}
+```{r zipfian-objects-fig, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 3.4, fig.height = 2, fig.cap = "Zipfian distribution of objects. For each child, the top object was defined as the object appearing in the greatest number of images; thus, the identity of the top object does not match across all children. Points reflect proportion estimates for individual children."}
 
 skew <- data %>%
   group_by(site, sub_num, object) %>%
@@ -431,7 +431,7 @@ skew <- data %>%
             n.images = n.images,
             object = object) %>%
   distinct() %>%
-  mutate(prop.images = n.images/total*100) %>%
+  mutate(prop.images = log(n.images/total*100)) %>%
   arrange(sub_num, desc(prop.images)) %>%
   mutate(order = row_number()) %>%
   ungroup()
@@ -439,12 +439,11 @@ skew <- data %>%
 ggplot(skew, aes(x = order, y = prop.images, 
              fill = site, color = site)) +
     facet_wrap(. ~ site) +
-    geom_line(aes(group = sub_num), alpha = 0.25, size = 0.3) +
+    geom_point(aes(group = sub_num), alpha = 0.25, size = 0.5) +
     geom_smooth(se = FALSE, method = "loess", size = 0.5, color = "black") +
     scale_color_manual(values = site.colors) +
     scale_fill_manual(values = site.colors) +
-    scale_y_continuous(limits = c(0, 75), breaks = c(0, 25, 50, 75)) +
-    labs(x = "Objects Ranked by Frequency", y = "% Images", 
+    labs(x = "Objects Ranked by Frequency", y = "Log-scaled Prop. of Images", 
          color = "Site", fill = "Site") +
     theme_test(base_size = 8) +
     theme(legend.position = "none")

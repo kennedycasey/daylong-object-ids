@@ -319,7 +319,7 @@ kable(tbl.input, format = "latex",
       booktabs = TRUE,
       position = "!ht",
       linesep = "",
-      caption = "Unique object counts (N) and objects handled by the most children for each category across sites.") %>%
+      caption = "Number of unique objects (N) and objects handled by the most children, for each category, across sites.") %>%
   kable_styling(latex_options = "scale_down") %>%
   add_header_above(c(" " = 1, "Rossel" = 2, "Tseltal" = 2), align = "c", bold = TRUE) %>%
   row_spec(0, bold = TRUE)
@@ -427,7 +427,7 @@ Children handled an average of `r format(round(daily.objects$mean, 1), nsmall = 
 
 Comparing across sites, `r format(round(length(intersect(ros.objects, tse.objects))/length(unique(raw.data$object)), 3)*100, nsmall = 1)`% of objects were handled by both Rossel and Tseltal children, and several shared objects were among the most frequently handled in both sites. In fact, among the top 25 most common objects^[The study camera was the object that was handled by the most children in both sites [Rossel: `r round(subset(camera, site == "Rossel")$prop, 3)*100`%, Tseltal: `r round(subset(camera, site == "Tseltal")$prop, 3)*100`% of children, see @bergelson2019day, for a similar effect] but accounted for a relatively small percentage of each child's object handling time, on average (_M_~_Rossel_~ = `r  format(round(subset(camera.images, site == "Rossel")$mean, 3)*100, nsmall = 1)`%, _M_~_Tseltal_~ = `r format(round(subset(camera.images, site == "Tseltal")$mean, 3)*100, nsmall = 1)`% of images). Inclusion of study-related items did not qualitatively change any of the reported results], `r length(intersect(ros.top.objects, tse.top.objects))` were shared across sites (Figure 3).
 
-```{r zipfian-objects-fig, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 3.4, fig.height = 2, fig.cap = "Zipfian distribution of objects. For each child, the top object was defined as the object appearing in the greatest number of images; thus, the identity of the top object does not match across all children. Points reflect proportion estimates for individual children."}
+```{r zipfian-objects-fig, fig.env = "figure", fig.pos = "h", fig.align = "center", fig.width = 3.4, fig.height = 2, fig.cap = "Zipfian distribution of objects. For each child, the top object was defined as the object appearing in the greatest number of images; thus, the identity of the top object does not match across all children. Points reflect log-transformed proportion estimates for individual children."}
 
 skew <- data %>%
   group_by(site, sub_num, object) %>%

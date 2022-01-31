@@ -82,6 +82,9 @@ sites <- c("Rossel", "Tseltal")
 site.colors <- c("Rossel" = "#3C5388", 
                  "Tseltal" = "#02A087")
 
+site.colors.ce <- c("Rossel" = "chocolate",
+                    "Tseltal" = "darkred")
+
 categories <- c("Food", "Synthetic", "Natural", "Toy",
                 "Mealtime Tool", "Clothing", "Immovable", 
                 "Work Tool")

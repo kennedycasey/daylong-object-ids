@@ -316,6 +316,7 @@ kable(tbl.input, format = "latex",
       row.names = FALSE, 
       booktabs = TRUE,
       position = "!ht",
+      linesep = "",
       caption = "Unique object counts (N) and objects handled by the most children for each category across sites.") %>%
   kable_styling(latex_options = "scale_down") %>%
   add_header_above(c(" " = 1, "Rossel" = 2, "Tseltal" = 2), align = "c", bold = TRUE) %>%

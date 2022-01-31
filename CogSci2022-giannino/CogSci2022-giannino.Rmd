@@ -642,7 +642,7 @@ hourly.objects.model <- do.call(rbind, lmer.outputs) %>%
                     paste0("< 0.001"), paste0("= ", round(p.adjusted, 3))))
 
 # compute mean rate of objects/hr per category per kid
-hourly.objects.bycategory <- model.data %>%
+hourly.objects.bycategory <- model.data.incl.zeroes %>%
   group_by(site, sub_num, category) %>%
   summarize(n.objects.bysub = mean(n.objects)) %>%
   ungroup() %>%
@@ -772,7 +772,9 @@ daily.objects.byage.effects.toplot <- ggpredict(
 hourly.objects.byage <- data %>%
   group_by(site, sub_num, age, hour) %>%
   summarize(n.objects = length(unique(object))) %>%
-  ungroup()
+  ungroup() %>%
+  full_join(codeable.hrs.pp) %>%
+  replace_na(list(n.categories = 0))
 
 # model total # unique objects handled per hour by site and age
 model <- lmer(n.objects ~ site * age + (1|sub_num), hourly.objects.byage)
@@ -808,7 +810,9 @@ hourly.object.transitions <- data %>%
   group_by(site, sub_num, age, hour) %>%
   summarize(n.transitions = sum(transition, na.rm = TRUE)) %>%
   left_join(hourly.objects.byage, by = c("site", "sub_num", "age", "hour")) %>%
-  mutate(rel.transitions = n.transitions/n.objects)
+  mutate(rel.transitions = n.transitions/n.objects) %>%
+  full_join(codeable.hrs.pp) %>%
+  replace_na(list(n.transitions = 0))
 
 # model number of hourly transitions between by site and age
 model <- lmer(rel.transitions ~ site * age + (1|sub_num),
@@ -937,7 +941,7 @@ In addition to the overall age-related increase in handling found by Casillas an
 ### Does object handling become more complex with age?
 Analysis of children's relative rate of transition between objects per hour (i.e., the number of transitions from one object to another divided by the number of available objects for that hour) did not reveal an overall age-related increase ($\beta$ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "age")$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "age")$std.error, 2), nsmall = 2)`, _t_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "age")$statistic, 2), nsmall = 2)`, _p_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "age")$p.value, 3), nsmall = 3)`). However, there was a significant main effect of site ($\beta$ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site")$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site")$std.error, 2), nsmall = 2)`, _t_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site")$statistic, 2), nsmall = 2)`, _p_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site")$p.value, 3), nsmall = 3)`) as well as a site-by-age interaction ($\beta$ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site:age")$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site:age")$std.error, 2), nsmall = 2)`, _t_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site:age")$statistic, 2), nsmall = 2)`, _p_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site:age")$p.value, 3), nsmall = 3)`), indicating that Tseltal children made fewer transitions between objects per hour than Rossel children but showed a steeper increase across age. At the category level, we found that, children made marginally more transitions between object categories per hour with age ($\beta$ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "age")$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "age")$std.error, 2), nsmall = 2)`, _t_ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "age")$statistic, 2), nsmall = 2)`, _p_ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "age")$p.value, 3), nsmall = 3)`), with no detectable differences across sites.
 
-```{r age-effects-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 2.4, fig.height = 2.4, fig.cap = "Increase in relative number of transitions between objects per hour with age. Points reflect raw hourly counts for each child, and lines reflect model predictions with shaded standard error regions."}
+```{r age-effects-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 2.4, fig.height = 2.4, fig.cap = "Relative number of transitions between objects per hour as a function of age. Points reflect raw hourly counts for each child, and lines reflect model predictions with shaded standard error regions."}
 
 # create fig showing increase in objects transitions per hr with age
 ggplot() +

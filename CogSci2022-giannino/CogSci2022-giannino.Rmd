@@ -573,7 +573,7 @@ hourly.categories.incl.zeroes <- data %>%
   group_by(site, sub_num, hour) %>%
   summarize(n.categories = length(unique(category))) %>%
   ungroup() %>%
-  full_join(codeable.hrs.pp) %>%
+  left_join(codeable.hrs.pp) %>%
   replace_na(list(n.categories = 0)) %>%
   summarize(mean = round(mean(n.categories), 2))
 ```

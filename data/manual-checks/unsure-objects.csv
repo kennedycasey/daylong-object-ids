@@ -1821,7 +1821,7 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 092946.gif,NA,NA,KC,1,0,0,NA,9706
 100133.gif,NA,NA,KC,1,0,0,NA,9706
 100749.gif,"stairs, betelnut",NA,KC,0,0,0,NA,9706
-101831.gif,,MESSAGED,,,,,,9706
+101831.gif,floor,other unidentifiable object,MC/KC,0,0,0,NA,9706
 101919.gif,marble,NA,KC,0,0,0,NA,9706
 101934.gif,"marble, book",NA,KC,0,0,0,NA,9706
 101952.gif,"marble, book",NA,KC,0,0,0,NA,9706
@@ -1941,10 +1941,10 @@ Image,Object,Comments,Coder,Exclude,None,Unsure,Category,sub_num
 233630.gif,vest,NA,KC,0,0,0,NA,1076
 233750.gif,plant,NA,KC,0,0,0,NA,1076
 185620.gif,NA,NA,KC,0,1,0,NA,1494
-185650.gif,,,MESSAGED,,,,,1494
-185721.gif,,,MESSAGED,,,,,1494
-185751.gif,,,MESSAGED,,,,,1494
-185821.gif,,,MESSAGED,,,,,1494
+185650.gif,clothesline,NA,MC,0,0,0,NA,1494
+185721.gif,clothesline,NA,MC,0,0,0,NA,1494
+185751.gif,clothesline,NA,MC,0,0,0,NA,1494
+185821.gif,clothesline,NA,MC,0,0,0,NA,1494
 150810.gif,wood slat,NA,KC,0,0,0,NA,1312
 152848.gif,plastic bag,full of toys or some other kind of synthetic object,KC,0,0,0,NA,1312
 153218.gif,NA,NA,KC,1,0,0,Synthetic,1312

@@ -151,6 +151,21 @@ Our findings reveal relative consistency in the broad composition of objects han
 
 # Method
 ```{r, exclusions}
+# check for errors in exclusion counts 
+# some images were getting counted as both included and excluded
+# excluding for now since it's only a handful but return to these in later checks
+included.image.paths <- data %>%
+  mutate(path = paste0(sub_num, "/", image)) %>%
+  pull(path) %>%
+  unique()
+
+excluded.image.paths <- raw.data %>%
+  filter(!is.na(exclusion)) %>%
+  mutate(path = paste0(sub_num, "/", image)) %>%
+  pull(path) %>%
+  unique()
+# intersect(included.image.paths, excluded.image.paths)
+
 # get total number of images before exclusion
 total.coded <- raw.data %>%
   select(sub_num, image) %>%
@@ -161,6 +176,24 @@ total.coded <- raw.data %>%
 total.included <- data %>%
   select(sub_num, image) %>%
   distinct() %>%
+  mutate(path = paste0(sub_num, "/", image)) %>%
+  filter(path %notin% excluded.image.paths) %>%
+  nrow()
+
+ros.included <- data %>%
+  filter(site == "Rossel") %>%
+  select(sub_num, image) %>%
+  distinct() %>%
+  mutate(path = paste0(sub_num, "/", image)) %>%
+  filter(path %notin% excluded.image.paths) %>%
+  nrow()
+
+tse.included <- data %>%
+  filter(site == "Tseltal") %>%
+  select(sub_num, image) %>%
+  distinct() %>%
+  mutate(path = paste0(sub_num, "/", image)) %>%
+  filter(path %notin% excluded.image.paths) %>%
   nrow()
 
 # get total subs before and after exclusion
@@ -169,23 +202,21 @@ included.subs <- unique(raw.data$sub_num)
 
 no.usable.images.subs <- raw.data %>%
   group_by(sub_num) %>%
-  mutate(n.images = length(unique(image))) %>%
+  mutate(n.images = length(unique(image)), 
+         path = paste0(sub_num, "/", image)) %>%
   group_by(sub_num, n.images) %>%
-  filter(!is.na(exclusion)) %>%
+  filter(!is.na(exclusion) | path %in% excluded.image.paths) %>%
   summarize(n.excluded = n()) %>%
   filter(n.excluded == n.images) %>%
   pull(sub_num)
 
 # get exclusion counts and percentages
 exclusions <- raw.data %>%
-  filter(!is.na(exclusion)) %>%
-  select(sub_num, image, exclusion) %>%
+  mutate(path = paste0(sub_num, "/", image)) %>%
+  filter(!is.na(exclusion) | path %in% excluded.image.paths) %>%
+  select(sub_num, image) %>%
   distinct() %>%
-  group_by(exclusion) %>%
-  summarize(count = n()) %>%
-  ungroup() %>%
-  mutate(percent = round(count/total.coded * 100, 2)) %>%
-  pivot_wider(names_from = "exclusion", values_from = c("count", "percent"))
+  nrow()
 ```
 
 ## Corpus
@@ -227,7 +258,7 @@ Photos were annotated with IMCO, an open-source Python program adapted for effic
 <!-- eb: if short on space last sentence here could be footnote -->
 
 ## Data preparation and reliability
-Images were excluded if they were too dark, bright, blurry, or covered for annotators to identify handled objects (`r exclusions$count_Exclude` images, `r exclusions$percent_Exclude`% of the data set), if annotators were otherwise unsure about what objects were being handled (`r exclusions$count_Unsure`, or `r exclusions$percent_Unsure`%), if there was no handled object (`r exclusions$count_None`, or `r exclusions$percent_None`%), or if the researcher was still present when the image was captured (`r exclusions$count_Experimenter`, or `r exclusions$percent_Experimenter`%). To avoid unnecessary data loss, all excluded photos were checked by at least one other annotator and re-included for analysis if objects were identifiable. <!--kc: something's not adding up here, either in the exclusion counts or the original total coded count. will double check and fix--> In total, `r format(total.included, big.mark = ",", trim = TRUE)` images were deemed usable by annotators (`r format(data %>% filter(site == "Rossel") %>% select(sub_num, image) %>% distinct() %>% nrow(), big.mark = ",", trim = TRUE)` for Rossel, `r format(data %>% filter(site == "Tseltal") %>% select(sub_num, image) %>% distinct() %>% nrow(), big.mark = ",", trim = TRUE)` for Tseltal).
+Images were excluded if they were too dark, bright, blurry, or covered for annotators to identify handled objects, if annotators were otherwise unsure about what objects were being handled, if there was no handled object, or if the researcher was still present when the image was captured (_n_ = `r format(exclusions, big.mark = ",", trim = TRUE)`, or `r format(round(exclusions/total.coded*100, 1), nsmall = 1)`% of the data set). To avoid unnecessary data loss, all excluded photos were checked by at least one other annotator and re-included for analysis if objects were identifiable. In total, `r format(total.included, big.mark = ",", trim = TRUE)` images were deemed usable by annotators (`r format(ros.included, big.mark = ",", trim = TRUE)` for Rossel, `r format(tse.included, big.mark = ",", trim = TRUE)` for Tseltal).
 
 ```{r, reliability}
 # read in output of "reliability.R"

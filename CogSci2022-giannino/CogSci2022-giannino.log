@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.27)  1 FEB 2022 15:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.27)  1 FEB 2022 16:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -773,40 +773,45 @@ Underfull \vbox (badness 1694) has occurred while \output is active []
 <figs/age-effects-fig-1.pdf, id=174, 237.88875pt x 168.63pt>
 File: figs/age-effects-fig-1.pdf Graphic file (type pdf)
 <use figs/age-effects-fig-1.pdf>
-Package pdftex.def Info: figs/age-effects-fig-1.pdf  used on input line 589.
+Package pdftex.def Info: figs/age-effects-fig-1.pdf  used on input line 593.
 (pdftex.def)             Requested size: 237.88815pt x 168.62958pt.
 [5 <./figs/age-effects-bycategory-fig-1.pdf> <./figs/age-effects-fig-1.pdf>]
-Underfull \hbox (badness 2600) in paragraph at lines 720--736
+Underfull \vbox (badness 3690) has occurred while \output is active []
+
+
+Underfull \hbox (badness 2600) in paragraph at lines 724--740
 \OT1/ptm/m/n/10 Children's ma-te-rial worlds---especially the ob-jects they
  []
 
 [6]
-Underfull \hbox (badness 4013) in paragraph at lines 830--835
+Underfull \hbox (badness 4013) in paragraph at lines 834--839
  [][]\OT1/ptm/m/n/10 Karasik, L. B., Schnei-der, J., Kuchirko, Y. A., &
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 830--835
+Underfull \hbox (badness 1168) in paragraph at lines 834--839
  \OT1/ptm/m/n/10 Tamis-LeMonda, C. S. (2018). Not so WEIRD ob-
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 830--835
+Underfull \hbox (badness 1675) in paragraph at lines 834--839
  \OT1/ptm/m/n/10 ject play in Tajik-istan. Pre-sen-ta-tion to the In-ter-na-
  []
 
-[7] (./CogSci2022-giannino.aux)
+[7] [8
+
+] (./CogSci2022-giannino.aux)
 Package rerunfilecheck Info: File `CogSci2022-giannino.out' has not changed.
 (rerunfilecheck)             Checksum: F34217F4462BC58BDAFF86806F4EAF2D;2965.
  ) 
 Here is how much of TeX's memory you used:
- 13915 strings out of 480247
- 226727 string characters out of 5894309
+ 13916 strings out of 480247
+ 226733 string characters out of 5894309
  522630 words of memory out of 5000000
  31514 multiletter control sequences out of 15000+600000
  513345 words of font info for 115 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,12n,63p,467b,334s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,12n,63p,467b,364s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.
 enc}</Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmmi10.pfb></Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/
@@ -818,10 +823,10 @@ erlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></User
 s/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on CogSci2022-giannino.pdf (7 pages, 9819546 bytes).
+Output written on CogSci2022-giannino.pdf (8 pages, 9810953 bytes).
 PDF statistics:
- 320 PDF objects out of 1000 (max. 8388607)
- 273 compressed objects within 3 object streams
- 92 named destinations out of 1000 (max. 500000)
+ 324 PDF objects out of 1000 (max. 8388607)
+ 276 compressed objects within 3 object streams
+ 93 named destinations out of 1000 (max. 500000)
  183 words of extra memory for PDF output out of 10000 (max. 10000000)
 

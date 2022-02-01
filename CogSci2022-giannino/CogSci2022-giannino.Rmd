@@ -211,7 +211,11 @@ Photos were annotated with IMCO, an open-source Python program adapted for effic
 ## Data preparation and reliability
 Images were excluded if they were too dark, bright, blurry, or covered for annotators to identify handled objects (`r exclusions$count_Exclude` images, `r exclusions$percent_Exclude`% of the data set), if annotators were otherwise unsure about what objects were being handled (`r exclusions$count_Unsure`, or `r exclusions$percent_Unsure`%), if there was no handled object (`r exclusions$count_None`, or `r exclusions$percent_None`%), or if the researcher was still present when the image was captured (`r exclusions$count_Experimenter`, or `r exclusions$percent_Experimenter`%). To avoid unnecessary data loss, all excluded photos were checked by at least one other annotator and re-included for analysis if objects were identifiable. <!--kc: something's not adding up here, either in the exclusion counts or the original total coded count. will double check and fix--> In total, `r format(total.included, big.mark = ",", trim = TRUE)` images were deemed usable by annotators (`r format(data %>% filter(site == "Rossel") %>% select(sub_num, image) %>% distinct() %>% nrow(), big.mark = ",", trim = TRUE)` for Rossel, `r format(data %>% filter(site == "Tseltal") %>% select(sub_num, image) %>% distinct() %>% nrow(), big.mark = ",", trim = TRUE)` for Tseltal).
 
-XX% of photo streams were double coded. Reliability annotations were equally spread across sites and ages and included a total of XXXX images. At the category level, annotators agreed on XX.X% of decisions (Rossel: XX.X%, Tseltal: XX.X%). At the object label level, annotators agreed on XX.X% of decisions (Rossel: XX.X%, Tseltal: XX.X%).
+```{r, reliability}
+
+```
+
+25% of photo streams were double coded. Reliability annotations were equally spread across sites and ages and included a total of XXXX images. At the category level, annotators agreed on XX.X% of decisions (Rossel: XX.X%, Tseltal: XX.X%). At the object label level, annotators agreed on XX.X% of decisions (Rossel: XX.X%, Tseltal: XX.X%).
 
 ```{r top-objects, results = "asis"}
 # compute the objects that most often appear 1+ times across children w/i sites
@@ -997,7 +1001,6 @@ plot_grid(panels, legend, nrow = 2, rel_heights = c(1, .1))
 ```
 
 # Discussion
-<!--mc2kc: new bit added here in response to eb's request-->
 We annotated and analyzed `r format(total.coded, big.mark = ",", trim = TRUE)` images of at-home child object handling from children under age four in two subsistence communities from opposite sides of the globe. To facilitate comparison, we classified individual objects into broad semantic categories and then examined how long children spent handling objects from each category, as well as how many unique objects per hour they handled across categories. Our main findings are as follows: Overall time spent within categories appeared stable across age and cultural context. In contrast, when it came to unique objects per hour, children handled a greater diversity of synthetic and immovable objects relative to the other categories, and did so to different extents between sites. The rate of transition between objects also varied between sites, with Tseltal children increasing their transition rate over age. Last but not least, time spent with objects is Zipfian, and many of the most common items within site were also common _across_ the two sites. We discuss this rich set of findings with respect to (a) object handling as a viewpoint into children’s worlds in general and (b) the implications of our findings for word learning specifically.
 
 ## Objects as insight into children’s worlds

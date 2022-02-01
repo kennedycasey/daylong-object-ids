@@ -3,6 +3,7 @@ library(tidyverse)
 # read in data
 annotations <- read_csv("data/all-annotations.csv")
 participants <- read_csv("data/metadata/participants.csv")
+timestamps <- read_csv("data/metadata/timestamps.csv")
 
 # create not in operator
 `%notin%` <- Negate(`%in%`)
@@ -10,7 +11,9 @@ participants <- read_csv("data/metadata/participants.csv")
 # create one column that tells us the reason for exclusion
 raw.data <- annotations %>%
   mutate(Experimenter = ifelse(str_detect(tolower(Object), "exclude"), 1, 0)) %>%
-  pivot_longer(c(None, Exclude, Unsure, Experimenter), names_to = "exclusion", values_to = "exclusion.val") %>%
+  pivot_longer(c(None, Exclude, Unsure, Experimenter), 
+               names_to = "exclusion", 
+               values_to = "exclusion.val") %>%
   mutate(exclusion = ifelse(exclusion.val == 1, exclusion, NA)) %>%
   select(sub_num, Image, Object, exclusion) %>%
   distinct()
@@ -18,8 +21,9 @@ raw.data <- annotations %>%
 # get knife categories ----------------------------------------------------
 knife.categories <- annotations %>%
   filter(str_detect(Object, "knife"))
-  # check to make sure there's no image with both categories
-  # filter(ToolMealtime == 1 & ToolWork == 1)
+
+# check to make sure there aren't any images with both categories
+nrow(filter(knife.categories, ToolMealtime == 1 & ToolWork == 1))
 
 m.knife.images <- knife.categories %>%
   filter(ToolMealtime == 1) %>%
@@ -37,7 +41,6 @@ unsure <- read_csv("data/manual-checks/unsure-objects.csv") %>%
   pivot_longer(c(Exclude:Unsure), names_to = "exclusion", values_to = "exclusion.val") %>%
   mutate(exclusion.corrected = ifelse(exclusion.val == 1, exclusion, NA), 
          from.unsure = 1) %>%
-  # TO DO: decide whether we're keeping categories when exact objects aren't identifiable
   rename(object.corrected = Object) %>%
   select(sub_num, Image, object.corrected, exclusion.corrected, from.unsure) 
 
@@ -244,11 +247,11 @@ p2.exclude <- 5499 #output of sample(c(4590, 5499), 1)
 
 data.to.export <- data.w.exclusions %>%
   left_join(participants, by = "sub_num") %>%
-  left_join(durations, by = c("sub_num", "Image")) %>%
+  left_join(timestamps, by = c("sub_num", "Image")) %>%
   filter(sub_num != p1.exclude & sub_num != p2.exclude) %>%
   rename(image = Image, 
          timestamp = TimestampHMS) %>%
-  select(site, sub_num, age, sex, image, exclusion, category, object, timestamp, duration) %>%
+  select(site, sub_num, age, sex, image, exclusion, category, object, timestamp) %>%
   mutate(object = ifelse(!is.na(exclusion), NA, object), 
          category = ifelse(!is.na(exclusion), NA, category)) %>%
   distinct()

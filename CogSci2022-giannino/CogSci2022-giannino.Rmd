@@ -72,28 +72,18 @@ if (run.from.raw) {
 
 # read in data
 raw.data <- read_csv("../data/all-data.csv")
+demo <- read_csv("../data/metadata/participants.csv") %>%
+  select(site, sub_num, age)
 
-ros.subs <- raw.data %>%
-  filter(site == "Rossel") %>%
-  select(sub_num) %>%
-  distinct() %>%
-  pull()
-
-tse.subs <- raw.data %>%
-  filter(site == "Tseltal") %>%
-  select(sub_num) %>%
-  distinct() %>%
-  pull()
+included.subs <- unique(raw.data$sub_num)
 
 # read in C&E data for all codeable hours per ptcp
 codeable.hrs.pp <- read_csv(
   "../data/metadata/all-hours-with-codeable-photos-per-ptcp.csv") %>%
-  # add site info
-  filter(sub_num %in% c(ros.subs, tse.subs)) %>%
-  mutate(site = case_when(
-    sub_num %in% ros.subs ~ "Rossel", 
-    sub_num %in% tse.subs ~ "Tseltal")) 
-  
+  filter(sub_num %in% included.subs) %>%
+  # add participant metadata
+  full_join(demo)
+
 # pre-set colors and category labels
 sites <- c("Rossel", "Tseltal")
 
@@ -873,14 +863,11 @@ hourly.object.transitions.byage.effects.toplot <- ggpredict(
 ```{r, age-categories}
 # calculate total # objects per category and prop objects per category, per kid
 category.props.byage <- data %>%
-  group_by(sub_num, category, site, age) %>%
-  summarize(n.category = n()) %>%
-  ungroup() %>% 
   group_by(sub_num, site, age) %>%
-  summarize(n.images = sum(n.category), 
-            n.category = n.category, 
-            category = category) %>%
-  mutate(prop = n.category/n.images) %>%
+  mutate(n.images = length(unique(image))) %>%
+  group_by(sub_num, site, age, n.images) %>%
+  count(category, .drop = FALSE) %>%
+  mutate(prop = n/n.images) %>%
   ungroup() %>%
   mutate(category = factor(category,
                               levels = categories))
@@ -889,11 +876,12 @@ category.props.byage <- data %>%
 age.effects.list <- list()
 age.effects.toplot.list <- list()
 for (i in categories) {
-  model <- lm(prop ~ site * age,
+  model <- lm(prop ~ site * age + n.images,
               filter(category.props.byage, category == i))
   
   effects <- tidy(model) %>%
-    mutate(category = i) %>%
+    mutate(category = i, 
+           p.adjusted = p.adjust(p.value, method = "holm")) %>%
     filter(term != "(Intercept)" & p.value < 0.10)
   
   # get model predicted values for plotting

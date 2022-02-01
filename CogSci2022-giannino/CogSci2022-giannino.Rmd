@@ -573,7 +573,8 @@ hourly.categories.incl.zeroes <- data %>%
   group_by(site, sub_num, hour) %>%
   summarize(n.categories = length(unique(category))) %>%
   ungroup() %>%
-  left_join(codeable.hrs.pp) %>%
+  full_join(codeable.hrs.pp) %>%
+  filter(sub_num %in% unique(data$sub_num)) %>%
   replace_na(list(n.categories = 0)) %>%
   summarize(mean = round(mean(n.categories), 2))
 ```
@@ -601,6 +602,7 @@ hourly.objects.incl.zeroes <- data %>%
   ungroup() %>%
   full_join(codeable.hrs.pp) %>%
   replace_na(list(n.objects = 0)) %>%
+  filter(sub_num %in% unique(data$sub_num)) %>%
   summarize(mean = mean(n.objects), 
             median = median(n.objects), 
             sd = sd(n.objects), 

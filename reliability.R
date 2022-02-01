@@ -284,8 +284,8 @@ reliability <- read_csv("data/reliability-data.csv") %>%
          object2 = object, 
          category2 = category) %>%
   mutate(n.objects2 = n()) %>%
-  select(sub_num, image, exclusion2, n.objects2, object2, category2) %>%
-  arrange(sub_num, image, category2, object2)
+  select(site, sub_num, image, exclusion2, n.objects2, object2, category2) %>%
+  arrange(site, sub_num, image, category2, object2)
 
 reliability.dirs <- reliability %>%
   pull(sub_num) %>%
@@ -293,9 +293,9 @@ reliability.dirs <- reliability %>%
 
 main <- read_csv("data/all-data.csv") %>%
   filter(sub_num %in% reliability.dirs) %>%
-  group_by(sub_num, image) %>%
+  group_by(site, sub_num, image) %>%
   mutate(n.objects = n()) %>%
-  select(sub_num, image, exclusion, n.objects, object, category) %>%
+  select(site, sub_num, image, exclusion, n.objects, object, category) %>%
   arrange(sub_num, image, category, object)
 
 compare <- main %>%
@@ -304,7 +304,7 @@ compare <- main %>%
          n.objects.diff = ifelse(n.objects != n.objects2, 1, 0), 
          object.diff = ifelse(object != object2, 1, 0), 
          category.diff = ifelse(category != category2, 1, 0)) %>%
-  group_by(sub_num, image) %>%
+  group_by(sub_num, image, site) %>%
   summarize(exclusion.diff = sum(exclusion.diff, na.rm = TRUE), 
             n.objects.diff = sum(n.objects.diff, na.rm = TRUE), 
             object.diff = sum(object.diff, na.rm = TRUE), 
@@ -312,10 +312,10 @@ compare <- main %>%
   ungroup() %>%
   mutate(category.match = ifelse(category.diff >= 1, 0, 1), 
          object.match = ifelse(object.diff >= 1, 0, 1)) %>%
-  select(sub_num, image, category.match, object.match) %>%
-  group_by(sub_num) %>%
+  select(site, sub_num, image, category.match, object.match) %>%
+  group_by(site, sub_num) %>%
   mutate(n.images = length(unique(image))) %>%
-  group_by(sub_num, n.images) %>%
+  group_by(site, sub_num, n.images) %>%
   summarize(category.agreement = sum(category.match)/length(unique(image)), 
             object.agreement = sum(object.match)/length(unique(image))) %>%
   write_csv("data/reliability-stats.csv")

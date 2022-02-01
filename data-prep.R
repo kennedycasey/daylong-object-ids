@@ -7,19 +7,6 @@ participants <- read_csv("data/metadata/participants.csv")
 # create not in operator
 `%notin%` <- Negate(`%in%`)
 
-# calculate duration between images
-durations <- read_csv("data/metadata/timestamps.csv") %>%
-  arrange(sub_num, TimestampHMS) %>%
-  group_by(sub_num) %>%
-  mutate(first = first(Image), 
-         last = last(Image)) %>%
-  ungroup() %>%
-  # store NA if it's the first or last image in a dir
-  mutate(next_timestamp = lead(TimestampHMS, 1), 
-         duration = ifelse(Image == first | Image == last, NA, 
-                           as.numeric(next_timestamp - TimestampHMS))) %>%
-  select(sub_num, Image, TimestampHMS, duration)
-
 # create one column that tells us the reason for exclusion
 raw.data <- annotations %>%
   mutate(Experimenter = ifelse(str_detect(tolower(Object), "exclude"), 1, 0)) %>%

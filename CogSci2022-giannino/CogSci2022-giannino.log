@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.27)  1 FEB 2022 16:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.27)  1 FEB 2022 17:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -745,56 +745,47 @@ Package pdftex.def Info: figs/top-objects-fig-1.pdf  used on input line 437.
 (pdftex.def)             Requested size: 478.78758pt x 172.64456pt.
 [3 <./figs/examples-fig-1.pdf> <./figs/zipfian-objects-fig-1.pdf>]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
-(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 464.
-
-
-Underfull \hbox (badness 6204) in paragraph at lines 464--464
-[][][]\OT1/ptm/m/n/9 Model struc-ture: lmer(unique ob-jects/hour $[]$ cat-e-gor
-y
- []
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 468.
 
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 485.
-<figs/overall-stats-fig-1.pdf, id=136, 235.88126pt x 153.57375pt>
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 486.
+<figs/overall-stats-fig-1.pdf, id=135, 235.88126pt x 153.57375pt>
 File: figs/overall-stats-fig-1.pdf Graphic file (type pdf)
 <use figs/overall-stats-fig-1.pdf>
-Package pdftex.def Info: figs/overall-stats-fig-1.pdf  used on input line 493.
+Package pdftex.def Info: figs/overall-stats-fig-1.pdf  used on input line 494.
 (pdftex.def)             Requested size: 235.88068pt x 153.57336pt.
 [4 <./figs/top-objects-fig-1.pdf> <./figs/overall-stats-fig-1.pdf>]
-<figs/age-effects-bycategory-fig-1.pdf, id=173, 241.90375pt x 166.6225pt>
+<figs/age-effects-bycategory-fig-1.pdf, id=172, 241.90375pt x 166.6225pt>
 File: figs/age-effects-bycategory-fig-1.pdf Graphic file (type pdf)
 <use figs/age-effects-bycategory-fig-1.pdf>
 Package pdftex.def Info: figs/age-effects-bycategory-fig-1.pdf  used on input l
-ine 546.
+ine 547.
 (pdftex.def)             Requested size: 241.90315pt x 166.62209pt.
-
-Underfull \vbox (badness 1694) has occurred while \output is active []
-
-<figs/age-effects-fig-1.pdf, id=174, 237.88875pt x 168.63pt>
+<figs/age-effects-fig-1.pdf, id=173, 237.88875pt x 168.63pt>
 File: figs/age-effects-fig-1.pdf Graphic file (type pdf)
 <use figs/age-effects-fig-1.pdf>
-Package pdftex.def Info: figs/age-effects-fig-1.pdf  used on input line 593.
+Package pdftex.def Info: figs/age-effects-fig-1.pdf  used on input line 594.
 (pdftex.def)             Requested size: 237.88815pt x 168.62958pt.
 [5 <./figs/age-effects-bycategory-fig-1.pdf> <./figs/age-effects-fig-1.pdf>]
 Underfull \vbox (badness 3690) has occurred while \output is active []
 
 
-Underfull \hbox (badness 2600) in paragraph at lines 724--740
+Underfull \hbox (badness 2600) in paragraph at lines 725--741
 \OT1/ptm/m/n/10 Children's ma-te-rial worlds---especially the ob-jects they
  []
 
 [6]
-Underfull \hbox (badness 4013) in paragraph at lines 834--839
+Underfull \hbox (badness 4013) in paragraph at lines 835--840
  [][]\OT1/ptm/m/n/10 Karasik, L. B., Schnei-der, J., Kuchirko, Y. A., &
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 834--839
+Underfull \hbox (badness 1168) in paragraph at lines 835--840
  \OT1/ptm/m/n/10 Tamis-LeMonda, C. S. (2018). Not so WEIRD ob-
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 834--839
+Underfull \hbox (badness 1675) in paragraph at lines 835--840
  \OT1/ptm/m/n/10 ject play in Tajik-istan. Pre-sen-ta-tion to the In-ter-na-
  []
 
@@ -823,7 +814,7 @@ erlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></User
 s/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on CogSci2022-giannino.pdf (8 pages, 9810953 bytes).
+Output written on CogSci2022-giannino.pdf (8 pages, 9811109 bytes).
 PDF statistics:
  324 PDF objects out of 1000 (max. 8388607)
  276 compressed objects within 3 object streams

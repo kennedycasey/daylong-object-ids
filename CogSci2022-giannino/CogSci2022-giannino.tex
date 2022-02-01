@@ -442,6 +442,10 @@ objects\footnote{The study camera was the object that was handled by the
 \end{figure*}
 \end{CodeChunk}
 
+We exclude from the following analyses, any hour in which a child did
+not handle any objects; inclusion of these cases creates a second mode
+at 0, violating our statistical models' assumption of normality.
+
 \hypertarget{effects-of-object-category}{%
 \subsection{Effects of object
 category}\label{effects-of-object-category}}
@@ -459,40 +463,37 @@ categories, with category membership dummy coded (i.e., objects
 belonging to the target category for a given model = 1, objects
 belonging to other categories = 0). Each regression model included fixed
 effects of site, category, and a site-by-category interaction as well as
-random intercepts for individual children\footnote{Model structure:
-  lmer(unique objects/hour \({\sim}\) category (target/non-target;
-  factorial) * site (Rossel/Tseltal; factorial) + (1 \textbar{} child))}.
-We excluded hours with no object handling from this analysis (and all
-following linear mixed-effects modeling) to avoid zero-inflation that
-would violate the assumptions of a Gaussian distribution. After
-correcting for multiple comparisons, we found a significant main effect
-of the synthetic object category (\(\beta\) = 0.35, \emph{SE} = 0.09,
-\emph{t} = 4.04, \emph{p} = 0.001) and a marginal site-by-synthetic
-interaction (\(\beta\) = 0.36, \emph{SE} = 0.12, \emph{t} = 2.93,
-\emph{p} = 0.058) such that children handled more unique synthetic
-objects per hour than objects from other categories, and this effect was
-stronger for Tseltal children than for Rossel children. Additionally, we
-found negative main effects for the toy (\(\beta\) = -0.42, \emph{SE} =
-0.13, \emph{t} = -3.14, \emph{p} = 0.034), mealtime tool (\(\beta\) =
--0.35, \emph{SE} = 0.12, \emph{t} = -2.96, \emph{p} = 0.056), clothing
-(\(\beta\) = -0.32, \emph{SE} = 0.11, \emph{t} = -3.02, \emph{p} =
-0.049), and work tool (\(\beta\) = -0.65, \emph{SE} = 0.17, \emph{t} =
--3.86, \emph{p} = 0.002) categories, indicating that children handled
-fewer unique objects from these categories per hour relative to other
-categories. Finally, a significant main effect of the immovable object
-category (\(\beta\) = 0.43, \emph{SE} = 0.11, \emph{t} = 3.95, \emph{p}
-= 0.002) and a significant site-by-immovable interaction (\(\beta\) =
--0.76, \emph{SE} = 0.17, \emph{t} = -4.44, \emph{p} \textless{} 0.001)
-revealed that children handled more unique immovable objects per hour
-than objects from other categories, and this effect was stronger for
-Rossel children than for Tseltal children (Figure 4).
+random intercepts for individual children\footnote{lmer(unique
+  objects/hour \({\sim}\) category (target/non-target; factorial) * site
+  (Rossel/Tseltal; factorial) + (1 \textbar{} child))}. After correcting
+for multiple comparisons, we found a significant main effect of the
+synthetic object category (\(\beta\) = 0.35, \emph{SE} = 0.09, \emph{t}
+= 4.04, \emph{p} = 0.001) and a marginal site-by-synthetic interaction
+(\(\beta\) = 0.36, \emph{SE} = 0.12, \emph{t} = 2.93, \emph{p} = 0.058)
+such that children handled more unique synthetic objects per hour than
+objects from other categories, and this effect was stronger for Tseltal
+children than for Rossel children. Additionally, we found negative main
+effects for the toy (\(\beta\) = -0.42, \emph{SE} = 0.13, \emph{t} =
+-3.14, \emph{p} = 0.034), mealtime tool (\(\beta\) = -0.35, \emph{SE} =
+0.12, \emph{t} = -2.96, \emph{p} = 0.056), clothing (\(\beta\) = -0.32,
+\emph{SE} = 0.11, \emph{t} = -3.02, \emph{p} = 0.049), and work tool
+(\(\beta\) = -0.65, \emph{SE} = 0.17, \emph{t} = -3.86, \emph{p} =
+0.002) categories, indicating that children handled fewer unique objects
+from these categories per hour relative to other categories. Finally, a
+significant main effect of the immovable object category (\(\beta\) =
+0.43, \emph{SE} = 0.11, \emph{t} = 3.95, \emph{p} = 0.002) and a
+significant site-by-immovable interaction (\(\beta\) = -0.76, \emph{SE}
+= 0.17, \emph{t} = -4.44, \emph{p} \textless{} 0.001) revealed that
+children handled more unique immovable objects per hour than objects
+from other categories, and this effect was stronger for Rossel children
+than for Tseltal children (Figure 4).
 
 \begin{CodeChunk}
 \begin{figure}[!h]
 
 \includegraphics{figs/overall-stats-fig-1} \hfill{}
 
-\caption[Count of unique objects handled per hour by object category]{Count of unique objects handled per hour by object category. Points reflect means for individual children across all hours of recording. Asterisks indicate significant differences between sites after correcting for multiple comparisons.}\label{fig:overall-stats-fig}
+\caption[Rate of unique objects handled per hour by object category]{Rate of unique objects handled per hour by object category. Points reflect means for individual children across all hours of recording. Asterisks indicate significant differences between sites after correcting for multiple comparisons.}\label{fig:overall-stats-fig}
 \end{figure}
 \end{CodeChunk}
 
@@ -527,7 +528,7 @@ images\footnote{As expected, number of handling images was correlated
   poses no technical issue in estimating \(R^{2}\), but does limit the
   total variance attributed independently to either variable (Wurm \&
   Fisicaro, 2014). Thus, for models of non-proportional measures, we
-  rely solely on age to capture this variance (i.e., Model structure:
+  rely solely on age to capture this variance (i.e.,
   lmer(non-proportional DV \({\sim}\) age (months; numeric) * site
   (Rossel/Tseltal; factorial) + (1 \textbar{} child)).}. This analysis
 revealed no significant age-related changes in the frequency of handling

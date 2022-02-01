@@ -72,7 +72,7 @@ if (run.from.raw) {
 
 # read in data
 raw.data <- read_csv("../data/all-data.csv")
-demo <- read_csv("../data/metadata/participants.csv") %>%
+participants <- read_csv("../data/metadata/participants.csv") %>%
   select(site, sub_num, age)
 
 included.subs <- unique(raw.data$sub_num)
@@ -82,7 +82,7 @@ codeable.hrs.pp <- read_csv(
   "../data/metadata/all-hours-with-codeable-photos-per-ptcp.csv") %>%
   filter(sub_num %in% included.subs) %>%
   # add participant metadata
-  full_join(demo)
+  full_join(participants)
 
 # pre-set colors and category labels
 sites <- c("Rossel", "Tseltal")
@@ -159,6 +159,8 @@ total.coded <- raw.data %>%
   select(sub_num, image) %>%
   distinct() %>%
   nrow()
+
+
 
 # get total number of images after exclusion
 total.included <- data %>%

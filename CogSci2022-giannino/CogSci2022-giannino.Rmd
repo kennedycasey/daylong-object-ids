@@ -1011,22 +1011,11 @@ We suggest that the individual objects children handle give us insight into deve
 Our data indicate that children are exposed to a stable and wide variety of object categories in the first four years of life, and have increasing access to a diversity of objects within categories as they get older. Similarity in the distribution of object categories across sites suggests some basis for expecting similarity in early object label knowledge by children in these two sites. Individual objects also show a Zipfian distribution in how they are handled, with some handled frequently and most handled infrequently. This distribution may help support word learning [see also @carvalho2019rethinking; @clerkin2017real; @long2021characterizing; @montag2018quantity] and, in tandem with other observed effects across age and cultural context, may indicate which words for objects children are likely to learn first and how their semantic networks grow within and across categories.
 
 ## Future directions
-This 
+<!--mc2kc: this is too long! feel free to pare down as much as you want! even all of it :)-->
+One weakness of the current dataset is that we have classified objects on the basis of broadly similar semantics. If we were to reclassify objects based on specific associated activity or applied function, we could better understand how object assemblages and their use by children (a) indicate links between social and linguistic behavior and (b) change over developmental time (e.g., a spoon as a chew toy, musical instrument, and, ultimately, a utensil). Better comparison to existing data also demands we analyze the temporal characteristics of handling bouts and also track unique instances of objects [@herzberg2021exuberant] though we note this will be near-impossible for some object types (e.g., leaves, twigs). We would also like to extend our comparison to other communities, rural and urban, but this will require daylong photo collection in these other sites---there is less overlap between children within the sites studied here compared to @herzberg2021exuberant's US data, but this may be as much due to recording type (e.g., two-hour videos) as to cultural difference. Our most urgent goal is to analyze the speech surrounding these bouts of object handling to derive estimates of how often the objects are talked about, what is mentioned, and by whom. By combining these daylong photo streams with audio data in two unrelated cultural contexts, our aim is to develop a benchmark against which models and mechanisms of word learning via object-centric interaction can be tested.
 
-The overarching story is one where children’s early object-centric interactions are anchored on a few unique items across the different categories relevant to daily life, similar to other accounts of how kids get into segmentation, etc. What we need to know, however, is how often these objects are labeled for or by children as they interact with them, and how the labeling behavior itself fluctuates across age, activity, and cultural context.
-<!-- eb: move to last para & scope shift (i.e. big zoom out in generality) felt abrupt to me-->
 
-<!--
-## Future directions (can cut altogether if out of space)
 
-* Categorization of objects as reflecting activities rather than overall ‘type’; relation to these factors + time of day
-* Bout durations [relating to @herzberg2021exuberant]
-* Tallying of unique instances of objects
-* Comparison to other communities, both rural and urban
-    + But important to note that there's less overlap between kids (within sites) than we see for US context [e.g., @herzberg2021exuberant], possibly owing to cultural differences and sampling strategies (e.g., two-hour videos vs. daylong photos). Another point is that while there may be less overlap between kids, there's likely more overlap between kids and adults (fewer child-specific items)
-    + Item 2b
-* Link to audio to get at actual labeling behavior from adult and child interlocutors
--->
 
 <!--
 # Data availability statement

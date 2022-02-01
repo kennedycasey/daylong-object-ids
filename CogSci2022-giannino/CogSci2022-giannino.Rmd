@@ -87,11 +87,8 @@ codeable.hrs.pp <- read_csv(
 # pre-set colors and category labels
 sites <- c("Rossel", "Tseltal")
 
-site.colors <- c("Rossel" = "#3C5388", 
-                 "Tseltal" = "#02A087")
-
-site.colors.ce <- c("Rossel" = "chocolate",
-                    "Tseltal" = "darkred")
+site.colors <- c("Rossel" = "sandybrown",
+                 "Tseltal" = "brown4")
 
 categories <- c("Food", "Synthetic", "Natural", "Toy",
                 "Mealtime Tool", "Clothing", "Immovable", 

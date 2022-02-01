@@ -1,5 +1,7 @@
 library(tidyverse)
+get.reliability.data = FALSE
 
+if (get.reliability.data) {
 # DUPLICATE DATA PREP FOR MAIN ANNOTATIONS --------------------------------
 # read in data
 annotations <- read_csv("data/reliability-annotations.csv")
@@ -273,6 +275,7 @@ data.to.export <- data.w.exclusions %>%
   distinct()
 
 write_csv(data.to.export, "data/reliability-data.csv")
+}
 
 # CALCULATE RELIABILITY STATS ---------------------------------------------
 reliability <- read_csv("data/reliability-data.csv") %>%

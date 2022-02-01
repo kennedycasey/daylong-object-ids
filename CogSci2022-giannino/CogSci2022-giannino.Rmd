@@ -31,9 +31,10 @@ author-information: >
                \texttt{\small{mcasillas@uchicago.edu}}}
 
 abstract: >
-  Object-centric interactions provide rich learning moments for young children, including opportunities to discover word meanings. Children’s own object handling, in particular, forms a key source of input – one that varies across cultures and across development. Using daylong photo streams from child-worn cameras (>16k images), we analyze the frequency and targets of child object handling across the first four years in two small-scale subsistence farming communities on opposite sides of the globe (Papuan and Mayan). Overall, we see a general consistency in the broad composition of handled objects across cultures and age. However, a few notable cross-cultural differences and age-related changes indicate the likely influence of many factors on the rate and distribution of child object handling, including object availability, child carrying practices, daily activities, and maturational constraints.
-# eb: the last sentence feels very long and also a little vague. split up? also in my initial skim of just figures the takehome i got was 'ok, mostly same in terms of categories and time, but not ind. objects' if age is part of punchline at the abstract level, maybe it can have a figure? 
-keywords:
+  Object-centric interactions provide rich learning moments for young children, including opportunities to discover word meanings. Children’s own object handling, in particular, forms a key source of input – one that varies across cultures and across development. Using daylong photo streams from child-worn cameras, we analyze >16k images to identify the frequency and targets of child object handling across the first four years in two small-scale subsistence farming communities on opposite sides of the globe (Papuan and Mayan). Overall, we see a general consistency in the broad composition of handled objects across cultures and age, with a few notable exceptions owing to differences in object availability, child carrying practices, daily activities, along with maturational constraints. Object handling patterns are discussed in relation to their potential consequences for word learning.
+
+keywords: culture; object play; word learning; daylong recording; egocentric images
+# kc2mc: please feel free to change! i especially wasn't sure about "play" as a key word so maybe "interaction" instead?
     
 output: cogsci2016::cogsci_paper
 #final-submission: \cogscifinalcopy

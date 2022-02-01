@@ -212,10 +212,27 @@ Photos were annotated with IMCO, an open-source Python program adapted for effic
 Images were excluded if they were too dark, bright, blurry, or covered for annotators to identify handled objects (`r exclusions$count_Exclude` images, `r exclusions$percent_Exclude`% of the data set), if annotators were otherwise unsure about what objects were being handled (`r exclusions$count_Unsure`, or `r exclusions$percent_Unsure`%), if there was no handled object (`r exclusions$count_None`, or `r exclusions$percent_None`%), or if the researcher was still present when the image was captured (`r exclusions$count_Experimenter`, or `r exclusions$percent_Experimenter`%). To avoid unnecessary data loss, all excluded photos were checked by at least one other annotator and re-included for analysis if objects were identifiable. <!--kc: something's not adding up here, either in the exclusion counts or the original total coded count. will double check and fix--> In total, `r format(total.included, big.mark = ",", trim = TRUE)` images were deemed usable by annotators (`r format(data %>% filter(site == "Rossel") %>% select(sub_num, image) %>% distinct() %>% nrow(), big.mark = ",", trim = TRUE)` for Rossel, `r format(data %>% filter(site == "Tseltal") %>% select(sub_num, image) %>% distinct() %>% nrow(), big.mark = ",", trim = TRUE)` for Tseltal).
 
 ```{r, reliability}
+# read in output of "reliability.R"
+reliability <- read_csv("../data/reliability-stats.csv")
+
+# get total number of images that were double coded
+n.reliability <- sum(reliability$n.images)
+
+# calculate % agreement at the category and object level
+# ...overall
+reliability.stats <- reliability %>%
+    summarize(category = mean(category.agreement)*100,
+              object = mean(object.agreement)*100)
+  
+# ...by site
+bysite.reliability.stats <- reliability %>%
+  group_by(site) %>%
+  summarize(category = mean(category.agreement)*100, 
+            object = mean(object.agreement)*100)
 
 ```
 
-25% of photo streams were double coded. Reliability annotations were equally spread across sites and ages and included a total of XXXX images. At the category level, annotators agreed on XX.X% of decisions (Rossel: XX.X%, Tseltal: XX.X%). At the object label level, annotators agreed on XX.X% of decisions (Rossel: XX.X%, Tseltal: XX.X%).
+For confirm sufficient reliability, 20% of photo streams were double coded. Reliability annotations were equally spread across sites and ages and included a total of `r format(n.reliability, big.mark = ",", trim = TRUE)` images. At the category level, annotators agreed on `r format(round(reliability.stats$category, 1), nsmall = 1)`% of decisions (Rossel: `r format(round(subset(bysite.reliability.stats, site == "Rossel")$category, 1), nsmall = 1)`%, Tseltal: `r format(round(subset(bysite.reliability.stats, site == "Tseltal")$category, 1), nsmall = 1)`%), on average across photo streams. At the object label level, annotators agreed on `r format(round(reliability.stats$object, 1), nsmall = 1)`% of decisions (Rossel: `r format(round(subset(bysite.reliability.stats, site == "Rossel")$object, 1), nsmall = 1)`%, Tseltal: `r format(round(subset(bysite.reliability.stats, site == "Tseltal")$object, 1), nsmall = 1)`%).
 
 ```{r top-objects, results = "asis"}
 # compute the objects that most often appear 1+ times across children w/i sites

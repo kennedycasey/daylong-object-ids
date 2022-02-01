@@ -296,10 +296,10 @@ main <- read_csv("data/all-data.csv") %>%
   group_by(site, sub_num, image) %>%
   mutate(n.objects = n()) %>%
   select(site, sub_num, image, exclusion, n.objects, object, category) %>%
-  arrange(sub_num, image, category, object)
+  arrange(site, sub_num, image, category, object)
 
 compare <- main %>%
-  full_join(reliability, by = c("sub_num", "image")) %>%
+  full_join(reliability, by = c("site", "sub_num", "image")) %>%
   mutate(exclusion.diff = ifelse(exclusion != exclusion2, 1, 0), 
          n.objects.diff = ifelse(n.objects != n.objects2, 1, 0), 
          object.diff = ifelse(object != object2, 1, 0), 

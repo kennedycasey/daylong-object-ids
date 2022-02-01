@@ -303,4 +303,19 @@ compare <- main %>%
   mutate(exclusion.diff = ifelse(exclusion != exclusion2, 1, 0), 
          n.objects.diff = ifelse(n.objects != n.objects2, 1, 0), 
          object.diff = ifelse(object != object2, 1, 0), 
-         category.diff = ifelse(category != category2, 1, 0))
+         category.diff = ifelse(category != category2, 1, 0)) %>%
+  group_by(sub_num, image) %>%
+  summarize(exclusion.diff = sum(exclusion.diff, na.rm = TRUE), 
+            n.objects.diff = sum(n.objects.diff, na.rm = TRUE), 
+            object.diff = sum(object.diff, na.rm = TRUE), 
+            category.diff = sum(category.diff, na.rm = TRUE)) %>%
+  ungroup() %>%
+  mutate(category.match = ifelse(category.diff >= 1, 0, 1), 
+         object.match = ifelse(object.diff >= 1, 0, 1)) %>%
+  select(sub_num, image, category.match, object.match) %>%
+  group_by(sub_num) %>%
+  mutate(n.images = length(unique(image))) %>%
+  group_by(sub_num, n.images) %>%
+  summarize(category.agreement = sum(category.match)/length(unique(image)), 
+            object.agreement = sum(object.match)/length(unique(image))) %>%
+  write_csv("data/reliability-stats.csv")

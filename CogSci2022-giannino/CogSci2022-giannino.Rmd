@@ -807,24 +807,18 @@ model <- lm(n.objects ~ site * age, daily.objects.byage)
 daily.objects.byage.effects <- tidy(model) %>%
     filter(term != "(Intercept)" & p.value < 0.10)
 
-# get model predicted values for plotting
-daily.objects.byage.effects.toplot <- ggpredict(
-  model, terms = c("site", "age [all]"),
-  type = "fixed", back.transform = TRUE) %>%
-  rename(age = group, site = x)
-
 # calculate # unique objects per hour per kid
 hourly.objects.byage <- data %>%
   group_by(site, sub_num, age, hour) %>%
   summarize(n.objects = length(unique(object))) %>%
   ungroup() %>%
   full_join(codeable.hrs.pp) %>%
-  replace_na(list(n.categories = 0))
+  replace_na(list(n.objects = 0))
 
 # model total # unique objects handled per hour by site and age
 model <- lmer(n.objects ~ site * age + (1|sub_num), hourly.objects.byage)
 
-# marginal increase in unique objects per hour with age
+# increase in unique objects per hour with age
 hourly.objects.byage.effects <- tidy(model) %>%
     filter(effect == "fixed" & term != "(Intercept)" & p.value < 0.10)
 

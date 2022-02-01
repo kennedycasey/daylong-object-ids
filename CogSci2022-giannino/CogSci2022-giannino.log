@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.27)  31 JAN 2022 09:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.27)  1 FEB 2022 15:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -698,7 +698,7 @@ File: omlptm.fd
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <9> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 113.
 
-Underfull \hbox (badness 1147) in paragraph at lines 109--123
+Underfull \hbox (badness 1147) in paragraph at lines 109--122
 \OT1/ptm/m/n/9 young chil-dren, in-clud-ing op-por-tu-ni-ties to dis-cover word
 
  []
@@ -709,73 +709,104 @@ dftex.map}
 
 
 ]
-<figs/examples-fig-1.pdf, id=84, 209.78375pt x 165.61874pt>
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
+95.
+
+(/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+<figs/examples-fig-1.pdf, id=92, 209.78375pt x 165.61874pt>
 File: figs/examples-fig-1.pdf Graphic file (type pdf)
 <use figs/examples-fig-1.pdf>
-Package pdftex.def Info: figs/examples-fig-1.pdf  used on input line 309.
+Package pdftex.def Info: figs/examples-fig-1.pdf  used on input line 318.
 (pdftex.def)             Requested size: 209.78322pt x 165.61833pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 409.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 409.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 409.
-<figs/zipfian-objects-fig-1.pdf, id=96, 242.9075pt x 138.5175pt>
-File: figs/zipfian-objects-fig-1.pdf Graphic file (type pdf)
-<use figs/zipfian-objects-fig-1.pdf>
-Package pdftex.def Info: figs/zipfian-objects-fig-1.pdf  used on input line 414
-.
-(pdftex.def)             Requested size: 242.90689pt x 138.51715pt.
-<figs/top-objects-fig-1.pdf, id=97, 478.78876pt x 172.645pt>
-File: figs/top-objects-fig-1.pdf Graphic file (type pdf)
-<use figs/top-objects-fig-1.pdf>
-Package pdftex.def Info: figs/top-objects-fig-1.pdf  used on input line 425.
-(pdftex.def)             Requested size: 478.78758pt x 172.64456pt.
-LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 464.
-[3 <./figs/examples-fig-1.pdf> <./figs/zipfian-objects-fig-1.pdf>]
-<figs/overall-stats-fig-1.pdf, id=127, 234.8775pt x 152.57pt>
-File: figs/overall-stats-fig-1.pdf Graphic file (type pdf)
-<use figs/overall-stats-fig-1.pdf>
-Package pdftex.def Info: figs/overall-stats-fig-1.pdf  used on input line 474.
-(pdftex.def)             Requested size: 234.87692pt x 152.56963pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[4 <./figs/top-objects-fig-1.pdf> <./figs/overall-stats-fig-1.pdf>] [5]
-Underfull \hbox (badness 4013) in paragraph at lines 719--724
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 420.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 420.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 420.
+<figs/zipfian-objects-fig-1.pdf, id=104, 242.9075pt x 138.5175pt>
+File: figs/zipfian-objects-fig-1.pdf Graphic file (type pdf)
+<use figs/zipfian-objects-fig-1.pdf>
+Package pdftex.def Info: figs/zipfian-objects-fig-1.pdf  used on input line 426
+.
+(pdftex.def)             Requested size: 242.90689pt x 138.51715pt.
+<figs/top-objects-fig-1.pdf, id=105, 478.78876pt x 172.645pt>
+File: figs/top-objects-fig-1.pdf Graphic file (type pdf)
+<use figs/top-objects-fig-1.pdf>
+Package pdftex.def Info: figs/top-objects-fig-1.pdf  used on input line 437.
+(pdftex.def)             Requested size: 478.78758pt x 172.64456pt.
+[3 <./figs/examples-fig-1.pdf> <./figs/zipfian-objects-fig-1.pdf>]
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 464.
+
+
+Underfull \hbox (badness 6204) in paragraph at lines 464--464
+[][][]\OT1/ptm/m/n/9 Model struc-ture: lmer(unique ob-jects/hour $[]$ cat-e-gor
+y
+ []
+
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 485.
+<figs/overall-stats-fig-1.pdf, id=136, 235.88126pt x 153.57375pt>
+File: figs/overall-stats-fig-1.pdf Graphic file (type pdf)
+<use figs/overall-stats-fig-1.pdf>
+Package pdftex.def Info: figs/overall-stats-fig-1.pdf  used on input line 493.
+(pdftex.def)             Requested size: 235.88068pt x 153.57336pt.
+[4 <./figs/top-objects-fig-1.pdf> <./figs/overall-stats-fig-1.pdf>]
+<figs/age-effects-bycategory-fig-1.pdf, id=173, 241.90375pt x 166.6225pt>
+File: figs/age-effects-bycategory-fig-1.pdf Graphic file (type pdf)
+<use figs/age-effects-bycategory-fig-1.pdf>
+Package pdftex.def Info: figs/age-effects-bycategory-fig-1.pdf  used on input l
+ine 546.
+(pdftex.def)             Requested size: 241.90315pt x 166.62209pt.
+
+Underfull \vbox (badness 1694) has occurred while \output is active []
+
+<figs/age-effects-fig-1.pdf, id=174, 237.88875pt x 168.63pt>
+File: figs/age-effects-fig-1.pdf Graphic file (type pdf)
+<use figs/age-effects-fig-1.pdf>
+Package pdftex.def Info: figs/age-effects-fig-1.pdf  used on input line 589.
+(pdftex.def)             Requested size: 237.88815pt x 168.62958pt.
+[5 <./figs/age-effects-bycategory-fig-1.pdf> <./figs/age-effects-fig-1.pdf>]
+Underfull \hbox (badness 2600) in paragraph at lines 720--736
+\OT1/ptm/m/n/10 Children's ma-te-rial worlds---especially the ob-jects they
+ []
+
+[6]
+Underfull \hbox (badness 4013) in paragraph at lines 830--835
  [][]\OT1/ptm/m/n/10 Karasik, L. B., Schnei-der, J., Kuchirko, Y. A., &
  []
 
 
-Underfull \hbox (badness 1168) in paragraph at lines 719--724
+Underfull \hbox (badness 1168) in paragraph at lines 830--835
  \OT1/ptm/m/n/10 Tamis-LeMonda, C. S. (2018). Not so WEIRD ob-
  []
 
 
-Underfull \hbox (badness 1675) in paragraph at lines 719--724
+Underfull \hbox (badness 1675) in paragraph at lines 830--835
  \OT1/ptm/m/n/10 ject play in Tajik-istan. Pre-sen-ta-tion to the In-ter-na-
  []
 
-[6] (./CogSci2022-giannino.aux)
+[7] (./CogSci2022-giannino.aux)
 Package rerunfilecheck Info: File `CogSci2022-giannino.out' has not changed.
-(rerunfilecheck)             Checksum: C5DFC2B10B8BCE6103C6269957FE5731;2713.
+(rerunfilecheck)             Checksum: F34217F4462BC58BDAFF86806F4EAF2D;2965.
  ) 
 Here is how much of TeX's memory you used:
- 13850 strings out of 480247
- 225323 string characters out of 5894309
+ 13915 strings out of 480247
+ 226727 string characters out of 5894309
  522630 words of memory out of 5000000
- 31466 multiletter control sequences out of 15000+600000
- 510783 words of font info for 109 fonts, out of 8000000 for 9000
+ 31514 multiletter control sequences out of 15000+600000
+ 513345 words of font info for 115 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 60i,12n,63p,407b,360s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 60i,12n,63p,467b,334s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.
 enc}</Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmmi10.pfb></Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/
@@ -787,10 +818,10 @@ erlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></User
 s/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on CogSci2022-giannino.pdf (6 pages, 9704532 bytes).
+Output written on CogSci2022-giannino.pdf (7 pages, 9819546 bytes).
 PDF statistics:
- 270 PDF objects out of 1000 (max. 8388607)
- 230 compressed objects within 3 object streams
- 83 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 320 PDF objects out of 1000 (max. 8388607)
+ 273 compressed objects within 3 object streams
+ 92 named destinations out of 1000 (max. 500000)
+ 183 words of extra memory for PDF output out of 10000 (max. 10000000)
 

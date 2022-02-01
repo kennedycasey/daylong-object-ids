@@ -601,8 +601,8 @@ hourly.objects.incl.zeroes <- data %>%
   summarize(n.objects = length(unique(object))) %>%
   ungroup() %>%
   full_join(codeable.hrs.pp) %>%
-  replace_na(list(n.objects = 0)) %>%
   filter(sub_num %in% unique(data$sub_num)) %>%
+  replace_na(list(n.objects = 0)) %>%
   summarize(mean = mean(n.objects), 
             median = median(n.objects), 
             sd = sd(n.objects), 
@@ -634,6 +634,8 @@ model.data.incl.zeroes <- data %>%
   # add number of handking images for each hour by participant
   mutate(n.images = length(unique(image))) %>%
   full_join(codeable.hrs.pp.bycategory) %>%
+  # ensure that we didn't add any new ptcps not in data
+  filter(sub_num %in% unique(data$sub_num)) %>%
   # add zeroes for hours with no handling images
   replace_na(list(n.images = 0)) %>%
   group_by(site, sub_num, n.images, hour, category) %>%

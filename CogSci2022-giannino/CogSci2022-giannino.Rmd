@@ -73,10 +73,27 @@ if (run.from.raw) {
 # read in data
 raw.data <- read_csv("../data/all-data.csv")
 
+ros.subs <- raw.data %>%
+  filter(site == "Rossel") %>%
+  select(sub_num) %>%
+  distinct() %>%
+  pull()
+
+tse.subs <- raw.data %>%
+  filter(site == "Tseltal") %>%
+  select(sub_num) %>%
+  distinct() %>%
+  pull()
+
 # read in C&E data for all codeable hours per ptcp
 codeable.hrs.pp <- read_csv(
-  "../data/metadata/all-hours-with-codeable-photos-per-ptcp.csv")
-
+  "../data/metadata/all-hours-with-codeable-photos-per-ptcp.csv") %>%
+  # add site info
+  filter(sub_num %in% c(ros.subs, tse.subs)) %>%
+  mutate(site = case_when(
+    sub_num %in% ros.subs ~ "Rossel", 
+    sub_num %in% tse.subs ~ "Tseltal")) 
+  
 # pre-set colors and category labels
 sites <- c("Rossel", "Tseltal")
 
@@ -563,7 +580,7 @@ hourly.categories <- data %>%
   summarize(mean = round(mean(n.categories), 2))
 
 hourly.categories.incl.zeroes <- data %>%
-  group_by(sub_num, hour) %>%
+  group_by(site, sub_num, hour) %>%
   summarize(n.categories = length(unique(category))) %>%
   ungroup() %>%
   full_join(codeable.hrs.pp) %>%
@@ -621,13 +638,20 @@ codeable.hrs.pp.bycategory <- expand_grid(
   codeable.hrs.pp, tibble(category = categories))
 
 model.data.incl.zeroes <- data %>%
-  group_by(site, sub_num) %>%
+  group_by(site, sub_num, hour) %>%
+  # add number of handking images for each hour by participant
   mutate(n.images = length(unique(image))) %>%
   full_join(codeable.hrs.pp.bycategory) %>%
+  # add zeroes for hours with no handling images
   replace_na(list(n.images = 0)) %>%
   group_by(site, sub_num, n.images, hour, category) %>%
-  summarize(n.objects = length(unique(object))) %>%
+  # compute unique objects per hour
+  mutate(n.objects.raw = ifelse(n.images == 0, 0, length(unique(object))), 
+         # correct for the fact that NAs are getting counted as objects
+         n.objects = ifelse(is.na(object), 0, n.objects.raw)) %>%
   ungroup() %>%
+  select(site, sub_num, category, hour, n.images, n.objects) %>%
+  distinct() %>%
   mutate(synthetic = ifelse(category == "Synthetic", 1, 0), 
          natural = ifelse(category == "Natural", 1, 0), 
          food = ifelse(category == "Food", 1, 0), 
@@ -641,8 +665,7 @@ model.data.incl.zeroes <- data %>%
 lmer.outputs <- list()
 for (i in c(categories)) {
   
-  lmer.output <- lmer(n.objects ~ site * eval(as.symbol(tolower(trimws(str_remove(i, "Tool"))))) +
-                               (1|sub_num), model.data.incl.zeroes) %>%
+  lmer.output <- lmer(n.objects ~ site * eval(as.symbol(tolower(trimws(str_remove(i, "Tool"))))) + (1|sub_num), model.data.incl.zeroes) %>%
   tidy() %>% 
   filter(effect == "fixed" & term != "(Intercept)")
   
@@ -682,7 +705,7 @@ ggplot(hourly.objects.bycategory,
     dodge.width = 0.75, jitter.width = 0.15), size = 0.5, alpha = 0.5) +
   geom_boxplot(width = 0.75, outlier.shape = NA,
                alpha = 0.5, color = "black") +
-  annotate(geom = "text", label = "*", x = "Immovable", y = 4, size = 6) +
+  annotate(geom = "text", label = "*", x = "Immovable", y = 3.5, size = 6) +
   scale_color_manual(values = site.colors) + 
   scale_fill_manual(values = site.colors) +
   scale_x_discrete(labels = category.labels) + 

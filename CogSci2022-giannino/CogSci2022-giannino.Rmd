@@ -1028,7 +1028,7 @@ In addition to the overall age-related increase in handling found by Casillas an
 ### Does object handling become more complex with age?
 Analysis of children's relative rate of transition between objects per hour (i.e., the number of transitions from one object to another divided by the number of available objects for that hour) did not reveal an overall age-related increase ($\beta$ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "age")$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "age")$std.error, 2), nsmall = 2)`, _t_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "age")$statistic, 2), nsmall = 2)`, _p_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "age")$p.value, 3), nsmall = 3)`). However, there was a significant main effect of site ($\beta$ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site")$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site")$std.error, 2), nsmall = 2)`, _t_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site")$statistic, 2), nsmall = 2)`, _p_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site")$p.value, 3), nsmall = 3)`; Figure 6B), indicating that Tseltal children made fewer transitions between objects per hour than Rossel children. While the site-by-age interaction term did not reach statistical significance ($\beta$ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site:age")$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site:age")$std.error, 2), nsmall = 2)`, _t_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site:age")$statistic, 2), nsmall = 2)`, _p_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site:age")$p.value, 3), nsmall = 3)`, descriptively, this difference appears to be more pronounced for younger children. At the category level, we found that children made marginally more transitions between object categories per hour with age ($\beta$ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "age")$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "age")$std.error, 2), nsmall = 2)`, _t_ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "age")$statistic, 2), nsmall = 2)`, _p_ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "age")$p.value, 3), nsmall = 3)`), in addition to a marginal main effect of site ($\beta$ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "site")$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "site")$std.error, 2), nsmall = 2)`, _t_ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "site")$statistic, 2), nsmall = 2)`, _p_ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "site")$p.value, 3), nsmall = 3)`) that mirrors the finding for object transitions: Tseltal children made fewer category transitions per hour than Rossel children.
 
-```{r age-effects-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 3.4, fig.height = 2.4, fig.cap = "(A) Unique objects handled per hour and (B) relative number of transitions between objects per hour as a function of age. Points reflect raw hourly counts for each child, and lines reflect model predictions with shaded standard error regions."}
+```{r age-effects-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 3.4, fig.height = 4, fig.cap = "(A) Unique objects and (B) object categories handled per hour as a function of age. (C) Relative number of transitions between objects and (D) object categories per hour as a function of age. Points reflect raw hourly counts for each child, and lines reflect model predictions with shaded standard error regions."}
 # create fig showing increase in unique objects per hr with age
 p1 <- ggplot() +
   # add trend line from lmer output
@@ -1047,6 +1047,7 @@ p1 <- ggplot() +
   scale_color_manual(values = site.colors) +
   scale_fill_manual(values = site.colors) +
   scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) +
+  scale_y_continuous(limits = c(0, 30),breaks = c(0, 5, 10, 15, 20, 25, 30)) +
   labs(x = "Age (months)", y = "Unique Objects/Hour",
        color = "Site", fill = "Site", tag = "A") +
   theme_test(base_size = 8)
@@ -1054,7 +1055,31 @@ p1 <- ggplot() +
 p1a <- p1 + theme(legend.position = "none", legend.direction = "horizontal", 
                   plot.tag = element_text(face = "bold"))
 legend <- get_legend(p1 + theme(legend.position = "bottom"))
+# create fig showing increase in number of categories per hr with age
 p2 <- ggplot() +
+  # add trend line from lmer output
+  geom_line(hourly.categories.byage.effects.toplot,
+            mapping = aes(x = age, y = predicted, color = site), size = 1) +
+  # add SE from lmer output
+  geom_ribbon(hourly.categories.byage.effects.toplot,
+              mapping = aes(x = age , ymin = predicted - conf.low,
+                            ymax = predicted + conf.low, fill = site),
+              alpha = 0.1) +
+  # add points for individual kids
+  geom_jitter(hourly.categories.byage,
+              mapping = aes(x = age, y = n.categories,
+                            color = site, fill = site),
+              alpha = 0.25, size = 0.5) +
+  scale_color_manual(values = site.colors) +
+  scale_fill_manual(values = site.colors) +
+  scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) +
+  scale_y_continuous(limits = c(0, 10),breaks = c(2, 4, 6, 8, 10)) +
+  labs(x = "Age (months)", y = "Unique Categories/Hour",
+       color = "Site", fill = "Site", tag = "B") +
+  theme_test(base_size = 8) +
+  theme(legend.position = "none", plot.tag = element_text(face = "bold"))
+
+p3 <- ggplot() +
   # add trend line from lmer output
   geom_line(hourly.object.transitions.byage.effects.toplot,
             mapping = aes(x = age, y = predicted, color = site), size = 1) +
@@ -1072,14 +1097,38 @@ p2 <- ggplot() +
   scale_fill_manual(values = site.colors) +
   scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) +
   labs(x = "Age (months)", y = "Object Transitions/Hour",
-       color = "Site", fill = "Site", tag = "B") +
+       color = "Site", fill = "Site", tag = "C") +
+  theme_test(base_size = 8) +
+  theme(legend.position = "none", plot.tag = element_text(face = "bold"))
+
+p4 <- ggplot() +
+  # add trend line from lmer output
+  geom_line(hourly.category.transitions.byage.effects.toplot,
+            mapping = aes(x = age, y = predicted, color = site), size = 1) +
+  # add SE from lmer output
+  geom_ribbon(hourly.category.transitions.byage.effects.toplot,
+              mapping = aes(x = age , ymin = predicted - conf.low,
+                            ymax = predicted + conf.low, fill = site),
+              alpha = 0.1) +
+  # add points for individual kids
+  geom_jitter(hourly.category.transitions,
+              mapping = aes(x = age, y = rel.transitions,
+                            color = site, fill = site), 
+              alpha = 0.25, size = 0.5) +
+  scale_color_manual(values = site.colors) +
+  scale_fill_manual(values = site.colors) +
+  scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) +
+  scale_y_continuous(limits = c(0, 8),breaks = c(2, 4, 6, 8)) +
+  labs(x = "Age (months)", y = "Category Transitions/Hour",
+       color = "Site", fill = "Site", tag = "D") +
   theme_test(base_size = 8) +
   theme(legend.position = "none", plot.tag = element_text(face = "bold"))
 # combine plots and do some formatting
 # (i.e., align axes and shrink space between panels)
-fig6 <- align_plots(p1a, p2, align = "hv", axis = "l")
-panels <- plot_grid(ggdraw(fig6[[1]]), ggdraw(fig6[[2]]), 
-                    nrow = 1, rel_heights = c(1, 1))
+fig5 <- align_plots(p1a, p2, p3, p4, align = "hv", axis = "l")
+panels <- plot_grid(ggdraw(fig5[[1]]), ggdraw(fig5[[2]]), 
+                    ggdraw(fig5[[3]]), ggdraw(fig5[[4]]), 
+                    nrow = 2, rel_heights = c(1, 1, 1, 1))
 plot_grid(panels, legend, nrow = 2, rel_heights = c(1, .1))
 ```
 

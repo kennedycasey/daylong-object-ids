@@ -1,7 +1,7 @@
 ---
 title: "Sticks, leaves, buckets, and bowls: Distributional patterns of children’s at-home object handling in two subsistence societies"
 bibliography: CogSci2022-giannino.bib
-csl: apa6.csl
+csl: apa4auth.csl
 document-params: "10pt, letterpaper"
 
 author-information: >
@@ -1008,7 +1008,7 @@ In addition to the overall age-related increase in handling found by Casillas an
 ### Does object handling become more complex with age?
 Analysis of children's relative rate of transition between objects per hour (i.e., the number of transitions from one object to another divided by the number of available objects for that hour) did not reveal an overall age-related increase ($\beta$ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "age")$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "age")$std.error, 3), nsmall = 3)`, _t_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "age")$statistic, 2), nsmall = 2)`, _p_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "age")$p.value, 3), nsmall = 3)`). However, there was a significant main effect of site ($\beta$ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site")$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site")$std.error, 2), nsmall = 2)`, _t_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site")$statistic, 2), nsmall = 2)`, _p_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site")$p.value, 3), nsmall = 3)`; Figure 6C), indicating that Tseltal children made fewer transitions between objects per hour than Rossel children. While the site-by-age interaction term did not reach statistical significance ($\beta$ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site:age")$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site:age")$std.error, 3), nsmall = 3)`, _t_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site:age")$statistic, 2), nsmall = 2)`, _p_ = `r format(round(subset(hourly.object.transitions.byage.effects, term == "site:age")$p.value, 3), nsmall = 3)`), descriptively, this difference appears to be more pronounced for younger children. At the category level, we found that children made marginally more transitions between object categories per hour with age ($\beta$ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "age")$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "age")$std.error, 2), nsmall = 2)`, _t_ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "age")$statistic, 2), nsmall = 2)`, _p_ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "age")$p.value, 3), nsmall = 3)`), in addition to a marginal main effect of site ($\beta$ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "site")$estimate, 2), nsmall = 2)`, _SE_ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "site")$std.error, 2), nsmall = 2)`, _t_ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "site")$statistic, 2), nsmall = 2)`, _p_ = `r format(round(subset(hourly.category.transitions.byage.effects, term == "site")$p.value, 3), nsmall = 3)`; Figure 6D) that mirrors the finding for object transitions: Tseltal children made fewer category transitions per hour than Rossel children.
 
-```{r age-effects-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 3.2, fig.height = 4, fig.cap = "(A) Unique objects and (B) object categories handled per hour as a function of age. (C) Relative number of transitions between objects and (D) object categories per hour as a function of age. Points reflect raw hourly counts for each child, and lines reflect model predictions with shaded standard error regions."}
+```{r age-effects-fig, fig.env = "figure", fig.pos = "!ht", fig.align = "center", fig.width = 3.2, fig.height = 3.5, fig.cap = "(A) Unique objects and (B) object categories handled per hour as a function of age. (C) Relative number of transitions between objects and (D) object categories per hour as a function of age. Points reflect raw hourly counts for each child, and lines reflect model predictions with shaded standard error regions."}
 # create fig showing increase in unique objects per hr with age
 p1 <- ggplot() +
   # add trend line from lmer output
@@ -1030,7 +1030,7 @@ p1 <- ggplot() +
   scale_y_continuous(limits = c(0, 30),breaks = c(0, 5, 10, 15, 20, 25, 30)) +
   labs(x = "Age (months)", y = "Unique Objects/Hour",
        color = "Site", fill = "Site", tag = "A") +
-  theme_test(base_size = 8)
+  theme_test(base_size = 7)
 # format so that only 1 legend appears at the bottom of combined fig
 p1a <- p1 + theme(legend.position = "none", legend.direction = "horizontal", 
                   plot.tag = element_text(face = "bold"))
@@ -1056,7 +1056,7 @@ p2 <- ggplot() +
   scale_y_continuous(limits = c(0, 10),breaks = c(0, 2, 4, 6, 8, 10)) +
   labs(x = "Age (months)", y = "Unique Categories/Hour",
        color = "Site", fill = "Site", tag = "B") +
-  theme_test(base_size = 8) +
+  theme_test(base_size = 7) +
   theme(legend.position = "none", plot.tag = element_text(face = "bold"))
 
 p3 <- ggplot() +
@@ -1078,7 +1078,7 @@ p3 <- ggplot() +
   scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) +
   labs(x = "Age (months)", y = "Object Transitions/Hour",
        color = "Site", fill = "Site", tag = "C") +
-  theme_test(base_size = 8) +
+  theme_test(base_size = 7) +
   theme(legend.position = "none", plot.tag = element_text(face = "bold"))
 
 p4 <- ggplot() +
@@ -1101,7 +1101,7 @@ p4 <- ggplot() +
   scale_y_continuous(limits = c(0, 8),breaks = c(2, 4, 6, 8)) +
   labs(x = "Age (months)", y = "Category Transitions/Hour",
        color = "Site", fill = "Site", tag = "D") +
-  theme_test(base_size = 8) +
+  theme_test(base_size = 7) +
   theme(legend.position = "none", plot.tag = element_text(face = "bold"))
 # combine plots and do some formatting
 # (i.e., align axes and shrink space between panels)
@@ -1111,7 +1111,6 @@ panels <- plot_grid(ggdraw(fig5[[1]]), ggdraw(fig5[[2]]),
                     nrow = 2, rel_heights = c(1, 1, 1, 1))
 plot_grid(panels, legend, nrow = 2, rel_heights = c(1, .1))
 ```
-
 # Discussion
 In the current descriptive work, we annotated and analyzed `r format(total.coded, big.mark = ",", trim = TRUE)` images featuring at-home child object handling from children under age four in two subsistence communities from opposite sides of the globe. Our main findings are as follows: Children's overall handling of different object categories (e.g., food vs. toys vs. natural objects) appears stable across age and cultural context. In contrast, when it comes to the number of unique objects per hour, children handled a greater diversity of synthetic and immovable objects, relative to the other categories, and did so to different extents across sites. The rate of transition between objects also varied between sites. Finally, time spent with objects is Zipfian-distributed, and many of the most common objects within sites were also common across sites. We discuss this rich set of findings with respect to (a) object handling as a window into children’s worlds in general, and (b) the implications of object handling patterns for word learning.
 

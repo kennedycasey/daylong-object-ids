@@ -99,6 +99,10 @@ frame <- all.ranked.objects %>%
            object, "-M|-W|empty drink ")), " (", category.label, ")")) %>%
   filter(rank <= 25) 
 
+hourly.total.categories <- data %>%
+  group_by(sub_num, hour) %>%
+  summarize(n.categories = length(unique(category)))
+
 model.data <- data %>%
   group_by(site, sub_num) %>%
   mutate(n.images = length(unique(image))) %>%
@@ -125,7 +129,6 @@ hourly.categories.byage <- data %>%
   summarize(n.categories = length(unique(category))) %>%
   ungroup()
 
-model <- lmer(n.categories ~ site * age + (1|sub_num), hourly.categories.byage)
 
 hourly.objects.byage <- data %>%
   group_by(site, sub_num, age, hour) %>%
@@ -155,17 +158,17 @@ hourly.category.transitions <- data %>%
   mutate(rel.transitions = n.transitions/n.categories) %>%
   filter(rel.transitions > 0)
 
+model <- lmer(rel.transitions ~ site * age + (1|sub_num),
+              hourly.category.transitions)
+
 hourly.category.transitions.byage.effects.toplot <- ggpredict(
   model, terms = c("site", "age [all]"), type = "fixed",
   back.transform = TRUE) %>%
   rename(age = group, site = x) %>%
   mutate(age = as.numeric(as.character(age)))
 
-hourly.categories.byage.effects.toplot <- ggpredict(
-  model, terms = c("site", "age [all]"), type = "fixed",
-  back.transform = TRUE) %>%
-  rename(age = group, site = x) %>%
-  mutate(age = as.numeric(as.character(age)))
+model <- lmer(n.objects ~ site * age + (1|sub_num), 
+              hourly.objects.byage)
 
 hourly.objects.byage.effects.toplot <- ggpredict(
   model, terms = c("site", "age [all]"), type = "fixed",
@@ -201,6 +204,14 @@ hourly.object.transitions.byage.effects.toplot <- ggpredict(
   back.transform = TRUE) %>%
   rename(age = group, site = x) %>%
   mutate(age = as.numeric(as.character(age)))
+
+model <- lmer(n.categories ~ site * age + (1|sub_num), hourly.categories.byage)
+
+hourly.categories.byage.effects.toplot <- ggpredict(
+  model, terms = c("site", "age [all]"), type = "fixed",
+  back.transform = TRUE) %>%
+  rename(age = group, site = x) %>%
+  mutate(age = as.numeric(as.character(age)))
   
 figures <- c("Plot1", "Plot2", "Plot3", "Plot4")  
 
@@ -227,18 +238,17 @@ server <- shinyServer(function(input, output) {
            "Plot3"= plot3(),
            "Plot4"= plot4())
   })
-  plot1 <- reactive({ggplot(frame, aes(x = rank, y = prop*100, color = site, fill = site)) +
-      facet_grid(. ~ site) +
-      geom_bar(aes(alpha = as.factor(both)), stat = "identity") +
-      geom_text(aes(y = prop*100/2, label = label),
-                color = "black", srt = 90, size = 1.9) +
-      scale_alpha_manual(values = c(0.2, 0.7)) +
+  plot1 <- reactive({ggplot(skew, aes(x = order, y = prop.images, 
+                                      fill = site, color = site)) +
+      facet_wrap(. ~ site) +
+      geom_point(aes(group = sub_num), alpha = 0.25, size = 0.5) +
+      geom_smooth(se = FALSE, method = "loess", size = 0.5, color = "black") +
       scale_color_manual(values = site.colors) +
       scale_fill_manual(values = site.colors) +
-      labs(x = "Top 25 Objects", y = "% Children") +
-      theme_test(base_size = 10) +
-      theme(axis.text.x = element_blank(), axis.ticks.x = element_blank(), 
-            legend.position = "none")})
+      labs(x = "Objects Ranked by Frequency", y = "Log-scaled % Images", 
+           color = "Site", fill = "Site") +
+      theme_test(base_size = 8) +
+      theme(legend.position = "none")})
   plot2 <- reactive({ggplot(frame, aes(x = rank, y = prop*100, color = site, fill = site)) +
       facet_grid(. ~ site) +
       geom_bar(aes(alpha = as.factor(both)), stat = "identity") +
@@ -271,6 +281,8 @@ server <- shinyServer(function(input, output) {
             legend.position = c(1, 1), 
             legend.direction = "horizontal", 
             axis.text.x = element_text(size = 5))})
+  
+  
   plot4 <- reactive({p1 <- ggplot() +
     geom_line(hourly.objects.byage.effects.toplot,
               mapping = aes(x = age, y = predicted, color = site), size = 1) +

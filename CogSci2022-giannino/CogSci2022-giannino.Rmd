@@ -85,10 +85,10 @@ codeable.hrs.pp <- read_csv(
   full_join(participants)
 
 # pre-set colors and category labels
-sites <- c("Rossel", "Tseltal")
+sites <- c("Tseltal", "Rossel")
 
-site.colors <- c("Rossel" = "brown4",
-                 "Tseltal" = "sandybrown")
+site.colors <- c("Tseltal" = "sandybrown", 
+                 "Rossel" = "brown4")
 
 categories <- c("Food", "Synthetic", "Natural", "Toy",
                 "Mealtime Tool", "Clothing", "Immovable", 
@@ -102,7 +102,8 @@ category.labels <- c("Food", "Synthetic", "Natural", "Toy",
 data <- raw.data %>%
   filter(is.na(exclusion)) %>%
   mutate(hour = hour(timestamp),
-         category = factor(category, levels = categories))
+         category = factor(category, levels = categories), 
+         site = factor(site, levels = sites))
 
 # set rm.study.related to TRUE if you want to check results w/o these
 study.related <- c("camera", "vest", "camera cover")
@@ -382,7 +383,7 @@ category.counts <- data %>%
 
 # combine and do some formatting to create table
 tbl.input <- bind_cols(category.counts, top.objects.bykids) %>%
-  select(category...1, Rossel...2, Rossel...5, Tseltal...3, Tseltal...6)
+  select(category...1, Tseltal...2, Tseltal...5, Rossel...3, Rossel...6)
 
 colnames(tbl.input) <- c("Object Category", "N", "Top Objects", "N", "Top Objects")
 
@@ -394,7 +395,7 @@ kable(tbl.input, format = "latex",
       linesep = "",
       caption = "Number of unique objects (N) and objects handled by the most children, for each category, across sites.") %>%
   kable_styling(latex_options = "scale_down") %>%
-  add_header_above(c(" " = 1, "Rossel" = 2, "Tseltal" = 2), align = "c", bold = TRUE) %>%
+  add_header_above(c(" " = 1, "Tseltal" = 2, "Rossel" = 2), align = "c", bold = TRUE) %>%
   row_spec(0, bold = TRUE)
 ```
 
@@ -543,7 +544,8 @@ all.ranked.objects %>%
          category.label = factor(category,
                                  levels = categories, labels = category.labels),
          label = paste0(str_to_sentence(str_remove(
-           object, "-M|-W|empty drink ")), " (", category.label, ")")) %>%
+           object, "-M|-W|empty drink ")), " (", category.label, ")"), 
+         site = factor(site, levels = sites)) %>%
   filter(rank <= 25) %>%
   ggplot(aes(x = rank, y = prop*100, color = site, fill = site)) +
   facet_grid(. ~ site) +

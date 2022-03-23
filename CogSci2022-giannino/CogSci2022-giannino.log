@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.27)  2 FEB 2022 12:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (TeX Live 2022/dev) (preloaded format=pdflatex 2022.1.27)  23 MAR 2022 10:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -725,32 +725,32 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 [2]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 420.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 421.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 420.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 421.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 420.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 421.
 <figs/zipfian-objects-fig-1.pdf, id=105, 242.9075pt x 138.5175pt>
 File: figs/zipfian-objects-fig-1.pdf Graphic file (type pdf)
 <use figs/zipfian-objects-fig-1.pdf>
-Package pdftex.def Info: figs/zipfian-objects-fig-1.pdf  used on input line 426
+Package pdftex.def Info: figs/zipfian-objects-fig-1.pdf  used on input line 427
 .
 (pdftex.def)             Requested size: 242.90689pt x 138.51715pt.
 <figs/top-objects-fig-1.pdf, id=106, 478.78876pt x 172.645pt>
 File: figs/top-objects-fig-1.pdf Graphic file (type pdf)
 <use figs/top-objects-fig-1.pdf>
-Package pdftex.def Info: figs/top-objects-fig-1.pdf  used on input line 437.
+Package pdftex.def Info: figs/top-objects-fig-1.pdf  used on input line 438.
 (pdftex.def)             Requested size: 478.78758pt x 172.64456pt.
 [3 <./figs/examples-fig-1.pdf> <./figs/zipfian-objects-fig-1.pdf>]
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <9> not available
-(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 469.
+(Font)              Font shape `OMS/pzccm/m/n' tried instead on input line 470.
 
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 487.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 473.
 <figs/overall-stats-fig-1.pdf, id=137, 233.87375pt x 152.57pt>
 File: figs/overall-stats-fig-1.pdf Graphic file (type pdf)
 <use figs/overall-stats-fig-1.pdf>
-Package pdftex.def Info: figs/overall-stats-fig-1.pdf  used on input line 495.
+Package pdftex.def Info: figs/overall-stats-fig-1.pdf  used on input line 496.
 (pdftex.def)             Requested size: 233.87315pt x 152.56963pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -759,21 +759,24 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 Underfull \vbox (badness 6063) has occurred while \output is active []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 517--544
+Underfull \hbox (badness 10000) in paragraph at lines 518--545
 
  []
 
 [4 <./figs/top-objects-fig-1.pdf> <./figs/overall-stats-fig-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 549--558
+Underfull \hbox (badness 10000) in paragraph at lines 550--559
 
  []
 
 <figs/age-effects-fig-1.pdf, id=175, 224.84pt x 245.91875pt>
 File: figs/age-effects-fig-1.pdf Graphic file (type pdf)
 <use figs/age-effects-fig-1.pdf>
-Package pdftex.def Info: figs/age-effects-fig-1.pdf  used on input line 586.
+Package pdftex.def Info: figs/age-effects-fig-1.pdf  used on input line 585.
 (pdftex.def)             Requested size: 224.83945pt x 245.91814pt.
-[5 <./figs/age-effects-fig-1.pdf>] [6] [7] (./CogSci2022-giannino.aux)
+[5 <./figs/age-effects-fig-1.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+[6] [7] (./CogSci2022-giannino.aux)
 Package rerunfilecheck Info: File `CogSci2022-giannino.out' has not changed.
 (rerunfilecheck)             Checksum: 923B9C42DE4D4873BA8B209DE1253AB8;2965.
  ) 
@@ -796,7 +799,7 @@ erlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></User
 s/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
 ></Users/chatterlabmanager/Library/TinyTeX/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on CogSci2022-giannino.pdf (7 pages, 9835313 bytes).
+Output written on CogSci2022-giannino.pdf (7 pages, 9837151 bytes).
 PDF statistics:
  305 PDF objects out of 1000 (max. 8388607)
  261 compressed objects within 3 object streams

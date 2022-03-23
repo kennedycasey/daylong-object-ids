@@ -100,7 +100,7 @@ category.labels <- c("Food", "Synthetic", "Natural", "Toy",
 
 # rm excluded photos + set other variable info
 data <- raw.data %>%
-  filter(is.na(exclusion)) %>%
+  filter(is.na(exclusion) & !is.na(category)) %>%
   mutate(hour = hour(timestamp),
          category = factor(category, levels = categories), 
          site = factor(site, levels = sites))

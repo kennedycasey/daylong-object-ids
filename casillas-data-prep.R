@@ -1,32 +1,19 @@
 library(tidyverse)
-get.reliability.data = FALSE
 
-if (get.reliability.data) {
-# DUPLICATE DATA PREP FOR MAIN ANNOTATIONS --------------------------------
 # read in data
-annotations <- read_csv("data/reliability-annotations.csv")
-participants <- read_csv("data/metadata/participants.csv")
+annotations <- read_csv("data/casillas/all-annotations.csv")
+participants <- read_csv("data/casillas/metadata/participants.csv")
+timestamps <- read_csv("data/casillas/metadata/timestamps.csv")
 
 # create not in operator
 `%notin%` <- Negate(`%in%`)
 
-# calculate duration between images
-durations <- read_csv("data/metadata/timestamps.csv") %>%
-  arrange(sub_num, TimestampHMS) %>%
-  group_by(sub_num) %>%
-  mutate(first = first(Image), 
-         last = last(Image)) %>%
-  ungroup() %>%
-  # store NA if it's the first or last image in a dir
-  mutate(next_timestamp = lead(TimestampHMS, 1), 
-         duration = ifelse(Image == first | Image == last, NA, 
-                           as.numeric(next_timestamp - TimestampHMS))) %>%
-  select(sub_num, Image, TimestampHMS, duration)
-
 # create one column that tells us the reason for exclusion
 raw.data <- annotations %>%
   mutate(Experimenter = ifelse(str_detect(tolower(Object), "exclude"), 1, 0)) %>%
-  pivot_longer(c(None, Exclude, Unsure, Experimenter), names_to = "exclusion", values_to = "exclusion.val") %>%
+  pivot_longer(c(None, Exclude, Unsure, Experimenter), 
+               names_to = "exclusion", 
+               values_to = "exclusion.val") %>%
   mutate(exclusion = ifelse(exclusion.val == 1, exclusion, NA)) %>%
   select(sub_num, Image, Object, exclusion) %>%
   distinct()
@@ -34,8 +21,9 @@ raw.data <- annotations %>%
 # get knife categories ----------------------------------------------------
 knife.categories <- annotations %>%
   filter(str_detect(Object, "knife"))
-  # check to make sure there's no image with both categories
-  # filter(ToolMealtime == 1 & ToolWork == 1)
+
+# check to make sure there aren't any images with both categories
+nrow(filter(knife.categories, ToolMealtime == 1 & ToolWork == 1))
 
 m.knife.images <- knife.categories %>%
   filter(ToolMealtime == 1) %>%
@@ -49,11 +37,10 @@ w.knife.images <- knife.categories %>%
 
 # replace unsure objects --------------------------------------------------
 # read in manually checked unsure objects
-unsure <- read_csv("data/manual-checks/unsure-objects.csv") %>%
+unsure <- read_csv("data/casillas/manual-checks/unsure-objects.csv") %>%
   pivot_longer(c(Exclude:Unsure), names_to = "exclusion", values_to = "exclusion.val") %>%
   mutate(exclusion.corrected = ifelse(exclusion.val == 1, exclusion, NA), 
          from.unsure = 1) %>%
-  # TO DO: decide whether we're keeping categories when exact objects aren't identifiable
   rename(object.corrected = Object) %>%
   select(sub_num, Image, object.corrected, exclusion.corrected, from.unsure) 
 
@@ -66,27 +53,22 @@ data.w.unsure <- raw.data %>%
   mutate(Object = ifelse(!is.na(exclusion), NA, Object)) %>%
   distinct()
 
-checked.unsure <- read_csv("data/manual-checks/unsure-objects.csv") %>%
+checked.unsure <- read_csv("data/casillas/manual-checks/unsure-objects.csv") %>%
   mutate(exact.image = paste0(sub_num, "/", Image)) %>%
   pull(exact.image)
-
-corrected.images <- corrections %>%
-  mutate(corrected.image = paste0(sub_num, "/", Image)) %>%
-  pull() %>%
-  unique()
 
 not.checked.unsure <- data.w.unsure %>%
   filter(exclusion == "Unsure") %>%
   mutate(exact.image = paste0(sub_num, "/", Image)) %>%
-  filter(exact.image %notin% checked.unsure & exact.image %notin% corrected.images)
+  filter(exact.image %notin% checked.unsure)
   
 if (nrow(not.checked.unsure > 0)) {
-  write_csv(not.checked.unsure, "data/manual-checks/new-reliability-unsure-objects.csv")
+  write_csv(not.checked.unsure, "data/casillas/manual-checks/new-unsure-objects.csv")
 }
 
 # replace immovable objects -----------------------------------------------
 # read in manually checked immovable objects
-immovable <- read_csv("data/manual-checks/immovable.csv") %>%
+immovable <- read_csv("data/casillas/manual-checks/immovable.csv") %>%
   mutate(from.immovable = 1) %>%
   select(sub_num, Image, object.corrected, exclusion.corrected, from.immovable)
 
@@ -102,7 +84,7 @@ data.w.immovable <- data.w.unsure %>%
 
 # replace originally excluded images --------------------------------------
 # read in manually checked images with no objects
-none <- read_csv("data/manual-checks/no-objects.csv") %>%
+none <- read_csv("data/casillas/manual-checks/no-objects.csv") %>%
   mutate(object.corrected = Object, 
          exclusion.corrected = ifelse(Exclude == 1, "Exclude", ifelse(None == 1, "None", NA)), 
          from.none = 1) %>%
@@ -117,7 +99,7 @@ data.w.none <- data.w.immovable %>%
   mutate(Object = ifelse(!is.na(exclusion), NA, Object)) %>%
   distinct()
 
-checked.none <- read_csv("data/manual-checks/no-objects.csv") %>%
+checked.none <- read_csv("data/casillas/manual-checks/no-objects.csv") %>%
   mutate(exact.image = paste0(sub_num, "/", Image)) %>%
   pull(exact.image)
 
@@ -127,7 +109,7 @@ not.checked.none <- data.w.none %>%
   filter(exact.image %notin% checked.none)
 
 if (nrow(not.checked.none > 0)) {
-  write_csv(not.checked.none, "data/manual-checks/new-reliability-no-objects.csv")
+  write_csv(not.checked.none, "data/casillas/manual-checks/new-no-objects.csv")
 }
 
 # add regularized labels --------------------------------------------------
@@ -142,7 +124,7 @@ data.w.objects <- data.w.none %>%
   mutate(Object = ifelse(!is.na(exclusion), NA, Object)) %>%
   distinct()
 
-regularized <- read_csv("data/manual-checks/labels.csv") %>%
+regularized <- read_csv("data/casillas/manual-checks/labels.csv") %>%
   pull(Object) %>%
   unique()
 
@@ -152,11 +134,11 @@ not.regularized <- data.w.objects %>%
   filter(Object %notin% regularized)
 
 if (nrow(not.regularized > 0)) {
-  write_csv(not.regularized, "data/manual-checks/new-reliability-objects-to-label.csv")
+  write_csv(not.regularized, "data/casillas/manual-checks/new-objects-to-label.csv")
 }
 
 # read in manually checked object labels
-labels <- read_csv("data/manual-checks/labels.csv")
+labels <- read_csv("data/casillas/manual-checks/labels.csv")
 
 # merge with main annotations df and replace raw label with regularized version
 data.w.labels <- data.w.objects %>%
@@ -174,7 +156,7 @@ data.w.labels <- data.w.objects %>%
   distinct()
 
 # add corrections ---------------------------------------------------------
-corrections <- read_csv("data/manual-checks/corrections.csv") %>%
+corrections <- read_csv("data/casillas/manual-checks/corrections.csv") %>%
   mutate(from.corrections = 1) %>%
   select(sub_num, Image, object.corrected, exclusion.corrected, from.corrections)
 
@@ -215,7 +197,7 @@ data.w.corrections <- data.w.corrections %>%
   
 # determine if there are any objects that need categories
 # if there are, write csv file with only these objects
-categorized <- read_csv("data/manual-checks/categories.csv") %>%
+categorized <- read_csv("data/casillas/manual-checks/categories.csv") %>%
   pull(object) %>%
   unique()
 
@@ -226,12 +208,12 @@ not.categorized <- data.w.corrections %>%
   filter(object %notin% categorized)
 
 if (nrow(not.categorized > 0)) {
-  write_csv(not.categorized, "data/manual-checks/new-reliability-objects-to-categorize.csv")
+  write_csv(not.categorized, "data/casillas/manual-checks/new-objects-to-categorize.csv")
 }
 
 # add regularized categories ----------------------------------------------
 # read in manually checked categories for each object
-categories <- read_csv("data/manual-checks/categories.csv")
+categories <- read_csv("data/casillas/manual-checks/categories.csv")
 
 # merge with main annotations df and store new category
 data.w.categories <- data.w.corrections %>%
@@ -265,57 +247,13 @@ p2.exclude <- 5499 #output of sample(c(4590, 5499), 1)
 
 data.to.export <- data.w.exclusions %>%
   left_join(participants, by = "sub_num") %>%
-  left_join(durations, by = c("sub_num", "Image")) %>%
+  left_join(timestamps, by = c("sub_num", "Image")) %>%
   filter(sub_num != p1.exclude & sub_num != p2.exclude) %>%
   rename(image = Image, 
          timestamp = TimestampHMS) %>%
-  select(site, sub_num, age, sex, image, exclusion, category, object, timestamp, duration) %>%
+  select(site, sub_num, age, sex, image, exclusion, category, object, timestamp) %>%
   mutate(object = ifelse(!is.na(exclusion), NA, object), 
          category = ifelse(!is.na(exclusion), NA, category)) %>%
   distinct()
 
-write_csv(data.to.export, "data/reliability-data.csv")
-}
-
-# CALCULATE RELIABILITY STATS ---------------------------------------------
-reliability <- read_csv("data/reliability-data.csv") %>%
-  group_by(sub_num, image) %>%
-  rename(exclusion2 = exclusion, 
-         object2 = object, 
-         category2 = category) %>%
-  mutate(n.objects2 = n()) %>%
-  select(site, sub_num, image, exclusion2, n.objects2, object2, category2) %>%
-  arrange(site, sub_num, image, category2, object2)
-
-reliability.dirs <- reliability %>%
-  pull(sub_num) %>%
-  unique()
-
-main <- read_csv("data/all-data.csv") %>%
-  filter(sub_num %in% reliability.dirs) %>%
-  group_by(site, sub_num, image) %>%
-  mutate(n.objects = n()) %>%
-  select(site, sub_num, image, exclusion, n.objects, object, category) %>%
-  arrange(site, sub_num, image, category, object)
-
-compare <- main %>%
-  full_join(reliability, by = c("site", "sub_num", "image")) %>%
-  mutate(exclusion.diff = ifelse(exclusion != exclusion2, 1, 0), 
-         n.objects.diff = ifelse(n.objects != n.objects2, 1, 0), 
-         object.diff = ifelse(object != object2, 1, 0), 
-         category.diff = ifelse(category != category2, 1, 0)) %>%
-  group_by(sub_num, image, site) %>%
-  summarize(exclusion.diff = sum(exclusion.diff, na.rm = TRUE), 
-            n.objects.diff = sum(n.objects.diff, na.rm = TRUE), 
-            object.diff = sum(object.diff, na.rm = TRUE), 
-            category.diff = sum(category.diff, na.rm = TRUE)) %>%
-  ungroup() %>%
-  mutate(category.match = ifelse(category.diff >= 1, 0, 1), 
-         object.match = ifelse(object.diff >= 1, 0, 1)) %>%
-  select(site, sub_num, image, category.match, object.match) %>%
-  group_by(site, sub_num) %>%
-  mutate(n.images = length(unique(image))) %>%
-  group_by(site, sub_num, n.images) %>%
-  summarize(category.agreement = sum(category.match)/length(unique(image)), 
-            object.agreement = sum(object.match)/length(unique(image))) %>%
-  write_csv("data/reliability-stats.csv")
+write_csv(data.to.export, "data/casillas/all-data.csv")

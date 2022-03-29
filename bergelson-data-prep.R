@@ -1,8 +1,8 @@
 library(tidyverse)
 
 # read in data
-annotations <- read_csv("data/bergelson-annotations.csv")
-participants <- read_csv("data/metadata/bergelson-participants.csv")
+annotations <- read_csv("data/bergelson/all-annotations.csv")
+participants <- read_csv("data/metadata/bergelson/participants.csv")
 
 # create not in operator
 `%notin%` <- Negate(`%in%`)
@@ -24,7 +24,7 @@ raw.data <- annotations %>%
 # replace unsure objects --------------------------------------------------
 # read in manually checked unsure objects
 
-# unsure <- read_csv("data/manual-checks/bergelson/unsure-objects.csv") %>%
+# unsure <- read_csv("data/bergelson/manual-checks/unsure-objects.csv") %>%
 #   pivot_longer(c(Exclude:Unsure), names_to = "exclusion", values_to = "exclusion.val") %>%
 #   mutate(exclusion.corrected = ifelse(exclusion.val == 1, exclusion, NA),
 #          from.unsure = 1) %>%
@@ -40,7 +40,7 @@ raw.data <- annotations %>%
 #   mutate(Object = ifelse(!is.na(exclusion), NA, Object)) %>%
 #   distinct()
 # 
-# checked.unsure <- read_csv("data/manual-checks/bergelson/unsure-objects.csv") %>%
+# checked.unsure <- read_csv("data/bergelson/manual-checks/unsure-objects.csv") %>%
 #   mutate(exact.image = paste0(sub_num, "/", Image)) %>%
 #   pull(exact.image)
 # 
@@ -50,7 +50,7 @@ raw.data <- annotations %>%
 #   filter(exact.image %notin% checked.unsure)
 # 
 # if (nrow(not.checked.unsure > 0)) {
-#   write_csv(not.checked.unsure, "data/manual-checks/bergelson/new-unsure-objects.csv")
+#   write_csv(not.checked.unsure, "data/bergelson/manual-checks/new-unsure-objects.csv")
 # }
 
 
@@ -64,7 +64,7 @@ data.w.objects <- raw.data %>% # TO DO: replace with unsure once checks are done
          Image = str_remove(Image, "_DUPLICATE[0-9]")) %>%
   distinct()
 
-regularized <- read_csv("data/manual-checks/bergelson/labels.csv") %>%
+regularized <- read_csv("data/bergelson/manual-checks/labels.csv") %>%
   pull(Object) %>%
   unique()
 
@@ -74,11 +74,11 @@ not.regularized <- data.w.objects %>%
   filter(Object %notin% regularized)
 
 if (nrow(not.regularized > 0)) {
-  write_csv(not.regularized, "data/manual-checks/bergelson/new-objects-to-label.csv")
+  write_csv(not.regularized, "data/bergelson/manual-checks/new-objects-to-label.csv")
 }
 
 # read in manually checked object labels
-labels <- read_csv("data/manual-checks/labels.csv")
+labels <- read_csv("data/bergelson/manual-checks/labels.csv")
 
 # merge with main annotations df and replace raw label with regularized version
 data.w.labels <- data.w.objects %>%
@@ -96,7 +96,7 @@ data.w.labels <- data.w.objects %>%
   distinct()
   
 # add corrections ---------------------------------------------------------
-corrections <- read_csv("data/manual-checks/bergelson/corrections.csv") %>%
+corrections <- read_csv("data/bergelson/manual-checks/corrections.csv") %>%
   mutate(from.corrections = 1) %>%
   select(sub_num, Image, object.corrected, exclusion.corrected, from.corrections)
 
@@ -155,4 +155,4 @@ data.to.export <- data.w.exclusions %>%
          timestamp = as.numeric(as.character(str_remove(Image, ".gif")))) %>%
   distinct()
 
-write_csv(data.to.export, "data/bergelson-data.csv")
+write_csv(data.to.export, "data/bergelson/all-data.csv")

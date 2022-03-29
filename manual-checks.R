@@ -2,7 +2,7 @@
 # WARNING: the file paths are hard coded, so this script will work *only*
 # if your file paths match exactly those listed here
 
-source("data-prep.R")
+source("casillas-data-prep.R")
 
 Dirs <- read_csv("../ImCo-secure-data-prep/secure-metadata.csv") %>%
   rename(sub_num = public_id, 

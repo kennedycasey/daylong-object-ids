@@ -10395,8 +10395,7 @@ Rossel,1509,9,M,065141.gif,NA,Natural,rock,NA
 Rossel,1509,9,M,065637.gif,NA,Synthetic,camera,NA
 Rossel,1509,9,M,065652.gif,NA,Synthetic,camera,NA
 Rossel,1509,9,M,065739.gif,NA,Natural,dirt,NA
-Rossel,1509,9,M,070305.gif,NA,Synthetic,fabric,NA
-Rossel,1509,9,M,070305.gif,Unsure,NA,NA,NA
+Rossel,1509,9,M,070305.gif,NA,Clothing,purse,NA
 Rossel,1509,9,M,070830.gif,NA,Food,coconut,NA
 Rossel,1509,9,M,071402.gif,NA,Toy,stuffed animal,NA
 Rossel,1509,9,M,071417.gif,NA,Toy,stuffed animal,NA
@@ -10408,11 +10407,9 @@ Rossel,1509,9,M,071902.gif,NA,Toy,book,NA
 Rossel,1509,9,M,072312.gif,NA,Toy,stuffed animal,NA
 Rossel,1509,9,M,072328.gif,NA,Toy,stuffed animal,NA
 Rossel,1509,9,M,072343.gif,NA,Toy,stuffed animal,NA
-Rossel,1509,9,M,072416.gif,NA,Immovable,bed,NA
 Rossel,1509,9,M,072416.gif,Unsure,NA,NA,NA
 Rossel,1509,9,M,072503.gif,NA,Toy,book,NA
-Rossel,1509,9,M,072518.gif,NA,Toy,book,NA
-Rossel,1509,9,M,072518.gif,Unsure,NA,NA,NA
+Rossel,1509,9,M,072518.gif,NA,Synthetic,towel,NA
 Rossel,1509,9,M,072533.gif,NA,Toy,book,NA
 Rossel,1509,9,M,072550.gif,NA,Toy,book,NA
 Rossel,1509,9,M,072605.gif,NA,Toy,book,NA
@@ -10420,14 +10417,11 @@ Rossel,1509,9,M,072617.gif,NA,Toy,book,NA
 Rossel,1509,9,M,072632.gif,NA,Toy,book,NA
 Rossel,1509,9,M,072656.gif,NA,Toy,book,NA
 Rossel,1509,9,M,072713.gif,NA,Toy,book,NA
-Rossel,1509,9,M,073215.gif,NA,Food,betelnut,NA
-Rossel,1509,9,M,073215.gif,Unsure,NA,NA,NA
-Rossel,1509,9,M,073231.gif,NA,Food,betelnut,NA
-Rossel,1509,9,M,073231.gif,Unsure,NA,NA,NA
+Rossel,1509,9,M,073215.gif,NA,Food,fruit,NA
+Rossel,1509,9,M,073231.gif,NA,Food,fruit,NA
 Rossel,1509,9,M,073312.gif,NA,Synthetic,camera,NA
 Rossel,1509,9,M,073809.gif,NA,Natural,rock,NA
-Rossel,1509,9,M,073826.gif,NA,Food,lime,NA
-Rossel,1509,9,M,073826.gif,Unsure,NA,NA,NA
+Rossel,1509,9,M,073826.gif,NA,Food,orange,NA
 Rossel,1509,9,M,092210.gif,NA,Food,candy,NA
 Rossel,1509,9,M,092446.gif,NA,Food,candy,NA
 Rossel,1509,9,M,092551.gif,NA,Food,candy,NA
@@ -10447,7 +10441,7 @@ Rossel,1509,9,M,094856.gif,NA,Natural,stick,NA
 Rossel,1509,9,M,094856.gif,NA,Natural,sand,NA
 Rossel,1509,9,M,120537.gif,NA,Synthetic,rope,NA
 Rossel,1509,9,M,120624.gif,NA,Immovable,canoe,NA
-Rossel,1509,9,M,121121.gif,Unsure,NA,NA,NA
+Rossel,1509,9,M,121121.gif,NA,Food,banana,NA
 Rossel,1509,9,M,121136.gif,NA,Natural,sand,NA
 Rossel,1509,9,M,121340.gif,NA,Immovable,canoe,NA
 Rossel,1509,9,M,121443.gif,NA,Natural,rock,NA
@@ -10459,8 +10453,7 @@ Rossel,1509,9,M,122713.gif,NA,Natural,sand,NA
 Rossel,1509,9,M,122713.gif,NA,Synthetic,firewood,NA
 Rossel,1509,9,M,122903.gif,NA,Synthetic,camera,NA
 Rossel,1509,9,M,123053.gif,NA,Natural,sand,NA
-Rossel,1509,9,M,123053.gif,Unsure,NA,NA,NA
-Rossel,1509,9,M,123452.gif,Unsure,NA,NA,NA
+Rossel,1509,9,M,123452.gif,Exclude,NA,NA,NA
 Rossel,1509,9,M,123832.gif,NA,Synthetic,camera,NA
 Rossel,1509,9,M,123949.gif,NA,Synthetic,camera,NA
 Rossel,1509,9,M,125935.gif,NA,Clothing,shoe,NA
@@ -10528,8 +10521,7 @@ Rossel,1509,9,M,134521.gif,NA,Natural,sand,NA
 Rossel,1509,9,M,134551.gif,NA,Synthetic,firewood,NA
 Rossel,1509,9,M,134725.gif,NA,Natural,sand,NA
 Rossel,1509,9,M,134811.gif,NA,Synthetic,firewood,NA
-Rossel,1509,9,M,134844.gif,NA,Natural,shell,NA
-Rossel,1509,9,M,134844.gif,Unsure,NA,NA,NA
+Rossel,1509,9,M,134844.gif,Exclude,NA,NA,NA
 Rossel,1509,9,M,135033.gif,NA,Natural,plant,NA
 Rossel,1509,9,M,135048.gif,NA,Natural,sand,NA
 Rossel,1509,9,M,135255.gif,NA,Natural,sand,NA
@@ -10558,14 +10550,12 @@ Rossel,1509,9,M,142338.gif,NA,Synthetic,container,NA
 Rossel,1509,9,M,142350.gif,NA,Synthetic,container,NA
 Rossel,1509,9,M,142405.gif,NA,Synthetic,container,NA
 Rossel,1509,9,M,142453.gif,NA,Mealtime Tool,plate,NA
-Rossel,1509,9,M,142453.gif,Unsure,NA,NA,NA
+Rossel,1509,9,M,142453.gif,NA,Food,sago,NA
 Rossel,1509,9,M,142508.gif,NA,Mealtime Tool,plate,NA
-Rossel,1509,9,M,142508.gif,Unsure,NA,NA,NA
 Rossel,1509,9,M,142644.gif,NA,Synthetic,fabric,NA
 Rossel,1509,9,M,142701.gif,NA,NA,support,NA
 Rossel,1509,9,M,142818.gif,None,NA,NA,NA
-Rossel,1509,9,M,145847.gif,NA,Natural,stick,NA
-Rossel,1509,9,M,145847.gif,Unsure,NA,NA,NA
+Rossel,1509,9,M,145847.gif,NA,Food,sugar cane,NA
 Rossel,1509,9,M,150201.gif,NA,Synthetic,camera,NA
 Rossel,1509,9,M,150413.gif,NA,Natural,plant,NA
 Rossel,1509,9,M,150428.gif,NA,Natural,plant,NA
@@ -10582,8 +10572,7 @@ Rossel,1509,9,M,151507.gif,NA,Synthetic,woven basket,NA
 Rossel,1509,9,M,151522.gif,NA,Synthetic,woven basket,NA
 Rossel,1509,9,M,151540.gif,NA,Synthetic,woven basket,NA
 Rossel,1509,9,M,151657.gif,NA,Clothing,shirt,NA
-Rossel,1509,9,M,152116.gif,NA,Food,fruit (unknown variety),NA
-Rossel,1509,9,M,152116.gif,Unsure,NA,NA,NA
+Rossel,1509,9,M,152116.gif,NA,Natural,berry,NA
 Rossel,1509,9,M,152455.gif,NA,Clothing,shirt,NA
 Rossel,1509,9,M,152647.gif,None,NA,NA,NA
 Rossel,1509,9,M,152735.gif,NA,Natural,dirt,NA

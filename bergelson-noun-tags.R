@@ -45,7 +45,7 @@ objects <- objects %>%
                values_to = "label_count") %>% 
   mutate(time_window = factor(str_remove(time_window, "labels_"), 
                               levels = c("30", "60", "180", "300", "600"), 
-                              labels = c("30sec", "1min", "3min", "5min", "10min")))
+                              labels = c("+/- 30sec", "+/- 1min", "+/- 3min", "+/- 5min", "+/- 10min")))
 
 write_csv(objects, "data/bergelson/basic-label-counts.csv")
 
@@ -54,6 +54,16 @@ ggplot(objects, aes(x = time_window, y = label_count)) +
   geom_jitter(filter(objects, label_count > 0),
               mapping = aes(x = time_window, y = label_count), 
               alpha = 0.1) +
-  labs(x = "Time window surrouding child object handling (+/-)", 
+  labs(x = "Time window surrouding child object handling", 
        y = "Count of basic-level labels produced by adults") +
   theme_classic()
+
+objects %>%
+  group_by(sub_num, time_window) %>%
+  summarize(label_count = mean(label_count)) %>%
+  group_by(time_window) %>%
+  summarize(mean = mean(label_count), 
+            median = median(label_count), 
+            sd = sd(label_count), 
+            min = min(label_count), 
+            max = max(label_count))

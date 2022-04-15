@@ -251,7 +251,8 @@ data.to.export <- data.w.exclusions %>%
   filter(sub_num != p1.exclude & sub_num != p2.exclude) %>%
   rename(image = Image, 
          timestamp = TimestampHMS) %>%
-  select(site, sub_num, age, sex, image, exclusion, category, object, timestamp) %>%
+  select(site, sub_num, age, sex, child_worn_camera, image, exclusion, 
+         category, object, timestamp) %>%
   mutate(object = ifelse(!is.na(exclusion), NA, object), 
          category = ifelse(!is.na(exclusion), NA, category)) %>%
   distinct()

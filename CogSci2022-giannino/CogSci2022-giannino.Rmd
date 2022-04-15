@@ -67,19 +67,19 @@ run.from.raw = FALSE
 if (run.from.raw) {
   # this R script creates the "all-data.csv"
   # set run.from.raw equal to TRUE if you want to regenerate it
-  source("../data-prep.R")
+  source("../casillas-data-prep.R")
 } 
 
 # read in data
-raw.data <- read_csv("../data/all-data.csv")
-participants <- read_csv("../data/metadata/participants.csv") %>%
+raw.data <- read_csv("../data/casillas/all-data.csv")
+participants <- read_csv("../data/casillas/metadata/participants.csv") %>%
   select(site, sub_num, age)
 
 included.subs <- unique(raw.data$sub_num)
 
 # read in C&E data for all codeable hours per ptcp
 codeable.hrs.pp <- read_csv(
-  "../data/metadata/all-hours-with-codeable-photos-per-ptcp.csv") %>%
+  "../data/casillas/metadata/all-hours-with-codeable-photos-per-ptcp.csv") %>%
   filter(sub_num %in% included.subs) %>%
   # add participant metadata
   full_join(participants)
@@ -218,10 +218,19 @@ exclusions <- raw.data %>%
   select(sub_num, image) %>%
   distinct() %>%
   nrow()
+
+# get number of directories where the target child wasn't wearing the camera
+caregiver.worn <- raw.data %>%
+  mutate(camera.wearer = ifelse(child_worn_camera == 1, "child", "caregiver")) %>%
+  group_by(site, camera.wearer) %>%
+  summarize(n.kids = length(unique(sub_num))) %>%
+  pivot_wider(names_from = "camera.wearer", values_from = "n.kids") %>%
+  mutate(prop = caregiver / (caregiver + child)) %>%
+  rename(n = caregiver)
 ```
 
 ## Corpus
-Daylong photo streams consisted of images captured approximately every 15 (Rossel) to 30 (Tseltal) seconds over the course of 8 (Rossel) to 9 (Tseltal) waking hours at home. Children wore a recording vest equipped with a camera (Narrative Clip 1) and miniature fisheye lens (Photojojo Super Fisheye) that provided a 180$\text{\textdegree}$ view of the environment. For younger infants who were not yet walking, the camera was instead worn by the primary caregiver. 
+Daylong photo streams consisted of images captured approximately every 15 (Rossel) to 30 (Tseltal) seconds over the course of 8 (Rossel) to 9 (Tseltal) waking hours at home. Children wore a recording vest equipped with a camera (Narrative Clip 1) and miniature fisheye lens (Photojojo Super Fisheye) that provided a 180$\text{\textdegree}$ view of the environment. For younger infants who were not yet walking, the camera was instead worn by the primary caregiver (Rossel = `r filter(caregiver.worn, site == "Rossel")$n`, Tseltal = `r filter(caregiver.worn, site == "Tseltal")$n`) <!--kc: possible future footnote with hands-only image stats or comparison of exclusion rate for child-worn vs. caregiver-worn cams-->
 
 Previously, 83 daylong photo streams (113,668 photos) had been comprehensively manually annotated for the presence or absence of child object handling [@casillasURdaylong]. Here, we further annotate and analyze the subset of `r format(total.coded, big.mark = ",", trim = TRUE)` photos with confirmed child object handling.
 
@@ -233,7 +242,7 @@ demo.bysite <- raw.data %>%
   group_by(site) %>%
   summarize(n.kids = length(unique(sub_num)), 
             m.images = mean(n.images),
-            m.age = mean(age))
+            m.age = mean(age)) 
 
 demo <- raw.data %>%
   group_by(sub_num, age) %>%
@@ -263,8 +272,8 @@ Photos were annotated with IMCO, an open-source Python program adapted for effic
 Images were excluded if they were too dark, bright, blurry, or covered for annotators to identify handled objects, if annotators were otherwise unsure about what objects were being handled, if there was no handled object, or if the researcher was still present when the image was captured (_n_ = `r format(exclusions, big.mark = ",", trim = TRUE)`, or `r format(round(exclusions/total.coded*100, 1), nsmall = 1)`% of the data set). To avoid unnecessary data loss, all excluded photos were checked by at least one other annotator and re-included for analysis if objects were identifiable. In total, `r format(total.included, big.mark = ",", trim = TRUE)` images were deemed usable by annotators (Rossel: `r format(ros.included, big.mark = ",", trim = TRUE)`, Tseltal: `r format(tse.included, big.mark = ",", trim = TRUE)`). One participant had no usable images, so our analyses are based on `r demo$n.kids - no.usable.images.subs` photo streams.
 
 ```{r reliability}
-# read in output of "reliability.R"
-reliability <- read_csv("../data/reliability-stats.csv")
+# read in output of "casillas-reliability.R"
+reliability <- read_csv("../data/casillas/reliability-stats.csv")
 
 # get total number of images that were double coded
 n.reliability <- sum(reliability$n.images)
@@ -889,7 +898,7 @@ model <- lmer(rel.transitions ~ site * age + (1|sub_num),
 # marginal increase in object transitions per hour with age
 hourly.object.transitions.byage.effects <- tidy(model) %>%
   filter(effect == "fixed" & term != "(Intercept)") %>%
-  mutate(term = str_remove(term, "Tseltal"))
+  mutate(term = str_remove(term, "Rossel"))
 
 # get model predicted values for plotting
 hourly.object.transitions.byage.effects.toplot <- ggpredict(
@@ -995,7 +1004,7 @@ model <- lmer(rel.transitions ~ site * age + (1|sub_num),
 # increase in category transitions per hour with age
 hourly.category.transitions.byage.effects <- tidy(model) %>%
     filter(effect == "fixed" & term != "(Intercept)") %>%
-    mutate(term = str_remove(term, "Tseltal"))
+    mutate(term = str_remove(term, "Rossel"))
 
 # get model predicted values for plotting
 hourly.category.transitions.byage.effects.toplot <- ggpredict(

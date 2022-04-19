@@ -92,7 +92,7 @@ data.w.labels <- data.w.objects %>%
   filter(!is.na(object2) | !is.na(exclusion)) %>%
   rename(object = object2) %>%
   mutate(object = trimws(object)) %>%
-  select(sub_num, Image, exclusion, object, object.basic, category) %>%
+  select(sub_num, Image, exclusion, object, basic, category) %>%
   mutate(object = ifelse(!is.na(exclusion), NA, object)) %>%
   distinct()
   
@@ -150,9 +150,9 @@ data.w.labels <- data.w.objects %>%
 data.to.export <- data.w.labels %>%
   left_join(participants, by = "sub_num") %>%
   rename(image = Image) %>%
-  select(site, sub_num, age, sex, image, exclusion, category, object, object.basic) %>%
+  select(site, sub_num, age, sex, image, exclusion, category, object, basic) %>%
   mutate(object = ifelse(!is.na(exclusion), NA, object), 
-         object.basic = ifelse(!is.na(exclusion), NA, object.basic), 
+         basic = ifelse(!is.na(exclusion), NA, basic), 
          category = ifelse(!is.na(exclusion), NA, category), 
          image_no = str_remove(image, ".gif"), 
          hr = as.numeric(as.character(substr(image_no, 1, 2))), 

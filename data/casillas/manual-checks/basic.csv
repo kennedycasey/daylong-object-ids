@@ -140,10 +140,10 @@ marker,marker,
 shell,shell,
 weaving tool,weaving tool,1
 citrus fruit,citrus,1
-packaged snack,chips,1
+packaged snack,packaged snack,1
 scrub brush,brush,
 turtle,turtle,
-chicharrones,chips,1
+chicharrones,chicharrones,1
 plastic packaging,plastic,1
 strainer,strainer,
 toy turtle,turtle,
@@ -159,7 +159,7 @@ lime,lime,
 plastic,plastic,
 tapioca,tapioca,
 tarp,tarp,
-corn plant,plant,1
+corn plant,corn,1
 masa,masa,
 sock,sock,
 drinking water,water,
@@ -174,7 +174,7 @@ fishnet,net,
 knitting needle,needle,
 notebook,notebook,1
 peach,peach,
-pipe instrument,pipes,1
+pipe instrument,pipe instrument,1
 plant pot,pot,
 safety pin,pin,
 shovel,shovel,
@@ -192,7 +192,7 @@ plastic clip,clip,
 scissors,scissors,
 teddy bear,bear,
 crate,crate,1
-gas canister,canister,1
+gas canister,container,1
 jug,jug,
 plastic fragment,plastic,
 sink,sink,
@@ -206,7 +206,7 @@ cleaning solution,cleaning solution,1
 leaf wrapper,leaf,1
 soap,soap,
 trash,trash,
-trash bin,trash,1
+trash bin,bin,1
 video game console,video game,1
 bottled water,water,
 bracelet,bracelet,
@@ -214,7 +214,7 @@ clothesline,clotheseline,1
 crayon,crayon,
 jacket,jacket,
 shelf,shelf,
-skewer,skewer,1
+skewer,stick,1
 tape,tape,
 water,water,
 wire,wire,
@@ -328,7 +328,7 @@ drawer,drawer,
 egg,egg,
 flashlight,flashlight,
 glasses,glasses,
-green bean,bean,1
+green bean,grean bean,1
 grinder,grinder,
 hair clip,clip,
 hatchet,knife,1
@@ -348,7 +348,7 @@ paint,paint,
 princess bag,bag,
 remote,remote,
 ruler,ruler,
-spiky toy,spiky toy,1
+spiky toy,toy,1
 support,support,
 teletubby toy,teletubby,1
 toy plate,plate,

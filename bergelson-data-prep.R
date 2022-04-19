@@ -69,6 +69,7 @@ regularized <- read_csv("data/bergelson/manual-checks/labels.csv") %>%
   unique()
 
 not.regularized <- data.w.objects %>%
+  filter(!is.na(Object)) %>%
   select(Object, category) %>%
   distinct() %>%
   filter(Object %notin% regularized)

@@ -1,11 +1,11 @@
-## ----global_options, include = FALSE-----------------------------------------
+## ----global_options, include = FALSE------------------------------------------------------------
 knitr::opts_chunk$set(fig.width = 3, fig.height = 3, fig.crop  =  FALSE, 
                       fig.pos  =  "tb", fig.path = 'figs/',
                       echo = FALSE, warning = FALSE, cache = FALSE, 
                       message = FALSE, sanitize = TRUE)
 
 
-## ----libraries---------------------------------------------------------------
+## ----libraries----------------------------------------------------------------------------------
 library(tidyverse)
 library(lubridate)
 library(broom)
@@ -20,33 +20,33 @@ library(xtable)
 library(kableExtra)
 
 
-## ----data-prep---------------------------------------------------------------
+## ----data-prep----------------------------------------------------------------------------------
 run.from.raw = FALSE
 if (run.from.raw) {
   # this R script creates the "all-data.csv"
   # set run.from.raw equal to TRUE if you want to regenerate it
-  source("../data-prep.R")
+  source("../casillas-data-prep.R")
 } 
 
 # read in data
-raw.data <- read_csv("../data/all-data.csv")
-participants <- read_csv("../data/metadata/participants.csv") %>%
+raw.data <- read_csv("../data/casillas/all-data.csv")
+participants <- read_csv("../data/casillas/metadata/participants.csv") %>%
   select(site, sub_num, age)
 
 included.subs <- unique(raw.data$sub_num)
 
 # read in C&E data for all codeable hours per ptcp
 codeable.hrs.pp <- read_csv(
-  "../data/metadata/all-hours-with-codeable-photos-per-ptcp.csv") %>%
+  "../data/casillas/metadata/all-hours-with-codeable-photos-per-ptcp.csv") %>%
   filter(sub_num %in% included.subs) %>%
   # add participant metadata
   full_join(participants)
 
 # pre-set colors and category labels
-sites <- c("Rossel", "Tseltal")
+sites <- c("Tseltal", "Rossel")
 
-site.colors <- c("Rossel" = "sandybrown",
-                 "Tseltal" = "brown4")
+site.colors <- c("Tseltal" = "sandybrown", 
+                 "Rossel" = "brown4")
 
 categories <- c("Food", "Synthetic", "Natural", "Toy",
                 "Mealtime Tool", "Clothing", "Immovable", 
@@ -58,9 +58,10 @@ category.labels <- c("Food", "Synthetic", "Natural", "Toy",
 
 # rm excluded photos + set other variable info
 data <- raw.data %>%
-  filter(is.na(exclusion)) %>%
+  filter(is.na(exclusion) & !is.na(category)) %>%
   mutate(hour = hour(timestamp),
-         category = factor(category, levels = categories))
+         category = factor(category, levels = categories), 
+         site = factor(site, levels = sites))
 
 # set rm.study.related to TRUE if you want to check results w/o these
 study.related <- c("camera", "vest", "camera cover")
@@ -74,7 +75,7 @@ if (rm.study.related) {
 }
 
 
-## ----exclusions--------------------------------------------------------------
+## ----exclusions---------------------------------------------------------------------------------
 # check for errors in exclusion counts 
 # some images were getting counted as both included and excluded
 # excluding for now since it's only a handful but return to these in later checks
@@ -142,8 +143,17 @@ exclusions <- raw.data %>%
   distinct() %>%
   nrow()
 
+# get number of directories where the target child wasn't wearing the camera
+caregiver.worn <- raw.data %>%
+  mutate(camera.wearer = ifelse(child_worn_camera == 1, "child", "caregiver")) %>%
+  group_by(site, camera.wearer) %>%
+  summarize(n.kids = length(unique(sub_num))) %>%
+  pivot_wider(names_from = "camera.wearer", values_from = "n.kids") %>%
+  mutate(prop = caregiver / (caregiver + child)) %>%
+  rename(n = caregiver)
 
-## ----demo--------------------------------------------------------------------
+
+## ----demo---------------------------------------------------------------------------------------
 # create tibbles with basic descriptive stats of kid demographics and # images
 demo.bysite <- raw.data %>%
   group_by(site, sub_num, age) %>%
@@ -151,7 +161,7 @@ demo.bysite <- raw.data %>%
   group_by(site) %>%
   summarize(n.kids = length(unique(sub_num)), 
             m.images = mean(n.images),
-            m.age = mean(age))
+            m.age = mean(age)) 
 
 demo <- raw.data %>%
   group_by(sub_num, age) %>%
@@ -172,9 +182,9 @@ examples <- png::readPNG("../figs/example-objects.png")
 grid::grid.raster(examples)
 
 
-## ----reliability-------------------------------------------------------------
-# read in output of "reliability.R"
-reliability <- read_csv("../data/reliability-stats.csv")
+## ----reliability--------------------------------------------------------------------------------
+# read in output of "casillas-reliability.R"
+reliability <- read_csv("../data/casillas/reliability-stats.csv")
 
 # get total number of images that were double coded
 n.reliability <- sum(reliability$n.images)
@@ -193,7 +203,7 @@ bysite.reliability.stats <- reliability %>%
 
 
 
-## ----top-objects, results = "asis"-------------------------------------------
+## ----top-objects, results = "asis"--------------------------------------------------------------
 # compute the objects that most often appear 1+ times across children w/i sites
 # use this to find the top 3 items per category per site
 top.objects.bykids <- data %>%
@@ -291,7 +301,7 @@ category.counts <- data %>%
 
 # combine and do some formatting to create table
 tbl.input <- bind_cols(category.counts, top.objects.bykids) %>%
-  select(category...1, Rossel...2, Rossel...5, Tseltal...3, Tseltal...6)
+  select(category...1, Tseltal...2, Tseltal...5, Rossel...3, Rossel...6)
 
 colnames(tbl.input) <- c("Object Category", "N", "Top Objects", "N", "Top Objects")
 
@@ -303,11 +313,11 @@ kable(tbl.input, format = "latex",
       linesep = "",
       caption = "Number of unique objects (N) and objects handled by the most children, for each category, across sites.") %>%
   kable_styling(latex_options = "scale_down") %>%
-  add_header_above(c(" " = 1, "Rossel" = 2, "Tseltal" = 2), align = "c", bold = TRUE) %>%
+  add_header_above(c(" " = 1, "Tseltal" = 2, "Rossel" = 2), align = "c", bold = TRUE) %>%
   row_spec(0, bold = TRUE)
 
 
-## ----daily-object-stats, results = "hide"------------------------------------
+## ----daily-object-stats, results = "hide"-------------------------------------------------------
 # compute descriptive stats of # unique objects held by individual kids
 
 # ... overall
@@ -446,7 +456,8 @@ all.ranked.objects %>%
          category.label = factor(category,
                                  levels = categories, labels = category.labels),
          label = paste0(str_to_sentence(str_remove(
-           object, "-M|-W|empty drink ")), " (", category.label, ")")) %>%
+           object, "-M|-W|empty drink ")), " (", category.label, ")"), 
+         site = factor(site, levels = sites)) %>%
   filter(rank <= 25) %>%
   ggplot(aes(x = rank, y = prop*100, color = site, fill = site)) +
   facet_grid(. ~ site) +
@@ -462,7 +473,7 @@ all.ranked.objects %>%
         legend.position = "none")
 
 
-## ----overall-category-stats--------------------------------------------------
+## ----overall-category-stats---------------------------------------------------------------------
 # compute the prevalence of category-level objects within kids 
 # (i.e., proportion of holding by category for each kid)
 category.props <- data %>%
@@ -524,7 +535,7 @@ hourly.categories.incl.zeroes <- data %>%
   summarize(mean = round(mean(n.categories), 2))
 
 
-## ----hourly-object-stats-----------------------------------------------------
+## ----hourly-object-stats------------------------------------------------------------------------
 # compute mean # objects per hour overall
 # (first over subs, then over sample)
 hourly.objects <- data %>%
@@ -659,7 +670,7 @@ ggplot(hourly.objects.bycategory,
         axis.text.x = element_text(size = 5))
 
 
-## ----age-effects-bycategory--------------------------------------------------
+## ----age-effects-bycategory---------------------------------------------------------------------
 # compute prop of images in each category for each age
 category.props.byage <- data %>%
   group_by(site, sub_num, age) %>%
@@ -715,7 +726,7 @@ cor <- cor.test(cor.data$age, cor.data$n.images) %>%
   tidy()
 
 
-## ----age-objects-------------------------------------------------------------
+## ----age-objects--------------------------------------------------------------------------------
 # calculate total # unique objects per kid
 daily.objects.byage <- data %>%
   group_by(site, sub_num, age) %>%
@@ -779,7 +790,7 @@ model <- lmer(rel.transitions ~ site * age + (1|sub_num),
 # marginal increase in object transitions per hour with age
 hourly.object.transitions.byage.effects <- tidy(model) %>%
   filter(effect == "fixed" & term != "(Intercept)") %>%
-  mutate(term = str_remove(term, "Tseltal"))
+  mutate(term = str_remove(term, "Rossel"))
 
 # get model predicted values for plotting
 hourly.object.transitions.byage.effects.toplot <- ggpredict(
@@ -789,7 +800,7 @@ hourly.object.transitions.byage.effects.toplot <- ggpredict(
   mutate(age = as.numeric(as.character(age)))
 
 
-## ----age-categories----------------------------------------------------------
+## ----age-categories-----------------------------------------------------------------------------
 # calculate total # objects per category and prop objects per category, per kid
 category.props.byage <- data %>%
   group_by(sub_num, site, age) %>%
@@ -885,7 +896,7 @@ model <- lmer(rel.transitions ~ site * age + (1|sub_num),
 # increase in category transitions per hour with age
 hourly.category.transitions.byage.effects <- tidy(model) %>%
     filter(effect == "fixed" & term != "(Intercept)") %>%
-    mutate(term = str_remove(term, "Tseltal"))
+    mutate(term = str_remove(term, "Rossel"))
 
 # get model predicted values for plotting
 hourly.category.transitions.byage.effects.toplot <- ggpredict(
@@ -999,7 +1010,7 @@ panels <- plot_grid(ggdraw(fig5[[1]]), ggdraw(fig5[[2]]),
 plot_grid(panels, legend, nrow = 2, rel_heights = c(1, .1))
 
 
-## ----------------------------------------------------------------------------
+## -----------------------------------------------------------------------------------------------
 # References will be generated automatically by Pandoc and included here.
 # The following code is some latex to format the bibliography. Do not remove it.
 

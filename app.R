@@ -97,7 +97,7 @@ shinyApp(
       # add theme
       theme = "flatly",
       # add tabs
-      navbarPage(img(src = "https://chatterlab.uchicago.edu/img/logo.png", height = "30px"),
+      navbarPage("",
                id = "inTabset",
                tabPanel("Home",
                         fluidRow(
@@ -180,17 +180,17 @@ shinyApp(
     # jump to relevant tab after user presses button on homepage
     observeEvent(input$go_objects, {
       updateNavbarPage(session, inputId = "inTabset", 
-                       selected = "Object Distributions")
+                       selected = "Objects")
     })
     
     observeEvent(input$go_categories, {
       updateNavbarPage(session, inputId = "inTabset", 
-                       selected = "Category Effects")
+                       selected = "Categories")
     })
     
     observeEvent(input$go_age, {
       updateNavbarPage(session, inputId = "inTabset", 
-                       selected = "Age Effects")
+                       selected = "Developmental Changes")
     })
     
     # regenerate top objects tibble after any change to user inputs

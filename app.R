@@ -134,7 +134,7 @@ shinyApp(
                              img(src = "https://www.rstudio.com/assets/img/logo.svg", height = "30px"))
                         )
                ), 
-               tabPanel("Object Distributions",
+               tabPanel("Objects",
                         sidebarLayout(
                         sidebarPanel(
                           h1("Top Objects"),
@@ -169,8 +169,8 @@ shinyApp(
                             tabPanel("Table", 
                                         dataTableOutput("top_objects_tbl"))
                         )))),
-             tabPanel("Category Effects"), 
-             tabPanel("Age Effects")
+             tabPanel("Categories"), 
+             tabPanel("Developmental Changes")
   )
   ),
   

@@ -2,6 +2,8 @@ library(shiny)
 library(shinythemes)
 library(tidyverse)
 library(lubridate)
+library(ggeffects)
+library(lme4)
 
 # WHILE STILL IN DEVELOPMENT:
 # check for updates to markdown file -> regenerate and source R script each time
@@ -88,13 +90,19 @@ get_top_objects <- function(dv) {
 
 get_age_effects <- function(dv) {
   if (dv == "Unique Objects/Hour") {
-    df <- data %>%
+    age_effects_input <- data %>%
       group_by(site, sub_num, age, hour) %>%
       summarize(y = length(unique(object))) %>%
       ungroup()
   }
+  
   else if (dv == "Object Transitions/Hour") {
-    df <-data %>%
+    hourly.objects.byage <- data %>%
+      group_by(site, sub_num, age, hour) %>%
+      summarize(n.objects = length(unique(object))) %>%
+      ungroup()
+    
+    age_effects_input <- data %>%
       group_by(sub_num, image) %>%
       # first, calculate # categories per image
       mutate(n.objects = length(unique(object)), 
@@ -114,8 +122,7 @@ get_age_effects <- function(dv) {
       mutate(y = n.transitions/n.objects) %>%
       filter(y > 0)
   }
-  }
-
+}
 
 # create not in operator
 `%notin%` <- Negate(`%in%`)
@@ -205,10 +212,6 @@ shinyApp(
                       sidebarLayout(
                         sidebarPanel(
                           h1("Age Effects"),
-                          radioButtons("top_objects_site", "Site",
-                                       c("Rossel" = "Rossel", 
-                                         "Tseltal" = "Tseltal")
-                          ),
                           selectInput("age_effects_dv", "DV", 
                                       choices = c("Unique Objects/Hour", "Object Transitions/Hour"))
                         ),
@@ -357,6 +360,7 @@ shinyApp(
       get_age_effects({ input$age_effects_dv })
     })
     
+    
     # draw top objects figure with and without category labels
     output$age_effects_fig <- renderPlot({
         ggplot() +
@@ -364,14 +368,31 @@ shinyApp(
           geom_jitter(age_effects_input(),
                       mapping = aes(x = age, y = y,
                                     color = site, fill = site), 
-                      alpha = 0.25, size = 2) +
+                      alpha = 0.6, size = 3) +
+        # add trend line from lmer output
+        geom_line(ggpredict(
+          lmer(y ~ site * age + (1|sub_num), 
+               age_effects_input()), terms = c("site", "age [all]"), type = "fixed",
+          back.transform = TRUE) %>%
+            rename(age = group, site = x) %>%
+            mutate(age = as.numeric(as.character(age))),
+                  mapping = aes(x = age, y = predicted, color = site), size = 2) +
+        # add SE from lmer output
+        geom_ribbon(ggpredict(
+          lmer(y ~ site * age + (1|sub_num), 
+               age_effects_input()), terms = c("site", "age [all]"), type = "fixed",
+          back.transform = TRUE) %>%
+            rename(age = group, site = x) %>%
+            mutate(age = as.numeric(as.character(age))),
+                    mapping = aes(x = age , ymin = predicted - conf.low,
+                                  ymax = predicted + conf.low, fill = site),
+                    alpha = 0.1) +
           scale_color_manual(values = site.colors) +
           scale_fill_manual(values = site.colors) +
           scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) +
-          #scale_y_continuous(limits = c(0, 30),breaks = c(0, 5, 10, 15, 20, 25, 30)) +
           labs(x = "Age (months)", y = {input$age_effects_dv},
                color = "Site", fill = "Site") +
-          theme_test(base_size = 30)
+          theme_test(base_size = 25)
     })
   }
   

@@ -97,46 +97,94 @@ get_top_objects <- function(dv) {
 `%notin%` <- Negate(`%in%`)
 
 shinyApp(
-  ui <- fluidPage(
+  ui <- 
+    fluidPage(
     theme = "flatly",
-    navbarPage("ImCo", 
-               tabPanel("Object Distribution", 
+    navbarPage("",
+               id = "inTabset",
+               tabPanel("Home",
+                        fluidRow(
+                          h1("Sticks, leaves, buckets, and bowls: Distributional 
+                             patterns of children’s at-home object handling in two 
+                             subsistence societies (CogSci 2022)"),
+                          h5("Kennedy Casey, Mary Elliott, Elizabeth Mickiewicz, 
+                             Anapaula Silva Mandujano, Kimberly Shorter, Mara Duquette, 
+                             Elika Bergelson, & Marisa Casillas"),
+                          h2("Supporting Online Information"),
+                          br(),
+                          actionButton("go_objects", "Explore distributions of objects", class = "btn-success"),
+                          actionButton("go_categories", "Explore effects of object categories", class = "btn-success"),
+                          actionButton("go_age", "Explore effects of age", class = "btn-success"),
+                          h2("External links"),
+                          h4(img(src = "https://chatterlab.uchicago.edu/img/logo.png", height = "20px"), 
+                             tags$a(href = "https://chatterlab.uchicago.edu/lab-publications/Casey_et_al_submitted_Distributional_patterns_of_at_home_object_handling.pdf", 
+                                    "Read the full paper")), 
+                          h4(img(src = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", height = "30px"), 
+                             tags$a(href = "https://github.com/kennedycasey/daylong-object-ids", 
+                                    "Find all data and code")), 
+                          h4(img(src = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", height = "30px"),
+                             tags$a(href = "https://github.com/kennedycasey/ImCo2", 
+                                    "Access the tool used for annotation")),
+                          br(),
+                          br(),
+                          h5("Built with",
+                             img(src = "https://www.rstudio.com/wp-content/uploads/2014/04/shiny.png", height = "30px"),
+                             "from",
+                             img(src = "https://www.rstudio.com/assets/img/logo.svg", height = "30px"))
+                        )
+               ), 
+               tabPanel("Object Distributions",
                         sidebarLayout(
-                          sidebarPanel(
-                            h1("Top Objects"),
-                            sliderInput("top_objects_count", 
-                                        label = "Number of Objects", 
-                                        min = 0, max = 50, 
-                                        value = 25, step = 5),
-                            radioButtons("top_objects_site", "Site",
-                                         c("Rossel" = "Rossel", 
-                                           "Tseltal" = "Tseltal")
-                            ),
-                            radioButtons("top_objects_dv", "DV",
-                                         c("Overall % of children handling the target object at least once" = "% Children", 
-                                           "Average % of photos featuring handling of the target object across children" = "% Photos")
-                            ), 
-                            selectInput("top_objects_category", "Category", 
-                                        choices = c("All Categories", "Food", "Synthetic", 
-                                                    "Natural", "Toy", "Mealtime Tool", 
-                                                    "Clothing", "Immovable", 
-                                                    "Work Tool"))
+                        sidebarPanel(
+                          h1("Top Objects"),
+                          sliderInput("top_objects_count", 
+                                      label = "Number of Objects", 
+                                      min = 0, max = 50, 
+                                      value = 25, step = 5),
+                          radioButtons("top_objects_site", "Site",
+                                       c("Rossel" = "Rossel", 
+                                         "Tseltal" = "Tseltal")
                           ),
-                          mainPanel(
-                            plotOutput("top_objects_fig"), 
-                            h5(paste0("Top objects defined based on either (a) the 
-                                      number of children handling the object at least 
-                                      once, or (b) the number of photos in which the
-                                      object appeared (averaged across children. Filled 
-                                      bars represent objects that were among the top 
-                                      objects for both sites."))
-                          ))),
-               tabPanel("Category Effects"), 
-               tabPanel("Age Effects")
-    )
+                          radioButtons("top_objects_dv", "DV",
+                                       c("Overall % of children handling the target object at least once" = "% Children", 
+                                         "Average % of photos featuring handling of the target object across children" = "% Photos")
+                          ), 
+                          selectInput("top_objects_category", "Category", 
+                                      choices = c("All Categories", "Food", "Synthetic", 
+                                                  "Natural", "Toy", "Mealtime Tool", 
+                                                  "Clothing", "Immovable", 
+                                                  "Work Tool"))
+                        ),
+                        mainPanel(
+                          plotOutput("top_objects_fig"), 
+                          h5(paste0("Top objects defined based on either (a) the 
+                                    number of children handling the object at least 
+                                    once, or (b) the number of photos in which the
+                                    object appeared (averaged across children. Filled 
+                                    bars represent objects that were among the top 
+                                    objects for both sites."))
+                        ))),
+             tabPanel("Category Effects"), 
+             tabPanel("Age Effects")
+  )
   ),
   
-  server <- function(input, output) {
+  server <- function(input, output, session) {
+  
+    observeEvent(input$go_objects, {
+      updateNavbarPage(session, inputId = "inTabset", 
+                       selected = "Object Distributions")
+    })
+    
+    observeEvent(input$go_categories, {
+      updateNavbarPage(session, inputId = "inTabset", 
+                       selected = "Category Effects")
+    })
+    
+    observeEvent(input$go_age, {
+      updateNavbarPage(session, inputId = "inTabset", 
+                       selected = "Age Effects")
+    })
     
     top_objects_input <- reactive({
       get_top_objects({ input$top_objects_dv })

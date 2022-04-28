@@ -62,14 +62,14 @@ get_top_objects <- function(dv) {
         filter(site == i) %>%
         group_by(sub_num) %>%
         mutate(total.images = length(unique(image))) %>%
-        group_by(object, sub_num, photos) %>%
+        group_by(object, sub_num, total.images) %>%
         summarize(n.images = length(unique(image)), 
                   category = category) %>%
         ungroup() %>%
         distinct() %>%
         ungroup() %>%
         complete(sub_num, object, fill = list(n.images = 0)) %>%
-        mutate(prop.photos = ifelse(n.images == 0, 0, n.images/total.images)) %>%
+        mutate(prop.images = ifelse(n.images == 0, 0, n.images/total.images)) %>%
         complete(sub_num, object, fill = list(prop.images = 0)) %>%
         group_by(object) %>%
         summarize(prop = mean(prop.images), 

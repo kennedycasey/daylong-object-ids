@@ -96,7 +96,6 @@ get_top_objects <- function(dv) {
 # define operator that selects all but the things in a list
 `%notin%` <- Negate(`%in%`)
 
-
 shinyApp(
   ui <- fluidPage(
     theme = "flatly",
@@ -104,20 +103,33 @@ shinyApp(
                tabPanel("Object Distribution", 
                         sidebarLayout(
                           sidebarPanel(
-                            radioButtons("top_objects_dv", "Measure",
-                                         c("% Children", "% Photos")
-                            ),
+                            h1("Top Objects"),
+                            sliderInput("top_objects_count", 
+                                        label = "Number of Objects", 
+                                        min = 0, max = 50, 
+                                        value = 25, step = 5),
                             radioButtons("top_objects_site", "Site",
                                          c("Rossel" = "Rossel", 
                                            "Tseltal" = "Tseltal")
                             ),
-                            sliderInput("top_objects_count", 
-                                        label = "Number of Objects", 
-                                        min = 0, max = 50, 
-                                        value = 25, step = 5)
+                            radioButtons("top_objects_dv", "DV",
+                                         c("Overall % of children handling the target object at least once" = "% Children", 
+                                           "Average % of photos featuring handling of the target object across children" = "% Photos")
+                            ), 
+                            selectInput("top_objects_category", "Category", 
+                                        choices = c("All Categories", "Food", "Synthetic", 
+                                                    "Natural", "Toy", "Mealtime Tool", 
+                                                    "Clothing", "Immovable", 
+                                                    "Work Tool"))
                           ),
                           mainPanel(
-                            plotOutput("top_objects_fig")
+                            plotOutput("top_objects_fig"), 
+                            h5(paste0("Top objects defined based on either (a) the 
+                                      number of children handling the object at least 
+                                      once, or (b) the number of photos in which the
+                                      object appeared (averaged across children. Filled 
+                                      bars represent objects that were among the top 
+                                      objects for both sites."))
                           ))),
                tabPanel("Category Effects"), 
                tabPanel("Age Effects")
@@ -132,41 +144,81 @@ shinyApp(
     
     output$top_objects_fig <- renderPlot({
       
-      top_objects_input() %>%
-        # remove study-related and recalculate ranks
-        filter(object %notin% study.related, site %in% { input$top_objects_site }) %>%
-        group_by(site) %>%
-        arrange(desc(prop)) %>%
-        mutate(rank = row_number(), 
-               # add var to indicate whether object appears in both sites
-               both = ifelse(object %in% 
-                               filter(top_objects_input(), 
-                                      site == "Rossel" & 
-                                        rank <= { input$top_objects_count })$object 
-                             & object %in% 
-                               filter(top_objects_input(), 
-                                      site == "Tseltal" & 
-                                        rank <= { input$top_objects_count })$object, 
-                             1, 0), 
-               category.label = factor(category,
-                                       levels = categories, labels = category.labels),
-               label = paste0(str_to_sentence(str_remove(
-                 object, "-M|-W|empty drink ")), " (", category.label, ")"), 
-               site = factor(site, levels = sites)) %>%
-        filter(rank <= { input$top_objects_count }) %>%
-        ggplot(aes(x = rank, y = prop*100, color = site, fill = site)) +
-        facet_grid(. ~ site) +
-        geom_bar(aes(alpha = as.factor(both)), stat = "identity") +
-        geom_text(aes(y = prop*100/2, label = label),
-                  color = "black", srt = 90) +
-        scale_alpha_manual(values = c(0.2, 0.7)) +
-        scale_color_manual(values = site.colors) +
-        scale_fill_manual(values = site.colors) +
-        labs(x = paste0("Top ", { input$top_objects_count }, " Objects"), 
-             y = { input$top_objects_dv }) +
-        theme_test(base_size = 25) +
-        theme(axis.text.x = element_blank(), axis.ticks.x = element_blank(), 
-              legend.position = "none")
+      if ({ input$top_objects_category } == "All Categories") {
+        top_objects_input() %>%
+          # remove study-related and recalculate ranks
+          filter(object %notin% study.related & site %in% { input$top_objects_site }) %>%
+          group_by(site) %>%
+          arrange(desc(prop)) %>%
+          mutate(rank = row_number(), 
+                 # add var to indicate whether object appears in both sites
+                 both = ifelse(object %in% 
+                                 filter(top_objects_input(), 
+                                        site == "Rossel" & 
+                                          rank <= { input$top_objects_count })$object 
+                               & object %in% 
+                                 filter(top_objects_input(), 
+                                        site == "Tseltal" & 
+                                          rank <= { input$top_objects_count })$object, 
+                               1, 0), 
+                 category.label = factor(category,
+                                         levels = categories, labels = category.labels),
+                 label = paste0(str_to_sentence(str_remove(
+                   object, "-M|-W|empty drink ")), " (", category.label, ")"), 
+                 site = factor(site, levels = sites)) %>%
+          filter(rank <= { input$top_objects_count }) %>%
+          ggplot(aes(x = rank, y = prop*100, color = site, fill = site)) +
+          facet_grid(. ~ site) +
+          geom_bar(aes(alpha = as.factor(both)), stat = "identity") +
+          geom_text(aes(y = prop*100/2, label = label),
+                    color = "black", srt = 90) +
+          scale_alpha_manual(values = c(0.2, 0.7)) +
+          scale_color_manual(values = site.colors) +
+          scale_fill_manual(values = site.colors) +
+          labs(x = paste0("Top ", { input$top_objects_count }, " Objects"), 
+               y = { input$top_objects_dv }) +
+          theme_test(base_size = 25) +
+          theme(axis.text.x = element_blank(), axis.ticks.x = element_blank(), 
+                legend.position = "none")
+      }
+      
+      else {
+        top_objects_input() %>%
+          # remove study-related and recalculate ranks
+          filter(object %notin% study.related & site %in% { input$top_objects_site } & category == { input$top_objects_category }) %>%
+          group_by(site) %>%
+          arrange(desc(prop)) %>%
+          mutate(rank = row_number(), 
+                 # add var to indicate whether object appears in both sites
+                 both = ifelse(object %in% 
+                                 filter(top_objects_input(), 
+                                        site == "Rossel" & 
+                                          rank <= { input$top_objects_count })$object 
+                               & object %in% 
+                                 filter(top_objects_input(), 
+                                        site == "Tseltal" & 
+                                          rank <= { input$top_objects_count })$object, 
+                               1, 0), 
+                 category.label = factor(category,
+                                         levels = categories, labels = category.labels),
+                 label = paste0(str_to_sentence(str_remove(
+                   object, "-M|-W|empty drink "))), 
+                 site = factor(site, levels = sites)) %>%
+          filter(rank <= { input$top_objects_count }) %>%
+          ggplot(aes(x = rank, y = prop*100, color = site, fill = site)) +
+          facet_grid(. ~ site) +
+          geom_bar(aes(alpha = as.factor(both)), stat = "identity") +
+          geom_text(aes(y = prop*100/2, label = label),
+                    color = "black", srt = 90) +
+          scale_alpha_manual(values = c(0.2, 0.7)) +
+          scale_color_manual(values = site.colors) +
+          scale_fill_manual(values = site.colors) +
+          labs(x = paste0("Top ", { input$top_objects_count }, " Objects"), 
+               y = { input$top_objects_dv }) +
+          theme_test(base_size = 25) +
+          theme(axis.text.x = element_blank(), axis.ticks.x = element_blank(), 
+                legend.position = "none")
+      }
     })
   }
 )

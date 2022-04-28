@@ -71,14 +71,18 @@ get_top_objects <- function(dv) {
         mutate(photos = length(unique(image))) %>%
         group_by(object, sub_num, photos) %>%
         summarize(n.photos = length(unique(image)), 
-                  prop.photos = n.photos/photos,
                   category = category) %>%
         ungroup() %>%
         distinct() %>%
+        ungroup() %>%
+        complete(sub_num, object, fill = list(n.photos = 0)) %>%
+        mutate(prop.photos = ifelse(n.photos == 0, 0, n.photos/photos)) %>%
+        complete(sub_num, object, fill = list(prop.photos = 0)) %>%
         group_by(object) %>%
         summarize(prop = mean(prop.photos), 
                category = category) %>%
         ungroup() %>%
+        filter(!is.na(category)) %>%
         distinct() %>%
         arrange(desc(prop)) %>%
         mutate(rank = row_number(), 

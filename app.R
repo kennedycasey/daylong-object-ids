@@ -86,6 +86,37 @@ get_top_objects <- function(dv) {
   all.ranked.objects <- do.call(rbind, ranked.objects.list)
 }
 
+get_age_effects <- function(dv) {
+  if (dv == "Unique Objects/Hour") {
+    df <- data %>%
+      group_by(site, sub_num, age, hour) %>%
+      summarize(y = length(unique(object))) %>%
+      ungroup()
+  }
+  else if (dv == "Object Transitions/Hour") {
+    df <-data %>%
+      group_by(sub_num, image) %>%
+      # first, calculate # categories per image
+      mutate(n.objects = length(unique(object)), 
+             all.objects = paste(object, collapse = ", ")) %>%
+      ungroup() %>%
+      select(site, sub_num, image, age, hour, n.objects, all.objects) %>%
+      distinct() %>%
+      # second, add cols w/ prev category and check if there's been a change
+      # in held object---if so, mark it as a transition == 1
+      mutate(prev.objects = lag(all.objects, 1), 
+             same.child = ifelse(sub_num == lag(sub_num, 1), 1, 0), 
+             transition = ifelse(all.objects != prev.objects &
+                                   same.child == 1, 1, 0)) %>%
+      group_by(site, sub_num, age, hour) %>%
+      summarize(n.transitions = sum(transition, na.rm = TRUE)) %>%
+      left_join(hourly.objects.byage, by = c("site", "sub_num", "age", "hour")) %>%
+      mutate(y = n.transitions/n.objects) %>%
+      filter(y > 0)
+  }
+  }
+
+
 # create not in operator
 `%notin%` <- Negate(`%in%`)
 
@@ -170,7 +201,21 @@ shinyApp(
                                         dataTableOutput("top_objects_tbl"))
                         )))),
              tabPanel("Categories"), 
-             tabPanel("Developmental Changes")
+             tabPanel("Developmental Changes",
+                      sidebarLayout(
+                        sidebarPanel(
+                          h1("Age Effects"),
+                          radioButtons("top_objects_site", "Site",
+                                       c("Rossel" = "Rossel", 
+                                         "Tseltal" = "Tseltal")
+                          ),
+                          selectInput("age_effects_dv", "DV", 
+                                      choices = c("Unique Objects/Hour", "Object Transitions/Hour"))
+                        ),
+                        mainPanel(
+                          plotOutput("age_effects_fig"), 
+                                               h5("")), 
+                          ),)
   )
   ),
   
@@ -306,5 +351,28 @@ shinyApp(
       }
       # set default table size to 10 with options in multiples of 5
     }, options = list(lengthMenu = seq(5, { input$top_objects_count }, 5), pageLength = 10))
+    
+    # regenerate top objects tibble after any change to user inputs
+    age_effects_input <- reactive({
+      get_age_effects({ input$age_effects_dv })
+    })
+    
+    # draw top objects figure with and without category labels
+    output$age_effects_fig <- renderPlot({
+        ggplot() +
+          # add points for individual kids
+          geom_jitter(age_effects_input(),
+                      mapping = aes(x = age, y = y,
+                                    color = site, fill = site), 
+                      alpha = 0.25, size = 2) +
+          scale_color_manual(values = site.colors) +
+          scale_fill_manual(values = site.colors) +
+          scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) +
+          #scale_y_continuous(limits = c(0, 30),breaks = c(0, 5, 10, 15, 20, 25, 30)) +
+          labs(x = "Age (months)", y = {input$age_effects_dv},
+               color = "Site", fill = "Site") +
+          theme_test(base_size = 30)
+    })
   }
+  
 )

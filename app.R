@@ -140,7 +140,7 @@ shinyApp(
                           h1("Top Objects"),
                           sliderInput("top_objects_count", 
                                       label = "Number of Objects", 
-                                      min = 0, max = 50, 
+                                      min = 5, max = 50, 
                                       value = 25, step = 5),
                           radioButtons("top_objects_site", "Site",
                                        c("Rossel" = "Rossel", 
@@ -157,14 +157,18 @@ shinyApp(
                                                   "Work Tool"))
                         ),
                         mainPanel(
-                          plotOutput("top_objects_fig"), 
-                          h5(paste0("Top objects defined based on either (a) the 
-                                    number of children handling the object at least 
-                                    once, or (b) the number of photos in which the
-                                    object appeared (averaged across children. Filled 
-                                    bars represent objects that were among the top 
-                                    objects for both sites."))
-                        ))),
+                          tabsetPanel(type = "tabs", 
+                            tabPanel("Figure", 
+                                        plotOutput("top_objects_fig"), 
+                                        h5("Top objects defined based on either (a) the 
+                                          number of children handling the object at least 
+                                          once, or (b) the number of photos in which the
+                                          object appeared (averaged across children. Filled 
+                                          bars represent objects that were among the top 
+                                          objects for both sites.")), 
+                            tabPanel("Table", 
+                                        dataTableOutput("top_objects_tbl"))
+                        )))),
              tabPanel("Category Effects"), 
              tabPanel("Age Effects")
   )
@@ -273,5 +277,34 @@ shinyApp(
                 legend.position = "none")
       }
     })
+    
+    # create top objects table
+    output$top_objects_tbl <- renderDataTable({
+      if ({ input$top_objects_category } == "All Categories") {
+        top_objects_input() %>%
+          # remove study-related and recalculate ranks
+          filter(object %notin% study.related & site %in% { input$top_objects_site }) %>%
+          arrange(desc(prop)) %>%
+          mutate(rank = row_number()) %>%
+          filter(rank <= { input$top_objects_count }) %>%
+          transmute(Object = str_remove(object, "-M|-W|empty drink "), 
+                    Category = category, 
+                    Rank = rank,
+                    `DV %` = round(prop*100, 1))
+      }
+      else {
+        top_objects_input() %>%
+          # remove study-related and recalculate ranks
+          filter(object %notin% study.related & site %in% { input$top_objects_site } & category == { input$top_objects_category }) %>%
+          arrange(desc(prop)) %>%
+          mutate(rank = row_number()) %>%
+          filter(rank <= { input$top_objects_count }) %>%
+          transmute(Object = str_remove(object, "-M|-W|empty drink "), 
+                    Category = category, 
+                    Rank = rank,
+                    `DV %` = round(prop*100, 1))
+      }
+      # set default table size to 10 with options in multiples of 5
+    }, options = list(lengthMenu = seq(5, { input$top_objects_count }, 5), pageLength = 10))
   }
 )

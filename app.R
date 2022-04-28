@@ -97,7 +97,7 @@ shinyApp(
       # add theme
       theme = "flatly",
       # add tabs
-      navbarPage("",
+      navbarPage(img(src = "https://chatterlab.uchicago.edu/img/logo.png", height = "30px"),
                id = "inTabset",
                tabPanel("Home",
                         fluidRow(

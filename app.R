@@ -1,25 +1,16 @@
 library(shiny)
 library(shinythemes)
+library(tidyverse)
+library(lubridate)
 
 # WHILE STILL IN DEVELOPMENT:
 # check for updates to markdown file -> regenerate and source R script each time
-#knitr::purl("../CogSci2022-giannino/CogSci2022-giannino.Rmd")
+#knitr::purl("CogSci2022-giannino/CogSci2022-giannino.Rmd")
 #source("CogSci2022-giannino.R")
 
 # IMPORT DATA -------------------------------------------------------------
 
-raw.data <- read_csv("../data/casillas/all-data.csv")
-participants <- read_csv("../data/casillas/metadata/participants.csv") %>%
-  select(site, sub_num, age)
-
-included.subs <- unique(raw.data$sub_num)
-
-# read in C&E data for all codeable hours per ptcp
-codeable.hrs.pp <- read_csv(
-  "../data/casillas/metadata/all-hours-with-codeable-photos-per-ptcp.csv") %>%
-  filter(sub_num %in% included.subs) %>%
-  # add participant metadata
-  full_join(participants)
+raw.data <- read_csv("data/casillas/all-data.csv")
 
 # pre-set colors and category labels
 sites <- c("Tseltal", "Rossel")
@@ -45,7 +36,9 @@ data <- raw.data %>%
 # create list of study-related objects
 study.related <- c("camera", "vest", "camera cover")
 
-# FUNCTIONS ---------------------------------------------------------------
+# DEFINE FUNCTIONS -----------------------------------------------------------
+
+# create tibble of top objects for each site either by kids or by images
 get_top_objects <- function(dv) {
   ranked.objects.list <- list()
   for (i in sites) {
@@ -68,18 +61,18 @@ get_top_objects <- function(dv) {
       ranked.objects <- data %>%
         filter(site == i) %>%
         group_by(sub_num) %>%
-        mutate(photos = length(unique(image))) %>%
+        mutate(total.images = length(unique(image))) %>%
         group_by(object, sub_num, photos) %>%
-        summarize(n.photos = length(unique(image)), 
+        summarize(n.images = length(unique(image)), 
                   category = category) %>%
         ungroup() %>%
         distinct() %>%
         ungroup() %>%
-        complete(sub_num, object, fill = list(n.photos = 0)) %>%
-        mutate(prop.photos = ifelse(n.photos == 0, 0, n.photos/photos)) %>%
-        complete(sub_num, object, fill = list(prop.photos = 0)) %>%
+        complete(sub_num, object, fill = list(n.images = 0)) %>%
+        mutate(prop.photos = ifelse(n.images == 0, 0, n.images/total.images)) %>%
+        complete(sub_num, object, fill = list(prop.images = 0)) %>%
         group_by(object) %>%
-        summarize(prop = mean(prop.photos), 
+        summarize(prop = mean(prop.images), 
                category = category) %>%
         ungroup() %>%
         filter(!is.na(category)) %>%
@@ -93,14 +86,18 @@ get_top_objects <- function(dv) {
   all.ranked.objects <- do.call(rbind, ranked.objects.list)
 }
 
-# define operator that selects all but the things in a list
+# create not in operator
 `%notin%` <- Negate(`%in%`)
 
+
 shinyApp(
+  # define ui---
   ui <- 
     fluidPage(
-    theme = "flatly",
-    navbarPage("",
+      # add theme
+      theme = "flatly",
+      # add tabs
+      navbarPage("",
                id = "inTabset",
                tabPanel("Home",
                         fluidRow(
@@ -112,9 +109,13 @@ shinyApp(
                              Elika Bergelson, & Marisa Casillas"),
                           h2("Supporting Online Information"),
                           br(),
+                          
+                          # buttons to jump to other tabs
                           actionButton("go_objects", "Explore distributions of objects", class = "btn-success"),
                           actionButton("go_categories", "Explore effects of object categories", class = "btn-success"),
                           actionButton("go_age", "Explore effects of age", class = "btn-success"),
+                          
+                          # links to external pages
                           h2("External links"),
                           h4(img(src = "https://chatterlab.uchicago.edu/img/logo.png", height = "20px"), 
                              tags$a(href = "https://chatterlab.uchicago.edu/lab-publications/Casey_et_al_submitted_Distributional_patterns_of_at_home_object_handling.pdf", 
@@ -169,8 +170,10 @@ shinyApp(
   )
   ),
   
+  # define server logic---
   server <- function(input, output, session) {
   
+    # jump to relevant tab after user presses button on homepage
     observeEvent(input$go_objects, {
       updateNavbarPage(session, inputId = "inTabset", 
                        selected = "Object Distributions")
@@ -186,10 +189,12 @@ shinyApp(
                        selected = "Age Effects")
     })
     
+    # regenerate top objects tibble after any change to user inputs
     top_objects_input <- reactive({
       get_top_objects({ input$top_objects_dv })
     })
     
+    # draw top objects figure with and without category labels
     output$top_objects_fig <- renderPlot({
       
       if ({ input$top_objects_category } == "All Categories") {

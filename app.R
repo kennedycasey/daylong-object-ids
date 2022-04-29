@@ -122,6 +122,41 @@ get_age_effects <- function(dv) {
       mutate(y = n.transitions/n.objects) %>%
       filter(y > 0)
   }
+  else if (dv == "Categories/Hour") {
+    age_effects_input <- data %>%
+      group_by(site, sub_num, age, hour) %>%
+      summarize(y = length(unique(category))) %>%
+      ungroup()
+  }
+  else if (dv == "Category Transitions/Hour") {
+    # compute # unique categories per hour per kid
+    hourly.total.categories <- data %>%
+      group_by(sub_num, hour) %>%
+      summarize(n.categories = length(unique(category)))
+    
+    # compute # of transitions between categories per hour per kid
+    # and compare that to the total number of categories in each hour
+    # to get the relative number of category transitions ("rel.transitions")
+    age_effects_input <- data %>%
+      group_by(sub_num, image) %>%
+      # first, calculate # categories per image
+      mutate(n.categories = length(unique(category)), 
+             all.categories = paste(category, collapse = ", ")) %>%
+      ungroup() %>%
+      select(site, sub_num, image, age, hour, n.categories, all.categories) %>%
+      distinct() %>%
+      # second, add cols w/ prev category and check if there's been a change
+      # in held object---if so, mark it as a transition == 1
+      mutate(prev.categories = lag(all.categories, 1), 
+             same.child = ifelse(sub_num == lag(sub_num, 1), 1, 0), 
+             transition = ifelse(all.categories != prev.categories &
+                                   same.child == 1, 1, 0)) %>%
+      group_by(site, sub_num, age, hour) %>%
+      summarize(n.transitions = sum(transition, na.rm = TRUE)) %>%
+      left_join(hourly.total.categories, by = c("sub_num", "hour")) %>%
+      mutate(y = n.transitions/n.categories) %>%
+      filter(y > 0)
+  }
 }
 
 # create not in operator
@@ -213,7 +248,7 @@ shinyApp(
                         sidebarPanel(
                           h1("Age Effects"),
                           selectInput("age_effects_dv", "DV", 
-                                      choices = c("Unique Objects/Hour", "Object Transitions/Hour"))
+                                      choices = c("Unique Objects/Hour", "Object Transitions/Hour", "Categories/Hour", "Category Transitions/Hour"))
                         ),
                         mainPanel(
                           plotOutput("age_effects_fig"), 

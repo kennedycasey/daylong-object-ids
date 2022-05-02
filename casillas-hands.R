@@ -79,19 +79,22 @@ data %>%
   mutate(total = length(unique(image)), 
          Site = ifelse(Site == "Mayan", "Tseltal", Site),
          Site = factor(Site, levels = c("Tseltal", "Rossel")), 
-         Mobility = ifelse(Mobility == "Y", "Y", "N")) %>%
-  group_by(sub_num, total, Site, Age, Mobility, hands) %>%
+         Walking = ifelse(Mobility == "Y", "Y", "N")) %>%
+  group_by(sub_num, total, Site, Age, Walking, hands) %>%
   summarize(n = length(unique(image))) %>%
   filter(hands == 1) %>%
   summarize(hands_prop = n/total*100) %>%
   ggplot(aes(x = Age, y = hands_prop, color = Site, fill = Site)) + 
   facet_grid(. ~ Site) + 
-  geom_point(aes(shape = Mobility), size = 3, alpha = 0.7) + 
+  geom_point(aes(shape = Walking), size = 5, alpha = 0.7) + 
   geom_smooth(method = "loess") +
   scale_color_manual(values = site.colors) + 
   scale_fill_manual(values = site.colors) + 
   scale_shape_manual(values = c(1, 19)) + 
   scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) + 
-  scale_y_continuous(limits = c(0, 100), breaks = c(0, 25, 50, 75, 100)) + 
+  coord_cartesian(ylim = c(0, 100)) + 
+  scale_y_continuous(breaks = c(0, 25, 50, 75, 100)) + 
   labs(x = "Age (months)", y = "% Photos with Hands") + 
   theme_test(base_size = 20)
+
+ggsave("figs/hands.jpg", width = 8, height = 6)

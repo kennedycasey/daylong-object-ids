@@ -1,7 +1,7 @@
 library(tidyverse)
 
 # read in data
-annotations <- read_csv("data/casillas/all-annotations.csv")
+annotations <- read_csv("data/casillas/object-annotations.csv")
 participants <- read_csv("data/casillas/metadata/participants.csv")
 timestamps <- read_csv("data/casillas/metadata/timestamps.csv")
 
@@ -257,4 +257,4 @@ data.to.export <- data.w.exclusions %>%
          category = ifelse(!is.na(exclusion), NA, category)) %>%
   distinct()
 
-write_csv(data.to.export, "data/casillas/all-data.csv")
+write_csv(data.to.export, "data/casillas/object-data.csv")

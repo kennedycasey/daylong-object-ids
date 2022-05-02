@@ -295,8 +295,8 @@ shinyApp(
                                       min = 5, max = 50, 
                                       value = 25, step = 5),
                           radioButtons("top_objects_site", "Site",
-                                       c("Rossel" = "Rossel", 
-                                         "Tseltal" = "Tseltal")
+                                       c("Tseltal" = "Tseltal", 
+                                         "Rossel" = "Rossel")
                           ),
                           radioButtons("top_objects_dv", "DV",
                                        c("Overall % of children handling the target object at least once" = "% Children", 
@@ -325,11 +325,12 @@ shinyApp(
                        sidebarLayout(
                          sidebarPanel(
                            h1("Category Effects"),
+                           radioButtons("category_effects_site", "Site",
+                                        c("Both" = "Both",
+                                          "Tseltal" = "Tseltal", 
+                                          "Rossel" = "Rossel")),
                            selectInput("category_effects_dv", "DV", 
-                                       choices = c("Unique Objects/Hour", "Overall % Photos")), 
-                           radioButtons("top_objects_site", "Site",
-                                        c("Rossel" = "Rossel", 
-                                          "Tseltal" = "Tseltal"))
+                                       choices = c("Unique Objects/Hour", "Overall % Photos"))
                          ),
                          mainPanel(
                            plotOutput("category_effects_fig"), 
@@ -530,11 +531,19 @@ shinyApp(
     
     # draw categories figure
     output$category_effects_fig <- renderPlot({
-      ggplot(category_effects_input(),
+      
+      if ({ input$category_effects_site} != "Both") {
+        category_effects_input <- category_effects_input() %>%
+          filter(site %in% { input$category_effects_site })
+      }
+      else {
+        category_effects_input <- category_effects_input()
+      }
+      ggplot(category_effects_input,
                aes(x = category, y = y, 
                    fill = site, color = site)) +
         geom_point(position = position_jitterdodge(
-          dodge.width = 0.75, jitter.width = 0.15), size = 3, alpha = 0.5) +
+          dodge.width = 0.75, jitter.width = 0.25), size = 3, alpha = 0.5) +
         geom_boxplot(width = 0.75, outlier.shape = NA,
                      alpha = 0.5, color = "black", size = 1) +
         scale_color_manual(values = site.colors) + 
@@ -545,9 +554,10 @@ shinyApp(
         theme_classic(base_size = 25) +
         theme(plot.tag = element_text(face = "bold"), 
               legend.justification = c(1, 1),
-              legend.position = c(1, 1), 
+              legend.position = c(1, 0.9), 
               legend.direction = "horizontal", 
-              axis.text.x = element_text(size = 15))
+              axis.text.x = element_text(size = 15)) + 
+        {if ({ input$category_effects_site } != "Both" ) theme(legend.position = "none")}
     })
   }
   

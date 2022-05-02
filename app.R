@@ -204,7 +204,7 @@ shinyApp(
   ui <- 
     fluidPage(
       # add theme
-      theme = "flatly",
+      theme = shinytheme("flatly"),
       # add tabs
       navbarPage("",
                id = "inTabset",
@@ -314,7 +314,7 @@ shinyApp(
                                         h5("Top objects defined based on either (a) the 
                                           number of children handling the object at least 
                                           once, or (b) the number of photos in which the
-                                          object appeared (averaged across children. Filled 
+                                          object appeared (averaged across children). Filled 
                                           bars represent objects that were among the top 
                                           objects for both sites.")), 
                             tabPanel("Table", 
@@ -325,7 +325,10 @@ shinyApp(
                          sidebarPanel(
                            h1("Category Effects"),
                            selectInput("category_effects_dv", "DV", 
-                                       choices = c("Unique Objects/Hour", "Overall % Photos"))
+                                       choices = c("Unique Objects/Hour", "Overall % Photos")), 
+                           radioButtons("top_objects_site", "Site",
+                                        c("Rossel" = "Rossel", 
+                                          "Tseltal" = "Tseltal"))
                          ),
                          mainPanel(
                            plotOutput("category_effects_fig"), 
@@ -399,7 +402,7 @@ shinyApp(
           ggplot(aes(x = rank, y = prop*100, color = site, fill = site)) +
           facet_grid(. ~ site) +
           geom_bar(aes(alpha = as.factor(both)), stat = "identity") +
-          geom_text(aes(y = prop*100/2, label = label),
+          geom_text(aes(y = prop*100/2, label = label, size = prop*100/2), 
                     color = "black", srt = 90) +
           scale_alpha_manual(values = c(0.2, 0.7)) +
           scale_color_manual(values = site.colors) +

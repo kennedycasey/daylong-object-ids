@@ -12,7 +12,7 @@ library(lme4)
 
 # IMPORT DATA -------------------------------------------------------------
 
-raw.data <- read_csv("data/casillas/all-data.csv")
+raw.data <- read_csv("data/casillas/object-data.csv")
 
 # pre-set colors and category labels
 sites <- c("Tseltal", "Rossel")
@@ -86,6 +86,41 @@ get_top_objects <- function(dv) {
     }
   }
   all.ranked.objects <- do.call(rbind, ranked.objects.list)
+}
+
+
+get_category_effects <- function(dv) {
+  if (dv == "Unique Objects/Hour") {
+    category_effects_input <- data %>%
+      group_by(site, sub_num) %>%
+      mutate(n.images = length(unique(image))) %>%
+      group_by(site, sub_num, n.images, hour, category) %>%
+      summarize(n.objects = length(unique(object))) %>%
+      ungroup() %>%
+      mutate(synthetic = ifelse(category == "Synthetic", 1, 0), 
+             natural = ifelse(category == "Natural", 1, 0), 
+             food = ifelse(category == "Food", 1, 0), 
+             mealtime = ifelse(category == "Mealtime Tool", 1, 0),
+             work = ifelse(category == "Work Tool", 1, 0), 
+             clothing = ifelse(category == "Clothing", 1, 0),
+             toy = ifelse(category == "Toy", 1, 0), 
+             immovable = ifelse(category == "Immovable", 1, 0)) %>%
+      group_by(site, sub_num, category) %>%
+      summarize(y = mean(n.objects)) %>%
+      ungroup() %>%
+      mutate(category = factor(category, levels = categories))
+  }
+  
+  else if (dv == "Overall % Photos") {
+    category_effects_input <- data %>%
+      group_by(sub_num, site) %>%
+      mutate(n.images = length(unique(image))) %>%
+      group_by(sub_num, site, n.images) %>%
+      count(category, .drop = FALSE) %>%
+      summarize(y = n/n.images*100, 
+                category = category) %>%
+      distinct()
+  }
 }
 
 get_age_effects <- function(dv) {
@@ -164,7 +199,8 @@ get_age_effects <- function(dv) {
 
 
 shinyApp(
-  # define ui---
+
+# DEFINE UI ---------------------------------------------------------------
   ui <- 
     fluidPage(
       # add theme
@@ -182,7 +218,6 @@ shinyApp(
                              Elika Bergelson, & Marisa Casillas"),
                           h2("Supporting Online Information"),
                           br(),
-                          
                           # buttons to jump to other tabs
                           actionButton("go_objects", "Explore distributions of objects", class = "btn-success"),
                           actionButton("go_categories", "Explore effects of object categories", class = "btn-success"),
@@ -242,7 +277,17 @@ shinyApp(
                             tabPanel("Table", 
                                         dataTableOutput("top_objects_tbl"))
                         )))),
-             tabPanel("Categories"), 
+             tabPanel("Categories",
+                       sidebarLayout(
+                         sidebarPanel(
+                           h1("Category Effects"),
+                           selectInput("category_effects_dv", "DV", 
+                                       choices = c("Unique Objects/Hour", "Overall % Photos"))
+                         ),
+                         mainPanel(
+                           plotOutput("category_effects_fig"), 
+                           h5("")), 
+                       )),
              tabPanel("Developmental Changes",
                       sidebarLayout(
                         sidebarPanel(
@@ -253,11 +298,12 @@ shinyApp(
                         mainPanel(
                           plotOutput("age_effects_fig"), 
                                                h5("")), 
-                          ),)
+                          ))
   )
   ),
   
-  # define server logic---
+
+# DEFINE SERVER LOGIC -----------------------------------------------------
   server <- function(input, output, session) {
   
     # jump to relevant tab after user presses button on homepage
@@ -390,13 +436,13 @@ shinyApp(
       # set default table size to 10 with options in multiples of 5
     }, options = list(lengthMenu = seq(5, { input$top_objects_count }, 5), pageLength = 10))
     
-    # regenerate top objects tibble after any change to user inputs
+    # regenerate age effects tibble after any change to user inputs
     age_effects_input <- reactive({
       get_age_effects({ input$age_effects_dv })
     })
     
     
-    # draw top objects figure with and without category labels
+    # draw age effects figure
     output$age_effects_fig <- renderPlot({
         ggplot() +
           # add points for individual kids
@@ -428,6 +474,33 @@ shinyApp(
           labs(x = "Age (months)", y = {input$age_effects_dv},
                color = "Site", fill = "Site") +
           theme_test(base_size = 25)
+    })
+    
+    # regenerate categories tibble after any change to user inputs
+    category_effects_input <- reactive({
+      get_category_effects({ input$category_effects_dv })
+    })
+    
+    # draw categories figure
+    output$category_effects_fig <- renderPlot({
+      ggplot(category_effects_input(),
+               aes(x = category, y = y, 
+                   fill = site, color = site)) +
+        geom_point(position = position_jitterdodge(
+          dodge.width = 0.75, jitter.width = 0.15), size = 3, alpha = 0.5) +
+        geom_boxplot(width = 0.75, outlier.shape = NA,
+                     alpha = 0.5, color = "black", size = 1) +
+        scale_color_manual(values = site.colors) + 
+        scale_fill_manual(values = site.colors) +
+        scale_x_discrete(labels = category.labels) + 
+        labs(x = "Categories", y = { input$category_effects_dv },
+             color = "Site", fill = "Site") +
+        theme_classic(base_size = 25) +
+        theme(plot.tag = element_text(face = "bold"), 
+              legend.justification = c(1, 1),
+              legend.position = c(1, 1), 
+              legend.direction = "horizontal", 
+              axis.text.x = element_text(size = 15))
     })
   }
   

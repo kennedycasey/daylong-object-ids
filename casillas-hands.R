@@ -11,6 +11,10 @@ objects <- read_csv("data/casillas/object-data.csv") %>%
 # TEMP LINE WHILE HANDS CODING STILL IN PROGRESS
 coded.ptcps <- unique(hands$sub_num)
 
+metadata <- imgs %>%
+  select(path, Site, Age, Mobility) %>%
+  distinct()
+
 # create not in operator
 `%notin%` <- Negate(`%in%`)
 
@@ -64,9 +68,30 @@ data <- hands %>%
          image = Image) %>%
   select(path, sub_num, image, hands, hands_count) %>%
   bind_rows(objects, imgs) %>%
+  left_join(metadata, by = "path") %>%
   select(-path)
 
+site.colors <- c("Tseltal" = "sandybrown", 
+                 "Rossel" = "brown4")
 
-
-
-
+data %>%
+  group_by(sub_num) %>%
+  mutate(total = length(unique(image)), 
+         Site = ifelse(Site == "Mayan", "Tseltal", Site),
+         Site = factor(Site, levels = c("Tseltal", "Rossel")), 
+         Mobility = ifelse(Mobility == "Y", "Y", "N")) %>%
+  group_by(sub_num, total, Site, Age, Mobility, hands) %>%
+  summarize(n = length(unique(image))) %>%
+  filter(hands == 1) %>%
+  summarize(hands_prop = n/total*100) %>%
+  ggplot(aes(x = Age, y = hands_prop, color = Site, fill = Site)) + 
+  facet_grid(. ~ Site) + 
+  geom_point(aes(shape = Mobility), size = 3, alpha = 0.7) + 
+  geom_smooth(method = "loess") +
+  scale_color_manual(values = site.colors) + 
+  scale_fill_manual(values = site.colors) + 
+  scale_shape_manual(values = c(1, 19)) + 
+  scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) + 
+  scale_y_continuous(limits = c(0, 100), breaks = c(0, 25, 50, 75, 100)) + 
+  labs(x = "Age (months)", y = "% Photos with Hands") + 
+  theme_test(base_size = 20)

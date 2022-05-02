@@ -71,7 +71,7 @@ if (run.from.raw) {
 } 
 
 # read in data
-raw.data <- read_csv("../data/casillas/all-data.csv")
+raw.data <- read_csv("../data/casillas/object-data.csv")
 participants <- read_csv("../data/casillas/metadata/participants.csv") %>%
   select(site, sub_num, age)
 
@@ -98,17 +98,38 @@ category.labels <- c("Food", "Synthetic", "Natural", "Toy",
                 "Tool-M", "Clothing", "Immovable", 
                 "Tool-W")
 
-# rm excluded photos + set other variable info
+# define operator that selects all but the things in a list
+`%notin%` <- Negate(`%in%`)
+
+# rm excluded photos + set other variable info 
 data <- raw.data %>%
   filter(is.na(exclusion) & !is.na(category)) %>%
   mutate(hour = hour(timestamp),
          category = factor(category, levels = categories), 
          site = factor(site, levels = sites))
 
+simulate.30s.sampling = FALSE
+if (simulate.30s.sampling) {
+  rm <- data %>%
+    filter(site == "Rossel") %>%
+    mutate(path = paste0(sub_num, "/", image), 
+           time.s =  hour*360 + minute(timestamp)*60 + second(timestamp)) %>%
+    select(path, sub_num, image, time.s) %>%
+    distinct() %>%
+    mutate(diff = ifelse(sub_num != lead(sub_num, 1), NA, lead(time.s, 1) - time.s)) %>%
+    group_by(sub_num) %>%
+    filter(diff < 30) %>%
+    filter(row_number() %% 2 == 1) %>%
+    pull(path)
+  
+  data <- data %>%
+    mutate(path = paste0(sub_num, "/", image)) %>%
+    filter(path %notin% rm) %>%
+    select(-path)
+}
+
 # set rm.study.related to TRUE if you want to check results w/o these
 study.related <- c("camera", "vest", "camera cover")
-# define operator that selects all but the things in a list
-`%notin%` <- Negate(`%in%`)
 
 rm.study.related = FALSE
 if (rm.study.related) {

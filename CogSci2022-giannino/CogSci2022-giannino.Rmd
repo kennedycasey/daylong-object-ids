@@ -1172,14 +1172,12 @@ Our current data indicate that children are exposed to a stable and wide variety
 ## Conclusion
 Analyzing the types of objects that children handle gives us a window into what they are interested in, what they do and talk about with others, what they are allowed to access, and more. Handled objects offer learners a range of sensory experiences that could be paired with the social, linguistic, and physical information around them. In the present study, we examined coarse patterns in young children's at-home object handling in two unrelated subsistence communities, finding many striking similarities despite differences in the communities' market integration and ways of life. Our data provide some basis for kernels of similarity in experience across culture and change with developmental time. However, our findings also point to immense variation in the assemblages of unique objects handled by individual children and indicate that children actually spend only narrow slices of time with a vast majority of objects. Determining if and how these distributional patterns, plus language input, coalesce to give rise to word learning is a crucial next step.
 
-<!--
-# Data availability statement
-\vspace{1em}\fbox{\parbox[b][][c]{7.5cm}{\centering All anonymized data and analysis scripts are available at the following link: \href{https://github.com/kennedycasey/daylong-object-ids}{https://github.com/kennedycasey/daylong-object-ids}}\
+\vspace{1em}\fbox{\parbox[b][][c]{7.5cm}{\centering \textbf{Data Availability}\\ \textbf{Anonymized data and analysis scripts:} \href{https://github.com/kennedycasey/daylong-object-ids}{https://github.com/kennedycasey/daylong-object-ids}.\\
+\textbf{Data visualization tool:} \href{https://aclew.shinyapps.io/ImCo-CogSci2022}{https://aclew.shinyapps.io/ImCo-CogSci2022}.
 }}
 
 # Acknowledgements
-This research is supported by a Gianinno Family Faculty Research Award to MC. We are enormously grateful to the participants and their families for sharing their daily lives with us. We also thank Will Fisher and Shawn C. Tice for essential contributions to the annotation software.
--->
+This research was supported by a Gianinno Family Faculty Research Award to MC. We are enormously grateful to the participants and their families for sharing their daily lives with us. We also thank Will Fisher and Shawn C. Tice for essential contributions to the annotation software.
 
 # References 
 

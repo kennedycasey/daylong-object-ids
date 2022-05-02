@@ -6,14 +6,9 @@ library(lubridate)
 library(ggeffects)
 library(lme4)
 
-# WHILE STILL IN DEVELOPMENT:
-# check for updates to markdown file -> regenerate and source R script each time
-#knitr::purl("CogSci2022-giannino/CogSci2022-giannino.Rmd")
-#source("CogSci2022-giannino.R")
-
 # IMPORT DATA -------------------------------------------------------------
 
-raw.data <- read_csv("data/casillas/object-data.csv")
+raw.data <- read_csv("app-data.csv")
 
 # pre-set colors and category labels
 sites <- c("Tseltal", "Rossel")
@@ -560,5 +555,6 @@ shinyApp(
         {if ({ input$category_effects_site } != "Both" ) theme(legend.position = "none")}
     })
   }
-  
 )
+
+rsconnect::deployApp(appName = "ImCo-CogSci2022")

@@ -218,7 +218,7 @@ shinyApp(
                           p("Object-centric interactions provide rich learning 
                             moments for young children, including opportunities 
                             to discover word meanings. Children’s first-person 
-                            object handling experience, in particular, forms a 
+                            object handling experiences, in particular, form a 
                             key source of input---one that varies across cultures 
                             and across development. Using daylong photo streams 
                             from child-worn cameras, we analyze >16k images to 
@@ -226,24 +226,25 @@ shinyApp(
                             handling across the first four years in two small-scale 
                             subsistence farming communities on opposite sides of 
                             the globe (Rossel Papuan and Tseltal Mayan)."),
-                          p("These data appear in our CogSci 2022 paper (see link 
-                            to paper and attribution information below)."),
+                          p("The data and visualizations on this site are associated with our", 
+                            a(href = "https://chatterlab.uchicago.edu/lab-publications/Casey_et_al_submitted_Distributional_patterns_of_at_home_object_handling.pdf", 
+                                    "CogSci 2022 paper"), "(attribution information below)."),
                           br(),
                           # buttons to jump to other tabs
                           actionButton("go_objects", 
                                        "Explore distributions of objects", 
                                        class = "btn-success", 
-                                       style='padding:30px; font-size:120%'),
+                                       style = 'padding:30px; font-size:120%'),
                           
                           actionButton("go_categories", 
                                        "Explore effects of object categories", 
                                        class = "btn-success", 
-                                       style='padding:30px; font-size:120%'),
+                                       style = 'padding:30px; font-size:120%'),
                           
                           actionButton("go_age", 
                                        "Explore effects of age", 
                                        class = "btn-success", 
-                                       style='padding:30px; font-size:120%'),
+                                       style = 'padding:30px; font-size:120%'),
                           br(),
                           br(),
                           
@@ -274,7 +275,7 @@ shinyApp(
                              Silva Mandujano, A., Shorter, K., Duquette, M., 
                              Bergelson, E., & Casillas, M. (2022). Sticks, leaves, 
                              buckets, and bowls: Distributional patterns of children’s 
-                             at-home object handling in two subsistence societies (CogSci 2022).", 
+                             at-home object handling in two subsistence societies.", 
                             em("Proceedings of the 44th Annual Meeting of the Cognitive 
                              Science Society.")),
                           br(),

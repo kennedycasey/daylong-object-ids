@@ -67,6 +67,8 @@ run.from.raw = FALSE
 if (run.from.raw) {
   # this R script creates the "all-data.csv"
   # set run.from.raw equal to TRUE if you want to regenerate it
+  # note that the number of images can change slightly depending on which 
+  # photo stream is randomly selected for the kids with 2
   source("../casillas-data-prep.R")
 } 
 
@@ -111,6 +113,8 @@ data <- raw.data %>%
 
 simulate.30s.sampling = FALSE
 if (simulate.30s.sampling) {
+  # when set to TRUE, this runs the analyses with a subset of Rossel images removed
+  # to simulate a sampling rate that is closer to the Tseltal data
   rm <- data %>%
     filter(site == "Rossel") %>%
     mutate(path = paste0(sub_num, "/", image), 
@@ -129,7 +133,7 @@ if (simulate.30s.sampling) {
     select(-path)
 }
 
-# set rm.study.related to TRUE if you want to check results w/o these
+# set rm.study.related to TRUE if you want to check results w/o these items
 study.related <- c("camera", "vest", "camera cover")
 
 rm.study.related = FALSE

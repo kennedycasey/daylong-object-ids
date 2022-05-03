@@ -91,7 +91,7 @@ sites <- c("Tseltal", "Rossel")
 site.colors <- c("Tseltal" = "sandybrown", 
                  "Rossel" = "brown4")
 
-categories <- c("Food", "Synthetic", "Natural", "Toy",
+categories <- c("Consumable", "Synthetic", "Natural", "Toy",
                 "Mealtime Tool", "Clothing", "Immovable", 
                 "Work Tool")
 
@@ -642,7 +642,7 @@ category.means <- category.props %>%
 # compute # kids with synthetic or food as their top category
 top.category.bychild <- category.props %>%
   group_by(sub_num) %>%
-  filter(prop == max(prop) & category %in% c("Synthetic", "Food")) %>%
+  filter(prop == max(prop) & category %in% c("Synthetic", "Consumable")) %>%
   nrow()
 
 # compute mean # of categories per hour overall
@@ -703,7 +703,7 @@ model.data <- data %>%
   ungroup() %>%
   mutate(synthetic = ifelse(category == "Synthetic", 1, 0), 
          natural = ifelse(category == "Natural", 1, 0), 
-         food = ifelse(category == "Food", 1, 0), 
+         consumable = ifelse(category == "Consumable", 1, 0), 
          mealtime = ifelse(category == "Mealtime Tool", 1, 0),
          work = ifelse(category == "Work Tool", 1, 0), 
          clothing = ifelse(category == "Clothing", 1, 0),
@@ -732,7 +732,7 @@ model.data.incl.zeroes <- data %>%
   distinct() %>%
   mutate(synthetic = ifelse(category == "Synthetic", 1, 0), 
          natural = ifelse(category == "Natural", 1, 0), 
-         food = ifelse(category == "Food", 1, 0), 
+         consumable = ifelse(category == "Consumable", 1, 0), 
          mealtime = ifelse(category == "Mealtime Tool", 1, 0),
          work = ifelse(category == "Work Tool", 1, 0), 
          clothing = ifelse(category == "Clothing", 1, 0),

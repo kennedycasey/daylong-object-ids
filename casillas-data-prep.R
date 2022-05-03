@@ -241,9 +241,9 @@ data.w.exclusions <- data.w.categories %>%
   distinct()
 
 # export clean data -------------------------------------------------------
-# randomly select rec for kids with 2 recs -> hard code until we have all annotations
-p1.exclude <- 7959 #output of sample(c(7959, 4856), 1)
-p2.exclude <- 5499 #output of sample(c(4590, 5499), 1)
+# randomly select rec for kids with 2 recs
+p1.exclude <- sample(c(7959, 4856), 1)
+p2.exclude <- sample(c(4590, 5499), 1)
 
 data.to.export <- data.w.exclusions %>%
   left_join(participants, by = "sub_num") %>%

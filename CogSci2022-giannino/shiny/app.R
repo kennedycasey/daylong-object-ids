@@ -1,6 +1,5 @@
 library(shiny)
 library(shinythemes)
-library(shinyWidgets)
 library(tidyverse)
 library(lubridate)
 library(ggeffects)
@@ -16,11 +15,11 @@ sites <- c("Tseltal", "Rossel")
 site.colors <- c("Tseltal" = "sandybrown", 
                  "Rossel" = "brown4")
 
-categories <- c("Food", "Synthetic", "Natural", "Toy",
+categories <- c("Consumable", "Synthetic", "Natural", "Toy",
                 "Mealtime Tool", "Clothing", "Immovable", 
                 "Work Tool")
 
-category.labels <- c("Food", "Synthetic", "Natural", "Toy",
+category.labels <- c("Consumable", "Synthetic", "Natural", "Toy",
                      "Tool-M", "Clothing", "Immovable", 
                      "Tool-W")
 
@@ -199,18 +198,18 @@ shinyApp(
   ui <- 
     fluidPage(
       # add theme
-      theme = shinytheme("flatly"),
+      theme = shinytheme("paper"),
       # add tabs
       navbarPage("",
                id = "inTabset",
                tabPanel("Home",
                         fluidRow(
-                          h1("Sticks, leaves, buckets, and bowls: Distributional 
+                          h2("Sticks, leaves, buckets, and bowls: Distributional 
                              patterns of children’s at-home object handling in two 
                              subsistence societies"),
                           br(),
-                          h2("Data Visualization Tool"),
-                          p("Object-centric interactions provide rich learning 
+                          h3("Data Visualization Tool"),
+                          h6("Object-centric interactions provide rich learning 
                             moments for young children, including opportunities 
                             to discover word meanings. Children’s first-person 
                             object handling experiences, in particular, form a 
@@ -221,7 +220,7 @@ shinyApp(
                             handling across the first four years in two small-scale 
                             subsistence farming communities on opposite sides of 
                             the globe (Rossel Papuan and Tseltal Mayan)."),
-                          p("The data and visualizations on this site are associated with our", 
+                          h6("The data and visualizations on this site are associated with our", 
                             a(href = "https://chatterlab.uchicago.edu/lab-publications/Casey_et_al_submitted_Distributional_patterns_of_at_home_object_handling.pdf", 
                                     "CogSci 2022 paper"), "(attribution information below)."),
                           br(),
@@ -244,29 +243,29 @@ shinyApp(
                           br(),
                           
                           # links to external pages
-                          h2("External links"),
-                          h4(img(src = "https://chatterlab.uchicago.edu/img/logo.png", height = "20px"), 
+                          h3("External links"),
+                          h5(img(src = "https://chatterlab.uchicago.edu/img/logo.png", height = "20px"), 
                              a(href = "https://chatterlab.uchicago.edu/lab-publications/Casey_et_al_submitted_Distributional_patterns_of_at_home_object_handling.pdf", 
                                     "Read the full proceedings paper")), 
-                          h4(img(src = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", height = "30px"), 
+                          h5(img(src = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", height = "30px"), 
                              a(href = "https://github.com/kennedycasey/daylong-object-ids", 
                                     "Find all supporting data and code")), 
-                          h4(img(src = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", height = "30px"),
+                          h5(img(src = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", height = "30px"),
                              a(href = "https://github.com/kennedycasey/ImCo2", 
                                     "Access the image annotation tool")),
                           br(), 
                           
                           # links to email contact
-                          h2("Contact"),
-                          p("Kennedy Casey (", a(href = "mailto:kbcasey@uchicago.edu", 
+                          h3("Contact"),
+                          h6("Kennedy Casey (", a(href = "mailto:kbcasey@uchicago.edu", 
                                                      "kbcasey@uchicago.edu"), ")"),
-                          p("Marisa Casillas (", a(href = "mailto:mcasillas@uchicago.edu", 
+                          h6("Marisa Casillas (", a(href = "mailto:mcasillas@uchicago.edu", 
                                                        "mcasillas@uchicago.edu"), ")"),
                           br(), 
                           
                           # add attribution
-                          h2("Attribution"), 
-                          p("Casey, K., Elliott, M., Mickiewicz, E., 
+                          h3("Attribution"), 
+                          h6("Casey, K., Elliott, M., Mickiewicz, E., 
                              Silva Mandujano, A., Shorter, K., Duquette, M., 
                              Bergelson, E., & Casillas, M. (2022). Sticks, leaves, 
                              buckets, and bowls: Distributional patterns of children’s 
@@ -275,7 +274,7 @@ shinyApp(
                              Science Society.")),
                           br(),
                           br(),
-                          h5("Built with",
+                          h6("Built with",
                              img(src = "https://www.rstudio.com/wp-content/uploads/2014/04/shiny.png", height = "30px"),
                              "from",
                              img(src = "https://www.rstudio.com/assets/img/logo.svg", height = "30px"))
@@ -284,7 +283,7 @@ shinyApp(
                tabPanel("Objects",
                         sidebarLayout(
                         sidebarPanel(
-                          h1("Top Objects"),
+                          h2("Top Objects"),
                           sliderInput("top_objects_count", 
                                       label = "Number of Objects", 
                                       min = 5, max = 50, 
@@ -307,7 +306,7 @@ shinyApp(
                           tabsetPanel(type = "tabs", 
                             tabPanel("Figure", 
                                         plotOutput("top_objects_fig"), 
-                                        h5("Top objects defined based on either (a) the 
+                                        h6("Top objects defined based on either (a) the 
                                           number of children handling the object at least 
                                           once, or (b) the number of photos in which the
                                           object appeared (averaged across children). Filled 
@@ -319,7 +318,7 @@ shinyApp(
              tabPanel("Categories",
                        sidebarLayout(
                          sidebarPanel(
-                           h1("Category Effects"),
+                           h2("Category Effects"),
                            radioButtons("category_effects_site", "Site",
                                         c("Both" = "Both",
                                           "Tseltal" = "Tseltal", 
@@ -334,7 +333,7 @@ shinyApp(
              tabPanel("Developmental Changes",
                       sidebarLayout(
                         sidebarPanel(
-                          h1("Age Effects"),
+                          h2("Age Effects"),
                           selectInput("age_effects_dv", "DV", 
                                       choices = c("Unique Objects/Hour", "Object Transitions/Hour", "Categories/Hour", "Category Transitions/Hour"))
                         ),
@@ -557,4 +556,7 @@ shinyApp(
   }
 )
 
-rsconnect::deployApp(appName = "ImCo-CogSci2022")
+# rsconnect::setAccountInfo(name = 'aclew',
+#                           token = '5A83C3D901262E26F17C707D1C2D5EB6',
+#                           secret = '/a+NMJjI3L78O03T/M645geWDq/1V3wBcwp84elP')
+# rsconnect::deployApp(appName = "ImCo-CogSci2022")

@@ -23,6 +23,10 @@ category.labels <- c("Consumable", "Synthetic", "Natural", "Toy",
                      "Tool-M", "Clothing", "Immovable", 
                      "Tool-W")
 
+category.labels.short <- c("C", "S", "N", "T",
+                     "M", "CL", "I", 
+                     "W")
+
 # rm excluded photos + set other variable info
 data <- raw.data %>%
   filter(is.na(exclusion) & !is.na(category)) %>%
@@ -361,8 +365,8 @@ shinyApp(
                               h2("Object Distribution"),
                               sliderInput("ranked_objects_count", 
                                           label = "Number of Objects", 
-                                          min = 5, max = 60, 
-                                          value = 60, step = 5),
+                                          min = 5, max = 65, 
+                                          value = 65, step = 5),
                               selectInput("ranked_objects_dv", "DV",
                                            choices = c("Log-scaled % Images",
                                                        "% Images")
@@ -449,7 +453,11 @@ shinyApp(
                                           rank <= { input$top_objects_count })$object, 
                                1, 0), 
                  category.label = factor(category,
-                                         levels = categories, labels = category.labels),
+                                         levels = categories,
+                                         labels = category.labels),
+                 {if ({ input$top_objects_count > 30}) { category.label = factor(category,
+                                                                                 levels = categories,
+                                                                                 labels = category.labels.short)}},
                  label = paste0(str_to_sentence(str_remove(
                    object, "-M|-W|empty drink ")), " (", category.label, ")"), 
                  site = factor(site, levels = sites)) %>%
@@ -457,8 +465,8 @@ shinyApp(
           ggplot(aes(x = rank, y = prop*100, color = site, fill = site)) +
           facet_grid(. ~ site) +
           geom_bar(aes(alpha = as.factor(both)), stat = "identity") +
-          geom_text(aes(y = prop*100/2, label = label, size = prop*100/2), 
-                    color = "black", srt = 90) +
+          geom_text(aes(y = prop*100/2, label = label), 
+                    color = "black", srt = 90, size = ifelse({ input$top_objects_count } > 25, 2.2, 3)) +
           scale_alpha_manual(values = c(0.2, 0.7)) +
           scale_color_manual(values = site.colors) +
           scale_fill_manual(values = site.colors) +
@@ -485,9 +493,7 @@ shinyApp(
                                  filter(top_objects_input(), 
                                         site == "Tseltal" & 
                                           rank <= { input$top_objects_count })$object, 
-                               1, 0), 
-                 category.label = factor(category,
-                                         levels = categories, labels = category.labels),
+                               1, 0),
                  label = paste0(str_to_sentence(str_remove(
                    object, "-M|-W|empty drink "))), 
                  site = factor(site, levels = sites)) %>%
@@ -496,7 +502,7 @@ shinyApp(
           facet_grid(. ~ site) +
           geom_bar(aes(alpha = as.factor(both)), stat = "identity") +
           geom_text(aes(y = prop*100/2, label = label),
-                    color = "black", srt = 90) +
+                    color = "black", srt = 90, size = ifelse({ input$top_objects_count } > 25, 2.2, 3)) +
           scale_alpha_manual(values = c(0.2, 0.7)) +
           scale_color_manual(values = site.colors) +
           scale_fill_manual(values = site.colors) +

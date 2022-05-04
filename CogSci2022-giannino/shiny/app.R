@@ -83,6 +83,45 @@ get_top_objects <- function(dv) {
   all.ranked.objects <- do.call(rbind, ranked.objects.list)
 }
 
+# create tibble of ranked objects by site and kid
+
+get_ranked_objects <- function(dv) {
+  if (dv == "% Images") {
+    ranked_objects_input <- data %>%
+      filter(object %notin% study.related) %>%
+      group_by(site, sub_num, object, category) %>%
+      summarize(n.images = n()) %>%
+      ungroup() %>%
+      group_by(site, sub_num) %>%
+      summarize(total = sum(n.images), 
+                n.images = n.images,
+                object = object, 
+                category = category) %>%
+      distinct() %>%
+      mutate(prop = n.images/total*100) %>%
+      arrange(sub_num, desc(prop)) %>%
+      ungroup()
+  }
+  
+  else {
+    ranked_objects_input <- data %>%
+      filter(object %notin% study.related) %>%
+      group_by(site, sub_num, object, category) %>%
+      summarize(n.images = n()) %>%
+      ungroup() %>%
+      group_by(site, sub_num) %>%
+      summarize(total = sum(n.images), 
+                n.images = n.images,
+                object = object,
+                category = category) %>%
+      distinct() %>%
+      mutate(prop = log(n.images/total*100)) %>%
+      arrange(sub_num, desc(prop)) %>%
+      ungroup()
+    
+  }
+}
+
 get_category_effects <- function(dv) {
   if (dv == "Unique Objects/Hour") {
     category_effects_input <- data %>%
@@ -93,7 +132,7 @@ get_category_effects <- function(dv) {
       ungroup() %>%
       mutate(synthetic = ifelse(category == "Synthetic", 1, 0), 
              natural = ifelse(category == "Natural", 1, 0), 
-             food = ifelse(category == "Food", 1, 0), 
+             consumable = ifelse(category == "Consumable", 1, 0), 
              mealtime = ifelse(category == "Mealtime Tool", 1, 0),
              work = ifelse(category == "Work Tool", 1, 0), 
              clothing = ifelse(category == "Clothing", 1, 0),
@@ -280,41 +319,62 @@ shinyApp(
                              img(src = "https://www.rstudio.com/assets/img/logo.svg", height = "30px"))
                         )
                ), 
-               tabPanel("Objects",
-                        sidebarLayout(
-                        sidebarPanel(
-                          h2("Top Objects"),
-                          sliderInput("top_objects_count", 
-                                      label = "Number of Objects", 
-                                      min = 5, max = 50, 
-                                      value = 25, step = 5),
-                          radioButtons("top_objects_site", "Site",
-                                       c("Tseltal" = "Tseltal", 
-                                         "Rossel" = "Rossel")
+               navbarMenu("Objects",
+                 tabPanel("Top Objects",
+                          sidebarLayout(
+                          sidebarPanel(
+                            h2("Top Objects"),
+                            sliderInput("top_objects_count", 
+                                        label = "Number of Objects", 
+                                        min = 5, max = 50, 
+                                        value = 25, step = 5),
+                            radioButtons("top_objects_site", "Site",
+                                         c("Tseltal" = "Tseltal", 
+                                           "Rossel" = "Rossel")
+                            ),
+                            radioButtons("top_objects_dv", "DV",
+                                         c("Overall % of children handling the target object at least once" = "% Children", 
+                                           "Average % of photos featuring handling of the target object across children" = "% Photos")
+                            ), 
+                            selectInput("top_objects_category", "Category", 
+                                        choices = c("All Categories", "Consumable", "Synthetic", 
+                                                    "Natural", "Toy", "Mealtime Tool", 
+                                                    "Clothing", "Immovable", 
+                                                    "Work Tool"))
                           ),
-                          radioButtons("top_objects_dv", "DV",
-                                       c("Overall % of children handling the target object at least once" = "% Children", 
-                                         "Average % of photos featuring handling of the target object across children" = "% Photos")
-                          ), 
-                          selectInput("top_objects_category", "Category", 
-                                      choices = c("All Categories", "Food", "Synthetic", 
-                                                  "Natural", "Toy", "Mealtime Tool", 
-                                                  "Clothing", "Immovable", 
-                                                  "Work Tool"))
-                        ),
-                        mainPanel(
-                          tabsetPanel(type = "tabs", 
-                            tabPanel("Figure", 
-                                        plotOutput("top_objects_fig"), 
-                                        h6("Top objects defined based on either (a) the 
-                                          number of children handling the object at least 
-                                          once, or (b) the number of photos in which the
-                                          object appeared (averaged across children). Filled 
-                                          bars represent objects that were among the top 
-                                          objects for both sites.")), 
-                            tabPanel("Table", 
-                                        dataTableOutput("top_objects_tbl"))
-                        )))),
+                          mainPanel(
+                            tabsetPanel(type = "tabs", 
+                              tabPanel("Figure", 
+                                          plotOutput("top_objects_fig"), 
+                                          h6("Top objects defined based on either (a) the 
+                                            number of children handling the object at least 
+                                            once, or (b) the number of photos in which the
+                                            object appeared (averaged across children). Filled 
+                                            bars represent objects that were among the top 
+                                            objects for both sites.")), 
+                              tabPanel("Table", 
+                                          dataTableOutput("top_objects_tbl"))
+                          )))), 
+                 tabPanel("Object Distribution",
+                          sidebarLayout(
+                            sidebarPanel(
+                              h2("Object Distribution"),
+                              sliderInput("ranked_objects_count", 
+                                          label = "Number of Objects", 
+                                          min = 5, max = 60, 
+                                          value = 60, step = 5),
+                              selectInput("ranked_objects_dv", "DV",
+                                           choices = c("Log-scaled % Images",
+                                                       "% Images")
+                              ), 
+                              selectInput("ranked_objects_category", "Category", 
+                                          choices = c("All Categories", "Consumable", "Synthetic", 
+                                                      "Natural", "Toy", "Mealtime Tool", 
+                                                      "Clothing", "Immovable", 
+                                                      "Work Tool"))), 
+                          mainPanel(
+                            plotOutput("ranked_objects_fig"))
+                          ))),
              tabPanel("Categories",
                        sidebarLayout(
                          sidebarPanel(
@@ -328,7 +388,7 @@ shinyApp(
                          ),
                          mainPanel(
                            plotOutput("category_effects_fig"), 
-                           h5("")), 
+                           h5("")) 
                        )),
              tabPanel("Developmental Changes",
                       sidebarLayout(
@@ -339,11 +399,10 @@ shinyApp(
                         ),
                         mainPanel(
                           plotOutput("age_effects_fig"), 
-                                               h5("")), 
+                                               h5("")) 
                           ))
-  )
-  ),
-  
+)),
+
 
 # DEFINE SERVER LOGIC -----------------------------------------------------
   server <- function(input, output, session) {
@@ -351,7 +410,7 @@ shinyApp(
     # jump to relevant tab after user presses button on homepage
     observeEvent(input$go_objects, {
       updateNavbarPage(session, inputId = "inTabset", 
-                       selected = "Objects")
+                       selected = "Top Objects")
     })
     
     observeEvent(input$go_categories, {
@@ -478,6 +537,54 @@ shinyApp(
       # set default table size to 10 with options in multiples of 5
     }, options = list(lengthMenu = seq(5, { input$top_objects_count }, 5), pageLength = 10))
     
+    
+    # regenerate ranked objects tibble after any change to user inputs
+    ranked_objects_input <- reactive({
+      get_ranked_objects({ input$ranked_objects_dv })
+    })
+    
+    # draw top objects figure with and without category labels
+    output$ranked_objects_fig <- renderPlot({
+      
+      if ({ input$ranked_objects_category } == "All Categories") {
+        ranked_objects_input() %>%
+          group_by(site, sub_num) %>%
+          arrange(desc(prop)) %>%
+          mutate(rank = row_number()) %>%
+          filter(rank <= { input$ranked_objects_count }) %>%
+          ggplot(aes(x = rank, y = prop, color = site, fill = site)) +
+          facet_grid(. ~ site) +
+          geom_jitter(aes(group = sub_num), alpha = 0.25, size = 3) +
+          geom_smooth(se = FALSE, method = "loess", size = 1.5, color = "black") +
+          scale_color_manual(values = site.colors) +
+          scale_fill_manual(values = site.colors) +
+          labs(x = "Objects Ranked by Frequency", y = { input$ranked_objects_dv }, 
+               color = "Site", fill = "Site") +
+          theme_test(base_size = 25) +
+          theme(legend.position = "none")
+      }
+      
+      else {
+        ranked_objects_input() %>%
+          filter(category == { input$ranked_objects_category }) %>%
+          group_by(site, sub_num) %>%
+          arrange(desc(prop)) %>%
+          mutate(rank = row_number()) %>%
+          filter(rank <= { input$ranked_objects_count }) %>%
+          ggplot(aes(x = rank, y = prop, color = site, fill = site)) +
+          facet_grid(. ~ site) +
+          geom_jitter(aes(group = sub_num), alpha = 0.25, size = 3) +
+          geom_smooth(se = FALSE, method = "loess", size = 1.5, color = "black") +
+          scale_color_manual(values = site.colors) +
+          scale_fill_manual(values = site.colors) +
+          labs(x = "Objects Ranked by Frequency", y = { input$ranked_objects_dv }, 
+               color = "Site", fill = "Site") +
+          theme_test(base_size = 25) +
+          theme(legend.position = "none")
+      }
+      
+    })
+    
     # regenerate age effects tibble after any change to user inputs
     age_effects_input <- reactive({
       get_age_effects({ input$age_effects_dv })
@@ -523,7 +630,7 @@ shinyApp(
       get_category_effects({ input$category_effects_dv })
     })
     
-    # draw categories figure
+    # draw category effects figure
     output$category_effects_fig <- renderPlot({
       
       if ({ input$category_effects_site} != "Both") {

@@ -111,28 +111,6 @@ data <- raw.data %>%
          category = factor(category, levels = categories), 
          site = factor(site, levels = sites))
 
-simulate.30s.sampling = FALSE
-if (simulate.30s.sampling) {
-  # when set to TRUE, this runs the analyses with a subset of Rossel images removed
-  # to simulate a sampling rate that is closer to the Tseltal data
-  rm <- data %>%
-    filter(site == "Rossel") %>%
-    mutate(path = paste0(sub_num, "/", image), 
-           time.s =  hour*360 + minute(timestamp)*60 + second(timestamp)) %>%
-    select(path, sub_num, image, time.s) %>%
-    distinct() %>%
-    mutate(diff = ifelse(sub_num != lead(sub_num, 1), NA, lead(time.s, 1) - time.s)) %>%
-    group_by(sub_num) %>%
-    filter(diff < 30) %>%
-    filter(row_number() %% 2 == 1) %>%
-    pull(path)
-  
-  data <- data %>%
-    mutate(path = paste0(sub_num, "/", image)) %>%
-    filter(path %notin% rm) %>%
-    select(-path)
-}
-
 # set rm.study.related to TRUE if you want to check results w/o these items
 study.related <- c("camera", "vest", "camera cover")
 
@@ -264,7 +242,7 @@ caregiver.worn <- raw.data %>%
 ```
 
 ## Corpus
-Daylong photo streams consisted of images captured approximately every 15 (Rossel) to 30 (Tseltal) seconds^[Results are qualitatively similar when we simulate a 30-second sampling rate for both sites (i.e., dropping approximately half of the Rossel images from our analyses).] over the course of 8 (Rossel) to 9 (Tseltal) waking hours at home. Children wore a recording vest equipped with a camera (Narrative Clip 1) and miniature fisheye lens (Photojojo Super Fisheye) that provided a 180$\text{\textdegree}$ view of the environment. For younger infants who were not yet walking, the camera was instead worn by the primary caregiver (Rossel = `r filter(caregiver.worn, site == "Rossel")$n`, Tseltal = `r filter(caregiver.worn, site == "Tseltal")$n`) <!--kc: possible future footnote with hands-only image stats or comparison of exclusion rate for child-worn vs. caregiver-worn cams-->
+Daylong photo streams consisted of images captured approximately every 15 (Rossel) to 30 (Tseltal) seconds over the course of 8 (Rossel) to 9 (Tseltal) waking hours at home. Children wore a recording vest equipped with a camera (Narrative Clip 1) and miniature fisheye lens (Photojojo Super Fisheye) that provided a 180$\text{\textdegree}$ view of the environment. For younger infants who were not yet walking, the camera was instead worn by the primary caregiver (Rossel = `r filter(caregiver.worn, site == "Rossel")$n`, Tseltal = `r filter(caregiver.worn, site == "Tseltal")$n`) <!--kc: possible future footnote with hands-only image stats or comparison of exclusion rate for child-worn vs. caregiver-worn cams-->
 
 Previously, 83 daylong photo streams (113,668 images) were manually annotated for the presence or absence of child object handling [@casillasURdaylong]. Here, we further annotate and analyze the subset of `r format(total.coded, big.mark = ",", trim = TRUE)` images with confirmed child object handling.
 

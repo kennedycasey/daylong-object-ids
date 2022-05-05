@@ -5,6 +5,8 @@ library(lubridate)
 library(ggeffects)
 library(lme4)
 library(plotly)
+library(bslib)
+library(showtext)
 
 # IMPORT DATA -------------------------------------------------------------
 
@@ -235,6 +237,10 @@ get_age_effects <- function(dv) {
 # create not in operator
 `%notin%` <- Negate(`%in%`)
 
+# create custom theme
+custom <- bs_theme(bootswatch = "materia",
+                   base_font = font_google("Helvetica"), 
+                   font_scale = 1.25)
 
 shinyApp(
 
@@ -242,87 +248,86 @@ shinyApp(
   ui <- 
     fluidPage(
       # add theme
-      theme = shinytheme("paper"),
+      theme = custom,
       # add tabs
       navbarPage("",
                id = "inTabset",
                tabPanel("Home",
-                        fluidRow(
-                          h2("Sticks, leaves, buckets, and bowls: Distributional 
-                             patterns of children’s at-home object handling in two 
-                             subsistence societies"),
-                          br(),
-                          h3("Data Visualization Tool"),
-                          h6("Object-centric interactions provide rich learning 
-                            moments for young children, including opportunities 
-                            to discover word meanings. Children’s first-person 
-                            object handling experiences, in particular, form a 
-                            key source of input---one that varies across cultures 
-                            and across development. Using daylong photo streams 
-                            from child-worn cameras, we analyze >16k images to 
-                            identify the frequency and targets of child object 
-                            handling across the first four years in two small-scale 
-                            subsistence farming communities on opposite sides of 
-                            the globe (Rossel Papuan and Tseltal Mayan)."),
-                          h6("The data and visualizations on this site are associated with our", 
-                            a(href = "https://chatterlab.uchicago.edu/lab-publications/Casey_et_al_submitted_Distributional_patterns_of_at_home_object_handling.pdf", 
-                                    "CogSci 2022 paper"), "(attribution information below)."),
-                          br(),
-                          # buttons to jump to other tabs
-                          actionButton("go_objects", 
-                                       "Explore distributions of objects", 
-                                       class = "btn-success", 
-                                       style = 'padding:30px; font-size:120%'),
-                          
-                          actionButton("go_categories", 
-                                       "Explore effects of object categories", 
-                                       class = "btn-success", 
-                                       style = 'padding:30px; font-size:120%'),
-                          
-                          actionButton("go_age", 
-                                       "Explore effects of age", 
-                                       class = "btn-success", 
-                                       style = 'padding:30px; font-size:120%'),
-                          br(),
-                          br(),
-                          
-                          # links to external pages
-                          h3("External links"),
-                          h5(img(src = "https://chatterlab.uchicago.edu/img/logo.png", height = "20px"), 
-                             a(href = "https://chatterlab.uchicago.edu/lab-publications/Casey_et_al_submitted_Distributional_patterns_of_at_home_object_handling.pdf", 
-                                    "Read the full proceedings paper")), 
-                          h5(img(src = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", height = "30px"), 
-                             a(href = "https://github.com/kennedycasey/daylong-object-ids", 
-                                    "Find all supporting data and code")), 
-                          h5(img(src = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", height = "30px"),
-                             a(href = "https://github.com/kennedycasey/ImCo2", 
-                                    "Access the image annotation tool")),
-                          br(), 
-                          
-                          # links to email contact
-                          h3("Contact"),
-                          h6("Kennedy Casey (", a(href = "mailto:kbcasey@uchicago.edu", 
-                                                     "kbcasey@uchicago.edu"), ")"),
-                          h6("Marisa Casillas (", a(href = "mailto:mcasillas@uchicago.edu", 
-                                                       "mcasillas@uchicago.edu"), ")"),
-                          br(), 
-                          
-                          # add attribution
-                          h3("Attribution"), 
-                          h6("Casey, K., Elliott, M., Mickiewicz, E., 
-                             Silva Mandujano, A., Shorter, K., Duquette, M., 
-                             Bergelson, E., & Casillas, M. (2022). Sticks, leaves, 
-                             buckets, and bowls: Distributional patterns of children’s 
-                             at-home object handling in two subsistence societies.", 
-                            em("Proceedings of the 44th Annual Meeting of the Cognitive 
-                             Science Society.")),
-                          br(),
-                          br(),
-                          h6("Built with",
-                             img(src = "https://www.rstudio.com/wp-content/uploads/2014/04/shiny.png", height = "30px"),
-                             "from",
-                             img(src = "https://www.rstudio.com/assets/img/logo.svg", height = "30px"))
-                        )
+                        h1("Sticks, leaves, buckets, and bowls: Distributional 
+                           patterns of children’s at-home object handling in two 
+                           subsistence societies"),
+                        br(),
+                        h2("Data Visualization Tool"),
+                        h5("Object-centric interactions provide rich learning 
+                          moments for young children, including opportunities 
+                          to discover word meanings. Children’s first-person 
+                          object handling experiences, in particular, form a 
+                          key source of input---one that varies across cultures 
+                          and across development. Using daylong photo streams 
+                          from child-worn cameras, we analyze >16k images to 
+                          identify the frequency and targets of child object 
+                          handling across the first four years in two small-scale 
+                          subsistence farming communities on opposite sides of 
+                          the globe (Rossel Papuan and Tseltal Mayan)."),
+                        h5("The data and visualizations on this site are associated with our", 
+                          a(href = "https://chatterlab.uchicago.edu/lab-publications/Casey_et_al_submitted_Distributional_patterns_of_at_home_object_handling.pdf", 
+                                  "CogSci 2022 paper"), "."), 
+                        br(),
+                        br(),
+                        # buttons to jump to other tabs
+                        actionButton("go_objects", 
+                                     "Explore distributions of objects", 
+                                     class = "btn-success", 
+                                     style = 'padding:30px; font-size:120%'),
+                        
+                        actionButton("go_categories", 
+                                     "Explore effects of object categories", 
+                                     class = "btn-success", 
+                                     style = 'padding:30px; font-size:120%'),
+                        
+                        actionButton("go_age", 
+                                     "Explore effects of age", 
+                                     class = "btn-success", 
+                                     style = 'padding:30px; font-size:120%'),
+                        br(),
+                        br(),
+                        
+                        # links to external pages
+                        h2("External links"),
+                        h4(img(src = "https://chatterlab.uchicago.edu/img/logo.png", height = "20px"), 
+                           a(href = "https://chatterlab.uchicago.edu/lab-publications/Casey_et_al_submitted_Distributional_patterns_of_at_home_object_handling.pdf", 
+                                  "Read the full proceedings paper")), 
+                        h4(img(src = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", height = "30px"), 
+                           a(href = "https://github.com/kennedycasey/daylong-object-ids", 
+                                  "Find all supporting data and code")), 
+                        h4(img(src = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", height = "30px"),
+                           a(href = "https://github.com/kennedycasey/ImCo2", 
+                                  "Access the image annotation tool")),
+                        br(), 
+                        
+                        # links to email contact
+                        h2("Author Contact"),
+                        h5("Kennedy Casey (", a(href = "mailto:kbcasey@uchicago.edu", 
+                                                   "kbcasey@uchicago.edu"), ")"),
+                        h5("Marisa Casillas (", a(href = "mailto:mcasillas@uchicago.edu", 
+                                                     "mcasillas@uchicago.edu"), ")"),
+                        br(), 
+                        
+                        # add attribution
+                        h2("Citation"), 
+                        h5("Casey, K., Elliott, M., Mickiewicz, E., 
+                           Silva Mandujano, A., Shorter, K., Duquette, M., 
+                           Bergelson, E., & Casillas, M. (2022). Sticks, leaves, 
+                           buckets, and bowls: Distributional patterns of children’s 
+                           at-home object handling in two subsistence societies.", 
+                          em("Proceedings of the 44th Annual Meeting of the Cognitive 
+                           Science Society.")),
+                        br(),
+                        br(),
+                        h5("Built with",
+                           img(src = "https://www.rstudio.com/wp-content/uploads/2014/04/shiny.png", height = "30px"),
+                           "from",
+                           img(src = "https://www.rstudio.com/assets/img/logo.svg", height = "30px"))
                ), 
                navbarMenu("Objects",
                  tabPanel("Top Objects",
@@ -434,10 +439,11 @@ shinyApp(
     })
     
     # draw top objects figure with and without category labels
+    
     output$top_objects_fig <- renderPlotly({
       
       if ({ input$top_objects_category } == "All Categories") {
-        p <- top_objects_input() %>%
+        d <- top_objects_input() %>%
           # remove study-related and recalculate ranks
           filter(object %notin% study.related & site %in% { input$top_objects_site }) %>%
           group_by(site) %>%
@@ -463,16 +469,11 @@ shinyApp(
                    object, "-M|-W|empty drink ")), " (", category.label, ")"), 
                  site = factor(site, levels = sites)) %>%
           filter(rank <= { input$top_objects_count }) %>%
-          ggplot(aes(x = rank, y = prop*100, color = site, fill = site, text = label)) +
+          mutate(y = prop*100)
+        
+        p <- ggplot(d, aes(x = rank, y = prop*100, color = site, fill = site, label = label)) +
           facet_grid(. ~ site) +
           geom_bar(aes(alpha = as.factor(both)), stat = "identity") +
-          # geom_text(aes(y = prop*100/2, label = label),
-          #           color = "black", srt = 90, size = ifelse({ input$top_objects_count } >= 45, 1.5,
-          #                                                 ifelse({input$top_objects_count} >= 35, 1.75,
-          #                                                    ifelse({input$top_objects_count} >= 25, 2,
-          #                                                    ifelse({input$top_objects_count} == 20, 2.15,
-          #                                                           ifelse({input$top_objects_count} == 15, 2.75,
-          #                                                           ifelse({input$top_objects_count} >= 10, 4.70, 4.70))))))) +
           scale_alpha_manual(values = c(0.2, 0.7)) +
           scale_color_manual(values = site.colors) +
           scale_fill_manual(values = site.colors) +
@@ -480,13 +481,11 @@ shinyApp(
                y = { input$top_objects_dv }) +
           theme_test(base_size = 25) +
           theme(axis.text.x = element_blank(), axis.ticks.x = element_blank(), 
-                legend.position = "none")
-        
-        ggplotly(p, tooltip = "text")
+                legend.position = "none", text = element_text(family = "Helvetica"))
       }
       
       else {
-        p <- top_objects_input() %>%
+        d <- top_objects_input() %>%
           # remove study-related and recalculate ranks
           filter(object %notin% study.related & site %in% { input$top_objects_site } & category == { input$top_objects_category }) %>%
           group_by(site) %>%
@@ -506,16 +505,11 @@ shinyApp(
                    object, "-M|-W|empty drink "))), 
                  site = factor(site, levels = sites)) %>%
           filter(rank <= { input$top_objects_count }) %>%
-          ggplot(aes(x = rank, y = prop*100, color = site, fill = site, text = label)) +
+          mutate(y = prop*100)
+        
+        p <- ggplot(d, aes(x = rank, y = prop*100, color = site, fill = site, text = label)) +
           facet_grid(. ~ site) +
           geom_bar(aes(alpha = as.factor(both)), stat = "identity") +
-          # geom_text(aes(y = prop*100/2, label = label),
-          #           color = "black", srt = 90, size = ifelse({ input$top_objects_count } >= 45, 1.5,
-          #                                                    ifelse({input$top_objects_count} >= 35, 1.75,
-          #                                                           ifelse({input$top_objects_count} >= 25, 2, 
-          #                                                                  ifelse({input$top_objects_count} == 20, 2.15,
-          #                                                                         ifelse({input$top_objects_count} == 15, 2.75,
-          #                                                                                ifelse({input$top_objects_count} >= 10, 4.70, 4.70))))))) +
           scale_alpha_manual(values = c(0.2, 0.7)) +
           scale_color_manual(values = site.colors) +
           scale_fill_manual(values = site.colors) +
@@ -523,10 +517,21 @@ shinyApp(
                y = { input$top_objects_dv }) +
           theme_test(base_size = 25) +
           theme(axis.text.x = element_blank(), axis.ticks.x = element_blank(), 
-                legend.position = "none")
-        
-        ggplotly(p, tooltip = "text")
+                legend.position = "none", text = element_text(family = "Helvetica"))
       }
+      
+      ggplotly(p, tooltip = "text") %>%
+        config(displayModeBar = FALSE) %>%
+        add_annotations(x = d$rank,
+                    y = d$y/2,
+                    text = d$label, 
+                    showarrow = FALSE,
+                    font = list(size = ifelse({ input$top_objects_count } >= 45, 4.5,
+                                              ifelse({input$top_objects_count} >= 35, 5.75,
+                                                     ifelse({input$top_objects_count} >= 25, 6,
+                                                            ifelse({input$top_objects_count} == 20, 6.45,
+                                                                   ifelse({input$top_objects_count} == 15, 8.25, 13.5)))))), 
+                    textangle = -90)
     })
     
     # create top objects table
@@ -582,7 +587,7 @@ shinyApp(
           labs(x = "Objects Ranked by Frequency", y = { input$ranked_objects_dv }, 
                color = "Site", fill = "Site") +
           theme_test(base_size = 25) +
-          theme(legend.position = "none")
+          theme(legend.position = "none", text = element_text(family = "Helvetica"))
       }
       
       else {
@@ -601,7 +606,7 @@ shinyApp(
           labs(x = "Objects Ranked by Frequency", y = { input$ranked_objects_dv }, 
                color = "Site", fill = "Site") +
           theme_test(base_size = 25) +
-          theme(legend.position = "none")
+          theme(legend.position = "none", text = element_text(family = "Helvetica"))
       }
       
     })
@@ -643,7 +648,8 @@ shinyApp(
           scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) +
           labs(x = "Age (months)", y = {input$age_effects_dv},
                color = "Site", fill = "Site") +
-          theme_test(base_size = 25)
+          theme_test(base_size = 25) + 
+          theme(text = element_text(family = "Helvetica"))
     })
     
     # regenerate categories tibble after any change to user inputs
@@ -678,7 +684,8 @@ shinyApp(
               legend.justification = c(1, 1),
               legend.position = c(1, 0.9), 
               legend.direction = "horizontal", 
-              axis.text.x = element_text(size = 15)) + 
+              axis.text.x = element_text(size = 15), 
+              text = element_text(family = "Helvetica")) + 
         {if ({ input$category_effects_site } != "Both" ) theme(legend.position = "none")}
     })
   }
@@ -687,4 +694,4 @@ shinyApp(
 # rsconnect::setAccountInfo(name = 'aclew',
 #                           token = '5A83C3D901262E26F17C707D1C2D5EB6',
 #                           secret = '/a+NMJjI3L78O03T/M645geWDq/1V3wBcwp84elP')
-# rsconnect::deployApp(appName = "ImCo-CogSci2022")
+# rsconnect::deployApp(appName = "CogSci-TSE-ROS-objects")

@@ -7,6 +7,10 @@ hands <- read_csv("data/casillas/hands-annotations.csv") %>%
   mutate(path = paste0(sub_num, "/", Image))
 objects <- read_csv("data/casillas/object-data.csv") %>%
   mutate(path = paste0(sub_num, "/", image))
+child.worn <- read_csv("data/casillas/metadata/participants.csv") %>%
+  filter(child_worn_camera == 1) %>%
+  pull(sub_num)
+  
 
 # TEMP LINE WHILE HANDS CODING STILL IN PROGRESS
 coded.ptcps <- unique(hands$sub_num)
@@ -57,7 +61,6 @@ objects <- objects %>%
   mutate(hands = 1, 
          hands_count = NA)
 
-
 # merge all data
 data <- hands %>%
   filter(sub_num %in% coded.ptcps) %>%
@@ -74,27 +77,37 @@ data <- hands %>%
 site.colors <- c("Tseltal" = "sandybrown", 
                  "Rossel" = "brown4")
 
-data %>%
+summary <- data %>%
   group_by(sub_num) %>%
   mutate(total = length(unique(image)), 
          Site = ifelse(Site == "Mayan", "Tseltal", Site),
          Site = factor(Site, levels = c("Tseltal", "Rossel")), 
-         Walking = ifelse(Mobility == "Y", "Y", "N")) %>%
-  group_by(sub_num, total, Site, Age, Walking, hands) %>%
+         `Child-Worn Camera` = ifelse(sub_num %in% child.worn, "Y", "N")) %>%
+  group_by(sub_num, total, Site, Age, `Child-Worn Camera`, hands) %>%
   summarize(n = length(unique(image))) %>%
   filter(hands == 1) %>%
-  summarize(hands_prop = n/total*100) %>%
-  ggplot(aes(x = Age, y = hands_prop, color = Site, fill = Site)) + 
+  summarize(prop = n/total*100)
+
+ggplot(summary, aes(x = Age, y = prop, color = Site, fill = Site)) + 
   facet_grid(. ~ Site) + 
-  geom_point(aes(shape = Walking), size = 5, alpha = 0.7) + 
-  geom_smooth(method = "loess") +
+  geom_point(aes(shape = `Child-Worn Camera`), size = 5, alpha = 0.7) + 
+  geom_smooth(method = "lm") +
   scale_color_manual(values = site.colors) + 
   scale_fill_manual(values = site.colors) + 
   scale_shape_manual(values = c(1, 19)) + 
   scale_x_continuous(breaks = c(0, 12, 24, 36, 48)) + 
   coord_cartesian(ylim = c(0, 100)) + 
   scale_y_continuous(breaks = c(0, 25, 50, 75, 100)) + 
-  labs(x = "Age (months)", y = "% Photos with Hands") + 
+  labs(x = "Age (months)", y = "% Images with Hands") + 
   theme_test(base_size = 20)
+ggsave("figs/hands.jpg", width = 9, height = 6)
 
-ggsave("figs/hands.jpg", width = 8, height = 6)
+#check for normality
+shapiro.test(filter(summary, Site == "Tseltal")$prop)
+shapiro.test(filter(summary, Site == "Rossel")$prop)
+
+#check for homogeneity of variance
+var.test(prop ~ Site, summary)
+
+# check for differences between communities
+t.test(prop ~ Site, summary)

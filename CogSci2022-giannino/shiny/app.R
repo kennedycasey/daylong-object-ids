@@ -486,7 +486,7 @@ shinyApp(
       }
       
       else {
-        top_objects_input() %>%
+        p <- top_objects_input() %>%
           # remove study-related and recalculate ranks
           filter(object %notin% study.related & site %in% { input$top_objects_site } & category == { input$top_objects_category }) %>%
           group_by(site) %>%
@@ -506,16 +506,16 @@ shinyApp(
                    object, "-M|-W|empty drink "))), 
                  site = factor(site, levels = sites)) %>%
           filter(rank <= { input$top_objects_count }) %>%
-          ggplot(aes(x = rank, y = prop*100, color = site, fill = site)) +
+          ggplot(aes(x = rank, y = prop*100, color = site, fill = site, text = label)) +
           facet_grid(. ~ site) +
           geom_bar(aes(alpha = as.factor(both)), stat = "identity") +
-          geom_text(aes(y = prop*100/2, label = label),
-                    color = "black", srt = 90, size = ifelse({ input$top_objects_count } >= 45, 1.5,
-                                                             ifelse({input$top_objects_count} >= 35, 1.75,
-                                                                    ifelse({input$top_objects_count} >= 25, 2, 
-                                                                           ifelse({input$top_objects_count} == 20, 2.15,
-                                                                                  ifelse({input$top_objects_count} == 15, 2.75,
-                                                                                         ifelse({input$top_objects_count} >= 10, 4.70, 4.70))))))) +
+          # geom_text(aes(y = prop*100/2, label = label),
+          #           color = "black", srt = 90, size = ifelse({ input$top_objects_count } >= 45, 1.5,
+          #                                                    ifelse({input$top_objects_count} >= 35, 1.75,
+          #                                                           ifelse({input$top_objects_count} >= 25, 2, 
+          #                                                                  ifelse({input$top_objects_count} == 20, 2.15,
+          #                                                                         ifelse({input$top_objects_count} == 15, 2.75,
+          #                                                                                ifelse({input$top_objects_count} >= 10, 4.70, 4.70))))))) +
           scale_alpha_manual(values = c(0.2, 0.7)) +
           scale_color_manual(values = site.colors) +
           scale_fill_manual(values = site.colors) +
@@ -524,6 +524,8 @@ shinyApp(
           theme_test(base_size = 25) +
           theme(axis.text.x = element_blank(), axis.ticks.x = element_blank(), 
                 legend.position = "none")
+        
+        ggplotly(p, tooltip = "text")
       }
     })
     

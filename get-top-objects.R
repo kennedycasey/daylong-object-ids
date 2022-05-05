@@ -3,7 +3,7 @@ library(tidyverse)
 study.related <- c("camera", "vest", "camera cover", "headcam", "headband")
 `%notin%` <- Negate(`%in%`)
 
-all.casillas <- read_csv("data/casillas/all-data.csv") %>%
+all.casillas <- read_csv("data/casillas/object-data.csv") %>%
   filter(is.na(exclusion) & object %notin% study.related) %>%
   left_join(read_csv("data/casillas/manual-checks/basic.csv"), by = "object")
   
@@ -34,7 +34,7 @@ top.objects <- data %>%
   group_by(basic) %>%
   summarize(mean.prop = mean(prop)) %>%
   arrange(desc(mean.prop)) %>%
-  slice_head(n = 25)
+  slice_head(n = 100)
 
 n.images <- all.casillas %>%
   select(site, sub_num, object, category, basic, image) %>%
@@ -66,3 +66,4 @@ all.casillas %>%
   labs(x = "Object", y = "Number of Images", color = "Site") + 
   theme_test() +
   theme(axis.text.x = element_text(angle = 45)) 
+ggsave("top-objects.jpg", width = 8, height = 6)

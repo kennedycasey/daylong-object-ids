@@ -466,7 +466,12 @@ shinyApp(
           facet_grid(. ~ site) +
           geom_bar(aes(alpha = as.factor(both)), stat = "identity") +
           geom_text(aes(y = prop*100/2, label = label), 
-                    color = "black", srt = 90, size = ifelse({ input$top_objects_count } > 25, 2.2, 3)) +
+                    color = "black", srt = 90, size = ifelse({ input$top_objects_count } >= 45, 1.5,
+                                                          ifelse({input$top_objects_count} >= 35, 1.75,
+                                                             ifelse({input$top_objects_count} >= 25, 2, 
+                                                             ifelse({input$top_objects_count} == 20, 2.15,
+                                                                    ifelse({input$top_objects_count} == 15, 2.75,
+                                                                    ifelse({input$top_objects_count} >= 10, 4.70, 4.70))))))) +
           scale_alpha_manual(values = c(0.2, 0.7)) +
           scale_color_manual(values = site.colors) +
           scale_fill_manual(values = site.colors) +
@@ -502,7 +507,12 @@ shinyApp(
           facet_grid(. ~ site) +
           geom_bar(aes(alpha = as.factor(both)), stat = "identity") +
           geom_text(aes(y = prop*100/2, label = label),
-                    color = "black", srt = 90, size = ifelse({ input$top_objects_count } > 25, 2.2, 3)) +
+                    color = "black", srt = 90, size = ifelse({ input$top_objects_count } >= 45, 1.5,
+                                                             ifelse({input$top_objects_count} >= 35, 1.75,
+                                                                    ifelse({input$top_objects_count} >= 25, 2, 
+                                                                           ifelse({input$top_objects_count} == 20, 2.15,
+                                                                                  ifelse({input$top_objects_count} == 15, 2.75,
+                                                                                         ifelse({input$top_objects_count} >= 10, 4.70, 4.70))))))) +
           scale_alpha_manual(values = c(0.2, 0.7)) +
           scale_color_manual(values = site.colors) +
           scale_fill_manual(values = site.colors) +

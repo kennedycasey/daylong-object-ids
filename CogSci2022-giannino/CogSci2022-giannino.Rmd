@@ -1160,7 +1160,7 @@ Our current data indicate that children are exposed to a stable and wide variety
 Analyzing the types of objects that children handle gives us a window into what they are interested in, what they do and talk about with others, what they are allowed to access, and more. Handled objects offer learners a range of sensory experiences that could be paired with the social, linguistic, and physical information around them. In the present study, we examined coarse patterns in young children's at-home object handling in two unrelated subsistence communities, finding many striking similarities despite differences in the communities' market integration and ways of life. Our data provide some basis for kernels of similarity in experience across culture and change with developmental time. However, our findings also point to immense variation in the assemblages of unique objects handled by individual children and indicate that children actually spend only narrow slices of time with a vast majority of objects. Determining if and how these distributional patterns, plus language input, coalesce to give rise to word learning is a crucial next step.
 
 \vspace{1em}\fbox{\parbox[b][][c]{7.5cm}{\centering \textbf{Anonymized data and analysis scripts:} \href{https://github.com/kennedycasey/daylong-object-ids}{https://github.com/kennedycasey/daylong-object-ids}.\\
-\textbf{Data visualization tool:} \href{https://aclew.shinyapps.io/ImCo-CogSci2022}{https://aclew.shinyapps.io/ImCo-CogSci2022}.
+\textbf{Data visualization tool:} \href{https://aclew.shinyapps.io/CogSci-TSE-ROS-objects}{https://aclew.shinyapps.io/CogSci-TSE-ROS-objects}.
 }}
 
 # Acknowledgements

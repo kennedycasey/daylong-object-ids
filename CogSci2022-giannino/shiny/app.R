@@ -96,10 +96,10 @@ get_ranked_objects <- function(dv) {
   if (dv == "% Images") {
     ranked_objects_input <- data %>%
       filter(object %notin% study.related) %>%
-      group_by(site, sub_num, object, category) %>%
+      group_by(site, sub_num, age, object, category) %>%
       summarize(n.images = n()) %>%
       ungroup() %>%
-      group_by(site, sub_num) %>%
+      group_by(site, sub_num, age) %>%
       summarize(total = sum(n.images), 
                 n.images = n.images,
                 object = object, 
@@ -113,10 +113,10 @@ get_ranked_objects <- function(dv) {
   else {
     ranked_objects_input <- data %>%
       filter(object %notin% study.related) %>%
-      group_by(site, sub_num, object, category) %>%
+      group_by(site, sub_num, age, object, category) %>%
       summarize(n.images = n()) %>%
       ungroup() %>%
-      group_by(site, sub_num) %>%
+      group_by(site, sub_num, age) %>%
       summarize(total = sum(n.images), 
                 n.images = n.images,
                 object = object,
@@ -369,7 +369,7 @@ shinyApp(
                                                     "T), mealtime tools (", 
                                                     "M), clothing (", 
                                                     "Cl), ", "immovable objects (", 
-                                                    "I), and work tools(", "W)."))), 
+                                                    "I), and work tools (", "W)."))), 
                               tabPanel("Table", 
                                           dataTableOutput("top_objects_tbl"))
                           )))), 
@@ -381,6 +381,10 @@ shinyApp(
                                           label = "Number of Objects", 
                                           min = 5, max = 65, 
                                           value = 65, step = 5),
+                              sliderInput("ranked_objects_age", 
+                                          label = "Age Range", 
+                                          min = 0, max = 48, 
+                                          value = c(0, 48), step = 6),
                               selectInput("ranked_objects_dv", "DV",
                                            choices = c("Log-scaled % Images",
                                                        "% Images")
@@ -389,9 +393,12 @@ shinyApp(
                                           choices = c("All Categories", "Consumable", "Synthetic", 
                                                       "Natural", "Toy", "Mealtime Tool", 
                                                       "Clothing", "Immovable", 
-                                                      "Work Tool"))), 
+                                                      "Work Tool")), 
+                              checkboxInput("ranked_objects_ptcps", 
+                                            label = "Show individual participants", 
+                                            value = FALSE, width = NULL)), 
                           mainPanel(
-                            plotlyOutput("ranked_objects_fig"))
+                            plotOutput("ranked_objects_fig"))
                           ))),
              tabPanel("Categories",
                        sidebarLayout(
@@ -479,7 +486,7 @@ shinyApp(
           filter(rank <= { input$top_objects_count }) %>%
           mutate(y = prop*100)
         
-        p <- ggplot(d, aes(x = rank, y = prop*100, color = site, fill = site, label = label)) +
+        p <- ggplot(d, aes(x = rank, y = prop*100, color = site, fill = site, text = label)) +
           facet_grid(. ~ site) +
           geom_bar(aes(alpha = as.factor(both)), stat = "identity") +
           scale_alpha_manual(values = c(0.2, 0.7)) +
@@ -578,45 +585,58 @@ shinyApp(
     })
     
     # draw ranked objects figure
-    output$ranked_objects_fig <- renderPlotly({
+    output$ranked_objects_fig <- renderPlot({
       
       if ({ input$ranked_objects_category } == "All Categories") {
         d <- ranked_objects_input() %>%
-          group_by(site, sub_num) %>%
+          group_by(site, sub_num, age) %>%
           arrange(desc(prop)) %>%
           mutate(rank = row_number()) %>%
-          filter(rank <= { input$ranked_objects_count })
+          filter(rank <= { input$ranked_objects_count } & 
+                   age >= min({ input$ranked_objects_age }) & 
+                   age <= max({ input$ranked_objects_age }))
       }
       
       else {
         d <- ranked_objects_input() %>%
-          filter(category == { input$ranked_objects_category }) %>%
-          group_by(site, sub_num) %>%
+          filter(category == { input$ranked_objects_category } & 
+                   age >= min({ input$ranked_objects_age}) &
+                   age <= max({ input$ranked_objects_age })) %>%
+          group_by(site, sub_num, age) %>%
           arrange(desc(prop)) %>%
           mutate(rank = row_number()) %>%
           filter(rank <= { input$ranked_objects_count })
       }
       
-      p <- ggplot(d, aes(x = rank, y = prop, color = site, fill = site)) +
-        facet_grid(. ~ site) +
-        geom_jitter(aes(group = sub_num), alpha = 0.25, size = 2) +
-        geom_smooth(se = FALSE, method = "loess", size = 1.5, color = "black") +
-        scale_color_manual(values = site.colors) +
-        scale_fill_manual(values = site.colors) +
-        labs(x = "Objects Ranked by Frequency", y = { input$ranked_objects_dv }, 
-             color = "Site", fill = "Site") +
-        theme_test(base_size = 25) +
-        theme(legend.position = "none", text = element_text(family = "Helvetica"))
+      if ({ input$ranked_objects_ptcps }) {
+        ggplot(d, aes(x = rank, y = prop, color = site, fill = site)) +
+          facet_grid(. ~ site) +
+          geom_smooth(data = (d %>% group_by(sub_num) %>% 
+                        mutate(n_distinct = length(unique(rank))) %>% filter(n_distinct > 2)), 
+                      aes(x = rank, y = prop, color = site, group = sub_num), 
+                      se = FALSE, method = "loess", 
+                      alpha = 0.25, size = 0.75) +
+          geom_smooth(se = FALSE, method = "loess", size = 1.5, color = "black") +
+          scale_color_manual(values = site.colors) +
+          scale_fill_manual(values = site.colors) +
+          labs(x = "Objects Ranked by Frequency", y = { input$ranked_objects_dv }, 
+               color = "Site", fill = "Site") +
+          theme_test(base_size = 25) +
+          theme(legend.position = "none", text = element_text(family = "Helvetica"))
+      } 
       
-      ggplotly(p, tooltip = "groups") %>%
-        config(displayModeBar = FALSE) %>%
-        highlight(
-          on = "plotly_hover",
-          selectize = FALSE, 
-          dynamic = FALSE,
-          color = "green",
-          persistent = FALSE
-        ) 
+      else {
+        ggplot(d, aes(x = rank, y = prop, color = site, fill = site)) +
+          facet_grid(. ~ site) +
+          geom_jitter(aes(group = sub_num), alpha = 0.25, size = 2) +
+          geom_smooth(se = FALSE, method = "loess", size = 1.5, color = "black") +
+          scale_color_manual(values = site.colors) +
+          scale_fill_manual(values = site.colors) +
+          labs(x = "Objects Ranked by Frequency", y = { input$ranked_objects_dv }, 
+               color = "Site", fill = "Site") +
+          theme_test(base_size = 25) +
+          theme(legend.position = "none", text = element_text(family = "Helvetica"))
+      }
       
     })
     

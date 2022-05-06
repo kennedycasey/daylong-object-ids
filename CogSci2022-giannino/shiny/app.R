@@ -269,9 +269,9 @@ shinyApp(
                           handling across the first four years in two small-scale 
                           subsistence farming communities on opposite sides of 
                           the globe (Rossel Papuan and Tseltal Mayan)."),
-                        h5("The data and visualizations on this site are associated with our", 
+                        h5("The figures and tables on this site are associated with our", 
                           a(href = "https://chatterlab.uchicago.edu/lab-publications/Casey_et_al_submitted_Distributional_patterns_of_at_home_object_handling.pdf", 
-                                  "CogSci 2022 paper"), "."), 
+                                  "CogSci 2022 paper.")), 
                         br(),
                         br(),
                         # buttons to jump to other tabs
@@ -356,12 +356,20 @@ shinyApp(
                             tabsetPanel(type = "tabs", 
                               tabPanel("Figure", 
                                           plotlyOutput("top_objects_fig"), 
-                                          h6("Top objects defined based on either (a) the 
+                                          h6("Top objects defined based on either the 
                                             number of children handling the object at least 
-                                            once, or (b) the number of photos in which the
+                                            once, or the number of photos in which the
                                             object appeared (averaged across children). Filled 
                                             bars represent objects that were among the top 
-                                            objects for both sites.")), 
+                                            objects for both sites."), 
+                                          h6(paste0("Categories include consumables (",
+                                                    "C), synthetic objects (",
+                                                    "S), natural objects (",
+                                                    "N), toys (", 
+                                                    "T), mealtime tools (", 
+                                                    "M), clothing (", 
+                                                    "Cl), ", "immovable objects (", 
+                                                    "I), and work tools(", "W)."))), 
                               tabPanel("Table", 
                                           dataTableOutput("top_objects_tbl"))
                           )))), 
@@ -383,13 +391,13 @@ shinyApp(
                                                       "Clothing", "Immovable", 
                                                       "Work Tool"))), 
                           mainPanel(
-                            plotOutput("ranked_objects_fig"))
+                            plotlyOutput("ranked_objects_fig"))
                           ))),
              tabPanel("Categories",
                        sidebarLayout(
                          sidebarPanel(
                            h2("Category Effects"),
-                           radioButtons("category_effects_site", "Site",
+                           selectInput("category_effects_site", "Site",
                                         c("Both" = "Both",
                                           "Tseltal" = "Tseltal", 
                                           "Rossel" = "Rossel")),
@@ -569,45 +577,46 @@ shinyApp(
       get_ranked_objects({ input$ranked_objects_dv })
     })
     
-    # draw top objects figure with and without category labels
-    output$ranked_objects_fig <- renderPlot({
+    # draw ranked objects figure
+    output$ranked_objects_fig <- renderPlotly({
       
       if ({ input$ranked_objects_category } == "All Categories") {
-        ranked_objects_input() %>%
+        d <- ranked_objects_input() %>%
           group_by(site, sub_num) %>%
           arrange(desc(prop)) %>%
           mutate(rank = row_number()) %>%
-          filter(rank <= { input$ranked_objects_count }) %>%
-          ggplot(aes(x = rank, y = prop, color = site, fill = site)) +
-          facet_grid(. ~ site) +
-          geom_jitter(aes(group = sub_num), alpha = 0.25, size = 3) +
-          geom_smooth(se = FALSE, method = "loess", size = 1.5, color = "black") +
-          scale_color_manual(values = site.colors) +
-          scale_fill_manual(values = site.colors) +
-          labs(x = "Objects Ranked by Frequency", y = { input$ranked_objects_dv }, 
-               color = "Site", fill = "Site") +
-          theme_test(base_size = 25) +
-          theme(legend.position = "none", text = element_text(family = "Helvetica"))
+          filter(rank <= { input$ranked_objects_count })
       }
       
       else {
-        ranked_objects_input() %>%
+        d <- ranked_objects_input() %>%
           filter(category == { input$ranked_objects_category }) %>%
           group_by(site, sub_num) %>%
           arrange(desc(prop)) %>%
           mutate(rank = row_number()) %>%
-          filter(rank <= { input$ranked_objects_count }) %>%
-          ggplot(aes(x = rank, y = prop, color = site, fill = site)) +
-          facet_grid(. ~ site) +
-          geom_jitter(aes(group = sub_num), alpha = 0.25, size = 3) +
-          geom_smooth(se = FALSE, method = "loess", size = 1.5, color = "black") +
-          scale_color_manual(values = site.colors) +
-          scale_fill_manual(values = site.colors) +
-          labs(x = "Objects Ranked by Frequency", y = { input$ranked_objects_dv }, 
-               color = "Site", fill = "Site") +
-          theme_test(base_size = 25) +
-          theme(legend.position = "none", text = element_text(family = "Helvetica"))
+          filter(rank <= { input$ranked_objects_count })
       }
+      
+      p <- ggplot(d, aes(x = rank, y = prop, color = site, fill = site)) +
+        facet_grid(. ~ site) +
+        geom_jitter(aes(group = sub_num), alpha = 0.25, size = 2) +
+        geom_smooth(se = FALSE, method = "loess", size = 1.5, color = "black") +
+        scale_color_manual(values = site.colors) +
+        scale_fill_manual(values = site.colors) +
+        labs(x = "Objects Ranked by Frequency", y = { input$ranked_objects_dv }, 
+             color = "Site", fill = "Site") +
+        theme_test(base_size = 25) +
+        theme(legend.position = "none", text = element_text(family = "Helvetica"))
+      
+      ggplotly(p, tooltip = "groups") %>%
+        config(displayModeBar = FALSE) %>%
+        highlight(
+          on = "plotly_hover",
+          selectize = FALSE, 
+          dynamic = FALSE,
+          color = "green",
+          persistent = FALSE
+        ) 
       
     })
     
@@ -690,8 +699,3 @@ shinyApp(
     })
   }
 )
-
-# rsconnect::setAccountInfo(name = 'aclew',
-#                           token = '5A83C3D901262E26F17C707D1C2D5EB6',
-#                           secret = '/a+NMJjI3L78O03T/M645geWDq/1V3wBcwp84elP')
-# rsconnect::deployApp(appName = "CogSci-TSE-ROS-objects")

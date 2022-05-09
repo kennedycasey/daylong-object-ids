@@ -294,13 +294,13 @@ shinyApp(
                         
                         # links to external pages
                         h2("External links"),
-                        h4(img(src = "https://chatterlab.uchicago.edu/img/logo.png", height = "20px"), 
+                        h5(img(src = "https://chatterlab.uchicago.edu/img/logo.png", height = "20px"), 
                            a(href = "https://chatterlab.uchicago.edu/lab-publications/Casey_et_al_submitted_Distributional_patterns_of_at_home_object_handling.pdf", 
                                   "Read the full proceedings paper")), 
-                        h4(img(src = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", height = "30px"), 
+                        h5(img(src = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", height = "30px"), 
                            a(href = "https://github.com/kennedycasey/daylong-object-ids", 
                                   "Find all supporting data and code")), 
-                        h4(img(src = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", height = "30px"),
+                        h5(img(src = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png", height = "30px"),
                            a(href = "https://github.com/kennedycasey/ImCo2", 
                                   "Access the image annotation tool")),
                         br(), 

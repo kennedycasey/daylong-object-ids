@@ -10,7 +10,7 @@ library(showtext)
 
 # IMPORT DATA -------------------------------------------------------------
 
-raw.data <- read_csv("app-data.csv")
+raw.data <- read_csv("object-data.csv")
 
 # pre-set colors and category labels
 sites <- c("Tseltal", "Rossel")
@@ -264,7 +264,7 @@ shinyApp(
                           object handling experiences, in particular, form a 
                           key source of input---one that varies across cultures 
                           and across development. Using daylong photo streams 
-                          from child-worn cameras, we analyze >16k images to 
+                          from child-worn cameras, we analyze >17k images to 
                           identify the frequency and targets of child object 
                           handling across the first four years in two small-scale 
                           subsistence farming communities on opposite sides of 

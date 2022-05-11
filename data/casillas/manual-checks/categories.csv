@@ -51,7 +51,7 @@ bread,Consumable
 rice,Consumable
 container lid,Synthetic
 spoon,Mealtime Tool
-seaConsumable,Consumable
+seafood,Consumable
 shell,Natural
 clothespin,Synthetic
 wooden pole,Synthetic
@@ -232,13 +232,13 @@ lollipop stick,Consumable
 chicken,Natural
 clothesline,Work Tool
 maraca,Toy
-packaged Consumable,Consumable
+packaged food,Consumable
 hearth,Immovable
 ashes,Natural
 cut up plastic bottle,Synthetic
 toy plant,Toy
 embroidery ring,Work Tool
-bulk Consumable bag,Synthetic
+bulk food bag,Synthetic
 shield,Synthetic
 vase,Synthetic
 movie,Synthetic
@@ -287,7 +287,7 @@ popsicle,Consumable
 curtains,Immovable
 bubbles,Toy
 chicharrones,Consumable
-canned Consumable,Consumable
+canned food,Consumable
 slingshot,Toy
 hanger,Synthetic
 flower toy,Toy
@@ -347,7 +347,7 @@ salt,Consumable
 notebook,Synthetic
 hair clip,Clothing
 pole,Synthetic
-government Consumable packet,Consumable
+government food packet,Consumable
 medicine bottle,Synthetic
 wood disc,Toy
 juice powder,Consumable
@@ -379,3 +379,4 @@ toy robot,Work Tool
 drinking straw,Mealtime Tool
 coconut water,Consumable
 matches,Synthetic
+drainage tube,Synthetic

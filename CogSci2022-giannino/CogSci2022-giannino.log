@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.4)  11 MAY 2022 13:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.8.4)  11 MAY 2022 21:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -698,20 +698,20 @@ Package pdftex.def Info: figs/overall-stats-fig-1.pdf  used on input line 476.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [4 <./figs/top-objects-fig-1.pdf> <./figs/overall-stats-fig-1.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 526--535
+Underfull \hbox (badness 10000) in paragraph at lines 528--537
 
  []
 
 <figs/age-effects-fig-1.pdf, id=175, 224.84pt x 238.8925pt>
 File: figs/age-effects-fig-1.pdf Graphic file (type pdf)
 <use figs/age-effects-fig-1.pdf>
-Package pdftex.def Info: figs/age-effects-fig-1.pdf  used on input line 562.
+Package pdftex.def Info: figs/age-effects-fig-1.pdf  used on input line 564.
 (pdftex.def)             Requested size: 224.83945pt x 238.8919pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3029) has occurred while \output is active []
 
  [5 <./figs/age-effects-fig-1.pdf>] [6]
-Underfull \hbox (badness 1303) in paragraph at lines 862--866
+Underfull \hbox (badness 1303) in paragraph at lines 864--868
  [][]\OT1/ptm/m/n/10 Rachwani, J., Tamis-LeMonda, C. S., Lock-man, J. J.,
  []
 
@@ -736,7 +736,7 @@ texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/local/texlive/2021/texmf-dist/
 fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on CogSci2022-giannino.pdf (7 pages, 9830637 bytes).
+Output written on CogSci2022-giannino.pdf (7 pages, 9830641 bytes).
 PDF statistics:
  302 PDF objects out of 1000 (max. 8388607)
  266 compressed objects within 3 object streams

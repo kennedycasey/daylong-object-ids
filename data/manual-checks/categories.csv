@@ -1,0 +1,382 @@
+object,category
+flower,Natural
+baby bottle,Mealtime Tool
+milk,Consumable
+pants,Clothing
+soap,Work Tool
+comb,Synthetic
+banana,Consumable
+starfruit,Consumable
+wind up toy,Toy
+stuffed animal,Toy
+rock,Natural
+fruit,Consumable
+rope,Synthetic
+stick,Natural
+broom,Work Tool
+guitar,Toy
+camera,Synthetic
+ball,Toy
+vest,Clothing
+coconut,Consumable
+nut,Consumable
+tuber,Consumable
+jacket,Clothing
+swing,Toy
+candy,Consumable
+book,Toy
+pencil,Toy
+plastic bottle,Synthetic
+container,Synthetic
+fruit (unknown variety),Consumable
+grass,Natural
+leaf,Natural
+sago,Consumable
+dress,Clothing
+shorts,Clothing
+pot,Mealtime Tool
+mug,Mealtime Tool
+shoe,Clothing
+shirt,Clothing
+stairs,Immovable
+firewood,Synthetic
+woven basket,Synthetic
+plastic packaging,Synthetic
+chapstick,Synthetic
+bowl,Mealtime Tool
+water,Work Tool
+blanket,Synthetic
+sugar cane,Consumable
+bread,Consumable
+rice,Consumable
+container lid,Synthetic
+spoon,Mealtime Tool
+seafood,Consumable
+shell,Natural
+clothespin,Synthetic
+wooden pole,Synthetic
+tapioca,Consumable
+bucket,Synthetic
+betelnut,Consumable
+skirt,Clothing
+rattle,Toy
+toy car,Toy
+plastic bag,Synthetic
+plastic toy,Toy
+rubber duck,Toy
+pacifier,Toy
+chair,Immovable
+water bottle strap,Mealtime Tool
+noodles,Consumable
+plant,Natural
+baby bathtub,Work Tool
+wall,Immovable
+fabric,Synthetic
+floor,Immovable
+table,Immovable
+broom bristle,Work Tool
+phone,Synthetic
+cotton debris,Synthetic
+dirt,Natural
+veranda,Immovable
+house pile,Immovable
+knife-W,Work Tool
+knife-M,Mealtime Tool
+dog,Natural
+cat,Natural
+papaya,Consumable
+large plastic bin,Work Tool
+spatula,Mealtime Tool
+shelf,Immovable
+mosquito net,Synthetic
+purse,Clothing
+empty drink bottle,Synthetic
+bracelet,Clothing
+hammock,Immovable
+walking support,Immovable
+bed sheet,Synthetic
+door,Immovable
+burlap,Synthetic
+paintbrush,Toy
+mat,Synthetic
+string,Synthetic
+cup,Mealtime Tool
+bean,Consumable
+money,Synthetic
+chick,Natural
+safety pin,Synthetic
+fishing debris,Synthetic
+fishnet,Synthetic
+drinking water,Consumable
+mirror,Synthetic
+blinds,Immovable
+hat,Clothing
+mango,Consumable
+sweater,Clothing
+tree,Natural
+teletubby toy,Toy
+canoe,Immovable
+wood slat,Synthetic
+tongs,Mealtime Tool
+roofing,Immovable
+toy turtle,Toy
+plate,Mealtime Tool
+lunchbox,Mealtime Tool
+princess bag,Toy
+bark,Natural
+leafy green,Consumable
+flashlight,Synthetic
+water bottle carrier,Mealtime Tool
+lotion,Work Tool
+trash,Synthetic
+jug,Mealtime Tool
+hay,Natural
+weight,Synthetic
+hatchet,Work Tool
+paper,Synthetic
+scrub brush,Work Tool
+belt,Clothing
+pen,Toy
+detergent,Work Tool
+clothing,Clothing
+tin container,Synthetic
+berry,Natural
+pill package,Synthetic
+mumu'd tuber paste,Consumable
+marble,Toy
+coconut scraper,Mealtime Tool
+battery,Synthetic
+wire,Synthetic
+lightbulb,Synthetic
+wash basin,Work Tool
+buoy,Synthetic
+fork,Mealtime Tool
+guava,Consumable
+pineapple,Consumable
+cardboard box,Synthetic
+plastic sheet,Synthetic
+window,Immovable
+drawer,Immovable
+bottle cap,Synthetic
+camera cover,Clothing
+packaged snack,Consumable
+newspaper,Synthetic
+crate,Synthetic
+paper airplane,Toy
+wood shavings,Natural
+gas canister,Synthetic
+rubber band,Synthetic
+plant pot,Synthetic
+seed,Natural
+bench,Immovable
+barrel,Immovable
+trash bin,Work Tool
+plastic clip,Synthetic
+reusable water bottle,Mealtime Tool
+cracker,Consumable
+necklace,Clothing
+plastic,Synthetic
+dried mud chunk,Natural
+rice ball,Consumable
+plastic fragment,Synthetic
+brush,Synthetic
+medicine tube,Synthetic
+canteen,Mealtime Tool
+leaf wrapper,Mealtime Tool
+jar,Synthetic
+passionfruit,Consumable
+tag,Synthetic
+avocado,Consumable
+ribbon,Synthetic
+metal fragment,Synthetic
+meat,Consumable
+toothbrush,Synthetic
+lantern,Synthetic
+scissors,Synthetic
+lime dipping stick,Mealtime Tool
+lime,Consumable
+nail,Work Tool
+marker,Toy
+tin foil,Synthetic
+rake,Work Tool
+juice,Consumable
+turtle,Consumable
+shell money,Synthetic
+feather,Natural
+sand,Natural
+lighter,Mealtime Tool
+rug,Immovable
+suitcase,Synthetic
+cardboard packaging,Synthetic
+tassel,Synthetic
+screwdriver,Work Tool
+cacao,Consumable
+calculator,Synthetic
+baby powder,Work Tool
+skewer,Mealtime Tool
+cookie,Consumable
+tortilla,Consumable
+nail clippers,Work Tool
+doll,Toy
+soda,Consumable
+magazine,Synthetic
+box,Synthetic
+pillar,Immovable
+plastic basket,Synthetic
+bed,Immovable
+egg,Consumable
+fence,Immovable
+bready sheet,Consumable
+rebar,Synthetic
+lollipop stick,Consumable
+chicken,Natural
+clothesline,Work Tool
+maraca,Toy
+packaged food,Consumable
+hearth,Immovable
+ashes,Natural
+cut up plastic bottle,Synthetic
+toy plant,Toy
+embroidery ring,Work Tool
+bulk food bag,Synthetic
+shield,Synthetic
+vase,Synthetic
+movie,Synthetic
+ruler,Synthetic
+shovel,Work Tool
+mats,Consumable
+cement fragment,Synthetic
+peach,Consumable
+peanut,Consumable
+corn,Consumable
+photo,Synthetic
+folder,Synthetic
+hose,Work Tool
+log,Natural
+rambutan,Consumable
+cleaning solution,Work Tool
+grinder,Work Tool
+weaving tool,Work Tool
+baby sling,Clothing
+chips,Consumable
+toy lamb,Toy
+pear,Consumable
+vehicle,Immovable
+teddy bear,Toy
+bean soup,Consumable
+stuffed animal monkey,Toy
+shoelace,Clothing
+patio edge,Immovable
+green bean,Consumable
+masa,Consumable
+crayon,Toy
+ladder,Immovable
+coloring book,Toy
+spiky toy,Toy
+stuffed animal dog,Toy
+bubble wand,Toy
+action figure,Toy
+stuffed holiday animal,Toy
+gardening hoe,Work Tool
+apple,Consumable
+mop,Work Tool
+keychain,Synthetic
+bike,Toy
+rubber fragment,Synthetic
+popsicle,Consumable
+curtains,Immovable
+bubbles,Toy
+chicharrones,Consumable
+canned food,Consumable
+slingshot,Toy
+hanger,Synthetic
+flower toy,Toy
+towel,Synthetic
+television,Synthetic
+measuring tape,Work Tool
+stuffed animal unicorn,Toy
+jelly cup,Consumable
+meat bone,Consumable
+metal pipe,Synthetic
+hammer,Work Tool
+remote,Synthetic
+yarn,Synthetic
+video game console,Synthetic
+canola oil,Consumable
+popsicle stick,Consumable
+tarp,Synthetic
+toy sink,Toy
+corn plant,Natural
+animal slap bracelet,Toy
+vick's vapor rub,Synthetic
+toy bear,Toy
+toy,Toy
+tape,Synthetic
+paint,Toy
+napkin,Mealtime Tool
+green toy,Toy
+pink toy,Toy
+tsek,Clothing
+energy drink,Consumable
+sandcastle mold,Toy
+toy plate,Toy
+toy tray,Toy
+mobile,Toy
+beaker,Synthetic
+coin bag,Synthetic
+strainer,Mealtime Tool
+sponge,Work Tool
+CD,Synthetic
+toy dinosaur,Toy
+child play mat,Toy
+feather duster,Work Tool
+wagon,Toy
+beads,Synthetic
+styrofoam,Synthetic
+toy bird,Toy
+glasses,Clothing
+gravel,Synthetic
+toy teacup,Toy
+metal clip,Synthetic
+brick,Synthetic
+citrus fruit,Consumable
+chayote,Consumable
+tire,Synthetic
+stuffed animal bunny,Toy
+salt,Consumable
+notebook,Synthetic
+hair clip,Clothing
+pole,Synthetic
+government food packet,Consumable
+medicine bottle,Synthetic
+wood disc,Toy
+juice powder,Consumable
+bottled water,Consumable
+sock,Clothing
+pipe instrument,Toy
+walkie talkie,Synthetic
+roll of paper towels,Work Tool
+metal chain,Synthetic
+granola bar,Consumable
+grape,Consumable
+toothpaste,Work Tool
+knitting needle,Work Tool
+wheelbarrow,Work Tool
+stereo,Synthetic
+screw,Work Tool
+plastic tubing,Synthetic
+underwear,Clothing
+level,Work Tool
+wood fragment,Synthetic
+stems,Natural
+sink,Work Tool
+shoe box,Synthetic
+orange,Consumable
+coral,Natural
+pillow,Synthetic
+crowbar,Work Tool
+toy robot,Work Tool
+drinking straw,Mealtime Tool
+coconut water,Consumable
+matches,Synthetic
+drainage tube,Synthetic
